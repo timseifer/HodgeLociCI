@@ -1,0 +1,96 @@
+# exact certificate, Fermat cubic in P^9, z = zeta_6 (z^2 = z - 1); coefficients written a+b*z with a, b rational
+NV = 10
+lambda = 2
+P1: x0 = z^1*x1, x2 = z^1*x3, x4 = z^1*x5, x6 = z^1*x7, x8 = z^1*x9
+P2: x0 = z^1*x1, x2 = z^1*x3, x4 = z^3*x5, x6 = z^3*x7, x8 = z^3*x9
+arc: F_eps = F0 - (eps^1*T_1 + eps^2*T_2 + eps^3*T_3)
+T_1 = [1]*x1*x4*x5 + [1]*x3*x6*x7 + [(1/3)+(1/3)*z]*x4*x6*x8 + [1]*x4*x6*x9
+T_2 = [(-1/9)+(2/9)*z]*x0*x6*x8 + [(-2/9)+(1/9)*z]*x0*x6*x9 + [(-1/9)+(2/9)*z]*x2*x4*x8 + [(-2/9)+(1/9)*z]*x2*x4*x9
+T_3 = [(-1/9)*z]*x0*x2*x8 + [(-1/27)+(-1/27)*z]*x0*x2*x9
+excess part of T_1 (e): [(1/3)+(1/3)*z]*x4*x6*x8 + [1]*x4*x6*x9
+T V part of T_1 (w): [1]*x1*x4*x5 + [1]*x3*x6*x7
+forms Q (in this order): x0*x1, x0*x2, x0*x3, x0*x4, x0*x5, x0*x6, x0*x7, x0*x8, x0*x9, x1*x2, x1*x3, x1*x4, x1*x5, x1*x6, x1*x7, x1*x8, x1*x9, x2*x3, x2*x4, x2*x5, x2*x6, x2*x7, x2*x8, x2*x9, x3*x4, x3*x5, x3*x6, x3*x7, x3*x8, x3*x9, x4*x5, x4*x6, x4*x7, x4*x8, x4*x9, x5*x6, x5*x7, x5*x8, x5*x9, x6*x7, x6*x8, x6*x9, x7*x8, x7*x9, x8*x9
+claim 1: the coefficient of eps^k in Phi_Q(F_eps) is 0 for every Q and k = 1..3
+claim 2: the coefficients of eps^4 are
+  c_4[x0*x1] = 0
+  c_4[x0*x2] = (8)+(-24)*z
+  c_4[x0*x3] = (-16)+(-8)*z
+  c_4[x0*x4] = 0
+  c_4[x0*x5] = 0
+  c_4[x0*x6] = 0
+  c_4[x0*x7] = 0
+  c_4[x0*x8] = 0
+  c_4[x0*x9] = 0
+  c_4[x1*x2] = (-16)+(-8)*z
+  c_4[x1*x3] = (-24)+(16)*z
+  c_4[x1*x4] = 0
+  c_4[x1*x5] = 0
+  c_4[x1*x6] = 0
+  c_4[x1*x7] = 0
+  c_4[x1*x8] = 0
+  c_4[x1*x9] = 0
+  c_4[x2*x3] = 0
+  c_4[x2*x4] = 0
+  c_4[x2*x5] = 0
+  c_4[x2*x6] = 0
+  c_4[x2*x7] = 0
+  c_4[x2*x8] = 0
+  c_4[x2*x9] = 0
+  c_4[x3*x4] = 0
+  c_4[x3*x5] = 0
+  c_4[x3*x6] = 0
+  c_4[x3*x7] = 0
+  c_4[x3*x8] = 0
+  c_4[x3*x9] = 0
+  c_4[x4*x5] = 0
+  c_4[x4*x6] = 0
+  c_4[x4*x7] = 0
+  c_4[x4*x8] = 0
+  c_4[x4*x9] = 0
+  c_4[x5*x6] = 0
+  c_4[x5*x7] = 0
+  c_4[x5*x8] = 0
+  c_4[x5*x9] = 0
+  c_4[x6*x7] = 0
+  c_4[x6*x8] = 0
+  c_4[x6*x9] = 0
+  c_4[x7*x8] = 0
+  c_4[x7*x9] = 0
+  c_4[x8*x9] = (-72)+(36)*z
+claim 3: this vector is NOT in the image of the first-order map L (rank L = 19; L[Q][x^alpha] = 4 * coefficient of x^(complement of Q*x^alpha) in P_delta);
+         left-kernel vectors K of L (K.L = 0) and the values K.c_4:
+  K = [1]*(x8*x9)^dual   ;   K.c_4 = (-72)+(36)*z
+claim 4: T_1 is in the kernel of L (tangent to the Hodge locus) and not in T V = ker L_P1 n ker L_P2 (rank [L_P1; L_P2] = 20)
+period polynomial P_delta = P_1 + lambda*P_2 (squarefree monomials as index lists):
+  x0*x2*x4*x6*x8 : (729)+(-729)*z
+  x1*x2*x4*x6*x8 : 729
+  x0*x3*x4*x6*x8 : 729
+  x1*x3*x4*x6*x8 : (729)*z
+  x0*x2*x5*x6*x8 : (-243)+(486)*z
+  x1*x2*x5*x6*x8 : (-486)+(243)*z
+  x0*x3*x5*x6*x8 : (-486)+(243)*z
+  x1*x3*x5*x6*x8 : (-243)+(-243)*z
+  x0*x2*x4*x7*x8 : (-243)+(486)*z
+  x1*x2*x4*x7*x8 : (-486)+(243)*z
+  x0*x3*x4*x7*x8 : (-486)+(243)*z
+  x1*x3*x4*x7*x8 : (-243)+(-243)*z
+  x0*x2*x5*x7*x8 : (486)+(-243)*z
+  x1*x2*x5*x7*x8 : (243)+(243)*z
+  x0*x3*x5*x7*x8 : (243)+(243)*z
+  x1*x3*x5*x7*x8 : (-243)+(486)*z
+  x0*x2*x4*x6*x9 : (-243)+(486)*z
+  x1*x2*x4*x6*x9 : (-486)+(243)*z
+  x0*x3*x4*x6*x9 : (-486)+(243)*z
+  x1*x3*x4*x6*x9 : (-243)+(-243)*z
+  x0*x2*x5*x6*x9 : (486)+(-243)*z
+  x1*x2*x5*x6*x9 : (243)+(243)*z
+  x0*x3*x5*x6*x9 : (243)+(243)*z
+  x1*x3*x5*x6*x9 : (-243)+(486)*z
+  x0*x2*x4*x7*x9 : (486)+(-243)*z
+  x1*x2*x4*x7*x9 : (243)+(243)*z
+  x0*x3*x4*x7*x9 : (243)+(243)*z
+  x1*x3*x4*x7*x9 : (-243)+(486)*z
+  x0*x2*x5*x7*x9 : (-729)+(729)*z
+  x1*x2*x5*x7*x9 : -729
+  x0*x3*x5*x7*x9 : -729
+  x1*x3*x5*x7*x9 : (-729)*z

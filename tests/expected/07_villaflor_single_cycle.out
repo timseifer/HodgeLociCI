@@ -1,0 +1,11 @@
+RESULT arXiv:2001.01019 Thm 1.1 number binomial(k+d,d)-(k+1)^2: line on a quintic surface, plane on a quartic fourfold, 3-plane on a cubic sixfold, 4-plane on a cubic eightfold = {2, 6, 4, 10}   ok
+RESULT arXiv:1602.06607 Section 6: codimension of T_(1,1,2) for (n,d) = (4,4) = 8   ok
+RESULT arXiv:1602.06607 Section 4 table, sextic fourfolds, types (1,1,1), (1,1,2), ..., (3,3,3) = {19, 32, 37, 54, 62, 71, 92, 106, 122, 141}   ok
+RESULT type {1, 1} in degree 5: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {2, 2, 2}   ok
+RESULT type {2, 1} in degree 5: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {3, 3, 3}   ok
+RESULT type {1, 1, 1} in degree 4: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {6, 6, 6}   ok
+RESULT type {1, 1, 2} in degree 4: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {8, 8, 8}   ok
+RESULT type {2, 1, 2} in degree 4: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {11, 11, 11}   ok
+RESULT type {1, 1, 1, 1} in degree 3: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {4, 4, 4}   ok
+RESULT type {2, 3} in degree 6: {Hilbert function, rank from the period polynomial, hodgeLocusTangentCodim} = {9, 9, 9}   ok
+ALL 10 CHECKS PASSED

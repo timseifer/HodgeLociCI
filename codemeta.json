@@ -1,0 +1,18 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "HodgeLociCI",
+  "description": "Macaulay2 package for Hodge loci (Noether-Lefschetz loci) of combinations of linear or complete-intersection cycles in smooth hypersurfaces: first-order excess calculator, second-order obstruction check, Fermat higher-order expansion, validation suite, Lean certificates. AI-generated; not yet reviewed by a human.",
+  "version": "0.1.0",
+  "dateCreated": "2026-11-22",
+  "datePublished": "2026-11-22",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/timseifer/HodgeLociCI",
+  "programmingLanguage": ["Macaulay2", "Lean"],
+  "runtimePlatform": "Macaulay2 1.22",
+  "developmentStatus": "wip",
+  "keywords": ["Hodge loci", "Noether-Lefschetz loci", "linear cycles", "complete-intersection cycles", "hypersurfaces", "Jacobian ring", "Hilbert function", "second-order obstruction", "Fermat variety", "Macaulay2"],
+  "author": [{"@type": "Person", "givenName": "Timothy", "familyName": "Seifert"}],
+  "creditText": "Code, tests and documentation were produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert.",
+  "readme": "https://github.com/timseifer/HodgeLociCI/blob/main/README.md"
+}

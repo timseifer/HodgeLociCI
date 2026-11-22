@@ -1,0 +1,12 @@
+RESULT codim V_Z for two coplanar lines, d = 5, 6, 7 (published: 2d - 6) = {4, 6, 8}   ok
+RESULT quintic mod 32003: codim T V_Z and codim T NL at lambda = 2, -1, 1/2, 3, 1 = {4, {3, 3, 3, 3, 3}}   ok
+RESULT quintic mod 32003: second-order verdict at lambda = 2, -1, 1/2, 3 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}   ok
+RESULT quintic mod 32003: formula and pointwise strategies agree = {true, true, true, true}   ok
+RESULT quintic mod 32003: second-order verdict at lambda = 1 = ALL SURVIVE   ok
+RESULT quintic mod 32003: label = true   ok
+RESULT quintic over QQ: codim T V_Z and codim T NL at lambda = 2, -1, 1/2, 3, 1 = {4, {3, 3, 3, 3, 3}}   ok
+RESULT quintic over QQ: second-order verdict at lambda = 2, -1, 1/2, 3 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}   ok
+RESULT quintic over QQ: formula and pointwise strategies agree = {true, true, true, true}   ok
+RESULT quintic over QQ: second-order verdict at lambda = 1 = ALL SURVIVE   ok
+RESULT quintic over QQ: label = true   ok
+ALL 11 CHECKS PASSED

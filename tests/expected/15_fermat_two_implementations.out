@@ -1,0 +1,21 @@
+RESULT (3,2,1) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{1, 2}, {1, 2}, {1, 2}}   ok
+RESULT (3,2,1) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (3,2,2) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{1, 2}, {1, 2}, {1, 2}}   ok
+RESULT (3,2,2) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (3,2,3) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{1, 2}, {1, 2}, {1, 2}}   ok
+RESULT (3,2,3) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (3,3,1) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{4, 7}, {4, 7}, {4, 7}}   ok
+RESULT (3,3,1) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 3   ok
+RESULT (3,3,2) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{6, 8}, {6, 8}, {6, 8}}   ok
+RESULT (3,3,2) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 2   ok
+RESULT (3,3,3) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{7, 8}, {7, 8}, {7, 8}}   ok
+RESULT (3,3,3) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (3,3,4) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{8, 8}, {8, 8}, {8, 8}}   ok
+RESULT (3,3,4) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 0   ok
+RESULT (3,4,3) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{19, 20}, {19, 20}, {19, 20}}   ok
+RESULT (3,4,3) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (4,2,2) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{11, 12}, {11, 12}, {11, 12}}   ok
+RESULT (4,2,2) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 1   ok
+RESULT (4,2,3) Fermat: {H, K} published; exact Fermat module; tangentExcess mod p; excessFromData mod p = {{12, 12}, {12, 12}, {12, 12}}   ok
+RESULT (4,2,3) Fermat: lambda = 2: tangentExcess against excessFromData (Theorem 2(5) at a special point) = 0   ok
+ALL 20 CHECKS PASSED

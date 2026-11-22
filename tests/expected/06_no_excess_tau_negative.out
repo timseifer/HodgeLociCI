@@ -1,0 +1,22 @@
+RESULT (n,d,m) = (2,5,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategies Jacobian and Residue = {true, {0, 0, 0}, {0, 0, 0}}   ok
+RESULT (n,d,m) = (2,5,-1): excess at lambda = 1, -1, 2 at the Fermat point (Villaflor, Theorem 3), strategy Residue = {0, 0, 0}   ok
+RESULT (n,d,m) = (2,6,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (2,7,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (4,4,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategies Jacobian and Residue = {true, {0, 0, 0}, {0, 0, 0}}   ok
+RESULT (n,d,m) = (4,4,-1): excess at lambda = 1, -1, 2 at the Fermat point (Villaflor, Theorem 3), strategy Residue = {0, 0, 0}   ok
+RESULT (n,d,m) = (4,5,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (4,5,-1): excess at lambda = 1, -1, 2 at the Fermat point (Villaflor, Theorem 3), strategy Residue = {0, 0, 0}   ok
+RESULT (n,d,m) = (4,5,0): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (4,5,0): excess at lambda = 1, -1, 2 at the Fermat point (Villaflor, Theorem 3), strategy Residue = {0, 0, 0}   ok
+RESULT (n,d,m) = (6,3,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategies Jacobian and Residue = {true, {0, 0, 0}, {0, 0, 0}}   ok
+RESULT (n,d,m) = (6,3,-1): excess at lambda = 1, -1, 2 at the Fermat point (Villaflor, Theorem 3), strategy Residue = {0, 0, 0}   ok
+RESULT (n,d,m) = (6,4,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (6,4,0): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategy Residue = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (8,3,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategies Jacobian and Residue = {true, {0, 0, 0}, {0, 0, 0}}   ok
+RESULT (n,d,m) = (8,3,0): tau < 0; excess at lambda = 1, -1, 2 at a random point, strategies Jacobian and Residue = {true, {0, 0, 0}, {0, 0, 0}}   ok
+RESULT degrees (4,{1, 1, 1},{1, 1, 2},{}): tau < 0 and excess at lambda = 1, -1, 2 (strategy Residue) = {true, {0, 0, 0}}   ok
+RESULT degrees (6,{1, 2},{1, 1},{}): tau < 0 and excess at lambda = 1, -1, 2 (strategy Residue) = {true, {0, 0, 0}}   ok
+RESULT degrees (7,{2, 2},{1, 1},{}): tau < 0 and excess at lambda = 1, -1, 2 (strategy Residue) = {true, {0, 0, 0}}   ok
+RESULT degrees (5,{1, 1, 1},{1, 2, 2},{}): tau < 0 and excess at lambda = 1, -1, 2 (strategy Residue) = {true, {0, 0, 0}}   ok
+RESULT degrees (5,{1, 1},{1, 1},{2}): tau < 0 and excess at lambda = 1, -1, 2 (strategy Residue) = {true, {0, 0, 0}}   ok
+ALL 21 CHECKS PASSED

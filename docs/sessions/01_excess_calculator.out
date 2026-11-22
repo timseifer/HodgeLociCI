@@ -1,0 +1,255 @@
+
+i1 : needsPackage("HodgeLociCI", FileName => "../../M2/HodgeLociCI.m2");
+
+i2 : view = (t, ks) -> netList(apply(ks, k -> {k, t#k}), Alignment => Left);
+
+i3 : ks = {"tau", "lambda0", "inRange", "eTau", "codimV1", "codimV2", "codimVZ", "excessAtLambda0", "codimNLAtLambda0", "excessElsewhere"};
+
+i4 : -- (1) Movasati's cubic sixfold case: two 3-planes meeting in a point. Three own linear equations each, one shared.
+     t6 = excessFromDegrees(3, {1,1,1}, {1,1,1}, {1});
+
+i5 : view(t6, ks)
+
+     +----------------+----+
+o5 = |tau             |0   |
+     +----------------+----+
+     |lambda0         |1   |
+     +----------------+----+
+     |inRange         |true|
+     +----------------+----+
+     |eTau            |1   |
+     +----------------+----+
+     |codimV1         |4   |
+     +----------------+----+
+     |codimV2         |4   |
+     +----------------+----+
+     |codimVZ         |8   |
+     +----------------+----+
+     |excessAtLambda0 |1   |
+     +----------------+----+
+     |codimNLAtLambda0|7   |
+     +----------------+----+
+     |excessElsewhere |1   |
+     +----------------+----+
+
+i6 : t6#"levelDichotomy"
+
+o6 = tau >= 0: NL(delta_lambda0) is smooth of codimension codim V_Z - e_tau, with e_tau excess tangent directions
+     (Theorem 2(4))
+
+i7 : t6#"label"
+
+o7 = PROVED in paper 3 (AI-written, unreviewed), Theorem 2; integer arithmetic on the degrees only
+
+i8 : -- (2) the cubic eightfold case: two 4-planes meeting in a line (two shared linear equations)
+     t8 = excessFromDegrees(3, {1,1,1}, {1,1,1}, {1,1});
+
+i9 : view(t8, ks)
+
+     +----------------+----+
+o9 = |tau             |0   |
+     +----------------+----+
+     |lambda0         |1   |
+     +----------------+----+
+     |inRange         |true|
+     +----------------+----+
+     |eTau            |1   |
+     +----------------+----+
+     |codimV1         |10  |
+     +----------------+----+
+     |codimV2         |10  |
+     +----------------+----+
+     |codimVZ         |20  |
+     +----------------+----+
+     |excessAtLambda0 |1   |
+     +----------------+----+
+     |codimNLAtLambda0|19  |
+     +----------------+----+
+     |excessElsewhere |1   |
+     +----------------+----+
+
+i10 : -- (3) the same numbers from data: a random smooth cubic sixfold through two such planes, modulo 32003
+      D6 = randomCyclePair(3, {1,1,1}, {1,1,1}, {1}, Seed => 2026)
+
+o10 = CyclePair{d = 3, k = 3, c = 3, deg f = {1, 1, 1}, deg h = {1, 1, 1}, deg p = {1}, tau = 0, lambda0 = 1, field = ZZ/32003, smooth = true}
+
+o10 : CyclePair
+
+i11 : e6 = excessFromData D6;
+
+i12 : view(e6, {"eTau", "rankDetM", "dimAnnDetM", "codimVZ", "excessAtLambda0", "codimNLAtLambda0", "excessElsewhere"})
+
+      +----------------+-+
+o12 = |eTau            |1|
+      +----------------+-+
+      |rankDetM        |0|
+      +----------------+-+
+      |dimAnnDetM      |1|
+      +----------------+-+
+      |codimVZ         |8|
+      +----------------+-+
+      |excessAtLambda0 |1|
+      +----------------+-+
+      |codimNLAtLambda0|7|
+      +----------------+-+
+      |excessElsewhere |1|
+      +----------------+-+
+
+i13 : e6#"label"
+
+o13 = Hilbert functions and the rank of .det M: MOD p (computed over ZZ/32003 at one instance: evidence, not a proof);
+      their identification with the excess: PROVED in paper 3 (AI-written, unreviewed), Theorem 2 (needs X smooth)
+
+i14 : -- Theorem 2 of paper 3 against a direct first-order computation in the Jacobian ring
+      v6 = verifyExcess D6;
+
+i15 : netList(prepend(v6#"tableColumns", v6#"table"), Alignment => Left)
+
+      +------+-----------------------------+------------------------+
+o15 = |lambda|excess predicted by Theorem 2|excess computed directly|
+      +------+-----------------------------+------------------------+
+      |1     |1                            |1                       |
+      +------+-----------------------------+------------------------+
+      |-1    |1                            |1                       |
+      +------+-----------------------------+------------------------+
+      |2     |1                            |1                       |
+      +------+-----------------------------+------------------------+
+      |3     |1                            |1                       |
+      +------+-----------------------------+------------------------+
+      |-2    |1                            |1                       |
+      +------+-----------------------------+------------------------+
+      |1     |                             |                        |
+      |-     |1                            |1                       |
+      |2     |                             |                        |
+      +------+-----------------------------+------------------------+
+      |5     |                             |                        |
+      |-     |1                            |1                       |
+      |3     |                             |                        |
+      +------+-----------------------------+------------------------+
+
+i16 : v6#"agrees"
+
+o16 = true
+
+i17 : -- (4) at the Fermat point, exactly over Q(zeta_6): Movasati's pairs (H,K) = (7,8) and (19,20)
+      planes = (k, c) -> (apply(k+1, i -> {2*i, 2*i+1, 1}), apply(k+1, i -> {2*i, 2*i+1, if i < c then 3 else 1}));
+
+i18 : S6 = fermatRing(3, 6); (P1, P2) = planes(3, 3);
+
+i20 : f6 = fermatTangentData(S6, {P1, P2}, {1, 1});
+
+i21 : view(f6, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+
+      +---------------------------+---------------------+
+o21 = |jointPersistenceCodimension|8                    |
+      +---------------------------+---------------------+
+      |hodgeCodimension           |7                    |
+      +---------------------------+---------------------+
+      |excess                     |1                    |
+      +---------------------------+---------------------+
+      |label                      |EXACT over QQ(zeta_6)|
+      +---------------------------+---------------------+
+
+i22 : S8 = fermatRing(3, 8); (P1, P2) = planes(4, 3);
+
+i24 : f8 = fermatTangentData(S8, {P1, P2}, {1, -1});
+
+i25 : view(f8, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+
+      +---------------------------+---------------------+
+o25 = |jointPersistenceCodimension|20                   |
+      +---------------------------+---------------------+
+      |hodgeCodimension           |19                   |
+      +---------------------------+---------------------+
+      |excess                     |1                    |
+      +---------------------------+---------------------+
+      |label                      |EXACT over QQ(zeta_6)|
+      +---------------------------+---------------------+
+
+i26 : -- (5) shared equations of higher degree: two plane conics on a common quadric p = 0, on a sextic surface
+      ts = excessFromDegrees(6, {1}, {1}, {2});
+
+i27 : view(ts, ks)
+
+      +----------------+----+
+o27 = |tau             |2   |
+      +----------------+----+
+      |lambda0         |1   |
+      +----------------+----+
+      |inRange         |true|
+      +----------------+----+
+      |eTau            |2   |
+      +----------------+----+
+      |codimV1         |5   |
+      +----------------+----+
+      |codimV2         |5   |
+      +----------------+----+
+      |codimVZ         |10  |
+      +----------------+----+
+      |excessAtLambda0 |2   |
+      +----------------+----+
+      |codimNLAtLambda0|8   |
+      +----------------+----+
+      |excessElsewhere |2   |
+      +----------------+----+
+
+i28 : Ds = randomCyclePair(6, {1}, {1}, {2}, Seed => 2026)
+
+o28 = CyclePair{d = 6, k = 1, c = 1, deg f = {1}, deg h = {1}, deg p = {2}, tau = 2, lambda0 = 1, field = ZZ/32003, smooth = true}
+
+o28 : CyclePair
+
+i29 : vs = verifyExcess Ds;
+
+i30 : netList(prepend(vs#"tableColumns", vs#"table"), Alignment => Left)
+
+      +------+-----------------------------+------------------------+
+o30 = |lambda|excess predicted by Theorem 2|excess computed directly|
+      +------+-----------------------------+------------------------+
+      |1     |2                            |2                       |
+      +------+-----------------------------+------------------------+
+      |-1    |2                            |2                       |
+      +------+-----------------------------+------------------------+
+      |2     |2                            |2                       |
+      +------+-----------------------------+------------------------+
+      |3     |2                            |2                       |
+      +------+-----------------------------+------------------------+
+      |-2    |2                            |2                       |
+      +------+-----------------------------+------------------------+
+      |1     |                             |                        |
+      |-     |2                            |2                       |
+      |2     |                             |                        |
+      +------+-----------------------------+------------------------+
+      |5     |                             |                        |
+      |-     |2                            |2                       |
+      |3     |                             |                        |
+      +------+-----------------------------+------------------------+
+
+i31 : -- (6) a quartic fourfold, a plane and a quadric surface with one shared linear equation (c = 2)
+      tq = excessFromDegrees(4, {1,1}, {1,2}, {1});
+
+i32 : view(tq, ks)
+
+      +----------------+----+
+o32 = |tau             |1   |
+      +----------------+----+
+      |lambda0         |-1  |
+      +----------------+----+
+      |inRange         |true|
+      +----------------+----+
+      |eTau            |2   |
+      +----------------+----+
+      |codimV1         |6   |
+      +----------------+----+
+      |codimV2         |8   |
+      +----------------+----+
+      |codimVZ         |14  |
+      +----------------+----+
+      |excessAtLambda0 |2   |
+      +----------------+----+
+      |codimNLAtLambda0|12  |
+      +----------------+----+
+      |excessElsewhere |2   |
+      +----------------+----+
+
+i33 : 

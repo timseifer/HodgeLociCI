@@ -1,0 +1,44 @@
+RESULT (3,3,1): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (3,3,2): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (3,3,3): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (4,2,1): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (4,2,2): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (5,2,1): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (5,1,1): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT (6,1,1): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (6,{1, 2},{1, 2},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT tau = 0 type (6,{1, 2},{1, 2},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (6,{1, 2},{1, 2},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (7,{1, 2},{2, 2},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT tau = 0 type (7,{1, 2},{2, 2},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (7,{1, 2},{2, 2},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (8,{1, 1},{3, 3},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT tau = 0 type (8,{1, 1},{3, 3},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (8,{1, 1},{3, 3},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (4,{1, 1},{1, 1},{2}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT tau = 0 type (4,{1, 1},{1, 1},{2}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (4,{1, 1},{1, 1},{2}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (4,{1, 1, 1},{1, 2, 2},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, 1, {1, 1, 1}}   ok
+RESULT tau = 0 type (4,{1, 1, 1},{1, 2, 2},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (4,{1, 1, 1},{1, 2, 2},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (4,{1, 1, 2},{1, 1, 2},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, 1, {1, 1, 1}}   ok
+RESULT tau = 0 type (4,{1, 1, 2},{1, 1, 2},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (4,{1, 1, 2},{1, 1, 2},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tau = 0 type (3,{1, 1, 1, 1},{1, 1, 1, 2},{}): {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT tau = 0 type (3,{1, 1, 1, 1},{1, 1, 1, 2},{}): verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT tau = 0 type (3,{1, 1, 1, 1},{1, 1, 1, 2},{}): pointwise second-order values obey the factor (lambda - lambda_0)/lambda (lambda = 2, -2, 5/3) = true   ok
+RESULT tab:tau type (6,{1},{1},{2}) (K != 0): quadrics not all zero at lambda = 2, -2, 5/3, -lambda_0; all survive at lambda_0 = {true, ALL SURVIVE}   ok
+INFO   tab:tau type (6,{1},{1},{2}): verdicts = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}
+RESULT tab:tau type (6,{1},{1},{3}) (K != 0): quadrics not all zero at lambda = 2, -2, 5/3, -lambda_0; all survive at lambda_0 = {true, ALL SURVIVE}   ok
+INFO   tab:tau type (6,{1},{1},{3}): verdicts = {SOME DIE, SOME DIE, SOME DIE, SOME DIE}
+RESULT tab:tau type (4,{1, 1, 1},{1, 2, 3},{}) (K != 0): quadrics not all zero at lambda = 2, -2, 5/3, -lambda_0; all survive at lambda_0 = {true, ALL SURVIVE}   ok
+INFO   tab:tau type (4,{1, 1, 1},{1, 2, 3},{}): verdicts = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}
+RESULT tab:tau type (4,{1, 1, 2},{1, 2, 2},{}) (K != 0): quadrics not all zero at lambda = 2, -2, 5/3, -lambda_0; all survive at lambda_0 = {true, ALL SURVIVE}   ok
+INFO   tab:tau type (4,{1, 1, 2},{1, 2, 2},{}): verdicts = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}
+RESULT tab:tau type (4,{1, 1},{1, 2},{1}) (K != 0): quadrics not all zero at lambda = 2, -2, 5/3, -lambda_0; all survive at lambda_0 = {true, ALL SURVIVE}   ok
+INFO   tab:tau type (4,{1, 1},{1, 2},{1}): verdicts = {ALL DIE, ALL DIE, ALL DIE, ALL DIE}
+RESULT tab:tau type (5,{1},{1},{2}) (K = 0): dim K and verdicts at lambda = 2, -2, 5/3, -lambda_0 = {0, {ALL SURVIVE, ALL SURVIVE, ALL SURVIVE, ALL SURVIVE}}   ok
+RESULT tab:tau type (5,{1},{1},{3}) (K = 0): dim K and verdicts at lambda = 2, -2, 5/3, -lambda_0 = {0, {ALL SURVIVE, ALL SURVIVE, ALL SURVIVE, ALL SURVIVE}}   ok
+RESULT tab:tau type (3,{1, 1},{1, 1},{1}) (K = 0): dim K and verdicts at lambda = 2, -2, 5/3, -lambda_0 = {0, {ALL SURVIVE, ALL SURVIVE, ALL SURVIVE, ALL SURVIVE}}   ok
+RESULT tab:tau type (3,{1},{1},{1, 1}) (K = 0): dim K and verdicts at lambda = 2, -2, 5/3, -lambda_0 = {0, {ALL SURVIVE, ALL SURVIVE, ALL SURVIVE, ALL SURVIVE}}   ok
+ALL 38 CHECKS PASSED

@@ -1,0 +1,24 @@
+RESULT (3,3,1): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {2, 1, sporadic, 2}   ok
+RESULT (3,3,1): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {2, 2, 2, 2, 3}   ok
+RESULT (3,3,2): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {1, -1, sporadic, 2}   ok
+RESULT (3,3,2): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {2, 2, 2, 2, 2}   ok
+RESULT (3,3,3): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {0, 1, sporadic, 1}   ok
+RESULT (3,3,3): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {1, 1, 1, 1, 1}   ok
+RESULT (4,2,1): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {2, 1, sporadic, 2}   ok
+RESULT (4,2,1): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {2, 2, 2, 2, 3}   ok
+RESULT (4,2,2): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {0, -1, sporadic, 1}   ok
+RESULT (4,2,2): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {1, 1, 1, 1, 1}   ok
+RESULT (5,1,1): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {2, 1, sporadic, 1}   ok
+RESULT (5,1,1): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {1, 1, 1, 1, 1}   ok
+RESULT (6,1,1): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {2, 1, sporadic, 1}   ok
+RESULT (6,1,1): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {1, 1, 1, 1, 1}   ok
+RESULT (7,1,1): linearSubspaceCase {tau, lambda0, case, genericExcessElsewhere} = {2, 1, sporadic, 1}   ok
+RESULT (7,1,1): excess at lambda = 2, 3, -2, -lambda_0, and at lambda_0 = {1, 1, 1, 1, 1}   ok
+RESULT (3,3,4) (not in the list): case and excess at lambda = 2, 3, -2, -lambda_0 = {0, {0, 0, 0, 0}}   ok
+RESULT (4,2,3) (not in the list): case and excess at lambda = 2, 3, -2, -lambda_0 = {0, {0, 0, 0, 0}}   ok
+RESULT (5,1,2) (not in the list): case and excess at lambda = 2, 3, -2, -lambda_0 = {0, {0, 0, 0, 0}}   ok
+RESULT (6,1,2) (not in the list): case and excess at lambda = 2, 3, -2, -lambda_0 = {0, {0, 0, 0, 0}}   ok
+RESULT (4,1,2) (excluded: kd-2k-2 = 0): case and excess at lambda = 1, -1, 2, 3 = {excluded, {1, 1, 1, 1}}   ok
+RESULT (3,2,1) (excluded: kd-2k-2 = 0): case and excess at lambda = 1, -1, 2, 3 = {excluded, {1, 1, 1, 1}}   ok
+RESULT (3,2,2) (excluded: kd-2k-2 = 0): case and excess at lambda = 1, -1, 2, 3 = {excluded, {1, 1, 1, 1}}   ok
+ALL 23 CHECKS PASSED

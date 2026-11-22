@@ -1,0 +1,21 @@
+RESULT Fermat cubic, n = 4: H_n^3(m) for n/2-m = 0..3 (coefficients (1,1)) = {1, 1, 1, 1}   ok
+RESULT Fermat cubic, n = 4: K_n^3(m) for n/2-m = 0..3 = {1, 2, 2, 2}   ok
+RESULT Fermat cubic, n = 4, c = 2: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {1, 1, 1, 1}   ok
+RESULT Fermat cubic, n = 4, c = 3: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {1, 1, 1, 1}   ok
+INFO   Fermat cubic, n = 4, c = 1: codimension for (r,r') = (1,-1), (1,2) (no published value used) = {1, 1}
+RESULT Fermat cubic, n = 6: H_n^3(m) for n/2-m = 0..4 (coefficients (1,1)) = {4, 4, 6, 7, 8}   ok
+RESULT Fermat cubic, n = 6: K_n^3(m) for n/2-m = 0..4 = {4, 7, 8, 8, 8}   ok
+RESULT Fermat cubic, n = 6, c = 2: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {6, 6, 6, 6}   ok
+RESULT Fermat cubic, n = 6, c = 3: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {7, 7, 7, 7}   ok
+INFO   Fermat cubic, n = 6, c = 1: codimension for (r,r') = (1,-1), (1,2) (no published value used) = {4, 4}
+RESULT Fermat cubic, n = 8: H_n^3(m) for n/2-m = 0..5 (coefficients (1,1)) = {10, 10, 16, 19, 20, 20}   ok
+RESULT Fermat cubic, n = 8: K_n^3(m) for n/2-m = 0..5 = {10, 16, 19, 20, 20, 20}   ok
+RESULT Fermat cubic, n = 8, c = 2: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {16, 16, 16, 16}   ok
+RESULT Fermat cubic, n = 8, c = 3: codim(V^1) for (r,r') = (1,-1), (1,2), (3,-5), (7,10) = {19, 19, 19, 19}   ok
+INFO   Fermat cubic, n = 8, c = 1: codimension for (r,r') = (1,-1), (1,2) (no published value used) = {10, 10}
+RESULT cubic sixfold, two 3-planes meeting in a point: (K, H) = {8, 7}   ok
+RESULT cubic eightfold, two 4-planes meeting in a line: (K, H) = {20, 19}   ok
+RESULT arithmetic label of the Fermat module mentions EXACT = true   ok
+RESULT Fermat quartic fourfold, m = 0: (H, K) = {11, 12}   ok
+RESULT Fermat quartic fourfold, m = -1: (H, K) = {12, 12}   ok
+ALL 17 CHECKS PASSED

@@ -1,0 +1,33 @@
+RESULT (3,2,2) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,2,2) random point: the excesses = {1, 1, 1, 1}
+RESULT (3,2,2) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,2,2) Fermat point: the excesses = {1, 1, 1, 1}
+RESULT (3,2,3) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,2,3) random point: the excesses = {1, 1, 1, 1}
+RESULT (3,2,3) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,2,3) Fermat point: the excesses = {1, 1, 1, 1}
+RESULT (3,3,2) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,3,2) random point: the excesses = {2, 2, 2, 2}
+RESULT (3,3,2) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,3,2) Fermat point: the excesses = {2, 2, 2, 2}
+RESULT (3,3,3) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,3,3) random point: the excesses = {1, 1, 1, 1}
+RESULT (3,3,3) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,3,3) Fermat point: the excesses = {1, 1, 1, 1}
+RESULT (3,4,2) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,4,2) random point: the excesses = {2, 3, 2, 2}
+RESULT (3,4,2) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,4,2) Fermat point: the excesses = {3, 3, 3, 3}
+RESULT (3,4,3) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,4,3) random point: the excesses = {1, 1, 1, 1}
+RESULT (3,4,3) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (3,4,3) Fermat point: the excesses = {1, 1, 1, 1}
+RESULT (4,1,2) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (4,1,2) random point: the excesses = {1, 1, 1, 1}
+RESULT (4,1,2) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (4,1,2) Fermat point: the excesses = {1, 1, 1, 1}
+RESULT (4,2,2) random point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (4,2,2) random point: the excesses = {1, 1, 1, 1}
+RESULT (4,2,2) Fermat point: excess >= 1 at lambda = 1, -1, 2, 5/3 = true   ok
+INFO   (4,2,2) Fermat point: the excesses = {1, 1, 1, 1}
+ALL 16 CHECKS PASSED

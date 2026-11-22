@@ -1,0 +1,4 @@
+RESULT {tau, lambda_0, excess at lambda_0, 2, -lambda_0} = {0, -1, {1, 1, 1}}   ok
+RESULT verdict at lambda = 2, -2, 5/3, -lambda_0 and at lambda_0 = {ALL DIE, ALL DIE, ALL DIE, ALL DIE, ALL SURVIVE}   ok
+RESULT formula and pointwise strategies agree away from lambda_0 = {true, true, true, true}   ok
+ALL 3 CHECKS PASSED

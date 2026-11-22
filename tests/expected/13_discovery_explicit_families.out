@@ -1,0 +1,15 @@
+RESULT C13: T has dimension 3 and degree 9 = {3, 9}   ok
+RESULT C13: codim (I_T + J)_3 and (I_T + J)_4 = {13, 1}   ok
+RESULT C13: tangent codimension of the Hodge locus of [T] = 8   ok
+RESULT C13: codimension of the cubics in the ideal of all 2x2 minors of A and B (tangent space of the family) = 8   ok
+RESULT C15a: T5 has dimension 3 and degree 5 = {3, 5}   ok
+RESULT C15a: tangent codimension of the Hodge locus of [T5]; codim (I+J)_4 = {7, 1}   ok
+RESULT C15a: codimension of the family tangent space l S_2 + Q S_1 + (4x4 Pfaffians)_3 = 7   ok
+RESULT C12: Hilbert function of S/(I+J) in degrees 0..6 = {1, 9, 26, 27, 9, 1, 0}   ok
+RESULT C12: tangent codimension of the Hodge locus of the Segre class (27 conditions to contain the Segre fourfold) = {26, 27}   ok
+RESULT C15c: T' has dimension 4 and degree 9 = {4, 9}   ok
+RESULT C15c: Hilbert function of S/(I(T')+J) in degrees 0..6 = {1, 9, 29, 26, 9, 1, 0}   ok
+RESULT C15c: tangent codimension of the Hodge locus of [T'] = 26   ok
+RESULT C15c: codimension of the family tangent space = 26   ok
+RESULT label says MOD p = true   ok
+ALL 14 CHECKS PASSED

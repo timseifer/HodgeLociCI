@@ -1,0 +1,5 @@
+RESULT number of triples (d,k,c) tested = 135   ok
+RESULT triples where codimVZ differs from Kloosterman's Proposition 3.10 or codimV1 from binomial(k+d,d)-(k+1)^2 = {}   ok
+RESULT Prop. 3.10 at (d,k,c) = (3,3,3): codimVZ = 8   ok
+RESULT Prop. 3.10 at (d,k,c) = (3,4,3): codimVZ = 20   ok
+ALL 4 CHECKS PASSED

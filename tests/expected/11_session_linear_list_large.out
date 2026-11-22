@@ -1,0 +1,9 @@
+RESULT (3,4,1): codim T V_Z; excess at lambda = 2, -2, -lambda_0, and at lambda_0 = {16, {2, 2, 2, 6}}   ok
+RESULT (3,4,2): codim T V_Z; excess at lambda = 2, -2, -lambda_0, and at lambda_0 = {19, {2, 2, 2, 3}}   ok
+RESULT (3,4,3): codim T V_Z; excess at lambda = 2, -2, -lambda_0, and at lambda_0 = {20, {1, 1, 1, 1}}   ok
+RESULT (5,2,1): codim T V_Z; excess at lambda = 2, -2, -lambda_0, and at lambda_0 = {22, {1, 1, 1, 3}}   ok
+RESULT (3,4,4) (not in the list): excess at lambda = 2, -2, -lambda_0 = {0, 0, 0}   ok
+RESULT (3,4,5) (not in the list): excess at lambda = 2, -2, -lambda_0 = {0, 0, 0}   ok
+RESULT (5,2,2) (not in the list): excess at lambda = 2, -2, -lambda_0 = {0, 0, 0}   ok
+RESULT (5,2,3) (not in the list): excess at lambda = 2, -2, -lambda_0 = {0, 0, 0}   ok
+ALL 8 CHECKS PASSED

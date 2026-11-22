@@ -1,0 +1,8 @@
+RESULT (n,d,m) = (4,6,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (4,6,0): tau < 0; excess at lambda = 1, -1, 2 at a random point = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (10,3,-1): tau < 0; excess at lambda = 1, -1, 2 at a random point = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (10,3,0): tau < 0; excess at lambda = 1, -1, 2 at a random point = {true, {0, 0, 0}}   ok
+RESULT (n,d,m) = (10,3,1): tau < 0; excess at lambda = 1, -1, 2 at a random point = {true, {0, 0, 0}}   ok
+RESULT (d,k,c) = (3,5,2): excess at lambda = 2, 3, -2, 1/2, 5/3, 1 = {0, 0, 0, 0, 0, 0}   ok
+RESULT (3,5,2): excess at lambda = -1 [session value e_tau = k-1 = 4]; codim T V_Z = {4, 36}   ok
+ALL 7 CHECKS PASSED

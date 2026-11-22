@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it as below. The code, the tests and
+  the documentation were produced by AI agents (Anthropic's Claude) under the
+  direction of Timothy Seifert. They have not yet been reviewed by a human
+  mathematician; see the README for what is exact, what is computed modulo a
+  prime, what is proved only in AI-written notes, and what is only computed.
+title: "HodgeLociCI: Hodge loci of combinations of complete-intersection cycles in hypersurfaces"
+type: software
+authors:
+  - family-names: Seifert
+    given-names: Timothy
+version: 0.1.0
+date-released: "2026-11-22"
+license: MIT
+repository-code: "https://github.com/timseifer/HodgeLociCI"
+keywords:
+  - Hodge loci
+  - Noether-Lefschetz loci
+  - linear cycles
+  - complete-intersection cycles
+  - hypersurfaces
+  - Jacobian ring
+  - Hilbert function
+  - second-order obstruction
+  - Fermat variety
+  - Macaulay2
+abstract: >-
+  A Macaulay2 package for Hodge loci of classes r[Y1] + s[Y2] of two
+  complete-intersection cycles in a smooth hypersurface of even dimension: a
+  degree-level calculator for the first-order excess of the Hodge locus over
+  the locus where both cycles persist, a second-order obstruction check at
+  random or user-supplied points, and higher-order expansions at the Fermat
+  point by pole-order reduction, with a validation suite against published
+  numbers and a folder of Lean certificates. AI-generated; not yet reviewed
+  by a human.

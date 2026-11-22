@@ -1,0 +1,35 @@
+# HodgeLociCI
+
+> Macaulay2 package for Hodge loci (Noether-Lefschetz loci) of classes r[Y1] + s[Y2] of two linear or
+> complete-intersection cycles in a smooth hypersurface of even dimension: a first-order excess calculator, a
+> second-order obstruction check, and higher-order expansions at the Fermat point. AI-generated and not yet reviewed
+> by a human; every result carries a label (EXACT, MOD p, PROVED in an unreviewed AI-written note, COMPUTED ONLY).
+> Author: Timothy Seifert. Licence: MIT.
+
+Requires Macaulay2 (tested with 1.22). Load with `needsPackage("HodgeLociCI", FileName => "M2/HodgeLociCI.m2")`.
+Smoke test: `M2 --script examples/quickstart.m2` prints `RESULT <name> <value>` lines.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): setup, commands, calling conventions, pitfalls, rules for changing the repository
+- [README.md](README.md): what the package does, status of the mathematics, comparison with existing software
+- [docs/API.md](docs/API.md): every exported function with its signature, one line each
+
+## Worked examples (captured sessions)
+
+- [docs/01_excess_calculator.md](docs/01_excess_calculator.md): first-order excess, by degrees and at a point
+- [docs/02_level_dichotomy.md](docs/02_level_dichotomy.md): the cases tau < 0 and tau >= 0
+- [docs/03_second_order.md](docs/03_second_order.md): second-order obstruction on the excess directions
+- [docs/04_fermat_certificate.md](docs/04_fermat_certificate.md): verifying an arc or obstruction certificate at the Fermat point
+- [docs/05_tangent_codimension_two_determinants.md](docs/05_tangent_codimension_two_determinants.md): tangent codimension of a Hodge locus from an ideal
+
+## Validation
+
+- [tests/SOURCES.md](tests/SOURCES.md): the source of every expected value (Movasati, Kloosterman, Villaflor Loyola, Maclean, and the project's own results)
+- [tests/README.md](tests/README.md): how to run the validation suite and what each test covers
+
+## Optional
+
+- [lean/README.md](lean/README.md): Lean certificates and exactly what each one does and does not prove
+- [CITATION.cff](CITATION.cff): how to cite
+- [CHANGELOG.md](CHANGELOG.md)

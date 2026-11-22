@@ -1,0 +1,44 @@
+# exact certificate, Fermat cubic in P^7, z = zeta_6 (z^2 = z - 1); coefficients written a+b*z with a, b rational
+NV = 8
+lambda = 2
+P1: x0 = z^1*x1, x2 = z^1*x3, x4 = z^1*x5, x6 = z^1*x7
+P2: x0 = z^3*x1, x2 = z^3*x3, x4 = z^3*x5, x6 = z^1*x7
+arc: F_eps = F0 - (eps^1*T_1 + eps^2*T_2 + eps^3*T_3 + eps^4*T_4)
+T_1 = [1]*x0*x1*x7 + [(1/3)+(1/3)*z]*x0*x2*x4 + [1]*x0*x2*x5 + [1]*x2*x3*x7 + [1]*x4*x5*x7
+T_2 = [(-1/9)+(-1/9)*z]*x0*x2*x6 + [(-5/9)+(1/9)*z]*x0*x3*x6 + [(-1/9)+(2/9)*z]*x0*x4*x6 + [(-2/9)+(1/9)*z]*x0*x5*x6 + [(-1/9)+(2/9)*z]*x2*x4*x6 + [(-2/9)+(1/9)*z]*x2*x5*x6
+T_3 = 0
+T_4 = [(-4/729)+(-2/729)*z]*x0*x2*x4
+excess part of T_1 (e): [(1/3)+(1/3)*z]*x0*x2*x4 + [1]*x0*x2*x5
+T V part of T_1 (w): [1]*x0*x1*x7 + [1]*x2*x3*x7 + [1]*x4*x5*x7
+forms Q (in this order): x0, x1, x2, x3, x4, x5, x6, x7
+claim 1: the coefficient of eps^k in Phi_Q(F_eps) is 0 for every Q and k = 1..4
+claim 2: the coefficients of eps^5 are
+  c_5[x0] = (82/9)+(-26/9)*z
+  c_5[x1] = (-20/9)+(-8/9)*z
+  c_5[x2] = (82/9)+(-26/9)*z
+  c_5[x3] = (-20/9)+(-8/9)*z
+  c_5[x4] = (37/9)+(-29/9)*z
+  c_5[x5] = (10/9)+(79/9)*z
+  c_5[x6] = (-3)*z
+  c_5[x7] = (-6)+(6)*z
+claim 3: this vector is NOT in the image of the first-order map L (rank L = 7; L[Q][x^alpha] = 3 * coefficient of x^(complement of Q*x^alpha) in P_delta);
+         left-kernel vectors K of L (K.L = 0) and the values K.c_5:
+  K = [(-1)+(1)*z]*(x6)^dual + [1]*(x7)^dual   ;   K.c_5 = (-3)+(6)*z
+claim 4: T_1 is in the kernel of L (tangent to the Hodge locus) and not in T V = ker L_P1 n ker L_P2 (rank [L_P1; L_P2] = 8)
+period polynomial P_delta = P_1 + lambda*P_2 (squarefree monomials as index lists):
+  x0*x2*x4*x6 : (-243)*z
+  x1*x2*x4*x6 : (81)+(81)*z
+  x0*x3*x4*x6 : (81)+(81)*z
+  x1*x3*x4*x6 : (81)+(-162)*z
+  x0*x2*x5*x6 : (81)+(81)*z
+  x1*x2*x5*x6 : (81)+(-162)*z
+  x0*x3*x5*x6 : (81)+(-162)*z
+  x1*x3*x5*x6 : (243)*z
+  x0*x2*x4*x7 : (243)+(-243)*z
+  x1*x2*x4*x7 : (-81)+(162)*z
+  x0*x3*x4*x7 : (-81)+(162)*z
+  x1*x3*x4*x7 : (162)+(-81)*z
+  x0*x2*x5*x7 : (-81)+(162)*z
+  x1*x2*x5*x7 : (162)+(-81)*z
+  x0*x3*x5*x7 : (162)+(-81)*z
+  x1*x3*x5*x7 : (-243)+(243)*z

@@ -1,0 +1,19 @@
+RESULT sixfold.tau 0
+RESULT sixfold.lambda0 1
+RESULT sixfold.eTau 1
+RESULT sixfold.codimVZ 8
+RESULT sixfold.codimNLAtLambda0 7
+RESULT sixfold.excessAtLambda0 1
+RESULT sixfold.excessElsewhere 1
+RESULT sixfold.inRange true
+RESULT eightfold_point.tau -1
+RESULT eightfold_point.excessAtLambda0 0
+RESULT sixfold.verifyExcess.agrees true
+RESULT sixfold.secondOrder.lambda2 ALL DIE
+RESULT sixfold.secondOrder.lambda1 ALL SURVIVE
+RESULT twoDeterminants.codim 8
+RESULT cubicSixfold.primitiveHodgeNumbers {0, 0, 8, 70, 8, 0, 0}
+RESULT cubicSixfold.hodgeLevel 2
+RESULT fermat.cert_n6_lam2.pass true
+RESULT fermat.cert_n6_lam2.vanishingOrder 4
+RESULT fermat.cert_n6_lam2.obstructionOrder 5
