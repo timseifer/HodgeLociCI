@@ -216,6 +216,19 @@ found in that search.
 - **SpecialFanoFourfolds** (G. Staglianò, Macaulay2, JSAG 14 (2024)) constructs Hodge-special cubic and
   Gushel–Mukai fourfolds and locates them in Noether–Lefschetz divisors. This package does not construct special
   fourfolds; `hodgeLocusTangentCodim` is a first-order tool only.
+- **One complete-intersection cycle is known.** For a single complete intersection `Y = V(f)` of half dimension in a
+  smooth hypersurface `F = sum f_i g_i` of degree `d`, the Hodge locus of `[Y]` is smooth and is the locus of
+  hypersurfaces containing such a complete intersection, of codimension `dim (S/(f, g))_d`: R. Kloosterman,
+  [arXiv:2104.14845](https://arxiv.org/abs/2104.14845) (Theorems 1.1 and 4.14, Propositions 3.2 and 4.13, as read by
+  machine), after A. Dan ([arXiv:1404.7519](https://arxiv.org/abs/1404.7519)). `codimV1` and `codimV2` of this package
+  are that number, and his Lemma 4.3 (exchange one equation for its cofactor) is one step of the residual argument of
+  the unreviewed note. Not found there: two cycles, the coefficient `lambda`, the level `tau`, the excess. No software
+  from that paper was found.
+- **Movasati's code and tables for Fermat surfaces** (`movasati/NoetherLefschetz` on GitHub, Singular, for
+  [arXiv:1908.04117](https://arxiv.org/abs/1908.04117); no licence, so not reused). In a one-off cross-check by an
+  agent (not part of the test suite; this package's side MOD p), its 1758 stored records in this package's setting
+  agree with this package on all first-order numbers, and its lists of coefficients show the special coefficient
+  `lambda_0`. Outside the range there is one unresolved difference at second order, listed under Limitations.
 - For the first-order and second-order tools at **arbitrary smooth points** (not only Fermat), with shared equations
   and complete intersections of any degrees, no existing package was found. The underlying first-order theory is in
   papers of Villaflor Loyola ([arXiv:1812.03964](https://arxiv.org/abs/1812.03964)) and Kloosterman
@@ -307,6 +320,10 @@ and unreviewed, and no entry claims novelty. Start with `discoveries/README.md`.
   every instance tried, but both rest on the same lemma of the note, so their agreement checks the algebra and not
   the periods. The package has no second-order route that is independent of that lemma.
 - Not implemented from the note: the residual cycle and the explicit family at the special coefficient.
+- Outside the range the second-order checker can report `ALL SURVIVE` where Movasati's 2019 tables
+  (arXiv:1908.04117) record the Hodge locus as not smooth at order 2: 42 Fermat-surface records of degree 7 and 8.
+  "All excess directions survive at second order" does not mean "smooth at order 2", and the checker asserts nothing
+  more outside the range; but this shows it can miss an order-2 obstruction there. Unresolved.
 - `linearSubspaceCase` returns the value for a general hypersurface; at a special point use `excessFromData`.
 - `hodgeLocusTangentCodim` assumes that the primitive class of the subvariety is nonzero and reports, but does not
   prove, the one-dimensionality it relies on (key `"hypothesis"`).

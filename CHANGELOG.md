@@ -42,6 +42,9 @@ A second AI agent installed the package from a fresh clone, following only the R
 - Discoveries registry (`discoveries/`): 123 entries on what the project has found, ruled out or left open, with a
   validating script, so that work is not repeated.
 
+- README: related work on one complete-intersection cycle (Kloosterman arXiv:2104.14845, after Dan
+  arXiv:1404.7519) and Movasati's 2019 Fermat-surface tables; a known second-order limitation outside the range.
+
 ### Known disagreement with a published table
 - One entry of a side column (Hodge numbers of cubic 12-folds) differs by 1 from the published table as read by
   machine; see the README section "Validation" and `tests/SOURCES.md`.
