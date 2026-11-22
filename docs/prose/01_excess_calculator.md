@@ -32,7 +32,7 @@ a cyclotomic field.
 |---|---|---|---|
 | codim V_Z (`codimVZ`) | 8 | 20 | EXACT (integer arithmetic on the degrees) |
 | excess, every lambda != 0 | 1 | 1 | PROVED in paper 3, Theorem 2(2) (AI-written, unreviewed); checked MOD p at one random sixfold (`verifyExcess`) |
-| tangent codimension of the Hodge locus at the Fermat point (`hodgeCodimension`) | 7 | 19 | EXACT over Q(zeta_6) |
+| tangent codimension of the Hodge locus at the Fermat point (`hodgeCodimension`) | 7 | 19 | EXACT over Q(zeta_6); COMPUTED ONLY (assumes the period formula for linear spaces and Griffiths' description of the Hodge locus) |
 
 - The pairs (7, 8) and (19, 20) are the entries (H, K) of Table 1 of H. Movasati, "Why should one compute periods of
   algebraic cycles?" (arXiv:1602.06607) for n = 6, m = 0 and n = 8, m = 1, and the rows dim(S), codim(V^1) of Table 2
@@ -48,5 +48,6 @@ a cyclotomic field.
   codimension 8; in the range the excess is 2 for every coefficient, and the direct computation agrees (MOD p).
 - Step 6 shows a mixed type (a plane and a quadric surface on a quartic fourfold): lambda0 = -1 because c = 2.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 01_excess_calculator.m2 > 01_excess_calculator.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 01_excess_calculator.m2 > 01_excess_calculator.out) && python3 docs/build_docs.py`.

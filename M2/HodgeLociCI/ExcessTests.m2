@@ -171,6 +171,10 @@ for w in out do (
     );
 -- the excluded cases and the hypothesis kd-2k-2 >= 1
 assert((linearSubspaceCase(3,1,1))#"case" == "excluded" and (linearSubspaceCase(3,2,3))#"case" == "excluded");
+-- the labels that cite Theorem 9.7(3) carry the caveat recorded in tests/SOURCES.md (E3); the label of part (1) does not need it
+assert(match("PROVED in paper 3 \\(AI-written, unreviewed\\)", (linearSubspaceCase(3,3,3))#"label"));
+assert(match("caveat: the second-order parts", (linearSubspaceCase(3,3,3))#"label") and match("caveat: the second-order parts", (linearSubspaceCase(3,5,3))#"label"));
+assert(not match("caveat", (linearSubspaceCase(3,3,4))#"label"));
 assert((linearSubspaceCase(4,1,2))#"case" == "excluded" and (linearSubspaceCase(4,1,2))#"genericExcessElsewhere" === NotDetermined);
 assert((try linearSubspaceCase(2,2,1) else "error") === "error");
 assert((try linearSubspaceCase(3,2,4) else "error") === "error");
@@ -290,4 +294,26 @@ ec = excessFromData Dc;
 assert(ec#"codimV1" == 0 and ec#"codimVZ" == 0 and ec#"excessElsewhere" == 0 and ec#"excessAtLambda0" == 0);
 assert((verifyExcess Dc)#"agrees");
 assert((hodgeLocusTangentCodim(Dc#"F", ideal Dc#"f"))#"codim" == 0);
+///
+
+TEST /// -- PA-E12. EXACT. isSmoothHypersurface: a smooth Fermat cubic gives true, singular hypersurfaces give false, over QQ and over ZZ/p
+for kk in {QQ, ZZ/32003, ZZ/7} do (
+    S = kk[x_0..x_3];
+    assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^3 + x_3^3) === true);         -- Fermat cubic surface (3 is invertible in kk)
+    assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^3) === false);                -- cone over a cubic curve: singular at (0:0:0:1)
+    assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^2*x_3) === false);            -- singular at (0:0:0:1)
+    assert(isSmoothHypersurface(x_0*x_1 - x_2*x_3) === true);                     -- smooth quadric
+    assert(isSmoothHypersurface(x_0*x_1*x_2) === false);                          -- three planes
+    assert((try isSmoothHypersurface(x_0^3 + x_1^2) else "error") === "error");   -- not homogeneous
+    assert((try isSmoothHypersurface(0_S) else "error") === "error");             -- zero
+    );
+-- over QQ: a cubic with non-integer coefficients; and a smooth cubic whose reduction modulo 32003 is a cone (the
+-- function must go on to the next prime and still answer true)
+S = QQ[x_0..x_5];
+assert(isSmoothHypersurface((1/2)*x_0^3 + (2/3)*x_1^3 - x_2^3 + 5*x_3^3 + x_4^3 + x_5^3) === true);
+assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^3 + x_3^3 + x_4^3 + 32003*x_5^3) === true);
+assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^3 + x_3^3 + x_4^2*x_5) === false);
+-- in characteristic 3 the Fermat cubic is a cube of a linear form: singular
+S = ZZ/3[x_0..x_3];
+assert(isSmoothHypersurface(x_0^3 + x_1^3 + x_2^3 + x_3^3) === false);
 ///

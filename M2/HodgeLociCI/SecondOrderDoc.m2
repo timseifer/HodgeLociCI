@@ -39,7 +39,9 @@ doc ///
       source of the formulas.
     Text
       {\bf The verdicts, and what is PROVED (paper 3; AI-written, unreviewed).}
-      "NO EXCESS": $\tau < 0$ or $E' = 0$; then $NL(\delta_\lambda) = V_Z$ (Theorem 2(3), (5)).
+      "NO EXCESS": $\tau < 0$ or $E' = 0$; then $NL(\delta_\lambda) = V_Z$ (Theorem 2(3), (5)). No second-order
+      computation is made, and the "label" says so: it names the first-order data used ($\tau$ from the degrees, or
+      the annihilator of $\det M$ in $A_\tau$) and their arithmetic, EXACT or MOD p.
       "ALL SURVIVE" at $\lambda = \lambda_0$: the locus is smooth with $e_\tau$ excess directions (Theorem 2(4)); no
       computation is made. "ALL SURVIVE" elsewhere: all quadrics vanish at this point, so there is no obstruction
       at second order; this decides nothing about higher order, except when $K = 0$ in the range, where the locus is

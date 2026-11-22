@@ -3,17 +3,25 @@
 > Macaulay2 package for Hodge loci (Noether-Lefschetz loci) of classes r[Y1] + s[Y2] of two linear or
 > complete-intersection cycles in a smooth hypersurface of even dimension: a first-order excess calculator, a
 > second-order obstruction check, and higher-order expansions at the Fermat point. AI-generated and not yet reviewed
-> by a human; every result carries a label (EXACT, MOD p, PROVED in an unreviewed AI-written note, COMPUTED ONLY).
+> by a human; every result table carries a label (EXACT, MOD p, PROVED in an unreviewed AI-written note, COMPUTED ONLY).
 > Author: Timothy Seifert. Licence: MIT.
 
 Requires Macaulay2 (tested with 1.22). Load with `needsPackage("HodgeLociCI", FileName => "M2/HodgeLociCI.m2")`.
-Smoke test: `M2 --script examples/quickstart.m2` prints `RESULT <name> <value>` lines.
+Smoke test, from the repository root: `M2 --script examples/quickstart.m2` prints `RESULT <name> <value>` lines.
 
 ## Start here
 
 - [AGENTS.md](AGENTS.md): setup, commands, calling conventions, pitfalls, rules for changing the repository
 - [README.md](README.md): what the package does, status of the mathematics, comparison with existing software
-- [docs/API.md](docs/API.md): every exported function with its signature, one line each
+- [docs/API.md](docs/API.md): every exported function with its signature (options and defaults included), one line each
+
+## What has already been found (read before starting new work)
+
+- [discoveries/README.md](discoveries/README.md): the registry of results, negative results, dead ends, corrections and open problems; status vocabulary; rules for adding entries
+- [discoveries/registry.yaml](discoveries/registry.yaml): the machine-readable registry (123 entries); `python3 discoveries/check_registry.py --list` prints one line per entry
+- [discoveries/06_ruled_out_and_dead_ends.md](discoveries/06_ruled_out_and_dead_ends.md): what failed and why
+- [discoveries/07_open_problems.md](discoveries/07_open_problems.md): open questions, each with one next step
+- [discoveries/NOTATION.md](discoveries/NOTATION.md): the setting and every symbol
 
 ## Worked examples (captured sessions)
 

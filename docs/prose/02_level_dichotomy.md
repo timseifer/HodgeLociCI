@@ -38,5 +38,6 @@ Theorem 2 (AI-written, unreviewed), is:
 - `linearSubspaceCase` quotes the classification of paper 3, Theorem 9.7, which is a statement about a GENERAL
   hypersurface containing the two planes.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 02_level_dichotomy.m2 > 02_level_dichotomy.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 02_level_dichotomy.m2 > 02_level_dichotomy.out) && python3 docs/build_docs.py`.

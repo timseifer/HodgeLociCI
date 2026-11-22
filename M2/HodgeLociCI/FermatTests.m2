@@ -118,7 +118,7 @@ TEST ///
   assert(D#"dimension" == 6 and D#"degree" == 3 and D#"vanishingOrder" == 4 and D#"obstructionOrder" == 5);
   assert(#(D#"ignoredLines") == 1);   -- one continuation line of prose
   V = fermatVerifyCertificate D;
-  assert(V#"pass" and V#"firstFailingOrder" === null and V#"label" == "EXACT over QQ(zeta_6)");
+  assert(V#"pass" and V#"firstFailingOrder" === null and match("^EXACT over QQ\\(zeta_6\\); COMPUTED ONLY", V#"label"));
   assert(#(V#"checks") == 11 and all(V#"checks", c -> c#1));
   -- the listed value K.c_5 = -3 + 6z, recomputed through fermatNextOrderSystem
   S = D#"ring"; z = fermatRoot S; arc = D#"arc";
@@ -158,7 +158,7 @@ TEST ///
   D = fermatReadCertificate(dir | "x1_lam-1_arc.txt");
   assert(#(D#"arc") == 7 and D#"vanishingOrder" == 7 and D#"obstructionOrder" === null and #(D#"forms") == 45);
   V = fermatVerifyCertificate D;
-  assert(V#"pass" and V#"firstFailingOrder" === null and V#"label" == "EXACT over QQ(zeta_6)");
+  assert(V#"pass" and V#"firstFailingOrder" === null and match("^EXACT over QQ\\(zeta_6\\); COMPUTED ONLY", V#"label"));
   -- negative control: T_5 changed by 1/1000 of a monomial -> first failing order 5
   S = D#"ring"; arc = D#"arc";
   bad = apply(7, j -> if j == 4 then arc#j + (1/1000)*S_0*S_6*S_8 else arc#j);
@@ -173,7 +173,7 @@ TEST ///
   V9 = fermatVerifyCertificate(dir | "six_lam-1_arc.txt");
   assert(V9#"pass" and V9#"vanishingOrder" == 9);
   V9p = fermatVerifyCertificate(dir | "six_lam-1_arc.txt", Prime => 32749);
-  assert(V9p#"pass" and V9p#"label" == "MOD p = 32749");
+  assert(V9p#"pass" and match("^MOD p = 32749 .*evidence, not a proof.*; COMPUTED ONLY", V9p#"label"));
 ///
 
 -- Test F6. Tangent spaces at the Fermat point for the two Movasati points and for single linear spaces. EXACT.

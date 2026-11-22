@@ -14,10 +14,13 @@ are AI-written, unreviewed and not part of this package.
 
 ## Re-run status (22 November 2026, Lean 4.36.0, copies in this folder)
 
-- `core/`: 13 files, each accepted with no error, no warning and no `sorryAx` (1 s to 130 s per file, about 6
-  minutes in total on a 2-core machine).
+- `core/`: 13 files, each accepted with no error, no warning and no `sorryAx` (1 s to 130 s per file, about 5.5
+  minutes in total on a 2-core machine). Run again with the present `run_all.sh core` after the fixes of the blind
+  install check: 13 PASS, `Neg0.lean` rejected, exit status 0, 321 s.
 - `mathlib/`: 5 files, each accepted with no error, no warning and no `sorryAx`, against Mathlib `v4.36.0`.
 - `mathlib/negative_tests/`: 12 files with a deliberate mistake; each is rejected, as it must be.
+- The Mathlib files and `Neg1` to `Neg11` were not run again after `run_all.sh` was changed; the Mathlib branch of
+  the script was exercised only with stand-ins for `lake`.
 
 ## `core/`: Lean 4 core only (no Mathlib, no `native_decide`, no `sorry`)
 
@@ -56,7 +59,14 @@ hypothesis (`Neg0` is for `core/SecondOrderLaw.lean`; `Neg1` to `Neg4` for the f
 
 ## How to re-run
 
-Lean 4.36.0. For the core files only `lean` is needed:
+Lean 4.36.0 is needed. Two ways to get it:
+
+- with [elan](https://github.com/leanprover/elan), the Lean toolchain manager:
+  `elan toolchain install leanprover/lean4:v4.36.0`, then `elan default leanprover/lean4:v4.36.0`;
+- or download the release archive of version 4.36.0 for your platform from the Lean 4 GitHub releases page,
+  <https://github.com/leanprover/lean4/releases>, unpack it and put its `bin` directory first on the `PATH`.
+
+Check with `lean --version`. For the core files only `lean` is needed:
 
     ./run_all.sh core
 
@@ -69,6 +79,18 @@ For the Mathlib files, a built Mathlib at tag `v4.36.0` (its `lean-toolchain` is
     cd -
     ./run_all.sh mathlib /path/to/mathlib4
 
-Expected: `PASS` for every file, and for every `#print axioms` line at most
-`[propext, Classical.choice, Quot.sound]`. Building the needed part of Mathlib from source took about 21 minutes
-on 2 cores in the project's own run.
+Expected: one line per file, `PASS <file>` for the certificates and `PASS <file> is rejected, as it must be` for the
+negative tests, and exit status 0. `run_all.sh` prints only these PASS / FAIL lines; it does not show what Lean
+prints. It exits with status 1 if some line is FAIL, and with status 2 and a message, before running anything, if
+`lean` (core mode) or `lake` (mathlib mode) is not on the `PATH`. A negative test counts as rejected only if Lean
+actually ran and reported an error. If one of the five Mathlib files fails because of the setup (for example Mathlib
+is not built), the negative tests are rejected for the same reason and their PASS lines mean nothing; the script
+prints a note in that case.
+
+To see the `#print axioms` lines, run Lean on a file directly: `lean core/SecondOrderLaw.lean`, or, for a Mathlib
+file, `lake env lean /path/to/lean/mathlib/EveryR.lean` inside the mathlib4 checkout. Every such line names at most
+`[propext, Classical.choice, Quot.sound]`: for the nine core files that have `#print axioms` commands this was
+checked again in the re-run of 22 November 2026 (218 lines); for the five Mathlib files it is the result of the
+project's earlier run. Four core files (`TangentCert.lean`, `GenFamilyCert.lean`, `OcticDetCert.lean`,
+`LatticeFacts.lean`) contain no `#print axioms` command, so Lean prints nothing for them. Building the needed part
+of Mathlib from source took about 21 minutes on 2 cores in the project's own run.

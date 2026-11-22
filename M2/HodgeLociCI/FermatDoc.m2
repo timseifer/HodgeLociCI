@@ -42,8 +42,8 @@ doc ///
     Text
       up to one nonzero constant that is the same for all Q and all classes. Along an arc
       T = eps T_1 + eps^2 T_2 + ... the coefficient of eps^n is called c_n[Q] (@TO fermatExpansion@).
-      For d = 3 these are exactly the rules (1)-(5) of the session file
-      {\tt discovery/t3_window/export_c3/README.txt} (copied to {\tt tests/data/fermat/README_export_c3.txt}).
+      For d = 3 these are exactly the rules (1)-(5) of the session's README for its exported certificates,
+      which is shipped in the repository as {\tt tests/data/fermat/README_export_c3.txt}.
       For the quartic sixfold the session's {\tt flc.py} writes the deformation as F0 + G (so T = -G here)
       and uses the period polynomial of a linear space without the constant factor prod d c_j; the values of
       the functional on monomials are the same (test F3).
@@ -52,7 +52,10 @@ doc ///
       {\bf EXACT}: computed in exact arithmetic over QQ(zeta_2d) (rings made by {\tt fermatRing(d,n)}).
       {\bf MOD p}: computed in ZZ/p for one prime p = 1 mod 2d (rings made by {\tt fermatRing(d,n,p)});
       a nonzero value mod p proves that the exact value is nonzero, a zero value mod p is evidence only.
-      Every result table carries the key {\tt "label"} saying which of the two applies.
+      Every result table carries the key {\tt "label"}. It states the arithmetic first ("EXACT over
+      QQ(zeta_2d)" or "MOD p = ...", the latter marked as evidence, not a proof) and then the status
+      COMPUTED ONLY, with the two assumptions named below (the period formula for linear spaces and
+      Griffiths' pole-order description of the Hodge locus).
       {\bf ASSUMED from the literature, not re-derived here}: Griffiths' description of the Hodge locus by
       the period functions; the Griffiths-Dwork reduction; the formula for the periods of a linear space in a
       Fermat variety (Movasati and Villaflor Loyola, arXiv:1705.00084) in the normalisation P_L = det Jac
@@ -173,8 +176,10 @@ doc ///
     Text
       {\bf Labels.} EXACT for {\tt fermatRing(d,n)}; MOD p for {\tt fermatRing(d,n,p)}.
     Text
-      As for any polynomial ring created in Macaulay2, the ring is put in use: the symbols x_0, ..., x_(n+1),
-      the parameters and z get these ring elements as values.
+      As for any polynomial ring created in Macaulay2, the ring is put in use: the symbols x_0, ..., x_(n+1)
+      and the parameters get these ring elements as values. The root of unity is {\bf not} assigned to a
+      symbol: obtain it with {\tt z = fermatRoot S}, as in the example (over ZZ/p it is a number, an element
+      of ZZ/p, and there is no variable z).
   Caveat
     With Parameters the functions @TO fermatHodgeTangent@, @TO fermatPersistenceTangent@,
     @TO fermatTangentData@, @TO fermatVerifyCertificate@ and @TO fermatWriteCertificate@ are not available.
@@ -269,7 +274,7 @@ doc ///
       and f_j = x_(a_j) - c_j x_(b_j). The period of the class [L] on the form
       x^R Omega / F0^(n/2+1) is the coefficient of the complementary monomial in P_L, up to one constant
       that does not depend on L; classes are added by adding their period polynomials. For d = 3 this is
-      rule (1) of the session's {\tt export_c3/README.txt}.
+      rule (1) of the session's README, shipped as {\tt tests/data/fermat/README_export_c3.txt}.
     Example
       S = fermatRing(3, 6); z = fermatRoot S;
       L1 = {{0,1,1},{2,3,1},{4,5,1},{6,7,1}};
@@ -357,7 +362,7 @@ doc ///
       I(f, k), the period of f Omega / F0^k on the class with period polynomial P
   Description
     Text
-      Reference implementation of rules (2) and (3) of the session's {\tt export_c3/README.txt}, for any d:
+      Reference implementation of rules (2) and (3) of {\tt tests/data/fermat/README_export_c3.txt}, for any d:
     Pre
       I(x^b, k) = ((b_j - (d-1)) / (d (k-1))) * I(x^(b - d e_j), k-1)       if b_j >= d-1,
       I(x^b, k) = coefficient of x^((d-2,..,d-2) - b) in P                   if all b_j <= d-2 and k = n/2+1,
@@ -532,7 +537,7 @@ doc ///
   Description
     Text
       The kernel of L is the tangent space at the Fermat point of the Hodge locus of the class (rule (5) of
-      the session's {\tt export_c3/README.txt} for d = 3). The example is Movasati's pair of 3-planes
+      {\tt tests/data/fermat/README_export_c3.txt} for d = 3). The example is Movasati's pair of 3-planes
       meeting in a point on the Fermat cubic sixfold: rank 7 for the combination against rank 8 for the
       locus where both planes persist.
     Example
@@ -660,7 +665,7 @@ doc ///
       (H8#"hodgeCodimension", H8#"jointPersistenceCodimension", H8#"excess")
     Text
       {\bf Labels.} EXACT (or MOD p); COMPUTED. Source of the numbers 7, 8 and 19, 20: the session's
-      {\tt export_c3/README.txt} ("rank L = 7 against rank [L_P1; L_P2] = 8 for NV = 8; 19 against 20 for
+      README, shipped as {\tt tests/data/fermat/README_export_c3.txt} ("rank L = 7 against rank [L_P1; L_P2] = 8 for NV = 8; 19 against 20 for
       NV = 10") and the pairs (H,K) of Table 1 of arXiv:1602.06607 as recorded in {\tt tests/SOURCES.md}.
   SeeAlso
     fermatFirstOrderMatrix
@@ -978,8 +983,8 @@ doc ///
     Text
       {\bf Labels.} EXACT, or MOD p with the option Prime. A pass means that the listed numbers were
       reproduced (COMPUTED). It does not check the argument by which a certificate draws geometric
-      conclusions (for instance "why one arc suffices" in {\tt export_c3/README.txt}, or claim 4 of
-      {\tt x1_lam2_obstruction.txt}); that argument and the period formulas are ASSUMED.
+      conclusions (for instance "why one arc suffices" in {\tt tests/data/fermat/README_export_c3.txt}, or claim 4 of
+      {\tt tests/data/fermat/x1_lam2_obstruction.txt}); that argument and the period formulas are ASSUMED.
   SeeAlso
     fermatReadCertificate
     fermatVerifyArc

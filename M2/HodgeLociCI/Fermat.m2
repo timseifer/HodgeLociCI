@@ -4,7 +4,8 @@
 -- STATUS. Written by an AI agent; not reviewed by a human. Nothing here is, or bears on, a proof or disproof
 -- of the Hodge conjecture.
 --
--- CONVENTIONS (identical to discovery/t3_window/export_c3/README.txt of the session, extended from d = 3 to any d).
+-- CONVENTIONS (identical to the session file export_c3/README.txt, shipped as tests/data/fermat/README_export_c3.txt,
+-- extended from d = 3 to any d).
 --   X0 = {F0 = x_0^d + ... + x_(n+1)^d = 0} in P^(n+1), n even; z = a fixed primitive 2d-th root of unity.
 --   A linear space is L = {{a,b,e},...}: x_a = z^e x_b on the pairs {a,b} of a perfect matching, e odd.
 --   Period polynomial  P_L = sign(a_1,b_1,a_2,b_2,...) * prod_pairs d c (sum_{r=0}^{d-2} c^r x_a^(d-2-r) x_b^r),  c = z^e
@@ -83,7 +84,13 @@ fermatRing(ZZ, ZZ, ZZ) := opts -> (d, n, p) -> (
 fermatRoot = method()
 fermatRoot(Ring) := S -> (fmInfo S)#"z"
 
-fmLabel = info -> if info#"p" == 0 then "EXACT over QQ(zeta_" | toString(2*info#"d") | ")" else "MOD p = " | toString(info#"p")
+-- The label of every result table of this file: the arithmetic AND the status. Nothing in this part of the package is
+-- PROVED; every table reports a computation that assumes the two facts named in fmStatus.
+fmStatus = "COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces and Griffiths' pole-order description of the Hodge locus)";
+fmLabel = info -> (
+    if info#"p" == 0 then "EXACT over QQ(zeta_" | toString(2*info#"d") | ")"
+    else "MOD p = " | toString(info#"p") | " (one prime: evidence, not a proof)"
+    ) | "; " | fmStatus
 
 -- rational number (ZZ or QQ) -> element of the coefficient field
 fmToK = (a, info) -> (
@@ -214,7 +221,7 @@ fermatPeriod(RingElement, RingElement) := (P, f) -> (
     first fmEvalForms(pd, f, {toList(pd#"info"#"nv" : 0)}))
 fermatPeriod(RingElement, ZZ) := (P, a) -> fermatPeriod(P, a_(ring P))
 
--- literal Griffiths-Dwork reduction of x^beta Omega / F0^k  (rules (2), (3) of export_c3/README.txt for d = 3)
+-- literal Griffiths-Dwork reduction of x^beta Omega / F0^k  (rules (2), (3) of tests/data/fermat/README_export_c3.txt for d = 3)
 fmGD = (pd, beta, k, useLast) -> (
     info := pd#"info"; d := info#"d"; n := info#"n"; V := pd#"V";
     js := positions(beta, b -> b >= d-1);

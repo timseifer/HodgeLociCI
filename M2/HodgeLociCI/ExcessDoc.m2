@@ -1,6 +1,7 @@
 -- HodgeLociCI/ExcessDoc.m2  (owner: agent PA)
 -- Documentation nodes of item 1; loaded after beginDocumentation().
--- "Paper 3" = night/paper3/paper3.tex of the research session (AI-written, not refereed by a human).
+-- "Paper 3" = the third manuscript of the research session (AI-written, not refereed by a human). It is not public
+-- and not part of this repository; its statements are paraphrased in the nodes below and in tests/SOURCES.md, part E.
 
 doc ///
   Key
@@ -10,8 +11,11 @@ doc ///
   Description
     Text
       {\bf Source.} All statements quoted in this package under the name "paper 3" come from an AI-written
-      manuscript of the research session (file night/paper3/paper3.tex, version 21) that no human has refereed.
+      manuscript of the research session (its third note, version 21) that no human has refereed.
       "PROVED" in this documentation always means "proved in that unreviewed manuscript".
+      The manuscript is not public, has no URL and is not part of this package. What it states is paraphrased in
+      this node, in @TO excessFromDegrees@, @TO linearSubspaceCase@ and @TO secondOrderObstruction@, and in part E
+      of the file tests/SOURCES.md of the repository.
     Text
       {\bf Setting.} $S$ is a polynomial ring in $2k+2$ variables over a field, $X = V(F)$ a smooth hypersurface
       of degree $d$ in projective space of dimension $2k+1$. Fix $c \ge 1$ and forms $f_0,\dots,f_{c-1}$,
@@ -244,6 +248,11 @@ doc ///
       (3,3,1), (3,3,2), (3,3,3), (3,4,1), (3,4,2), (3,4,3), (4,2,1), (4,2,2), (5,2,1) or $(d,1,1)$ with $d \ge 5$;
       in these cases it is $V_Z$ with a non-reduced structure and the number of excess tangent directions given under
       "genericExcessElsewhere" (and it is non-reduced at every smooth $X$).
+    Text
+      {\bf Caveat}, recorded for this theorem in tests/SOURCES.md (entry E3) and repeated in the "label" of every
+      result that cites part (3): the second-order parts of the theorem (the non-reduced structure) rest, for some
+      rows of the list, on computations at instances. Like everything cited from paper 3, the statement is
+      unreviewed.
     Text
       The key "case" is one of "tau < 0", "sporadic", "generic", "excluded". The value "excluded" is returned when
       $kd-2k-2 < 1$ (cubic surfaces, cubic fourfolds, quartic surfaces), where the theorem does not apply; the

@@ -124,7 +124,9 @@ i19 : P1 = apply(6, i -> {2*i, 2*i+1, 1}); P2 = apply(6, i -> {2*i, 2*i+1, if i 
 
 i21 : f10 = fermatTangentData(S10, {P1, P2}, {1, 2}); f10#"jointPersistenceCodimension", f10#"hodgeCodimension", f10#"label"
 
-o22 = (39, 38, EXACT over QQ(zeta_6))
+o22 = (39, 38, EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces
+      ----------------------------------------------------------------------------------------------------------------
+      and Griffiths' pole-order description of the Hodge locus))
 
 o22 : Sequence
 
@@ -161,5 +163,6 @@ o25 = for lambda not in {0, lambda0} and X general among the smooth hypersurface
 - `linearSubspaceCase` quotes the classification of paper 3, Theorem 9.7, which is a statement about a GENERAL
   hypersurface containing the two planes.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 02_level_dichotomy.m2 > 02_level_dichotomy.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 02_level_dichotomy.m2 > 02_level_dichotomy.out) && python3 docs/build_docs.py`.

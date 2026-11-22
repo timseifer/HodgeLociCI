@@ -6,7 +6,7 @@ hypersurface `X = {F = 0}` of even dimension in projective space.
 
 Author: Timothy Seifert. Licence: MIT. Version 0.1.0 (22 November 2026).
 AI agents: start with [`AGENTS.md`](AGENTS.md) and [`docs/API.md`](docs/API.md); a smoke test with parseable output
-is `M2 --script examples/quickstart.m2`.
+is `M2 --script examples/quickstart.m2`, run from the repository root.
 
 > **Status: AI-generated, not yet reviewed by a human.** The code, the tests, the documentation and the
 > mathematical notes this package implements were produced by AI agents (Anthropic's Claude) under the direction of
@@ -19,18 +19,22 @@ is `M2 --script examples/quickstart.m2`.
 Setting: `X` has degree `d` in `P^(2k+1)`; `Y1 = V(f, p)` and `Y2 = V(h, p)` are complete intersections of dimension
 `k` in `X` with `c` own equations each (`f`, `h`) and `k + 1 - c` shared equations (`p`), so that
 `F = f^T M h + sum p_l s_l` for a `c x c` matrix `M` of forms. `V_Z` is the locus of hypersurfaces in which both
-cycles persist. The **excess** of a coefficient `lambda` is `dim T NL([Y1] + lambda [Y2]) - dim T V_Z`: the number of
-tangent directions of the Hodge locus beyond those in which both cycles deform.
+cycles persist. The **excess** of a coefficient `lambda` is `dim T NL([Y1] + lambda [Y2]) - dim T V_Z`, where `T`
+is the Zariski tangent space at `X`: the number of tangent directions of the Hodge locus beyond those in which both
+cycles deform.
 
 1. **Excess calculator** (`excessFromDegrees`, `excessFromData`, `tangentExcess`, `verifyExcess`,
    `linearSubspaceCase`). From the degrees alone: the integer `tau = d - deg det M` (the "level"), the dichotomy
    `tau < 0` (no excess for any `lambda != 0`) against `tau >= 0`, the special coefficient
-   `lambda_0 = (-1)^(c-1)`, the Hilbert-function value `e_tau`, the codimensions of the loci, and the excess at
-   `lambda_0` and elsewhere where the degrees determine it. From explicit or random data: the same numbers computed,
-   plus an independent first-order computation in the Jacobian ring to compare with.
+   `lambda_0 = (-1)^(c-1)`, the Hilbert-function value `e_tau` (defined under "Terminology"), the codimensions of the
+   loci, and the excess at `lambda_0` and elsewhere where the degrees determine it. From explicit or random data: the
+   same numbers computed, plus an independent first-order computation in the Jacobian ring to compare with.
 2. **Second-order checker** (`secondOrderObstruction`, `secondOrderQuadrics`, `secondOrderFunctional`). For given data
-   and `lambda`, computes the second-order obstruction on the excess directions and reports whether they survive
-   (`ALL SURVIVE`, `ALL DIE`, or a partial verdict). When they all die the Hodge locus is non-reduced along `V_Z`.
+   and `lambda`, computes the second-order obstruction on the excess directions and reports one of four verdicts:
+   `NO EXCESS` (there are no excess directions, so nothing is computed at second order), `ALL SURVIVE`, `ALL DIE`,
+   or `SOME DIE` (the partial verdict). When they all die the Hodge locus is non-reduced along `V_Z` by
+   Theorem 9.1(4) of the unreviewed note, under its condition (S), which always holds in the range; otherwise only
+   "not smooth" is asserted. A verdict at one instance modulo a prime is evidence, not a proof.
 3. **Fermat higher-order expansion** (`fermatExpansion`, `fermatNextOrderSystem`, `fermatExtendArc`,
    `fermatVerifyArc`, `fermatVerifyCertificate`, and the other `fermat*` functions). At the Fermat hypersurface,
    Taylor coefficients of the Hodge-locus equations along an arc, by pole-order (Griffiths–Dwork) reduction; the
@@ -44,7 +48,11 @@ Hodge level of a hypersurface (`primitiveHodgeNumbers`, `hodgeLevel`).
 
 ## What is proved, what is computed
 
-Every result object carries a `label` string saying which of these applies.
+Every result table (a `HashTable`) carries a `label` string saying which of these applies; a label can combine
+the arithmetic and the status, for example `EXACT over QQ(zeta_6); COMPUTED ONLY (...)` in the Fermat part.
+Functions that return a bare number, list, Boolean or matrix (for example `hodgeLevel`, `primitiveHodgeNumbers`,
+`ciHilbertFunction`, `isSmoothHypersurface`, `grothendieckResidue`, `fermatExpansion`, `fermatHodgeTangent`) carry
+no label; their status is stated in their help node.
 
 | Kind | Meaning in this package |
 | --- | --- |
@@ -52,6 +60,11 @@ Every result object carries a `label` string saying which of these applies.
 | MOD p | Computed over `ZZ/p` at one (often random) instance. Evidence, not a proof, for the corresponding statement in characteristic 0. |
 | PROVED (AI-written, unreviewed) | The formula being evaluated is a theorem of the project's third note ("paper 3"), which was written by AI agents and has not been reviewed by a human. The note is not part of this package. |
 | COMPUTED ONLY | No proof is claimed, in the notes or elsewhere; the function reports what a computation gives. |
+
+**Where to read "paper 3".** The note cited as "paper 3" is not public and has no URL. Its statements are
+paraphrased inside this repository: in the help nodes "the setting of paper 3", `excessFromDegrees`,
+`linearSubspaceCase` and `secondOrderObstruction`, and in `tests/SOURCES.md`, part E (and the folder `discoveries/`
+when present). Theorem numbers in the labels refer to that note and cannot be looked up elsewhere.
 
 In particular: the degree-level calculator is integer arithmetic on the degrees, and its *interpretation* as the
 excess of a Hodge locus rests on Theorem 2 of that note. `tangentExcess` and `hodgeLocusTangentCodim` do not use
@@ -61,9 +74,26 @@ are theorems of the same unreviewed note. The Fermat expansions use Griffiths' p
 periods of linear cycles on Fermat varieties; a result "an arc exists to order N" is exact for the listed terms and
 is not a statement about the true Hodge locus beyond that order.
 
+> **At odds with a published conjecture: this needs expert review.** For two linear spaces meeting in dimension
+> `n/2 - 3` on cubic hypersurfaces of dimension `n = 6` and `n = 8` (two 3-planes meeting in a point on a cubic
+> sixfold, as in the Quick start below; two 4-planes meeting in a line on a cubic eightfold), the outputs of this
+> package say that for `lambda` different from `lambda_0` the excess directions die at second order, so that the
+> Hodge locus would be `V_Z` with a non-reduced structure there. The outputs in question are:
+> `linearSubspaceCase(3,3,3)` and `linearSubspaceCase(3,4,3)`, which quote the note; `secondOrderObstruction` at
+> random cubic sixfolds modulo a prime (for cubic eightfolds that computation was not run); and the Fermat
+> certificates in `tests/data/fermat/`. This is AT ODDS with the dimension statement of Movasati's Conjecture 1
+> ([arXiv:2211.11405](https://arxiv.org/abs/2211.11405)), which, as that paper was read by machine, gives the Hodge
+> locus the dimension `dim V_Z + 1` for all nonzero integer coefficients (at `lambda_0` the package says the same).
+> The package's side rests on an unreviewed AI-written note and on AI computations (modulo a prime at random
+> instances; exact at the Fermat point, but conditional on the assumptions named there). It must not be presented
+> as a refutation of the conjecture: the note, the computations or the machine reading of the conjecture may be
+> wrong. Of everything in this package, this is what most needs review by an expert. The same statement, with the
+> same caveats, is in `docs/04_fermat_certificate.md` and in `tests/SOURCES.md` (entries A3 and E8).
+
 ## Requirements and installation
 
-Macaulay2 (developed and tested with version 1.22 only). No other dependency.
+Macaulay2 (developed and tested with version 1.22 only). No other dependency. Macaulay2 is available from
+<https://macaulay2.com/Downloads/>; on Debian and Ubuntu the package `macaulay2` provides it.
 
 From the root of this repository, in Macaulay2:
 
@@ -74,21 +104,45 @@ or, without installing:
 
     needsPackage("HodgeLociCI", FileName => "M2/HodgeLociCI.m2")
 
-`installPackage` runs every documentation example; `check` runs the package's tests. On a 2-core machine the two commands together take about 3 minutes (39 tests, no errors or warnings in the release run).
-After installation, `help HodgeLociCI` and `viewHelp HodgeLociCI` open the documentation.
+`installPackage` runs every documentation example; `check` runs the package's tests (40 of them). On a 2-core
+machine the two commands together take about 2.5 minutes (no errors or warnings in the release run).
+`installPackage` writes to the user's Macaulay2 directory (`~/.Macaulay2/local/` on Linux, about 1.6 MB), not into
+the repository; `uninstallPackage "HodgeLociCI"` removes it again.
+
+The same two steps as one shell command with a meaningful exit status, from the repository root:
+
+    M2 --silent --stop -e 'installPackage("HodgeLociCI", FileName => "M2/HodgeLociCI.m2"); check "HodgeLociCI"; exit 0' < /dev/null
+
+Success means all three of: exit status 0; 40 lines containing `check(` in the output, one per test (39 read
+`capturing check`, and one reads `running check`, because that test writes a temporary file and Macaulay2 runs it in
+a separate process); no line containing `error`. With `--stop` Macaulay2 exits with a non-zero status at the first
+error; without it Macaulay2 enters its debugger instead and the command can end with status 0 although a test
+failed.
+
+After installation, in a new session, load the package first and then ask for help:
+
+    needsPackage "HodgeLociCI"
+    help excessFromDegrees
+
+Without the `needsPackage` line, `help excessFromDegrees` only reports that the name is a symbol.
+`viewHelp "HodgeLociCI"` opens the HTML pages in a browser (the pages are installed; the viewer was not tried in the
+release check, which had no browser).
 
 The validation suite is separate and is run from a shell:
 
     cd tests && ./run_all.sh
 
 It needs only `M2` on the `PATH`, loads the package from `M2/` without installing it, prints a PASS/FAIL table
-(15 tests, about 5 minutes; `--slow` adds two long tests) and exits with status 0 only if every test passes.
+(15 tests, about 4.5 minutes on 2 cores; `./run_all.sh --slow` adds two long tests, about 3 minutes more) and exits
+with status 0 only if every test passes.
 
 ## Quick start
 
 Two 3-planes meeting in a point on a cubic sixfold (`c = 3` own linear equations each, one shared), and two 4-planes
-meeting in a line on a cubic eightfold. Output copied from a real session; the tuples are
-`(tau, lambda_0, e_tau, codim V_Z, codim NL at lambda_0, ...)`.
+meeting in a line on a cubic eightfold. The lines below are copied from a real session with Macaulay2 1.22, started
+in the repository root (`M2 --silent --no-readline --print-width 118`): inputs, prompt numbers and values are
+unchanged; the blank lines and the type lines that Macaulay2 prints (`o3 : Sequence`, `o15 : Matrix ...`,
+`o18 : Ideal of S`) are removed. The tuples are `(tau, lambda_0, e_tau, codim V_Z, codim NL at lambda_0, ...)`.
 
     i1 : needsPackage("HodgeLociCI", FileName => "M2/HodgeLociCI.m2");
     i2 : r = excessFromDegrees(3, {1,1,1}, {1,1,1}, {1});
@@ -98,8 +152,13 @@ meeting in a line on a cubic eightfold. Output copied from a real session; the t
     i5 : (r8#"tau", r8#"lambda0", r8#"eTau", r8#"codimVZ", r8#"codimNLAtLambda0")
     o5 = (0, 1, 1, 20, 19)
 
-So the locus where both planes persist has codimension 8 (resp. 20), while the Hodge locus of `[Y1] + [Y2]` has
-codimension 7 (resp. 19). Result tables use string keys; `peek r` shows all of them, including `label` and `notes`.
+So the locus where both planes persist has codimension 8 (resp. 20), and the calculator reports codimension 7
+(resp. 19) for the Hodge locus of `[Y1] + [Y2]`. That last statement is Theorem 2(4) of the unreviewed note, not an
+established result: in the literature 7 and 19 are codimensions of the *tangent space* of the Hodge locus at the
+Fermat point, for every nonzero coefficient, and 8 and 20 are the codimensions of the locus of cubics containing
+both linear spaces (Movasati, arXiv:1602.06607, Table 1, as read by machine), and the
+dimension of the Hodge locus itself is the subject of a conjecture of Movasati (arXiv:2211.11405). Result tables use
+string keys; `peek r` shows all of them, including `label` and `notes`.
 
 The level dichotomy, on the other side (two 4-planes meeting in a point on a cubic eightfold):
 
@@ -120,16 +179,22 @@ Checking the theorem against an independent computation at a random point, then 
     o12 = ALL SURVIVE
 
 At `lambda = 2` the one excess direction is obstructed at second order; at the special coefficient `lambda_0 = 1` it
-survives. The result of `secondOrderObstruction` also has the keys `statement` and `label`.
+survives. Both verdicts are computed at this one random instance modulo 32003 (evidence, not a proof). The result
+of `secondOrderObstruction` also has the keys `statement` and `label`.
 
 The first-order utility on a subvariety that is not a complete intersection: a cubic sixfold that is a sum of two
-`3 x 3` determinants contains a threefold of degree 9, and the Hodge locus of its class has tangent codimension 8.
+`3 x 3` determinants contains a threefold of degree 9, and the Hodge locus of its class has tangent codimension 8
+at this one random instance modulo 32003 (evidence, not a proof), provided the primitive class is nonzero.
 
-    i13 : setRandomSeed 11; S = ZZ/32003[x_0..x_7];
-    i14 : A = random(S^3, S^{3:-1}); B = random(S^3, S^{3:-1});
-    i15 : F = det A + det B; I = minors(2, A^{0,1}) + minors(2, B^{0,1});
-    i16 : h = hodgeLocusTangentCodim(F, I); (h#"codim", h#"codimIJ", h#"hypothesis")
-    o16 = (8, 1, true)
+    i13 : setRandomSeed 11;
+    i14 : S = ZZ/32003[x_0..x_7];
+    i15 : A = random(S^3, S^{3:-1});
+    i16 : B = random(S^3, S^{3:-1});
+    i17 : F = det A + det B;
+    i18 : I = minors(2, A^{0,1}) + minors(2, B^{0,1});
+    i19 : h = hodgeLocusTangentCodim(F, I);
+    i20 : (h#"codim", h#"codimIJ", h#"hypothesis")
+    o20 = (8, 1, true)
 
 More worked examples, each a captured session: `docs/`.
 
@@ -159,13 +224,20 @@ found in that search.
 ## Validation
 
 `tests/SOURCES.md` lists every source: Movasati's tables, Kloosterman's theorems, Villaflor Loyola's first-order
-statements, Maclean's quintic example, and the project's own results, with the exact statement, the reference, and
-whether the statement was read in the source itself. Each test in `tests/validation/` starts with a comment block
-giving its source, what is computed, the label (EXACT or MOD p), and where the expected value comes from.
+statements, Maclean's quintic example, and the project's own results, with the statement, the reference, and how
+the statement was read. Each test in `tests/validation/` starts with a comment block giving its source, what is
+computed, the label (EXACT or MOD p), and where the expected value comes from.
+
+**How the published numbers were read.** Through a web-fetch tool that downloads a page and returns a small language
+model's answers to questions about it. Nobody, neither a human nor the AI agent that wrote the tests, saw the raw
+text of the PDFs. Tables were asked for at least twice, in separate fetches. A human should confirm every entry
+against the paper before citing it; `tests/SOURCES.md` says this at its top. A passing test therefore means "the
+package reproduces the number as the machine read it", nothing more.
 
 State at version 0.1.0: all 15 tests pass (301 checks), and so do the two slow tests. Covered: Movasati's tables
 for cubic hypersurfaces of dimension 4, 6 and 8 exactly at the Fermat point (including the pairs 7 against 8 and 19
-against 20, which are tangent-space codimensions at the Fermat point valid for every nonzero coefficient), and
+against 20: 7 and 19 are the codimensions of the tangent space of the Hodge locus at the Fermat point, valid for
+every nonzero coefficient; 8 and 20 are the codimensions of the locus of cubics containing both linear spaces), and
 further rows by degrees; Kloosterman's Proposition 3.10 and Theorems 1.2 and 1.3 in the cases listed; first-order
 statements of Villaflor Loyola and Movasati–Villaflor Loyola; Maclean's quintic example with two coplanar lines;
 the project's own tables and the exported Fermat certificates.
@@ -178,15 +250,36 @@ the linear section (21, 71, 253, 925) and the package gives 3432 + 1 = 3433 by t
 column only, not any codimension; it may be a slip in the table or in the machine reading. The test prints it as a
 `DISAGREE` line in every run.
 
+## Discoveries registry
+
+`discoveries/` records what the project behind this package has already found, ruled out or left open, so that
+nobody (person or agent) repeats the work: 123 entries in `discoveries/registry.yaml`, with readable pages by area
+(`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
+on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
+and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are
+recorded with the same care as results. It is not a list of established theorems: everything in it is AI-produced
+and unreviewed, and no entry claims novelty. Start with `discoveries/README.md`.
+
 ## Repository layout
 
     README.md, LICENSE, CITATION.cff, codemeta.json, CHANGELOG.md
     AGENTS.md, llms.txt          instructions and an index for AI agents
     M2/HodgeLociCI.m2            the package (loads the files in M2/HodgeLociCI/)
     M2/HodgeLociCI/              code, documentation and tests, one group of files per part; data/ has certificates
-    tests/                       validation suite: SOURCES.md, validation/, slow/, run_all.sh
-    docs/                        worked examples (captured sessions) and API.md
+    tests/README.md              the validation suite: how to run it, what each test covers, the last run
+    tests/SOURCES.md             the source of every expected value, and how it was read
+    tests/run_all.sh             the runner
+    tests/validation/, slow/     the tests (15 fast, 2 slow)
+    tests/expected/              the expected RESULT lines of every test
+    tests/data/                  the certificate files of the Fermat part, with their READMEs and checksums
+    docs/README.md               index of the worked examples
+    docs/01_...md to 05_...md    worked examples (captured sessions)
+    docs/API.md                  one line per exported name, with options and defaults
+    docs/build_docs.py           rebuilds the worked examples from docs/prose/ and docs/sessions/
+    docs/sessions/               input and captured output of every session
+    docs/prose/                  the text around the sessions
     examples/                    quickstart script with expected output
+    discoveries/                 registry of results, dead ends and open problems; check_registry.py validates it
     lean/                        Lean certificates, with a README saying what each does and does not prove
 
 ## Terminology
@@ -195,7 +288,13 @@ column only, not any codimension; it may be a slip in the table or in the machin
   for surfaces this is a component of the Noether–Lefschetz locus.
 - *Level* `tau = d - deg det M`. Not to be confused with the *Hodge level* of the cohomology of `X`, which is
   `hodgeLevel(n, d)`.
-- *The range*: the inequality under which the degree-level statements are sharpest; `inRange` in the output.
+- `e_tau`: the dimension `dim A_tau` of the degree-`tau` part of the ring `A = S/(f, h, p, s)`, where `S` is the
+  polynomial ring and `s` are the forms in `F = f^T M h + sum p_l s_l`; it is zero if `tau < 0`. Key `eTau`.
+- *The range*: the inequality `(k-1)d + tau < 2k + 2`, under which the degree-level statements are sharpest (in the
+  range the excess is `e_tau` for every nonzero `lambda`, by Theorem 2(2) of the unreviewed note); `inRange` in the
+  output.
+- `T`: the Zariski tangent space at `X`, a subspace of the space `S_d` of forms of degree `d`. So `dim T NL` is the
+  dimension of the tangent space of the Hodge locus, which can be larger than the dimension of the locus itself.
 - *Excess directions*: tangent directions of `NL(delta_lambda)` not tangent to `V_Z`.
 
 ## Limitations
@@ -222,4 +321,4 @@ column only, not any codimension; it may be a slip in the table or in the machin
 
 ## Citing and licence
 
-See `CITATION.cff`. Licence: MIT (`LICENSE`).
+See `CITATION.cff`. Licence: MIT (`LICENSE`). Repository: <https://github.com/timseifer/HodgeLociCI>.

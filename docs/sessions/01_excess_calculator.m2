@@ -22,10 +22,12 @@ v6#"agrees"
 planes = (k, c) -> (apply(k+1, i -> {2*i, 2*i+1, 1}), apply(k+1, i -> {2*i, 2*i+1, if i < c then 3 else 1}));
 S6 = fermatRing(3, 6); (P1, P2) = planes(3, 3);
 f6 = fermatTangentData(S6, {P1, P2}, {1, 1});
-view(f6, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+view(f6, {"jointPersistenceCodimension", "hodgeCodimension", "excess"})
+f6#"label"
 S8 = fermatRing(3, 8); (P1, P2) = planes(4, 3);
 f8 = fermatTangentData(S8, {P1, P2}, {1, -1});
-view(f8, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+view(f8, {"jointPersistenceCodimension", "hodgeCodimension", "excess"})
+f8#"label"
 -- (5) shared equations of higher degree: two plane conics on a common quadric p = 0, on a sextic surface
 ts = excessFromDegrees(6, {1}, {1}, {2});
 view(ts, ks)

@@ -113,10 +113,15 @@ r3 = secondOrderObstruction(D3, 2, Strategy => "Both");
 assert(r3#"verdict" == "SOME DIE" and r3#"excess" == 2 and r3#"commonZeroLocusDim" == 0 and r3#"strategiesAgree" === true);
 -- (c) tau < 0 and E' = 0: nothing to test
 Dn = randomCyclePair(4, {1,1,1}, {1,1,2}, {}, Seed => 29);
-assert((secondOrderObstruction(Dn, 2))#"verdict" == "NO EXCESS");
+rn = secondOrderObstruction(Dn, 2);
+assert(rn#"verdict" == "NO EXCESS");
+-- the label of a NO EXCESS result claims no second-order computation and names the arithmetic of the first-order data
+assert(match("^no second-order computation was needed", rn#"label") and match("EXACT", rn#"label") and not match("residues", rn#"label"));
 Dm = randomCyclePair(4, {1,1}, {1,1}, {1,1}, Seed => 31);       -- (d,k,c) = (4,3,2): tau = 0 outside the range, det M not in (f,h,p,s)
 rm = secondOrderObstruction(Dm, 2);
 assert(rm#"verdict" == "NO EXCESS" and rm#"excess" == 0 and rm#"eTau" == 1);
+assert(match("^no second-order computation was needed", rm#"label") and match("MOD p", rm#"label") and not match("residues", rm#"label"));
+assert(match("^second-order term", r3#"label"));
 assert((secondOrderObstruction(Dm, -1))#"verdict" == "ALL SURVIVE");
 ///
 

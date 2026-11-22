@@ -19,6 +19,29 @@ First version. Produced by AI agents under the direction of Timothy Seifert; not
 - For AI agents: `AGENTS.md`, `llms.txt`, `docs/API.md`, `examples/quickstart.m2` with expected output;
   `codemeta.json` for machine-readable metadata.
 
+### Fixed after a blind install check
+A second AI agent installed the package from a fresh clone, following only the README, and reported 28 findings
+(none blocking). Fixed, with no change to the mathematics:
+- Labels. The result tables of the Fermat functions now state the arithmetic and the status ("EXACT over ...;
+  COMPUTED ONLY (...)"); the label of `linearSubspaceCase` carries the caveat recorded for Theorem 9.7 in
+  `tests/SOURCES.md`; a `NO EXCESS` result of `secondOrderObstruction` no longer claims a second-order computation.
+- Documentation of `fermatRing` corrected: it assigns the variables `x_i`, not `z` (use `z = fermatRoot S`).
+- README: the Quick start is a transcript again; results of the unreviewed note and of single instances modulo a
+  prime carry their status; a marked paragraph says where the outputs are at odds with a published conjecture and
+  that this must not be presented as a refutation; how the published numbers were read; where the installation goes
+  and how to remove it; all four verdicts of the second-order checker; definitions of `e_tau`, the range and `T`.
+- The install-and-check command now has a meaningful exit status (`M2 --silent --stop ... < /dev/null`), and the
+  success criterion is stated.
+- `docs/API.md` regenerated: every signature lists the options with their defaults, taken from Macaulay2.
+- `tests/run_all.sh` exits with status 2 if no test matches the pattern. `lean/run_all.sh` exits with status 2 if
+  `lean` or `lake` is missing, and counts a negative test as rejected only if Lean ran and reported an error.
+- A `TEST` block for `isSmoothHypersurface` (the package now has 40 tests).
+- References to files that are not in the repository rephrased; timings measured again; `tests/README.md` ends
+  with the table of the last run.
+
+- Discoveries registry (`discoveries/`): 123 entries on what the project has found, ruled out or left open, with a
+  validating script, so that work is not repeated.
+
 ### Known disagreement with a published table
 - One entry of a side column (Hodge numbers of cubic 12-folds) differs by 1 from the published table as read by
   machine; see the README section "Validation" and `tests/SOURCES.md`.

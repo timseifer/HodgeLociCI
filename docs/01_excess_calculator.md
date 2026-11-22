@@ -165,41 +165,47 @@ i18 : S6 = fermatRing(3, 6); (P1, P2) = planes(3, 3);
 
 i20 : f6 = fermatTangentData(S6, {P1, P2}, {1, 1});
 
-i21 : view(f6, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+i21 : view(f6, {"jointPersistenceCodimension", "hodgeCodimension", "excess"})
 
-      +---------------------------+---------------------+
-o21 = |jointPersistenceCodimension|8                    |
-      +---------------------------+---------------------+
-      |hodgeCodimension           |7                    |
-      +---------------------------+---------------------+
-      |excess                     |1                    |
-      +---------------------------+---------------------+
-      |label                      |EXACT over QQ(zeta_6)|
-      +---------------------------+---------------------+
+      +---------------------------+-+
+o21 = |jointPersistenceCodimension|8|
+      +---------------------------+-+
+      |hodgeCodimension           |7|
+      +---------------------------+-+
+      |excess                     |1|
+      +---------------------------+-+
 
-i22 : S8 = fermatRing(3, 8); (P1, P2) = planes(4, 3);
+i22 : f6#"label"
 
-i24 : f8 = fermatTangentData(S8, {P1, P2}, {1, -1});
+o22 = EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces and
+      Griffiths' pole-order description of the Hodge locus)
 
-i25 : view(f8, {"jointPersistenceCodimension", "hodgeCodimension", "excess", "label"})
+i23 : S8 = fermatRing(3, 8); (P1, P2) = planes(4, 3);
 
-      +---------------------------+---------------------+
-o25 = |jointPersistenceCodimension|20                   |
-      +---------------------------+---------------------+
-      |hodgeCodimension           |19                   |
-      +---------------------------+---------------------+
-      |excess                     |1                    |
-      +---------------------------+---------------------+
-      |label                      |EXACT over QQ(zeta_6)|
-      +---------------------------+---------------------+
+i25 : f8 = fermatTangentData(S8, {P1, P2}, {1, -1});
 
-i26 : -- (5) shared equations of higher degree: two plane conics on a common quadric p = 0, on a sextic surface
+i26 : view(f8, {"jointPersistenceCodimension", "hodgeCodimension", "excess"})
+
+      +---------------------------+--+
+o26 = |jointPersistenceCodimension|20|
+      +---------------------------+--+
+      |hodgeCodimension           |19|
+      +---------------------------+--+
+      |excess                     |1 |
+      +---------------------------+--+
+
+i27 : f8#"label"
+
+o27 = EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces and
+      Griffiths' pole-order description of the Hodge locus)
+
+i28 : -- (5) shared equations of higher degree: two plane conics on a common quadric p = 0, on a sextic surface
       ts = excessFromDegrees(6, {1}, {1}, {2});
 
-i27 : view(ts, ks)
+i29 : view(ts, ks)
 
       +----------------+----+
-o27 = |tau             |2   |
+o29 = |tau             |2   |
       +----------------+----+
       |lambda0         |1   |
       +----------------+----+
@@ -220,18 +226,18 @@ o27 = |tau             |2   |
       |excessElsewhere |2   |
       +----------------+----+
 
-i28 : Ds = randomCyclePair(6, {1}, {1}, {2}, Seed => 2026)
+i30 : Ds = randomCyclePair(6, {1}, {1}, {2}, Seed => 2026)
 
-o28 = CyclePair{d = 6, k = 1, c = 1, deg f = {1}, deg h = {1}, deg p = {2}, tau = 2, lambda0 = 1, field = ZZ/32003, smooth = true}
+o30 = CyclePair{d = 6, k = 1, c = 1, deg f = {1}, deg h = {1}, deg p = {2}, tau = 2, lambda0 = 1, field = ZZ/32003, smooth = true}
 
-o28 : CyclePair
+o30 : CyclePair
 
-i29 : vs = verifyExcess Ds;
+i31 : vs = verifyExcess Ds;
 
-i30 : netList(prepend(vs#"tableColumns", vs#"table"), Alignment => Left)
+i32 : netList(prepend(vs#"tableColumns", vs#"table"), Alignment => Left)
 
       +------+-----------------------------+------------------------+
-o30 = |lambda|excess predicted by Theorem 2|excess computed directly|
+o32 = |lambda|excess predicted by Theorem 2|excess computed directly|
       +------+-----------------------------+------------------------+
       |1     |2                            |2                       |
       +------+-----------------------------+------------------------+
@@ -252,13 +258,13 @@ o30 = |lambda|excess predicted by Theorem 2|excess computed directly|
       |3     |                             |                        |
       +------+-----------------------------+------------------------+
 
-i31 : -- (6) a quartic fourfold, a plane and a quadric surface with one shared linear equation (c = 2)
+i33 : -- (6) a quartic fourfold, a plane and a quadric surface with one shared linear equation (c = 2)
       tq = excessFromDegrees(4, {1,1}, {1,2}, {1});
 
-i32 : view(tq, ks)
+i34 : view(tq, ks)
 
       +----------------+----+
-o32 = |tau             |1   |
+o34 = |tau             |1   |
       +----------------+----+
       |lambda0         |-1  |
       +----------------+----+
@@ -286,7 +292,7 @@ o32 = |tau             |1   |
 |---|---|---|---|
 | codim V_Z (`codimVZ`) | 8 | 20 | EXACT (integer arithmetic on the degrees) |
 | excess, every lambda != 0 | 1 | 1 | PROVED in paper 3, Theorem 2(2) (AI-written, unreviewed); checked MOD p at one random sixfold (`verifyExcess`) |
-| tangent codimension of the Hodge locus at the Fermat point (`hodgeCodimension`) | 7 | 19 | EXACT over Q(zeta_6) |
+| tangent codimension of the Hodge locus at the Fermat point (`hodgeCodimension`) | 7 | 19 | EXACT over Q(zeta_6); COMPUTED ONLY (assumes the period formula for linear spaces and Griffiths' description of the Hodge locus) |
 
 - The pairs (7, 8) and (19, 20) are the entries (H, K) of Table 1 of H. Movasati, "Why should one compute periods of
   algebraic cycles?" (arXiv:1602.06607) for n = 6, m = 0 and n = 8, m = 1, and the rows dim(S), codim(V^1) of Table 2
@@ -302,5 +308,6 @@ o32 = |tau             |1   |
   codimension 8; in the range the excess is 2 for every coefficient, and the direct computation agrees (MOD p).
 - Step 6 shows a mixed type (a plane and a quadric surface on a quartic fourfold): lambda0 = -1 because c = 2.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 01_excess_calculator.m2 > 01_excess_calculator.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 01_excess_calculator.m2 > 01_excess_calculator.out) && python3 docs/build_docs.py`.

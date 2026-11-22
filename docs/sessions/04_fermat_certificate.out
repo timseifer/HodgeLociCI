@@ -7,7 +7,9 @@ i3 : C = fermatReadCertificate file;
 
 i4 : C#"degree", C#"dimension", C#"lambda", C#"label"
 
-o4 = (3, 6, -1, EXACT over QQ(zeta_6))
+o4 = (3, 6, -1, EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces
+     -----------------------------------------------------------------------------------------------------------------
+     and Griffiths' pole-order description of the Hodge locus))
 
 o4 : Sequence
 

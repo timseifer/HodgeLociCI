@@ -7,7 +7,7 @@
 --
 -- Licence: MIT (see the file LICENSE at the root of the repository).
 --
--- Layout (one owner per file, see DESIGN.md in the repository):
+-- Layout:
 --   HodgeLociCI.m2                      this file: newPackage, loads, top documentation node
 --   HodgeLociCI/Excess.m2               item 1: excess calculator, first-order tools, residues   (code + export)
 --   HodgeLociCI/ExcessDoc.m2            its documentation nodes

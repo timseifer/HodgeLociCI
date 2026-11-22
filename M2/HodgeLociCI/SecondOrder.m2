@@ -216,22 +216,33 @@ secondOrderObstruction(CyclePair, Thing) := opts -> (D, lambda) -> (
         "lambda" => lambda, "lambda0" => D#"lambda0", "tau" => tau, "inRange" => th#"inRange",
         "eTau" => th#"eTau", "conditionS" => th#"conditionS", "dimK" => qd#"dimK",
         "sigmaPrime" => sp, "r" => qd#"r", "strategy" => strat,
-        "arithmetic" => D#"label",
-        "label" => "second-order term: residues " | D#"label" | "; formulas: " | src
+        "arithmetic" => D#"label"
         };
+    -- The default label describes a second-order computation. The two NO EXCESS returns make none and pass their own
+    -- label (under the key "label" in `more`), which says so and names the arithmetic of the first-order data.
+    lbl := "second-order term: residues " | D#"label" | "; formulas: " | src;
+    noSecond := "no second-order computation was needed (verdict NO EXCESS); first-order data: ";
     out := (ex, dirs, vd, st, more) -> new HashTable from (base | {
-        "excess" => ex, "excessDirections" => dirs, "verdict" => vd, "statement" => st} | more);
+        "excess" => ex, "excessDirections" => dirs, "verdict" => vd, "statement" => st}
+        | (if any(more, o -> o#0 === "label") then {} else {"label" => lbl}) | more);
     none := {"quadrics" => {}, "quadricMatrices" => {}, "rankOfQuadrics" => 0, "commonZeroLocusDim" => -1,
         "generators" => {}, "values" => {}, "strategiesAgree" => NotDetermined};
     if tau < 0 then return out(0, {}, "NO EXCESS",
-        "tau < 0: NL(delta_lambda) = V_Z for every lambda != 0 (" | hlProved | ", Theorem 2(3)); there is nothing to test at second order", none);
+        "tau < 0: NL(delta_lambda) = V_Z for every lambda != 0 (" | hlProved | ", Theorem 2(3)); there is nothing to test at second order",
+        none | {"label" => noSecond | "tau < 0, EXACT (integer arithmetic on the degrees of the data); that tau < 0 means no excess: "
+            | hlProved | ", Theorem 2(3)"});
     if lam == lam0 then return out(th#"eTau", "all of A_tau (multiples N det M)", "ALL SURVIVE",
         "lambda = lambda0: the e_tau excess directions N det M are tangent to arcs F - t N det M inside NL(delta_lambda0), which is smooth of codimension codim V_Z - e_tau ("
-            | hlProved | ", Theorem 1 and Theorem 2(4)); the second-order term vanishes identically by the factor (lambda - lambda0)/lambda", none);
+            | hlProved | ", Theorem 1 and Theorem 2(4)); the second-order term vanishes identically by the factor (lambda - lambda0)/lambda",
+        none | {"label" => "no second-order computation was needed (lambda = lambda0); first-order data (e_tau, by Hilbert functions): "
+            | D#"label" | "; that these directions survive: " | hlProved | ", Theorem 1 and Theorem 2(4)"});
     if e == 0 then return out(0, {}, "NO EXCESS",
-        "the annihilator of det M in A_tau is zero, so T NL(delta_lambda) = T V_Z and NL(delta_lambda) = V_Z, smooth (" | hlProved | ", Theorem 2(5))", none);
+        "the annihilator of det M in A_tau is zero, so T NL(delta_lambda) = T V_Z and NL(delta_lambda) = V_Z, smooth (" | hlProved | ", Theorem 2(5))",
+        none | {"label" => noSecond | "the annihilator of det M in A_tau is zero, by Hilbert functions and the rank of multiplication by det M, "
+            | D#"label" | "; that this means no excess: " | hlProved | ", Theorem 2(5)"});
     if sp < 0 then return out(e, Ep, "ALL SURVIVE",
-        "kd-2k-2 < 0: there are no period conditions; the Hodge locus is the whole space", none);
+        "kd-2k-2 < 0: there are no period conditions; the Hodge locus is the whole space",
+        none | {"label" => "no second-order computation was needed (kd-2k-2 < 0: no period conditions); first-order data: " | D#"label"});
     factor := (lam - lam0)/lam;
     valsF := apply(qd#"values", v -> apply(v, a -> factor * a));
     agree := NotDetermined;

@@ -3,6 +3,16 @@
 Written by agent PC (an AI agent), 22 November 2026. No human has reviewed this file, the package, or the
 session's own results listed in part E. Nothing here is, or bears on, a proof or disproof of the Hodge conjecture.
 
+## Paths and names that are not in this repository
+
+Part E and a few other places name working files of the research project: paths beginning with `night/` or
+`discovery/`, `LEDGER.md`, `LEDGER_DISCOVERY.md`, `CHECKS_R2.md`, `END_OF_ROUND_REPORT.md`, `paper3.tex`, and Python
+or Singular scripts. These files are NOT in this repository and are not public; they are named only to record where
+a number came from. What this repository ships of them: the certificate files and their READMEs in
+`tests/data/fermat/` (copies in `M2/HodgeLociCI/data/`), and the paraphrases of the statements of "paper 3" in part E
+below and in the help nodes of the package. "The task" means the instructions that the agent who wrote this file
+was given; they are not in the repository either.
+
 ## How the sources were read (please read this before trusting a number)
 
 - Each paper in parts A to D was opened on the day of writing through a web-fetch tool: the tool downloads the page
@@ -440,7 +450,8 @@ on freshly generated random instances of the same families. Label MOD p. Expecte
   must not be presented as a refutation.
 - export_x1 (Fermat cubic eightfold, a second pair "X1" of 4-planes): x1_lam2_obstruction.txt (no arc with the given
   T_1 to order 5; a functional Lambda with Lambda.L = 0 and Lambda.c_5 = 1 + z), x1_lam-1_arc.txt (an arc along which
-  all 45 period functions vanish to order 7), six_lam2_arc.txt, six_lam-1_arc.txt, lform_lam-1.txt (mod p data).
+  all 45 period functions vanish to order 7), six_lam2_arc.txt, six_lam-1_arc.txt. (The export also contained a file
+  lform_lam-1.txt with mod p data; it is not shipped in this repository and no test uses it.)
 Test: the package's certificate verifier on each exported file: recompute c_n = 0 for n < N, the listed c_N, K.L = 0,
 K.c_N as listed and nonzero, L.T_1 = 0, L_P1.T_1 != 0; ranks 7/8 and 19/20. Label EXACT (Q(zeta_6)).
 Also a negative control: a corrupted certificate must be rejected.

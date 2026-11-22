@@ -11,8 +11,10 @@ When the excess of lambda is positive, the Zariski tangent space of the Hodge lo
 that of V_Z, and the question is whether the locus itself is larger or whether it is V_Z with a non-reduced
 structure. `secondOrderObstruction(D, lambda)` evaluates the second-order term of the period equations on the excess
 directions (paper 3, Theorems 9.1 and 9.4: a system of quadrics on the space E' of excess directions, multiplied by
-(lambda - lambda0)/lambda) and reports one of
+(lambda - lambda0)/lambda) and reports one of four verdicts
 
+- `NO EXCESS`: there are no excess directions for this lambda (tau < 0, or the annihilator of det M in A_tau is
+  zero); nothing is computed at second order, and the label of the result says so;
 - `ALL DIE`: the quadrics have no common zero, every excess direction is obstructed at second order;
 - `SOME DIE`: the quadrics are not all zero but have common zeros (nothing is decided on those directions);
 - `ALL SURVIVE`: the second-order term vanishes (always the case at lambda0; nothing is decided about higher order).
@@ -122,5 +124,6 @@ o17 = ALL SURVIVE
 - What is NOT shown: `ALL DIE` at one random instance modulo a prime is evidence about a general hypersurface, not
   a proof; and at special points (for instance the Fermat hypersurface) the second-order term can vanish.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 03_second_order.m2 > 03_second_order.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 03_second_order.m2 > 03_second_order.out) && python3 docs/build_docs.py`.

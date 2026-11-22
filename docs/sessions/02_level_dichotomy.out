@@ -101,7 +101,9 @@ i19 : P1 = apply(6, i -> {2*i, 2*i+1, 1}); P2 = apply(6, i -> {2*i, 2*i+1, if i 
 
 i21 : f10 = fermatTangentData(S10, {P1, P2}, {1, 2}); f10#"jointPersistenceCodimension", f10#"hodgeCodimension", f10#"label"
 
-o22 = (39, 38, EXACT over QQ(zeta_6))
+o22 = (39, 38, EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces
+      ----------------------------------------------------------------------------------------------------------------
+      and Griffiths' pole-order description of the Hodge locus))
 
 o22 : Sequence
 

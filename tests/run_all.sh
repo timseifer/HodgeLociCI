@@ -6,7 +6,7 @@
 #   tests/run_all.sh                 the fast suite (tests/validation/[0-9]*.m2)
 #   tests/run_all.sh --slow          also the tests in tests/slow/
 #   tests/run_all.sh --update        rewrite tests/expected/*.out from this run (maintainers only)
-#   tests/run_all.sh PATTERN         only the tests whose name contains PATTERN
+#   tests/run_all.sh PATTERN         only the tests whose name contains PATTERN (exit status 2 if no test matches)
 # Environment: M2=<path to M2>, HLCI_TIMEOUT=<seconds per test, default 900>.
 # Exit status 0 if and only if every test passes. Column "disagree": recorded disagreements between a published
 # number (as read by machine) and the package; they are printed in every run and neither side is adjusted.
@@ -26,13 +26,22 @@ command -v "$M2BIN" >/dev/null 2>&1 || { echo "Macaulay2 ($M2BIN) not found; set
 out="$here/out"; mkdir -p "$out" "$here/expected"
 files=("$here"/validation/[0-9]*.m2)
 [ "$slow" = 1 ] && files+=("$here"/slow/[0-9]*.m2)
+# select the tests first, so that a mistyped pattern is reported and does not look like a success
+sel=()
+for f in "${files[@]}"; do
+  [ -e "$f" ] || continue
+  case "$(basename "$f" .m2)" in *"$pattern"*) sel+=("$f") ;; esac
+done
+if [ "${#sel[@]}" = 0 ]; then
+  echo "no test matches $pattern"
+  [ "$slow" = 0 ] && echo "(the tests in tests/slow/ are only searched with --slow)"
+  exit 2
+fi
 total=0; failed=0; ndis_all=0; t_all=$(date +%s)
 printf '%-44s %-8s %7s %9s %8s\n' "test" "status" "checks" "disagree" "seconds"
 printf '%-44s %-8s %7s %9s %8s\n' "--------------------------------------------" "--------" "-------" "---------" "--------"
-for f in "${files[@]}"; do
-  [ -e "$f" ] || continue
+for f in "${sel[@]}"; do
   name="$(basename "$f" .m2)"
-  case "$name" in *"$pattern"*) ;; *) continue ;; esac
   total=$((total+1))
   t0=$(date +%s.%N)
   timeout "$TMO" "$M2BIN" --script "$f" > "$out/$name.out" 2> "$out/$name.err"

@@ -12,7 +12,7 @@ output `sessions/NN_*.out` is pasted unchanged into `NN_*.md` by `build_docs.py`
 | `04_fermat_certificate.md` | verifying a Fermat certificate exported by the research session; a corrupted file is rejected | EXACT over Q(zeta_6) |
 | `05_tangent_codimension_two_determinants.md` | first-order tangent codimension of the Hodge locus of an explicit threefold on a cubic det A + det B | MOD p |
 
-Regenerate everything (about 20 s): `python3 docs/build_docs.py --run`.
+Regenerate everything (about 20 s), from the repository root: `python3 docs/build_docs.py --run`.
 The sessions load the package from the repository (`../../M2/HodgeLociCI.m2`); nothing needs to be installed.
 Vocabulary: Hodge locus, Noether-Lefschetz locus (the surface case), linear and complete-intersection cycles,
 Hilbert function, Zariski tangent space, obstruction; "excess" and "level" are defined in example 1 and example 2.

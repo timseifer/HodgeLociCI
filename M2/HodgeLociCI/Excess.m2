@@ -237,6 +237,8 @@ linearSubspaceCase(ZZ, ZZ, ZZ) := (d, k, c) -> (
     lam0 := (-1)^(c-1);
     sigmaP := k*d - 2*k - 2;
     src := hlProved | ", Theorem 9.7";
+    -- the caveat recorded for this theorem in tests/SOURCES.md, entry E3; attached to every label that cites part (3)
+    cav := "; caveat: the second-order parts of Theorem 9.7 (the non-reduced structure) rest, for some rows of its Table 1, on computations at instances (tests/SOURCES.md, entry E3)";
     base := {"degree" => d, "k" => k, "c" => c, "tau" => tau, "lambda0" => lam0, "sigmaPrime" => sigmaP};
     if sigmaP < 1 then return new HashTable from (base | {
         "hypothesis" => false,
@@ -272,7 +274,7 @@ linearSubspaceCase(ZZ, ZZ, ZZ) := (d, k, c) -> (
             "elsewhere" => "V_Z with a non-reduced structure",
             "statement" => "for lambda not in {0, lambda0}: at a general X the locus is V_Z with a non-reduced structure and " | toString e
                 | " excess tangent direction(s); it is non-reduced at every smooth X (Theorem 9.7(3), Table 1; second-order statement: " | where | ")",
-            "label" => src | "(2), (3)"
+            "label" => src | "(2), (3)" | cav
             });
         );
     new HashTable from (base | {
@@ -282,7 +284,7 @@ linearSubspaceCase(ZZ, ZZ, ZZ) := (d, k, c) -> (
         "atLambda0" => at0,
         "elsewhere" => "NL = V_Z as schemes at a general X",
         "statement" => "for lambda not in {0, lambda0} and X general among the smooth hypersurfaces containing two such planes: NL([Pi_1] + lambda [Pi_2]) = V_Z as schemes (Theorem 9.7(3)); at special X the excess can be larger",
-        "label" => src | "(2), (3)"
+        "label" => src | "(2), (3)" | cav
         })
     );
 

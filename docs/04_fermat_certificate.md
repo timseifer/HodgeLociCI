@@ -29,7 +29,9 @@ i3 : C = fermatReadCertificate file;
 
 i4 : C#"degree", C#"dimension", C#"lambda", C#"label"
 
-o4 = (3, 6, -1, EXACT over QQ(zeta_6))
+o4 = (3, 6, -1, EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces
+     -----------------------------------------------------------------------------------------------------------------
+     and Griffiths' pole-order description of the Hodge locus))
 
 o4 : Sequence
 
@@ -145,5 +147,6 @@ o18 : Sequence
   is an unreviewed AI result which differs from the dimension claim of Movasati's Conjecture 1 (arXiv:2211.11405); it
   must not be presented as a refutation.
 
-Regenerate: `cd docs/sessions && M2 --silent --no-readline --print-width 118 < 04_fermat_certificate.m2 > 04_fermat_certificate.out`, then
-`python3 docs/build_docs.py` (or `python3 docs/build_docs.py --run` for all sessions at once).
+Regenerate, from the repository root: `python3 docs/build_docs.py --run` re-runs all five sessions and rebuilds
+all five pages. For this session alone, also from the repository root:
+`(cd docs/sessions && M2 --silent --no-readline --print-width 118 < 04_fermat_certificate.m2 > 04_fermat_certificate.out) && python3 docs/build_docs.py`.
