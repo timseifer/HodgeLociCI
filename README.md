@@ -1,10 +1,13 @@
 # HodgeLociCI
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24455334.svg)](https://doi.org/10.5281/zenodo.24455334)
+
 A Macaulay2 package for **Hodge loci** (higher-dimensional Noether–Lefschetz loci) of classes
 `r[Y1] + s[Y2]`, where `Y1`, `Y2` are **linear or complete-intersection cycles** of half dimension in a smooth
 hypersurface `X = {F = 0}` of even dimension in projective space.
 
-Author: Timothy Seifert. Licence: MIT. Version 0.1.1 (23 November 2026).
+Author: Timothy Seifert. Licence: MIT. Version 0.1.1 (23 November 2026), archived on Zenodo:
+[doi:10.5281/zenodo.24455334](https://doi.org/10.5281/zenodo.24455334).
 AI agents: start with [`AGENTS.md`](AGENTS.md) and [`docs/API.md`](docs/API.md); a smoke test with parseable output
 is `M2 --script examples/quickstart.m2`, run from the repository root.
 
