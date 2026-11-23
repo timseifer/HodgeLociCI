@@ -44,18 +44,6 @@ To keep certificate files written by the MCP tool `fermat_expansion`, mount a di
 
 ## Image size
 
-**Not measured: the image was not built in the environment where this file was written.** There, the network
-proxy refused access to Docker Hub (`registry-1.docker.io`: "no rule or network setting allows this host"), so neither
-the base image `ubuntu:24.04` nor the `docker/dockerfile` frontend could be pulled. What was checked instead:
-
-- `hadolint` (2.15.1): no findings (one rule, DL3008, is switched off for the three unpinned helper packages, with
-  a comment in the Dockerfile saying why).
-- The apt pin: `macaulay2 1.22+ds-6build2` is the candidate version in the noble universe archive.
-- Every step after `FROM`, reproduced on an Ubuntu 24.04 machine with that same Macaulay2 build: a copy of the
-  repository without the paths in `.dockerignore`, `pip install "mcp[test]"` into a fresh virtual environment
-  (53 MB), the environment variables of the image; then the default command (quickstart: 19 of 19 lines equal), the
-  MCP tests (22 passed) and `tests/run_all.sh` (all 15 passed).
-
-A rough estimate from the installed sizes of the Debian packages is 0.7 to 0.8 GB (Macaulay2's common files alone
-are about 220 MB). The CI workflow prints the real size (step "Image size"); please record it here after the first
-build.
+About 405 MB (uncompressed, as reported by `docker image ls` in the first CI run on GitHub Actions,
+23 November 2026, run 45123951486). That run also passed the quickstart (19 of 19 lines), the MCP tests (22 passed),
+the validation suite (15 of 15) and the registry check inside the image.
