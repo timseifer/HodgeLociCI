@@ -3823,7 +3823,8 @@
   statement: |-
     For lambda not in {0, 1, -1} (tested: 2, 1/2, -2, 3, 5/3) on cubic sixfolds with two 3-planes meeting in a point,
     the second component W_lambda exists where det C = 0 and the class on it is algebraic by the Hodge conjecture for
-    cubic sixfolds (cited), but no explicit cycle and no explicit description of W_lambda is known. Known constraints:
+    cubic sixfolds (Steenbrink, LNM 1246; stated for every smooth cubic sixfold as Albano-Collino alg-geom/9308001,
+    Prop. 2.2; machine-read, Steenbrink not opened), but no explicit cycle and no explicit description of W_lambda is known. Known constraints:
     the cycle spans P^7 and lies on no quadric beyond the partials (rank 28); W_lambda is not in the closure of the
     sums of two determinants; the cone bridge relates W_lambda to cubic fourfolds in Hassett's divisor C_d,
     d = 8r^2 - 2rs + 8s^2 (36 for lambda = 2 and 1/2, 44 for -2). On eightfolds the corresponding component through X1
@@ -5161,7 +5162,7 @@
     Mod p (Macaulay2 1.22) except the lattice discriminants (exact) and the hand arguments. The test chi(N) >= -8 is a
     heuristic [CONJECTURE], not a theorem.
   evidence: |-
-    Team T5, /home/claude/hodge/discovery/t5_cycles/ (selfint.m2, chern3.py, annlib.m2, sigma3*.m2, fe12*.m2,
+    Team T5, session folder discovery/t5_cycles/ (not in this repository) (selfint.m2, chern3.py, annlib.m2, sigma3*.m2, fe12*.m2,
     divP1P3.py, scroll.py, enum*.py). Controls: selfint gives det+det 15, V_6 0, plane -5; annlib gives 1,7,12,7,1
     and 1,8,18,8,1.
   independent_check: |-
@@ -5184,3 +5185,40 @@
     None planned (closed by the user's direction). Prepared but not run: rns7.m2, c36cone.m2 (criteria in the ledger).
   session_refs: |-
     LEDGER_DISCOVERY.md "[T5] ... CLOSE" (04:56Z 23 Nov) and the erratum at 04:46Z.
+
+- id: N-DELSARTE-UNSOLVED-FAMILIES
+  kind: negative
+  area: explicit_cycles
+  title: "Smooth Delsarte sextic fourfolds, quartic sixfolds and cubic tenfolds: every Hodge character closed by published criteria"
+  statement: |-
+    Smooth Delsarte (invertible, n+2 monomials) members are exactly sums of chain and loop blocks; each type is one
+    variety up to torus scaling. Hodge characters were enumerated exactly (Jacobian-ring monomials graded by
+    G_W-characters; Fermat-cover part agrees with Shioda/Heijne arXiv:1212.5006) and closed by: Shioda decomposable /
+    quasi-decomposable, Ran, da Silva, reduction to own level, lift and descent, Aoki 1987 Thm 1-4(ii) pair
+    augmentation, Aoki 2000 Thm 0.1 (level rule) and Lemma 4.1(iii) (lattice S_m, exact HNF). Results: (6,4) 29 types,
+    (4,6) 75 types, (3,10) 413 types; no character left open. The level-33 classes of L5/L10 types reduce to da Silva's
+    m = 33 fourfold class through the level-66 descent (re-derived from published ingredients); the L12 cubic tenfold
+    (N = 4095) orbit reduces to level 105 and lies in Aoki's S_105.
+  status: RULED_OUT
+  conditions: |-
+    Exact integer arithmetic; smoothness by an elementary argument plus Singular (vdim (d-1)^k per block). Aoki's
+    statements were read only as quoted in Jumagulov's tex (secondary, machine-read). The "extra part" (characters
+    with zero entries, present for chain blocks and even loops) was tested through its nonzero-support character,
+    assuming carry-over from the lower-dimensional piece by cone/Gysin correspondences: NOT proved.
+  evidence: |-
+    Team T6 step (b) B1, session folder discovery/t6_unsolved/b1/ (not in this repository) (TABLE.md, res2_*.jsonl, res3_3_10_ext.jsonl).
+  independent_check: |-
+    none
+  not_established: |-
+    The extra-part carry-over; a first-hand reading of Aoki 1987/2000.
+  known_before: |-
+    Fermat members: Shioda, Ran, Aoki. Delsarte members in these dimensions: not found in a short search.
+  reproduce: |-
+    not reproducible from this repository: session scripts (candidate for packaging, user tooling item 3).
+  do_not_repeat: |-
+    Do not search smooth Delsarte members of (6,4), (4,6), (3,10) for unexplained Hodge classes. Do not use "covering
+    degree not covered by a published theorem" as a proxy for "open": per-character checks closed everything. Do not
+    assume H^n_prim of a Delsarte member is the invariant Fermat characters (chain blocks and even loops add an extra
+    part).
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[T6b]" entries 05:05Z-06:05Z and "[COORD] 06:20Z".

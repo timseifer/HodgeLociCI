@@ -43,6 +43,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [O-SIGN-AND-PLANE-LEMMA-GAPS](07_open_problems.md#o-sign-and-plane-lemma-gaps) | open | `OPEN` | 07 | Sign and monodromy of the class of T; the cases (block,block), (skew,*) of the plane lemma; its eightfold version |
 | [C-PLANE-LEMMA-GAP](08_corrections_and_lessons.md#c-plane-lemma-gap) | correction | `PAPER_ARGUMENT_AI` | 08 | T2's plane lemma: proof gap and incomplete case list; statement confirmed, wording narrowed to 'the general cubic' |
 | [C-CLOSURE-OF-WORDING](08_corrections_and_lessons.md#c-closure-of-wording) | correction | `PAPER_ARGUMENT_AI` | 08 | 'W is the family of sums of two determinants' corrected to 'the closure of' |
+| [N-DELSARTE-UNSOLVED-FAMILIES](06_ruled_out_and_dead_ends.md#n-delsarte-unsolved-families) | negative | `RULED_OUT` | 06 | Smooth Delsarte sextic fourfolds, quartic sixfolds and cubic tenfolds: every Hodge character closed by published criteria |
 
 ---
 

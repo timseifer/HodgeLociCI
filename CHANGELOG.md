@@ -2,6 +2,20 @@
 
 All notable changes to this package are recorded here. Format: Keep a Changelog; versions follow semantic versioning.
 
+## [Unreleased]
+
+### Added
+- Docker image definition (`Dockerfile`, `docker/`): Ubuntu 24.04 with Macaulay2 1.22 (`1.22+ds-6build2`, pinned),
+  the package and the MCP server; the default command runs the quickstart and compares it with
+  `examples/quickstart.expected`. Not yet built or published by the project (see `docker/README.md`).
+- MCP server (`mcp/`, Python, official MCP SDK) with the tools `excess_formula`, `second_order_check`,
+  `fermat_expansion` and `registry_search`; timeouts, a memory cap and strict input validation; tests in `mcp/tests/`.
+- GitHub Actions: `ci.yml` builds the image and runs the quickstart, the MCP tests, the validation suite, the
+  registry check and the site build on every push and pull request; `publish-ghcr.yml` (push to
+  `ghcr.io/timseifer/hodgelocici` on a published release) is disabled until the owner enables it.
+- README section "Run it in one command"; Docker and MCP in `AGENTS.md`, `llms.txt`, `codemeta.json` (with the DOI as
+  `identifier`) and a "Run it" box on the progress page. No change to the Macaulay2 code or to any result.
+
 ## [0.1.1] - 2026-11-23
 
 ### Fixed

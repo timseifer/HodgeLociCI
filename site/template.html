@@ -66,6 +66,8 @@ select{padding:8px;border:1px solid var(--line);border-radius:6px;background:var
 .detail pre{white-space:pre-wrap;font:.82rem/1.45 var(--mono);margin:0}
 .vocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;font-size:.88rem}
 .vocab div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.runit{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:.92rem}
+.runit pre{white-space:pre-wrap;font:.82rem/1.5 var(--mono);margin:8px 0;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
 footer{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
 @media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)} h1{font-size:1.6rem}}
 </style>
@@ -101,6 +103,16 @@ footer{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);colo
 
 <h2>What the status labels mean</h2>
 <div class="vocab" id="vocab"></div>
+
+<h2 id="run">Run it</h2>
+<div class="runit">
+  <p style="margin:0">Everything on this page can be re-checked with the package. With Docker (Macaulay2 1.22, the package and an MCP server in one image):</p>
+  <pre>git clone https://github.com/timseifer/HodgeLociCI && cd HodgeLociCI
+docker build -t hodgelocici .
+docker run --rm hodgelocici                    # quickstart, compared with its expected output
+docker run --rm hodgelocici tests/run_all.sh   # validation suite</pre>
+  <p style="margin:0">For AI assistants, an MCP server with the tools <code>excess_formula</code>, <code>second_order_check</code>, <code>fermat_expansion</code> and <code>registry_search</code> (every output carries its status label): <code>docker run --rm -i hodgelocici python -m hodgelocici_mcp</code>. Setup for Claude Desktop and Claude Code: <a href="https://github.com/timseifer/HodgeLociCI/blob/main/mcp/README.md">mcp/README.md</a>; without Docker: <a href="https://github.com/timseifer/HodgeLociCI#requirements-and-installation">installation</a>. Cite: <a href="https://doi.org/10.5281/zenodo.24455334">doi:10.5281/zenodo.24455334</a>.</p>
+</div>
 
 <footer>
   Author: Timothy Seifert. Code, data and text produced by AI agents under his direction; not reviewed by a human. Licence: MIT.

@@ -18,7 +18,7 @@ Smoke test, from the repository root: `M2 --script examples/quickstart.m2` print
 ## What has already been found (read before starting new work)
 
 - [discoveries/README.md](discoveries/README.md): the registry of results, negative results, dead ends, corrections and open problems; status vocabulary; rules for adding entries
-- [discoveries/registry.yaml](discoveries/registry.yaml): the machine-readable registry (123 entries); `python3 discoveries/check_registry.py --list` prints one line per entry
+- [discoveries/registry.yaml](discoveries/registry.yaml): the machine-readable registry (127 entries); `python3 discoveries/check_registry.py --list` prints one line per entry
 - [discoveries/06_ruled_out_and_dead_ends.md](discoveries/06_ruled_out_and_dead_ends.md): what failed and why
 - [discoveries/07_open_problems.md](discoveries/07_open_problems.md): open questions, each with one next step
 - [discoveries/NOTATION.md](discoveries/NOTATION.md): the setting and every symbol
@@ -35,6 +35,11 @@ Smoke test, from the repository root: `M2 --script examples/quickstart.m2` print
 
 - [tests/SOURCES.md](tests/SOURCES.md): the source of every expected value (Movasati, Kloosterman, Villaflor Loyola, Maclean, and the project's own results)
 - [tests/README.md](tests/README.md): how to run the validation suite and what each test covers
+
+## Run it without installing Macaulay2
+
+- [docker/README.md](docker/README.md): Docker image (Macaulay2 1.22 + package + MCP server); `docker build -t hodgelocici .` then `docker run --rm hodgelocici` runs the quickstart check
+- [mcp/README.md](mcp/README.md): MCP server with the tools excess_formula, second_order_check, fermat_expansion, registry_search; `python -m hodgelocici_mcp` or `docker run --rm -i hodgelocici python -m hodgelocici_mcp`; every output carries its status label
 
 ## Optional
 

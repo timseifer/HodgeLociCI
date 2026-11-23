@@ -5,7 +5,7 @@ phase). Nothing was edited. `SHA256SUMS` lists the checksums of the copies. Iden
 the READMEs) are in `M2/HodgeLociCI/data/`, because Macaulay2 installs that directory with the package and the TEST blocks
 and documentation examples read the files from there (`HodgeLociCI#"auxiliary files" | "data/"`).
 
-| file here | copied from (under /home/claude/hodge/) | what it is |
+| file here | copied from (in the session workspace, not in this repository) | what it is |
 |---|---|---|
 | `README_export_c3.txt` | `discovery/t3_window/export_c3/README.txt` | the specification: normalisation of the periods, rules (1)-(5), how to read the certificate files |
 | `cert_n6_lam-1.txt`, `cert_n6_lam2.txt`, `cert_n6_lam5o3.txt` | `discovery/t3_window/export_c3/` | obstruction certificates of order 5, Fermat cubic sixfold, Movasati's two 3-planes, lambda = -1, 2, 5/3 |

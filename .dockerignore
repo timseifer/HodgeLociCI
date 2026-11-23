@@ -1,0 +1,13 @@
+.git
+.github
+_site
+tests/out
+**/__pycache__
+**/*.pyc
+**/*.egg-info
+**/.pytest_cache
+lean/.lake
+lean/**/.lake
+*.tmp
+*~
+.DS_Store

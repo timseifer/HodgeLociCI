@@ -19,7 +19,7 @@ theorem, and never as evidence for or against the Hodge conjecture. For two line
 
 ## Before you start new work: the discoveries registry
 
-`discoveries/` records what this project has already found, ruled out or left open: 123 entries (results, negative
+`discoveries/` records what this project has already found, ruled out or left open: 127 entries (results, negative
 results, dead ends, corrections, open problems), each with its status, conditions, evidence, what is NOT
 established, what was known before, and how to re-verify it inside this repository.
 
@@ -53,6 +53,8 @@ Run from the repository root.
 | The two slow validation tests | `tests/run_all.sh --slow slow` | about 3 min |
 | One validation test | `tests/run_all.sh 02_kloosterman` (any substring of the file name; `kloosterman` alone runs three tests) | seconds |
 | Validate the discoveries registry | `python3 discoveries/check_registry.py` (Python 3, standard library only) | 1 s |
+| Everything in Docker (no local Macaulay2 needed) | `docker build -t hodgelocici . && docker run --rm hodgelocici` (quickstart check; `docker run --rm hodgelocici tests/run_all.sh` for the suite) | build: minutes; run: seconds |
+| MCP server tests | `pip install -e "./mcp[test]" && python -m pytest mcp/tests -q` | about 20 s |
 
 How to tell success:
 
@@ -65,6 +67,21 @@ How to tell success:
   print nothing.
 - `tests/run_all.sh` prints a PASS/FAIL table and exits 0 only if everything passes; it exits 2 if Macaulay2 is not
   found or if no test matches the pattern.
+
+## Docker and the MCP server
+
+- `Dockerfile` (root) builds an image with Macaulay2 1.22 (Ubuntu 24.04 package, pinned), the package at
+  `/opt/HodgeLociCI` and the MCP server; the default command is `docker/quickstart-check.sh` (quickstart compared
+  with `examples/quickstart.expected`). Details and test commands: `docker/README.md`.
+- `mcp/` is an MCP server (official MCP Python SDK) with four tools: `excess_formula` (by degrees),
+  `second_order_check` (explicit polynomial data or a random instance; verdicts as in 0.1.1), `fermat_expansion`
+  (arc, certificate file, re-verification) and `registry_search` (pure Python). Every output carries a
+  `status_label` and the line "AI-generated, not reviewed by a human mathematician."; keep both when you quote a
+  result. Configuration and example outputs: `mcp/README.md`. If you change an exported function used by a tool,
+  run `python -m pytest mcp/tests -q` as well.
+- CI (`.github/workflows/ci.yml`) builds the image and runs the quickstart, the MCP tests, `tests/run_all.sh`, the
+  registry check and the site build. `.github/workflows/publish-ghcr.yml` would push the image to GHCR on a
+  release but is disabled (`if: false`); do not enable it, push images or publish anything without the owner.
 
 ## How to call it from a script
 
@@ -127,6 +144,8 @@ Full list with signatures: `docs/API.md`. Worked sessions with real output: `doc
     examples/                         quickstart script with expected output
     discoveries/                      registry of what has been found, ruled out or left open (read before new work)
     lean/                             Lean certificates (independent of the Macaulay2 code)
+    Dockerfile, docker/               Docker image and its README
+    mcp/                              MCP server (Python) and its tests
 
 ## If you change this repository
 

@@ -210,7 +210,8 @@ kind: `open` | area: `explicit_cycles` | status: **`OPEN`**
 
 For lambda not in {0, 1, -1} (tested: 2, 1/2, -2, 3, 5/3) on cubic sixfolds with two 3-planes meeting in a point,
 the second component W_lambda exists where det C = 0 and the class on it is algebraic by the Hodge conjecture for
-cubic sixfolds (cited), but no explicit cycle and no explicit description of W_lambda is known. Known constraints:
+cubic sixfolds (Steenbrink, LNM 1246; stated for every smooth cubic sixfold as Albano-Collino alg-geom/9308001,
+Prop. 2.2; machine-read, Steenbrink not opened), but no explicit cycle and no explicit description of W_lambda is known. Known constraints:
 the cycle spans P^7 and lies on no quadric beyond the partials (rank 28); W_lambda is not in the closure of the
 sums of two determinants; the cone bridge relates W_lambda to cubic fourfolds in Hassett's divisor C_d,
 d = 8r^2 - 2rs + 8s^2 (36 for lambda = 2 and 1/2, 44 for -2). On eightfolds the corresponding component through X1

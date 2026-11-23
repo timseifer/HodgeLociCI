@@ -17,6 +17,22 @@ is `M2 --script examples/quickstart.m2`, run from the repository root.
 > computation to be verified, and read the section "What is proved, what is computed" before relying on a result.
 > Nothing here is, or bears on, a proof or disproof of the Hodge conjecture.
 
+## Run it in one command
+
+With Docker (the image contains Macaulay2 1.22, the package and the MCP server; see
+[`docker/README.md`](docker/README.md)):
+
+    docker build -t hodgelocici .
+    docker run --rm hodgelocici                     # runs examples/quickstart.m2 and compares with the expected output
+    docker run --rm hodgelocici tests/run_all.sh    # the validation suite
+
+As an MCP server for AI assistants (tools `excess_formula`, `second_order_check`, `fermat_expansion`,
+`registry_search`; every output carries its status label; see [`mcp/README.md`](mcp/README.md) for Claude Desktop
+and Claude Code configuration):
+
+    pip install -e mcp/ && python -m hodgelocici_mcp              # needs M2 on the PATH
+    docker run --rm -i hodgelocici python -m hodgelocici_mcp      # or inside the image
+
 ## What it does
 
 Setting: `X` has degree `d` in `P^(2k+1)`; `Y1 = V(f, p)` and `Y2 = V(h, p)` are complete intersections of dimension
@@ -275,7 +291,7 @@ A readable live view of the registry and of current work is published at
 
 
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
-nobody (person or agent) repeats the work: 123 entries in `discoveries/registry.yaml`, with readable pages by area
+nobody (person or agent) repeats the work: 127 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
 on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
 and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are
@@ -302,6 +318,9 @@ and unreviewed, and no entry claims novelty. Start with `discoveries/README.md`.
     docs/prose/                  the text around the sessions
     examples/                    quickstart script with expected output
     site/                        generator and current-activity file for the progress page
+    Dockerfile, docker/          the Docker image (Macaulay2 1.22 + package + MCP server) and its README
+    mcp/                         MCP server (Python, official MCP SDK) wrapping four tools; tests in mcp/tests/
+    .github/workflows/           CI (builds the image, runs quickstart and tests); a GHCR publish workflow, disabled
     discoveries/                 registry of results, dead ends and open problems; check_registry.py validates it
     lean/                        Lean certificates, with a README saying what each does and does not prove
 

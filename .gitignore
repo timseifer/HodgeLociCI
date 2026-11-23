@@ -7,3 +7,7 @@ tests/out/
 __pycache__/
 # built progress page (published on the gh-pages branch)
 _site/
+# Python packaging and test leftovers (mcp/)
+*.egg-info/
+.pytest_cache/
+.venv/
