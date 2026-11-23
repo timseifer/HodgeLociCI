@@ -5326,9 +5326,18 @@
     Team T6 step (d), session folder discovery/t6_unsolved/d/ (NOTES.md, t1, t6, t8, t9 outputs; lin.m2; not in this
     repository).
   independent_check: |-
-    none
+    Blind check BC-T6 (own Python code, closed-form Fermat periods; did not see steps (d)/(e)): rank L = 38, codim
+    V_Z = 39, excess 1, T Cone_T codim 65, T V_Z + T Cone_T = ker L, ker L / T Cone_T = 27-dim (y_i u_e v_f) AGREE,
+    with L.T V_Z = 0 and L.T Cone_T = 0 EXACT over Z[z] and ranks at three primes. The lambda-dichotomy is NOT
+    reproduced: in the family b = y0 (a.u)(c.v) both lambda = -1 and lambda = 2 (and rank-2 controls) extend to order 9
+    with nonlinear corrections (MOD p, three primes for the generic case); for generic rank-1 directions both lambda
+    behave identically through order 5 and in the order-6 tests run (order 6 undecided for both). Step (e) (lambda = -1
+    survives to order 8, lambda = 2 obstructed at order 6, MOD p, two primes, fe.py) and the blind check disagree; the
+    devil's advocate (DA-T6) found no known explanation and no fatal error, and noted that step (e) tested only a
+    subcone of directions.
   not_established: |-
-    Whether W = Cone_d locally (leaning yes) or W is larger in rank-1 directions.
+    Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
+    disagreement on the lambda-dichotomy.
   known_before: |-
     Movasati arXiv:1902.00831 (component conjectured, cycles unknown); Kloosterman arXiv:2312.12363 Thm 5.3 (extra
     component at split X built from cones), both machine-read.

@@ -837,9 +837,22 @@ special monomial rank-1 direction (x1 x6 x7) survives to order 6 at lambda = 2 (
 Team T6 step (d), session folder discovery/t6_unsolved/d/ (NOTES.md, t1, t6, t8, t9 outputs; lin.m2; not in this
 repository).
 
-**Independent check.** none
+**Independent check.**
 
-**Not established.** Whether W = Cone_d locally (leaning yes) or W is larger in rank-1 directions.
+Blind check BC-T6 (own Python code, closed-form Fermat periods; did not see steps (d)/(e)): rank L = 38, codim
+V_Z = 39, excess 1, T Cone_T codim 65, T V_Z + T Cone_T = ker L, ker L / T Cone_T = 27-dim (y_i u_e v_f) AGREE,
+with L.T V_Z = 0 and L.T Cone_T = 0 EXACT over Z[z] and ranks at three primes. The lambda-dichotomy is NOT
+reproduced: in the family b = y0 (a.u)(c.v) both lambda = -1 and lambda = 2 (and rank-2 controls) extend to order 9
+with nonlinear corrections (MOD p, three primes for the generic case); for generic rank-1 directions both lambda
+behave identically through order 5 and in the order-6 tests run (order 6 undecided for both). Step (e) (lambda = -1
+survives to order 8, lambda = 2 obstructed at order 6, MOD p, two primes, fe.py) and the blind check disagree; the
+devil's advocate (DA-T6) found no known explanation and no fatal error, and noted that step (e) tested only a
+subcone of directions.
+
+**Not established.**
+
+Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
+disagreement on the lambda-dichotomy.
 
 **Known before.**
 
