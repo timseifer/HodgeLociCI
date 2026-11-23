@@ -5303,3 +5303,43 @@
     strategy, or a point of W off the cone locus.
   session_refs: |-
     LEDGER_DISCOVERY.md "[T6c]" 10:16Z-11:57Z.
+
+- id: O-TENFOLD-CONE-LEAD
+  kind: open
+  area: movasati_conjecture
+  title: "Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d?"
+  statement: |-
+    At the Fermat cubic tenfold with Movasati's pair (in Z_0 and in every Cone_d), for lambda = -1, 2 (MOD 32029):
+    rank L = 38, joint persistence codim 39, excess 1; T Cone_T has codim 65, lies in ker L, T Cone_T + T V_Z = ker L,
+    T Cone_T n T V_Z = T Z_0 (codim 66). The 2nd- and 3rd-order forms of the 183 dependent equations vanish on ker L;
+    generic directions are obstructed at order 4 independently of choices (no smooth component of dimension
+    dim V_Z + 1, agreeing with Kloosterman arXiv:2312.12363 as machine-read). Normal directions to Cone_T are the
+    27-dim space of 3x3 matrices M|Pi of linear forms on the P^2 (ARG): rank 2 and 3 obstructed at order 4; rank 1
+    (two Segre cones of dimension 11) survive order 4, so dim W <= dim Cone_T + 11. For one generic rank-1 direction
+    at lambda = 2 the order-5 obstruction is removable (K.c_5 in Im DG4(v), rank 16) and, after correction, the
+    order-6 term is NOT in Im DG4(v): obstructed modulo first-order corrections.
+  status: OPEN
+  conditions: |-
+    MOD 32029 only; one direction; quadratic freedom at order 6 not examined; lambda = -1 order 6 not finished; the
+    special monomial rank-1 direction (x1 x6 x7) survives to order 6 at lambda = 2 (cap), not interpreted.
+  evidence: |-
+    Team T6 step (d), session folder discovery/t6_unsolved/d/ (NOTES.md, t1, t6, t8, t9 outputs; lin.m2; not in this
+    repository).
+  independent_check: |-
+    none
+  not_established: |-
+    Whether W = Cone_d locally (leaning yes) or W is larger in rank-1 directions.
+  known_before: |-
+    Movasati arXiv:1902.00831 (component conjectured, cycles unknown); Kloosterman arXiv:2312.12363 Thm 5.3 (extra
+    component at split X built from cones), both machine-read.
+  reproduce: |-
+    not reproducible from this repository: session scripts (use fermatExtendArc with care: obstruction orders above
+    the first nonzero Taylor order can depend on the choice of lower terms).
+  do_not_repeat: |-
+    Generic Fermat arcs at this point (obstructed at order 4); rank-2/3 normal directions to Cone_d (order 4); reading
+    a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
+  next_step: |-
+    Quadratic freedom at order 6 for generic rank-1 directions; lambda = -1 at order 6; the rank-1 cone as a family;
+    an exact rerun over QQ(zeta_6).
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[T6d]" 11:56Z-14:47Z.
