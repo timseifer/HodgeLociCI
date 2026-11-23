@@ -854,15 +854,30 @@ M = y0 x scalar matrix) where both lambda behave alike, and BC's generic order-6
 order-6 test (own finite differences): lambda = 2 obstructed for every integral arc with a generic rank-1 tangent
 (2 directions), lambda = -1 removable; the step (e) lambda = -1 order-8 arc is confirmed with BC's functional. So the
 dichotomy stands, MOD p (32029; 31981 from step (e)), finite order, Fermat point only.
+EXACT (EX-T6, Q(z), cross-checked with both functionals): lambda = 2: for 3 explicit generic rank-1 tangents
+(both Segre types) the ARG hypotheses hold exactly (rank DG4(v) = 16 = codim Sigma1, ker DG4(v) = T_v Sigma1) and
+an exact certificate (y.c6 = 480(1+z) etc.) shows order 6 is obstructed for every integral arc with that tangent
+(given the ARG). lambda = -1: exact arcs in Q(z) with all period equations vanishing through order 8 (2 explicit
+tangents, linear corrections only), not V_Z arcs.
+EXPLANATION TESTS (EXP-T6): rank DG4 = 16 at generic Segre-cone points (16/16, MOD p), so a component W with
+generic rank-1 tangents has codim EXACTLY 54 in moduli. Not explaining W: Kloosterman 2312.12363 Thm 5.3 (its
+components are Cone_d; LIT); Segre P^2xP^3, P^1xP^4, P^1xQ^4, G(2,5) sections (integrality: the degree of a cycle
+in Q<h^5, P1 - P2> is divisible by 3); 13 cone/join/scroll families (codims 32-60, none 54, MOD p). Partial: the
+C_18 family F_T (X containing J(P^2, T), T an elliptic ruled sextic; codim 55, MOD p) is specific to lambda = -1
+and is expected to explain a codim-1 sub-cone of the directions (ARG). Explained: the y0 sub-locus (join of a line
+with the sixfold W_lambda; ARG + MOD p). Correction: "every component other than V_Z through the Fermat point has
+codim >= 54" is too strong; it holds only for components containing Cone_T (the TD10 closure passes with codim
+<= 52, ARG).
 
 **Not established.**
 
 Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
-disagreement (resolved: see independent_check). Still missing: exact confirmation; orders >= 9 at lambda = -1;
+disagreement (resolved: see independent_check). Still missing: orders >= 9 at lambda = -1 (exact engine needs
+streaming); the ARG (tangent-cone conclusion) checked by a second reader; G4 = 0 on all of Sigma1 exactly; more
+directions (genericity); a codim-54 family containing F_T as a divisor (the eightfold analogue is the Segre divisor
+inside TD), which would EXPLAIN the lead;
 lambda = 2 with a fully generic T Cone_T tangent under the full quadratic-freedom test; whether the y0 sub-locus
-is explained (e.g. by the Thom-Sebastiani reduction to a cubic sixfold); untested explanations (Kloosterman
-Thm 5.3 cones beyond cone loci, Segre P^2 x P^3 and other non-tower 5-folds, Hassett C_18 constructions); a
-specific smooth member off the cone locus.
+is explained (now: yes); a specific smooth member off the cone locus.
 
 **Known before.**
 
