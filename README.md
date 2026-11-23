@@ -265,6 +265,11 @@ column only, not any codimension; it may be a slip in the table or in the machin
 
 ## Discoveries registry
 
+A readable live view of the registry and of current work is published at
+<https://timseifer.github.io/HodgeLociCI/> (built by `site/build_site.py` from `discoveries/registry.yaml` and
+`site/status.json`; it needs GitHub Pages to be enabled for the `gh-pages` branch).
+
+
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
 nobody (person or agent) repeats the work: 123 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
@@ -292,6 +297,7 @@ and unreviewed, and no entry claims novelty. Start with `discoveries/README.md`.
     docs/sessions/               input and captured output of every session
     docs/prose/                  the text around the sessions
     examples/                    quickstart script with expected output
+    site/                        generator and current-activity file for the progress page
     discoveries/                 registry of results, dead ends and open problems; check_registry.py validates it
     lean/                        Lean certificates, with a README saying what each does and does not prove
 

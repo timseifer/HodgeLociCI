@@ -25,7 +25,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 
 | id | kind | status | page | title |
 |---|---|---|---|---|
-| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (queued target, not started) |
+| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (in progress: a candidate conic awaits an independent check) |
 | [O-KLOOSTERMAN-THEOREM-14-READING](07_open_problems.md#o-kloosterman-theorem-14-reading) | open | `OPEN` | 07 | Unresolved reading: Kloosterman's Theorem 1.4 (introduction) against smoothness at lambda = -1 for cubics with c = 2 |
 | [O-HODGE-NUMBER-3432](07_open_problems.md#o-hodge-number-3432) | open | `OPEN` | 07 | Recorded disagreement with a published table: middle Hodge number of the cubic 12-fold, 3432 or 3433 |
 | [C-WORDING-8-7-AND-20-19](08_corrections_and_lessons.md#c-wording-8-7-and-20-19) | correction | `EXACT` | 08 | '8 -> 7' and '20 -> 19' are K and H at the Fermat point for every nonzero coefficient, not codimensions of a Hodge locus |

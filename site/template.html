@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hodge loci: where the agents are</title>
+<meta name="description" content="Live progress of AI agents working on Hodge loci (Noether-Lefschetz loci) of linear and complete-intersection cycles in hypersurfaces: results, dead ends, open problems. AI-generated, not reviewed by a human.">
+<style>
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --ink:#1d1d1b; --muted:#6b6a65; --line:#e6e3dc; --accent:#2f5d8a;
+  --ok:#2e7d4f; --modp:#8a6d1f; --ai:#7a4fa0; --no:#a23b3b; --open:#2f5d8a; --stuck:#8a4b2f; --pend:#b5651d;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#141412; --panel:#1c1c1a; --ink:#ecebe6; --muted:#a3a19a; --line:#2e2d2a; --accent:#8fb6dc;
+  --ok:#6cc08f; --modp:#d4b45a; --ai:#b996dc; --no:#e08282; --open:#8fb6dc; --stuck:#d39a7c; --pend:#e8a25c;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding:44px 0 18px;border-bottom:1px solid var(--line)}
+h1{font:600 2.1rem/1.15 var(--serif);margin:0 0 8px;letter-spacing:-.01em}
+h2{font:600 1.35rem/1.2 var(--serif);margin:40px 0 14px}
+.sub{color:var(--muted);max-width:760px;margin:0}
+.caution{margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--pend);background:var(--panel);font-size:.93rem;border-radius:6px}
+.now{margin-top:26px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.now .label{font:600 .75rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--pend);margin-right:8px;box-shadow:0 0 0 0 var(--pend);animation:p 2s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(181,101,29,.5)}70%{box-shadow:0 0 0 10px rgba(181,101,29,0)}100%{box-shadow:0 0 0 0 rgba(181,101,29,0)}}
+.now h3{font:600 1.15rem/1.3 var(--serif);margin:8px 0 6px}
+.recent{margin:14px 0 0;padding:0;list-style:none;font-size:.92rem;color:var(--muted)}
+.recent li{padding:4px 0;border-top:1px dashed var(--line)}
+.recent b{color:var(--ink);font-weight:600;margin-right:6px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer}
+.stat .n{font:600 1.8rem/1 var(--serif)}
+.stat .t{color:var(--muted);font-size:.85rem}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.area{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;cursor:pointer}
+.area:hover,.stat:hover{border-color:var(--accent)}
+.area h4{margin:0 0 4px;font:600 1rem var(--serif)}
+.area p{margin:0 0 10px;color:var(--muted);font-size:.86rem}
+.bar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line)}
+.bar span{display:block;height:100%}
+.legendrow{font-size:.8rem;color:var(--muted);margin-top:6px}
+.opens{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;cursor:pointer}
+.card h4{margin:6px 0 6px;font:600 .98rem/1.3 var(--serif)}
+.card .next{font-size:.87rem;color:var(--muted)}
+.badge{display:inline-block;font:600 .7rem var(--sans);letter-spacing:.04em;padding:2px 7px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+input[type=search]{flex:1 1 260px;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);font:inherit}
+select{padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);font:inherit}
+.count{color:var(--muted);font-size:.88rem}
+.list{border-top:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line);padding:10px 4px}
+.row .head{display:flex;gap:10px;align-items:baseline;cursor:pointer}
+.row .id{font:.75rem var(--mono);color:var(--muted);min-width:0}
+.row .title{flex:1}
+.detail{display:none;margin:10px 0 4px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:6px;font-size:.92rem}
+.row.open .detail{display:block}
+.detail h5{margin:12px 0 4px;font:600 .75rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.detail h5:first-child{margin-top:0}
+.detail pre{white-space:pre-wrap;font:.82rem/1.45 var(--mono);margin:0}
+.vocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;font-size:.88rem}
+.vocab div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+footer{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)} h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Hodge loci: where the agents are</h1>
+  <p class="sub">A live view of an AI-agent research project on <b>Hodge loci</b> (higher-dimensional Noether&ndash;Lefschetz loci) of combinations of linear and complete-intersection cycles in smooth hypersurfaces: what has been found, what was ruled out, and what is open. Built from the project's <a href="https://github.com/timseifer/HodgeLociCI/tree/main/discoveries">discoveries registry</a> and its Macaulay2 package <a href="https://github.com/timseifer/HodgeLociCI">HodgeLociCI</a>.</p>
+  <div class="caution"><b>Read this first.</b> Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. <b>No human mathematician has reviewed it.</b> Published papers were read by machine. Every entry carries a status label; an entry is exactly as strong as its label. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</div>
+  <section class="now" id="now"></section>
+</header>
+
+<h2>The map</h2>
+<div class="stats" id="stats"></div>
+<div class="legendrow" id="legend"></div>
+<h2>By area</h2>
+<div class="areas" id="areas"></div>
+
+<h2>Open problems</h2>
+<p class="sub" style="margin-bottom:12px">Each with the single most useful next step, as recorded. Click a card for the full entry.</p>
+<div class="opens" id="opens"></div>
+
+<h2 id="explore">Explore every entry</h2>
+<div class="controls">
+  <input type="search" id="q" placeholder="Search: Segre, Pfaffian, pencil, lambda = -1, Fermat ...">
+  <select id="fkind"><option value="">all kinds</option></select>
+  <select id="farea"><option value="">all areas</option></select>
+  <select id="fstatus"><option value="">all statuses</option></select>
+  <span class="count" id="count"></span>
+</div>
+<div class="list" id="list"></div>
+
+<h2>What the status labels mean</h2>
+<div class="vocab" id="vocab"></div>
+
+<footer>
+  Author: Timothy Seifert. Code, data and text produced by AI agents under his direction; not reviewed by a human. Licence: MIT.
+  Source: <a href="https://github.com/timseifer/HodgeLociCI">github.com/timseifer/HodgeLociCI</a>
+  (registry: <code>discoveries/registry.yaml</code>; current activity: <code>site/status.json</code>).
+  <span id="built"></span>
+</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const AREAS = {
+  first_order:["First order","Excess of the Hodge locus over the locus where both cycles persist; the level tau and the special coefficient."],
+  second_order:["Second order","Whether the excess directions survive at second order."],
+  movasati_conjecture:["Movasati's Conjecture 1","The full germ at Fermat points; conditional AI computations, not a refutation."],
+  fermat_expansion:["Fermat expansions","Higher-order expansions by pole-order reduction; certificates."],
+  explicit_cycles:["Explicit cycles on cubics","Sums of two determinants, Pfaffians, Segre fourfolds."],
+  fake_linear_cycles:["Fake linear cycles","Quartic sixfolds: explained loci, killed candidates, open regimes."],
+  methods:["Methods","Techniques that worked and are worth reusing."]
+};
+const KINDS = {result:["Results","var(--ok)"], negative:["Negative results","var(--no)"], dead_end:["Dead ends","var(--stuck)"], correction:["Corrections","var(--ai)"], open:["Open problems","var(--open)"]};
+const STATUS = {
+  EXACT:["exact","var(--ok)","Computed in exact arithmetic for the given input. Says nothing about other inputs."],
+  MOD_P:["mod p","var(--modp)","Computed modulo a prime at one or a few instances. Evidence, not a proof."],
+  PROVED_AI_UNREVIEWED:["proved (AI, unreviewed)","var(--ai)","A theorem of an AI-written note that no human has reviewed. The note is not public."],
+  PAPER_ARGUMENT_AI:["paper argument (AI)","var(--ai)","An argument written by an AI agent, read at most once by another agent."],
+  COMPUTED_ONLY:["computed only","var(--modp)","What a computation gives; no proof is claimed."],
+  CONJECTURE:["conjecture","var(--open)","Believed, not shown."],
+  RULED_OUT:["ruled out","var(--no)","Tried and shown not to work (in the stated sense)."],
+  OPEN:["open","var(--open)","Not settled."],
+  STUCK:["stuck","var(--stuck)","Attempted; blocked, with the reason recorded."],
+  PENDING_CHECK:["awaiting check","var(--pend)","A new claim that an independent blind check has not yet reproduced."]
+};
+const $ = s => document.querySelector(s);
+const el = (tag, attrs={}, ...kids) => { const e=document.createElement(tag); for (const [k,v] of Object.entries(attrs)) { if(k==="class") e.className=v; else if(k==="style") e.style.cssText=v; else e.setAttribute(k,v);} for(const c of kids){ if(c==null) continue; e.append(c.nodeType?c:document.createTextNode(c)); } return e; };
+const badge = s => { const t=STATUS[s]||[s,"var(--muted)",""]; return el("span",{class:"badge",style:"color:"+t[1],title:t[2]},t[0]); };
+const E = DATA.entries;
+
+// Now panel
+(function(){
+  const s = DATA.status, n=$("#now");
+  n.append(el("div",{class:"label"},el("span",{class:"pulse"}),"Right now  ·  updated "+s.updated));
+  n.append(el("p",{style:"margin:8px 0 0"},s.headline));
+  for (const a of s.active){
+    const d=el("div",{style:"margin-top:14px"});
+    d.append(el("h3",{},a.title+"  ",badge(a.status)));
+    d.append(el("div",{style:"color:var(--muted);font-size:.85rem"},"State: "+a.state));
+    d.append(el("p",{style:"margin:6px 0 0"},a.summary));
+    n.append(d);
+  }
+  const ul=el("ul",{class:"recent"});
+  for (const r of s.recent) ul.append(el("li",{},el("b",{},r.when),r.what));
+  n.append(ul);
+})();
+
+// Stats
+(function(){
+  const st=$("#stats");
+  for (const [k,[name,col]] of Object.entries(KINDS)){
+    const c=E.filter(e=>e.kind===k).length;
+    const d=el("div",{class:"stat",title:"Show "+name.toLowerCase()},el("div",{class:"n",style:"color:"+col},String(c)),el("div",{class:"t"},name));
+    d.onclick=()=>{ $("#fkind").value=k; render(); location.hash="explore"; };
+    st.append(d);
+  }
+  $("#legend").textContent = E.length+" entries in the registry. Click a number or an area to filter the list below.";
+})();
+
+// Areas
+(function(){
+  const box=$("#areas");
+  for (const [a,[name,desc]] of Object.entries(AREAS)){
+    const es=E.filter(e=>e.area===a); if(!es.length) continue;
+    const bar=el("div",{class:"bar"});
+    for (const [k,[,col]] of Object.entries(KINDS)){ const c=es.filter(e=>e.kind===k).length; if(c) bar.append(el("span",{style:"width:"+(100*c/es.length)+"%;background:"+col,title:c+" "+KINDS[k][0].toLowerCase()})); }
+    const parts=Object.entries(KINDS).map(([k,[nm]])=>[es.filter(e=>e.kind===k).length,nm.toLowerCase()]).filter(x=>x[0]).map(x=>x[0]+" "+x[1]).join(" · ");
+    const d=el("div",{class:"area"},el("h4",{},name),el("p",{},desc),bar,el("div",{class:"legendrow"},parts));
+    d.onclick=()=>{ $("#farea").value=a; $("#fkind").value=""; render(); location.hash="explore"; };
+    box.append(d);
+  }
+})();
+
+// Open problems
+(function(){
+  const box=$("#opens");
+  for (const e of E.filter(e=>e.kind==="open")){
+    const nx=(e.next_step||"").split("\n").join(" ");
+    const d=el("div",{class:"card"},badge(e.status),el("h4",{},e.title),el("div",{class:"next"},nx?("Next: "+(nx.length>240?nx.slice(0,240)+"…":nx)):""));
+    d.onclick=()=>openEntry(e.id);
+    box.append(d);
+  }
+})();
+
+// Explorer
+const fill=(sel,obj,lab)=>{ for(const [k,v] of Object.entries(obj)) if(E.some(e=>e[lab]===k)) sel.append(el("option",{value:k},Array.isArray(v)?v[0]:v)); };
+fill($("#fkind"),KINDS,"kind"); fill($("#farea"),AREAS,"area"); fill($("#fstatus"),STATUS,"status");
+const FIELDS=[["statement","Statement"],["data","Data"],["conditions","Conditions"],["not_established","Not established"],["evidence","Evidence"],["independent_check","Independent check"],["known_before","Known before (as read by machine)"],["do_not_repeat","Do not repeat"],["next_step","Next step"],["reproduce","How to re-verify"]];
+function row(e){
+  const r=el("div",{class:"row",id:"e-"+e.id});
+  const h=el("div",{class:"head"},badge(e.status),el("span",{class:"title"},e.title),el("span",{class:"id"},e.id));
+  const d=el("div",{class:"detail"});
+  for (const [f,lab] of FIELDS){ if(e[f] && String(e[f]).trim() && String(e[f]).trim()!=="none"){ d.append(el("h5",{},lab), el("pre",{},String(e[f]))); } }
+  d.append(el("h5",{},"Status"), el("pre",{},(STATUS[e.status]||[e.status,"",""])[2]));
+  h.onclick=()=>r.classList.toggle("open");
+  r.append(h,d); return r;
+}
+function render(){
+  const q=$("#q").value.toLowerCase().trim(), k=$("#fkind").value, a=$("#farea").value, s=$("#fstatus").value;
+  const L=$("#list"); L.innerHTML="";
+  const hits=E.filter(e=>(!k||e.kind===k)&&(!a||e.area===a)&&(!s||e.status===s)&&(!q||JSON.stringify(e).toLowerCase().includes(q)));
+  for (const e of hits) L.append(row(e));
+  $("#count").textContent=hits.length+" of "+E.length;
+}
+function openEntry(id){ $("#q").value=""; $("#fkind").value=""; $("#farea").value=""; $("#fstatus").value=""; render(); const r=document.getElementById("e-"+id); if(r){ r.classList.add("open"); r.scrollIntoView({behavior:"smooth",block:"start"}); } }
+for (const id of ["#q","#fkind","#farea","#fstatus"]) $(id).addEventListener("input",render);
+render();
+if (location.hash.startsWith("#e-")) openEntry(location.hash.slice(3));
+
+// Vocabulary
+for (const [k,[nm,col,desc]] of Object.entries(STATUS)) $("#vocab").append(el("div",{},el("span",{class:"badge",style:"color:"+col},nm)," ",desc));
+$("#built").textContent=" Page built "+DATA.built+".";
+</script>
+</body>
+</html>

@@ -3914,7 +3914,7 @@
 - id: O-THREE-CYCLES
   kind: open
   area: first_order
-  title: "Special coefficients for three or more cycles (queued target, not started)"
+  title: "Special coefficients for three or more cycles (in progress: a candidate conic awaits an independent check)"
   statement: |-
     Question (queued by the user of the session, not started; budget line "three-cycle target: 0 of 12"): for three
     complete-intersection cycles Y_1, Y_2, Y_3 (start with three linear spaces on cubic sixfolds and quartic fourfolds,
@@ -3948,10 +3948,13 @@
 
     Expected: (19, 38). Nothing for the queued question itself.
   next_step: |-
-    Step 0 of the queued plan: a 20-minute literature check for Hodge loci of combinations of three or more linear or
-    complete-intersection cycles. Then a first-order scan modulo p over (a, b) on a grid plus the predicted lines,
-    starting with the triangle configuration; the package's hodgeLocusTangentCodim and fermatTangentData accept
-    several linear spaces with coefficients.
+    Started 22 Nov 2026 (framework: Kloosterman arXiv:2312.12363, Definition 3.12, "excess tangent dimension at
+    (a_1 : ... : a_r)", as read by machine; he proves nothing beyond the definitions for r >= 3). First-order scans MOD p,
+    one instance each: on cubic sixfolds (ten configurations of three 3-planes) and quartic fourfolds (seven) no jump off
+    the pairwise lines. CANDIDATE, NOT YET INDEPENDENTLY CHECKED: three 3-planes in one P^4 on an explicit quartic
+    sixfold, where the jump set appears to be the six pairwise lines plus a conic depending on X (exact over QQ at one
+    instance, by the team that found it). Next: the blind check of that claim; then second order and a geometric
+    explanation of the conic, if it is confirmed.
   session_refs: |-
     LEDGER_DISCOVERY.md "QUEUED NEXT TARGET", "[COORD] 05:07Z"; discovery/t4_three_cycles/ (an empty folder at the
     time of writing).

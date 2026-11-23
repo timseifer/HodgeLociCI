@@ -5,3 +5,5 @@ tests/out/
 *~
 .DS_Store
 __pycache__/
+# built progress page (published on the gh-pages branch)
+_site/

@@ -19,7 +19,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [O-OTHER-COEFFICIENTS](#o-other-coefficients) | `OPEN` | Coefficients other than 1 and -1: no explicit cycle or family is known for the second component |
 | [O-SEXTIC-FOURFOLDS-CUBIC-TENFOLDS](#o-sextic-fourfolds-cubic-tenfolds) | `OPEN` | Fake linear cycles on sextic fourfolds and cubic tenfolds: not started beyond first-order ranks |
 | [O-LITERATURE-CHECK-DET-PFAFF](#o-literature-check-det-pfaff) | `OPEN` | Literature check for the determinantal and Pfaffian descriptions before any novelty claim |
-| [O-THREE-CYCLES](#o-three-cycles) | `OPEN` | Special coefficients for three or more cycles (queued target, not started) |
+| [O-THREE-CYCLES](#o-three-cycles) | `OPEN` | Special coefficients for three or more cycles (in progress: a candidate conic awaits an independent check) |
 | [O-FERMAT-LOOPHOLES](#o-fermat-loopholes) | `CONJECTURE` | Three loopholes at the Fermat quartic sixfold, and the statement with gaps for fake linear cycles |
 | [O-E1-GENERAL-POINT-AND-E2](#o-e1-general-point-and-e2) | `STUCK` | Is the cone locus E1 a component of the reduced locus at its general point? What does E2 contain? |
 | [O-OTHER-COMPONENTS-AT-X1](#o-other-components-at-x1) | `OPEN` | Eightfolds: exact dimension of the second component for lambda != +-1, and the pair types not computed |
@@ -317,7 +317,7 @@ varieties of determinantal cubics and on special cubic fourfolds (C_14, C_18), a
 
 ## O-THREE-CYCLES
 
-**Special coefficients for three or more cycles (queued target, not started)**
+**Special coefficients for three or more cycles (in progress: a candidate conic awaits an independent check)**
 
 kind: `open` | area: `first_order` | status: **`OPEN`**
 
@@ -360,10 +360,13 @@ Expected: (19, 38). Nothing for the queued question itself.
 
 **Next step.**
 
-Step 0 of the queued plan: a 20-minute literature check for Hodge loci of combinations of three or more linear or
-complete-intersection cycles. Then a first-order scan modulo p over (a, b) on a grid plus the predicted lines,
-starting with the triangle configuration; the package's hodgeLocusTangentCodim and fermatTangentData accept
-several linear spaces with coefficients.
+Started 22 Nov 2026 (framework: Kloosterman arXiv:2312.12363, Definition 3.12, "excess tangent dimension at
+(a_1 : ... : a_r)", as read by machine; he proves nothing beyond the definitions for r >= 3). First-order scans MOD p,
+one instance each: on cubic sixfolds (ten configurations of three 3-planes) and quartic fourfolds (seven) no jump off
+the pairwise lines. CANDIDATE, NOT YET INDEPENDENTLY CHECKED: three 3-planes in one P^4 on an explicit quartic
+sixfold, where the jump set appears to be the six pairwise lines plus a conic depending on X (exact over QQ at one
+instance, by the team that found it). Next: the blind check of that claim; then second order and a geometric
+explanation of the conic, if it is confirmed.
 
 **Session references (files not public).**
 
