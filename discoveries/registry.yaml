@@ -5138,3 +5138,49 @@
     a built checkout (not re-run for this registry).
   session_refs: |-
     lean/README.md; LEDGER.md "18:44Z Regression", "LATE ADDITION", "five-hour block".
+
+- id: N-T5-CYCLE-SEARCH-CUBIC-SIXFOLDS
+  kind: negative
+  area: movasati_conjecture
+  title: "Search for algebraic cycles of the lambda = 2, -2 two-plane classes and the triangle classes on cubic sixfolds: none found (closed)"
+  statement: |-
+    Target (A): a threefold whose class is h^3-combination plus Pa + 2Pb or Pa - 2Pb on the general member of the
+    two-plane Hodge loci; target (B): the triangle classes x Pa + y Pb + z Pc. Lattice discriminants of
+    <h^3, x Pa + y Pb + z Pc> are -16 sum x^2 + 4 sum xy [EXACT]: lambda = 2: -72; lambda = -2: -88; triangle
+    (1,1,-1): -52, (1,1,2): -76, (1,2,2): -112. Constructions tested and excluded: the genus-7 Fano-Enriques threefold
+    (P^1 x S_4)/iota of degree 12 (tangent codimension 6, s = 40, discriminant -24) [MOD p]; the sigma_3 family of a
+    4x4 linear matrix (degree-20 threefold {rank <= 2}: codimension 7, lambda = 1 type) [MOD p]; divisors of P^1 x P^3
+    and 2x5 maximal-minor threefolds with one quadric column (discriminants -24, -34, -28, -54, -16, -22); 3x6 maximal
+    minors (det + det again, by the normal form e123 + e456); 2x5 matrices with rows of degrees (1,2) (force a 3-plane
+    into X); projected rational normal scrolls (discriminant -d^2 + 3d - 24, never -72 or -88); projected index-1 Fano
+    threefolds (-28, -42, -58, -82, -108). Triangle: the projected degree-7 scroll has the numbers (7, -1) of
+    2h^3 + Pa + Pb - Pc but chi(N) = -12, so at best a sublocus [RULED OUT as the general cycle; its class STUCK];
+    the degree-11 scroll matching (1,2,2) lies on no cubic.
+  status: RULED_OUT
+  conditions: |-
+    Mod p (Macaulay2 1.22) except the lattice discriminants (exact) and the hand arguments. The test chi(N) >= -8 is a
+    heuristic [CONJECTURE], not a theorem.
+  evidence: |-
+    Team T5, /home/claude/hodge/discovery/t5_cycles/ (selfint.m2, chern3.py, annlib.m2, sigma3*.m2, fe12*.m2,
+    divP1P3.py, scroll.py, enum*.py). Controls: selfint gives det+det 15, V_6 0, plane -5; annlib gives 1,7,12,7,1
+    and 1,8,18,8,1.
+  independent_check: |-
+    none (no candidate was found, so no claim was checked)
+  not_established: |-
+    That no cycle exists. About 100 numerical scroll matches over surfaces are unverified (no bundle constructed);
+    first-order deformations of degenerate cycles at the triangle cubic did not finish. Search stopped by the user's
+    direction ("solved territory: clean record, not more budget").
+  known_before: |-
+    n/a
+  reproduce: |-
+    not reproducible from this repository: session scripts (selfint.m2 is a prototype, not packaged).
+  do_not_repeat: |-
+    Fano-Enriques genus-7 model as the lambda = 2 cycle; cone-pairing numerics (s = d^2 - 2S^2) for singular T (holds
+    only for cones); sigma_3 of a 4x4 matrix; divisors of P^1 x P^3 and 2x5 mixed-degree minors; 3x6 minors;
+    numerical scroll scans without constructing the bundle; Macaulay2 Hom(I_Z, S/I_Z)_0 for reducible cycles at a
+    triangle cubic (did not finish in 15 min); `ker` of a degree-tripling map from a standard-graded ring in M2 1.22
+    (compute degree by degree).
+  next_step: |-
+    None planned (closed by the user's direction). Prepared but not run: rns7.m2, c36cone.m2 (criteria in the ledger).
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[T5] ... CLOSE" (04:56Z 23 Nov) and the erratum at 04:46Z.

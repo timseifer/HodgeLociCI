@@ -43,6 +43,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [C-AVERAGING-ARGUMENT](08_corrections_and_lessons.md#c-averaging-argument) | correction | `EXACT` | 08 | T3's symmetry-averaging reduction at X1 was wrong; the result was re-established by a direct exact computation |
 | [C-EIGHTFOLD-CHAIN-STEP4](08_corrections_and_lessons.md#c-eightfold-chain-step4) | correction | `PAPER_ARGUMENT_AI` | 08 | T3's chain for the eightfold had a gap at step 4; closed modulo primes with the explicit family l*Q + det A + det B |
 | [C-RANK-28-MISREADING](08_corrections_and_lessons.md#c-rank-28-misreading) | correction | `MOD_P` | 08 | '8 quadrics annihilate the class' for lambda = 2 was a misreading: they are the partial derivatives; 28 is the maximal rank |
+| [N-T5-CYCLE-SEARCH-CUBIC-SIXFOLDS](06_ruled_out_and_dead_ends.md#n-t5-cycle-search-cubic-sixfolds) | negative | `RULED_OUT` | 06 | Search for algebraic cycles of the lambda = 2, -2 two-plane classes and the triangle classes on cubic sixfolds: none found (closed) |
 
 ---
 
