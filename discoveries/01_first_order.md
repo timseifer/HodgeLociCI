@@ -26,7 +26,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 
 | id | kind | status | page | title |
 |---|---|---|---|---|
-| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (in progress: pairwise lines are not the whole story at first order) |
+| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (first order: a conic beyond the pairwise lines; it dies at second order) |
 | [O-KLOOSTERMAN-THEOREM-14-READING](07_open_problems.md#o-kloosterman-theorem-14-reading) | open | `OPEN` | 07 | Unresolved reading: Kloosterman's Theorem 1.4 (introduction) against smoothness at lambda = -1 for cubics with c = 2 |
 | [O-HODGE-NUMBER-3432](07_open_problems.md#o-hodge-number-3432) | open | `OPEN` | 07 | Recorded disagreement with a published table: middle Hodge number of the cubic 12-fold, 3432 or 3433 |
 | [C-WORDING-8-7-AND-20-19](08_corrections_and_lessons.md#c-wording-8-7-and-20-19) | correction | `EXACT` | 08 | '8 -> 7' and '20 -> 19' are K and H at the Fermat point for every nonzero coefficient, not codimensions of a Hodge locus |
@@ -602,7 +602,16 @@ So, at first order, the special set for three cycles is NOT always a union of pa
 Instance: discovery file t4_three_cycles/INSTANCE_F.m2 (not in this repository; to be added with the next package version).
 Exact values over QQ: 38 at (1 : 2 : 5/3); 32 at (1 : 1 : 3) (delta = 2P3 - P4); 19 at (1:0:0) and (1:1:1) (delta = -P4).
 Conic point (5623 : -5623 : 3601565): 37 modulo 32003 and 31991; over QQ only 37 <= codim <= 38 is proved.
-Integral class on the conic: 5623[Pi_1] - 5623[Pi_2] + 3601565[Pi_3].
+Integral class on the conic: 5623[Pi_1] - 5623[Pi_2] + 3601565[Pi_3]. At that point codim 37 is EXACT over QQ (team T4:
+an explicit integral quartic G tangent to NL(delta) and not in K, plus an injective compression of rank 37).
+Explanation at first order (MOD p, three quartics; one paper step, AI): the four planes meet in a point; on a 2-dimensional
+block each plane's residue form has rank 1, B_i = c_i l_i^2 with four points l_i on a P^1, and the conic is
+a0 a + mu a0 b - (1 + mu) a b = 0 with mu = 1/(t - 1), t the cross-ratio of the four points. mu depends only on the
+restrictions of the cubics to the four triple lines through the common point. No closed formula in F was found.
+SECOND ORDER: the extra direction is OBSTRUCTED. At five conic points on two quartics (MOD p, T4), and confirmed by blind
+check C23 at the point above (MOD p, primes 32003 and 31991, own second-order method validated on single planes, on
+1+1+1 and 2P3-P4, on kappa in K and on four-plane directions): no kappa in K solves order 2 for the direction G. So near
+such a point NL(delta) has no component larger than the three-plane locus; the conic adds only non-reduced structure.
 
 **Conditions.**
 
@@ -623,8 +632,8 @@ conic). Not covered: an exact value at a conic point; the drop locus over QQ; th
 
 **Not established.**
 
-Anything about the Hodge locus itself (only its tangent space); second order; a geometric explanation of the conic (no
-residual or linked cycle is known); that every conic point is a jump over QQ; any statement for general X.
+The second-order obstruction over QQ (only mod two primes); the obstruction at every conic point; a cycle-theoretic
+explanation of the conic (none is known); that every conic point is a jump over QQ; any statement for general X.
 
 **Known before.**
 

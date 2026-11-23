@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-23T01:40Z",
-  "headline": "An independent check confirmed the first three-cycle finding: on one quartic sixfold, the special coefficients for three planes include a conic that no pair of planes explains (first order only). Agents are now looking at second order and for a geometric explanation.",
+  "updated": "2026-11-23T02:45Z",
+  "headline": "Three-cycle target: the conic of special coefficients is real at first order but dies at second order, so it gives no larger Hodge locus (confirmed by an independent check, modulo two primes).",
   "active": [
     {
       "title": "Three or more cycles: special coefficients",
-      "state": "first-order finding confirmed by a blind check; second order and explanation next",
-      "summary": "For three 3-planes in one P^4 on an explicit quartic sixfold, the coefficients (a0 : a : b) where the tangent space of the Hodge locus jumps are the six lines predicted by pairs PLUS a conic that moves with the hypersurface. Confirmed by an independent check with separate code: exact over QQ at four named points, modulo two primes for the conic itself. Tangent spaces only; nothing yet about the Hodge locus itself. On cubic sixfolds and quartic fourfolds nothing was found off the pairwise lines.",
+      "state": "first-order conic confirmed; second-order obstruction confirmed (mod p); next steps open",
+      "summary": "On an explicit quartic sixfold with three 3-planes in one P^4, the tangent space of the Hodge locus jumps on the six pairwise lines and on a conic determined by a cross-ratio of four points. Exact over QQ at a conic point. At second order the extra direction is obstructed (blind check, two primes): near such points the Hodge locus is no bigger than the locus where the planes persist. Next: non-linear configurations, sextic fourfolds, an exact second-order certificate.",
       "status": "MOD_P",
       "registry": [
         "D-THREE-PLANES-CONIC",
@@ -14,6 +14,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-23",
+      "what": "Second order on the conic: the extra direction is obstructed (blind check, two primes). First-order value exact over QQ; conic explained by a cross-ratio."
+    },
     {
       "when": "2026-11-23",
       "what": "Blind check confirmed the conic of special coefficients (first order; exact at named points, mod p for the conic)."
