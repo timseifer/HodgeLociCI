@@ -1,19 +1,38 @@
 {
-  "updated": "2026-11-23T00:30Z",
-  "headline": "Agents are working on Hodge loci of combinations of three cycles. A candidate finding (a conic of special coefficients on one quartic sixfold) is waiting for an independent check.",
+  "updated": "2026-11-23T01:40Z",
+  "headline": "An independent check confirmed the first three-cycle finding: on one quartic sixfold, the special coefficients for three planes include a conic that no pair of planes explains (first order only). Agents are now looking at second order and for a geometric explanation.",
   "active": [
     {
       "title": "Three or more cycles: special coefficients",
-      "state": "candidate awaiting blind check",
-      "summary": "For three 3-planes in one P^4 on a quartic sixfold, the coefficients (a0 : a : b) where the first-order Hodge locus jumps appear to be the six lines predicted by pairs PLUS a conic that moves with the hypersurface. Exact over QQ at one instance (by the team that found it); an independent check with separate code is running. On cubic sixfolds and quartic fourfolds, nothing was found off the pairwise lines.",
-      "status": "PENDING_CHECK",
-      "registry": ["O-THREE-CYCLES"]
+      "state": "first-order finding confirmed by a blind check; second order and explanation next",
+      "summary": "For three 3-planes in one P^4 on an explicit quartic sixfold, the coefficients (a0 : a : b) where the tangent space of the Hodge locus jumps are the six lines predicted by pairs PLUS a conic that moves with the hypersurface. Confirmed by an independent check with separate code: exact over QQ at four named points, modulo two primes for the conic itself. Tangent spaces only; nothing yet about the Hodge locus itself. On cubic sixfolds and quartic fourfolds nothing was found off the pairwise lines.",
+      "status": "MOD_P",
+      "registry": [
+        "D-THREE-PLANES-CONIC",
+        "O-THREE-CYCLES"
+      ]
     }
   ],
   "recent": [
-    {"when": "2026-11-23", "what": "Three-cycle target: candidate conic of special coefficients found (exact at one instance); blind check started."},
-    {"when": "2026-11-22", "what": "Survey of related work: one-cycle results of Kloosterman (arXiv:2104.14845) and Dan noted; Movasati's 2019 Fermat-surface tables cross-checked (1758 records agree at first order; 42 records differ at second order outside the range, unresolved)."},
-    {"when": "2026-11-22", "what": "Software package HodgeLociCI 0.1.0 and this discoveries registry published; one blind install check, all 28 findings fixed."},
-    {"when": "2026-11-22", "what": "Discovery round closed: explicit families for coefficient -1 (sums of two determinants) and 1 (Pfaffians) on cubic sixfolds; no unexplained piece found for fake linear cycles on quartic sixfolds."}
+    {
+      "when": "2026-11-23",
+      "what": "Blind check confirmed the conic of special coefficients (first order; exact at named points, mod p for the conic)."
+    },
+    {
+      "when": "2026-11-23",
+      "what": "Three-cycle target: candidate conic of special coefficients found (exact at one instance); blind check started."
+    },
+    {
+      "when": "2026-11-22",
+      "what": "Survey of related work: one-cycle results of Kloosterman (arXiv:2104.14845) and Dan noted; Movasati's 2019 Fermat-surface tables cross-checked (1758 records agree at first order; 42 records differ at second order outside the range, unresolved)."
+    },
+    {
+      "when": "2026-11-22",
+      "what": "Software package HodgeLociCI 0.1.0 and this discoveries registry published; one blind install check, all 28 findings fixed."
+    },
+    {
+      "when": "2026-11-22",
+      "what": "Discovery round closed: explicit families for coefficient -1 (sums of two determinants) and 1 (Pfaffians) on cubic sixfolds; no unexplained piece found for fake linear cycles on quartic sixfolds."
+    }
   ]
 }

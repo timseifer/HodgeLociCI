@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (8)
+## Entries on this page (9)
 
 | id | status | title |
 |---|---|---|
@@ -20,12 +20,13 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-LINEAR-LIST-FIRST-ORDER](#d-linear-list-first-order) | `PROVED_AI_UNREVIEWED` | Two linear subspaces: the complete list of cases with excess away from lambda_0 at a general point |
 | [D-MOVASATI-TABLES-REPRODUCED](#d-movasati-tables-reproduced) | `EXACT` | Movasati's (H, K) tables at the Fermat cubic reproduced exactly for dimensions 4, 6, 8 |
 | [D-PUBLISHED-STATEMENTS-AT-INSTANCES](#d-published-statements-at-instances) | `MOD_P` | Published first-order statements of Kloosterman, Villaflor Loyola and Maclean reproduced at instances |
+| [D-THREE-PLANES-CONIC](#d-three-planes-conic) | `MOD_P` | Three 3-planes in one P^4 on a quartic sixfold: the first-order jump set includes a conic that no pair explains |
 
 ## Related entries on other pages
 
 | id | kind | status | page | title |
 |---|---|---|---|---|
-| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (in progress: a candidate conic awaits an independent check) |
+| [O-THREE-CYCLES](07_open_problems.md#o-three-cycles) | open | `OPEN` | 07 | Special coefficients for three or more cycles (in progress: pairwise lines are not the whole story at first order) |
 | [O-KLOOSTERMAN-THEOREM-14-READING](07_open_problems.md#o-kloosterman-theorem-14-reading) | open | `OPEN` | 07 | Unresolved reading: Kloosterman's Theorem 1.4 (introduction) against smoothness at lambda = -1 for cubics with c = 2 |
 | [O-HODGE-NUMBER-3432](07_open_problems.md#o-hodge-number-3432) | open | `OPEN` | 07 | Recorded disagreement with a published table: middle Hodge number of the cubic 12-fold, 3432 or 3433 |
 | [C-WORDING-8-7-AND-20-19](08_corrections_and_lessons.md#c-wording-8-7-and-20-19) | correction | `EXACT` | 08 | '8 -> 7' and '20 -> 19' are K and H at the Fermat point for every nonzero coefficient, not codimensions of a Hodge locus |
@@ -577,3 +578,64 @@ print((excessFromData Y)#"codimVZ", (tangentExcess(Y, 2))#"excess", (secondOrder
 Expected: (4, 1, ALL DIE, ALL SURVIVE).
 
 **Session references (files not public).** tests/SOURCES.md parts B, C, D; tests/README.md.
+
+---
+
+## D-THREE-PLANES-CONIC
+
+**Three 3-planes in one P^4 on a quartic sixfold: the first-order jump set includes a conic that no pair explains**
+
+kind: `result` | area: `first_order` | status: **`MOD_P`**
+
+**Statement.**
+
+X = {F = 0} in P^7 a smooth quartic sixfold with F = x0 x1 x2 x3 + x5 A5 + x6 A6 + x7 A7 (explicit integer cubics A_j),
+containing the 3-planes Pi_i = {x_(i-1) = x5 = x6 = x7 = 0}, i = 1, 2, 3 (and Pi_4 = {x3 = x5 = x6 = x7 = 0}; the period
+polynomials satisfy P1 + P2 + P3 + P4 = 0). For delta = a0[Pi_1] + a[Pi_2] + b[Pi_3], the codimension of the Zariski tangent
+space of NL(delta) in S_4 is 38 for general (a0 : a : b), 32 on the six lines a0 a b (a0 - a)(a0 - b)(a - b) = 0 away from
+special points, 19 at (1:0:0), (0:1:0), (0:0:1), (1:1:1), and 37 on the conic 3601565 a0 a - 1797971 a0 b - 1803594 a b = 0
+(through those four points). The conic depends on X. At points of the conic the excess explained by pairs is 0.
+So, at first order, the special set for three cycles is NOT always a union of pairwise lines.
+
+**Data.**
+
+Instance: discovery file t4_three_cycles/INSTANCE_F.m2 (not in this repository; to be added with the next package version).
+Exact values over QQ: 38 at (1 : 2 : 5/3); 32 at (1 : 1 : 3) (delta = 2P3 - P4); 19 at (1:0:0) and (1:1:1) (delta = -P4).
+Conic point (5623 : -5623 : 3601565): 37 modulo 32003 and 31991; over QQ only 37 <= codim <= 38 is proved.
+Integral class on the conic: 5623[Pi_1] - 5623[Pi_2] + 3601565[Pi_3].
+
+**Conditions.**
+
+Standard first-order description of the tangent space of a Hodge locus (Carlson-Griffiths, Macaulay duality) and the period
+polynomial of a linear space. The conic statement is modulo two primes; one instance of X.
+
+**Evidence.**
+
+Team T4 (own Macaulay2 code, cross-validated against the package's periodPolynomial): exact over QQ at the named points,
+the factored determinant on two lines gives (six walls)^6 times the conic; two more quartics give other conics.
+
+**Independent check.**
+
+C22 (blind, own Macaulay2 and Singular code; read only F from T4's folder): every item confirmed; exact over QQ at four of
+the five named points; at the conic point and for the conic modulo 32003 and 31991 only (8 points on the conic give 37,
+14 off it give 38, 12 on the lines give 32; on three general lines the determinant gcd is (six-line product)^6 times the
+conic). Not covered: an exact value at a conic point; the drop locus over QQ; the full three-variable minor ideal.
+
+**Not established.**
+
+Anything about the Hodge locus itself (only its tangent space); second order; a geometric explanation of the conic (no
+residual or linked cycle is known); that every conic point is a jump over QQ; any statement for general X.
+
+**Known before.**
+
+Kloosterman arXiv:2312.12363, Definition 3.12, defines the excess tangent dimension at (a_1 : ... : a_r) for several classes;
+no result for three classes was found there (as read by machine). The configuration is the four-plane locus Sigma_4 of the
+fake-linear-cycle entries (Pi_4 is the fourth plane); team T1 had seen the conic modulo p earlier, unchecked. Otherwise
+not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further.
+
+**Reproduce.**
+
+not reproducible from this repository: the instance F and the scripts are in the project's working files; the package has no
+function for three or more cycles yet (see O-PACKAGE-FEATURES-NEEDED).
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[T4] 00:09Z", "[CHECK C22] 01:33Z"; discovery/t4_three_cycles/INSTANCE_F.m2, three3.m2; checks/c22/.
