@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (23)
+## Entries on this page (24)
 
 | id | status | title |
 |---|---|---|
@@ -35,6 +35,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-GROEBNER-RUNS-NOT-FINISHED](#n-groebner-runs-not-finished) | `STUCK` | Computations that did not finish (with engine and time limit), so nobody reruns them unchanged |
 | [N-T5-CYCLE-SEARCH-CUBIC-SIXFOLDS](#n-t5-cycle-search-cubic-sixfolds) | `RULED_OUT` | Search for algebraic cycles of the lambda = 2, -2 two-plane classes and the triangle classes on cubic sixfolds: none found (closed) |
 | [N-DELSARTE-UNSOLVED-FAMILIES](#n-delsarte-unsolved-families) | `RULED_OUT` | Smooth Delsarte sextic fourfolds, quartic sixfolds and cubic tenfolds: every Hodge character closed by published criteria |
+| [N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS](#n-thom-sebastiani-sextic-fourfolds) | `RULED_OUT` | Sextic fourfolds f(x) + g(y): no explicit member with a Hodge class outside the known algebraic cases |
 
 ---
 
@@ -1014,3 +1015,50 @@ assume H^n_prim of a Delsarte member is the invariant Fermat characters (chain b
 part).
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[T6b]" entries 05:05Z-06:05Z and "[COORD] 06:20Z".
+
+---
+
+## N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS
+
+**Sextic fourfolds f(x) + g(y): no explicit member with a Hodge class outside the known algebraic cases**
+
+kind: `negative` | area: `explicit_cycles` | status: **`RULED_OUT`**
+
+**Statement.**
+
+H^4_prim(X) = sum_j V_j(f) x V_{6-j}(g) + H^1(C_f) x H^1(C_g)(-1) (2205 + 400 = 2605), with V_j the zeta^j-parts
+of H^2_prim of S_f = {f + z^6 = 0}; V3 is H^2_prim of the K3 double plane u^2 = -f. Algebraic classes correspond in
+both directions through the degree-6 map S_f x S_g --> X (standard argument, not machine-read). Curve part always
+algebraic. Searched for explicit smooth f, g with a Hodge morphism of an open kind (similarity that is not an
+isometry, general RM, CM pairs without isometries): Elsenhans-Jahnel RM examples are six-line (singular branch);
+van Geemen-Schuett Q(sqrt5) family has RM from graph cycles (algebraic); Klein sextic (PSL(2,7)): only pure piece
+is CM by Q(sqrt-3, sqrt-7) with endomorphisms from the group algebra; F21 pencil, Heisenberg-invariant family and
+61 diagonal-cyclic monomial families (17 generically smooth): no symmetry-forced piece with a (2,0) part beyond
+Delsarte/CM-elliptic cases.
+
+**Conditions.**
+
+Exact arithmetic (Q(zeta_7), Singular) for smoothness and decompositions. The purity test is only sufficient: CM
+points inside non-pure families were not examined (needs periods or point counts). Shioda-Katsura full text not
+opened; Morrison's rho = 17, 18 criterion not read.
+
+**Evidence.** Team T6 option B2, session folder discovery/t6_unsolved/b2/ (B2_NOTES.md and scripts; not in this repository).
+
+**Independent check.** none
+
+**Not established.**
+
+That no explicit f, g exists: open kinds of Hodge morphisms (Varesco arXiv:2304.02519, intro) need rigidity to
+certify with explicit equations, and the explicit rigid examples found are all covered by known theorems.
+
+**Known before.** The open cases themselves are stated in Varesco arXiv:2304.02519 and van Geemen-Schuett arXiv:2310.05196 Rem. 4.9.
+
+**Reproduce.** not reproducible from this repository: session scripts.
+
+**Do not repeat.**
+
+Elsenhans-Jahnel RM double planes (six-line, excluded); vGS Q(sqrt5) D5-cover family; Klein sextic Phi6(x) +
+Phi6(y); F21 pencil; Heisenberg-invariant family; diagonal-cyclic monomial families (61 sets). Do not certify
+Hodge morphisms between pieces of explicit non-rigid families by exact arithmetic alone.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[T6b2]" entries 06:14Z-06:18Z and 09:53Z-10:14Z.
