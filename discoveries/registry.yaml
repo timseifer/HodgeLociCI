@@ -5335,9 +5335,19 @@
     survives to order 8, lambda = 2 obstructed at order 6, MOD p, two primes, fe.py) and the blind check disagree; the
     devil's advocate (DA-T6) found no known explanation and no fatal error, and noted that step (e) tested only a
     subcone of directions.
+    RECONCILIATION RC-T6: conventions identical (sigma maps one plane pair to the other, lambda preserved); each code
+    confirms the other's arcs; BC's order-9 arcs lie in a degenerate y0 sub-locus (8-variable Thom-Sebastiani slice,
+    M = y0 x scalar matrix) where both lambda behave alike, and BC's generic order-6 search was inconclusive. Independent
+    order-6 test (own finite differences): lambda = 2 obstructed for every integral arc with a generic rank-1 tangent
+    (2 directions), lambda = -1 removable; the step (e) lambda = -1 order-8 arc is confirmed with BC's functional. So the
+    dichotomy stands, MOD p (32029; 31981 from step (e)), finite order, Fermat point only.
   not_established: |-
     Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
-    disagreement on the lambda-dichotomy.
+    disagreement (resolved: see independent_check). Still missing: exact confirmation; orders >= 9 at lambda = -1;
+    lambda = 2 with a fully generic T Cone_T tangent under the full quadratic-freedom test; whether the y0 sub-locus
+    is explained (e.g. by the Thom-Sebastiani reduction to a cubic sixfold); untested explanations (Kloosterman
+    Thm 5.3 cones beyond cone loci, Segre P^2 x P^3 and other non-tower 5-folds, Hassett C_18 constructions); a
+    specific smooth member off the cone locus.
   known_before: |-
     Movasati arXiv:1902.00831 (component conjectured, cycles unknown); Kloosterman arXiv:2312.12363 Thm 5.3 (extra
     component at split X built from cones), both machine-read.
