@@ -33,6 +33,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [O-COMMON-ZEROS-AND-SECOND-ORDER-GAPS](07_open_problems.md#o-common-zeros-and-second-order-gaps) | open | `OPEN` | 07 | Second order: quadrics with common zeros, condition (S) failing, and cubic eightfolds in the package tests |
 | [C-NIGHT-PROP-94PRIME-GAP](08_corrections_and_lessons.md#c-night-prop-94prime-gap) | correction | `PROVED_AI_UNREVIEWED` | 08 | Night run: the first proof of 'the formula for every r' had a gap; repaired with Cramer's rule and the pointwise formula |
 | [C-NIGHT-VACUOUS-CHECKS](08_corrections_and_lessons.md#c-night-vacuous-checks) | correction | `PROVED_AI_UNREVIEWED` | 08 | Night run: three numerical checks of the pointwise formula tested less than claimed |
+| [N-SPECIAL-REGIONS-TARGET-FAMILIES](06_ruled_out_and_dead_ends.md#n-special-regions-target-families) | negative | `RULED_OUT` | 06 | Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata |
 
 ---
 

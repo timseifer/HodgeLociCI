@@ -19,7 +19,7 @@ theorem, and never as evidence for or against the Hodge conjecture. For two line
 
 ## Before you start new work: the discoveries registry
 
-`discoveries/` records what this project has already found, ruled out or left open: 128 entries (results, negative
+`discoveries/` records what this project has already found, ruled out or left open: 129 entries (results, negative
 results, dead ends, corrections, open problems), each with its status, conditions, evidence, what is NOT
 established, what was known before, and how to re-verify it inside this repository.
 

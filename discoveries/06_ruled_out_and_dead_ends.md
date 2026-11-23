@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (24)
+## Entries on this page (25)
 
 | id | status | title |
 |---|---|---|
@@ -36,6 +36,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-T5-CYCLE-SEARCH-CUBIC-SIXFOLDS](#n-t5-cycle-search-cubic-sixfolds) | `RULED_OUT` | Search for algebraic cycles of the lambda = 2, -2 two-plane classes and the triangle classes on cubic sixfolds: none found (closed) |
 | [N-DELSARTE-UNSOLVED-FAMILIES](#n-delsarte-unsolved-families) | `RULED_OUT` | Smooth Delsarte sextic fourfolds, quartic sixfolds and cubic tenfolds: every Hodge character closed by published criteria |
 | [N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS](#n-thom-sebastiani-sextic-fourfolds) | `RULED_OUT` | Sextic fourfolds f(x) + g(y): no explicit member with a Hodge class outside the known algebraic cases |
+| [N-SPECIAL-REGIONS-TARGET-FAMILIES](#n-special-regions-target-families) | `RULED_OUT` | Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata |
 
 ---
 
@@ -1062,3 +1063,61 @@ Phi6(y); F21 pencil; Heisenberg-invariant family; diagonal-cyclic monomial famil
 Hodge morphisms between pieces of explicit non-rigid families by exact arithmetic alone.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[T6b2]" entries 06:14Z-06:18Z and 09:53Z-10:14Z.
+
+---
+
+## N-SPECIAL-REGIONS-TARGET-FAMILIES
+
+**Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata**
+
+kind: `negative` | area: `second_order` | status: **`RULED_OUT`**
+
+**Statement.**
+
+All 980 degree types with tau >= 0 in (d, k) = (4, 3), (3, 5), (6, 2) are outside the range; in all three
+sigma' = kd - 2k - 2 = d, so det M : A_tau -> A_d is square and its determinant cuts a divisor J of V_Z where the
+excess E' jumps to 1. MOD p: at a random point of V_Z, E' = 0 in 980/980 types; at smooth points of J (169 types),
+E' = 1, (S) false, verdict ALL DIE. Second-order survival criterion (ARG): N survives iff N^2 adj(M)_ji in
+I = (f,h,p,s) for all entries of degree >= 0 and N^2 det M in I^2. Leads (deeper strata, NOT dead ends):
+Z_431 on (4;1;1;1,1,1) (a 5-plane through span(Y1,Y2) tangent to X along a line: one direction survives, MOD p);
+Z_0 = {M = 0 mod (f,h,p)} for c >= 2 (all K-quadrics vanish: NOT DETERMINED), smooth for Kloosterman's quartic pair
+(4;1,1;1,1;1,1), Movasati's tenfold pair (3;1,1,1;1,1,1;1,1,1) and (6;1,1;2,2;1). On the tenfold Z_0, X n P^8 is a
+cone over a cubic fourfold with two disjoint planes, and cone loci Cone_d (Hassett C_d, d = 8r^2 - 2rs + 8s^2)
+give an explained component through Z_0 (ARG); whether the component W there is strictly larger than Cone_d is
+open (38 <= codim W <= 65 from tangent bounds, which are only lower bounds at cone points).
+
+**Conditions.**
+
+One random instance per type modulo 32003; the arguments marked ARG were written by one AI agent and not checked.
+Not covered: 63 quartic and 22 tenfold types with no F_p-rational root on the random line; about 480 sextic types
+for J.
+
+**Evidence.**
+
+Team T6 step (c), session folder discovery/t6_unsolved/c/ (NOTES.md; jump.m2, zq.m2, ansatz.m2, pencil.m2; not
+in this repository).
+
+**Independent check.** none
+
+**Not established.** The leads on Z_431 and Z_0 (third order or a point of W off the cone locus needed); the uncovered types above.
+
+**Known before.** Movasati arXiv:1902.00831 conjectures a component for the tenfold pair (machine-read).
+
+**Reproduce.**
+
+not reproducible from this repository: session scripts (candidates for packaging: jumpPoints, the survival
+criterion, pencil ranks at cone points).
+
+**Do not repeat.**
+
+General points of V_Z in these families (no excess); general smooth points of J (all die); parametrising Z by a
+general N (returns EMPTY, not evidence); the twisted-cubic cone limit Y1 + 2Y2 (forces X singular); tau = d types
+(J among singular hypersurfaces); treating hodgeLocusTangentCodim or pencil ranks at cone points as the codimension
+of W (lower bounds only; sixfold control 7 vs 8).
+
+**Next step.**
+
+Decide the tenfold Z_0 lead: Fermat arcs at Movasati's cubic tenfold point (lambda = -1, 2) with the Residue
+strategy, or a point of W off the cone locus.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[T6c]" 10:16Z-11:57Z.
