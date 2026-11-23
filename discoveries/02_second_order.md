@@ -29,6 +29,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | id | kind | status | page | title |
 |---|---|---|---|---|
 | [O-THIRD-ORDER-PERIOD-FORMULA](07_open_problems.md#o-third-order-period-formula) | open | `OPEN` | 07 | A third-order pointwise period formula (the next case of the residue formula with squared pairs) |
+| [C-SECOND-ORDER-CHECKER-OUTSIDE-RANGE](08_corrections_and_lessons.md#c-second-order-checker-outside-range) | correction | `MOD_P` | 08 | secondOrderObstruction said ALL SURVIVE outside the range where the locus is not smooth at order 2; now NOT DETERMINED |
 | [O-COMMON-ZEROS-AND-SECOND-ORDER-GAPS](07_open_problems.md#o-common-zeros-and-second-order-gaps) | open | `OPEN` | 07 | Second order: quadrics with common zeros, condition (S) failing, and cubic eightfolds in the package tests |
 | [C-NIGHT-PROP-94PRIME-GAP](08_corrections_and_lessons.md#c-night-prop-94prime-gap) | correction | `PROVED_AI_UNREVIEWED` | 08 | Night run: the first proof of 'the formula for every r' had a gap; repaired with Cramer's rule and the pointwise formula |
 | [C-NIGHT-VACUOUS-CHECKS](08_corrections_and_lessons.md#c-night-vacuous-checks) | correction | `PROVED_AI_UNREVIEWED` | 08 | Night run: three numerical checks of the pointwise formula tested less than claimed |

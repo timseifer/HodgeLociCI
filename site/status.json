@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-23T02:45Z",
-  "headline": "Three-cycle target: the conic of special coefficients is real at first order but dies at second order, so it gives no larger Hodge locus (confirmed by an independent check, modulo two primes).",
+  "updated": "2026-11-23T03:45Z",
+  "headline": "A bug-class gap in the second-order checker was found by comparing with Movasati's published tables and has been corrected; next, a search for algebraic cycles on cubic sixfolds where Hodge classes have none known.",
   "active": [
     {
       "title": "Three or more cycles: special coefficients",
@@ -14,6 +14,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-23",
+      "what": "Second-order checker corrected: outside the range with condition (S) false it now says NOT DETERMINED instead of ALL SURVIVE (Movasati's 2019 tables were right; 4 cases recomputed independently)."
+    },
     {
       "when": "2026-11-23",
       "what": "Second order on the conic: the extra direction is obstructed (blind check, two primes). First-order value exact over QQ; conic explained by a cross-ratio."

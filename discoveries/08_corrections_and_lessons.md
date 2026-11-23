@@ -8,10 +8,11 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (23)
+## Entries on this page (24)
 
 | id | status | title |
 |---|---|---|
+| [C-SECOND-ORDER-CHECKER-OUTSIDE-RANGE](#c-second-order-checker-outside-range) | `MOD_P` | secondOrderObstruction said ALL SURVIVE outside the range where the locus is not smooth at order 2; now NOT DETERMINED |
 | [C-AVERAGING-ARGUMENT](#c-averaging-argument) | `EXACT` | T3's symmetry-averaging reduction at X1 was wrong; the result was re-established by a direct exact computation |
 | [C-EIGHTFOLD-CHAIN-STEP4](#c-eightfold-chain-step4) | `PAPER_ARGUMENT_AI` | T3's chain for the eightfold had a gap at step 4; closed modulo primes with the explicit family l*Q + det A + det B |
 | [C-PLANE-LEMMA-GAP](#c-plane-lemma-gap) | `PAPER_ARGUMENT_AI` | T2's plane lemma: proof gap and incomplete case list; statement confirmed, wording narrowed to 'the general cubic' |
@@ -35,6 +36,56 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-STRATA-INSTEAD-OF-DIRECTIONS](#m-strata-instead-of-directions) | `PAPER_ARGUMENT_AI` | To exclude extra components, study general points of the degeneracy strata, not more directions at the special point |
 | [M-BLIND-CHECKS-WITH-CONTROLS](#m-blind-checks-with-controls) | `COMPUTED_ONLY` | One blind check per claim, with negative controls and 'what a wrong claim would have looked like' |
 | [M-LEAN-CERTIFICATES](#m-lean-certificates) | `EXACT` | Lean certificates: kernel-checked finite computations and deductions from stated hypotheses |
+
+---
+
+## C-SECOND-ORDER-CHECKER-OUTSIDE-RANGE
+
+**secondOrderObstruction said ALL SURVIVE outside the range where the locus is not smooth at order 2; now NOT DETERMINED**
+
+kind: `correction` | area: `second_order` | status: **`MOD_P`**
+
+**Statement.**
+
+Outside the range and with condition (S) false, the checker returned ALL SURVIVE whenever the quadrics built from K vanish
+on the excess directions. The order-2 condition also involves the forms of K_lambda outside K and pairs (u, N) with u
+tangent to V_Z; these were not computed. At four Fermat surfaces of degree 7 and 8 they are nonzero, so the Hodge locus is
+not smooth at order 2 there, as Movasati's tables for arXiv:1908.04117 record. Version after this correction: the verdict
+in that case is NOT DETERMINED (minimal fix); computing the missing conditions is left open.
+
+**Data.**
+
+Records (Fermat surface of degree d, curves given by their (degree, line) data in the survey's notation): R1 d=7
+(1,1),(3,1),(0,1); R3 d=7 (1,2),(1,2),(1,0); R2 d=7 (1,2),(1,3),(1,0); R4 d=8 (1,2),(1,3),(1,0). At lambda = 2, 3, -2:
+dim K_lambda/K = 1, 1, 1, 2, giving as many independent nonzero quadrics on T; for a random excess direction some lift is
+unobstructed, so the right summary is "not smooth at order 2", not "all die". Exactly 42 of 243 records of the 2Smooth
+files with d = 7, 8 had ALL SURVIVE with (S) false; all 21 ALL SURVIVE records with (S) true are recorded as smooth.
+
+**Conditions.**
+
+Independent order-2 computation (dual numbers / Griffiths-Dwork, the method of check C23 adapted to curves), MOD p, four
+records; Movasati's tables as stored in his repository (read, not run).
+
+**Evidence.**
+
+Agent R-42 (own code, validated on single curves, lambda_0 and directions tangent to V_Z; cross-checked with the package's
+own grothendieckResidue and secondOrderFunctional); survey agent's comparison of 304 records.
+
+**Independent check.** The tables of arXiv:1908.04117 are the independent side; no second AI check of R-42's computation.
+
+**Not established.**
+
+The full fix (computing K_lambda outside K); whether every one of the 42 records is non-smooth (4 recomputed); the
+observed equality dim K_lambda/K = dim A_d - rank(det M) (not proved). Nothing changes in the range or when (S) holds.
+
+**Known before.** Movasati arXiv:1908.04117 (code and stored tables, machine-read) records these loci as not smooth at order 2.
+
+**Reproduce.**
+
+The regression test PA-S10 in M2/HodgeLociCI/SecondOrderTests.m2 (run by check "HodgeLociCI") builds R1 and expects
+NOT DETERMINED at lambda = 2 and ALL SURVIVE at lambda_0 = 1.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[R-42]"; discovery/r_42/FIX_PROPOSAL.md; discovery/survey/SURVEY_REPORT.md.
 
 ---
 

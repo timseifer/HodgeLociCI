@@ -22,8 +22,8 @@
 
 newPackage(
     "HodgeLociCI",
-    Version => "0.1.0",
-    Date => "2026-11-22",
+    Version => "0.1.1",
+    Date => "2026-11-23",
     Authors => {{Name => "Timothy Seifert"}},
     Headline => "Hodge loci of combinations of complete-intersection cycles in hypersurfaces",
     Keywords => {"Algebraic Geometry"},

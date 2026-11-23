@@ -2,6 +2,14 @@
 
 All notable changes to this package are recorded here. Format: Keep a Changelog; versions follow semantic versioning.
 
+## [0.1.1] - 2026-11-23
+
+### Fixed
+- `secondOrderObstruction`: outside the range with condition (S) false, a vanishing of the quadrics from K was
+  reported as `ALL SURVIVE`; the order-2 condition there also involves forms not computed, and at Fermat surfaces of
+  degree 7 and 8 the locus is not smooth at order 2 (as Movasati's tables for arXiv:1908.04117 record). The verdict is
+  now `NOT DETERMINED`. New test PA-S10.
+
 ## [0.1.0] - 2026-11-22
 
 First version. Produced by AI agents under the direction of Timothy Seifert; not yet reviewed by a human.

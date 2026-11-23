@@ -209,3 +209,19 @@ for i from 0 to #types - 1 do (
     assert nonzero;
     );
 ///
+
+TEST ///
+-- PA-S10 (added after a comparison with Movasati's tables for arXiv:1908.04117): outside the range with condition (S)
+-- false, vanishing of the quadrics from K does NOT mean "no obstruction"; the verdict must be NOT DETERMINED.
+-- Instance R1 of the comparison: Fermat surface of degree 7, mod 31991, two curves with one shared line equation.
+-- An independent computation found the locus not smooth at order 2 there (lambda = 2), as the tables record.
+d = 7; p = 31991;
+S = fermatRing(d, 2, p); z = fermatRoot S; lin = (i,j,a) -> S_i - z^(1+2*a)*S_j;
+pr = (i,j,a,b) -> product(toList(a..b-1), t -> lin(i,j,t)); blk = (i,j) -> S_i^d + S_j^d;
+f = {pr(0,1,0,1)}; h = {pr(0,1,1,4)}; pp = {pr(2,3,0,1)};
+D = cyclePair(f, h, pp, matrix{{blk(0,1)//(f#0*h#0)}}, {blk(2,3)//(pp#0)});
+r = secondOrderObstruction(D, 2);
+assert(not r#"inRange" and not r#"conditionS");
+assert(r#"verdict" == "NOT DETERMINED");
+assert((secondOrderObstruction(D, 1))#"verdict" == "ALL SURVIVE");   -- lambda_0 = 1: smooth, Theorem 2(4)
+///

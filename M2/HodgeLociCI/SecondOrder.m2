@@ -255,7 +255,11 @@ secondOrderObstruction(CyclePair, Thing) := opts -> (D, lambda) -> (
     sm := hlQuadricSummary(kk, e, prs, vals);
     cz := sm#"commonZeroLocusDim"; rk := sm#"rank";
     inRange := th#"inRange"; cS := th#"conditionS";
-    (vd, st) := if rk == 0 then ("ALL SURVIVE",
+    (vd, st) := if rk == 0 and not (inRange or cS) then ("NOT DETERMINED",
+            "the quadrics from K vanish on the excess directions, but outside the range with condition (S) false the forms of K_lambda outside K "
+            | "give further order-2 conditions (also on pairs (u, N) with u tangent to V_Z) that this test does not compute; "
+            | "at Fermat surfaces of degree 7 and 8 such conditions were found to be nonzero (the locus not smooth at order 2). Do not read this as 'no obstruction'")
+        else if rk == 0 then ("ALL SURVIVE",
             if qd#"dimK" == 0 and inRange then "K = 0 and the range holds: NL(delta_lambda) is smooth of dimension dim V_Z + e_tau (" | hlProved | ", Theorem 9.1(1))"
             else if qd#"dimK" == 0 then "K = 0: there is no second-order condition coming from K; outside the range nothing more is decided here"
             else "the second-order term vanishes on all excess directions: no obstruction at second order; nothing is decided about higher order (this happens at special points, e.g. when all entries of M lie in (f,h,p,s))"

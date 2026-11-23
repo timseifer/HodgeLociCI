@@ -28,7 +28,7 @@ doc ///
       $K = [(f)(h)+(g)+(q)+(p)+(s)]_{kd-2k-2}$ that does not depend on $\lambda$ ("the law"). The function computes
       these quadrics at the given point and reports a verdict.
     Text
-      {\bf Keys of the result.} "verdict": one of "NO EXCESS", "ALL SURVIVE", "ALL DIE", "SOME DIE"; "statement": the
+      {\bf Keys of the result.} "verdict": one of "NO EXCESS", "ALL SURVIVE", "ALL DIE", "SOME DIE", "NOT DETERMINED"; "statement": the
       verdict in words, with the theorem used; "excess": the number of excess directions for this coefficient;
       "excessDirections": forms $N$ of degree $\tau$ representing a basis of $E'$; "quadrics": a basis of the span of the
       quadrics, as polynomials in variables $n_0, n_1, \dots$ (coordinates on $E'$ in that basis); "quadricMatrices";
@@ -43,9 +43,13 @@ doc ///
       computation is made, and the "label" says so: it names the first-order data used ($\tau$ from the degrees, or
       the annihilator of $\det M$ in $A_\tau$) and their arithmetic, EXACT or MOD p.
       "ALL SURVIVE" at $\lambda = \lambda_0$: the locus is smooth with $e_\tau$ excess directions (Theorem 2(4)); no
-      computation is made. "ALL SURVIVE" elsewhere: all quadrics vanish at this point, so there is no obstruction
-      at second order; this decides nothing about higher order, except when $K = 0$ in the range, where the locus is
-      smooth (Theorem 9.1(1)).
+      computation is made. "ALL SURVIVE" elsewhere: all quadrics vanish at this point and condition (S) holds (always in
+      the range), so there is no obstruction at second order; this decides nothing about higher order, except when
+      $K = 0$ in the range, where the locus is smooth (Theorem 9.1(1)).
+      "NOT DETERMINED": outside the range with condition (S) false, when the quadrics from $K$ vanish (including
+      $K = 0$). The order-2 condition then also involves the forms of $K_\lambda$ outside $K$ and pairs $(u, N)$ with
+      $u$ tangent to $V_Z$, which are not computed; at Fermat surfaces of degree 7 and 8 they were found to be nonzero
+      (MOD p, compared with Movasati's tables for arXiv:1908.04117). Do not read this verdict as "no obstruction".
       "ALL DIE": the quadrics have no common zero in $P(E')$; if condition (S) holds (always in the range) the
       reduction of $NL(\delta_\lambda)$ is $V_Z$ and the locus is non-reduced (Theorem 9.1(4), Theorem 9.4(4)); if (S)
       fails, only "not smooth" is asserted (Theorem 9.4(3)).

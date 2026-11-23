@@ -10,7 +10,7 @@ type: software
 authors:
   - family-names: Seifert
     given-names: Timothy
-version: 0.1.0
+version: 0.1.1
 date-released: "2026-11-22"
 license: MIT
 repository-code: "https://github.com/timseifer/HodgeLociCI"

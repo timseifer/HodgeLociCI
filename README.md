@@ -4,7 +4,7 @@ A Macaulay2 package for **Hodge loci** (higher-dimensional Noether–Lefschetz l
 `r[Y1] + s[Y2]`, where `Y1`, `Y2` are **linear or complete-intersection cycles** of half dimension in a smooth
 hypersurface `X = {F = 0}` of even dimension in projective space.
 
-Author: Timothy Seifert. Licence: MIT. Version 0.1.0 (22 November 2026).
+Author: Timothy Seifert. Licence: MIT. Version 0.1.1 (23 November 2026).
 AI agents: start with [`AGENTS.md`](AGENTS.md) and [`docs/API.md`](docs/API.md); a smoke test with parseable output
 is `M2 --script examples/quickstart.m2`, run from the repository root.
 
@@ -30,9 +30,10 @@ cycles deform.
    loci, and the excess at `lambda_0` and elsewhere where the degrees determine it. From explicit or random data: the
    same numbers computed, plus an independent first-order computation in the Jacobian ring to compare with.
 2. **Second-order checker** (`secondOrderObstruction`, `secondOrderQuadrics`, `secondOrderFunctional`). For given data
-   and `lambda`, computes the second-order obstruction on the excess directions and reports one of four verdicts:
+   and `lambda`, computes the second-order obstruction on the excess directions and reports one of five verdicts:
    `NO EXCESS` (there are no excess directions, so nothing is computed at second order), `ALL SURVIVE`, `ALL DIE`,
-   or `SOME DIE` (the partial verdict). When they all die the Hodge locus is non-reduced along `V_Z` by
+   `SOME DIE` (the partial verdict), or `NOT DETERMINED` (outside the range when condition (S) fails and the computed
+   part vanishes). When they all die the Hodge locus is non-reduced along `V_Z` by
    Theorem 9.1(4) of the unreviewed note, under its condition (S), which always holds in the range; otherwise only
    "not smooth" is asserted. A verdict at one instance modulo a prime is evidence, not a proof.
 3. **Fermat higher-order expansion** (`fermatExpansion`, `fermatNextOrderSystem`, `fermatExtendArc`,
@@ -247,7 +248,7 @@ text of the PDFs. Tables were asked for at least twice, in separate fetches. A h
 against the paper before citing it; `tests/SOURCES.md` says this at its top. A passing test therefore means "the
 package reproduces the number as the machine read it", nothing more.
 
-State at version 0.1.0: all 15 tests pass (301 checks), and so do the two slow tests. Covered: Movasati's tables
+State at version 0.1.1: all 15 tests pass (301 checks), and so do the two slow tests. Covered: Movasati's tables
 for cubic hypersurfaces of dimension 4, 6 and 8 exactly at the Fermat point (including the pairs 7 against 8 and 19
 against 20: 7 and 19 are the codimensions of the tangent space of the Hodge locus at the Fermat point, valid for
 every nonzero coefficient; 8 and 20 are the codimensions of the locus of cubics containing both linear spaces), and
@@ -326,10 +327,10 @@ and unreviewed, and no entry claims novelty. Start with `discoveries/README.md`.
   every instance tried, but both rest on the same lemma of the note, so their agreement checks the algebra and not
   the periods. The package has no second-order route that is independent of that lemma.
 - Not implemented from the note: the residual cycle and the explicit family at the special coefficient.
-- Outside the range the second-order checker can report `ALL SURVIVE` where Movasati's 2019 tables
-  (arXiv:1908.04117) record the Hodge locus as not smooth at order 2: 42 Fermat-surface records of degree 7 and 8.
-  "All excess directions survive at second order" does not mean "smooth at order 2", and the checker asserts nothing
-  more outside the range; but this shows it can miss an order-2 obstruction there. Unresolved.
+- Outside the range with condition (S) false, the second-order checker does not compute all order-2 conditions and
+  returns `NOT DETERMINED` when the part it computes vanishes. (Version 0.1.0 said `ALL SURVIVE` there, which was
+  wrong: at Fermat surfaces of degree 7 and 8 the locus is not smooth at order 2, as Movasati's tables for
+  arXiv:1908.04117 record.)
 - `linearSubspaceCase` returns the value for a general hypersurface; at a special point use `excessFromData`.
 - `hodgeLocusTangentCodim` assumes that the primitive class of the subvariety is nonzero and reports, but does not
   prove, the one-dimensionality it relies on (key `"hypothesis"`).
