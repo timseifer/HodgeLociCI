@@ -1,0 +1,2 @@
+job,lambda,prime,seed,kind,order_requested,order_reached,verdict,runtime_s,peak_rss_gb,code_commit,engine_version,threads,log,arc_digest,note
+a,-1,67108819,4,la,11,0,ERROR,736.8,0,15b96b51565524faa9206d4a72afcdbef15dd047,1f4eeb9d39c7,8,runs/gen_lam-1_67108819_s4_la_N11.log,,exit code -9:    E'_6: 32119852 terms (9s) (399s) |    E'_7: 129026199 terms (61s) (460s) |    E'_8: 447156064 terms (261s) (721s)

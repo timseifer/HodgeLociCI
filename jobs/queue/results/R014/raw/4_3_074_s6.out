@@ -1,0 +1,3 @@
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 3} info=deg 52 linear factors 2 t=7.88099
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 3} point=SINGULAR

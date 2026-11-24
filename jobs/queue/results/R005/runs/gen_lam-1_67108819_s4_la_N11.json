@@ -1,0 +1,15 @@
+{
+ "tag": "gen_lam-1_67108819_s4_la_N11",
+ "lambda": -1,
+ "prime": 67108819,
+ "seed": 4,
+ "kind": "la",
+ "order_requested": 11,
+ "order_reached": 0,
+ "verdict": "ERROR",
+ "note": "exit code -9:    E'_6: 32119852 terms (9s) (399s) |    E'_7: 129026199 terms (61s) (460s) |    E'_8: 447156064 terms (261s) (721s)",
+ "runtime_s": 736.8,
+ "peak_rss_gb": 0,
+ "engine_version": "1f4eeb9d39c7",
+ "threads": 8
+}

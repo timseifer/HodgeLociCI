@@ -1,0 +1,3 @@
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 3} info=deg 16 linear factors 3 t=9.80907
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=10.8659
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=11.8138

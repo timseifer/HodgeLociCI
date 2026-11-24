@@ -1,0 +1,2 @@
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 2} info=deg 4 linear factors 1 t=11.0165
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=14.0742
