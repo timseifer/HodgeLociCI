@@ -1,0 +1,132 @@
+2026-11-24T09:30:35Z
+budget: 7 cores, 28.0 GB; 48 tasks
+  gen_lam-1_67108837_s13_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s14_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s15_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s16_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s17_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s18_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s19_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s20_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s21_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s22_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s23_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s24_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s25_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s26_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s27_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s28_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s29_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s30_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s31_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s32_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s33_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s34_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s35_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s36_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s37_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s38_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s39_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s40_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s41_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s42_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s43_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s44_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s45_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s46_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s47_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s48_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s49_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s50_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s51_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s52_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s53_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s54_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s55_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s56_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s57_al_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s58_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108837_s59_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+  gen_lam-1_67108819_s60_la_N9       threads  1  est. mem     4.9 GB  est. wall   0.34 h 
+09:30:35 start gen_lam-1_67108837_s13_al_N9 threads 1 est mem 4.9 GB
+09:30:35 start gen_lam-1_67108819_s14_al_N9 threads 1 est mem 4.9 GB
+09:30:35 start gen_lam-1_67108837_s15_al_N9 threads 1 est mem 4.9 GB
+09:30:35 start gen_lam-1_67108819_s16_la_N9 threads 1 est mem 4.9 GB
+09:30:35 start gen_lam-1_67108837_s17_la_N9 threads 1 est mem 4.9 GB
+10:23:03 done  gen_lam-1_67108837_s17_la_N9 EXTENDS order 9 3148s 
+10:23:03 start gen_lam-1_67108819_s18_la_N9 threads 1 est mem 4.9 GB
+10:23:15 done  gen_lam-1_67108837_s13_al_N9 EXTENDS order 9 3160s 
+10:23:15 start gen_lam-1_67108837_s19_al_N9 threads 1 est mem 4.9 GB
+10:23:33 done  gen_lam-1_67108837_s15_al_N9 EXTENDS order 9 3178s 
+10:23:33 start gen_lam-1_67108819_s20_al_N9 threads 1 est mem 4.9 GB
+10:23:41 done  gen_lam-1_67108819_s14_al_N9 EXTENDS order 9 3186s 
+10:23:41 done  gen_lam-1_67108819_s16_la_N9 EXTENDS order 9 3186s 
+10:23:41 start gen_lam-1_67108837_s21_al_N9 threads 1 est mem 4.9 GB
+10:23:41 start gen_lam-1_67108819_s22_la_N9 threads 1 est mem 4.9 GB
+11:14:45 done  gen_lam-1_67108819_s18_la_N9 EXTENDS order 9 3102s 
+11:14:45 start gen_lam-1_67108837_s23_la_N9 threads 1 est mem 4.9 GB
+11:15:29 done  gen_lam-1_67108837_s19_al_N9 EXTENDS order 9 3134s 
+11:15:29 start gen_lam-1_67108819_s24_la_N9 threads 1 est mem 4.9 GB
+11:15:49 done  gen_lam-1_67108819_s20_al_N9 EXTENDS order 9 3136s 
+11:15:49 start gen_lam-1_67108837_s25_al_N9 threads 1 est mem 4.9 GB
+11:15:55 done  gen_lam-1_67108819_s22_la_N9 EXTENDS order 9 3134s 
+11:15:55 start gen_lam-1_67108819_s26_al_N9 threads 1 est mem 4.9 GB
+11:16:01 done  gen_lam-1_67108837_s21_al_N9 EXTENDS order 9 3140s 
+11:16:01 start gen_lam-1_67108837_s27_al_N9 threads 1 est mem 4.9 GB
+12:07:07 done  gen_lam-1_67108837_s23_la_N9 EXTENDS order 9 3142s 
+12:07:07 start gen_lam-1_67108819_s28_la_N9 threads 1 est mem 4.9 GB
+12:08:05 done  gen_lam-1_67108819_s24_la_N9 EXTENDS order 9 3156s 
+12:08:05 start gen_lam-1_67108837_s29_la_N9 threads 1 est mem 4.9 GB
+12:08:17 done  gen_lam-1_67108819_s26_al_N9 EXTENDS order 9 3142s 
+12:08:17 start gen_lam-1_67108819_s30_la_N9 threads 1 est mem 4.9 GB
+12:08:19 done  gen_lam-1_67108837_s25_al_N9 EXTENDS order 9 3150s 
+12:08:19 start gen_lam-1_67108837_s31_al_N9 threads 1 est mem 4.9 GB
+12:08:27 done  gen_lam-1_67108837_s27_al_N9 EXTENDS order 9 3146s 
+12:08:27 start gen_lam-1_67108819_s32_al_N9 threads 1 est mem 4.9 GB
+12:58:46 done  gen_lam-1_67108819_s28_la_N9 EXTENDS order 9 3100s 
+12:58:46 start gen_lam-1_67108837_s33_al_N9 threads 1 est mem 4.9 GB
+12:59:58 done  gen_lam-1_67108837_s29_la_N9 EXTENDS order 9 3114s 
+12:59:58 start gen_lam-1_67108819_s34_la_N9 threads 1 est mem 4.9 GB
+13:00:02 done  gen_lam-1_67108819_s30_la_N9 EXTENDS order 9 3106s 
+13:00:02 start gen_lam-1_67108837_s35_la_N9 threads 1 est mem 4.9 GB
+13:00:10 done  gen_lam-1_67108837_s31_al_N9 EXTENDS order 9 3112s 
+13:00:10 start gen_lam-1_67108819_s36_la_N9 threads 1 est mem 4.9 GB
+13:00:30 done  gen_lam-1_67108819_s32_al_N9 EXTENDS order 9 3124s 
+13:00:30 start gen_lam-1_67108837_s37_al_N9 threads 1 est mem 4.9 GB
+13:48:40 done  gen_lam-1_67108837_s33_al_N9 EXTENDS order 9 2993s 
+13:48:40 start gen_lam-1_67108819_s38_al_N9 threads 1 est mem 4.9 GB
+13:50:08 done  gen_lam-1_67108819_s34_la_N9 EXTENDS order 9 3009s 
+13:50:08 start gen_lam-1_67108837_s39_al_N9 threads 1 est mem 4.9 GB
+13:50:12 done  gen_lam-1_67108837_s35_la_N9 EXTENDS order 9 3009s 
+13:50:12 start gen_lam-1_67108819_s40_la_N9 threads 1 est mem 4.9 GB
+13:50:38 done  gen_lam-1_67108837_s37_al_N9 EXTENDS order 9 3007s 
+13:50:38 start gen_lam-1_67108837_s41_la_N9 threads 1 est mem 4.9 GB
+13:51:38 done  gen_lam-1_67108819_s36_la_N9 EXTENDS order 9 3088s 
+13:51:38 start gen_lam-1_67108819_s42_la_N9 threads 1 est mem 4.9 GB
+14:41:06 done  gen_lam-1_67108819_s38_al_N9 EXTENDS order 9 3146s 
+14:41:06 start gen_lam-1_67108837_s43_al_N9 threads 1 est mem 4.9 GB
+14:42:24 done  gen_lam-1_67108837_s39_al_N9 EXTENDS order 9 3136s 
+14:42:24 start gen_lam-1_67108819_s44_al_N9 threads 1 est mem 4.9 GB
+14:42:44 done  gen_lam-1_67108819_s40_la_N9 EXTENDS order 9 3152s 
+14:42:44 start gen_lam-1_67108837_s45_al_N9 threads 1 est mem 4.9 GB
+14:42:52 done  gen_lam-1_67108837_s41_la_N9 EXTENDS order 9 3134s 
+14:42:52 start gen_lam-1_67108819_s46_la_N9 threads 1 est mem 4.9 GB
+14:43:58 done  gen_lam-1_67108819_s42_la_N9 EXTENDS order 9 3140s 
+14:43:58 start gen_lam-1_67108837_s47_la_N9 threads 1 est mem 4.9 GB
+15:32:53 done  gen_lam-1_67108837_s43_al_N9 EXTENDS order 9 3108s 
+15:32:53 start gen_lam-1_67108819_s48_la_N9 threads 1 est mem 4.9 GB
+15:34:28 done  gen_lam-1_67108819_s44_al_N9 EXTENDS order 9 3124s 
+15:34:28 start gen_lam-1_67108837_s49_al_N9 threads 1 est mem 4.9 GB
+15:34:36 done  gen_lam-1_67108837_s45_al_N9 EXTENDS order 9 3112s 
+15:34:36 start gen_lam-1_67108819_s50_al_N9 threads 1 est mem 4.9 GB
+15:34:58 done  gen_lam-1_67108819_s46_la_N9 EXTENDS order 9 3126s 
+15:34:58 start gen_lam-1_67108837_s51_al_N9 threads 1 est mem 4.9 GB
+15:35:36 done  gen_lam-1_67108837_s47_la_N9 EXTENDS order 9 3098s 
+15:35:36 start gen_lam-1_67108819_s52_la_N9 threads 1 est mem 4.9 GB
+Terminated
+
+real	389m35.624s
+user	1814m14.855s
+sys	2m21.575s
+EXIT=143
+2026-11-24T16:00:10Z

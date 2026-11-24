@@ -1,0 +1,24 @@
+budget: 8 cores, 60.0 GB; 6 tasks
+  exarc_67108837_0_al_N14            threads  2  est. mem    12.8 GB  est. wall   0.20 h 
+  exarc_67108837_0_la_N13            threads  2  est. mem     5.9 GB  est. wall   0.08 h 
+  exarc_67108819_0_al_N13            threads  2  est. mem     5.9 GB  est. wall   0.08 h 
+  exarc_67108819_0_la_N13            threads  2  est. mem     5.9 GB  est. wall   0.08 h 
+  exarc_67108819_0_al_N14            threads  2  est. mem    12.8 GB  est. wall   0.20 h 
+  exarc_67108837_0_la_N14            threads  2  est. mem    12.8 GB  est. wall   0.20 h 
+02:54:09 start exarc_67108837_0_al_N14 threads 2 est mem 12.8 GB
+02:54:09 start exarc_67108837_0_la_N13 threads 2 est mem 5.9 GB
+02:54:09 start exarc_67108819_0_al_N13 threads 2 est mem 5.9 GB
+02:54:09 start exarc_67108819_0_la_N13 threads 2 est mem 5.9 GB
+02:59:21 done  exarc_67108819_0_al_N13 EXTENDS order 13 312s 
+02:59:21 start exarc_67108819_0_al_N14 threads 2 est mem 12.8 GB
+03:02:35 done  exarc_67108819_0_la_N13 EXTENDS order 13 507s 
+03:02:35 start exarc_67108837_0_la_N14 threads 2 est mem 12.8 GB
+03:02:39 done  exarc_67108837_0_la_N13 EXTENDS order 13 511s 
+03:11:38 done  exarc_67108837_0_al_N14 EXTENDS order 14 1049s 
+03:16:40 done  exarc_67108819_0_al_N14 EXTENDS order 14 1039s 
+03:29:03 done  exarc_67108837_0_la_N14 EXTENDS order 14 1588s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R003 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R003
+
+real	34m54.521s
+user	164m52.118s
+sys	0m30.565s

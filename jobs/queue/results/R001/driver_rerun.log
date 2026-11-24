@@ -1,0 +1,12 @@
+2026-11-24T03:47:05Z
+budget: 22 cores, 120.0 GB; 1 tasks
+  gen_lam-1_67108837_s1_al_N12       threads 22  est. mem   108.0 GB  est. wall   0.97 h 
+03:47:05 start gen_lam-1_67108837_s1_al_N12 threads 22 est mem 108.0 GB
+05:59:24 done  gen_lam-1_67108837_s1_al_N12 EXTENDS order 12 7939s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R001 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R001
+
+real	132m18.972s
+user	2880m42.831s
+sys	2m11.439s
+EXIT=0
+2026-11-24T05:59:24Z

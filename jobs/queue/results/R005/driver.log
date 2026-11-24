@@ -1,0 +1,9 @@
+budget: 8 cores, 45.0 GB; 1 tasks
+  gen_lam-1_67108819_s4_la_N11       threads  8  est. mem    40.4 GB  est. wall   0.88 h 
+03:34:33 start gen_lam-1_67108819_s4_la_N11 threads 8 est mem 40.4 GB
+03:46:50 done  gen_lam-1_67108819_s4_la_N11 ERROR order 0 737s    <<<<< REPORT PROMINENTLY
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R005 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R005
+
+real	12m16.994s
+user	93m15.247s
+sys	0m14.643s

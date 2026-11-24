@@ -1,0 +1,59 @@
+2026-11-24T10:38:46Z
+budget: 8 cores, 60.0 GB; 28 tasks
+  gen_lam-1_67108837_s13_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s14_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s15_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s16_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s17_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s18_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s19_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s20_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s21_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s22_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s23_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s24_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s25_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s26_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s27_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s28_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s29_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s30_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s31_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s32_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s33_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s34_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s35_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s36_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s37_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s38_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108837_s39_al_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+  gen_lam-1_67108819_s40_la_N10      threads  4  est. mem    14.2 GB  est. wall   0.37 h 
+10:38:47 start gen_lam-1_67108837_s13_al_N10 threads 4 est mem 14.2 GB
+10:38:47 start gen_lam-1_67108819_s14_al_N10 threads 4 est mem 14.2 GB
+11:35:57 done  gen_lam-1_67108837_s13_al_N10 EXTENDS order 10 3430s 
+11:35:57 done  gen_lam-1_67108819_s14_al_N10 EXTENDS order 10 3430s 
+11:35:57 start gen_lam-1_67108837_s15_al_N10 threads 4 est mem 14.2 GB
+11:35:57 start gen_lam-1_67108819_s16_la_N10 threads 4 est mem 14.2 GB
+12:33:35 done  gen_lam-1_67108819_s16_la_N10 EXTENDS order 10 3458s 
+12:33:35 start gen_lam-1_67108837_s17_la_N10 threads 4 est mem 14.2 GB
+12:33:37 done  gen_lam-1_67108837_s15_al_N10 EXTENDS order 10 3460s 
+12:33:37 start gen_lam-1_67108819_s18_la_N10 threads 4 est mem 14.2 GB
+13:30:01 done  gen_lam-1_67108837_s17_la_N10 EXTENDS order 10 3386s 
+13:30:01 start gen_lam-1_67108837_s19_al_N10 threads 4 est mem 14.2 GB
+13:30:03 done  gen_lam-1_67108819_s18_la_N10 EXTENDS order 10 3386s 
+13:30:03 start gen_lam-1_67108819_s20_al_N10 threads 4 est mem 14.2 GB
+14:26:27 done  gen_lam-1_67108837_s19_al_N10 EXTENDS order 10 3386s 
+14:26:27 start gen_lam-1_67108837_s21_al_N10 threads 4 est mem 14.2 GB
+14:26:35 done  gen_lam-1_67108819_s20_al_N10 EXTENDS order 10 3392s 
+14:26:35 start gen_lam-1_67108819_s22_la_N10 threads 4 est mem 14.2 GB
+15:24:17 done  gen_lam-1_67108837_s21_al_N10 EXTENDS order 10 3470s 
+15:24:17 start gen_lam-1_67108837_s23_la_N10 threads 4 est mem 14.2 GB
+15:24:29 done  gen_lam-1_67108819_s22_la_N10 EXTENDS order 10 3474s 
+15:24:29 start gen_lam-1_67108819_s24_la_N10 threads 4 est mem 14.2 GB
+Terminated
+
+real	321m23.898s
+user	2272m22.641s
+sys	1m49.020s
+EXIT=143
+2026-11-24T16:00:10Z

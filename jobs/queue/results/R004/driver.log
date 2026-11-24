@@ -1,0 +1,18 @@
+budget: 8 cores, 60.0 GB; 4 tasks
+  gen_lam-1_67108837_s7_al_N10       threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+  gen_lam-1_67108837_s10_la_N10      threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+  gen_lam-1_67108819_s8_al_N10       threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+  gen_lam-1_67108819_s11_la_N10      threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+03:29:44 start gen_lam-1_67108837_s7_al_N10 threads 2 est mem 14.2 GB
+03:29:44 start gen_lam-1_67108837_s10_la_N10 threads 2 est mem 14.2 GB
+03:29:44 start gen_lam-1_67108819_s8_al_N10 threads 2 est mem 14.2 GB
+03:29:44 start gen_lam-1_67108819_s11_la_N10 threads 2 est mem 14.2 GB
+05:27:11 done  gen_lam-1_67108819_s11_la_N10 EXTENDS order 10 7048s 
+05:27:13 done  gen_lam-1_67108837_s10_la_N10 EXTENDS order 10 7050s 
+05:27:23 done  gen_lam-1_67108819_s8_al_N10 EXTENDS order 10 7060s 
+05:27:27 done  gen_lam-1_67108837_s7_al_N10 EXTENDS order 10 7064s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R004 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R004
+
+real	117m44.069s
+user	934m57.544s
+sys	0m45.109s

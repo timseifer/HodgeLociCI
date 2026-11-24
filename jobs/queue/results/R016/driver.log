@@ -1,0 +1,21 @@
+2026-11-24T09:11:32Z
+budget: 8 cores, 60.0 GB; 4 tasks
+  exarc_67108837_0_al_N15            threads  4  est. mem    27.7 GB  est. wall   0.24 h 
+  exarc_67108819_0_al_N15            threads  4  est. mem    27.7 GB  est. wall   0.24 h 
+  exarc_67108837_0_la_N15            threads  4  est. mem    27.7 GB  est. wall   0.24 h 
+  exarc_67108819_0_la_N15            threads  4  est. mem    27.7 GB  est. wall   0.24 h 
+09:11:32 start exarc_67108837_0_al_N15 threads 4 est mem 27.7 GB
+09:11:32 start exarc_67108819_0_al_N15 threads 4 est mem 27.7 GB
+09:44:42 done  exarc_67108819_0_al_N15 EXTENDS order 15 1990s 
+09:44:42 start exarc_67108837_0_la_N15 threads 4 est mem 27.7 GB
+09:44:54 done  exarc_67108837_0_al_N15 EXTENDS order 15 2002s 
+09:44:54 start exarc_67108819_0_la_N15 threads 4 est mem 27.7 GB
+10:38:00 done  exarc_67108837_0_la_N15 EXTENDS order 15 3198s 
+10:38:14 done  exarc_67108819_0_la_N15 EXTENDS order 15 3200s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R016 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R016
+
+real	86m42.335s
+user	685m45.991s
+sys	0m55.510s
+EXIT=0
+2026-11-24T10:38:14Z

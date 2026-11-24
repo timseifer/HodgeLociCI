@@ -1,0 +1,16 @@
+2026-11-24T06:00:01Z
+PASS (6,2) F={1} H={1} P={1, 4}: 2 lines identical (16s)
+PASS (6,2) F={1} H={1} P={1, 1}: 1 lines identical (2s)
+PASS (4,3) F={1} H={1} P={2, 2, 3}: 2 lines identical (10s)
+PASS (4,3) F={1} H={3} P={1, 1, 1}: 2 lines identical (8s)
+PASS (3,5) F={1} H={1} P={1, 1, 1, 1, 2}: 2 lines identical (15s)
+VALIDATION_M2 PASS
+start 06:00:17Z
+end 12:26:16Z rc=124
+TIMEOUT after 90 min (partial output above)
+
+real	386m15.157s
+user	0m0.799s
+sys	0m0.186s
+EXIT=0
+2026-11-24T12:26:17Z

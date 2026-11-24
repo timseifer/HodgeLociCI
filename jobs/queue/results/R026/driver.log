@@ -1,0 +1,18 @@
+2026-11-24T13:43:31Z
+budget: 6 cores, 45.0 GB; 3 tasks
+  gen_lam-1_67108837_s73_al_N10      threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+  gen_lam-1_67108819_s74_la_N10      threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+  gen_lam-1_67108837_s75_la_N10      threads  2  est. mem    14.2 GB  est. wall   0.74 h 
+13:43:32 start gen_lam-1_67108837_s73_al_N10 threads 2 est mem 14.2 GB
+13:43:32 start gen_lam-1_67108819_s74_la_N10 threads 2 est mem 14.2 GB
+13:43:32 start gen_lam-1_67108837_s75_la_N10 threads 2 est mem 14.2 GB
+15:39:32 done  gen_lam-1_67108819_s74_la_N10 EXTENDS order 10 6960s 
+15:39:40 done  gen_lam-1_67108837_s75_la_N10 EXTENDS order 10 6968s 
+15:40:30 done  gen_lam-1_67108837_s73_al_N10 EXTENDS order 10 7018s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R026 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R026
+
+real	116m58.408s
+user	695m28.711s
+sys	0m34.809s
+EXIT=0
+2026-11-24T15:40:30Z

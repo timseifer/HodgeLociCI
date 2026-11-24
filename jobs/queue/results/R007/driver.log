@@ -1,0 +1,294 @@
+budget: 4 cores, 6.0 GB; 96 tasks
+  gen_lam2_67108837_s13_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s13_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s14_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s14_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s15_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s15_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s16_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s16_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s17_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s17_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s18_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s18_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s19_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s19_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s20_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s20_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s21_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s21_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s22_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s22_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s23_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s23_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s24_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s24_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s25_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s25_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s26_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s26_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s27_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s27_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s28_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s28_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s29_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s29_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s30_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s30_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s31_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s31_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s32_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s32_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s33_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s33_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s34_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s34_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s35_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s35_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s36_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s36_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s37_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s37_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s38_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s38_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s39_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s39_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s40_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s40_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s41_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s41_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s42_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s42_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s43_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s43_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s44_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s44_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s45_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s45_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s46_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s46_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s47_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s47_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s48_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s48_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s49_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s49_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s50_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s50_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s51_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s51_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s52_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s52_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s53_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s53_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s54_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s54_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s55_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s55_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s56_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s56_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s57_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s57_al_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s58_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s58_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s59_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s59_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108837_s60_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+  gen_lam2_67108819_s60_la_N6        threads  1  est. mem     0.9 GB  est. wall   0.00 h 
+03:34:31 start gen_lam2_67108837_s13_al_N6 threads 1 est mem 0.9 GB
+03:34:31 start gen_lam2_67108819_s13_al_N6 threads 1 est mem 0.9 GB
+03:34:31 start gen_lam2_67108837_s14_al_N6 threads 1 est mem 0.9 GB
+03:34:31 start gen_lam2_67108819_s14_al_N6 threads 1 est mem 0.9 GB
+03:34:55 done  gen_lam2_67108837_s13_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:34:55 done  gen_lam2_67108819_s13_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:34:55 done  gen_lam2_67108837_s14_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:34:55 done  gen_lam2_67108819_s14_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:34:55 start gen_lam2_67108837_s15_al_N6 threads 1 est mem 0.9 GB
+03:34:55 start gen_lam2_67108819_s15_al_N6 threads 1 est mem 0.9 GB
+03:34:55 start gen_lam2_67108837_s16_la_N6 threads 1 est mem 0.9 GB
+03:34:55 start gen_lam2_67108819_s16_la_N6 threads 1 est mem 0.9 GB
+03:35:19 done  gen_lam2_67108837_s15_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:35:19 done  gen_lam2_67108837_s16_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:35:19 done  gen_lam2_67108819_s16_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:35:19 start gen_lam2_67108837_s17_la_N6 threads 1 est mem 0.9 GB
+03:35:19 start gen_lam2_67108819_s17_la_N6 threads 1 est mem 0.9 GB
+03:35:19 start gen_lam2_67108837_s18_la_N6 threads 1 est mem 0.9 GB
+03:35:21 done  gen_lam2_67108819_s15_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:35:21 start gen_lam2_67108819_s18_la_N6 threads 1 est mem 0.9 GB
+03:35:47 done  gen_lam2_67108837_s17_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:35:47 done  gen_lam2_67108819_s17_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:35:47 done  gen_lam2_67108837_s18_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:35:47 done  gen_lam2_67108819_s18_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:35:47 start gen_lam2_67108837_s19_al_N6 threads 1 est mem 0.9 GB
+03:35:47 start gen_lam2_67108819_s19_al_N6 threads 1 est mem 0.9 GB
+03:35:47 start gen_lam2_67108837_s20_al_N6 threads 1 est mem 0.9 GB
+03:35:47 start gen_lam2_67108819_s20_al_N6 threads 1 est mem 0.9 GB
+03:36:15 done  gen_lam2_67108837_s19_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:15 done  gen_lam2_67108819_s19_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:15 done  gen_lam2_67108837_s20_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:15 done  gen_lam2_67108819_s20_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:15 start gen_lam2_67108837_s21_al_N6 threads 1 est mem 0.9 GB
+03:36:15 start gen_lam2_67108819_s21_al_N6 threads 1 est mem 0.9 GB
+03:36:15 start gen_lam2_67108837_s22_la_N6 threads 1 est mem 0.9 GB
+03:36:15 start gen_lam2_67108819_s22_la_N6 threads 1 est mem 0.9 GB
+03:36:41 done  gen_lam2_67108819_s21_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:36:41 done  gen_lam2_67108837_s22_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:36:41 start gen_lam2_67108837_s23_la_N6 threads 1 est mem 0.9 GB
+03:36:41 start gen_lam2_67108819_s23_la_N6 threads 1 est mem 0.9 GB
+03:36:43 done  gen_lam2_67108837_s21_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:43 done  gen_lam2_67108819_s22_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:36:43 start gen_lam2_67108837_s24_la_N6 threads 1 est mem 0.9 GB
+03:36:43 start gen_lam2_67108819_s24_la_N6 threads 1 est mem 0.9 GB
+03:37:07 done  gen_lam2_67108837_s23_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:07 start gen_lam2_67108837_s25_al_N6 threads 1 est mem 0.9 GB
+03:37:09 done  gen_lam2_67108819_s23_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:37:09 done  gen_lam2_67108837_s24_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:09 done  gen_lam2_67108819_s24_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:09 start gen_lam2_67108819_s25_al_N6 threads 1 est mem 0.9 GB
+03:37:09 start gen_lam2_67108837_s26_al_N6 threads 1 est mem 0.9 GB
+03:37:09 start gen_lam2_67108819_s26_al_N6 threads 1 est mem 0.9 GB
+03:37:33 done  gen_lam2_67108837_s25_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:33 start gen_lam2_67108837_s27_al_N6 threads 1 est mem 0.9 GB
+03:37:35 done  gen_lam2_67108819_s25_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:35 done  gen_lam2_67108837_s26_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:35 start gen_lam2_67108819_s27_al_N6 threads 1 est mem 0.9 GB
+03:37:35 start gen_lam2_67108837_s28_la_N6 threads 1 est mem 0.9 GB
+03:37:37 done  gen_lam2_67108819_s26_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:37:37 start gen_lam2_67108819_s28_la_N6 threads 1 est mem 0.9 GB
+03:37:59 done  gen_lam2_67108837_s27_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:37:59 start gen_lam2_67108837_s29_la_N6 threads 1 est mem 0.9 GB
+03:38:01 done  gen_lam2_67108819_s27_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:01 done  gen_lam2_67108837_s28_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:01 start gen_lam2_67108819_s29_la_N6 threads 1 est mem 0.9 GB
+03:38:01 start gen_lam2_67108837_s30_la_N6 threads 1 est mem 0.9 GB
+03:38:03 done  gen_lam2_67108819_s28_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:03 start gen_lam2_67108819_s30_la_N6 threads 1 est mem 0.9 GB
+03:38:25 done  gen_lam2_67108837_s29_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:25 start gen_lam2_67108837_s31_al_N6 threads 1 est mem 0.9 GB
+03:38:27 done  gen_lam2_67108819_s29_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:27 start gen_lam2_67108819_s31_al_N6 threads 1 est mem 0.9 GB
+03:38:29 done  gen_lam2_67108837_s30_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:38:29 done  gen_lam2_67108819_s30_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:29 start gen_lam2_67108837_s32_al_N6 threads 1 est mem 0.9 GB
+03:38:29 start gen_lam2_67108819_s32_al_N6 threads 1 est mem 0.9 GB
+03:38:51 done  gen_lam2_67108837_s31_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:51 start gen_lam2_67108837_s33_al_N6 threads 1 est mem 0.9 GB
+03:38:53 done  gen_lam2_67108819_s31_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:53 start gen_lam2_67108819_s33_al_N6 threads 1 est mem 0.9 GB
+03:38:55 done  gen_lam2_67108837_s32_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:55 done  gen_lam2_67108819_s32_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:38:55 start gen_lam2_67108837_s34_la_N6 threads 1 est mem 0.9 GB
+03:38:55 start gen_lam2_67108819_s34_la_N6 threads 1 est mem 0.9 GB
+03:39:15 done  gen_lam2_67108837_s33_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:15 start gen_lam2_67108837_s35_la_N6 threads 1 est mem 0.9 GB
+03:39:17 done  gen_lam2_67108819_s33_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:17 start gen_lam2_67108819_s35_la_N6 threads 1 est mem 0.9 GB
+03:39:19 done  gen_lam2_67108837_s34_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:19 done  gen_lam2_67108819_s34_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:19 start gen_lam2_67108837_s36_la_N6 threads 1 est mem 0.9 GB
+03:39:19 start gen_lam2_67108819_s36_la_N6 threads 1 est mem 0.9 GB
+03:39:39 done  gen_lam2_67108837_s35_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:39 start gen_lam2_67108837_s37_al_N6 threads 1 est mem 0.9 GB
+03:39:41 done  gen_lam2_67108819_s35_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:41 start gen_lam2_67108819_s37_al_N6 threads 1 est mem 0.9 GB
+03:39:43 done  gen_lam2_67108837_s36_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:43 done  gen_lam2_67108819_s36_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:39:43 start gen_lam2_67108837_s38_al_N6 threads 1 est mem 0.9 GB
+03:39:43 start gen_lam2_67108819_s38_al_N6 threads 1 est mem 0.9 GB
+03:40:03 done  gen_lam2_67108837_s37_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:03 start gen_lam2_67108837_s39_al_N6 threads 1 est mem 0.9 GB
+03:40:05 done  gen_lam2_67108819_s37_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:05 start gen_lam2_67108819_s39_al_N6 threads 1 est mem 0.9 GB
+03:40:07 done  gen_lam2_67108837_s38_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:07 done  gen_lam2_67108819_s38_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:07 start gen_lam2_67108837_s40_la_N6 threads 1 est mem 0.9 GB
+03:40:07 start gen_lam2_67108819_s40_la_N6 threads 1 est mem 0.9 GB
+03:40:27 done  gen_lam2_67108837_s39_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:27 start gen_lam2_67108837_s41_la_N6 threads 1 est mem 0.9 GB
+03:40:29 done  gen_lam2_67108819_s39_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:29 start gen_lam2_67108819_s41_la_N6 threads 1 est mem 0.9 GB
+03:40:31 done  gen_lam2_67108837_s40_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:31 done  gen_lam2_67108819_s40_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:31 start gen_lam2_67108837_s42_la_N6 threads 1 est mem 0.9 GB
+03:40:31 start gen_lam2_67108819_s42_la_N6 threads 1 est mem 0.9 GB
+03:40:51 done  gen_lam2_67108837_s41_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:51 start gen_lam2_67108837_s43_al_N6 threads 1 est mem 0.9 GB
+03:40:53 done  gen_lam2_67108819_s41_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:53 start gen_lam2_67108819_s43_al_N6 threads 1 est mem 0.9 GB
+03:40:55 done  gen_lam2_67108837_s42_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:55 done  gen_lam2_67108819_s42_la_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:40:55 start gen_lam2_67108837_s44_al_N6 threads 1 est mem 0.9 GB
+03:40:55 start gen_lam2_67108819_s44_al_N6 threads 1 est mem 0.9 GB
+03:41:15 done  gen_lam2_67108837_s43_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:41:15 start gen_lam2_67108837_s45_al_N6 threads 1 est mem 0.9 GB
+03:41:19 done  gen_lam2_67108819_s43_al_N6 OBSTRUCTED_GENUINE order 5 26s 
+03:41:19 done  gen_lam2_67108837_s44_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:41:19 done  gen_lam2_67108819_s44_al_N6 OBSTRUCTED_GENUINE order 5 24s 
+03:41:19 start gen_lam2_67108819_s45_al_N6 threads 1 est mem 0.9 GB
+03:41:19 start gen_lam2_67108837_s46_la_N6 threads 1 est mem 0.9 GB
+03:41:19 start gen_lam2_67108819_s46_la_N6 threads 1 est mem 0.9 GB
+03:41:43 done  gen_lam2_67108837_s45_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:41:43 start gen_lam2_67108837_s47_la_N6 threads 1 est mem 0.9 GB
+03:41:47 done  gen_lam2_67108819_s45_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:41:47 done  gen_lam2_67108837_s46_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:41:47 done  gen_lam2_67108819_s46_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:41:47 start gen_lam2_67108819_s47_la_N6 threads 1 est mem 0.9 GB
+03:41:47 start gen_lam2_67108837_s48_la_N6 threads 1 est mem 0.9 GB
+03:41:47 start gen_lam2_67108819_s48_la_N6 threads 1 est mem 0.9 GB
+03:42:11 done  gen_lam2_67108837_s47_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:11 start gen_lam2_67108837_s49_al_N6 threads 1 est mem 0.9 GB
+03:42:15 done  gen_lam2_67108819_s47_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:15 done  gen_lam2_67108837_s48_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:15 start gen_lam2_67108819_s49_al_N6 threads 1 est mem 0.9 GB
+03:42:15 start gen_lam2_67108837_s50_al_N6 threads 1 est mem 0.9 GB
+03:42:17 done  gen_lam2_67108819_s48_la_N6 OBSTRUCTED_GENUINE order 5 30s 
+03:42:17 start gen_lam2_67108819_s50_al_N6 threads 1 est mem 0.9 GB
+03:42:39 done  gen_lam2_67108837_s49_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:39 start gen_lam2_67108837_s51_al_N6 threads 1 est mem 0.9 GB
+03:42:43 done  gen_lam2_67108819_s49_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:43 done  gen_lam2_67108837_s50_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:43 start gen_lam2_67108819_s51_al_N6 threads 1 est mem 0.9 GB
+03:42:43 start gen_lam2_67108837_s52_la_N6 threads 1 est mem 0.9 GB
+03:42:45 done  gen_lam2_67108819_s50_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:42:45 start gen_lam2_67108819_s52_la_N6 threads 1 est mem 0.9 GB
+03:43:07 done  gen_lam2_67108837_s51_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:43:07 start gen_lam2_67108837_s53_la_N6 threads 1 est mem 0.9 GB
+03:43:11 done  gen_lam2_67108819_s51_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:43:11 done  gen_lam2_67108837_s52_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:43:11 start gen_lam2_67108819_s53_la_N6 threads 1 est mem 0.9 GB
+03:43:11 start gen_lam2_67108837_s54_la_N6 threads 1 est mem 0.9 GB
+03:43:13 done  gen_lam2_67108819_s52_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:43:13 start gen_lam2_67108819_s54_la_N6 threads 1 est mem 0.9 GB
+03:43:35 done  gen_lam2_67108837_s53_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:43:35 start gen_lam2_67108837_s55_al_N6 threads 1 est mem 0.9 GB
+03:43:41 done  gen_lam2_67108819_s53_la_N6 OBSTRUCTED_GENUINE order 5 30s 
+03:43:41 done  gen_lam2_67108837_s54_la_N6 OBSTRUCTED_GENUINE order 5 30s 
+03:43:41 start gen_lam2_67108819_s55_al_N6 threads 1 est mem 0.9 GB
+03:43:41 start gen_lam2_67108837_s56_al_N6 threads 1 est mem 0.9 GB
+03:43:45 done  gen_lam2_67108819_s54_la_N6 OBSTRUCTED_GENUINE order 5 32s 
+03:43:45 start gen_lam2_67108819_s56_al_N6 threads 1 est mem 0.9 GB
+03:44:04 done  gen_lam2_67108837_s55_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:04 start gen_lam2_67108837_s57_al_N6 threads 1 est mem 0.9 GB
+03:44:10 done  gen_lam2_67108819_s55_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:10 done  gen_lam2_67108837_s56_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:10 start gen_lam2_67108819_s57_al_N6 threads 1 est mem 0.9 GB
+03:44:10 start gen_lam2_67108837_s58_la_N6 threads 1 est mem 0.9 GB
+03:44:16 done  gen_lam2_67108819_s56_al_N6 OBSTRUCTED_GENUINE order 5 30s 
+03:44:16 start gen_lam2_67108819_s58_la_N6 threads 1 est mem 0.9 GB
+03:44:32 done  gen_lam2_67108837_s57_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:32 start gen_lam2_67108837_s59_la_N6 threads 1 est mem 0.9 GB
+03:44:38 done  gen_lam2_67108819_s57_al_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:38 start gen_lam2_67108819_s59_la_N6 threads 1 est mem 0.9 GB
+03:44:40 done  gen_lam2_67108837_s58_la_N6 OBSTRUCTED_GENUINE order 5 30s 
+03:44:40 start gen_lam2_67108837_s60_la_N6 threads 1 est mem 0.9 GB
+03:44:44 done  gen_lam2_67108819_s58_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:44:44 start gen_lam2_67108819_s60_la_N6 threads 1 est mem 0.9 GB
+03:45:00 done  gen_lam2_67108837_s59_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:45:06 done  gen_lam2_67108819_s59_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:45:08 done  gen_lam2_67108837_s60_la_N6 OBSTRUCTED_GENUINE order 5 28s 
+03:45:10 done  gen_lam2_67108819_s60_la_N6 OBSTRUCTED_GENUINE order 5 26s 
+all tasks finished; now run: python3 make_summary.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R007 && python3 check_results.py /home/ubuntu/work/HodgeLociCI/jobs/queue/results/R007
+
+real	10m39.219s
+user	36m38.836s
+sys	2m44.934s
