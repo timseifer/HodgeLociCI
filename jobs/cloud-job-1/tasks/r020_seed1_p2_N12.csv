@@ -1,0 +1,3 @@
+# R020: second-prime confirmation of R001 (lambda = -1 generic seed 1 a x l) to order 12 at MOD 67108819 (~118 GB)
+job,lam,p,seed,kind,N,threads
+a,-1,67108819,1,al,12,22
