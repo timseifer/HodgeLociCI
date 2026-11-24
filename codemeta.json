@@ -3,10 +3,10 @@
   "@type": "SoftwareSourceCode",
   "name": "HodgeLociCI",
   "description": "Macaulay2 package for Hodge loci (Noether-Lefschetz loci) of combinations of linear or complete-intersection cycles in smooth hypersurfaces: first-order excess calculator, second-order obstruction check, Fermat higher-order expansion, validation suite, Lean certificates. Includes a Docker image definition (Macaulay2 1.22) and an MCP server (Python) exposing four tools. AI-generated; not yet reviewed by a human.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "identifier": "https://doi.org/10.5281/zenodo.24455334",
   "dateCreated": "2026-11-22",
-  "datePublished": "2026-11-22",
+  "datePublished": "2026-11-25",
   "license": "https://spdx.org/licenses/MIT",
   "codeRepository": "https://github.com/timseifer/HodgeLociCI",
   "programmingLanguage": [
