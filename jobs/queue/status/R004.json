@@ -1,1 +1,1 @@
-{"id": "R004", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "1361aef15a889545373b126f8de0d453f7cba664", "alert": false, "summary": "queued"}
+{"id": "R004", "state": "RUNNING", "started": "2026-11-24T03:30:01Z", "finished": null, "host": "cloud", "commit": "e3c147d841b89871cbe0496ead79290adb5a95c7", "alert": false, "summary": "running alongside R001 (22+8 cores)"}

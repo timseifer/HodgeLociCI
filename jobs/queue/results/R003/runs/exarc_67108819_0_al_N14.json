@@ -1,0 +1,16 @@
+{
+ "tag": "exarc_67108819_0_al_N14",
+ "lambda": -1,
+ "prime": 67108819,
+ "seed": 0,
+ "kind": "exarc_al",
+ "order_requested": 14,
+ "order_reached": 14,
+ "verdict": "EXTENDS",
+ "note": "arc to order 14",
+ "runtime_s": 1039.2,
+ "peak_rss_gb": 10.21,
+ "engine_version": "1f4eeb9d39c7",
+ "arc_digest": "a75bb7a8c7349aad",
+ "threads": 2
+}

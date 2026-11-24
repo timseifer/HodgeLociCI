@@ -1,0 +1,7 @@
+job,lambda,prime,seed,kind,order_requested,order_reached,verdict,runtime_s,peak_rss_gb,code_commit,engine_version,threads,log,arc_digest,note
+c,-1,67108819,0,exarc_al,13,13,EXTENDS,312.4,4.4,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108819_0_al_N13.log,0e54c4360c88b58a,arc to order 13
+c,-1,67108819,0,exarc_la,13,13,EXTENDS,506.6,5.52,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108819_0_la_N13.log,8103d63a6acde527,arc to order 13
+c,-1,67108837,0,exarc_la,13,13,EXTENDS,510.6,5.52,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108837_0_la_N13.log,b04dc1ead8d43204,arc to order 13
+c,-1,67108837,0,exarc_al,14,14,EXTENDS,1049.2,10.21,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108837_0_al_N14.log,f8fbf83faa7a9624,arc to order 14
+c,-1,67108819,0,exarc_al,14,14,EXTENDS,1039.2,10.21,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108819_0_al_N14.log,a75bb7a8c7349aad,arc to order 14
+c,-1,67108837,0,exarc_la,14,14,EXTENDS,1587.8,13.05,1d72e136405a98de6a70c14bbdb1caa131ac0adf,1f4eeb9d39c7,2,runs/exarc_67108837_0_la_N14.log,5a6f0329f4e29d72,arc to order 14

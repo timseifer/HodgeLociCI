@@ -1,1 +1,1 @@
-{"id": "R003", "state": "RUNNING", "started": "2026-11-24T02:54:04Z", "finished": null, "host": "cloud", "commit": "25509b6456f23517be9812728929b91ca436b457", "alert": false, "summary": "running"}
+{"id": "R003", "state": "DONE", "started": "2026-11-24T02:54:09Z", "finished": "2026-11-24T03:29:03Z", "host": "cloud", "commit": "1d72e136405a98de6a70c14bbdb1caa131ac0adf", "alert": false, "summary": "lambda=-1 EX-T6 sparse arcs: 6/6 EXTENDS (al/la both primes to 13; al both primes and la MOD 67108837 to 14); CHECK PASS; 35 min wall, peak 13.05 GB/run"}
