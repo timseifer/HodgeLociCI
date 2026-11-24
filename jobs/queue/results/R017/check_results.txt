@@ -1,0 +1,19 @@
+FAIL a lam -1 p 67108837 seed 2 al N10: does not reproduce w3_sp8_67108837_s2_al.log: FAIL at expected line 29
+ expected: peak RSS 0.92 GB
+ result  :  E'_5: 6622264 terms
+ok   a lam -1 p 67108837 seed 2 al N10 reproduces generic_67108837_s2_al_N7.log
+FAIL a lam -1 p 67108837 seed 3 al N10: does not reproduce w3_sp8_67108837_s3_al.log: FAIL at expected line 29
+ expected: peak RSS 0.92 GB
+ result  :  E'_5: 6622264 terms
+ok   a lam -1 p 67108837 seed 3 al N10 reproduces generic_67108837_s3_al_N7.log
+FAIL a lam -1 p 67108837 seed 5 la N10: does not reproduce w3_sp8_67108837_s5_la.log: FAIL at expected line 29
+ expected: peak RSS 0.92 GB
+ result  :  E'_5: 6622264 terms
+ok   a lam -1 p 67108837 seed 5 la N10 reproduces generic_67108837_s5_la_N7.log
+FAIL a lam -1 p 67108837 seed 6 la N10: does not reproduce w3_sp8_67108837_s6_la.log: FAIL at expected line 29
+ expected: peak RSS 0.92 GB
+ result  :  E'_5: 6622264 terms
+ok   a lam -1 p 67108837 seed 6 la N10 reproduces generic_67108837_s6_la_N7.log
+
+verdicts: {'ERROR': 0, 'EXTENDS': 4, 'NOT_RUN': 0, 'OBSTRUCTED_CHOICE': 0, 'OBSTRUCTED_GENUINE': 0, 'OBSTRUCTED_UNRESOLVED': 0}
+CHECK FAIL (4 problems)
