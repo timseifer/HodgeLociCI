@@ -1,0 +1,31 @@
+{
+ "tag": "gen_lam2_67108819_s33_al_N6",
+ "lambda": 2,
+ "prime": 67108819,
+ "seed": 33,
+ "kind": "al",
+ "order_requested": 6,
+ "order_reached": 5,
+ "verdict": "OBSTRUCTED_GENUINE",
+ "note": "K.c_6 not in Im DG4 + J_n(Z); non-linear part in Im DG4 (one random k)",
+ "history": [
+  [
+   4,
+   "zero"
+  ],
+  [
+   5,
+   "corrected x2"
+  ],
+  [
+   6,
+   "OBSTRUCTED at order 6 (K.c6 not in Im DG4 + Lambda(ker DG4))"
+  ]
+ ],
+ "runtime_s": 23.5,
+ "peak_rss_gb": 0.274,
+ "engine_version": "8e8d1b39e4f3",
+ "v_digest": "34e3038f1da579a2",
+ "arc_digest": "85863cfc79a169c7",
+ "threads": 1
+}

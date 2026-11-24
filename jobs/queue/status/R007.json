@@ -1,1 +1,1 @@
-{"id": "R007", "state": "RUNNING", "started": "2026-11-24T03:34:57Z", "finished": null, "host": "cloud", "commit": "c135926b78d6ccaf25c14a575a364ff932812327", "alert": false, "summary": "running"}
+{"id": "R007", "state": "DONE", "started": "2026-11-24T03:34:30Z", "finished": "2026-11-24T03:45:10Z", "host": "cloud", "commit": "7f700846c5e64a736be5b25d22bbbf3955535ced", "alert": false, "summary": "lambda=2 controls seeds 13-60, both primes: 96/96 OBSTRUCTED_GENUINE at order 6; CHECK PASS; 10.7 min wall, ~0.27 GB/run"}
