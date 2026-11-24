@@ -1,0 +1,43 @@
+== 0. environment
+   Linux 129-153-231-100 6.8.0-1064-nvidia #67~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 17 21:53:31 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+   30
+                  total        used        free      shared  buff/cache   available
+   Mem:             222           1         219           0           2         219
+   Swap:              0           0           0
+   Python 3.10.12
+   numpy 1.21.5
+   g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+   PASS compiled kernel built (build/libfsc.so)
+== 1. engine unit test (tooling/fermat_series, compiled kernel vs numpy references, about 40 s)
+   PASS RESULT PASS (31.8s)
+== 2. direction generator: W3's 12 lambda = -1 generic directions regenerated from (p, seed, kind) and Mc
+   PASS dir_67108819_s1_al identical
+   PASS dir_67108819_s2_al identical
+   PASS dir_67108819_s3_al identical
+   PASS dir_67108819_s4_la identical
+   PASS dir_67108819_s5_la identical
+   PASS dir_67108819_s6_la identical
+   PASS dir_67108837_s1_al identical
+   PASS dir_67108837_s2_al identical
+   PASS dir_67108837_s3_al identical
+   PASS dir_67108837_s4_la identical
+   PASS dir_67108837_s5_la identical
+   PASS dir_67108837_s6_la identical
+== 3. (i) lambda = -1, EX-T6 arc a x l, MOD 67108837, z index 0, ORDER 11 (vs W3 hi_67108837_0_al_11 / SP-T6 expected)
+   PASS exarc_67108837_0_al_11.log: PASS (28 expected lines reproduced)
+   PASS HISTORY identical
+   PASS final arc identical to reference/w3_arc_67108837_0_al_11.npy
+== 4. (ii) lambda = 2, generic directions, ORDER 6 obstruction test (vs W3 gen logs: same ranks, same verdict)
+   PASS gen_lam2_67108837_s1_al_N6.log: PASS (23 expected lines reproduced)
+   PASS gen_lam2_67108837_s1_al_N6: verdict OBSTRUCTED_GENUINE, general analysis agrees with W3's criterion
+   PASS gen_lam2_67108819_s4_la_N6.log: PASS (23 expected lines reproduced)
+   PASS gen_lam2_67108819_s4_la_N6: verdict OBSTRUCTED_GENUINE, general analysis agrees with W3's criterion
+== 5. (iii) lambda = -1, generic direction seed 1 (a x l), MOD 67108837, ORDER 8 (vs W3 gen_67108837_-1_1_al / SP-T6 expected)
+   PASS gen_lam-1_67108837_s1_al_N8.log: PASS (28 expected lines reproduced)
+   PASS HISTORY identical
+   PASS verdict EXTENDS to 8
+   CALIBRATION generic order 8: 24 s wall with 30 threads; model (1 thread, SP-T6 machine) 278 s -> speed factor 0.39 (then: python3 estimate.py --speed 0.39)
+== 6. obstruction-analysis code path (forced at order 7 on a lambda = -1 direction that extends; expected TEST_OBSTRUCTED_CHOICE)
+   PASS forced analysis: linear solution re-applied, exact recomputation passes
+
+VALIDATION PASS
