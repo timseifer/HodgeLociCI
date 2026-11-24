@@ -1,0 +1,4 @@
+# R019 (backfill, overnight): W3 lambda = -1 generic seeds 2 and 5 to order 11 at MOD 67108837 (about 37 GB each)
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,2,al,11,8
+a,-1,67108837,5,la,11,8

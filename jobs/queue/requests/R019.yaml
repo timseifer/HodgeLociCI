@@ -1,0 +1,11 @@
+id: R019
+requested_by: "coordinator (backfill overnight, keep the machine busy)"
+priority: 5
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/r019_generic_N11_overnight.csv --out jobs/queue/results/R019 --cores 16 --mem-gb 90 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 16, memory_gb: 90, est_minutes: 120}
+after: [R000]
+preregistration: "W3 lambda = -1 generic seeds 2 (a x l) and 5 (l x a) at MOD 67108837 to order 11 (previously 8). Dead end = OBSTRUCTED_GENUINE at order <= 11."
+expected_outputs: ["jobs/queue/results/R019/manifest.csv", "jobs/queue/results/R019/summary.md"]
+notes: "Backfill for the night; best started after the R001 rerun frees memory. No time limit."
