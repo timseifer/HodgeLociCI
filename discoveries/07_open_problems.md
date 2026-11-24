@@ -902,8 +902,16 @@ I_Q^2 condition at degree 6): AGREE, tables identical on all monomials of degree
 No EXACT certificate at the split points. (SO-T6, MOD 32003 and 31991, order 2) At points of the C_18 family F_T
 the one extra Hodge-tangent direction of [J(P^2,T)] is unobstructed at second order (2 seeds x 2 primes; controls
 pass; the non-vacuity of the all-zero matrices rests on a nontriviality check and on the cubic-sixfold controls,
-ARG); verdict SURVIVES, consistent with a codim-54 component containing F_T as a divisor. Not blind-checked;
-order 2 only.
+ARG); verdict SURVIVES, consistent with a codim-54 component containing F_T as a divisor. Blind check BC-SO (own
+code for T, V, X and a different evaluation route for psi; shared only the characterisation of psi, ARG): AGREE
+at 2 seeds x 2 primes (dims 310/309, order-2 matrices 0), positive control and nontriviality pass.
+(SO3-T6, MOD 32003 and 31991, order 3; pre-registered) With the order-2 correction g_2 solved for (it is not 0)
+and its cross term included, the order-3 condition on the extra direction vanishes on all of T NL at 2 seeds x
+2 primes (4/4): the two parts are each nonzero on 246 of 310 basis vectors and cancel exactly. Controls: a known
+third-order obstruction on a Fermat cubic sixfold is detected (and the unobstructed cases are not flagged); the
+third-order evaluator agrees with the package's Fermat periods; family directions (in T F_T) pass at both seeds.
+The freedom matrix was spot-checked on 2 random directions, not computed in full. Verdict SURVIVES (orders 2 and
+3). Not blind-checked; finite order.
 Wording: finite-order arcs are evidence, not a proof that a component exists; NOT a candidate.
 
 **Not established.**
@@ -933,10 +941,11 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 
 **Next step.**
 
-Since TS-T6 says geometric: identify a codim-54 family containing F_T as a divisor (or show none exists); an
-order-3 test at C_18 points and a blind check of SO-T6; an exact certificate at a split point; a specific smooth
-member off the cone locus with an exact proof that the class is Hodge there. More random lambda = -1 directions
-at the Fermat point add little.
+In this order (owner's plan, 24 Nov): (1) DONE: blind check of order 2, order-3 test; (2) a pre-registered search
+for a codim-54 family containing F_T as a divisor among named construction types ("ruled out" means only those
+types); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) only if (2) finds
+nothing: a specific smooth member off the cone locus with an exact proof that the class is Hodge there. Also: a
+blind check of the order-3 test. More random lambda = -1 directions at the Fermat point add little.
 
 **Session references (files not public).**
 

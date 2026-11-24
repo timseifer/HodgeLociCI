@@ -44,8 +44,10 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
   Fermat4 + G (G a cubic fourfold with two disjoint planes; no automorphism swaps the planes, EXACT computer-assisted),
   lambda = -1 generic directions extend to order 6 (16/16) and 8 (8/8), lambda = 2 is obstructed at order 6, lambda_0 = 1
   extends. Blind check BC-TS: AGREE (own tables and order-6 driver; cone-geometry code shared). [TS-T6, BC-TS]
-- Second order at C_18 points: the extra Hodge-tangent direction of F_T is unobstructed at order 2 (2 seeds x 2 primes,
-  MOD p; not blind-checked), consistent with a codim-54 component containing F_T as a divisor. [SO-T6]
+- Orders 2 and 3 at C_18 points: the extra Hodge-tangent direction of F_T is unobstructed at order 2 (2 seeds x 2
+  primes, MOD p; blind check BC-SO agrees) and at order 3 (4/4, MOD p; exact cancellation of two nonzero parts;
+  controls pass; not blind-checked), consistent with a codim-54 component containing F_T as a divisor. [SO-T6, BC-SO,
+  SO3-T6]
 - lambda_0 = +1 for this configuration (checked): lambda = -1 is not the special coefficient of the general rule; its
   first-order excess is a property of special points (Fermat, Z_0, Cone_18). [D-TENFOLD-LAMBDA0-CHECK]
 
@@ -64,7 +66,7 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
    If found, the lead is EXPLAINED (most likely outcome by analogy).
 2. F_T's tangent cone at the Fermat point computed directly.
 3. DONE (MOD p): orders 9-12, many more directions, and the symmetry test (geometric). Still missing: G4 = 0 on all
-   of Sigma1 symbolically; exact certificates at the split points; order >= 3 at C_18 points.
+   of Sigma1 symbolically; exact certificates at the split points; order >= 4 at C_18 points; a blind check of order 3.
 4. A specific smooth member of W off Cone_d, with an exact equation, a smoothness proof and an exact proof that the
    class is Hodge there.
 5. One blind check plus one devil's advocate on the final claim.
