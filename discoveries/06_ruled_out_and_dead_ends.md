@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (25)
+## Entries on this page (26)
 
 | id | status | title |
 |---|---|---|
@@ -37,6 +37,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-DELSARTE-UNSOLVED-FAMILIES](#n-delsarte-unsolved-families) | `RULED_OUT` | Smooth Delsarte sextic fourfolds, quartic sixfolds and cubic tenfolds: every Hodge character closed by published criteria |
 | [N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS](#n-thom-sebastiani-sextic-fourfolds) | `RULED_OUT` | Sextic fourfolds f(x) + g(y): no explicit member with a Hodge class outside the known algebraic cases |
 | [N-SPECIAL-REGIONS-TARGET-FAMILIES](#n-special-regions-target-families) | `RULED_OUT` | Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata |
+| [N-TENFOLD-CODIM54-SEARCH](#n-tenfold-codim54-search) | `RULED_OUT` | Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it) |
 
 ---
 
@@ -1121,3 +1122,62 @@ Decide the tenfold Z_0 lead: Fermat arcs at Movasati's cubic tenfold point (lamb
 strategy, or a point of W off the cone locus.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[T6c]" 10:16Z-11:57Z.
+
+---
+
+## N-TENFOLD-CODIM54-SEARCH
+
+**Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it)**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+```text
+Pre-registered search (24 Nov 2026) for a family of smooth cubic tenfolds of codimension 54 containing F_T (cubic
+tenfolds containing V = J(P^2, T), T an elliptic ruled sextic; codim 55) as a divisor, carrying a 5-cycle with a
+nonzero [V]-component, which would explain the extra Hodge-tangent direction of O-TENFOLD-CONE-LEAD. Ruled out
+among the named types, at the tested members and to first order MOD p (32003, 31991), with the ARG steps stated:
+(F) two-class / lattice reading: at random X in F_T the first-order Hodge lattice along F_T is <h^5, [V]> (m = 1,
+4/4 runs), so a codim-54 branch would be a Hodge locus of the single class [V] mod h^5 and needs a new cycle;
+(A) joins J(P^2, S) with other C_18-type surfaces: integrality leaves only the sextic del Pezzo class 4h^2 - T; its
+cone family has codim 55; (D) linkage residuals of V: R22 (class 4h^5 - [V]) and R23 (6h^5 - [V]) give codim 55
+(their deformations stay in F_T); R33 and R222 UNDECIDED (linear algebra exceeded memory); (E) degenerations of T
+(plane u quintic scroll, three planes u cubic scroll): codim 55; (B) cones with smaller vertex: line vertex codim
+>= 64 (count); point vertex excluded because a random X in F_T has no Eckardt-type point; (C) small-degree
+5-folds: J(line, v_3(P^2)) codim 34 (count), 3 x 4 rank <= 2 determinantal 5-fold codim 32; Pfaffian, Segre,
+P^3-bundle and scroll cases excluded by integrality or done before.
+```
+
+**Conditions.**
+
+Only the named types and the tested members; first order; MOD p at two primes; random points. This is NOT a proof
+that no codim-54 family exists. Not covered: R33, R222; non-reduced or singular irreducible degenerations of T;
+P^3-bundles over T other than V; projected degree-9 scrolls; unions beyond U9/U12.
+
+**Evidence.**
+
+Session agent CS-T6, files checks/cs_t6/ (session folder, not in this repository); pre-registration and verdicts
+in the session ledger.
+
+**Independent check.** None (no type was explained, so no blind check was triggered by the pre-registration).
+
+**Not established.**
+
+R33 and R222 (estimate: dense nullspaces 51975 x 7362 and 36279 x 3567 need about 6-10 GB; a sparse solver should
+fit in 3 GB). Side observation, OPEN: at sextic del Pezzo cone points J(Pi, S') the Hodge-tangent codim of [V'] is
+50 against family codim 55 (4/4, MOD p), not interpreted.
+
+**Known before.**
+
+Construction types already excluded before this search: EXP-T6 and W1 lists in O-TENFOLD-CONE-LEAD; Kloosterman
+arXiv:2312.12363 Thm 5.3 (cones = Cone_d); rStation #5 Sec. 11 (split family and cones over eightfolds, slice
+dimension <= 155).
+
+**Reproduce.** not reproducible from this repository: session scripts checks/cs_t6/ (cslib.m2, f1, a1, d1, d2, e1, b2, c1).
+
+**Do not repeat.** The types above at first order; the del Pezzo class is the only other C_18 surface class allowed by integrality.
+
+**Next step.** R33 / R222 with a sparse solver; the del Pezzo observation (codim 50) as a separate pre-registered test.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[CS-T6]" 17:40Z PRE (written ~17:10Z) to 23:31Z CLOSE (24 Nov).

@@ -52,6 +52,11 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
   first-order excess is a property of special points (Fermat, Z_0, Cone_18). [D-TENFOLD-LAMBDA0-CHECK]
 
 ## Constructions tested, and why each fails to explain W
+- Pre-registered codim-54 search (24 Nov, N-TENFOLD-CODIM54-SEARCH; first order, MOD p): ruled out among six named
+  types (lattice/two-class reading; joins with the del Pezzo C_18 class; linkage residuals R22, R23 (R33, R222
+  undecided); degenerations of T; cones with point or line vertex; small-degree 5-folds incl. a 3 x 4 determinantal
+  one). The first-order Hodge lattice along F_T is <h^5, [V]>, so W would need a new 5-cycle. Not a proof that none
+  exists.
 - Cones (Kloosterman Thm 5.3): equal to Cone_d. [LIT]
 - Determinantal tower (TD10, det^3, l^4Q^4 + det): codims 52, 88, 32. [DA-T6]
 - Swap-invariant families; sums of lambda_0 classes of other Fermat 5-planes; residual/linked cycles. [DA-T6]

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T21:40Z",
+  "updated": "2026-11-24T23:45Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
     {
@@ -9,6 +9,7 @@
       "status": "OPEN",
       "registry": [
         "O-TENFOLD-CONE-LEAD",
+        "N-TENFOLD-CODIM54-SEARCH",
         "D-TENFOLD-LAMBDA0-CHECK"
       ]
     },
@@ -24,6 +25,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-24",
+      "what": "Tenfold lead: pre-registered search for a known construction explaining the codim-54 branch: none of six named types explains it (first order, mod p; two cases undecided for memory). This rules out only those types. Lead still open, NOT a candidate."
+    },
     {
       "when": "2026-11-24",
       "what": "Prior work credited: rStation papers #5 (u/lelong_ridge, 18 Oct 2026; Movasati's Conjecture 1 fails for cubic sixfolds and eightfolds; Theorem D at n = 10) and #11 (17 Oct 2026; Hodge conjecture for Thom-Sebastiani cubic tenfolds) added to the registry. The tenfold lead addresses #5's open question (a component above slice dimension 155): evidence suggests yes, for lambda = -1 only (mod p, finite order); still an open lead, NOT a candidate."
