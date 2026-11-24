@@ -1,0 +1,1 @@
+{"id": "R007", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "ce8dfc779f422d65360a684bf6edbfc9f9c8cb99", "alert": false, "summary": "queued (cores busy: R001 22 + R003/R004 8)"}
