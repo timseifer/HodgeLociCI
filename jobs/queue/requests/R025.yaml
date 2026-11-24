@@ -1,0 +1,20 @@
+id: R025
+requested_by: coordinator (for T6c)
+priority: 7
+command: bash jobs/cloud-job-2/m2scan/run_zq431_exact.sh jobs/queue/results/R025 100000
+working_dir: .
+requires:
+- macaulay2
+- python3
+resources:
+  cores: 1
+  memory_gb: 16
+  est_minutes: 90
+after: []
+preregistration: Exact (QQ) checker at T6c's Z_431 point. Expected = MOD p result (smooth, E' = 3, S false, SOME DIE, rank 5, czd 0). Surprise = a different exact verdict. TIMEOUT is a valid outcome.
+expected_outputs:
+- jobs/queue/results/R025/zq431_exact.out
+- jobs/queue/results/R025/zq431_exact.status
+notes: 'Re-run of R015, which hit the OLD 90-min timeout argument (lead error, rc=124) and gave no exact verdict. Per Tim: no time limit; run to completion with the command exactly as written (timeout argument
+  100000 min). 1 core freed by R015. Lowest priority; TIMEOUT/unfinished at session end is a valid outcome. Macaulay2 is already authorised by Tim directly (not by this file).'
+est_minutes_note: unknown; previous attempt (R015) ran 386 min wall without output under an old 90-min timeout
