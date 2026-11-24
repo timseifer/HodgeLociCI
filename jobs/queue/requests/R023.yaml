@@ -1,0 +1,11 @@
+id: R023
+requested_by: "coordinator (next logical step: a second generic direction, other Segre type, to order 12)"
+priority: 4
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/r_seed4_67108819_N12.csv --out jobs/queue/results/R023 --cores 20 --mem-gb 130 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 20, memory_gb: 130, est_minutes: 150}
+after: [R000, R022]
+preregistration: "lambda = -1 generic seed 4 (l x a, the other Segre type than R001/R020) to order 12 at MOD 67108819. Dead end = obstruction at order <= 12 (verdict OBSTRUCTED_GENUINE). Survival strengthens the lead only."
+expected_outputs: ["jobs/queue/results/R023/manifest.csv", "jobs/queue/results/R023/summary.md"]
+notes: "Backfill: start when 20 cores / 130 GB are free (after R016/R017 finish). No time limit. Do not run R022 and R023 at the same time (memory)."

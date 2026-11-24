@@ -1,0 +1,3 @@
+# generic seed 4 (l x a) to order 12 at MOD 67108837 (~118 GB)
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,4,la,12,20
