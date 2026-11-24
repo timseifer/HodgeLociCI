@@ -1,1 +1,1 @@
-{"id": "R015", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "882323dc8cacd8cd50ddb8307cd3f991fcc72277", "alert": false, "summary": "queued (BUDGET.yaml now has no time limit); all 30 cores busy with R001 (22) + R004 (8); starts as cores free, by priority and after-dependencies"}
+{"id": "R015", "state": "RUNNING", "started": "2026-11-24T06:00:00Z", "finished": null, "host": "cloud", "commit": "afd4e1ee068fe2c65107a754d663f3677750ebaf", "alert": false, "summary": "running; M2 1.22 via docker image hodgelocici (operator-authorised)"}

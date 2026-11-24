@@ -17,22 +17,23 @@ g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
 
 ## Headline
 
-**ATTENTION: 1 lambda = -1 run(s) did NOT extend to the requested order** (see the table; verdicts OBSTRUCTED_GENUINE / OBSTRUCTED_CHOICE / OBSTRUCTED_UNRESOLVED / ERROR are explained in README.md).
+lambda = -1: 1 run(s) EXTEND to their requested order (highest order reached: 12).
 A finite order is evidence only; it cannot prove that a component exists (checks/w4 REPORT.md).
 
 ## All runs
 
 | job | lambda | prime | seed | kind | N req | N reached | verdict | runtime s | peak RSS GB | note |
 |---|---|---|---|---|---|---|---|---|---|---|
-| a | -1 | 67108837 | 1 | al | 12 | 0 | ERROR | 2536.8 | 0 | exit code -9: ORDER 11 : K.c_m nonzero for m < n: []  K.c_n nnz 54 (2275s) |    x_8 effect rank 16, equals DG4(v): True; |
+| a | -1 | 67108837 | 1 | al | 12 | 12 | EXTENDS | 7935.6 | 117.832 | arc to order 12 |
 
-code_commit: ['1361aef15a889545373b126f8de0d453f7cba664']; engine_version: ['1f4eeb9d39c7']
+code_commit: ['1361aef15a889545373b126f8de0d453f7cba664', 'c1fd3c5d3fc260494ee7ac0664ba9aff63d9c68e']; engine_version: ['1f4eeb9d39c7', '8e8d1b39e4f3']
 
 ## Operator note (cloud lead)
 
-The ERROR row (exit code -9) is NOT an obstruction and NOT an out-of-memory kill: the cloud lead killed the run
-(SIGKILL to the hodge_job.py PID only) at 03:33:49Z, killed at the time limit in effect: order 11 had completed
-(ORDER 11: K.c_m = 0 for m < 11; x_8 effect rank 16 = DG4(v); K.c_11 in Im DG4(v): True, corrected), and order 12
-(E'_11 about 3x E'_10, which alone took 1161 s) could not finish before the 100-minute budget ends (04:28:33Z).
-So the lambda = -1 generic direction seed 1 (a x l, MOD 67108837) survives to order 11 (W3 had order 8); order 12 untested.
-Peak RSS observed by the lead before the kill: about 71 GB (the sidecar records 0 because the process was killed).
+The manifest has two rows for the same task. Row 1 (ERROR, exit -9) is attempt 1, killed by the cloud lead at
+03:33:49Z after order 11 had completed (K.c_11 in Im DG4(v): True), because order 12 could not finish within the
+original 100-minute budget; its log/sidecar are kept as runs/*.attempt1_killed_after_order11.{log,json}. It is NOT an
+obstruction. The operator (Tim) then approved a longer time budget, and the identical R001 command was rerun
+(03:47:05Z - 05:59:24Z, 22 threads, next to R004/R010): row 2, EXTENDS to order 12 (HISTORY ... (12, 'corrected x9
+(affine)')), 7936 s, peak RSS 117.8 GB (above the 108 GB estimate; E'_11 = 9,869,427,386 terms).
+check_results.py keeps the last row per log: CHECK PASS.

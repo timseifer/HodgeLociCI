@@ -1,2 +1,3 @@
 job,lambda,prime,seed,kind,order_requested,order_reached,verdict,runtime_s,peak_rss_gb,code_commit,engine_version,threads,log,arc_digest,note
 a,-1,67108837,1,al,12,0,ERROR,2536.8,0,1361aef15a889545373b126f8de0d453f7cba664,1f4eeb9d39c7,22,runs/gen_lam-1_67108837_s1_al_N12.log,,"exit code -9: ORDER 11 : K.c_m nonzero for m < n: []  K.c_n nnz 54 (2275s) |    x_8 effect rank 16, equals DG4(v): True; K.c_n in Im DG4(v): True (2275s) |    E'_8: 447156775 terms (105s) (2381s)"
+a,-1,67108837,1,al,12,12,EXTENDS,7935.6,117.832,c1fd3c5d3fc260494ee7ac0664ba9aff63d9c68e,8e8d1b39e4f3,22,runs/gen_lam-1_67108837_s1_al_N12.log,436e7b19ee4a6735,arc to order 12
