@@ -1,0 +1,5 @@
+# R026 (backfill for 6 cores freed by R021): lambda = -1 generic NEW seeds 73-75 to order 10 (about 13 GB each, 2 threads)
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,73,al,10,2
+a,-1,67108819,74,la,10,2
+a,-1,67108837,75,la,10,2

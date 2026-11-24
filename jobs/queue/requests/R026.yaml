@@ -1,0 +1,11 @@
+id: R026
+requested_by: "coordinator (backfill for 6 cores freed by R021)"
+priority: 2
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/r026_generic_N10.csv --out jobs/queue/results/R026 --cores 6 --mem-gb 45 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 6, memory_gb: 45, est_minutes: 240}
+after: [R000]
+preregistration: "3 NEW lambda = -1 generic directions (seeds 73-75, both Segre types, both primes) to order 10. Dead end = any OBSTRUCTED_GENUINE at order <= 10. Surprise = none expected beyond that (all prior generic directions extend)."
+expected_outputs: ["jobs/queue/results/R026/manifest.csv", "jobs/queue/results/R026/summary.md"]
+notes: "START NOW on the 6 cores freed by R021 (R018 8 + R024 8 + R011 7 + R025 1 = 24 busy). R019 (16) and R022 (20) do not fit yet. No deadline. Re-read the command before starting."
