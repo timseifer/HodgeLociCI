@@ -1,1 +1,1 @@
-{"id": "R023", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "3d4f76ce3ca91ba5916073253af9703155d4dafc", "alert": false, "summary": "queued after R022 (not concurrently)"}
+{"id": "R023", "state": "SKIPPED", "started": null, "finished": "2026-11-24T15:18:26Z", "host": "cloud", "commit": "696fc3c4f1b5470164fee8d9484a153509377b06", "alert": false, "summary": "cancelled by the operator's wind-down (requests/NOTE_wind_down.md, 84a06da); never started"}

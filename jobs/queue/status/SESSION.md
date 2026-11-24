@@ -48,7 +48,13 @@ Ubuntu 22.04's apt only has 1.19.1, the requests pin 1.22).
 | R024 | 12 new seeds to N10 | RUNNING | so far all EXTENDS | 11:12 - | | |
 | R025 | exact Z_431 rerun, no limit | RUNNING | | 12:38 - | | |
 | R026 | seeds 73-75 to N10 | RUNNING | | 13:43 - | | |
-| R019, R022, R023 | N11 / N12 seed 4 | QUEUED | need 16 / 20 cores; wait for running jobs | - | - | - |
+| R019, R022, R023 | N11 / N12 seed 4 | SKIPPED | cancelled by the operator's wind-down (NOTE_wind_down.md) | - | - | - |
+
+## Wind-down
+
+Operator wind-down at ~14:10Z (requests/NOTE_wind_down.md): R019, R022, R023 cancelled; no new starts; R011, R018,
+R024, R026 run to completion; R025 keeps running until the coordinator decides. (The lead noticed the note at ~15:15Z:
+it arrived inside the lead's own pull and the poller's change check missed it; nothing had been started in between.)
 
 ## Deviations and lead errors (all also in the per-request status files)
 

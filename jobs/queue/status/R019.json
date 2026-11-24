@@ -1,1 +1,1 @@
-{"id": "R019", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "02f53213b4232a09ed6a63c105e99a42726b2feb", "alert": false, "summary": "queued (overnight backfill); all 30 cores busy with R001 (22) + R004 (8)"}
+{"id": "R019", "state": "SKIPPED", "started": null, "finished": "2026-11-24T15:18:26Z", "host": "cloud", "commit": "696fc3c4f1b5470164fee8d9484a153509377b06", "alert": false, "summary": "cancelled by the operator's wind-down (requests/NOTE_wind_down.md, 84a06da); never started"}
