@@ -1,0 +1,4 @@
+job,lambda,prime,seed,kind,order_requested,order_reached,verdict,runtime_s,peak_rss_gb,code_commit,engine_version,threads,log,arc_digest,note
+a,-1,67108819,74,la,10,10,EXTENDS,6959.2,12.187,ccc1848067350d7bcca11e45e639c8d64331b498,8e8d1b39e4f3,2,runs/gen_lam-1_67108819_s74_la_N10.log,22e046206e59dae4,arc to order 10
+a,-1,67108837,75,la,10,10,EXTENDS,6967.3,12.132,ccc1848067350d7bcca11e45e639c8d64331b498,8e8d1b39e4f3,2,runs/gen_lam-1_67108837_s75_la_N10.log,4cf37ff889db82cd,arc to order 10
+a,-1,67108837,73,al,10,10,EXTENDS,7015.8,12.131,ccc1848067350d7bcca11e45e639c8d64331b498,8e8d1b39e4f3,2,runs/gen_lam-1_67108837_s73_al_N10.log,e655690446648568,arc to order 10

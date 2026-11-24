@@ -47,7 +47,7 @@ Ubuntu 22.04's apt only has 1.19.1, the requests pin 1.22).
 | R018 | 28 new seeds to N10 | RUNNING | so far all EXTENDS | 10:39 - | | |
 | R024 | 12 new seeds to N10 | RUNNING | so far all EXTENDS | 11:12 - | | |
 | R025 | exact Z_431 rerun, no limit | RUNNING | | 12:38 - | | |
-| R026 | seeds 73-75 to N10 | RUNNING | | 13:43 - | | |
+| R026 | seeds 73-75 to N10 | DONE | 3/3 EXTENDS | 13:43 - 15:40 | 117 min | 12.2 GB |
 | R019, R022, R023 | N11 / N12 seed 4 | SKIPPED | cancelled by the operator's wind-down (NOTE_wind_down.md) | - | - | - |
 
 ## Wind-down

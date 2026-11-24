@@ -1,0 +1,2 @@
+p 67108837 z 9827985 lam -1 seed 3 kind al rank L 38 dim T Cone_T 155 T Cone_T in ker L: True (3s)
+v: nnz 220  L v = 0: True  Mc v != 0 (not in T Cone_T): True  L_P1 v != 0 (not in T V_Z): True  nnz of c0 in x-variables: 200 (3s)
