@@ -1,0 +1,11 @@
+id: R021
+requested_by: "coordinator (re-queue of R010's 40 never-started seeds)"
+priority: 3
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/r021_generic_N9_rest.csv --out jobs/queue/results/R021 --cores 8 --mem-gb 42 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 8, memory_gb: 42, est_minutes: 260}
+after: [R000]
+preregistration: "40 new lambda = -1 generic directions (R010's NOT_RUN seeds) at order 9. Dead end = any OBSTRUCTED_GENUINE at order <= 9."
+expected_outputs: ["jobs/queue/results/R021/manifest.csv", "jobs/queue/results/R021/summary.md"]
+notes: "NO --deadline-min (Tim: no time limits). If more cores are free, it is fine to run with --cores 16 --mem-gb 80 instead (same tasks, same outputs)."
