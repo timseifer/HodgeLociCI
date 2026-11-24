@@ -1,0 +1,15 @@
+{
+ "tag": "gen_lam-1_67108837_s72_la_N10",
+ "lambda": -1,
+ "prime": 67108837,
+ "seed": 72,
+ "kind": "la",
+ "order_requested": 10,
+ "order_reached": 0,
+ "verdict": "ERROR",
+ "note": "exit code -9:    x_6 effect rank 16, equals DG4(v): True; K.c_n in Im DG4(v): True (736s) |    E'_6: 32119852 terms (17s) (754s) |    E'_7: 129026198 terms (106s) (860s)",
+ "runtime_s": 983.1,
+ "peak_rss_gb": 0,
+ "engine_version": "1f4eeb9d39c7",
+ "threads": 4
+}

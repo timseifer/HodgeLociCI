@@ -1,0 +1,2 @@
+JUMP 4 3 F={1} H={1} P={2, 2, 3} info=deg 11 linear factors 1 t=4.99581
+JUMP 4 3 F={1} H={1} P={2, 2, 3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=6.40049
