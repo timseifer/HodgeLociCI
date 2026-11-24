@@ -5,7 +5,8 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 ## [Unreleased]
 
 - discoveries: O-TENFOLD-CONE-LEAD updated with the 24 Nov cloud runs (MOD p; lead still OPEN, not a candidate);
-  new leads/TENFOLD_CONE_LEAD_DOSSIER.md (readable summary of that entry).
+  new leads/TENFOLD_CONE_LEAD_DOSSIER.md (readable summary of that entry); symmetry test (TS-T6, blind-checked) and
+  second-order test (SO-T6) added; new D-TENFOLD-LAMBDA0-CHECK.
 - tooling/fermat_series: compiled kernel for the Fermat cubic tenfold period expansion, with a test against the
   reference engines (CI job `fermat-series-kernel`). AI-generated, unreviewed tooling; no mathematical claim.
 

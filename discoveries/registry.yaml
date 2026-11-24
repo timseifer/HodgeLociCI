@@ -5411,12 +5411,23 @@
     values incl. -2, -1/2, 3, 1/3, 5, 1/5, 3/2, 2/3): all obstructed at order 6; only lambda = -1 and lambda_0 = 1
     extend. The pre-registered "surprise" (generic survival to order 13 at both primes) was not testable: order 13
     needs about 244 GB.
-    SYMMETRY VERSUS GEOMETRY (open): lambda = -1 is both the unique value fixed by the swap tau (lambda -> 1/lambda) and
-    the unique disc-18 (C_18) value, so the Fermat runs cannot separate the two. Two decisive tests were paused at
-    04:36Z (operator stop) and resumed about 14:08Z with written pre-registration: TS-T6 (order-6 test at a
-    Thom-Sebastiani split point Fermat4 + G(planes), a cone point in Z_0 without the swap symmetry) and SO-T6 (order 2
-    at C_18 points: is the extra Hodge-tangent direction of F_T obstructed?). SO-T6 so far (before its last control
-    finished; preliminary): unobstructed at order 2 at two points MOD 32003 and one MOD 31991. No TS-T6 verdict yet.
+    SYMMETRY VERSUS GEOMETRY (24 Nov; both tests pre-registered in writing before results were read): lambda = -1 is
+    both the unique value fixed by the swap tau (lambda -> 1/lambda) and the unique C_18 value, so Fermat runs alone
+    cannot separate the two. (TS-T6, MOD p at 67108837 and 67108819, order 6 and 8) At two Thom-Sebastiani split points
+    X = V(Fermat4(x0..x5) + G(x6..x11)), G a cubic fourfold containing two disjoint planes (cone points in Z_0), with NO
+    automorphism exchanging the planes (EXACT, computer-assisted: the two discriminant cubics have different
+    j-invariants; a symmetrised control has equal ones): generic rank-1 directions at lambda = -1 extend to order 6
+    (16/16 = 4 seeds x 2 primes x 2 points) and to order 8 (8/8, first point); lambda = 2 is obstructed at order 6
+    (4/4 seeds, both Segre types, both points, both primes); lambda_0 = 1 extends; lambda = 1/2 is also obstructed
+    (lambda and 1/lambda still agree although no symmetry forces it). All validity gates passed. Verdict by the
+    pre-registration: GEOMETRIC (the survival at lambda = -1 does not depend on the Fermat swap symmetry at these
+    points). Blind check BC-TS (own period tables and order-6 driver; shared: cone geometry code, direction recipe,
+    I_Q^2 condition at degree 6): AGREE, tables identical on all monomials of degree <= 21, verdicts 32/32 + 4/4.
+    No EXACT certificate at the split points. (SO-T6, MOD 32003 and 31991, order 2) At points of the C_18 family F_T
+    the one extra Hodge-tangent direction of [J(P^2,T)] is unobstructed at second order (2 seeds x 2 primes; controls
+    pass; the non-vacuity of the all-zero matrices rests on a nontriviality check and on the cubic-sixfold controls,
+    ARG); verdict SURVIVES, consistent with a codim-54 component containing F_T as a divisor. Not blind-checked;
+    order 2 only.
     Wording: finite-order arcs are evidence, not a proof that a component exists; NOT a candidate.
   not_established: |-
     Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
@@ -5436,9 +5447,10 @@
     Generic Fermat arcs at this point (obstructed at order 4); rank-2/3 normal directions to Cone_d (order 4); reading
     a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
   next_step: |-
-    TS-T6 verdict (symmetry versus geometry at a tau-free cone point, order 6); SO-T6 verdict (order 2 at C_18
-    points); then, only if TS-T6 says geometric: a codim-54 family containing F_T as a divisor, and a specific smooth
-    member off the cone locus. More random lambda = -1 directions at the Fermat point add little.
+    Since TS-T6 says geometric: identify a codim-54 family containing F_T as a divisor (or show none exists); an
+    order-3 test at C_18 points and a blind check of SO-T6; an exact certificate at a split point; a specific smooth
+    member off the cone locus with an exact proof that the class is Hodge there. More random lambda = -1 directions
+    at the Fermat point add little.
   session_refs: |-
     LEDGER_DISCOVERY.md "[T6d]" 11:56Z-14:47Z (23 Nov); "[W1]"-"[W4]", "[COORD]" cloud entries, "[TS-T6]", "[SO-T6]"
     (24 Nov). Cloud logs: branch cloud-job-1, jobs/queue/results/ (not on main).

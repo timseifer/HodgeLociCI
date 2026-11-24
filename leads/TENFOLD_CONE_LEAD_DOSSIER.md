@@ -40,10 +40,14 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
   at both primes (identical histories), 8 to order 10, 1 to order 9, and a batch of 48 new directions 48/48 to order 9;
   none obstructed. Sparse lambda = -1 arcs 4/4 to order 15. lambda = 2 controls 120/120 obstructed at order 6. 26 other
   coefficients obstructed at order 6; only -1 and lambda_0 = 1 extend. [cloud R001-R026, branch cloud-job-1]
-- Symmetry versus geometry: UNDECIDED. lambda = -1 is both the unique swap-fixed coefficient and the unique C_18 one.
-  The two deciding tests (TS-T6: order 6 at a tau-free Thom-Sebastiani cone point; SO-T6: order 2 at C_18 points) were
-  paused 04:36Z (operator stop) and resumed ~14:08Z with written pre-registration. SO-T6 preliminary (last control
-  pending): unobstructed at order 2 at 3 points (2 primes). TS-T6: no result yet.
+- Symmetry versus geometry (24 Nov, pre-registered): GEOMETRIC at order 6-8 (MOD p, two primes). At two split points
+  Fermat4 + G (G a cubic fourfold with two disjoint planes; no automorphism swaps the planes, EXACT computer-assisted),
+  lambda = -1 generic directions extend to order 6 (16/16) and 8 (8/8), lambda = 2 is obstructed at order 6, lambda_0 = 1
+  extends. Blind check BC-TS: AGREE (own tables and order-6 driver; cone-geometry code shared). [TS-T6, BC-TS]
+- Second order at C_18 points: the extra Hodge-tangent direction of F_T is unobstructed at order 2 (2 seeds x 2 primes,
+  MOD p; not blind-checked), consistent with a codim-54 component containing F_T as a divisor. [SO-T6]
+- lambda_0 = +1 for this configuration (checked): lambda = -1 is not the special coefficient of the general rule; its
+  first-order excess is a property of special points (Fermat, Z_0, Cone_18). [D-TENFOLD-LAMBDA0-CHECK]
 
 ## Constructions tested, and why each fails to explain W
 - Cones (Kloosterman Thm 5.3): equal to Cone_d. [LIT]
@@ -59,8 +63,8 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
 1. (W1: none found among unions/smoothings, deg 9 and 12 give codim 55; determinantal/Pfaffian not reached) A search for a codim-54 family containing F_T as a divisor (eightfold analogue: the Segre divisor inside TD).
    If found, the lead is EXPLAINED (most likely outcome by analogy).
 2. F_T's tangent cone at the Fermat point computed directly.
-3. DONE (MOD p): orders 9-12 and many more directions (above). Still missing: the TS-T6 verdict (is the survival
-   tied to the swap symmetry?); G4 = 0 on all of Sigma1 symbolically.
+3. DONE (MOD p): orders 9-12, many more directions, and the symmetry test (geometric). Still missing: G4 = 0 on all
+   of Sigma1 symbolically; exact certificates at the split points; order >= 3 at C_18 points.
 4. A specific smooth member of W off Cone_d, with an exact equation, a smoothness proof and an exact proof that the
    class is Hodge there.
 5. One blind check plus one devil's advocate on the final claim.
