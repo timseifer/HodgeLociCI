@@ -5362,6 +5362,25 @@
     SOUND; finite-order arcs are evidence, not proof. W2: the C_18 family F_T does not explain W (tangent cone at Fermat
     165-dim, a codim-1 sub-cone; ARG). W1: no codim-54 family found; at random X in F_T the Hodge-tangent codim of
     [J(P^2,T)] is 54 vs codim F_T 55 (a codim-54 branch, or a non-reduced locus since T is irregular; undecided).
+    CLOUD RUNS (24 Nov, 02:48Z-14:00Z; every line MOD p at 67108837 and/or 67108819; each batch re-checked by the
+    coordinator with check_results.py against stored reference logs: CHECK PASS, except one batch where the reported
+    FAIL is a checker artifact (it compares one line past the reference's last order; verified by hand); every batch
+    pre-registered in the session ledger with dead end = any lambda = -1 generic direction obstructed, and none hit):
+    lambda = -1, fully generic rank-1 directions: one direction (a x l) extends to order 12 at BOTH primes with identical
+    correction histories; 8 more to order 10 and 1 to order 9; a batch of 48 new directions (both Segre types, both
+    primes) 48/48 extend to order 9. No lambda = -1 generic direction has been obstructed at any order tested.
+    lambda = -1 sparse (EX-T6) arcs: 4/4 extend to order 15 (both types, both primes). lambda = 2 controls: 120/120
+    generic directions obstructed at order 6 (OBSTRUCTED_GENUINE, both primes). Other coefficients at order 7 (26
+    values incl. -2, -1/2, 3, 1/3, 5, 1/5, 3/2, 2/3): all obstructed at order 6; only lambda = -1 and lambda_0 = 1
+    extend. The pre-registered "surprise" (generic survival to order 13 at both primes) was not testable: order 13
+    needs about 244 GB.
+    SYMMETRY VERSUS GEOMETRY (open): lambda = -1 is both the unique value fixed by the swap tau (lambda -> 1/lambda) and
+    the unique disc-18 (C_18) value, so the Fermat runs cannot separate the two. Two decisive tests were paused at
+    04:36Z (operator stop) and resumed about 14:08Z with written pre-registration: TS-T6 (order-6 test at a
+    Thom-Sebastiani split point Fermat4 + G(planes), a cone point in Z_0 without the swap symmetry) and SO-T6 (order 2
+    at C_18 points: is the extra Hodge-tangent direction of F_T obstructed?). SO-T6 so far (before its last control
+    finished; preliminary): unobstructed at order 2 at two points MOD 32003 and one MOD 31991. No TS-T6 verdict yet.
+    Wording: finite-order arcs are evidence, not a proof that a component exists; NOT a candidate.
   not_established: |-
     Whether W = Cone_d locally or W is larger in rank-1 directions; the cause of the step (e) / blind-check
     disagreement (resolved: see independent_check). Still missing: orders >= 9 at lambda = -1 (exact engine needs
@@ -5380,10 +5399,12 @@
     Generic Fermat arcs at this point (obstructed at order 4); rank-2/3 normal directions to Cone_d (order 4); reading
     a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
   next_step: |-
-    Quadratic freedom at order 6 for generic rank-1 directions; lambda = -1 at order 6; the rank-1 cone as a family;
-    an exact rerun over QQ(zeta_6).
+    TS-T6 verdict (symmetry versus geometry at a tau-free cone point, order 6); SO-T6 verdict (order 2 at C_18
+    points); then, only if TS-T6 says geometric: a codim-54 family containing F_T as a divisor, and a specific smooth
+    member off the cone locus. More random lambda = -1 directions at the Fermat point add little.
   session_refs: |-
-    LEDGER_DISCOVERY.md "[T6d]" 11:56Z-14:47Z.
+    LEDGER_DISCOVERY.md "[T6d]" 11:56Z-14:47Z (23 Nov); "[W1]"-"[W4]", "[COORD]" cloud entries, "[TS-T6]", "[SO-T6]"
+    (24 Nov). Cloud logs: branch cloud-job-1, jobs/queue/results/ (not on main).
 
 - id: M-FERMAT-SERIES-KERNEL
   kind: result

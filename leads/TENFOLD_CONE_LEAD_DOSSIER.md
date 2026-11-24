@@ -1,0 +1,70 @@
+# Dossier draft: lead on cubic tenfolds (NOT a candidate)
+
+Registry entry: [O-TENFOLD-CONE-LEAD](../discoveries/07_open_problems.md#o-tenfold-cone-lead) (the registry is the
+source of truth; this dossier is a readable summary, updated 24 Nov 2026).
+
+AI-produced, unreviewed. Not a candidate under the project's candidate standard: there is no specific smooth member off the cone
+locus, and the existence of the component is inferred from finite-order arcs at one point. Wording rule: if it ever
+becomes a candidate, it is "a Hodge class not known to be algebraic", never a counterexample.
+
+## Setting
+- X0: Fermat cubic tenfold in P^11. P1, P2: two Fermat 5-planes meeting in a P^2 (Movasati's pair, arXiv:1902.00831).
+- Class [P1] - [P2] (lambda = -1). Hodge conjecture: open for cubic tenfolds (no theorem found covering all members;
+  Steenbrink covers cubic sixfolds; Hodge level 4).
+- Loci: V_Z (both planes survive; codim 39), Cone_d (X n P^8 a cone over a cubic fourfold in Hassett's C_18;
+  explained; codim 65).
+
+## What is established, with labels
+- EXACT: rank L = 38, codim V_Z = 39, excess 1; T Cone_T codim 65 inside ker L; T V_Z + T Cone_T = ker L;
+  ker L / T Cone_T = 27-dim (3x3 matrices of linear forms on the P^2). [BC-T6, EX-T6]
+- EXACT: for explicit generic rank-1 normal directions, an arc with all period equations of [P1] - [P2] vanishing
+  through order 8, with neither plane staying Hodge (not a V_Z arc). [EX-T6, 2 directions]
+- EXACT (+ARG): for [P1] + 2[P2], the same kind of direction is obstructed at order 6 for every integral arc with that
+  tangent. [EX-T6, 3 directions; ARG of step (e), not checked by a second reader]
+- EXACT at random points (+ MOD p 16/16): rank DG4 = 16 and G4 = 0 on both Segre cones; G2 = G3 = 0 on ker L. So IF the
+  tangent cone of a component W contains a whole Segre cone, W has codim exactly 54 and its tangent cone contains
+  T Cone_T; whether W contains Cone_T does not follow. [EXP-T6, W4]
+- Second reading (W4): the setup, the order-6 criterion and the tangent-cone argument are sound; the order-8 arcs at
+  lambda = -1 are evidence, not proof, of a component (all orders and a Zariski-dense set of tangents would be needed).
+- Reconciled: an apparent disagreement with the blind check came from a degenerate sub-family (explained by a join with
+  the cubic-sixfold component, where the Hodge conjecture is known). [RC-T6, EXP-T6]
+
+- Follow-up (24 Nov, MOD p): arcs at lambda = -1 extend to order 12 (one direction, two primes) and 11 (other type);
+  12/12 fully generic directions extend to order 8 at lambda = -1 and are obstructed at order 6 at lambda = 2; G4 = 0 on
+  Sigma1 exact at 40 random points. [W3]
+- At random NON-Fermat members of the C_18 family F_T, the Hodge-tangent codim of the cone cycle is 54 vs 55 for F_T
+  (first order; a branch or a non-reduced locus, undecided; second-order test running). [W1, SO-T6]
+
+- Cloud runs (24 Nov, MOD p at two primes 67108837 / 67108819; each batch pre-registered, checker re-run by the
+  coordinator: PASS, one checker artifact verified by hand): lambda = -1 fully generic rank-1 directions: 1 to order 12
+  at both primes (identical histories), 8 to order 10, 1 to order 9, and a batch of 48 new directions 48/48 to order 9;
+  none obstructed. Sparse lambda = -1 arcs 4/4 to order 15. lambda = 2 controls 120/120 obstructed at order 6. 26 other
+  coefficients obstructed at order 6; only -1 and lambda_0 = 1 extend. [cloud R001-R026, branch cloud-job-1]
+- Symmetry versus geometry: UNDECIDED. lambda = -1 is both the unique swap-fixed coefficient and the unique C_18 one.
+  The two deciding tests (TS-T6: order 6 at a tau-free Thom-Sebastiani cone point; SO-T6: order 2 at C_18 points) were
+  paused 04:36Z (operator stop) and resumed ~14:08Z with written pre-registration. SO-T6 preliminary (last control
+  pending): unobstructed at order 2 at 3 points (2 primes). TS-T6: no result yet.
+
+## Constructions tested, and why each fails to explain W
+- Cones (Kloosterman Thm 5.3): equal to Cone_d. [LIT]
+- Determinantal tower (TD10, det^3, l^4Q^4 + det): codims 52, 88, 32. [DA-T6]
+- Swap-invariant families; sums of lambda_0 classes of other Fermat 5-planes; residual/linked cycles. [DA-T6]
+- Segre P^2xP^3, P^1xP^4, P^1xQ^4, G(2,5) sections: excluded by integrality (degree divisible by 3). [EXP-T6]
+- 13 cone/join/scroll families: codims 32-60, none 54. [EXP-T6]
+- F_T does NOT explain W: its tangent cone at Fermat is 165-dim, a codim-1 sub-cone. [W2, ARG]
+- PARTIAL: C_18 family F_T (X containing J(P^2, T), T elliptic ruled sextic): codim 55, specific to lambda = -1;
+  expected to explain a codim-1 sub-cone of the directions. [EXP-T6, ARG]
+
+## What is missing before it could be a candidate
+1. (W1: none found among unions/smoothings, deg 9 and 12 give codim 55; determinantal/Pfaffian not reached) A search for a codim-54 family containing F_T as a divisor (eightfold analogue: the Segre divisor inside TD).
+   If found, the lead is EXPLAINED (most likely outcome by analogy).
+2. F_T's tangent cone at the Fermat point computed directly.
+3. DONE (MOD p): orders 9-12 and many more directions (above). Still missing: the TS-T6 verdict (is the survival
+   tied to the swap symmetry?); G4 = 0 on all of Sigma1 symbolically.
+4. A specific smooth member of W off Cone_d, with an exact equation, a smoothness proof and an exact proof that the
+   class is Hodge there.
+5. One blind check plus one devil's advocate on the final claim.
+
+## Sources (machine-read)
+Movasati arXiv:1902.00831; Kloosterman arXiv:2312.12363; Addington-Hassett-Tschinkel-Varilly-Alvarado
+arXiv:1606.05321; Albano-Collino alg-geom/9308001 (Steenbrink).
