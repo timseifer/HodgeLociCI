@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (9)
+## Entries on this page (10)
 
 | id | status | title |
 |---|---|---|
@@ -17,6 +17,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-LIAISON-IDENTITY](#d-liaison-identity) | `PROVED_AI_UNREVIEWED` | Liaison identity: [Y_1] + (-1)^(c-1) [Y_2] = m'' eta^k - [R] with R the Northcott residual |
 | [D-CODIM-VZ](#d-codim-vz) | `EXACT` | Codimension of V_Z for two linear subspaces: package values equal the published formulas |
 | [D-CODIM-AT-LAMBDA0](#d-codim-at-lambda0) | `PROVED_AI_UNREVIEWED` | Codimension and explicit description of the Hodge locus at the special coefficient lambda_0 |
+| [D-TENFOLD-LAMBDA0-CHECK](#d-tenfold-lambda0-check) | `MOD_P` | Cubic tenfold, two 5-planes meeting in a P^2: lambda_0 = +1; excess only at lambda_0 at general points, at every coefficient at the Fermat point |
 | [D-LINEAR-LIST-FIRST-ORDER](#d-linear-list-first-order) | `PROVED_AI_UNREVIEWED` | Two linear subspaces: the complete list of cases with excess away from lambda_0 at a general point |
 | [D-MOVASATI-TABLES-REPRODUCED](#d-movasati-tables-reproduced) | `EXACT` | Movasati's (H, K) tables at the Fermat cubic reproduced exactly for dimensions 4, 6, 8 |
 | [D-PUBLISHED-STATEMENTS-AT-INSTANCES](#d-published-statements-at-instances) | `MOD_P` | Published first-order statements of Kloosterman, Villaflor Loyola and Maclean reproduced at instances |
@@ -371,6 +372,55 @@ Expected: {1, 6, 16, 32, 55}. First-order excess at lambda_0 at instances: tests
 (file tests/validation/04_kloosterman_thm12_no_excess.m2; about 45 s).
 
 **Session references (files not public).** night/paper3/paper3.tex (Theorem 2(4), "Two consequences of Theorem 2(4) for cubics"); tests/SOURCES.md A2, E1.
+
+---
+
+## D-TENFOLD-LAMBDA0-CHECK
+
+**Cubic tenfold, two 5-planes meeting in a P^2: lambda_0 = +1; excess only at lambda_0 at general points, at every coefficient at the Fermat point**
+
+kind: `result` | area: `first_order` | status: **`MOD_P`**
+
+**Statement.**
+
+For (d,k,c) = (3,5,3) (two 5-planes meeting in a P^2 on a cubic tenfold; c = k - m = 3) the first-order rule
+(D-FIRST-ORDER-RULE; paper 3 Thm 1, Thm 9.7) gives lambda_0 = (-1)^(c-1) = +1, tau = 0, e_tau = 1, codim V_Z = 39,
+codim NL at lambda_0 = 38, and (3,5,3) is not in the sporadic list, so for lambda not in {0, 1} the excess at a
+general point of V_Z is 0. Computed (MOD 32029): at a random point of V_Z the first-order excess is 1 at lambda = 1
+and 0 at lambda = -1, 2, 1/2; at the Fermat point (Movasati's pair) it is 1 at lambda = 1, -1, 2, 1/2.
+Consequence for O-TENFOLD-CONE-LEAD: lambda = -1 is NOT the special coefficient lambda_0 of the general rule; the
+first-order excess at lambda = -1 (and 2, 1/2) is a property of special points (Fermat; also random Z_0 and Cone_18
+points, session MOD p), not of a general point of V_Z.
+
+**Conditions.**
+
+One random point of V_Z (seed 1031; a second seed was running when this entry was written), the Fermat point,
+MOD 32029; the random point was NOT checked for smoothness (a general cubic containing both planes is expected to
+be smooth; not verified here). lambda_0 and the general-point excess from the degrees are PROVED_AI_UNREVIEWED
+(paper 3).
+
+**Evidence.**
+
+examples/checks/tenfold_lambda0.m2 (package tangentExcess, fermatPairModP from tests/validation/common.m2);
+excessFromDegrees(3,{1,1,1},{1,1,1},{1,1,1}) and linearSubspaceCase(3,5,3) = generic, excess elsewhere 0.
+Checked at the request of the repository owner (Tim Seifert), who read Thm 9.7 as giving lambda_0 = +1 here:
+confirmed.
+
+**Independent check.**
+
+The Fermat values agree with the independent blind check BC-T6 of O-TENFOLD-CONE-LEAD (rank L = 38, excess 1 at
+lambda = -1, 2). No independent check of the random-point values.
+
+**Not established.** Second-order behaviour; anything about the lambda = -1 survival at higher order (see O-TENFOLD-CONE-LEAD).
+
+**Known before.**
+
+The rule lambda_0 = (-1)^(c-1): paper 3 (AI-written, unreviewed); c = 1 and (d,c) = (3,2) cases in Dan, Movasati,
+Kloosterman (machine-read).
+
+**Reproduce.** examples/checks/tenfold_lambda0.m2
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[COORD] 15:04Z PRE (lambda_0 check" and its RESULT line (24 Nov).
 
 ---
 

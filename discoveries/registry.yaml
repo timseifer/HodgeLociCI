@@ -263,6 +263,43 @@
   session_refs: |-
     night/paper3/paper3.tex (Theorem 2(4), "Two consequences of Theorem 2(4) for cubics"); tests/SOURCES.md A2, E1.
 
+- id: D-TENFOLD-LAMBDA0-CHECK
+  kind: result
+  area: first_order
+  title: "Cubic tenfold, two 5-planes meeting in a P^2: lambda_0 = +1; excess only at lambda_0 at general points, at every coefficient at the Fermat point"
+  statement: |-
+    For (d,k,c) = (3,5,3) (two 5-planes meeting in a P^2 on a cubic tenfold; c = k - m = 3) the first-order rule
+    (D-FIRST-ORDER-RULE; paper 3 Thm 1, Thm 9.7) gives lambda_0 = (-1)^(c-1) = +1, tau = 0, e_tau = 1, codim V_Z = 39,
+    codim NL at lambda_0 = 38, and (3,5,3) is not in the sporadic list, so for lambda not in {0, 1} the excess at a
+    general point of V_Z is 0. Computed (MOD 32029): at a random point of V_Z the first-order excess is 1 at lambda = 1
+    and 0 at lambda = -1, 2, 1/2; at the Fermat point (Movasati's pair) it is 1 at lambda = 1, -1, 2, 1/2.
+    Consequence for O-TENFOLD-CONE-LEAD: lambda = -1 is NOT the special coefficient lambda_0 of the general rule; the
+    first-order excess at lambda = -1 (and 2, 1/2) is a property of special points (Fermat; also random Z_0 and Cone_18
+    points, session MOD p), not of a general point of V_Z.
+  status: MOD_P
+  conditions: |-
+    One random point of V_Z (seed 1031; a second seed was running when this entry was written), the Fermat point,
+    MOD 32029; the random point was NOT checked for smoothness (a general cubic containing both planes is expected to
+    be smooth; not verified here). lambda_0 and the general-point excess from the degrees are PROVED_AI_UNREVIEWED
+    (paper 3).
+  evidence: |-
+    examples/checks/tenfold_lambda0.m2 (package tangentExcess, fermatPairModP from tests/validation/common.m2);
+    excessFromDegrees(3,{1,1,1},{1,1,1},{1,1,1}) and linearSubspaceCase(3,5,3) = generic, excess elsewhere 0.
+    Checked at the request of the repository owner (Tim Seifert), who read Thm 9.7 as giving lambda_0 = +1 here:
+    confirmed.
+  independent_check: |-
+    The Fermat values agree with the independent blind check BC-T6 of O-TENFOLD-CONE-LEAD (rank L = 38, excess 1 at
+    lambda = -1, 2). No independent check of the random-point values.
+  not_established: |-
+    Second-order behaviour; anything about the lambda = -1 survival at higher order (see O-TENFOLD-CONE-LEAD).
+  known_before: |-
+    The rule lambda_0 = (-1)^(c-1): paper 3 (AI-written, unreviewed); c = 1 and (d,c) = (3,2) cases in Dan, Movasati,
+    Kloosterman (machine-read).
+  reproduce: |-
+    examples/checks/tenfold_lambda0.m2
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[COORD] 15:04Z PRE (lambda_0 check" and its RESULT line (24 Nov).
+
 - id: D-LINEAR-LIST-FIRST-ORDER
   kind: result
   area: first_order
