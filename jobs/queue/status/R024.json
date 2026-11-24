@@ -1,0 +1,1 @@
+{"id": "R024", "state": "RUNNING", "started": "2026-11-24T11:11:52Z", "finished": null, "host": "cloud", "commit": "f01e395f73640e5ba83c0266512774caacdac162", "alert": false, "summary": "running (current command) on the 8 idle cores; machine total 30 cores / 164 GB declared"}
