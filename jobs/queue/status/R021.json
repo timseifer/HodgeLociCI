@@ -1,0 +1,1 @@
+{"id": "R021", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "1e9158451ca667fe74ce884b727da3a2fd9f9ad9", "alert": false, "summary": "queued (priority 3, after R020 by age); starts when R015 ends so that R020 + R021 fit in 30 cores / 172 GB"}
