@@ -1,0 +1,15 @@
+{
+ "tag": "gen_lam-1_67108837_s1_al_N12",
+ "lambda": -1,
+ "prime": 67108837,
+ "seed": 1,
+ "kind": "al",
+ "order_requested": 12,
+ "order_reached": 0,
+ "verdict": "ERROR",
+ "note": "exit code -9: ORDER 11 : K.c_m nonzero for m < n: []  K.c_n nnz 54 (2275s) |    x_8 effect rank 16, equals DG4(v): True; K.c_n in Im DG4(v): True (2275s) |    E'_8: 447156775 terms (105s) (2381s)",
+ "runtime_s": 2536.8,
+ "peak_rss_gb": 0,
+ "engine_version": "1f4eeb9d39c7",
+ "threads": 22
+}

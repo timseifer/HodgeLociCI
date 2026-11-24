@@ -1,0 +1,1 @@
+   CALIBRATION generic order 8: 24 s wall with 30 threads; model (1 thread, SP-T6 machine) 278 s -> speed factor 0.39 (then: python3 estimate.py --speed 0.39)
