@@ -1,0 +1,23 @@
+id: R013
+requested_by: coordinator (for T6c)
+priority: 4
+command: python3 jobs/cloud-job-2/m2scan/m2scan.py sextic --out jobs/queue/results/R013 --procs 16 --mem-gb 8 --tries 3 --deadline-min 35
+working_dir: .
+requires:
+- python3
+- macaulay2
+resources:
+  cores: 16
+  memory_gb: 40
+  est_minutes: 40
+after: []
+preregistration: 472 sextic-fourfold types never run for general points of J (MOD 32003). Expected (dead end) = every smooth point ALL DIE. Surprise = any smooth point NOT DETERMINED / SOME DIE / ALL SURVIVE
+  (ALERT line in summary_sextic.md).
+expected_outputs:
+- jobs/queue/results/R013/scan_sextic.csv
+- jobs/queue/results/R013/summary_sextic.md
+- jobs/queue/results/R013/validate_m2.log
+- jobs/queue/results/R013/raw/
+notes: apt install macaulay2=1.22+ds-6build2 macaulay2-common=1.22+ds-6build2 (Ubuntu 24.04), or Docker (README, M section). The script validates 5 stored T6c types exactly first and stops on mismatch.
+  Independent of R000. Rerunning the same command after a crash is safe (it resumes). Re-queued after the original request was SKIPPED for lack of authorisation to install macaulay2; installing macaulay2
+  must be authorised by the operator (Tim) directly, not by this file.
