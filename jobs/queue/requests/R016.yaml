@@ -1,5 +1,5 @@
 id: R016
-requested_by: coordinator (backfill: keep the machine busy)
+requested_by: "coordinator (backfill, keep the machine busy)"
 priority: 4
 command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/r016_sparse_N15.csv --out jobs/queue/results/R016 --cores 8 --mem-gb 60 --mem-safety 1.1"
 working_dir: "."
