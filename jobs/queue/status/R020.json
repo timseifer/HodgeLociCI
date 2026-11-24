@@ -1,0 +1,1 @@
+{"id": "R020", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "9506fa6bce63469bf35e743cb34b2dda3160b24b", "alert": false, "summary": "queued (priority 3); needs 22 cores / 130 GB; starts when R010 and R013 finish (~06:40Z), next to R015"}
