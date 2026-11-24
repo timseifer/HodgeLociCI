@@ -124,6 +124,12 @@ all coefficients; as machine-read) and Theorem 8 (computer proof that the N-th o
 N <= 14 (n = 6), 6 (n = 8), on a parameter space in which V is a point). Section 2 and 9 of that paper say the
 conjecture is false for n >= 10, attributed to Kloosterman. A decision for n = 6, 8 and unequal coefficients: not
 found in the sources we read (machine-read, see tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026) PRECEDES this entry: its Theorem A proves (mod p jet certificates transferred to
+characteristic 0, Lemma 5.2) that Conjecture 1 fails for n = 6, 8 for all lambda outside a finite set, including
+all 125 of Movasati's ratios, at the Fermat point and at a general point; credit for the sixfold and eightfold
+disproof belongs there. This entry adds EXACT certificates over Q(zeta_6) for lambda = -1, 2, 5/3.
 
 **Reproduce.**
 
@@ -190,6 +196,10 @@ computation; for unequal coefficients Theorem 1.3 there states "the conjecture h
 non-reduced". Movasati arXiv:2211.11405 states the conjecture for n = 6, 8 (v4 of 25 February 2025, as
 machine-read). A decision for unequal coefficients: not found in the sources we read (machine-read, see
 tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026) precedes this entry (Theorem A: Conjecture 1 fails for n = 6, 8 outside a finite
+set of lambda; Corollary B: NL non-reduced along V_Z).
 
 **Reproduce.**
 
@@ -296,7 +306,16 @@ determinant: codimension 4, degree 6).
 
 **Not established.** Exact (characteristic 0) version; other lambda; the statement away from random subspaces of T V.
 
-**Known before.** not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+**Known before.**
+
+not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026) precedes this entry: Theorem C (n = 6: near the Fermat point NL_red = V_Z u
+U_lambda, every component of U_lambda of dimension exactly dim V_Z) and Corollary B (non-reduced along V_Z);
+multiplicity 2 and the leading form c_lambda l^2 det A are reported there as finite-field observations (Sec.
+8.6). This entry adds: the order-5 leading form h^2 psi(w), psi = const det dC(T), the tangent cone, and the
+multiplicity statements (MOD p).
 
 **Reproduce.**
 
@@ -354,6 +373,12 @@ lambda not in {0,1}' was withdrawn (N-EIGHTFOLD-DIM-MINUS-6-ALL-LAMBDA).
 Kloosterman arXiv:2312.12363, Theorem 1.4 / 5.3: at split-type X the reduced locus properly contains the two-plane
 locus (as machine-read; cited in the session for existence only). The bound: not found in the sources we read
 (machine-read, see tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026) precedes this entry: Theorem A (n = 8: dim NL = dim V_Z at the Fermat point
+outside a finite set of lambda) and Theorem C / Prop. 8.3 (U_lambda contains a cone family W' of dimension dim
+V_Z - 16, not in V_Z and not of split type). The bound dim V - 6 and the lambda = -1 analysis are not in #5 (#5
+does not treat lambda = -1 specially at n = 8).
 
 **Reproduce.**
 
@@ -738,7 +763,16 @@ particular 28, were not independently checked.
 
 **Not established.** Exact ranks at the general point of the components. A rank reported as k along an arc is a finite-order statement.
 
-**Known before.** not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+**Known before.**
+
+not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026), Sec. 8.4: at lambda = -1 (n = 6) the monomial directions x1x3x5 and x0x2x4 give
+arcs unobstructed to order 5 while generic arcs are obstructed at order 5, and no monomial direction works at
+lambda = 2. Reproduced here (EXACT, package fermatExtendArc, Movasati pair as in NOTATION.md): both are in ker L
+only at lambda = -1 (not at 2 or 1), are not in T V_Z, and extend to order 7. Whether they are tangent to W_(-1)
+was not checked.
 
 **Reproduce.**
 
@@ -855,7 +889,13 @@ eightfold Cat(2,3) are the union of those of the sixfold Cat(1,3) and Cat(2,2); 
 Further components through X1 for these lambda are not excluded: only the bounds dim <= dim V - 7, and <= dim V -
 10 if not tangent to V (order 5, one prime).
 
-**Known before.** not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+**Known before.**
+
+not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026) precedes this entry and agrees with it: Prop. 8.3, the cone family W' of dimension
+dim V_Z - 16 at n = 8 (for lambda outside its exceptional set).
 
 **Reproduce.** not reproducible from this repository: needs the catalecticant rank along arcs (see D-RANK-INVARIANT).
 

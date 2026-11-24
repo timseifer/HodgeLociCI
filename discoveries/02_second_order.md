@@ -93,6 +93,9 @@ For two coplanar lines on surfaces (c = 1) the alternative "reduced only for equ
 Theorem 1.3 leaves open, for d = c = 3 and k in {2,3,4}, whether the conjecture holds or the locus is non-reduced.
 The law with the factor (lambda - lambda_0)/lambda for c >= 2: not found in the sources we read (machine-read, see
 tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5): no
+second-order law; Sec. 8.6 reports finite-field leading forms (n = 6: c_lambda l^2 det A, c_1 = 0) without the
+factor (lambda - lambda_0)/lambda. Not covered there.
 
 **Reproduce.**
 
@@ -660,6 +663,11 @@ lambda = 1 (Kloosterman, Corollary 6.5). Parts (2), (3): not found in the source
 tests/SOURCES.md); not checked further. The second-order form vanishes at the Fermat point for Movasati's pairs
 according to Duque Franco-Villaflor Loyola arXiv:2312.17222, Proposition 5.1 (machine-read in the night run; not
 in tests/SOURCES.md), which agrees with C = 0 there.
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026), which predates this entry, overlaps parts (2)-(3): its Sec. 8.6 reports the leading form c_lambda l^2 det A with c_1 = 0 as a
+finite-field observation, and Theorem A/C give the dimension statement for n = 6. The closed Hessian formula
+with the factor det C (lambda - 1)/lambda and the description of W_lambda along D = {det C = 0} are not in #5.
 
 **Reproduce.**
 

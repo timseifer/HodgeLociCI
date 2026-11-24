@@ -115,6 +115,10 @@ Movasati arXiv:2211.11405). The special coefficients 1 for (d,c) = (3,3) and -1 
 Theorem 1.2, Corollaries 6.2, 6.5. The rule lambda_0 = (-1)^(c-1) in terms of c for general complete
 intersections, and parts (4), (5) in this generality: not found in the sources we read (machine-read, see
 tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5) has
+no general rule for lambda_0 or the excess: its Sec. 6 records rk L(delta) = codim V_Z - 1 at the tested
+instances (n = 6, 8, 10; credited there to Villaflor and Kloosterman) and treats lambda = 1 via Kloosterman
+Prop. 6.4 / Cor. 6.5. Not covered there: the rule lambda_0 = (-1)^(c-1), the level tau and the excess e_tau.
 
 **Reproduce.**
 
@@ -489,6 +493,8 @@ Published special cases, as machine-read: Kloosterman arXiv:2312.12363, Theorem 
 excess outside {0, lambda_0} for d = 3, c in {2,3}, k >= 5 and d = 4, c = 2, k >= 3) and Theorem 1.3 (excess for
 small k); Villaflor Loyola arXiv:1812.03964 (open cases listed in his Section 11). The complete list L with the
 numbers e: not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further.
+rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5): not
+covered (no list of cases; it works only with two k-planes meeting in P^(k-3) on cubics).
 
 **Reproduce.**
 

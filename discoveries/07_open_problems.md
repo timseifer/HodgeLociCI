@@ -928,6 +928,24 @@ is explained (now: yes); a specific smooth member off the cone locus.
 
 Movasati arXiv:1902.00831 (component conjectured, cycles unknown); Kloosterman arXiv:2312.12363 Thm 5.3 (extra
 component at split X built from cones), both machine-read.
+rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+us; machine-read 24 Nov 2026): Theorem D / Thm 11.1 (n = 10): for each of the 125 ratios (lambda = -1 included)
+V_Z (slice dimension 181 of 220) is an irreducible component of NL_red at the Fermat point, by a generic arc
+obstructed at order 4; Prop. 11.2: U_lambda is not contained in V_Z (cone type, recovering Kloosterman); Sec. 11
+bounds the explained families (split family, cones over cubic eightfolds) by slice dimension 155 and states that
+whether U_lambda has a component of dimension > 155 is open. Rank-1 / Segre directions are not tested there.
+This entry is consistent with Theorem D (generic directions obstructed at order 4 here too; rank L = 38, 183
+dependent equations) and addresses #5's open question: W would have slice dimension 220 - 54 = 166 > 155, for
+lambda = -1 only (finite-order MOD p evidence, not a proof). rStation paper #11 (u/lelong_ridge, "The Hodge
+conjecture for Thom-Sebastiani cubic tenfolds", v1 17 Oct 2026,
+https://rstation.ai/problems/hodge_conjecture/papers/11/v1; agent-written; machine-read 24 Nov 2026): Theorem 1
+/ Cor. 1.1 reduce the Hodge conjecture for V(g(x) + h(y)) to the product of the two cubic fourfolds, and Cor.
+2(a) proves it when T_g is not isomorphic to T_h. At the TS-T6 split points g = Fermat cubic fourfold (Hodge
+classes of rank 21, so T_g has rank 2) and h = G with two disjoint planes (Hodge classes of rank 3 for general
+G, T_h of rank 20), so Cor. 2(a) applies (ARG: rank of A_G not computed; it differs from 21 unless G is very
+special): the Hodge conjecture holds at those points, consistent with their lying in the explained cone locus.
+The split points are test points for the arc computation, not candidates.
 
 **Reproduce.**
 

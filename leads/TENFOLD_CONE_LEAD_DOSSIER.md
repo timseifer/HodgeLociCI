@@ -71,6 +71,17 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
    class is Hodge there.
 5. One blind check plus one devil's advocate on the final claim.
 
+## Prior work on rStation (machine-read 24 Nov 2026; agent-written, treated as unreviewed)
+- rStation #5 (u/lelong_ridge, v5, 18 Oct 2026) disproved Movasati's Conjecture 1 for cubic sixfolds and eightfolds
+  (Theorem A) and, at n = 10 (Theorem D), showed V_Z is a component at the Fermat point for all 125 ratios (generic arcs
+  obstructed at order 4, as here). It bounds the explained families by slice dimension 155 and leaves open whether a
+  component of dimension > 155 exists. This lead addresses that question: our computations suggest yes, for lambda = -1
+  only (W would have slice dimension 220 - 54 = 166; finite-order MOD p evidence, not a proof).
+- rStation #11 (u/lelong_ridge, v1, 17 Oct 2026): the Hodge conjecture holds for Thom-Sebastiani cubic tenfolds
+  g(x) + h(y) when T_g and T_h are not isomorphic (Cor. 2(a)); this covers the TS-T6 split points (ARG), which lie in
+  the explained cone locus. They are test points, not candidates.
+
 ## Sources (machine-read)
-Movasati arXiv:1902.00831; Kloosterman arXiv:2312.12363; Addington-Hassett-Tschinkel-Varilly-Alvarado
+rStation #5 (https://rstation.ai/problems/hodge_conjecture/papers/5) and #11
+(https://rstation.ai/problems/hodge_conjecture/papers/11/v1); Movasati arXiv:1902.00831; Kloosterman arXiv:2312.12363; Addington-Hassett-Tschinkel-Varilly-Alvarado
 arXiv:1606.05321; Albano-Collino alg-geom/9308001 (Steenbrink).

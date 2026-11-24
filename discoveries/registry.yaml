@@ -77,6 +77,10 @@
     Theorem 1.2, Corollaries 6.2, 6.5. The rule lambda_0 = (-1)^(c-1) in terms of c for general complete
     intersections, and parts (4), (5) in this generality: not found in the sources we read (machine-read, see
     tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5) has
+    no general rule for lambda_0 or the excess: its Sec. 6 records rk L(delta) = codim V_Z - 1 at the tested
+    instances (n = 6, 8, 10; credited there to Villaflor and Kloosterman) and treats lambda = 1 via Kloosterman
+    Prop. 6.4 / Cor. 6.5. Not covered there: the rule lambda_0 = (-1)^(c-1), the level tau and the excess e_tau.
   reproduce: |-
     Run from the repository root (Macaulay2 1.22). Degrees only (integer arithmetic):
 
@@ -351,6 +355,8 @@
     excess outside {0, lambda_0} for d = 3, c in {2,3}, k >= 5 and d = 4, c = 2, k >= 3) and Theorem 1.3 (excess for
     small k); Villaflor Loyola arXiv:1812.03964 (open cases listed in his Section 11). The complete list L with the
     numbers e: not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5): not
+    covered (no list of cases; it works only with two k-planes meeting in P^(k-3) on cubics).
   reproduce: |-
     Run from the repository root (Macaulay2 1.22).
 
@@ -499,6 +505,9 @@
     Theorem 1.3 leaves open, for d = c = 3 and k in {2,3,4}, whether the conjecture holds or the locus is non-reduced.
     The law with the factor (lambda - lambda_0)/lambda for c >= 2: not found in the sources we read (machine-read, see
     tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, v5 18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5): no
+    second-order law; Sec. 8.6 reports finite-field leading forms (n = 6: c_lambda l^2 det A, c_1 = 0) without the
+    factor (lambda - lambda_0)/lambda. Not covered there.
   reproduce: |-
     Run from the repository root (Macaulay2 1.22).
 
@@ -908,6 +917,11 @@
     tests/SOURCES.md); not checked further. The second-order form vanishes at the Fermat point for Movasati's pairs
     according to Duque Franco-Villaflor Loyola arXiv:2312.17222, Proposition 5.1 (machine-read in the night run; not
     in tests/SOURCES.md), which agrees with C = 0 there.
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026), which predates this entry, overlaps parts (2)-(3): its Sec. 8.6 reports the leading form c_lambda l^2 det A with c_1 = 0 as a
+    finite-field observation, and Theorem A/C give the dimension statement for n = 6. The closed Hessian formula
+    with the factor det C (lambda - 1)/lambda and the description of W_lambda along D = {det C = 0} are not in #5.
   reproduce: |-
     Run from the repository root (Macaulay2 1.22). At a random two-plane cubic sixfold (det C != 0 with high
     probability):
@@ -1093,6 +1107,12 @@
     N <= 14 (n = 6), 6 (n = 8), on a parameter space in which V is a point). Section 2 and 9 of that paper say the
     conjecture is false for n >= 10, attributed to Kloosterman. A decision for n = 6, 8 and unequal coefficients: not
     found in the sources we read (machine-read, see tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026) PRECEDES this entry: its Theorem A proves (mod p jet certificates transferred to
+    characteristic 0, Lemma 5.2) that Conjecture 1 fails for n = 6, 8 for all lambda outside a finite set, including
+    all 125 of Movasati's ratios, at the Fermat point and at a general point; credit for the sixfold and eightfold
+    disproof belongs there. This entry adds EXACT certificates over Q(zeta_6) for lambda = -1, 2, 5/3.
   reproduce: |-
     Run from the repository root (Macaulay2 1.22).
 
@@ -1141,6 +1161,10 @@
     non-reduced". Movasati arXiv:2211.11405 states the conjecture for n = 6, 8 (v4 of 25 February 2025, as
     machine-read). A decision for unequal coefficients: not found in the sources we read (machine-read, see
     tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026) precedes this entry (Theorem A: Conjecture 1 fails for n = 6, 8 outside a finite
+    set of lambda; Corollary B: NL non-reduced along V_Z).
   reproduce: |-
     See D-MOVASATI-CERTIFICATES (certificate files) and D-CUBIC-SIXFOLD-DETC (second-order check at a random point).
     The general statement is not reproducible from this repository: it is a paper argument; needed: a human reading of
@@ -1218,6 +1242,13 @@
     Exact (characteristic 0) version; other lambda; the statement away from random subspaces of T V.
   known_before: |-
     not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026) precedes this entry: Theorem C (n = 6: near the Fermat point NL_red = V_Z u
+    U_lambda, every component of U_lambda of dimension exactly dim V_Z) and Corollary B (non-reduced along V_Z);
+    multiplicity 2 and the leading form c_lambda l^2 det A are reported there as finite-field observations (Sec.
+    8.6). This entry adds: the order-5 leading form h^2 psi(w), psi = const det dC(T), the tangent cone, and the
+    multiplicity statements (MOD p).
   reproduce: |-
     not reproducible from this repository: needs the leading form of the dependent equation on T V at order 5 (the
     session's Python engine fog.py). The package's fermatNextOrderSystem gives one arc at a time.
@@ -1259,6 +1290,12 @@
     Kloosterman arXiv:2312.12363, Theorem 1.4 / 5.3: at split-type X the reduced locus properly contains the two-plane
     locus (as machine-read; cited in the session for existence only). The bound: not found in the sources we read
     (machine-read, see tests/SOURCES.md); not checked further.
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026) precedes this entry: Theorem A (n = 8: dim NL = dim V_Z at the Fermat point
+    outside a finite set of lambda) and Theorem C / Prop. 8.3 (U_lambda contains a cone family W' of dimension dim
+    V_Z - 16, not in V_Z and not of split type). The bound dim V - 6 and the lambda = -1 analysis are not in #5 (#5
+    does not treat lambda = -1 specially at n = 8).
   reproduce: |-
     not reproducible from this repository: needs leading forms of 26 equations on a subspace of T V (session engine).
     First-order numbers 19 against 20 at this pair: see D-MOVASATI-TABLES-REPRODUCED.
@@ -1556,6 +1593,13 @@
     Exact ranks at the general point of the components. A rank reported as k along an arc is a finite-order statement.
   known_before: |-
     not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026), Sec. 8.4: at lambda = -1 (n = 6) the monomial directions x1x3x5 and x0x2x4 give
+    arcs unobstructed to order 5 while generic arcs are obstructed at order 5, and no monomial direction works at
+    lambda = 2. Reproduced here (EXACT, package fermatExtendArc, Movasati pair as in NOTATION.md): both are in ker L
+    only at lambda = -1 (not at 2 or 1), are not in T V_Z, and extend to order 7. Whether they are tangent to W_(-1)
+    was not checked.
   reproduce: |-
     not reproducible from this repository: the catalecticants along arcs are not implemented in the package. The
     exported arcs are in M2/HodgeLociCI/data/six_lam-1_arc.txt and M2/HodgeLociCI/data/six_lam2_arc.txt; needed: a
@@ -1639,6 +1683,10 @@
     10 if not tangent to V (order 5, one prime).
   known_before: |-
     not found in the sources we read (machine-read, see tests/SOURCES.md); not checked further
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026) precedes this entry and agrees with it: Prop. 8.3, the cone family W' of dimension
+    dim V_Z - 16 at n = 8 (for lambda outside its exceptional set).
   reproduce: |-
     not reproducible from this repository: needs the catalecticant rank along arcs (see D-RANK-INVARIANT).
   session_refs: |-
@@ -5448,6 +5496,24 @@
   known_before: |-
     Movasati arXiv:1902.00831 (component conjectured, cycles unknown); Kloosterman arXiv:2312.12363 Thm 5.3 (extra
     component at split X built from cones), both machine-read.
+    rStation paper #5 (u/lelong_ridge, "Movasati's GADEPs Conjecture 1 fails for cubic sixfolds and eightfolds", v5
+    18 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/5; agent-written, reviewed on rStation, not by
+    us; machine-read 24 Nov 2026): Theorem D / Thm 11.1 (n = 10): for each of the 125 ratios (lambda = -1 included)
+    V_Z (slice dimension 181 of 220) is an irreducible component of NL_red at the Fermat point, by a generic arc
+    obstructed at order 4; Prop. 11.2: U_lambda is not contained in V_Z (cone type, recovering Kloosterman); Sec. 11
+    bounds the explained families (split family, cones over cubic eightfolds) by slice dimension 155 and states that
+    whether U_lambda has a component of dimension > 155 is open. Rank-1 / Segre directions are not tested there.
+    This entry is consistent with Theorem D (generic directions obstructed at order 4 here too; rank L = 38, 183
+    dependent equations) and addresses #5's open question: W would have slice dimension 220 - 54 = 166 > 155, for
+    lambda = -1 only (finite-order MOD p evidence, not a proof). rStation paper #11 (u/lelong_ridge, "The Hodge
+    conjecture for Thom-Sebastiani cubic tenfolds", v1 17 Oct 2026,
+    https://rstation.ai/problems/hodge_conjecture/papers/11/v1; agent-written; machine-read 24 Nov 2026): Theorem 1
+    / Cor. 1.1 reduce the Hodge conjecture for V(g(x) + h(y)) to the product of the two cubic fourfolds, and Cor.
+    2(a) proves it when T_g is not isomorphic to T_h. At the TS-T6 split points g = Fermat cubic fourfold (Hodge
+    classes of rank 21, so T_g has rank 2) and h = G with two disjoint planes (Hodge classes of rank 3 for general
+    G, T_h of rank 20), so Cor. 2(a) applies (ARG: rank of A_G not computed; it differs from 21 unless G is very
+    special): the Hodge conjecture holds at those points, consistent with their lying in the explained cone locus.
+    The split points are test points for the arc computation, not candidates.
   reproduce: |-
     not reproducible from this repository: session scripts (use fermatExtendArc with care: obstruction orders above
     the first nonzero Taylor order can depend on the choice of lower terms).
