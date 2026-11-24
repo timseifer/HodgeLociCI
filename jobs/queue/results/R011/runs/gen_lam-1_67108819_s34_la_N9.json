@@ -1,0 +1,43 @@
+{
+ "tag": "gen_lam-1_67108819_s34_la_N9",
+ "lambda": -1,
+ "prime": 67108819,
+ "seed": 34,
+ "kind": "la",
+ "order_requested": 9,
+ "order_reached": 9,
+ "verdict": "EXTENDS",
+ "note": "arc to order 9",
+ "history": [
+  [
+   4,
+   "zero"
+  ],
+  [
+   5,
+   "corrected x2"
+  ],
+  [
+   6,
+   "corrected x3"
+  ],
+  [
+   7,
+   "corrected x4"
+  ],
+  [
+   8,
+   "corrected x5"
+  ],
+  [
+   9,
+   "corrected x6 (affine)"
+  ]
+ ],
+ "runtime_s": 3007.4,
+ "peak_rss_gb": 3.462,
+ "engine_version": "8e8d1b39e4f3",
+ "v_digest": "006f10b01db03808",
+ "arc_digest": "97dcb087375eaded",
+ "threads": 1
+}

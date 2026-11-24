@@ -1,0 +1,35 @@
+{
+ "tag": "forced7_67108837_s2_al",
+ "lambda": -1,
+ "prime": 67108837,
+ "seed": 2,
+ "kind": "al",
+ "order_requested": 7,
+ "order_reached": 6,
+ "verdict": "TEST_OBSTRUCTED_CHOICE",
+ "note": "K.c_7 removable by earlier-order corrections (exact recomputation passes)",
+ "history": [
+  [
+   4,
+   "zero"
+  ],
+  [
+   5,
+   "corrected x2"
+  ],
+  [
+   6,
+   "corrected x3"
+  ],
+  [
+   7,
+   "TEST_OBSTRUCTED_CHOICE"
+  ]
+ ],
+ "runtime_s": 8.8,
+ "peak_rss_gb": 0.776,
+ "engine_version": "8e8d1b39e4f3",
+ "v_digest": "16e318ffded38946",
+ "arc_digest": "7fb4d01749127340",
+ "threads": 30
+}
