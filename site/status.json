@@ -1,7 +1,17 @@
 {
-  "updated": "2026-11-23T03:45Z",
-  "headline": "A bug-class gap in the second-order checker was found by comparing with Movasati's published tables and has been corrected; next, a search for algebraic cycles on cubic sixfolds where Hodge classes have none known.",
+  "updated": "2026-11-24T16:55Z",
+  "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
+    {
+      "title": "Cubic tenfold lead (two 5-planes meeting in a P^2)",
+      "state": "OPEN lead, NOT a candidate; evidence mod p, finite order",
+      "summary": "At the Fermat cubic tenfold with Movasati's pair of 5-planes, first-order directions for [P1] - [P2] (lambda = -1) extend as formal arcs: one to order 12 at two primes, 48/48 new ones to order 9, none obstructed; lambda = 2 controls are obstructed at order 6 (120/120; exact certificate at three directions), and 26 other coefficients are obstructed at order 6. lambda = -1 is not the special coefficient of the general rule (lambda_0 = +1, checked). Finite-order arcs are evidence, not a proof that a new component exists, and no specific smooth member off the cone locus is known. Two tests deciding whether lambda = -1 is special only because of the Fermat point's symmetry (a split-point test and a second-order test at C_18 points) have run; their results go into the registry after an independent check.",
+      "status": "OPEN",
+      "registry": [
+        "O-TENFOLD-CONE-LEAD",
+        "D-TENFOLD-LAMBDA0-CHECK"
+      ]
+    },
     {
       "title": "Three or more cycles: special coefficients",
       "state": "first-order conic confirmed; second-order obstruction confirmed (mod p); next steps open",
@@ -14,6 +24,22 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-24",
+      "what": "Tenfold lead: lambda_0 = +1 confirmed for two 5-planes meeting in a P^2 (first-order excess only at lambda_0 at a general point; at every coefficient at the Fermat point; mod p). Registry D-TENFOLD-LAMBDA0-CHECK."
+    },
+    {
+      "when": "2026-11-24",
+      "what": "Tenfold lead, overnight cloud runs (mod p, checker re-run): lambda = -1 generic directions extend (one to order 12 at two primes; 48/48 to order 9; more to order 10); lambda = 2 controls 120/120 obstructed at order 6. Still an open lead, not a candidate. Dossier: leads/TENFOLD_CONE_LEAD_DOSSIER.md."
+    },
+    {
+      "when": "2026-11-24",
+      "what": "Sextic fourfolds: jump-divisor scans (472 + 106 types, mod p) found no surviving excess at general points (all die or singular)."
+    },
+    {
+      "when": "2026-11-23",
+      "what": "Cubic sixfolds set aside as a target: the Hodge conjecture is known for every smooth cubic sixfold (Steenbrink, via Albano-Collino). Delsarte members of the open families checked: none gives a candidate."
+    },
     {
       "when": "2026-11-23",
       "what": "Second-order checker corrected: outside the range with condition (S) false it now says NOT DETERMINED instead of ALL SURVIVE (Movasati's 2019 tables were right; 4 cases recomputed independently)."
