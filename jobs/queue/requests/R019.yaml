@@ -9,3 +9,6 @@ after: [R000]
 preregistration: "W3 lambda = -1 generic seeds 2 (a x l) and 5 (l x a) at MOD 67108837 to order 11 (previously 8). Dead end = OBSTRUCTED_GENUINE at order <= 11."
 expected_outputs: ["jobs/queue/results/R019/manifest.csv", "jobs/queue/results/R019/summary.md"]
 notes: "Backfill for the night; best started after the R001 rerun frees memory. No time limit."
+
+cancelled: true
+cancel_note: "CANCELLED by the operator (Tim, 24 Nov ~14:10Z, wind-down). Do NOT start."
