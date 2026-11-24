@@ -1,0 +1,36 @@
+{
+ "tag": "gen_lam1_67108819_s1_al_N7",
+ "lambda": "1",
+ "lambda_mod_p": 1,
+ "prime": 67108819,
+ "seed": 1,
+ "kind": "al",
+ "order_requested": 7,
+ "order_reached": 7,
+ "verdict": "EXTENDS",
+ "note": "arc to order 7",
+ "history": [
+  [
+   4,
+   "zero"
+  ],
+  [
+   5,
+   "zero"
+  ],
+  [
+   6,
+   "zero"
+  ],
+  [
+   7,
+   "zero"
+  ]
+ ],
+ "runtime_s": 67.8,
+ "peak_rss_gb": 0.247,
+ "engine_version": "0abd9e305e69",
+ "v_digest": "702f40164891106d",
+ "arc_digest": "f73643497dec6f3f",
+ "threads": 1
+}

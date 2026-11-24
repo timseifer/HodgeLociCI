@@ -1,0 +1,11 @@
+   PASS cloud-job-1 validation present
+   PASS kernel built
+   PASS inputs mc_67108837_lam-1 identical to cloud-job-1
+   PASS inputs mc_67108837_lam2 identical to cloud-job-1
+   PASS inputs mc_67108819_lam-1 identical to cloud-job-1
+   PASS inputs mc_67108819_lam2 identical to cloud-job-1
+   PASS nf_A_-2_1_al: PASS (24 lines identical)
+   PASS nf_A_-2_1_al verdict OBSTRUCTED_GENUINE, analysis agrees
+   PASS nf_A_1o2_4_la: PASS (24 lines identical)
+   PASS nf_A_1o2_4_la verdict OBSTRUCTED_GENUINE, analysis agrees
+VALIDATION_LAM PASS

@@ -1,0 +1,32 @@
+{
+ "tag": "nf_A_1o2_4_la",
+ "lambda": "1/2",
+ "lambda_mod_p": 33554419,
+ "prime": 67108837,
+ "seed": 4,
+ "kind": "la",
+ "order_requested": 6,
+ "order_reached": 5,
+ "verdict": "OBSTRUCTED_GENUINE",
+ "note": "K.c_6 not in Im DG4 + J_n(Z); non-linear part in Im DG4 (one random k)",
+ "history": [
+  [
+   4,
+   "zero"
+  ],
+  [
+   5,
+   "corrected x2"
+  ],
+  [
+   6,
+   "OBSTRUCTED at order 6 (K.c6 not in Im DG4 + Lambda(ker DG4))"
+  ]
+ ],
+ "runtime_s": 23.4,
+ "peak_rss_gb": 0.274,
+ "engine_version": "0abd9e305e69",
+ "v_digest": "b9825e8c846c4657",
+ "arc_digest": "05503a2380465eaa",
+ "threads": 1
+}
