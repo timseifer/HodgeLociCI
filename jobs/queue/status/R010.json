@@ -1,1 +1,1 @@
-{"id": "R010", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "ce8dfc779f422d65360a684bf6edbfc9f9c8cb99", "alert": false, "summary": "queued (cores busy: R001 22 + R003/R004 8)"}
+{"id": "R010", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "882323dc8cacd8cd50ddb8307cd3f991fcc72277", "alert": false, "summary": "queued (BUDGET.yaml now has no time limit); all 30 cores busy with R001 (22) + R004 (8); starts as cores free, by priority and after-dependencies"}
