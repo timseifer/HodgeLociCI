@@ -868,6 +868,13 @@ and is expected to explain a codim-1 sub-cone of the directions (ARG). Explained
 with the sixfold W_lambda; ARG + MOD p). Correction: "every component other than V_Z through the Fermat point has
 codim >= 54" is too strong; it holds only for components containing Cone_T (the TD10 closure passes with codim
 <= 52, ARG).
+FOLLOW-UP (W1-W4, 24 Nov; MOD p unless stated): W3: lambda = -1 arcs extend to order 12 (a x l) and 11 (l x a) at
+two primes, top-term linear corrections at every order; 12/12 FULLY generic directions (v0 uniform in T Cone_T)
+extend to order 8 at lambda = -1 and are obstructed at order 6 at lambda = 2; G4 = 0 on all of Sigma1 EXACT at 40
+random points (Schwartz-Zippel < 1e-53). W4 (second reader): setup, order-6 criterion and tangent-cone argument
+SOUND; finite-order arcs are evidence, not proof. W2: the C_18 family F_T does not explain W (tangent cone at Fermat
+165-dim, a codim-1 sub-cone; ARG). W1: no codim-54 family found; at random X in F_T the Hodge-tangent codim of
+[J(P^2,T)] is 54 vs codim F_T 55 (a codim-54 branch, or a non-reduced locus since T is irregular; undecided).
 
 **Not established.**
 

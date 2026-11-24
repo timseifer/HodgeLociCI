@@ -49,3 +49,16 @@ jobs:
 
       - name: Progress page builds
         run: docker run --rm hodgelocici:ci python3 site/build_site.py /tmp/_site
+
+  fermat-series-kernel:
+    # [TOOLING] compiled kernel for the Fermat cubic tenfold period expansion: must match the reference engines
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install numpy
+        run: python3 -m pip install --user --break-system-packages numpy
+      - name: Kernel matches reference engines (tooling/fermat_series/test_fermat_series.py)
+        working-directory: tooling/fermat_series
+        run: FSC_SO_DIR=/tmp python3 test_fermat_series.py

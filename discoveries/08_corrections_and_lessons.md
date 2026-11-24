@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (24)
+## Entries on this page (25)
 
 | id | status | title |
 |---|---|---|
@@ -36,6 +36,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-STRATA-INSTEAD-OF-DIRECTIONS](#m-strata-instead-of-directions) | `PAPER_ARGUMENT_AI` | To exclude extra components, study general points of the degeneracy strata, not more directions at the special point |
 | [M-BLIND-CHECKS-WITH-CONTROLS](#m-blind-checks-with-controls) | `COMPUTED_ONLY` | One blind check per claim, with negative controls and 'what a wrong claim would have looked like' |
 | [M-LEAN-CERTIFICATES](#m-lean-certificates) | `EXACT` | Lean certificates: kernel-checked finite computations and deductions from stated hypotheses |
+| [M-FERMAT-SERIES-KERNEL](#m-fermat-series-kernel) | `COMPUTED_ONLY` | Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines |
 
 ---
 
@@ -1002,3 +1003,38 @@ lean/core plus one negative test; about 5 minutes on 2 cores). The Mathlib files
 a built checkout (not re-run for this registry).
 
 **Session references (files not public).** lean/README.md; LEDGER.md "18:44Z Regression", "LATE ADDITION", "five-hour block".
+
+---
+
+## M-FERMAT-SERIES-KERNEL
+
+**Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines**
+
+kind: `result` | area: `methods` | status: **`COMPUTED_ONLY`**
+
+**Statement.**
+
+[TOOLING] C++/OpenMP kernel (ctypes wrapper) for the series E'_m and the period accumulator H(E'_m) used in the
+arc computations at the Fermat cubic tenfold. Validated by the pre-registered rule: identical outputs to the
+numpy engines at orders 8, 11 and 12 and on generic directions at orders 7 and 8. Speed: about 6x on sparse arcs,
+2x on dense generic directions (single thread); an exact term filter (depends only on exponents mod 3) adds about
+8%.
+
+**Conditions.** p < 2^26; MOD p only.
+
+**Evidence.** Agent SP-T6; session folder discovery/checks/sp_t6/ (not in this repository).
+
+**Independent check.** tooling/fermat_series/test_fermat_series.py (25 checks against two reference engines, orders <= 6; in CI).
+
+**Not established.** The 2-core speed-up (implemented, not measured).
+
+**Known before.** n/a
+
+**Reproduce.**
+
+```text
+Run tooling/fermat_series/test_fermat_series.py from that folder:
+    cd tooling/fermat_series && python3 test_fermat_series.py
+```
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[SP-T6]" and "[COORD] 00:50Z" (24 Nov).

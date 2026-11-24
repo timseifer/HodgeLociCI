@@ -4,6 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
+- tooling/fermat_series: compiled kernel for the Fermat cubic tenfold period expansion, with a test against the
+  reference engines (CI job `fermat-series-kernel`). AI-generated, unreviewed tooling; no mathematical claim.
+
 ### Added
 - Docker image definition (`Dockerfile`, `docker/`): Ubuntu 24.04 with Macaulay2 1.22 (`1.22+ds-6build2`, pinned),
   the package and the MCP server; the default command runs the quickstart and compares it with
