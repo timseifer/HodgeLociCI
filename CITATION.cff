@@ -10,9 +10,9 @@ type: software
 authors:
   - family-names: Seifert
     given-names: Timothy
-version: 0.1.1
+version: 0.1.2
 doi: 10.5281/zenodo.24455334
-date-released: "2026-11-22"
+date-released: "2026-11-25"
 license: MIT
 repository-code: "https://github.com/timseifer/HodgeLociCI"
 keywords:

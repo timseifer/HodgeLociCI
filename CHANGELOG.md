@@ -4,9 +4,27 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-- discoveries: O-TENFOLD-CONE-LEAD updated with the 24 Nov cloud runs (MOD p; lead still OPEN, not a candidate);
-  new leads/TENFOLD_CONE_LEAD_DOSSIER.md (readable summary of that entry); symmetry test (TS-T6, blind-checked) and
-  second-order test (SO-T6) added; new D-TENFOLD-LAMBDA0-CHECK.
+## [0.1.2] - 2026-11-25
+
+No change to the Macaulay2 package code or to any earlier result. All new mathematical content is AI-generated and
+unreviewed; most of it is modulo primes and finite order.
+
+### Discoveries registry (126 at v0.1.1 -> 133 entries)
+- O-TENFOLD-CONE-LEAD (cubic tenfold, two 5-planes meeting in a P^2): OPEN lead, NOT a candidate. Added: cloud runs
+  (lambda = -1 generic directions extend, one to order 12 at two primes; lambda = 2 obstructed at order 6); a
+  pre-registered symmetry test at Thom-Sebastiani split points (geometric, blind-checked); orders 2 (blind-checked)
+  and 3 at points of the C_18 family F_T (unobstructed); prior work on rStation credited.
+- New entries since v0.1.1 (7): O-TENFOLD-CONE-LEAD; D-TENFOLD-LAMBDA0-CHECK (lambda_0 = +1 for this configuration);
+  N-TENFOLD-CODIM54-SEARCH (six named construction types do not explain the codim-54 branch; first order, mod p);
+  N-DELSARTE-UNSOLVED-FAMILIES, N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS, N-SPECIAL-REGIONS-TARGET-FAMILIES (dead ends in the
+  search for a candidate in open families); M-FERMAT-SERIES-KERNEL (tooling). One existing entry made its citation
+  explicit (O-OTHER-COEFFICIENTS: Steenbrink via Albano-Collino).
+- Prior work credited in known_before (10 entries): rStation papers #5 (u/lelong_ridge, 18 Oct 2026; Movasati's
+  Conjecture 1 fails for cubic sixfolds and eightfolds) and #11 (17 Oct 2026; Hodge conjecture for Thom-Sebastiani
+  cubic tenfolds).
+- New readable summary: leads/TENFOLD_CONE_LEAD_DOSSIER.md. New script: examples/checks/tenfold_lambda0.m2.
+
+### Tooling
 - tooling/fermat_series: compiled kernel for the Fermat cubic tenfold period expansion, with a test against the
   reference engines (CI job `fermat-series-kernel`). AI-generated, unreviewed tooling; no mathematical claim.
 
