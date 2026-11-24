@@ -1,1 +1,1 @@
-{"id": "R006", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "ce8dfc779f422d65360a684bf6edbfc9f9c8cb99", "alert": false, "summary": "queued (cores busy: R001 22 + R003/R004 8)"}
+{"id": "R006", "state": "RUNNING", "started": "2026-11-24T03:34:57Z", "finished": null, "host": "cloud", "commit": "c135926b78d6ccaf25c14a575a364ff932812327", "alert": false, "summary": "running"}
