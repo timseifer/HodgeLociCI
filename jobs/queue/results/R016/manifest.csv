@@ -1,0 +1,5 @@
+job,lambda,prime,seed,kind,order_requested,order_reached,verdict,runtime_s,peak_rss_gb,code_commit,engine_version,threads,log,arc_digest,note
+c,-1,67108819,0,exarc_al,15,15,EXTENDS,1990.2,22.65,d470043fd3be38c7f9e6fb7fcb7aa2982cd5359d,1f4eeb9d39c7,4,runs/exarc_67108819_0_al_N15.log,d402af478458454d,arc to order 15
+c,-1,67108837,0,exarc_al,15,15,EXTENDS,2002.2,22.65,d470043fd3be38c7f9e6fb7fcb7aa2982cd5359d,1f4eeb9d39c7,4,runs/exarc_67108837_0_al_N15.log,65a87833113a083d,arc to order 15
+c,-1,67108837,0,exarc_la,15,15,EXTENDS,3197.9,29.38,d470043fd3be38c7f9e6fb7fcb7aa2982cd5359d,1f4eeb9d39c7,4,runs/exarc_67108837_0_la_N15.log,b88ed6b437f5c57c,arc to order 15
+c,-1,67108819,0,exarc_la,15,15,EXTENDS,3199.9,29.38,d470043fd3be38c7f9e6fb7fcb7aa2982cd5359d,1f4eeb9d39c7,4,runs/exarc_67108819_0_la_N15.log,d05d6ee03c49507a,arc to order 15

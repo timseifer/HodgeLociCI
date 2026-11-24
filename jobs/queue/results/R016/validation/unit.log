@@ -1,0 +1,25 @@
+PASS p=67108837 lam=-1 E'_1 (35 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=67108837 lam=-1 E'_1: fe_ref mul/add + MH identical
+PASS p=67108837 lam=-1 E'_2 (636 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=67108837 lam=-1 E'_2: fe_ref mul/add + MH identical
+PASS p=67108837 lam=-1 E'_3 (7691 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=67108837 lam=-1 E'_3: fe_ref mul/add + MH identical
+PASS p=67108837 lam=-1 E'_4 (67001 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=67108837 lam=-1 E'_5 (440661 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=67108837 lam=-1 E'_6 (2292900 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=32029 lam=2 E'_1 (35 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=32029 lam=2 E'_1: fe_ref mul/add + MH identical
+PASS p=32029 lam=2 E'_2 (644 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=32029 lam=2 E'_2: fe_ref mul/add + MH identical
+PASS p=32029 lam=2 E'_3 (8014 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=32029 lam=2 E'_3: fe_ref mul/add + MH identical
+PASS p=32029 lam=2 E'_4 (72727 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=32029 lam=2 E'_5 (500259 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=999979 lam=-1 E'_1 (35 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=999979 lam=-1 E'_1: fe_ref mul/add + MH identical
+PASS p=999979 lam=-1 E'_2 (637 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=999979 lam=-1 E'_2: fe_ref mul/add + MH identical
+PASS p=999979 lam=-1 E'_3 (7746 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+PASS p=999979 lam=-1 E'_3: fe_ref mul/add + MH identical
+PASS p=999979 lam=-1 E'_4 (68180 terms): poly + H identical (W3Engine, compiled 1 and 2 threads, filtered stream)
+RESULT PASS (31.8s)

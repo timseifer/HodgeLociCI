@@ -1,1 +1,1 @@
-{"id": "R018", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "02f53213b4232a09ed6a63c105e99a42726b2feb", "alert": false, "summary": "queued (overnight backfill); all 30 cores busy with R001 (22) + R004 (8)"}
+{"id": "R018", "state": "RUNNING", "started": "2026-11-24T10:38:59Z", "finished": null, "host": "cloud", "commit": "2fddbb1717c7fc5f6140b24f18db79f74096b656", "alert": false, "summary": "running (current command), backfill on R016's 8 cores; machine total 30 cores / 174 GB declared"}
