@@ -1,7 +1,7 @@
 id: R014
 requested_by: coordinator (for T6c)
 priority: 4
-command: python3 jobs/cloud-job-2/m2scan/m2scan.py retry --out jobs/queue/results/R014 --procs 8 --mem-gb 8 --tries 3 --deadline-min 30
+command: python3 jobs/cloud-job-2/m2scan/m2scan.py retry --out jobs/queue/results/R014 --procs 8 --mem-gb 8 --tries 3
 working_dir: .
 requires:
 - python3
@@ -16,5 +16,5 @@ expected_outputs:
 - jobs/queue/results/R014/scan_retry.csv
 - jobs/queue/results/R014/summary_retry.md
 - jobs/queue/results/R014/validate_m2.log
-notes: Same install as M1. Rerunning the same command after a crash is safe (it resumes). Re-queued after the original request was SKIPPED for lack of authorisation to install macaulay2; installing macaulay2
-  must be authorised by the operator (Tim) directly, not by this file.
+notes: 'Same install as M1. Rerunning the same command after a crash is safe (it resumes). Re-queued after the original request was SKIPPED for lack of authorisation to install macaulay2; installing macaulay2
+  must be authorised by the operator (Tim) directly, not by this file. UPDATE (coordinator, per Tim): no time limit; run to completion.'

@@ -1,7 +1,7 @@
 id: R015
 requested_by: coordinator (for T6c)
 priority: 6
-command: bash jobs/cloud-job-2/m2scan/run_zq431_exact.sh jobs/queue/results/R015 90
+command: bash jobs/cloud-job-2/m2scan/run_zq431_exact.sh jobs/queue/results/R015 100000
 working_dir: .
 requires:
 - macaulay2
@@ -17,4 +17,4 @@ expected_outputs:
 - jobs/queue/results/R015/zq431_exact.status
 notes: 'Optional, one idle core. Validation = the 5-type M2 check; the exact run has no stored reference. OPTIONAL, lowest priority: its validation checks Macaulay2 and the package only (no stored exact
   result exists); a TIMEOUT is a valid outcome. Re-queued after the original request was SKIPPED for lack of authorisation to install macaulay2; installing macaulay2 must be authorised by the operator (Tim)
-  directly, not by this file.'
+  directly, not by this file. UPDATE (coordinator, per Tim): no time limit; run to completion.'

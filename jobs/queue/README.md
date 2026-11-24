@@ -28,8 +28,8 @@ is this git branch.
    rebase before every push; on a conflict in `status/` or `results/`, keep both versions and say so in the commit.
 6. If a lambda = -1 run reports an obstruction (verdict OBSTRUCTED_GENUINE or UNRESOLVED), say so in the first line
    of the commit message and in `status/<id>.json` (`"alert": true`).
-7. Poll for new requests every 5 minutes (`git pull --rebase origin cloud-job-1`). Stop when the coordinator commits
-   `requests/STOP.yaml` or when the time budget in `requests/BUDGET.yaml` is used up.
+7. Poll for new requests every 5 minutes (`git pull --rebase origin cloud-job-1`). There is no time limit on computations: never kill a running job because of time. Stop only when the coordinator commits
+   `requests/STOP.yaml` or when Tim (the operator) says so.
 
 ## Request file (`requests/<id>.yaml`)
 

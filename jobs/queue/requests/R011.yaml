@@ -1,7 +1,7 @@
 id: R011
 requested_by: coordinator
 priority: 5
-command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h2_generic_lam-1_N9_pass2.csv --out jobs/queue/results/R011 --cores 8 --mem-gb 42 --mem-safety 1.1 --deadline-min 50
+command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h2_generic_lam-1_N9_pass2.csv --out jobs/queue/results/R011 --cores 8 --mem-gb 42 --mem-safety 1.1
 working_dir: .
 requires:
 - python3
@@ -18,4 +18,4 @@ preregistration: The 48 H1 directions at the other prime (replication). Dead end
 expected_outputs:
 - jobs/queue/results/R011/manifest.csv
 - jobs/queue/results/R011/summary.md
-notes: Optional; only if budget remains.
+notes: 'Optional; only if budget remains. UPDATE (coordinator, per Tim): no time limit; run to completion.'

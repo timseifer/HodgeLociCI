@@ -1,4 +1,6 @@
-# Written by the coordinator. The cloud lead stops starting new jobs when this budget is used up.
-wall_clock_minutes: 100        # compute time on the instance (Tim plans 1-2 hours; leave margin)
+# Written by the coordinator. UPDATED 03:50Z 24 Nov per Tim: NO hard time limit on computations.
+# Run every queued request to completion; never kill a running job for time. The session ends only when Tim says so
+# or when the coordinator commits requests/STOP.yaml. Resource limits still apply.
+wall_clock_minutes: none
 max_memory_gb_total: 180
 max_cores_total: 30
