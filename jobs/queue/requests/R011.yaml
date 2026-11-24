@@ -1,21 +1,21 @@
 id: R011
 requested_by: coordinator
-priority: 5
-command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h2_generic_lam-1_N9_pass2.csv --out jobs/queue/results/R011 --cores 8 --mem-gb 42 --mem-safety 1.1
+priority: 2
+command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h2_generic_lam-1_N9_pass2.csv --out jobs/queue/results/R011 --cores 7 --mem-gb 28 --mem-safety 1.1
 working_dir: .
 requires:
 - python3
 - python3-numpy
 - g++
 resources:
-  cores: 8
-  memory_gb: 42
-  est_minutes: 55
+  cores: 7
+  memory_gb: 28
+  est_minutes: 400
 after:
 - R000
-- R010
 preregistration: The 48 H1 directions at the other prime (replication). Dead end = any OBSTRUCTED_GENUINE at order <= 9; a verdict differing from H1 for the same seed = report.
 expected_outputs:
 - jobs/queue/results/R011/manifest.csv
 - jobs/queue/results/R011/summary.md
-notes: 'Optional; only if budget remains. UPDATE (coordinator, per Tim): no time limit; run to completion.'
+notes: 'START NOW on the 7 idle cores (keep-busy): R016 8 + R017 8 + R021 6 + R015 1 = 23 of 30 cores, about 146 GB used. Order-9 tasks are 1-thread, ~3.5 GB each. No deadline. Re-read this command right
+  before starting.'
