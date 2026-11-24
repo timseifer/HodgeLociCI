@@ -1,0 +1,1 @@
+{"id": "VALIDATION", "state": "DONE", "started": "2026-11-24T02:48:33Z", "finished": "2026-11-24T02:50:42Z", "host": "cloud", "commit": "a76c0e69600ac0ac89ccad66b959915bc03e4443", "alert": false, "summary": "VALIDATION PASS: all steps 0-6 PASS (2m09s wall, 30 threads); calibration speed factor 0.39"}
