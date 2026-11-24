@@ -1,0 +1,11 @@
+id: R016
+requested_by: coordinator (backfill: keep the machine busy)
+priority: 4
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/r016_sparse_N15.csv --out jobs/queue/results/R016 --cores 8 --mem-gb 60 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 8, memory_gb: 60, est_minutes: 30}
+after: [R000, R003]
+preregistration: "EX-T6 sparse lambda = -1 arcs (both types, both primes) to order 15. Dead end = obstruction at order <= 15 (recorded as OBSTRUCTED_UNRESOLVED for these arcs: report prominently)."
+expected_outputs: ["jobs/queue/results/R016/manifest.csv", "jobs/queue/results/R016/summary.md"]
+notes: "Backfill: start whenever cores and memory are free. No time limit. Afterwards make_summary.py and check_results.py."

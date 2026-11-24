@@ -1,0 +1,6 @@
+# R016 (backfill): EX-T6 sparse lambda = -1 arcs to order 15 (about 25 GB each)
+job,lam,p,seed,kind,N,threads
+c,-1,67108837,0,exarc_al,15,4
+c,-1,67108819,0,exarc_al,15,4
+c,-1,67108837,0,exarc_la,15,4
+c,-1,67108819,0,exarc_la,15,4

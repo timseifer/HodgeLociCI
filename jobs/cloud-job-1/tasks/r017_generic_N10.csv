@@ -1,0 +1,6 @@
+# R017 (backfill): lambda = -1 generic directions of W3 (seeds 2,3,5,6) to order 10 at MOD 67108837 (about 13 GB each)
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,2,al,10,4
+a,-1,67108837,3,al,10,4
+a,-1,67108837,5,la,10,4
+a,-1,67108837,6,la,10,4

@@ -58,3 +58,8 @@ notes: "free text for the cloud agent"
 
 At least `manifest.csv` (the columns of `jobs/cloud-job-1/README.md`, output spec), the logs, and `summary.md`.
 The coordinator validates them with `jobs/cloud-job-1/check_results.py` before recording anything.
+
+## Keep the machine busy (Tim, 24 Nov)
+
+The instance bills by the hour whatever its load. Whenever cores or memory are idle, start the next eligible request
+(priorities are a preference, not a reason to leave the machine idle). Requests marked "backfill" exist for this.
