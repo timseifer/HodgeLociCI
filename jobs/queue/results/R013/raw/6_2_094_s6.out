@@ -1,0 +1,2 @@
+JUMP 6 2 F={2} H={3} P={1, 5} info=deg 25 linear factors 1 t=11.7484
+JUMP 6 2 F={2} H={3} P={1, 5} point E'=1 S=false dimK=418 verdict=ALL DIE rankQ=1 t=15.2024

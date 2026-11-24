@@ -1,0 +1,2 @@
+JUMP 4 3 F={1} H={3} P={1, 1, 1} info=deg 19 linear factors 1 t=3.96038
+JUMP 4 3 F={1} H={3} P={1, 1, 1} point=SINGULAR

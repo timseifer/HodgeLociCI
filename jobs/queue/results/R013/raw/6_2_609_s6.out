@@ -1,0 +1,2 @@
+JUMP 6 2 F={2, 2, 2} H={3, 3, 4} P={} info=deg 159 linear factors 1 t=87.0131
+JUMP 6 2 F={2, 2, 2} H={3, 3, 4} P={} point E'=1 S=false dimK=301 verdict=ALL DIE rankQ=1 t=93.7529

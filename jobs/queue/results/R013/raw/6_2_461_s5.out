@@ -1,0 +1,3 @@
+JUMP 6 2 F={1, 1, 3} H={1, 5, 5} P={} info=deg 36 linear factors 3 t=19.0928
+JUMP 6 2 F={1, 1, 3} H={1, 5, 5} P={} point=SINGULAR
+JUMP 6 2 F={1, 1, 3} H={1, 5, 5} P={} point=SINGULAR

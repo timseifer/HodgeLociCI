@@ -1,0 +1,3 @@
+JUMP 6 2 F={1, 2, 2} H={2, 2, 4} P={} info=deg 15 linear factors 2 t=23.6322
+JUMP 6 2 F={1, 2, 2} H={2, 2, 4} P={} point E'=1 S=false dimK=321 verdict=ALL DIE rankQ=1 t=24.7995
+JUMP 6 2 F={1, 2, 2} H={2, 2, 4} P={} point E'=1 S=false dimK=321 verdict=ALL DIE rankQ=1 t=25.6804

@@ -1,0 +1,2 @@
+JUMP 6 2 F={1, 2, 4} H={2, 2, 5} P={} info=deg 81 linear factors 1 t=9.25772
+JUMP 6 2 F={1, 2, 4} H={2, 2, 5} P={} point=SINGULAR

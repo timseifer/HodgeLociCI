@@ -1,0 +1,3 @@
+JUMP 6 2 F={1, 2, 2} H={3, 3, 5} P={} info=deg 93 linear factors 3 t=21.979
+JUMP 6 2 F={1, 2, 2} H={3, 3, 5} P={} point=SINGULAR
+JUMP 6 2 F={1, 2, 2} H={3, 3, 5} P={} point E'=1 S=false dimK=368 verdict=ALL DIE rankQ=1 t=26.5567
