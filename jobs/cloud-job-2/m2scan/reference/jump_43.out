@@ -1,0 +1,498 @@
+JUMP 4 3 F={1} H={1} P={1, 1, 1} info=deg 6 linear factors 0 t=.0447949
+JUMP 4 3 F={1} H={1} P={1, 1, 2} info=deg 8 linear factors 0 t=.064756
+JUMP 4 3 F={1} H={1} P={1, 1, 3} info=deg 6 linear factors 0 t=.0647935
+JUMP 4 3 F={1} H={1} P={1, 2, 2} info=deg 11 linear factors 2 t=13.3387
+JUMP 4 3 F={1} H={1} P={1, 2, 2} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=14.8004
+JUMP 4 3 F={1} H={1} P={1, 2, 2} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=16.081
+JUMP 4 3 F={1} H={1} P={1, 2, 3} info=deg 8 linear factors 0 t=.0458337
+JUMP 4 3 F={1} H={1} P={1, 3, 3} info=deg 6 linear factors 0 t=.0427239
+JUMP 4 3 F={1} H={1} P={2, 2, 2} info=deg 15 linear factors 1 t=6.05854
+JUMP 4 3 F={1} H={1} P={2, 2, 2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=8.10986
+JUMP 4 3 F={1} H={1} P={2, 2, 3} info=deg 11 linear factors 1 t=5.94263
+JUMP 4 3 F={1} H={1} P={2, 2, 3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=7.40056
+JUMP 4 3 F={1} H={1} P={2, 3, 3} info=deg 8 linear factors 0 t=.0490787
+JUMP 4 3 F={1} H={1} P={3, 3, 3} info=deg 6 linear factors 4 t=12.2112
+JUMP 4 3 F={1} H={1} P={3, 3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.0904
+JUMP 4 3 F={1} H={1} P={3, 3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.7457
+JUMP 4 3 F={1} H={2} P={1, 1, 1} info=deg 13 linear factors 2 t=12.453
+JUMP 4 3 F={1} H={2} P={1, 1, 1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.8427
+JUMP 4 3 F={1} H={2} P={1, 1, 1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=15.0103
+JUMP 4 3 F={1} H={2} P={1, 1, 2} info=deg 18 linear factors 1 t=5.93382
+JUMP 4 3 F={1} H={2} P={1, 1, 2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=8.09651
+JUMP 4 3 F={1} H={2} P={1, 1, 3} info=deg 13 linear factors 0 t=.0927776
+JUMP 4 3 F={1} H={2} P={1, 2, 2} info=deg 25 linear factors 1 t=6.18065
+JUMP 4 3 F={1} H={2} P={1, 2, 2} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=9.72352
+JUMP 4 3 F={1} H={2} P={1, 2, 3} info=deg 18 linear factors 2 t=12.9918
+JUMP 4 3 F={1} H={2} P={1, 2, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=15.1036
+JUMP 4 3 F={1} H={2} P={1, 2, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=17.1111
+JUMP 4 3 F={1} H={2} P={1, 3, 3} info=deg 13 linear factors 0 t=.0584472
+JUMP 4 3 F={1} H={2} P={2, 2, 2} info=deg 35 linear factors 3 t=13.9722
+JUMP 4 3 F={1} H={2} P={2, 2, 2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=19.3744
+JUMP 4 3 F={1} H={2} P={2, 2, 2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=24.5073
+JUMP 4 3 F={1} H={2} P={2, 2, 3} info=deg 25 linear factors 2 t=13.4506
+JUMP 4 3 F={1} H={2} P={2, 2, 3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=17.1361
+JUMP 4 3 F={1} H={2} P={2, 2, 3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=20.5058
+JUMP 4 3 F={1} H={2} P={2, 3, 3} info=deg 18 linear factors 2 t=13.2511
+JUMP 4 3 F={1} H={2} P={2, 3, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=15.7086
+JUMP 4 3 F={1} H={2} P={2, 3, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=17.7899
+JUMP 4 3 F={1} H={2} P={3, 3, 3} info=deg 13 linear factors 2 t=12.3141
+JUMP 4 3 F={1} H={2} P={3, 3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.9542
+JUMP 4 3 F={1} H={2} P={3, 3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=15.2848
+JUMP 4 3 F={1} H={3} P={1, 1, 1} info=deg 19 linear factors 1 t=4.75069
+JUMP 4 3 F={1} H={3} P={1, 1, 1} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={1, 1, 2} info=deg 26 linear factors 1 t=5.05667
+JUMP 4 3 F={1} H={3} P={1, 1, 2} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={1, 1, 3} info=deg 19 linear factors 1 t=5.35836
+JUMP 4 3 F={1} H={3} P={1, 1, 3} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={1, 2, 2} info=deg 36 linear factors 1 t=4.61764
+JUMP 4 3 F={1} H={3} P={1, 2, 2} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={1, 2, 3} info=deg 26 linear factors 1 t=4.8056
+JUMP 4 3 F={1} H={3} P={1, 2, 3} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={1, 3, 3} info=deg 19 linear factors 1 t=5.39949
+JUMP 4 3 F={1} H={3} P={1, 3, 3} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={2, 2, 2} info=deg 50 linear factors 1 t=3.99171
+JUMP 4 3 F={1} H={3} P={2, 2, 2} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={2, 2, 3} info=deg 36 linear factors 1 t=4.42779
+JUMP 4 3 F={1} H={3} P={2, 2, 3} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={2, 3, 3} info=deg 26 linear factors 1 t=5.05034
+JUMP 4 3 F={1} H={3} P={2, 3, 3} point=SINGULAR
+JUMP 4 3 F={1} H={3} P={3, 3, 3} info=deg 19 linear factors 1 t=5.39992
+JUMP 4 3 F={1} H={3} P={3, 3, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 1, 1} info=deg 26 linear factors 1 t=5.44215
+JUMP 4 3 F={2} H={2} P={1, 1, 1} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 1, 2} info=deg 36 linear factors 1 t=5.11945
+JUMP 4 3 F={2} H={2} P={1, 1, 2} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 1, 3} info=deg 26 linear factors 1 t=5.28891
+JUMP 4 3 F={2} H={2} P={1, 1, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 2, 2} info=deg 50 linear factors 1 t=4.61089
+JUMP 4 3 F={2} H={2} P={1, 2, 2} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 2, 3} info=deg 36 linear factors 1 t=4.96628
+JUMP 4 3 F={2} H={2} P={1, 2, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={1, 3, 3} info=deg 26 linear factors 1 t=5.36302
+JUMP 4 3 F={2} H={2} P={1, 3, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={2, 2, 2} info=deg 70 linear factors 1 t=4.81327
+JUMP 4 3 F={2} H={2} P={2, 2, 2} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={2, 2, 3} info=deg 50 linear factors 1 t=4.34277
+JUMP 4 3 F={2} H={2} P={2, 2, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={2, 3, 3} info=deg 36 linear factors 1 t=4.7477
+JUMP 4 3 F={2} H={2} P={2, 3, 3} point=SINGULAR
+JUMP 4 3 F={2} H={2} P={3, 3, 3} info=deg 26 linear factors 1 t=5.46298
+JUMP 4 3 F={2} H={2} P={3, 3, 3} point=SINGULAR
+JUMP 4 3 F={1, 1} H={1, 1} P={1, 1} info=deg 2 linear factors 2 t=13.0916
+JUMP 4 3 F={1, 1} H={1, 1} P={1, 1} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=13.5899
+JUMP 4 3 F={1, 1} H={1, 1} P={1, 1} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=13.9005
+JUMP 4 3 F={1, 1} H={1, 1} P={1, 2} info=deg 2 linear factors 0 t=.045111
+JUMP 4 3 F={1, 1} H={1, 1} P={1, 3} info=deg 2 linear factors 0 t=.0450484
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 2} info=deg 2 linear factors 2 t=12.1987
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 2} point E'=1 S=false dimK=259 verdict=ALL DIE rankQ=1 t=12.8219
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 2} point E'=1 S=false dimK=259 verdict=ALL DIE rankQ=1 t=13.1357
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 3} info=deg 2 linear factors 2 t=12.3324
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 3} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=12.8988
+JUMP 4 3 F={1, 1} H={1, 1} P={2, 3} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=13.2293
+JUMP 4 3 F={1, 1} H={1, 1} P={3, 3} info=deg 2 linear factors 2 t=12.3233
+JUMP 4 3 F={1, 1} H={1, 1} P={3, 3} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=12.8703
+JUMP 4 3 F={1, 1} H={1, 1} P={3, 3} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=13.1851
+JUMP 4 3 F={1, 1} H={1, 2} P={1, 1} info=deg 6 linear factors 0 t=.0466275
+JUMP 4 3 F={1, 1} H={1, 2} P={1, 2} info=deg 8 linear factors 1 t=6.01716
+JUMP 4 3 F={1, 1} H={1, 2} P={1, 2} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=6.8138
+JUMP 4 3 F={1, 1} H={1, 2} P={1, 3} info=deg 6 linear factors 1 t=6.03472
+JUMP 4 3 F={1, 1} H={1, 2} P={1, 3} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=6.77542
+JUMP 4 3 F={1, 1} H={1, 2} P={2, 2} info=deg 10 linear factors 2 t=12.2111
+JUMP 4 3 F={1, 1} H={1, 2} P={2, 2} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=13.1399
+JUMP 4 3 F={1, 1} H={1, 2} P={2, 2} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=13.8572
+JUMP 4 3 F={1, 1} H={1, 2} P={2, 3} info=deg 8 linear factors 1 t=5.85684
+JUMP 4 3 F={1, 1} H={1, 2} P={2, 3} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=6.72329
+JUMP 4 3 F={1, 1} H={1, 2} P={3, 3} info=deg 6 linear factors 1 t=6.03333
+JUMP 4 3 F={1, 1} H={1, 2} P={3, 3} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=6.77914
+JUMP 4 3 F={1, 1} H={1, 3} P={1, 1} info=deg 12 linear factors 0 t=.0517133
+JUMP 4 3 F={1, 1} H={1, 3} P={1, 2} info=deg 16 linear factors 1 t=5.79043
+JUMP 4 3 F={1, 1} H={1, 3} P={1, 2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=6.9178
+JUMP 4 3 F={1, 1} H={1, 3} P={1, 3} info=deg 12 linear factors 0 t=.0574618
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 2} info=deg 22 linear factors 1 t=5.95229
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 2} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=7.70898
+JUMP 4 3 F={1, 1} H={1, 3} P={2, 3} info=deg 16 linear factors 0 t=.0945709
+JUMP 4 3 F={1, 1} H={1, 3} P={3, 3} info=deg 12 linear factors 1 t=6.09389
+JUMP 4 3 F={1, 1} H={1, 3} P={3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=7.05407
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 1} info=deg 16 linear factors 2 t=12.2676
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 1} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=13.4423
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 1} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=14.2997
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 2} info=deg 22 linear factors 0 t=.0735669
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 3} info=deg 16 linear factors 1 t=5.74214
+JUMP 4 3 F={1, 1} H={2, 2} P={1, 3} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=6.90492
+JUMP 4 3 F={1, 1} H={2, 2} P={2, 2} info=deg 30 linear factors 0 t=.108439
+JUMP 4 3 F={1, 1} H={2, 2} P={2, 3} info=deg 22 linear factors 2 t=12.1591
+JUMP 4 3 F={1, 1} H={2, 2} P={2, 3} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=13.7777
+JUMP 4 3 F={1, 1} H={2, 2} P={2, 3} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=15.1118
+JUMP 4 3 F={1, 1} H={2, 2} P={3, 3} info=deg 16 linear factors 1 t=6.09891
+JUMP 4 3 F={1, 1} H={2, 2} P={3, 3} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=7.28835
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 1} info=deg 26 linear factors 1 t=5.55311
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=6.93807
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 2} info=deg 36 linear factors 2 t=12.0396
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=14.0696
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=15.9201
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 3} info=deg 26 linear factors 1 t=5.58615
+JUMP 4 3 F={1, 1} H={2, 3} P={1, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=7.03191
+JUMP 4 3 F={1, 1} H={2, 3} P={2, 2} info=deg 50 linear factors 0 t=.519598
+JUMP 4 3 F={1, 1} H={2, 3} P={2, 3} info=deg 36 linear factors 0 t=.153304
+JUMP 4 3 F={1, 1} H={2, 3} P={3, 3} info=deg 26 linear factors 0 t=.0813041
+JUMP 4 3 F={1, 1} H={3, 3} P={1, 1} info=deg 38 linear factors 0 t=.121693
+JUMP 4 3 F={1, 1} H={3, 3} P={1, 2} info=deg 52 linear factors 0 t=.13022
+JUMP 4 3 F={1, 1} H={3, 3} P={1, 3} info=deg 38 linear factors 0 t=.0862618
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 2} info=deg 72 linear factors 2 t=8.40042
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 1} H={3, 3} P={2, 3} info=deg 52 linear factors 0 t=.275792
+JUMP 4 3 F={1, 1} H={3, 3} P={3, 3} info=deg 38 linear factors 0 t=.259282
+JUMP 4 3 F={1, 2} H={1, 2} P={1, 1} info=deg 16 linear factors 0 t=.0621843
+JUMP 4 3 F={1, 2} H={1, 2} P={1, 2} info=deg 22 linear factors 0 t=.0689227
+JUMP 4 3 F={1, 2} H={1, 2} P={1, 3} info=deg 16 linear factors 1 t=5.83252
+JUMP 4 3 F={1, 2} H={1, 2} P={1, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=6.96565
+JUMP 4 3 F={1, 2} H={1, 2} P={2, 2} info=deg 30 linear factors 1 t=5.86754
+JUMP 4 3 F={1, 2} H={1, 2} P={2, 2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=7.88619
+JUMP 4 3 F={1, 2} H={1, 2} P={2, 3} info=deg 22 linear factors 1 t=5.78557
+JUMP 4 3 F={1, 2} H={1, 2} P={2, 3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=7.33466
+JUMP 4 3 F={1, 2} H={1, 2} P={3, 3} info=deg 16 linear factors 2 t=12.2335
+JUMP 4 3 F={1, 2} H={1, 2} P={3, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=13.3597
+JUMP 4 3 F={1, 2} H={1, 2} P={3, 3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=14.2363
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 1} info=deg 26 linear factors 1 t=4.44968
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 1} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 2} info=deg 36 linear factors 1 t=4.93656
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 3} info=deg 26 linear factors 3 t=11.2042
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=12.6886
+JUMP 4 3 F={1, 2} H={1, 3} P={1, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={2, 2} info=deg 50 linear factors 1 t=4.43103
+JUMP 4 3 F={1, 2} H={1, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={2, 3} info=deg 36 linear factors 1 t=4.73763
+JUMP 4 3 F={1, 2} H={1, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={3, 3} info=deg 26 linear factors 2 t=11.3075
+JUMP 4 3 F={1, 2} H={1, 3} P={3, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={1, 3} P={3, 3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=12.8507
+JUMP 4 3 F={1, 2} H={2, 2} P={1, 1} info=deg 36 linear factors 0 t=.204621
+JUMP 4 3 F={1, 2} H={2, 2} P={1, 2} info=deg 50 linear factors 0 t=.520345
+JUMP 4 3 F={1, 2} H={2, 2} P={1, 3} info=deg 36 linear factors 0 t=.191576
+JUMP 4 3 F={1, 2} H={2, 2} P={2, 2} info=deg 70 linear factors 0 t=2.56892
+JUMP 4 3 F={1, 2} H={2, 2} P={2, 3} info=deg 50 linear factors 0 t=.584305
+JUMP 4 3 F={1, 2} H={2, 2} P={3, 3} info=deg 36 linear factors 0 t=.158462
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 1} info=deg 52 linear factors 2 t=9.27892
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 1} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 1} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 2} info=deg 72 linear factors 2 t=9.38282
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 3} info=deg 52 linear factors 2 t=10.3405
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={1, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 2} info=deg 100 linear factors 2 t=9.20893
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 3} info=deg 72 linear factors 2 t=9.40748
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={3, 3} info=deg 52 linear factors 2 t=10.1314
+JUMP 4 3 F={1, 2} H={2, 3} P={3, 3} point=SINGULAR
+JUMP 4 3 F={1, 2} H={2, 3} P={3, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 1} info=deg 38 linear factors 2 t=10.318
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 1} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 1} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 2} info=deg 52 linear factors 2 t=9.84433
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 2} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 2} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 3} info=deg 38 linear factors 2 t=10.2382
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={1, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 2} info=deg 72 linear factors 2 t=9.03565
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 2} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 3} info=deg 52 linear factors 2 t=9.37959
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={2, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={3, 3} info=deg 38 linear factors 2 t=10.3834
+JUMP 4 3 F={1, 3} H={1, 3} P={3, 3} point=SINGULAR
+JUMP 4 3 F={1, 3} H={1, 3} P={3, 3} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 1} info=deg 72 linear factors 2 t=10.3203
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 1} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 1} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 2} info=deg 100 linear factors 0 t=1.06655
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 3} info=deg 72 linear factors 2 t=9.9075
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 3} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={1, 3} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={2, 2} info=deg 140 linear factors 2 t=10.0641
+JUMP 4 3 F={2, 2} H={2, 2} P={2, 2} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={2, 2} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={2, 3} info=deg 100 linear factors 0 t=1.0832
+JUMP 4 3 F={2, 2} H={2, 2} P={3, 3} info=deg 72 linear factors 2 t=9.39937
+JUMP 4 3 F={2, 2} H={2, 2} P={3, 3} point=SINGULAR
+JUMP 4 3 F={2, 2} H={2, 2} P={3, 3} point=SINGULAR
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={1} info=deg 3 linear factors 0 t=.633436
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={2} info=deg 3 linear factors 3 t=12.1583
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={2} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=12.5546
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={2} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=13.0032
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={3} info=deg 3 linear factors 1 t=6.67347
+JUMP 4 3 F={1, 1, 1} H={1, 1, 3} P={3} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=7.10787
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={1} info=deg 3 linear factors 3 t=13.0918
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={1} point E'=1 S=false dimK=276 verdict=ALL DIE rankQ=1 t=13.4864
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={1} point E'=1 S=false dimK=276 verdict=ALL DIE rankQ=1 t=13.93
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={2} info=deg 3 linear factors 1 t=6.9131
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={2} point E'=1 S=false dimK=255 verdict=ALL DIE rankQ=1 t=7.40224
+JUMP 4 3 F={1, 1, 1} H={1, 2, 2} P={3} info=deg 3 linear factors 0 t=.577403
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={1} info=deg 9 linear factors 3 t=12.6316
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={1} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=13.3615
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={1} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=13.8907
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={2} info=deg 12 linear factors 2 t=12.9604
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={2} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=13.8066
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={2} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=14.4619
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={3} info=deg 9 linear factors 1 t=6.24915
+JUMP 4 3 F={1, 1, 1} H={1, 2, 3} P={3} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=7.02607
+JUMP 4 3 F={1, 1, 1} H={1, 3, 3} P={1} info=deg 18 linear factors 0 t=.0783506
+JUMP 4 3 F={1, 1, 1} H={1, 3, 3} P={2} info=deg 24 linear factors 1 t=6.07116
+JUMP 4 3 F={1, 1, 1} H={1, 3, 3} P={2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=7.24479
+JUMP 4 3 F={1, 1, 1} H={1, 3, 3} P={3} info=deg 18 linear factors 0 t=.0831588
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={1} info=deg 12 linear factors 0 t=.11521
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={2} info=deg 15 linear factors 2 t=12.3333
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={2} point E'=1 S=false dimK=239 verdict=ALL DIE rankQ=1 t=13.3018
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={2} point E'=1 S=false dimK=239 verdict=ALL DIE rankQ=1 t=14.1087
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={3} info=deg 12 linear factors 2 t=12.6339
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={3} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=13.5139
+JUMP 4 3 F={1, 1, 1} H={2, 2, 2} P={3} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=14.1408
+JUMP 4 3 F={1, 1, 1} H={2, 2, 3} P={1} info=deg 24 linear factors 1 t=6.27951
+JUMP 4 3 F={1, 1, 1} H={2, 2, 3} P={1} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=7.56837
+JUMP 4 3 F={1, 1, 1} H={2, 2, 3} P={2} info=deg 33 linear factors 1 t=6.00029
+JUMP 4 3 F={1, 1, 1} H={2, 2, 3} P={2} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=7.55565
+JUMP 4 3 F={1, 1, 1} H={2, 2, 3} P={3} info=deg 24 linear factors 0 t=.0823908
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={1} info=deg 39 linear factors 1 t=6.27977
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=7.71941
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={2} info=deg 54 linear factors 2 t=12.8187
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=14.9366
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=16.7789
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={3} info=deg 39 linear factors 1 t=6.16952
+JUMP 4 3 F={1, 1, 1} H={2, 3, 3} P={3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=7.74967
+JUMP 4 3 F={1, 1, 1} H={3, 3, 3} P={1} info=deg 57 linear factors 1 t=4.86266
+JUMP 4 3 F={1, 1, 1} H={3, 3, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 1} H={3, 3, 3} P={2} info=deg 78 linear factors 0 t=.302493
+JUMP 4 3 F={1, 1, 1} H={3, 3, 3} P={3} info=deg 57 linear factors 1 t=5.13845
+JUMP 4 3 F={1, 1, 1} H={3, 3, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={1} info=deg 3 linear factors 3 t=12.7268
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={1} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=13.1457
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={1} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=13.5581
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={2} info=deg 3 linear factors 3 t=12.3893
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={2} point E'=1 S=false dimK=259 verdict=ALL DIE rankQ=1 t=12.8082
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={2} point E'=1 S=false dimK=259 verdict=ALL DIE rankQ=1 t=13.2724
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={3} info=deg 3 linear factors 3 t=12.2395
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={3} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=12.7975
+JUMP 4 3 F={1, 1, 2} H={1, 1, 2} P={3} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=13.1395
+JUMP 4 3 F={1, 1, 2} H={1, 1, 3} P={1} info=deg 9 linear factors 0 t=.0794808
+JUMP 4 3 F={1, 1, 2} H={1, 1, 3} P={2} info=deg 12 linear factors 1 t=6.25008
+JUMP 4 3 F={1, 1, 2} H={1, 1, 3} P={2} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=7.04687
+JUMP 4 3 F={1, 1, 2} H={1, 1, 3} P={3} info=deg 9 linear factors 1 t=5.85125
+JUMP 4 3 F={1, 1, 2} H={1, 1, 3} P={3} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=6.65336
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={1} info=deg 12 linear factors 1 t=6.17055
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={1} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=6.89694
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={2} info=deg 15 linear factors 2 t=12.8888
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={2} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=13.8335
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={2} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=14.5696
+JUMP 4 3 F={1, 1, 2} H={1, 2, 2} P={3} info=deg 12 linear factors 0 t=.0794838
+JUMP 4 3 F={1, 1, 2} H={1, 2, 3} P={1} info=deg 24 linear factors 0 t=.0722482
+JUMP 4 3 F={1, 1, 2} H={1, 2, 3} P={2} info=deg 33 linear factors 0 t=.103803
+JUMP 4 3 F={1, 1, 2} H={1, 2, 3} P={3} info=deg 24 linear factors 2 t=12.4383
+JUMP 4 3 F={1, 1, 2} H={1, 2, 3} P={3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=13.5847
+JUMP 4 3 F={1, 1, 2} H={1, 2, 3} P={3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=14.5645
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={1} info=deg 39 linear factors 2 t=12.7579
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=14.2563
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=15.4852
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={2} info=deg 54 linear factors 3 t=9.39701
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={3} info=deg 39 linear factors 2 t=12.8474
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=14.3422
+JUMP 4 3 F={1, 1, 2} H={1, 3, 3} P={3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=15.6156
+JUMP 4 3 F={1, 1, 2} H={2, 2, 2} P={1} info=deg 33 linear factors 0 t=.143914
+JUMP 4 3 F={1, 1, 2} H={2, 2, 2} P={2} info=deg 45 linear factors 0 t=.185706
+JUMP 4 3 F={1, 1, 2} H={2, 2, 2} P={3} info=deg 33 linear factors 1 t=6.2784
+JUMP 4 3 F={1, 1, 2} H={2, 2, 2} P={3} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=8.05752
+JUMP 4 3 F={1, 1, 2} H={2, 2, 3} P={1} info=deg 54 linear factors 0 t=.441522
+JUMP 4 3 F={1, 1, 2} H={2, 2, 3} P={2} info=deg 75 linear factors 0 t=1.16779
+JUMP 4 3 F={1, 1, 2} H={2, 2, 3} P={3} info=deg 54 linear factors 1 t=6.41567
+JUMP 4 3 F={1, 1, 2} H={2, 2, 3} P={3} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=8.71261
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={1} info=deg 78 linear factors 3 t=10.1882
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={2} info=deg 108 linear factors 3 t=10.0894
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={3} info=deg 78 linear factors 3 t=10.1672
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 1, 2} H={2, 3, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 1, 3} P={1} info=deg 18 linear factors 0 t=.230608
+JUMP 4 3 F={1, 1, 3} H={1, 1, 3} P={2} info=deg 24 linear factors 1 t=6.24715
+JUMP 4 3 F={1, 1, 3} H={1, 1, 3} P={2} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=7.43342
+JUMP 4 3 F={1, 1, 3} H={1, 1, 3} P={3} info=deg 18 linear factors 0 t=.117682
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={1} info=deg 24 linear factors 2 t=10.9803
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={1} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=12.102
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={2} info=deg 33 linear factors 3 t=11.0032
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={2} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=12.6803
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={3} info=deg 24 linear factors 2 t=11.1133
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={3} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=12.369
+JUMP 4 3 F={1, 1, 3} H={1, 2, 2} P={3} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={1} info=deg 39 linear factors 2 t=11.2367
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={1} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=12.705
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={2} info=deg 54 linear factors 1 t=4.66003
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={3} info=deg 39 linear factors 2 t=11.6105
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={3} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.2073
+JUMP 4 3 F={1, 1, 3} H={1, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={1} info=deg 57 linear factors 1 t=4.80195
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={2} info=deg 78 linear factors 1 t=4.97162
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={3} info=deg 57 linear factors 1 t=5.23032
+JUMP 4 3 F={1, 1, 3} H={1, 3, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={1} info=deg 33 linear factors 2 t=12.9459
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={1} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=14.392
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={1} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=15.6582
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={2} info=deg 45 linear factors 1 t=6.08456
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=8.40191
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={3} info=deg 33 linear factors 1 t=6.17619
+JUMP 4 3 F={1, 2, 2} H={1, 2, 2} P={3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=7.76323
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={1} info=deg 54 linear factors 1 t=4.67793
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={2} info=deg 75 linear factors 1 t=5.38161
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={3} info=deg 54 linear factors 1 t=4.91606
+JUMP 4 3 F={1, 2, 2} H={1, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={1} info=deg 75 linear factors 1 t=7.21533
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={1} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=10.3304
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={2} info=deg 105 linear factors 1 t=11.2164
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={2} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=16.7771
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={3} info=deg 75 linear factors 2 t=13.8056
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=17.3826
+JUMP 4 3 F={1, 2, 2} H={2, 2, 2} P={3} point E'=1 S=false dimK=269 verdict=ALL DIE rankQ=1 t=20.9596
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={1} info=deg 108 linear factors 3 t=9.91241
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={2} info=deg 150 linear factors 1 t=5.11981
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={3} info=deg 108 linear factors 3 t=9.36176
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 2, 2} H={2, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={1} info=deg 78 linear factors 3 t=10.0712
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={1} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={2} info=deg 108 linear factors 3 t=9.8907
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={2} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={3} info=deg 78 linear factors 3 t=10.2861
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={1, 2, 3} H={1, 2, 3} P={3} point=SINGULAR
+JUMP 4 3 F={2, 2, 2} H={2, 2, 2} P={1} info=deg 150 linear factors 0 t=1.66369
+JUMP 4 3 F={2, 2, 2} H={2, 2, 2} P={2} info=deg 210 linear factors 1 t=8.02931
+JUMP 4 3 F={2, 2, 2} H={2, 2, 2} P={2} point=SINGULAR
+JUMP 4 3 F={2, 2, 2} H={2, 2, 2} P={3} info=deg 150 linear factors 0 t=1.53257
+JUMP 4 3 F={1, 1, 1, 1} H={1, 1, 3, 3} P={} info=deg 4 linear factors 2 t=17.5374
+JUMP 4 3 F={1, 1, 1, 1} H={1, 1, 3, 3} P={} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=18.1703
+JUMP 4 3 F={1, 1, 1, 1} H={1, 1, 3, 3} P={} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=18.4979
+JUMP 4 3 F={1, 1, 1, 1} H={1, 2, 2, 3} P={} info=deg 4 linear factors 1 t=8.72571
+JUMP 4 3 F={1, 1, 1, 1} H={1, 2, 2, 3} P={} point E'=1 S=false dimK=276 verdict=ALL DIE rankQ=1 t=9.20234
+JUMP 4 3 F={1, 1, 1, 1} H={1, 2, 3, 3} P={} info=deg 12 linear factors 1 t=7.00722
+JUMP 4 3 F={1, 1, 1, 1} H={1, 2, 3, 3} P={} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=7.86799
+JUMP 4 3 F={1, 1, 1, 1} H={1, 3, 3, 3} P={} info=deg 24 linear factors 0 t=.160623
+JUMP 4 3 F={1, 1, 1, 1} H={2, 2, 2, 2} P={} info=deg 4 linear factors 1 t=7.06571
+JUMP 4 3 F={1, 1, 1, 1} H={2, 2, 2, 2} P={} point E'=1 S=false dimK=242 verdict=ALL DIE rankQ=1 t=7.56494
+JUMP 4 3 F={1, 1, 1, 1} H={2, 2, 2, 3} P={} info=deg 16 linear factors 1 t=6.36344
+JUMP 4 3 F={1, 1, 1, 1} H={2, 2, 2, 3} P={} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=7.17302
+JUMP 4 3 F={1, 1, 1, 1} H={2, 2, 3, 3} P={} info=deg 32 linear factors 0 t=.118646
+JUMP 4 3 F={1, 1, 1, 1} H={2, 3, 3, 3} P={} info=deg 52 linear factors 0 t=.213993
+JUMP 4 3 F={1, 1, 1, 1} H={3, 3, 3, 3} P={} info=deg 76 linear factors 2 t=10.1137
+JUMP 4 3 F={1, 1, 1, 1} H={3, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 1} H={3, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 2} H={1, 1, 2, 3} P={} info=deg 4 linear factors 2 t=14.5592
+JUMP 4 3 F={1, 1, 1, 2} H={1, 1, 2, 3} P={} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=15.1707
+JUMP 4 3 F={1, 1, 1, 2} H={1, 1, 2, 3} P={} point E'=1 S=false dimK=279 verdict=ALL DIE rankQ=1 t=15.5908
+JUMP 4 3 F={1, 1, 1, 2} H={1, 1, 3, 3} P={} info=deg 12 linear factors 1 t=6.91992
+JUMP 4 3 F={1, 1, 1, 2} H={1, 1, 3, 3} P={} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=7.65497
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 2, 2} P={} info=deg 4 linear factors 0 t=.874299
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 2, 3} P={} info=deg 16 linear factors 2 t=12.4414
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 2, 3} P={} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=13.268
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 2, 3} P={} point E'=1 S=false dimK=272 verdict=ALL DIE rankQ=1 t=13.8496
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 3, 3} P={} info=deg 32 linear factors 1 t=6.0864
+JUMP 4 3 F={1, 1, 1, 2} H={1, 2, 3, 3} P={} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=7.27696
+JUMP 4 3 F={1, 1, 1, 2} H={1, 3, 3, 3} P={} info=deg 52 linear factors 4 t=11.1692
+JUMP 4 3 F={1, 1, 1, 2} H={1, 3, 3, 3} P={} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=12.6417
+JUMP 4 3 F={1, 1, 1, 2} H={1, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 2} H={2, 2, 2, 2} P={} info=deg 20 linear factors 0 t=.151265
+JUMP 4 3 F={1, 1, 1, 2} H={2, 2, 2, 3} P={} info=deg 44 linear factors 1 t=5.9646
+JUMP 4 3 F={1, 1, 1, 2} H={2, 2, 2, 3} P={} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=7.517
+JUMP 4 3 F={1, 1, 1, 2} H={2, 2, 3, 3} P={} info=deg 72 linear factors 1 t=6.51286
+JUMP 4 3 F={1, 1, 1, 2} H={2, 2, 3, 3} P={} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=8.61805
+JUMP 4 3 F={1, 1, 1, 2} H={2, 3, 3, 3} P={} info=deg 104 linear factors 1 t=5.32446
+JUMP 4 3 F={1, 1, 1, 2} H={2, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 1, 3} P={} info=deg 4 linear factors 2 t=13.3359
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 1, 3} P={} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=13.869
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 1, 3} P={} point E'=1 S=false dimK=293 verdict=ALL DIE rankQ=1 t=14.1927
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 2, 2} P={} info=deg 4 linear factors 0 t=.754401
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 2, 3} P={} info=deg 12 linear factors 1 t=6.27181
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 2, 3} P={} point E'=1 S=false dimK=288 verdict=ALL DIE rankQ=1 t=7.0758
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 3, 3} P={} info=deg 24 linear factors 1 t=5.99313
+JUMP 4 3 F={1, 1, 1, 3} H={1, 1, 3, 3} P={} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=6.98391
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 2} P={} info=deg 16 linear factors 3 t=11.64
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 2} P={} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=12.4933
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 2} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 3} P={} info=deg 32 linear factors 5 t=12.2956
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 3} P={} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=13.4022
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 2, 3} P={} point E'=1 S=false dimK=283 verdict=ALL DIE rankQ=1 t=14.2991
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 3, 3} P={} info=deg 52 linear factors 3 t=11.7433
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 3} H={1, 2, 3, 3} P={} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=13.3026
+JUMP 4 3 F={1, 1, 1, 3} H={1, 3, 3, 3} P={} info=deg 76 linear factors 2 t=9.96741
+JUMP 4 3 F={1, 1, 1, 3} H={1, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 1, 3} H={1, 3, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 2, 2} P={} info=deg 4 linear factors 1 t=6.82184
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 2, 2} P={} point E'=1 S=false dimK=259 verdict=ALL DIE rankQ=1 t=7.297
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 2, 3} P={} info=deg 16 linear factors 0 t=.384645
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 3, 3} P={} info=deg 32 linear factors 2 t=9.86082
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 2} H={1, 1, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 2, 2} P={} info=deg 20 linear factors 2 t=12.5329
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 2, 2} P={} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=13.4529
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 2, 2} P={} point E'=1 S=false dimK=249 verdict=ALL DIE rankQ=1 t=14.1888
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 2, 3} P={} info=deg 44 linear factors 0 t=.127813
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 3, 3} P={} info=deg 72 linear factors 3 t=11.4727
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 3, 3} P={} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=13.5042
+JUMP 4 3 F={1, 1, 2, 2} H={1, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 2, 2} P={} info=deg 60 linear factors 1 t=6.31557
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 2, 2} P={} point E'=1 S=false dimK=239 verdict=ALL DIE rankQ=1 t=8.50544
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 2, 3} P={} info=deg 100 linear factors 0 t=1.79553
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 3, 3} P={} info=deg 144 linear factors 4 t=9.93099
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 2} H={2, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 3} H={1, 1, 2, 3} P={} info=deg 32 linear factors 1 t=6.44019
+JUMP 4 3 F={1, 1, 2, 3} H={1, 1, 2, 3} P={} point E'=1 S=false dimK=286 verdict=ALL DIE rankQ=1 t=7.62249
+JUMP 4 3 F={1, 1, 2, 3} H={1, 1, 3, 3} P={} info=deg 52 linear factors 1 t=6.0127
+JUMP 4 3 F={1, 1, 2, 3} H={1, 1, 3, 3} P={} point E'=1 S=false dimK=298 verdict=ALL DIE rankQ=1 t=7.53871
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 2, 2} P={} info=deg 44 linear factors 3 t=10.9887
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 2, 2} P={} point E'=1 S=false dimK=265 verdict=ALL DIE rankQ=1 t=12.661
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 2, 2} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 2, 3} P={} info=deg 72 linear factors 1 t=5.22992
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 3, 3} P={} info=deg 104 linear factors 2 t=10.5576
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 2, 3} H={1, 2, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 3, 3} H={1, 1, 3, 3} P={} info=deg 76 linear factors 2 t=10.3142
+JUMP 4 3 F={1, 1, 3, 3} H={1, 1, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 1, 3, 3} H={1, 1, 3, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 2, 2, 2} H={1, 2, 2, 2} P={} info=deg 60 linear factors 0 t=.558625
+JUMP 4 3 F={1, 2, 2, 2} H={1, 2, 2, 3} P={} info=deg 100 linear factors 1 t=6.02563
+JUMP 4 3 F={1, 2, 2, 2} H={1, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 2, 2, 2} H={2, 2, 2, 2} P={} info=deg 140 linear factors 1 t=16.0914
+JUMP 4 3 F={1, 2, 2, 2} H={2, 2, 2, 2} P={} point E'=1 S=false dimK=245 verdict=ALL DIE rankQ=1 t=21.8377
+JUMP 4 3 F={1, 2, 2, 2} H={2, 2, 2, 3} P={} info=deg 200 linear factors 4 t=10.9489
+JUMP 4 3 F={1, 2, 2, 2} H={2, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 2, 2, 2} H={2, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 2, 2, 3} H={1, 2, 2, 3} P={} info=deg 144 linear factors 4 t=9.8355
+JUMP 4 3 F={1, 2, 2, 3} H={1, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={1, 2, 2, 3} H={1, 2, 2, 3} P={} point=SINGULAR
+JUMP 4 3 F={2, 2, 2, 2} H={2, 2, 2, 2} P={} info=deg 280 linear factors 1 t=11.167
+JUMP 4 3 F={2, 2, 2, 2} H={2, 2, 2, 2} P={} point=SINGULAR

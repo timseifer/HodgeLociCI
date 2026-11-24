@@ -1,0 +1,23 @@
+id: R010
+requested_by: coordinator (for PK2 / the tenfold lead, breadth)
+priority: 3
+command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h1_generic_lam-1_N9_pass1.csv --out jobs/queue/results/R010 --cores 8 --mem-gb 42 --mem-safety 1.1 --deadline-min 50
+working_dir: .
+requires:
+- python3
+- python3-numpy
+- g++
+resources:
+  cores: 8
+  memory_gb: 42
+  est_minutes: 55
+after:
+- R000
+- R004
+preregistration: 48 NEW lambda = -1 generic directions (seeds 13-60, both Segre types, one prime per seed) at order 9. Dead end = any OBSTRUCTED_GENUINE at order <= 9. All EXTENDS only strengthens the lead.
+expected_outputs:
+- jobs/queue/results/R010/manifest.csv
+- jobs/queue/results/R010/summary.md
+- jobs/queue/results/R010/runs/
+notes: 'Tasks in priority order; unstarted tasks at the deadline are NOT_RUN (fine). If cores are free (after R001), --cores 24 --mem-gb 120 runs all 48 in about 45 min. Afterwards: make_summary.py and
+  check_results.py on the out dir.'

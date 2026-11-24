@@ -1,0 +1,22 @@
+id: R006
+requested_by: coordinator (for NF-T6, symmetry question)
+priority: 3
+command: python3 jobs/cloud-job-2/run_lam.py jobs/cloud-job-2/tasks/l_lambdas_N7.csv --out jobs/queue/results/R006 --procs 8
+working_dir: .
+requires:
+- python3
+- python3-numpy
+- g++
+resources:
+  cores: 8
+  memory_gb: 12
+  est_minutes: 15
+after:
+- R000
+preregistration: 'lambda in {-4,-1/4,5,1/5,-5,3/2,-3/2,2/3,-2/3} (both primes) and NF-T6''s 12 values at p = 67108819, seeds 1 al / 4 la, order 7. Expected: all lambda not in {-1,1} OBSTRUCTED_GENUINE at
+  6, lambda and 1/lambda agree, -1 extends. Surprise = another lambda extending past 6, a lambda/1-lambda pair or the two primes disagreeing.'
+expected_outputs:
+- jobs/queue/results/R006/manifest.csv
+- jobs/queue/results/R006/summary.md
+- jobs/queue/results/R006/validation_lam/
+notes: run_lam.py runs validate_lam.sh first (reproduces 2 NF-T6 logs exactly) and stops on failure. Do NOT use cloud-job-1/check_results.py (fractional lambda). Never set LOCAL_TEST on the cloud.

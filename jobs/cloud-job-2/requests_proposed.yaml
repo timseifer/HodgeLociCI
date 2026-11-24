@@ -1,0 +1,79 @@
+# Proposed queue requests for cloud-job-2 (PK2). NOT a request file: the coordinator copies each block into
+# jobs/queue/requests/<id>.yaml, replacing <id> (and the ids in 'after') with real ones.
+- id: <H1>
+  requested_by: coordinator (for PK2 / the tenfold lead, breadth)
+  priority: 3
+  command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h1_generic_lam-1_N9_pass1.csv --out jobs/queue/results/<H1> --cores 8 --mem-gb 42 --mem-safety 1.1 --deadline-min 50"
+  working_dir: "."
+  requires: [python3, python3-numpy, g++]
+  resources: {cores: 8, memory_gb: 42, est_minutes: 55}
+  after: [R000, R004]
+  preregistration: "48 NEW lambda = -1 generic directions (seeds 13-60, both Segre types, one prime per seed) at order 9. Dead end = any OBSTRUCTED_GENUINE at order <= 9. All EXTENDS only strengthens the lead."
+  expected_outputs: ["jobs/queue/results/<H1>/manifest.csv", "jobs/queue/results/<H1>/summary.md", "jobs/queue/results/<H1>/runs/"]
+  notes: "Tasks in priority order; unstarted tasks at the deadline are NOT_RUN (fine). If cores are free (after R001), --cores 24 --mem-gb 120 runs all 48 in about 45 min. Afterwards: make_summary.py and check_results.py on the out dir."
+- id: <H3>
+  requested_by: coordinator
+  priority: 3
+  command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h3_controls_lam2_N6.csv --out jobs/queue/results/<H3> --cores 4 --mem-gb 6 --mem-safety 1.1"
+  working_dir: "."
+  requires: [python3, python3-numpy, g++]
+  resources: {cores: 4, memory_gb: 6, est_minutes: 15}
+  after: [R000]
+  preregistration: "lambda = 2 controls, seeds 13-60, both primes (96 runs), order 6: expected OBSTRUCTED_GENUINE in all; any other verdict = control failed (surprise, report)."
+  expected_outputs: ["jobs/queue/results/<H3>/manifest.csv", "jobs/queue/results/<H3>/summary.md"]
+  notes: "Afterwards: make_summary.py and check_results.py."
+- id: <L>
+  requested_by: coordinator (for NF-T6, symmetry question)
+  priority: 3
+  command: "python3 jobs/cloud-job-2/run_lam.py jobs/cloud-job-2/tasks/l_lambdas_N7.csv --out jobs/queue/results/<L> --procs 8"
+  working_dir: "."
+  requires: [python3, python3-numpy, g++]
+  resources: {cores: 8, memory_gb: 12, est_minutes: 15}
+  after: [R000]
+  preregistration: "lambda in {-4,-1/4,5,1/5,-5,3/2,-3/2,2/3,-2/3} (both primes) and NF-T6's 12 values at p = 67108819, seeds 1 al / 4 la, order 7. Expected: all lambda not in {-1,1} OBSTRUCTED_GENUINE at 6, lambda and 1/lambda agree, -1 extends. Surprise = another lambda extending past 6, a lambda/1-lambda pair or the two primes disagreeing."
+  expected_outputs: ["jobs/queue/results/<L>/manifest.csv", "jobs/queue/results/<L>/summary.md", "jobs/queue/results/<L>/validation_lam/"]
+  notes: "run_lam.py runs validate_lam.sh first (reproduces 2 NF-T6 logs exactly) and stops on failure. Do NOT use cloud-job-1/check_results.py (fractional lambda)."
+- id: <M1>
+  requested_by: coordinator (for T6c)
+  priority: 4
+  command: "python3 jobs/cloud-job-2/m2scan/m2scan.py sextic --out jobs/queue/results/<M1> --procs 16 --mem-gb 8 --tries 3 --deadline-min 35"
+  working_dir: "."
+  requires: [python3, macaulay2]
+  resources: {cores: 16, memory_gb: 40, est_minutes: 40}
+  after: []
+  preregistration: "472 sextic-fourfold types never run for general points of J (MOD 32003). Expected (dead end) = every smooth point ALL DIE. Surprise = any smooth point NOT DETERMINED / SOME DIE / ALL SURVIVE (ALERT line in summary_sextic.md)."
+  expected_outputs: ["jobs/queue/results/<M1>/scan_sextic.csv", "jobs/queue/results/<M1>/summary_sextic.md", "jobs/queue/results/<M1>/validate_m2.log", "jobs/queue/results/<M1>/raw/"]
+  notes: "apt install macaulay2=1.22+ds-6build2 macaulay2-common=1.22+ds-6build2 (Ubuntu 24.04), or Docker (README, M section). The script validates 5 stored T6c types exactly first and stops on mismatch. Independent of R000."
+- id: <M2>
+  requested_by: coordinator (for T6c)
+  priority: 4
+  command: "python3 jobs/cloud-job-2/m2scan/m2scan.py retry --out jobs/queue/results/<M2> --procs 8 --mem-gb 8 --tries 3 --deadline-min 30"
+  working_dir: "."
+  requires: [python3, macaulay2]
+  resources: {cores: 8, memory_gb: 20, est_minutes: 35}
+  after: []
+  preregistration: "106 types (63 quartic, 22 tenfold, 21 sextic) with no F_p-root on T6c's line, new lines (seeds 6-8). Expected = ALL DIE / SINGULAR; surprise = any other verdict at a smooth point."
+  expected_outputs: ["jobs/queue/results/<M2>/scan_retry.csv", "jobs/queue/results/<M2>/summary_retry.md", "jobs/queue/results/<M2>/validate_m2.log"]
+  notes: "Same install as M1."
+- id: <H2>
+  requested_by: coordinator
+  priority: 5
+  command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h2_generic_lam-1_N9_pass2.csv --out jobs/queue/results/<H2> --cores 8 --mem-gb 42 --mem-safety 1.1 --deadline-min 50"
+  working_dir: "."
+  requires: [python3, python3-numpy, g++]
+  resources: {cores: 8, memory_gb: 42, est_minutes: 55}
+  after: [R000, <H1>]
+  preregistration: "The 48 H1 directions at the other prime (replication). Dead end = any OBSTRUCTED_GENUINE at order <= 9; a verdict differing from H1 for the same seed = report."
+  expected_outputs: ["jobs/queue/results/<H2>/manifest.csv", "jobs/queue/results/<H2>/summary.md"]
+  notes: "Optional; only if budget remains."
+- id: <M4>
+  requested_by: coordinator (for T6c)
+  priority: 6
+  command: "bash jobs/cloud-job-2/m2scan/run_zq431_exact.sh jobs/queue/results/<M4> 90"
+  working_dir: "."
+  requires: [macaulay2, python3]
+  resources: {cores: 1, memory_gb: 16, est_minutes: 90}
+  after: []
+  preregistration: "Exact (QQ) checker at T6c's Z_431 point. Expected = MOD p result (smooth, E' = 3, S false, SOME DIE, rank 5, czd 0). Surprise = a different exact verdict. TIMEOUT is a valid outcome."
+  expected_outputs: ["jobs/queue/results/<M4>/zq431_exact.out", "jobs/queue/results/<M4>/zq431_exact.status"]
+  notes: "Optional, one idle core. Validation = the 5-type M2 check; the exact run has no stored reference."

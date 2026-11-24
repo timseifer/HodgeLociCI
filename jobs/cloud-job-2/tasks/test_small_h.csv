@@ -1,0 +1,4 @@
+# local test of the H groups (tiny)
+job,lam,p,seed,kind,N,threads
+a,-1,67108819,13,al,6,1
+b,2,67108837,16,la,6,1

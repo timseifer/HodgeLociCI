@@ -1,0 +1,980 @@
+TYPE 4 3 c=1 F={1} H={1} P={1, 1, 1} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=1 F={1} H={1} P={1, 1, 2} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=1 F={1} H={1} P={1, 1, 3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=1 F={1} H={1} P={1, 2, 2} tau=2 lam0=1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=1 F={1} H={1} P={1, 2, 3} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=1 F={1} H={1} P={1, 3, 3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=1 F={1} H={1} P={2, 2, 2} tau=2 lam0=1 eTau=15 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=1 F={1} H={1} P={2, 2, 3} tau=2 lam0=1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=1 F={1} H={1} P={2, 3, 3} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=1 F={1} H={1} P={3, 3, 3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=1 F={1} H={2} P={1, 1, 1} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=1 F={1} H={2} P={1, 1, 2} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=1 F={1} H={2} P={1, 1, 3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=1 F={1} H={2} P={1, 2, 2} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=1 F={1} H={2} P={1, 2, 3} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=1 F={1} H={2} P={1, 3, 3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=1 F={1} H={2} P={2, 2, 2} tau=3 lam0=1 eTau=35 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 4 3 c=1 F={1} H={2} P={2, 2, 3} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=1 F={1} H={2} P={2, 3, 3} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=1 F={1} H={2} P={3, 3, 3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=1 F={1} H={3} P={1, 1, 1} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=1 F={1} H={3} P={1, 1, 2} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={1} H={3} P={1, 1, 3} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=1 F={1} H={3} P={1, 2, 2} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=1 F={1} H={3} P={1, 2, 3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={1} H={3} P={1, 3, 3} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=1 F={1} H={3} P={2, 2, 2} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=1 F={1} H={3} P={2, 2, 3} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=1 F={1} H={3} P={2, 3, 3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={1} H={3} P={3, 3, 3} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=1 F={2} H={2} P={1, 1, 1} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={2} H={2} P={1, 1, 2} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=1 F={2} H={2} P={1, 1, 3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={2} H={2} P={1, 2, 2} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=1 F={2} H={2} P={1, 2, 3} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=1 F={2} H={2} P={1, 3, 3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=1 F={2} H={2} P={2, 2, 2} tau=4 lam0=1 eTau=70 inRange=false codimVZ=70 exElse=NotDetermined bnds=(0,70) dimAd=70
+TYPE 4 3 c=1 F={2} H={2} P={2, 2, 3} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=1 F={2} H={2} P={2, 3, 3} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=1 F={2} H={2} P={3, 3, 3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={1, 1} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={1, 2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={1, 3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={2, 2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={2, 3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 1} P={3, 3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={1, 1} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={1, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={1, 3} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={2, 2} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={2, 3} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=2 F={1, 1} H={1, 2} P={3, 3} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={1, 1} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={1, 2} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={1, 3} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={2, 2} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={2, 3} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 1} H={1, 3} P={3, 3} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={1, 1} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={1, 2} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={1, 3} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={2, 2} tau=2 lam0=-1 eTau=15 inRange=false codimVZ=91 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={2, 3} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=2 F={1, 1} H={2, 2} P={3, 3} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={1, 1} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={1, 2} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={1, 3} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={2, 2} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={2, 3} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 1} H={2, 3} P={3, 3} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={1, 1} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={1, 2} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={1, 3} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={2, 2} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={2, 3} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 1} H={3, 3} P={3, 3} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={1, 1} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={1, 2} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={1, 3} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={2, 2} tau=2 lam0=-1 eTau=15 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={2, 3} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=2 F={1, 2} H={1, 2} P={3, 3} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={1, 1} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={1, 2} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={1, 3} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={2, 2} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={2, 3} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 2} H={1, 3} P={3, 3} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={1, 1} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={1, 2} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={1, 3} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={2, 2} tau=3 lam0=-1 eTau=35 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={2, 3} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=2 F={1, 2} H={2, 2} P={3, 3} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={1, 1} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={1, 2} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={1, 3} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={2, 2} tau=4 lam0=-1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={2, 3} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={1, 2} H={2, 3} P={3, 3} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={1, 1} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={1, 2} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={1, 3} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={2, 2} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={2, 3} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=2 F={1, 3} H={1, 3} P={3, 3} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={1, 1} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={1, 2} tau=4 lam0=-1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={1, 3} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={2, 2} tau=4 lam0=-1 eTau=70 inRange=false codimVZ=70 exElse=NotDetermined bnds=(0,70) dimAd=70
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={2, 3} tau=4 lam0=-1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=2 F={2, 2} H={2, 2} P={3, 3} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 1, 3} P={1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 1, 3} P={2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 1, 3} P={3} tau=0 lam0=1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 2} P={1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 2} P={2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=75 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 2} P={3} tau=0 lam0=1 eTau=1 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 3} P={1} tau=1 lam0=1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 3} P={2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 2, 3} P={3} tau=1 lam0=1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 3, 3} P={1} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 3, 3} P={2} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 1} H={1, 3, 3} P={3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 2} P={1} tau=1 lam0=1 eTau=4 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 2} P={2} tau=1 lam0=1 eTau=5 inRange=false codimVZ=91 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 2} P={3} tau=1 lam0=1 eTau=4 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 3} P={1} tau=2 lam0=1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 3} P={2} tau=2 lam0=1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 2, 3} P={3} tau=2 lam0=1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 3, 3} P={1} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 3, 3} P={2} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 1, 1} H={2, 3, 3} P={3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 1} H={3, 3, 3} P={1} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=3 F={1, 1, 1} H={3, 3, 3} P={2} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={1, 1, 1} H={3, 3, 3} P={3} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 2} P={1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 2} P={2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 2} P={3} tau=0 lam0=1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 3} P={1} tau=1 lam0=1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 3} P={2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 1, 3} P={3} tau=1 lam0=1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 2} P={1} tau=1 lam0=1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 2} P={2} tau=1 lam0=1 eTau=5 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 2} P={3} tau=1 lam0=1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 3} P={1} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 3} P={2} tau=2 lam0=1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 2, 3} P={3} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 3, 3} P={1} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 3, 3} P={2} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 1, 2} H={1, 3, 3} P={3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 2} P={1} tau=2 lam0=1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 2} P={2} tau=2 lam0=1 eTau=15 inRange=false codimVZ=91 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 2} P={3} tau=2 lam0=1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 3} P={1} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 3} P={2} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 2, 3} P={3} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 3, 3} P={1} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 3, 3} P={2} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=3 F={1, 1, 2} H={2, 3, 3} P={3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 1, 3} P={1} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 1, 3} P={2} tau=2 lam0=1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 1, 3} P={3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 2} P={1} tau=2 lam0=1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 2} P={2} tau=2 lam0=1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 2} P={3} tau=2 lam0=1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 3} P={1} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 3} P={2} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 2, 3} P={3} tau=3 lam0=1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 3, 3} P={1} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 3, 3} P={2} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={1, 1, 3} H={1, 3, 3} P={3} tau=4 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 2} P={1} tau=2 lam0=1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 2} P={2} tau=2 lam0=1 eTau=15 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 2} P={3} tau=2 lam0=1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 3} P={1} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 3} P={2} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=3 F={1, 2, 2} H={1, 2, 3} P={3} tau=3 lam0=1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 2} P={1} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 2} P={2} tau=3 lam0=1 eTau=35 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 2} P={3} tau=3 lam0=1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 3} P={1} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 3} P={2} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=3 F={1, 2, 2} H={2, 2, 3} P={3} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=3 F={1, 2, 3} H={1, 2, 3} P={1} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={1, 2, 3} H={1, 2, 3} P={2} tau=4 lam0=1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=3 F={1, 2, 3} H={1, 2, 3} P={3} tau=4 lam0=1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=3 F={2, 2, 2} H={2, 2, 2} P={1} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=3 F={2, 2, 2} H={2, 2, 2} P={2} tau=4 lam0=1 eTau=70 inRange=false codimVZ=70 exElse=NotDetermined bnds=(0,70) dimAd=70
+TYPE 4 3 c=3 F={2, 2, 2} H={2, 2, 2} P={3} tau=4 lam0=1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={1, 1, 3, 3} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={1, 2, 2, 3} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={1, 2, 3, 3} P={} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={1, 3, 3, 3} P={} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=88 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={2, 2, 2, 3} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={2, 2, 3, 3} P={} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={2, 3, 3, 3} P={} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=4 F={1, 1, 1, 1} H={3, 3, 3, 3} P={} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 1, 2, 3} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 1, 3, 3} P={} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=75 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 2, 2, 3} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 2, 3, 3} P={} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={1, 3, 3, 3} P={} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={2, 2, 2, 2} P={} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=91 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={2, 2, 2, 3} P={} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={2, 2, 3, 3} P={} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=4 F={1, 1, 1, 2} H={2, 3, 3, 3} P={} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 1, 1, 3} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 1, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 1, 2, 3} P={} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=42 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 1, 3, 3} P={} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 2, 2, 2} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 2, 2, 3} P={} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 2, 3, 3} P={} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=4 F={1, 1, 1, 3} H={1, 3, 3, 3} P={} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 1, 2, 3} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=58 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 1, 3, 3} P={} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=47 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 2, 2, 2} P={} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 2, 2, 3} P={} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={1, 2, 3, 3} P={} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={2, 2, 2, 2} P={} tau=2 lam0=-1 eTau=15 inRange=false codimVZ=91 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={2, 2, 2, 3} P={} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=4 F={1, 1, 2, 2} H={2, 2, 3, 3} P={} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=4 F={1, 1, 2, 3} H={1, 1, 2, 3} P={} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 4 3 c=4 F={1, 1, 2, 3} H={1, 1, 3, 3} P={} tau=3 lam0=-1 eTau=13 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 4 3 c=4 F={1, 1, 2, 3} H={1, 2, 2, 2} P={} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=65 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 4 3 c=4 F={1, 1, 2, 3} H={1, 2, 2, 3} P={} tau=3 lam0=-1 eTau=18 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,18) dimAd=18
+TYPE 4 3 c=4 F={1, 1, 2, 3} H={1, 2, 3, 3} P={} tau=4 lam0=-1 eTau=26 inRange=false codimVZ=26 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 4 3 c=4 F={1, 1, 3, 3} H={1, 1, 3, 3} P={} tau=4 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 4 3 c=4 F={1, 2, 2, 2} H={1, 2, 2, 2} P={} tau=2 lam0=-1 eTau=15 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 4 3 c=4 F={1, 2, 2, 2} H={1, 2, 2, 3} P={} tau=3 lam0=-1 eTau=25 inRange=false codimVZ=61 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 4 3 c=4 F={1, 2, 2, 2} H={2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=35 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 4 3 c=4 F={1, 2, 2, 2} H={2, 2, 2, 3} P={} tau=4 lam0=-1 eTau=50 inRange=false codimVZ=50 exElse=NotDetermined bnds=(0,50) dimAd=50
+TYPE 4 3 c=4 F={1, 2, 2, 3} H={1, 2, 2, 3} P={} tau=4 lam0=-1 eTau=36 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,36) dimAd=36
+TYPE 4 3 c=4 F={2, 2, 2, 2} H={2, 2, 2, 2} P={} tau=4 lam0=-1 eTau=70 inRange=false codimVZ=70 exElse=NotDetermined bnds=(0,70) dimAd=70
+TYPE 3 5 c=1 F={1} H={1} P={1, 1, 1, 1, 1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={1} P={1, 1, 1, 1, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={1} P={1, 1, 1, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={1} P={1, 1, 2, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={1} P={1, 2, 2, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={1} P={2, 2, 2, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=1 F={1} H={2} P={1, 1, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=1 F={1} H={2} P={1, 2, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=1 F={1} H={2} P={2, 2, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 1} H={1, 1} P={1, 1, 1, 1} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=2 F={1, 1} H={1, 1} P={1, 1, 1, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=2 F={1, 1} H={1, 1} P={1, 1, 2, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=2 F={1, 1} H={1, 1} P={1, 2, 2, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=2 F={1, 1} H={1, 1} P={2, 2, 2, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=2 F={1, 1} H={1, 2} P={1, 1, 1, 1} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=2 F={1, 1} H={1, 2} P={1, 1, 1, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=2 F={1, 1} H={1, 2} P={1, 1, 2, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=2 F={1, 1} H={1, 2} P={1, 2, 2, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=2 F={1, 1} H={1, 2} P={2, 2, 2, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 1} H={2, 2} P={2, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=2 F={1, 2} H={1, 2} P={2, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 1} P={1, 1, 1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 1} P={1, 1, 2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 1} P={1, 2, 2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 1} P={2, 2, 2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 2} P={1, 1, 1} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 2} P={1, 1, 2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 2} P={1, 2, 2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 1, 2} P={2, 2, 2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 2, 2} P={1, 1, 1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 2, 2} P={1, 1, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 2, 2} P={1, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 1} H={1, 2, 2} P={2, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 1, 2} P={1, 1, 1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 1, 2} P={1, 1, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 1, 2} P={1, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 1, 2} P={2, 2, 2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 1} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 1, 2} P={2, 2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 2, 2} P={1, 1} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 2, 2} P={1, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 1, 2, 2} P={2, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 1} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={1, 2, 2, 2} P={2, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 1, 2} P={1, 1} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 1, 2} P={1, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 1, 2} P={2, 2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 2, 2} P={1, 1} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 2, 2} P={1, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 1, 2, 2} P={2, 2} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 1, 1, 2, 2} P={1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 1, 1, 2, 2} P={2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={1} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={2, 2, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={2, 2, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={1} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={2} tau=0 lam0=1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={1} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={2} tau=1 lam0=1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 2, 2, 2} P={1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 1, 2, 2, 2} P={2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 2, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 2, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 1, 2, 2} P={1} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 1, 2, 2} P={2} tau=2 lam0=1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 1} H={1, 1, 1, 2, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 1} H={1, 1, 2, 2, 2, 2} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 1} H={1, 2, 2, 2, 2, 2} P={} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 1} H={2, 2, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 1, 2, 2} P={} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=39 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 2, 2, 2} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 2} H={1, 1, 2, 2, 2, 2} P={} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 2} H={1, 2, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=6 F={1, 1, 1, 1, 2, 2} H={1, 1, 1, 1, 2, 2} P={} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=36 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 3 5 c=6 F={1, 1, 1, 1, 2, 2} H={1, 1, 1, 2, 2, 2} P={} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=30 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 3 5 c=6 F={1, 1, 1, 1, 2, 2} H={1, 1, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 3 5 c=6 F={1, 1, 1, 2, 2, 2} H={1, 1, 1, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={1} P={1, 1} tau=2 lam0=1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=1 F={1} H={1} P={1, 2} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=1 F={1} H={1} P={1, 3} tau=2 lam0=1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=1 F={1} H={1} P={1, 4} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=1 F={1} H={1} P={1, 5} tau=2 lam0=1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=1 F={1} H={1} P={2, 2} tau=2 lam0=1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=1 F={1} H={1} P={2, 3} tau=2 lam0=1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=1 F={1} H={1} P={2, 4} tau=2 lam0=1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=1 F={1} H={1} P={2, 5} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=1 F={1} H={1} P={3, 3} tau=2 lam0=1 eTau=10 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=1 F={1} H={1} P={3, 4} tau=2 lam0=1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=1 F={1} H={1} P={3, 5} tau=2 lam0=1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=1 F={1} H={1} P={4, 4} tau=2 lam0=1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=1 F={1} H={1} P={4, 5} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=1 F={1} H={1} P={5, 5} tau=2 lam0=1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=1 F={1} H={2} P={1, 1} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=1 F={1} H={2} P={1, 2} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={2} P={1, 3} tau=3 lam0=1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=1 F={1} H={2} P={1, 4} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={2} P={1, 5} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=1 F={1} H={2} P={2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={2} P={2, 3} tau=3 lam0=1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=1 F={1} H={2} P={2, 4} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={2} P={2, 5} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={2} P={3, 3} tau=3 lam0=1 eTau=26 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 6 2 c=1 F={1} H={2} P={3, 4} tau=3 lam0=1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=1 F={1} H={2} P={3, 5} tau=3 lam0=1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=1 F={1} H={2} P={4, 4} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={2} P={4, 5} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={2} P={5, 5} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=1 F={1} H={3} P={1, 1} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={3} P={1, 2} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={3} P={1, 3} tau=4 lam0=1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=1 F={1} H={3} P={1, 4} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={3} P={1, 5} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={3} P={2, 2} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=1 F={1} H={3} P={2, 3} tau=4 lam0=1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=1 F={1} H={3} P={2, 4} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=1 F={1} H={3} P={2, 5} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={3} P={3, 3} tau=4 lam0=1 eTau=45 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,45) dimAd=45
+TYPE 6 2 c=1 F={1} H={3} P={3, 4} tau=4 lam0=1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=1 F={1} H={3} P={3, 5} tau=4 lam0=1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=1 F={1} H={3} P={4, 4} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=1 F={1} H={3} P={4, 5} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=1 F={1} H={3} P={5, 5} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=1 F={1} H={4} P={1, 1} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={1} H={4} P={1, 2} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={1} H={4} P={1, 3} tau=5 lam0=1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=1 F={1} H={4} P={1, 4} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={1} H={4} P={1, 5} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={1} H={4} P={2, 2} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={1} H={4} P={2, 3} tau=5 lam0=1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=1 F={1} H={4} P={2, 4} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={1} H={4} P={2, 5} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={1} H={4} P={3, 3} tau=5 lam0=1 eTau=61 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=1 F={1} H={4} P={3, 4} tau=5 lam0=1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=1 F={1} H={4} P={3, 5} tau=5 lam0=1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=1 F={1} H={4} P={4, 4} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={1} H={4} P={4, 5} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={1} H={4} P={5, 5} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={1} H={5} P={1, 1} tau=6 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=1 F={1} H={5} P={1, 2} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={1} H={5} P={1, 3} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=1 F={1} H={5} P={1, 4} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={1} H={5} P={1, 5} tau=6 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=1 F={1} H={5} P={2, 2} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={1} H={5} P={2, 3} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={1} H={5} P={2, 4} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={1} H={5} P={2, 5} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={1} H={5} P={3, 3} tau=6 lam0=1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=1 F={1} H={5} P={3, 4} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={1} H={5} P={3, 5} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=1 F={1} H={5} P={4, 4} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={1} H={5} P={4, 5} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={1} H={5} P={5, 5} tau=6 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=1 F={2} H={2} P={1, 1} tau=4 lam0=1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={2} H={2} P={1, 2} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={2} H={2} P={1, 3} tau=4 lam0=1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=1 F={2} H={2} P={1, 4} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={2} H={2} P={1, 5} tau=4 lam0=1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={2} H={2} P={2, 2} tau=4 lam0=1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={2} H={2} P={2, 3} tau=4 lam0=1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=1 F={2} H={2} P={2, 4} tau=4 lam0=1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={2} H={2} P={2, 5} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={2} H={2} P={3, 3} tau=4 lam0=1 eTau=61 inRange=false codimVZ=183 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=1 F={2} H={2} P={3, 4} tau=4 lam0=1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=1 F={2} H={2} P={3, 5} tau=4 lam0=1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=1 F={2} H={2} P={4, 4} tau=4 lam0=1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=1 F={2} H={2} P={4, 5} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=1 F={2} H={2} P={5, 5} tau=4 lam0=1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=1 F={2} H={3} P={1, 1} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=1 F={2} H={3} P={1, 2} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=1 F={2} H={3} P={1, 3} tau=5 lam0=1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=1 F={2} H={3} P={1, 4} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=1 F={2} H={3} P={1, 5} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=1 F={2} H={3} P={2, 2} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=1 F={2} H={3} P={2, 3} tau=5 lam0=1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=1 F={2} H={3} P={2, 4} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=1 F={2} H={3} P={2, 5} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=1 F={2} H={3} P={3, 3} tau=5 lam0=1 eTau=96 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,96) dimAd=96
+TYPE 6 2 c=1 F={2} H={3} P={3, 4} tau=5 lam0=1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=1 F={2} H={3} P={3, 5} tau=5 lam0=1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=1 F={2} H={3} P={4, 4} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=1 F={2} H={3} P={4, 5} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=1 F={2} H={3} P={5, 5} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=1 F={2} H={4} P={1, 1} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={2} H={4} P={1, 2} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={2} H={4} P={1, 3} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={2} H={4} P={1, 4} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={2} H={4} P={1, 5} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={2} H={4} P={2, 2} tau=6 lam0=1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=1 F={2} H={4} P={2, 3} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=1 F={2} H={4} P={2, 4} tau=6 lam0=1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=1 F={2} H={4} P={2, 5} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={2} H={4} P={3, 3} tau=6 lam0=1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=1 F={2} H={4} P={3, 4} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=1 F={2} H={4} P={3, 5} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={2} H={4} P={4, 4} tau=6 lam0=1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=1 F={2} H={4} P={4, 5} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=1 F={2} H={4} P={5, 5} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=1 F={3} H={3} P={1, 1} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=1 F={3} H={3} P={1, 2} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={3} H={3} P={1, 3} tau=6 lam0=1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=1 F={3} H={3} P={1, 4} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={3} H={3} P={1, 5} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=1 F={3} H={3} P={2, 2} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=1 F={3} H={3} P={2, 3} tau=6 lam0=1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=1 F={3} H={3} P={2, 4} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=1 F={3} H={3} P={2, 5} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={3} H={3} P={3, 3} tau=6 lam0=1 eTau=141 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,141) dimAd=141
+TYPE 6 2 c=1 F={3} H={3} P={3, 4} tau=6 lam0=1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=1 F={3} H={3} P={3, 5} tau=6 lam0=1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=1 F={3} H={3} P={4, 4} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=1 F={3} H={3} P={4, 5} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=1 F={3} H={3} P={5, 5} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=2 F={1, 1} H={1, 3} P={1} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=55 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={1, 3} P={2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={1, 3} P={3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=107 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={1, 3} P={4} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={1, 3} P={5} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=55 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={1, 4} P={1} tau=1 lam0=-1 eTau=2 inRange=false codimVZ=49 exElse=NotDetermined bnds=(0,2) dimAd=2
+TYPE 6 2 c=2 F={1, 1} H={1, 4} P={2} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={1, 4} P={3} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=96 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={1, 4} P={4} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={1, 4} P={5} tau=1 lam0=-1 eTau=2 inRange=false codimVZ=49 exElse=NotDetermined bnds=(0,2) dimAd=2
+TYPE 6 2 c=2 F={1, 1} H={1, 5} P={1} tau=2 lam0=-1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={1, 5} P={2} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 1} H={1, 5} P={3} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=2 F={1, 1} H={1, 5} P={4} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 1} H={1, 5} P={5} tau=2 lam0=-1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={2, 2} P={1} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={2, 2} P={2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={2, 2} P={3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={2, 2} P={4} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={2, 2} P={5} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 1} H={2, 3} P={1} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=78 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={2, 3} P={2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 1} H={2, 3} P={3} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=155 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 1} H={2, 3} P={4} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 1} H={2, 3} P={5} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=78 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 1} H={2, 4} P={1} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 1} H={2, 4} P={2} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 1} H={2, 4} P={3} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 1} H={2, 4} P={4} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 1} H={2, 4} P={5} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 1} H={2, 5} P={1} tau=3 lam0=-1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=2 F={1, 1} H={2, 5} P={2} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 1} H={2, 5} P={3} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 1} H={2, 5} P={4} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 1} H={2, 5} P={5} tau=3 lam0=-1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=2 F={1, 1} H={3, 3} P={1} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=84 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=2 F={1, 1} H={3, 3} P={2} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 1} H={3, 3} P={3} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=168 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=2 F={1, 1} H={3, 3} P={4} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 1} H={3, 3} P={5} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=84 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=2 F={1, 1} H={3, 4} P={1} tau=3 lam0=-1 eTau=9 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 1} H={3, 4} P={2} tau=3 lam0=-1 eTau=15 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=2 F={1, 1} H={3, 4} P={3} tau=3 lam0=-1 eTau=17 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=2 F={1, 1} H={3, 4} P={4} tau=3 lam0=-1 eTau=15 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=2 F={1, 1} H={3, 4} P={5} tau=3 lam0=-1 eTau=9 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 1} H={3, 5} P={1} tau=4 lam0=-1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 1} H={3, 5} P={2} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 1} H={3, 5} P={3} tau=4 lam0=-1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 1} H={3, 5} P={4} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 1} H={3, 5} P={5} tau=4 lam0=-1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 1} H={4, 4} P={1} tau=4 lam0=-1 eTau=13 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 1} H={4, 4} P={2} tau=4 lam0=-1 eTau=22 inRange=false codimVZ=102 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=2 F={1, 1} H={4, 4} P={3} tau=4 lam0=-1 eTau=25 inRange=false codimVZ=118 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 1} H={4, 4} P={4} tau=4 lam0=-1 eTau=22 inRange=false codimVZ=102 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=2 F={1, 1} H={4, 4} P={5} tau=4 lam0=-1 eTau=13 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 1} H={4, 5} P={1} tau=5 lam0=-1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 1} H={4, 5} P={2} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 1} H={4, 5} P={3} tau=5 lam0=-1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={1, 1} H={4, 5} P={4} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 1} H={4, 5} P={5} tau=5 lam0=-1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 1} H={5, 5} P={1} tau=6 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={1, 1} H={5, 5} P={2} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 1} H={5, 5} P={3} tau=6 lam0=-1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=2 F={1, 1} H={5, 5} P={4} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 1} H={5, 5} P={5} tau=6 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={1, 2} H={1, 2} P={1} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=63 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 2} H={1, 2} P={2} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=107 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 2} H={1, 2} P={3} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 2} H={1, 2} P={4} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=107 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 2} H={1, 2} P={5} tau=0 lam0=-1 eTau=1 inRange=false codimVZ=63 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=2 F={1, 2} H={1, 3} P={1} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=66 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 2} H={1, 3} P={2} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=112 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 2} H={1, 3} P={3} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=129 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 2} H={1, 3} P={4} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=112 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 2} H={1, 3} P={5} tau=1 lam0=-1 eTau=3 inRange=false codimVZ=66 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=2 F={1, 2} H={1, 4} P={1} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 2} H={1, 4} P={2} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 2} H={1, 4} P={3} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 2} H={1, 4} P={4} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 2} H={1, 4} P={5} tau=2 lam0=-1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 2} H={1, 5} P={1} tau=3 lam0=-1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=2 F={1, 2} H={1, 5} P={2} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={1, 5} P={3} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 2} H={1, 5} P={4} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={1, 5} P={5} tau=3 lam0=-1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=2 F={1, 2} H={2, 2} P={1} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=82 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 2} H={2, 2} P={2} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 2} H={2, 2} P={3} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=163 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 2} H={2, 2} P={4} tau=1 lam0=-1 eTau=5 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=2 F={1, 2} H={2, 2} P={5} tau=1 lam0=-1 eTau=4 inRange=false codimVZ=82 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=2 F={1, 2} H={2, 3} P={1} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 2} H={2, 3} P={2} tau=2 lam0=-1 eTau=12 inRange=false codimVZ=148 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={2, 3} P={3} tau=2 lam0=-1 eTau=13 inRange=false codimVZ=171 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 2} H={2, 3} P={4} tau=2 lam0=-1 eTau=12 inRange=false codimVZ=148 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={2, 3} P={5} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 2} H={2, 4} P={1} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={2, 4} P={2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 2} H={2, 4} P={3} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 2} H={2, 4} P={4} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 2} H={2, 4} P={5} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 2} H={2, 5} P={1} tau=4 lam0=-1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 2} H={2, 5} P={2} tau=4 lam0=-1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 2} H={2, 5} P={3} tau=4 lam0=-1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={1, 2} H={2, 5} P={4} tau=4 lam0=-1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 2} H={2, 5} P={5} tau=4 lam0=-1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 2} H={3, 3} P={1} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=89 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 2} H={3, 3} P={2} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 2} H={3, 3} P={3} tau=3 lam0=-1 eTau=26 inRange=false codimVZ=177 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 6 2 c=2 F={1, 2} H={3, 3} P={4} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 2} H={3, 3} P={5} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=89 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 2} H={3, 4} P={1} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 2} H={3, 4} P={2} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 2} H={3, 4} P={3} tau=4 lam0=-1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=2 F={1, 2} H={3, 4} P={4} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 2} H={3, 4} P={5} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 2} H={3, 5} P={1} tau=5 lam0=-1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 2} H={3, 5} P={2} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={1, 2} H={3, 5} P={3} tau=5 lam0=-1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=2 F={1, 2} H={3, 5} P={4} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={1, 2} H={3, 5} P={5} tau=5 lam0=-1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 2} H={4, 4} P={1} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 2} H={4, 4} P={2} tau=5 lam0=-1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={1, 2} H={4, 4} P={3} tau=5 lam0=-1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={1, 2} H={4, 4} P={4} tau=5 lam0=-1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={1, 2} H={4, 4} P={5} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 2} H={4, 5} P={1} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 2} H={4, 5} P={2} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={1, 2} H={4, 5} P={3} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={1, 2} H={4, 5} P={4} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={1, 2} H={4, 5} P={5} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 3} H={1, 3} P={1} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=2 F={1, 3} H={1, 3} P={2} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 3} H={1, 3} P={3} tau=2 lam0=-1 eTau=10 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=2 F={1, 3} H={1, 3} P={4} tau=2 lam0=-1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 3} H={1, 3} P={5} tau=2 lam0=-1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=2 F={1, 3} H={1, 4} P={1} tau=3 lam0=-1 eTau=9 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 3} H={1, 4} P={2} tau=3 lam0=-1 eTau=15 inRange=false codimVZ=101 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=2 F={1, 3} H={1, 4} P={3} tau=3 lam0=-1 eTau=17 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=2 F={1, 3} H={1, 4} P={4} tau=3 lam0=-1 eTau=15 inRange=false codimVZ=101 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=2 F={1, 3} H={1, 4} P={5} tau=3 lam0=-1 eTau=9 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=2 F={1, 3} H={1, 5} P={1} tau=4 lam0=-1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 3} H={1, 5} P={2} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 3} H={1, 5} P={3} tau=4 lam0=-1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 3} H={1, 5} P={4} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 3} H={1, 5} P={5} tau=4 lam0=-1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 3} H={2, 2} P={1} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 3} H={2, 2} P={2} tau=2 lam0=-1 eTau=12 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 3} H={2, 2} P={3} tau=2 lam0=-1 eTau=13 inRange=false codimVZ=164 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 3} H={2, 2} P={4} tau=2 lam0=-1 eTau=12 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 3} H={2, 2} P={5} tau=2 lam0=-1 eTau=8 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=2 F={1, 3} H={2, 3} P={1} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 3} H={2, 3} P={2} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 3} H={2, 3} P={3} tau=3 lam0=-1 eTau=26 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 6 2 c=2 F={1, 3} H={2, 3} P={4} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 3} H={2, 3} P={5} tau=3 lam0=-1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=2 F={1, 3} H={2, 4} P={1} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 3} H={2, 4} P={2} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=120 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 3} H={2, 4} P={3} tau=4 lam0=-1 eTau=39 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=2 F={1, 3} H={2, 4} P={4} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=120 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 3} H={2, 4} P={5} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 3} H={2, 5} P={1} tau=5 lam0=-1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 3} H={2, 5} P={2} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={1, 3} H={2, 5} P={3} tau=5 lam0=-1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=2 F={1, 3} H={2, 5} P={4} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={1, 3} H={2, 5} P={5} tau=5 lam0=-1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 3} H={3, 3} P={1} tau=4 lam0=-1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 3} H={3, 3} P={2} tau=4 lam0=-1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=2 F={1, 3} H={3, 3} P={3} tau=4 lam0=-1 eTau=45 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,45) dimAd=45
+TYPE 6 2 c=2 F={1, 3} H={3, 3} P={4} tau=4 lam0=-1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=2 F={1, 3} H={3, 3} P={5} tau=4 lam0=-1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 3} H={3, 4} P={1} tau=5 lam0=-1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={1, 3} H={3, 4} P={2} tau=5 lam0=-1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={1, 3} H={3, 4} P={3} tau=5 lam0=-1 eTau=61 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=2 F={1, 3} H={3, 4} P={4} tau=5 lam0=-1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={1, 3} H={3, 4} P={5} tau=5 lam0=-1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={1, 3} H={3, 5} P={1} tau=6 lam0=-1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=2 F={1, 3} H={3, 5} P={2} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={1, 3} H={3, 5} P={3} tau=6 lam0=-1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=2 F={1, 3} H={3, 5} P={4} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={1, 3} H={3, 5} P={5} tau=6 lam0=-1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=2 F={1, 4} H={1, 4} P={1} tau=4 lam0=-1 eTau=13 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 4} H={1, 4} P={2} tau=4 lam0=-1 eTau=22 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=2 F={1, 4} H={1, 4} P={3} tau=4 lam0=-1 eTau=25 inRange=false codimVZ=99 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=2 F={1, 4} H={1, 4} P={4} tau=4 lam0=-1 eTau=22 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=2 F={1, 4} H={1, 4} P={5} tau=4 lam0=-1 eTau=13 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=2 F={1, 4} H={1, 5} P={1} tau=5 lam0=-1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 4} H={1, 5} P={2} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 4} H={1, 5} P={3} tau=5 lam0=-1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={1, 4} H={1, 5} P={4} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 4} H={1, 5} P={5} tau=5 lam0=-1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={1, 4} H={2, 2} P={1} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 4} H={2, 2} P={2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 4} H={2, 2} P={3} tau=3 lam0=-1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=2 F={1, 4} H={2, 2} P={4} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 4} H={2, 2} P={5} tau=3 lam0=-1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=2 F={1, 4} H={2, 3} P={1} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 4} H={2, 3} P={2} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 4} H={2, 3} P={3} tau=4 lam0=-1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=2 F={1, 4} H={2, 3} P={4} tau=4 lam0=-1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=2 F={1, 4} H={2, 3} P={5} tau=4 lam0=-1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=2 F={1, 4} H={2, 4} P={1} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 4} H={2, 4} P={2} tau=5 lam0=-1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={1, 4} H={2, 4} P={3} tau=5 lam0=-1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={1, 4} H={2, 4} P={4} tau=5 lam0=-1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={1, 4} H={2, 4} P={5} tau=5 lam0=-1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={1, 4} H={2, 5} P={1} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 4} H={2, 5} P={2} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={1, 4} H={2, 5} P={3} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={1, 4} H={2, 5} P={4} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={1, 4} H={2, 5} P={5} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 5} H={1, 5} P={1} tau=6 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={1, 5} H={1, 5} P={2} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 5} H={1, 5} P={3} tau=6 lam0=-1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=2 F={1, 5} H={1, 5} P={4} tau=6 lam0=-1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=2 F={1, 5} H={1, 5} P={5} tau=6 lam0=-1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={2, 2} H={2, 2} P={1} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 6 2 c=2 F={2, 2} H={2, 2} P={2} tau=2 lam0=-1 eTau=16 inRange=false codimVZ=168 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={2, 2} H={2, 2} P={3} tau=2 lam0=-1 eTau=17 inRange=false codimVZ=195 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=2 F={2, 2} H={2, 2} P={4} tau=2 lam0=-1 eTau=16 inRange=false codimVZ=168 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=2 F={2, 2} H={2, 2} P={5} tau=2 lam0=-1 eTau=11 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 6 2 c=2 F={2, 2} H={2, 3} P={1} tau=3 lam0=-1 eTau=19 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={2, 2} H={2, 3} P={2} tau=3 lam0=-1 eTau=31 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 2} H={2, 3} P={3} tau=3 lam0=-1 eTau=35 inRange=false codimVZ=193 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 6 2 c=2 F={2, 2} H={2, 3} P={4} tau=3 lam0=-1 eTau=31 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 2} H={2, 3} P={5} tau=3 lam0=-1 eTau=19 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=2 F={2, 2} H={2, 4} P={1} tau=4 lam0=-1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={2, 2} H={2, 4} P={2} tau=4 lam0=-1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={2, 2} H={2, 4} P={3} tau=4 lam0=-1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={2, 2} H={2, 4} P={4} tau=4 lam0=-1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=2 F={2, 2} H={2, 4} P={5} tau=4 lam0=-1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=2 F={2, 2} H={3, 3} P={1} tau=4 lam0=-1 eTau=31 inRange=false codimVZ=94 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 2} H={3, 3} P={2} tau=4 lam0=-1 eTau=53 inRange=false codimVZ=161 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={2, 2} H={3, 3} P={3} tau=4 lam0=-1 eTau=61 inRange=false codimVZ=186 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=2 F={2, 2} H={3, 3} P={4} tau=4 lam0=-1 eTau=53 inRange=false codimVZ=161 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={2, 2} H={3, 3} P={5} tau=4 lam0=-1 eTau=31 inRange=false codimVZ=94 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 2} H={3, 4} P={1} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={2, 2} H={3, 4} P={2} tau=5 lam0=-1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=2 F={2, 2} H={3, 4} P={3} tau=5 lam0=-1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=2 F={2, 2} H={3, 4} P={4} tau=5 lam0=-1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=2 F={2, 2} H={3, 4} P={5} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={2, 2} H={4, 4} P={1} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={2, 2} H={4, 4} P={2} tau=6 lam0=-1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=2 F={2, 2} H={4, 4} P={3} tau=6 lam0=-1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=2 F={2, 2} H={4, 4} P={4} tau=6 lam0=-1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=2 F={2, 2} H={4, 4} P={5} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={2, 3} H={2, 3} P={1} tau=4 lam0=-1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 3} H={2, 3} P={2} tau=4 lam0=-1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={2, 3} H={2, 3} P={3} tau=4 lam0=-1 eTau=61 inRange=false codimVZ=183 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=2 F={2, 3} H={2, 3} P={4} tau=4 lam0=-1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=2 F={2, 3} H={2, 3} P={5} tau=4 lam0=-1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=2 F={2, 3} H={2, 4} P={1} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={2, 3} H={2, 4} P={2} tau=5 lam0=-1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=2 F={2, 3} H={2, 4} P={3} tau=5 lam0=-1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=2 F={2, 3} H={2, 4} P={4} tau=5 lam0=-1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=2 F={2, 3} H={2, 4} P={5} tau=5 lam0=-1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=2 F={2, 3} H={3, 3} P={1} tau=5 lam0=-1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=2 F={2, 3} H={3, 3} P={2} tau=5 lam0=-1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=2 F={2, 3} H={3, 3} P={3} tau=5 lam0=-1 eTau=96 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,96) dimAd=96
+TYPE 6 2 c=2 F={2, 3} H={3, 3} P={4} tau=5 lam0=-1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=2 F={2, 3} H={3, 3} P={5} tau=5 lam0=-1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=2 F={2, 3} H={3, 4} P={1} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={2, 3} H={3, 4} P={2} tau=6 lam0=-1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=2 F={2, 3} H={3, 4} P={3} tau=6 lam0=-1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=2 F={2, 3} H={3, 4} P={4} tau=6 lam0=-1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=2 F={2, 3} H={3, 4} P={5} tau=6 lam0=-1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=2 F={2, 4} H={2, 4} P={1} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={2, 4} H={2, 4} P={2} tau=6 lam0=-1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=2 F={2, 4} H={2, 4} P={3} tau=6 lam0=-1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=2 F={2, 4} H={2, 4} P={4} tau=6 lam0=-1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=2 F={2, 4} H={2, 4} P={5} tau=6 lam0=-1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=2 F={3, 3} H={3, 3} P={1} tau=6 lam0=-1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=2 F={3, 3} H={3, 3} P={2} tau=6 lam0=-1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=2 F={3, 3} H={3, 3} P={3} tau=6 lam0=-1 eTau=141 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,141) dimAd=141
+TYPE 6 2 c=2 F={3, 3} H={3, 3} P={4} tau=6 lam0=-1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=2 F={3, 3} H={3, 3} P={5} tau=6 lam0=-1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=3 F={1, 1, 1} H={1, 3, 5} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=55 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 1} H={1, 4, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 1} H={1, 4, 5} P={} tau=1 lam0=1 eTau=2 inRange=false codimVZ=49 exElse=NotDetermined bnds=(0,2) dimAd=2
+TYPE 6 2 c=3 F={1, 1, 1} H={1, 5, 5} P={} tau=2 lam0=1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 2, 5} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 3, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=124 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 3, 5} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=78 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 4, 4} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=108 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 4, 5} P={} tau=2 lam0=1 eTau=5 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 1, 1} H={2, 5, 5} P={} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 3, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 3, 4} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 3, 5} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=84 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 4, 4} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=119 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 4, 5} P={} tau=3 lam0=1 eTau=9 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 1} H={3, 5, 5} P={} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 1, 1} H={4, 4, 4} P={} tau=3 lam0=1 eTau=10 inRange=false codimVZ=101 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=3 F={1, 1, 1} H={4, 4, 5} P={} tau=4 lam0=1 eTau=13 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 1, 1} H={4, 5, 5} P={} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={1, 1, 1} H={5, 5, 5} P={} tau=6 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 2, 5} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=63 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 3, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 3, 5} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=66 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 4, 4} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 4, 5} P={} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 1, 2} H={1, 5, 5} P={} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 2, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 2, 5} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=82 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 3, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 3, 4} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 3, 5} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 4, 4} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 4, 5} P={} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 1, 2} H={2, 5, 5} P={} tau=4 lam0=1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 3, 3} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=169 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 3, 4} P={} tau=2 lam0=1 eTau=9 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 3, 5} P={} tau=3 lam0=1 eTau=14 inRange=false codimVZ=89 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 4, 4} P={} tau=3 lam0=1 eTau=15 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 4, 5} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 1, 2} H={3, 5, 5} P={} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=3 F={1, 1, 2} H={4, 4, 4} P={} tau=4 lam0=1 eTau=22 inRange=false codimVZ=102 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=3 F={1, 1, 2} H={4, 4, 5} P={} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 1, 2} H={4, 5, 5} P={} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 1, 5} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=55 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 2, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=90 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 2, 5} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=66 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 3, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=107 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 3, 4} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=96 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 3, 5} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 4, 4} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 4, 5} P={} tau=3 lam0=1 eTau=9 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 3} H={1, 5, 5} P={} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 2, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 2, 4} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=125 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 2, 5} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 3, 3} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=155 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 3, 4} P={} tau=2 lam0=1 eTau=9 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 3, 5} P={} tau=3 lam0=1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 4, 4} P={} tau=3 lam0=1 eTau=15 inRange=false codimVZ=114 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 4, 5} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 1, 3} H={2, 5, 5} P={} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 3, 3} P={} tau=2 lam0=1 eTau=10 inRange=false codimVZ=168 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 3, 4} P={} tau=3 lam0=1 eTau=17 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 3, 5} P={} tau=4 lam0=1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 4, 4} P={} tau=4 lam0=1 eTau=25 inRange=false codimVZ=118 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 4, 5} P={} tau=5 lam0=1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={1, 1, 3} H={3, 5, 5} P={} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 1, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=63 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 1, 5} P={} tau=1 lam0=1 eTau=2 inRange=false codimVZ=49 exElse=NotDetermined bnds=(0,2) dimAd=2
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 2, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 2, 4} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 2, 5} P={} tau=2 lam0=1 eTau=5 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 3, 3} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 3, 4} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=88 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 3, 5} P={} tau=3 lam0=1 eTau=9 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 4, 4} P={} tau=3 lam0=1 eTau=10 inRange=false codimVZ=76 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 4, 5} P={} tau=4 lam0=1 eTau=13 inRange=false codimVZ=51 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 1, 4} H={1, 5, 5} P={} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 2, 2} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 2, 3} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=134 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 2, 4} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 2, 5} P={} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 3, 3} P={} tau=2 lam0=1 eTau=9 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 3, 4} P={} tau=3 lam0=1 eTau=15 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 3, 5} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 4, 4} P={} tau=4 lam0=1 eTau=22 inRange=false codimVZ=102 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 4, 5} P={} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 1, 4} H={2, 5, 5} P={} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 1, 5} P={} tau=2 lam0=1 eTau=3 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 2, 2} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 2, 3} P={} tau=1 lam0=1 eTau=3 inRange=false codimVZ=78 exElse=NotDetermined bnds=(0,3) dimAd=3
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 2, 4} P={} tau=2 lam0=1 eTau=5 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 2, 5} P={} tau=3 lam0=1 eTau=7 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,7) dimAd=7
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 3, 3} P={} tau=2 lam0=1 eTau=6 inRange=false codimVZ=84 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 3, 4} P={} tau=3 lam0=1 eTau=9 inRange=false codimVZ=72 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 3, 5} P={} tau=4 lam0=1 eTau=12 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 4, 4} P={} tau=4 lam0=1 eTau=13 inRange=false codimVZ=60 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 4, 5} P={} tau=5 lam0=1 eTau=16 inRange=false codimVZ=35 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={1, 1, 5} H={1, 5, 5} P={} tau=6 lam0=1 eTau=19 inRange=false codimVZ=19 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 2, 4} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=107 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 2, 5} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=82 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 3, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=124 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 3, 4} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=112 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 3, 5} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=83 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 4, 4} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 2, 2} H={1, 4, 5} P={} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 2, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 2, 4} P={} tau=1 lam0=1 eTau=5 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 2, 5} P={} tau=2 lam0=1 eTau=11 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,11) dimAd=11
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 3, 3} P={} tau=1 lam0=1 eTau=5 inRange=false codimVZ=171 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 3, 4} P={} tau=2 lam0=1 eTau=12 inRange=false codimVZ=148 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 3, 5} P={} tau=3 lam0=1 eTau=19 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 4, 4} P={} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 2, 2} H={2, 4, 5} P={} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 2, 2} H={3, 3, 3} P={} tau=2 lam0=1 eTau=13 inRange=false codimVZ=182 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 2, 2} H={3, 3, 4} P={} tau=3 lam0=1 eTau=23 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 2, 2} H={3, 3, 5} P={} tau=4 lam0=1 eTau=31 inRange=false codimVZ=94 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={1, 2, 2} H={3, 4, 4} P={} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=3 F={1, 2, 2} H={3, 4, 5} P={} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=3 F={1, 2, 2} H={4, 4, 4} P={} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=3 F={1, 2, 2} H={4, 4, 5} P={} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 2, 3} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=123 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 2, 4} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=112 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 2, 5} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 3, 3} P={} tau=1 lam0=1 eTau=4 inRange=false codimVZ=129 exElse=NotDetermined bnds=(0,4) dimAd=4
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 3, 4} P={} tau=2 lam0=1 eTau=9 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 3, 5} P={} tau=3 lam0=1 eTau=14 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 4, 4} P={} tau=3 lam0=1 eTau=15 inRange=false codimVZ=101 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=3 F={1, 2, 3} H={1, 4, 5} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 2, 2} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 2, 3} P={} tau=1 lam0=1 eTau=5 inRange=false codimVZ=163 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 2, 4} P={} tau=2 lam0=1 eTau=12 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 2, 5} P={} tau=3 lam0=1 eTau=19 inRange=false codimVZ=97 exElse=NotDetermined bnds=(0,19) dimAd=19
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 3, 3} P={} tau=2 lam0=1 eTau=13 inRange=false codimVZ=171 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 3, 4} P={} tau=3 lam0=1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 3, 5} P={} tau=4 lam0=1 eTau=31 inRange=false codimVZ=93 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 4, 4} P={} tau=4 lam0=1 eTau=34 inRange=false codimVZ=120 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=3 F={1, 2, 3} H={2, 4, 5} P={} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=3 F={1, 2, 3} H={3, 3, 3} P={} tau=3 lam0=1 eTau=26 inRange=false codimVZ=177 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 6 2 c=3 F={1, 2, 3} H={3, 3, 4} P={} tau=4 lam0=1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=3 F={1, 2, 3} H={3, 3, 5} P={} tau=5 lam0=1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=3 F={1, 2, 3} H={3, 4, 4} P={} tau=5 lam0=1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=3 F={1, 2, 3} H={3, 4, 5} P={} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 2, 4} P={} tau=2 lam0=1 eTau=8 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,8) dimAd=8
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 2, 5} P={} tau=3 lam0=1 eTau=12 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 3, 3} P={} tau=2 lam0=1 eTau=9 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,9) dimAd=9
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 3, 4} P={} tau=3 lam0=1 eTau=15 inRange=false codimVZ=101 exElse=NotDetermined bnds=(0,15) dimAd=15
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 3, 5} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 4, 4} P={} tau=4 lam0=1 eTau=22 inRange=false codimVZ=86 exElse=NotDetermined bnds=(0,22) dimAd=22
+TYPE 6 2 c=3 F={1, 2, 4} H={1, 4, 5} P={} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 2, 2} P={} tau=1 lam0=1 eTau=5 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 2, 3} P={} tau=2 lam0=1 eTau=12 inRange=false codimVZ=148 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 2, 4} P={} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 2, 5} P={} tau=4 lam0=1 eTau=27 inRange=false codimVZ=81 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 3, 3} P={} tau=3 lam0=1 eTau=23 inRange=false codimVZ=153 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 3, 4} P={} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 3, 5} P={} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 4, 4} P={} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=3 F={1, 2, 4} H={2, 4, 5} P={} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 2, 5} P={} tau=4 lam0=1 eTau=16 inRange=false codimVZ=48 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 3, 3} P={} tau=3 lam0=1 eTau=14 inRange=false codimVZ=89 exElse=NotDetermined bnds=(0,14) dimAd=14
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 3, 4} P={} tau=4 lam0=1 eTau=20 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 3, 5} P={} tau=5 lam0=1 eTau=25 inRange=false codimVZ=44 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 4, 4} P={} tau=5 lam0=1 eTau=27 inRange=false codimVZ=59 exElse=NotDetermined bnds=(0,27) dimAd=27
+TYPE 6 2 c=3 F={1, 2, 5} H={1, 4, 5} P={} tau=6 lam0=1 eTau=32 inRange=false codimVZ=32 exElse=NotDetermined bnds=(0,32) dimAd=32
+TYPE 6 2 c=3 F={1, 3, 3} H={1, 3, 3} P={} tau=2 lam0=1 eTau=10 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,10) dimAd=10
+TYPE 6 2 c=3 F={1, 3, 3} H={1, 3, 4} P={} tau=3 lam0=1 eTau=17 inRange=false codimVZ=116 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=3 F={1, 3, 3} H={1, 3, 5} P={} tau=4 lam0=1 eTau=23 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 2, 2} P={} tau=1 lam0=1 eTau=5 inRange=false codimVZ=158 exElse=NotDetermined bnds=(0,5) dimAd=5
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 2, 3} P={} tau=2 lam0=1 eTau=13 inRange=false codimVZ=164 exElse=NotDetermined bnds=(0,13) dimAd=13
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 2, 4} P={} tau=3 lam0=1 eTau=23 inRange=false codimVZ=140 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 2, 5} P={} tau=4 lam0=1 eTau=31 inRange=false codimVZ=94 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 3, 3} P={} tau=3 lam0=1 eTau=26 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,26) dimAd=26
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 3, 4} P={} tau=4 lam0=1 eTau=39 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=3 F={1, 3, 3} H={2, 3, 5} P={} tau=5 lam0=1 eTau=48 inRange=false codimVZ=85 exElse=NotDetermined bnds=(0,48) dimAd=48
+TYPE 6 2 c=3 F={1, 3, 3} H={3, 3, 3} P={} tau=4 lam0=1 eTau=45 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,45) dimAd=45
+TYPE 6 2 c=3 F={1, 3, 3} H={3, 3, 4} P={} tau=5 lam0=1 eTau=61 inRange=false codimVZ=132 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=3 F={1, 3, 3} H={3, 3, 5} P={} tau=6 lam0=1 eTau=71 inRange=false codimVZ=71 exElse=NotDetermined bnds=(0,71) dimAd=71
+TYPE 6 2 c=3 F={1, 3, 4} H={1, 3, 4} P={} tau=4 lam0=1 eTau=25 inRange=false codimVZ=99 exElse=NotDetermined bnds=(0,25) dimAd=25
+TYPE 6 2 c=3 F={1, 3, 4} H={1, 3, 5} P={} tau=5 lam0=1 eTau=31 inRange=false codimVZ=68 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 2, 2} P={} tau=2 lam0=1 eTau=12 inRange=false codimVZ=142 exElse=NotDetermined bnds=(0,12) dimAd=12
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 2, 3} P={} tau=3 lam0=1 eTau=23 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,23) dimAd=23
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 2, 4} P={} tau=4 lam0=1 eTau=34 inRange=false codimVZ=120 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 2, 5} P={} tau=5 lam0=1 eTau=42 inRange=false codimVZ=74 exElse=NotDetermined bnds=(0,42) dimAd=42
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 3, 3} P={} tau=4 lam0=1 eTau=39 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,39) dimAd=39
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 3, 4} P={} tau=5 lam0=1 eTau=53 inRange=false codimVZ=115 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=3 F={1, 3, 4} H={2, 3, 5} P={} tau=6 lam0=1 eTau=62 inRange=false codimVZ=62 exElse=NotDetermined bnds=(0,62) dimAd=62
+TYPE 6 2 c=3 F={1, 3, 5} H={1, 3, 5} P={} tau=6 lam0=1 eTau=37 inRange=false codimVZ=37 exElse=NotDetermined bnds=(0,37) dimAd=37
+TYPE 6 2 c=3 F={1, 4, 4} H={2, 2, 2} P={} tau=3 lam0=1 eTau=20 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,20) dimAd=20
+TYPE 6 2 c=3 F={1, 4, 4} H={2, 2, 3} P={} tau=4 lam0=1 eTau=34 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,34) dimAd=34
+TYPE 6 2 c=3 F={1, 4, 4} H={2, 2, 4} P={} tau=5 lam0=1 eTau=46 inRange=false codimVZ=100 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=3 F={1, 4, 4} H={2, 2, 5} P={} tau=6 lam0=1 eTau=54 inRange=false codimVZ=54 exElse=NotDetermined bnds=(0,54) dimAd=54
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 2, 2} P={} tau=0 lam0=1 eTau=1 inRange=false codimVZ=183 exElse=NotDetermined bnds=(0,1) dimAd=1
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 2, 3} P={} tau=1 lam0=1 eTau=6 inRange=false codimVZ=192 exElse=NotDetermined bnds=(0,6) dimAd=6
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 2, 4} P={} tau=2 lam0=1 eTau=16 inRange=false codimVZ=168 exElse=NotDetermined bnds=(0,16) dimAd=16
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 3, 3} P={} tau=2 lam0=1 eTau=17 inRange=false codimVZ=197 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 3, 4} P={} tau=3 lam0=1 eTau=31 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={2, 2, 2} H={2, 4, 4} P={} tau=4 lam0=1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=3 F={2, 2, 2} H={3, 3, 3} P={} tau=3 lam0=1 eTau=35 inRange=false codimVZ=198 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 6 2 c=3 F={2, 2, 2} H={3, 3, 4} P={} tau=4 lam0=1 eTau=53 inRange=false codimVZ=161 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=3 F={2, 2, 2} H={3, 4, 4} P={} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=3 F={2, 2, 2} H={4, 4, 4} P={} tau=6 lam0=1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=3 F={2, 2, 3} H={2, 2, 3} P={} tau=2 lam0=1 eTau=17 inRange=false codimVZ=195 exElse=NotDetermined bnds=(0,17) dimAd=17
+TYPE 6 2 c=3 F={2, 2, 3} H={2, 2, 4} P={} tau=3 lam0=1 eTau=31 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,31) dimAd=31
+TYPE 6 2 c=3 F={2, 2, 3} H={2, 3, 3} P={} tau=3 lam0=1 eTau=35 inRange=false codimVZ=193 exElse=NotDetermined bnds=(0,35) dimAd=35
+TYPE 6 2 c=3 F={2, 2, 3} H={2, 3, 4} P={} tau=4 lam0=1 eTau=53 inRange=false codimVZ=159 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=3 F={2, 2, 3} H={2, 4, 4} P={} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=3 F={2, 2, 3} H={3, 3, 3} P={} tau=4 lam0=1 eTau=61 inRange=false codimVZ=186 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=3 F={2, 2, 3} H={3, 3, 4} P={} tau=5 lam0=1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=3 F={2, 2, 3} H={3, 4, 4} P={} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=3 F={2, 2, 4} H={2, 2, 4} P={} tau=4 lam0=1 eTau=46 inRange=false codimVZ=138 exElse=NotDetermined bnds=(0,46) dimAd=46
+TYPE 6 2 c=3 F={2, 2, 4} H={2, 3, 3} P={} tau=4 lam0=1 eTau=53 inRange=false codimVZ=161 exElse=NotDetermined bnds=(0,53) dimAd=53
+TYPE 6 2 c=3 F={2, 2, 4} H={2, 3, 4} P={} tau=5 lam0=1 eTau=72 inRange=false codimVZ=126 exElse=NotDetermined bnds=(0,72) dimAd=72
+TYPE 6 2 c=3 F={2, 2, 4} H={2, 4, 4} P={} tau=6 lam0=1 eTau=92 inRange=false codimVZ=92 exElse=NotDetermined bnds=(0,92) dimAd=92
+TYPE 6 2 c=3 F={2, 3, 3} H={2, 3, 3} P={} tau=4 lam0=1 eTau=61 inRange=false codimVZ=183 exElse=NotDetermined bnds=(0,61) dimAd=61
+TYPE 6 2 c=3 F={2, 3, 3} H={2, 3, 4} P={} tau=5 lam0=1 eTau=83 inRange=false codimVZ=145 exElse=NotDetermined bnds=(0,83) dimAd=83
+TYPE 6 2 c=3 F={2, 3, 3} H={3, 3, 3} P={} tau=5 lam0=1 eTau=96 inRange=false codimVZ=167 exElse=NotDetermined bnds=(0,96) dimAd=96
+TYPE 6 2 c=3 F={2, 3, 3} H={3, 3, 4} P={} tau=6 lam0=1 eTau=122 inRange=false codimVZ=122 exElse=NotDetermined bnds=(0,122) dimAd=122
+TYPE 6 2 c=3 F={2, 3, 4} H={2, 3, 4} P={} tau=6 lam0=1 eTau=106 inRange=false codimVZ=106 exElse=NotDetermined bnds=(0,106) dimAd=106
+TYPE 6 2 c=3 F={3, 3, 3} H={3, 3, 3} P={} tau=6 lam0=1 eTau=141 inRange=false codimVZ=141 exElse=NotDetermined bnds=(0,141) dimAd=141

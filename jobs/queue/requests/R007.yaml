@@ -1,0 +1,20 @@
+id: R007
+requested_by: coordinator
+priority: 3
+command: python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-2/tasks/h3_controls_lam2_N6.csv --out jobs/queue/results/R007 --cores 4 --mem-gb 6 --mem-safety 1.1
+working_dir: .
+requires:
+- python3
+- python3-numpy
+- g++
+resources:
+  cores: 4
+  memory_gb: 6
+  est_minutes: 15
+after:
+- R000
+preregistration: 'lambda = 2 controls, seeds 13-60, both primes (96 runs), order 6: expected OBSTRUCTED_GENUINE in all; any other verdict = control failed (surprise, report).'
+expected_outputs:
+- jobs/queue/results/R007/manifest.csv
+- jobs/queue/results/R007/summary.md
+notes: 'Afterwards: make_summary.py and check_results.py.'

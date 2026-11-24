@@ -1,0 +1,19 @@
+id: R009
+requested_by: coordinator (for T6c)
+priority: 4
+command: python3 jobs/cloud-job-2/m2scan/m2scan.py retry --out jobs/queue/results/R009 --procs 8 --mem-gb 8 --tries 3 --deadline-min 30
+working_dir: .
+requires:
+- python3
+- macaulay2
+resources:
+  cores: 8
+  memory_gb: 20
+  est_minutes: 35
+after: []
+preregistration: 106 types (63 quartic, 22 tenfold, 21 sextic) with no F_p-root on T6c's line, new lines (seeds 6-8). Expected = ALL DIE / SINGULAR; surprise = any other verdict at a smooth point.
+expected_outputs:
+- jobs/queue/results/R009/scan_retry.csv
+- jobs/queue/results/R009/summary_retry.md
+- jobs/queue/results/R009/validate_m2.log
+notes: Same install as M1. Rerunning the same command after a crash is safe (it resumes).

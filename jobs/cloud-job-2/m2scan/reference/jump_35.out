@@ -1,0 +1,159 @@
+JUMP 3 5 F={1} H={1} P={1, 1, 1, 1, 1} info=deg 10 linear factors 0 t=.168111
+JUMP 3 5 F={1} H={1} P={1, 1, 1, 1, 2} info=deg 10 linear factors 1 t=7.24786
+JUMP 3 5 F={1} H={1} P={1, 1, 1, 1, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.5151
+JUMP 3 5 F={1} H={1} P={1, 1, 1, 2, 2} info=deg 10 linear factors 1 t=6.47415
+JUMP 3 5 F={1} H={1} P={1, 1, 1, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=12.9325
+JUMP 3 5 F={1} H={1} P={1, 1, 2, 2, 2} info=deg 10 linear factors 0 t=.0633272
+JUMP 3 5 F={1} H={1} P={1, 2, 2, 2, 2} info=deg 10 linear factors 3 t=6.59959
+JUMP 3 5 F={1} H={1} P={1, 2, 2, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.04
+JUMP 3 5 F={1} H={1} P={2, 2, 2, 2, 2} info=deg 10 linear factors 2 t=6.65031
+JUMP 3 5 F={1} H={1} P={2, 2, 2, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.0543
+SKIP TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=1 F={1} H={2} P={1, 1, 1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=1 F={1} H={2} P={1, 1, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=1 F={1} H={2} P={1, 2, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=1 F={1} H={2} P={2, 2, 2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 1, 1, 1} info=deg 8 linear factors 0 t=.0563703
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 1, 1, 2} info=deg 8 linear factors 0 t=.0567776
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 1, 2, 2} info=deg 8 linear factors 1 t=6.71087
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 1, 2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.4379
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 2, 2, 2} info=deg 8 linear factors 1 t=6.37167
+JUMP 3 5 F={1, 1} H={1, 1} P={1, 2, 2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.0644
+JUMP 3 5 F={1, 1} H={1, 1} P={2, 2, 2, 2} info=deg 8 linear factors 1 t=6.47633
+JUMP 3 5 F={1, 1} H={1, 1} P={2, 2, 2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.165
+JUMP 3 5 F={1, 1} H={1, 2} P={1, 1, 1, 1} info=deg 20 linear factors 0 t=.0706323
+JUMP 3 5 F={1, 1} H={1, 2} P={1, 1, 1, 2} info=deg 20 linear factors 1 t=6.47614
+JUMP 3 5 F={1, 1} H={1, 2} P={1, 1, 1, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=12.7306
+JUMP 3 5 F={1, 1} H={1, 2} P={1, 1, 2, 2} info=deg 20 linear factors 0 t=.0761616
+JUMP 3 5 F={1, 1} H={1, 2} P={1, 2, 2, 2} info=deg 20 linear factors 0 t=.0748363
+JUMP 3 5 F={1, 1} H={1, 2} P={2, 2, 2, 2} info=deg 20 linear factors 3 t=6.75361
+JUMP 3 5 F={1, 1} H={1, 2} P={2, 2, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.2944
+SKIP TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 1, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 1} H={2, 2} P={1, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 1} H={2, 2} P={2, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 1, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 2} H={1, 2} P={1, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=2 F={1, 2} H={1, 2} P={2, 2, 2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={1, 1, 1} info=deg 3 linear factors 1 t=7.20906
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={1, 1, 1} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=10.2677
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={1, 1, 2} info=deg 3 linear factors 0 t=.393355
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={1, 2, 2} info=deg 3 linear factors 1 t=6.75478
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={1, 2, 2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=9.84959
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={2, 2, 2} info=deg 3 linear factors 1 t=7.54745
+JUMP 3 5 F={1, 1, 1} H={1, 1, 1} P={2, 2, 2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=10.8085
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={1, 1, 1} info=deg 12 linear factors 3 t=6.6764
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={1, 1, 1} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.6197
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={1, 1, 2} info=deg 12 linear factors 0 t=.108927
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={1, 2, 2} info=deg 12 linear factors 0 t=.0932913
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={2, 2, 2} info=deg 12 linear factors 2 t=6.814
+JUMP 3 5 F={1, 1, 1} H={1, 1, 2} P={2, 2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.7876
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={1, 1, 1} info=deg 30 linear factors 3 t=7.09618
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={1, 1, 1} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.4305
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={1, 1, 2} info=deg 30 linear factors 0 t=.0998184
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={1, 2, 2} info=deg 30 linear factors 2 t=6.57732
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={1, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.4393
+JUMP 3 5 F={1, 1, 1} H={1, 2, 2} P={2, 2, 2} info=deg 30 linear factors 0 t=.101794
+SKIP TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 1} H={2, 2, 2} P={2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={1, 1, 1} info=deg 30 linear factors 0 t=.101526
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={1, 1, 2} info=deg 30 linear factors 2 t=6.79803
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={1, 1, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.5382
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={1, 2, 2} info=deg 30 linear factors 1 t=6.91103
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={1, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.6733
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={2, 2, 2} info=deg 30 linear factors 2 t=7.03803
+JUMP 3 5 F={1, 1, 2} H={1, 1, 2} P={2, 2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.7154
+SKIP TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 1, 1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 1, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={1, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=3 F={1, 1, 2} H={1, 2, 2} P={2, 2, 2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 1} info=deg 4 linear factors 2 t=9.88751
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 1} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=12.9946
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={1, 2} info=deg 4 linear factors 0 t=3.19023
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={2, 2} info=deg 4 linear factors 1 t=9.63698
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 1, 2} P={2, 2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=12.679
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 2, 2} P={1, 1} info=deg 16 linear factors 2 t=7.42858
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 2, 2} P={1, 1} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.3238
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 2, 2} P={1, 2} info=deg 16 linear factors 0 t=.444368
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 2, 2} P={2, 2} info=deg 16 linear factors 1 t=7.31365
+JUMP 3 5 F={1, 1, 1, 1} H={1, 1, 2, 2} P={2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.1525
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 1} info=deg 40 linear factors 1 t=6.74226
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 1} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.0802
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 2} info=deg 40 linear factors 4 t=6.69021
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={1, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.3108
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={2, 2} info=deg 40 linear factors 2 t=6.90189
+JUMP 3 5 F={1, 1, 1, 1} H={1, 2, 2, 2} P={2, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.3524
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 1} H={2, 2, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 1, 2} P={1, 1} info=deg 16 linear factors 1 t=7.18701
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 1, 2} P={1, 1} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.6686
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 1, 2} P={1, 2} info=deg 16 linear factors 0 t=.150058
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 1, 2} P={2, 2} info=deg 16 linear factors 1 t=6.8633
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 1, 2} P={2, 2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=10.9979
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 2, 2} P={1, 1} info=deg 40 linear factors 0 t=.186879
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 2, 2} P={1, 2} info=deg 40 linear factors 1 t=7.18586
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 2, 2} P={1, 2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.919
+JUMP 3 5 F={1, 1, 1, 2} H={1, 1, 2, 2} P={2, 2} info=deg 40 linear factors 0 t=.117543
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 1, 2} H={1, 2, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={1, 1} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={1, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=4 F={1, 1, 2, 2} H={1, 1, 2, 2} P={2, 2} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 1, 2, 2} P={1} info=deg 5 linear factors 0 t=25.7134
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 1, 2, 2} P={2} info=deg 5 linear factors 2 t=32.5277
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 1, 2, 2} P={2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=35.6904
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={1} info=deg 20 linear factors 1 t=8.15005
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={1} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=12.3526
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={2} info=deg 20 linear factors 3 t=8.1684
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 1, 2, 2, 2} P={2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=12.0621
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={1} info=deg 50 linear factors 1 t=6.65399
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={1} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.2884
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={2} info=deg 50 linear factors 2 t=7.15296
+JUMP 3 5 F={1, 1, 1, 1, 1} H={1, 2, 2, 2, 2} P={2} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.7679
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={2, 2, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 1, 1} H={2, 2, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={1} info=deg 5 linear factors 2 t=12.2638
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={1} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=15.2951
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={2} info=deg 5 linear factors 1 t=11.9803
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 1, 2} P={2} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=15.0968
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={1} info=deg 20 linear factors 2 t=7.45412
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={1} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.4737
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={2} info=deg 20 linear factors 1 t=7.39343
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 1, 2, 2} P={2} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.3305
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 2, 2, 2} P={1} info=deg 50 linear factors 1 t=6.69575
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 2, 2, 2} P={1} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.3984
+JUMP 3 5 F={1, 1, 1, 1, 2} H={1, 1, 2, 2, 2} P={2} info=deg 50 linear factors 0 t=.155097
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 2, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 1, 2} H={1, 2, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 2, 2} H={1, 1, 1, 2, 2} P={1} info=deg 50 linear factors 1 t=6.88985
+JUMP 3 5 F={1, 1, 1, 2, 2} H={1, 1, 1, 2, 2} P={1} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.6947
+JUMP 3 5 F={1, 1, 1, 2, 2} H={1, 1, 1, 2, 2} P={2} info=deg 50 linear factors 0 t=.154415
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 2, 2, 2} P={1} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=5 F={1, 1, 1, 2, 2} H={1, 1, 2, 2, 2} P={2} tau=3 lam0=1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 1, 1, 2, 2, 2} P={} info=deg 6 linear factors 2 t=121.913
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 1, 1, 2, 2, 2} P={} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=125.415
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 1, 2, 2, 2, 2} P={} info=deg 24 linear factors 3 t=11.2455
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 1, 2, 2, 2, 2} P={} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=15.2832
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 2, 2, 2, 2, 2} P={} info=deg 60 linear factors 3 t=7.00274
+JUMP 3 5 F={1, 1, 1, 1, 1, 1} H={1, 2, 2, 2, 2, 2} P={} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.7152
+SKIP TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 1} H={2, 2, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 1, 2, 2} P={} info=deg 6 linear factors 2 t=50.3557
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 1, 2, 2} P={} point E'=1 S=false dimK=325 verdict=ALL DIE rankQ=1 t=53.5619
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 2, 2, 2} P={} info=deg 24 linear factors 2 t=9.19636
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 1, 2, 2, 2} P={} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=13.2877
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 2, 2, 2, 2} P={} info=deg 60 linear factors 1 t=6.92481
+JUMP 3 5 F={1, 1, 1, 1, 1, 2} H={1, 1, 2, 2, 2, 2} P={} point E'=1 S=false dimK=334 verdict=ALL DIE rankQ=1 t=13.6145
+SKIP TYPE 3 5 c=6 F={1, 1, 1, 1, 1, 2} H={1, 2, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+JUMP 3 5 F={1, 1, 1, 1, 2, 2} H={1, 1, 1, 1, 2, 2} P={} info=deg 24 linear factors 1 t=7.76617
+JUMP 3 5 F={1, 1, 1, 1, 2, 2} H={1, 1, 1, 1, 2, 2} P={} point E'=1 S=false dimK=328 verdict=ALL DIE rankQ=1 t=11.7863
+JUMP 3 5 F={1, 1, 1, 1, 2, 2} H={1, 1, 1, 2, 2, 2} P={} info=deg 60 linear factors 0 t=.223287
+SKIP TYPE 3 5 c=6 F={1, 1, 1, 1, 2, 2} H={1, 1, 2, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
+SKIP TYPE 3 5 c=6 F={1, 1, 1, 2, 2, 2} H={1, 1, 1, 2, 2, 2} P={} tau=3 lam0=-1 eTau=20 inRange=false codimVZ=20 exElse=NotDetermined bnds=(0,20) dimAd=20 (tau = d: det M constant, J inside singular hypersurfaces)
