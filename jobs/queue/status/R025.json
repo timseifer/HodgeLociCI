@@ -1,0 +1,1 @@
+{"id": "R025", "state": "RUNNING", "started": "2026-11-24T12:37:48Z", "finished": null, "host": "cloud", "commit": "061cf976bddb7ad422fc5d6feabb22fea528f585", "alert": false, "summary": "running with the current command (timeout argument 100000, M2 1.22 via docker); its M2 validation briefly uses 5 processes (~1 min); then 1 core. Machine total 30 cores / 180 GB declared"}
