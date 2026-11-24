@@ -1,1 +1,1 @@
-{"id": "R020", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "9506fa6bce63469bf35e743cb34b2dda3160b24b", "alert": false, "summary": "queued (priority 3); needs 22 cores / 130 GB; starts when R010 and R013 finish (~06:40Z), next to R015"}
+{"id": "R020", "state": "RUNNING", "started": "2026-11-24T06:53:16Z", "finished": null, "host": "cloud", "commit": "2f5f2db7b9bd016e63b8f9e1c252cf66e06341e1", "alert": false, "summary": "running (task file uses 20 threads), next to R015 and the last 4 R013 M2 processes; expected ~2.2 h"}
