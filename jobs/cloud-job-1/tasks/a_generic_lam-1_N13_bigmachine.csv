@@ -1,0 +1,6 @@
+# (a'') lambda = -1 generic, order 13: DOES NOT FIT in 200 GB (estimated 244 GB) and needs ~36 CPU-h; kept for a bigger machine
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,1,al,13,30
+a,-1,67108837,4,la,13,30
+a,-1,67108819,1,al,13,30
+a,-1,67108819,4,la,13,30

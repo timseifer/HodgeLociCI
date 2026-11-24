@@ -1,0 +1,11 @@
+id: R001
+requested_by: coordinator (for W3 / the tenfold lead)
+priority: 2
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/g1_order12.csv --out jobs/queue/results/R001 --cores 22 --mem-gb 120 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 22, memory_gb: 120, est_minutes: 60}
+after: [R000]
+preregistration: "lambda = -1 generic direction (seed 1, a x l, MOD 67108837) to order 12. Dead end = obstructed at order <= 12 (verdict OBSTRUCTED_GENUINE). Survival to 12 strengthens the lead only (no finite order proves a component)."
+expected_outputs: ["jobs/queue/results/R001/manifest.csv", "jobs/queue/results/R001/summary.md", "jobs/queue/results/R001/runs/"]
+notes: "Run together with R002. Afterwards: python3 jobs/cloud-job-1/make_summary.py jobs/queue/results/R001 && python3 jobs/cloud-job-1/check_results.py jobs/queue/results/R001"

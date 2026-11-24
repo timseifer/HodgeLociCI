@@ -1,0 +1,11 @@
+id: R004
+requested_by: coordinator
+priority: 3
+command: "python3 jobs/cloud-job-1/run_tasks.py jobs/cloud-job-1/tasks/g4_generic_N10.csv --out jobs/queue/results/R004 --cores 8 --mem-gb 60 --mem-safety 1.1"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 8, memory_gb: 60, est_minutes: 45}
+after: [R000]
+preregistration: "lambda = -1 generic NEW seeds (7, 10 at MOD 67108837; 8, 11 at MOD 67108819) to order 10. Dead end = any OBSTRUCTED_GENUINE at order <= 10."
+expected_outputs: ["jobs/queue/results/R004/manifest.csv", "jobs/queue/results/R004/summary.md"]
+notes: "May run alongside R001 (total about 30 cores, 180 GB). Afterwards: make_summary.py and check_results.py."

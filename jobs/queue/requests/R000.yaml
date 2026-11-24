@@ -1,0 +1,11 @@
+id: R000
+requested_by: coordinator
+priority: 1
+command: "bash jobs/cloud-job-1/validate.sh"
+working_dir: "."
+requires: [python3, python3-numpy, g++]
+resources: {cores: 30, memory_gb: 4, est_minutes: 5}
+after: []
+preregistration: "must reproduce the stored order-11 (lambda = -1), order-6 obstruction (lambda = 2) and order-8 generic logs exactly; any mismatch = STOP everything"
+expected_outputs: ["jobs/cloud-job-1/results/validation/"]
+notes: "This is VALIDATION. Write status/VALIDATION.json with state DONE or FAILED. If FAILED: commit, push, stop all work."

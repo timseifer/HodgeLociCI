@@ -1,0 +1,6 @@
+# small local test (orders <= 8)
+job,lam,p,seed,kind,N,threads
+b,2,67108837,7,al,6,1
+a,-1,67108819,10,la,7,1
+c,-1,67108819,0,exarc_la,9,1
+a,-1,67108837,13,al,15,1

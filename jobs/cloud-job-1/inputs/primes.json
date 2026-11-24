@@ -1,0 +1,13 @@
+{
+ "roots_of_z2_minus_z_plus_1": {
+  "67108837": [
+   9827985,
+   57280853
+  ],
+  "67108819": [
+   19491217,
+   47617603
+  ]
+ },
+ "note": "zidx = index in the sorted list (W3 used zidx 0)"
+}

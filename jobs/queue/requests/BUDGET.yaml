@@ -1,0 +1,4 @@
+# Written by the coordinator. The cloud lead stops starting new jobs when this budget is used up.
+wall_clock_minutes: 100        # compute time on the instance (Tim plans 1-2 hours; leave margin)
+max_memory_gb_total: 180
+max_cores_total: 30

@@ -1,0 +1,6 @@
+# G4: lambda = -1 generic NEW seeds 7, 10 (MOD 67108837), 8, 11 (MOD 67108819), order 10
+job,lam,p,seed,kind,N,threads
+a,-1,67108837,7,al,10,2
+a,-1,67108837,10,la,10,2
+a,-1,67108819,8,al,10,2
+a,-1,67108819,11,la,10,2

@@ -1,0 +1,6 @@
+# (c) EX-T6 sparse arcs (lambda = -1), order 14 (about 11 GB each)
+job,lam,p,seed,kind,N,threads
+c,-1,67108837,0,exarc_al,14,4
+c,-1,67108837,0,exarc_la,14,4
+c,-1,67108819,0,exarc_al,14,4
+c,-1,67108819,0,exarc_la,14,4
