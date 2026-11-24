@@ -1,0 +1,1 @@
+{"id": "R013", "state": "QUEUED", "started": null, "finished": null, "host": "cloud", "commit": "5c4fac22f8c8ed15e05ed7833a6080d7a5c2e355", "alert": false, "summary": "blocked: requires macaulay2; operator has not authorised installing it on this instance (and all 30 cores are in use by R001+R004)"}
