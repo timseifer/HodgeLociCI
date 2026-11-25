@@ -1,6 +1,29 @@
 {
   "updated": "2026-11-25T17:30Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. The open lead on cubic tenfolds now has a candidate explanation by an explicit family with algebraic cycles (first order, mod p and exact at two points; the class statement is a paper argument); it is NOT a candidate.",
+  "headlines": [
+    {
+      "date": "25 Nov 2026",
+      "title": "A 1917 cubic may explain a 2019 mystery on cubic tenfolds",
+      "tag": "Candidate explanation \u00b7 one step open",
+      "status": "MOD_P",
+      "summary": "For Movasati's pair of 5-planes on cubic tenfolds, the class with coefficient \u22121 seemed to stay a Hodge class on a region W, one dimension larger than anything known could explain (a question Movasati left open in 2019). The agents now find an explicit family that matches W at first order: tenfolds whose P^8-section is a Coble cubic, the cubic sevenfold singular along an abelian surface (Coble, 1917). Its boundary, where the abelian surface breaks into an elliptic scroll, is the known family F_T.",
+      "numbers": "Codimension 54 against 55, three moduli against two, leaving F_T in exactly the extra direction: mod p at two primes, exact over QQ at two points, blind-checked mod p.",
+      "open": "Whether the class stays Hodge on the whole family. A paper argument (AI, unchecked) says a 5-fold swept by 4-planes over a theta curve carries twice the class; the next check is an intersection count that should equal 18. Not reviewed by a mathematician.",
+      "figure": "coble-healing",
+      "registry": [
+        "D-TENFOLD-COBLE-FAMILY",
+        "O-TENFOLD-CONE-LEAD",
+        "D-TENFOLD-PRODUCT-POINTS"
+      ],
+      "links": [
+        [
+          "Write-up",
+          "https://github.com/timseifer/HodgeLociCI/blob/main/leads/TENFOLD_COBLE_LEAD.md"
+        ]
+      ]
+    }
+  ],
   "active": [
     {
       "title": "Cubic tenfold lead (two 5-planes meeting in a P^2)",
