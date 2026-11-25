@@ -1,0 +1,11 @@
+random coordinate change on P^10 for the first computation, det -286
+prime 32003  generators 11 degrees new Tally from {2 => 11}
+F4 done: 695 elements, max degree 11  cpu 1.18675
+Jacobian scheme of X': dim(affine cone) 1  degree 72
+HF {1, 11, 55, 165, 330, 462, 462, 331, 174, 93, 74, 72, 72}
+after adding w_0=w_1=0: dim 1  degree 72  HF {1, 9, 34, 66, 73, 72, 72, 72, 72}
+default engine: dim 1 degree 72
+
+real	0m3.341s
+user	0m3.705s
+sys	0m0.117s

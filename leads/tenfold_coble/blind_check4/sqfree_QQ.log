@@ -1,0 +1,11 @@
+sizes 72 72 72 72
+det M2 != 0: True  det M1 != 0: True
+charpoly degree 72
+gcd(chi, chi') degree: 0
+irreducible factors over QQ (degree, multiplicity): [(72, 1)]
+content/leading: 1  max coefficient bits of primitive part: 942
+ mod 32003 : lead coeff nonzero True  deg 72  gcd(f,f') degree 0
+ mod 31991 : lead coeff nonzero True  deg 72  gcd(f,f') degree 0
+ mod 30011 : lead coeff nonzero True  deg 72  gcd(f,f') degree 0
+ mod 1000003 : lead coeff nonzero True  deg 72  gcd(f,f') degree 0
+binary form identity det(s*M2 - t*M1) = det(M2) t^72 chi(s/t) at samples: True

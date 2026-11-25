@@ -1,0 +1,189 @@
+BLIND CHECK 4 -- independent re-derivation, cubic hypersurface X = {F = 0} in P^11 over QQ
+=========================================================================================
+All scripts and logs are in /home/claude/blind_check4 (own scripts only; nothing under
+/home/claude/work, other blind_check* directories or hodgelocici/leads was read).
+Tools: Macaulay2 1.22, python-flint 0.9.0.  Wall time used: about 32 minutes.
+
+VERDICT IN ONE LINE
+  E1-E6: all PASS, every stated number reproduced.  L1-L4: I find no gap that breaks the chain;
+  L3 is correct but its written justification is incomplete (see L3), and L1/L3 each rest on one
+  published theorem that should be cited precisely.
+
+SUMMARY TABLE
+  item  status  where computed                                   key numbers
+  E1    PASS    mod 32003, 31991, 30011 (deduced over QQ)          HF = binomial(12,d), 0 in degree 13, total 4096
+  E2    PASS    over QQ                                           dim 0, degree 72, degree-72 form squarefree
+  E3    PASS    mod 32003, 31991, 30011 + E2 over QQ (deduced)     Jacobian scheme of X': dim 0, degree 72; still 72 with w_0=w_1=0
+  E4    PASS    over QQ                                           1,9,34,63,71,72,72 (saturation and I:m); 1,9,34,66,73,72,72 (I)
+  E5    PASS    over QQ                                           R/(dF8,Phi0,Phi1,Phi2) has finite length (149)
+  E6    PASS    over QQ                                           degree 18, HP 9n^2, 9 quadrics + 3 cubics; 1,9,33,57,39,9,1,0; rank 54
+  L1    logic OK, needs the precise Dimca reference
+  L2    logic OK, standard
+  L3    conclusion OK; argument as written skips two steps (supplied below); cleanest route is a published theorem
+  L4    logic OK, standard
+
+-----------------------------------------------------------------------------------------
+E1.  X smooth over QQ.                                                             PASS
+-----------------------------------------------------------------------------------------
+Computed mod p (NOT over QQ), then deduced over QQ.
+  p = 32003, 31991, 30011, engine groebnerBasis(Strategy=>"F4") on the 12 partials of F in 12 variables:
+    Groebner basis 1483 elements, top degree 13; quotient by the initial ideal has affine dimension 0,
+    vector-space dimension 4096, Hilbert function for d = 0..14
+      1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0, 0   = binomial(12,d); zero in degree 13.
+  Cross-checks of the F4 result by other routes:
+    - random linear change of coordinates on P^11 (p = 32003, seed 7; transformed F has all 364 monomials):
+      F4 gives 1463 elements, same Hilbert function.
+    - a different implementation: Macaulay2's own gb(..., Algorithm=>LinearAlgebra) at p = 31991:
+      1483 elements, top degree 13, dimension 0, 4096, same Hilbert function.
+    - COULD NOT COMPLETE: default Buchberger engine (stopped at 270 s), mathicgb classic "MGB" (stopped at 100 s),
+      and my own module-over-QQ[y] reformulation with the default engine (stopped at 200 s). These are time-outs,
+      not disagreements.
+  Route: correct. The Jacobian ideal is defined over Z; a closed subscheme of P^11 over Z_(p) with empty special
+  fibre is empty (properness), and Sing(X_QQ) = V(dF) by Euler's formula. One prime suffices.
+
+-----------------------------------------------------------------------------------------
+E2.  Sigma: dimension 0, degree 72, 72 distinct geometric points.                    PASS
+-----------------------------------------------------------------------------------------
+Computed over QQ (default engine): Groebner basis of I = (dF8, Phi0, Phi1) has 79 elements, top degree 6;
+projective dimension 0, degree 72.
+Squarefree form, over QQ: multiplication by l1 and by l2 from (R/I)_6 to (R/I)_7 (both 72-dimensional, and equal
+to the saturated quotient there) gives two 72x72 rational matrices M1, M2; both are invertible (no point on l1=0
+or l2=0). The binary form det(s*M2 - t*M1) = det(M2) t^72 chi(s/t), chi = characteristic polynomial of M2^-1 M1
+(python-flint, exact): degree 72, gcd(chi, chi') = 1 over QQ. Identity checked at 3 rational sample points.
+The numerator of chi also stays of degree 72 and squarefree mod 32003, 31991, 30011, 1000003.
+Length 72 + 72 distinct values of l1/l2  =>  72 distinct reduced geometric points.
+Surprise: the degree-72 form is IRREDUCIBLE over QQ (coefficients up to 942 bits), so Sigma is a single
+Galois orbit of 72 conjugate points; none is rational.
+
+-----------------------------------------------------------------------------------------
+E3.  Sing(X') = Sigma, 72 ordinary double points.                                    PASS
+-----------------------------------------------------------------------------------------
+Computed mod p; the statement over QQ is deduced (using E2 over QQ).
+  p = 32003, 31991, 30011, F4 on the 11 partials of F|_{w_2=0} in 11 variables: 729 elements, top degree 11,
+    projective dimension 0, degree 72, Hilbert function d = 0..12:
+      1, 11, 55, 165, 330, 462, 462, 331, 174, 93, 74, 72, 72.
+    After adding w_0 = w_1 = 0: dimension 0, degree 72, Hilbert function 1, 9, 34, 66, 73, 72, 72, 72, 72
+    (F4 and default engine agree; this is exactly the Hilbert function of R/(dF8,Phi0,Phi1)).
+  Cross-checks of the 11-variable F4 result: random coordinate change on P^10 (p = 32003, seed 11): 695 elements,
+    same Hilbert function; mathicgb classic engine "MGB" (not F4) at p = 32003: 729 elements, same Hilbert function.
+    Default engine: COULD NOT COMPLETE (stopped at 150 s).
+  Route: correct. Over Z_(p) the closure of the generic fibre of the Jacobian scheme is finite flat with special
+  fibre inside a length-72 scheme, so length over QQ <= 72; it contains Sigma (Jac + (w_0,w_1) = I_Sigma + (w_0,w_1),
+  an identity of ideals), of length 72 and reduced by E2; so equality, reducedness, Tjurina number 1, and
+  (g, dg) = maximal ideal forces a nondegenerate Hessian, i.e. A_1. The "still 72 after adding w_0=w_1=0" mod p
+  is not logically needed once E2 holds over QQ; it is a consistent extra check.
+
+-----------------------------------------------------------------------------------------
+E4.  71 conditions on quartics.                                                      PASS
+-----------------------------------------------------------------------------------------
+Computed over QQ, degrees 0..8:
+    R/(dF8,Phi0,Phi1):          1, 9, 34, 66, 73, 72, 72, 72, 72
+    R/((dF8,Phi0,Phi1) : m):    1, 9, 34, 63, 71, 72, 72, 72, 72
+    R/saturation:               1, 9, 34, 63, 71, 72, 72, 72, 72
+  I:m equals the saturation (tested as ideals), and (I^sat : m) = I^sat. Minimal generators of the saturated
+  ideal: 11 quadrics, 3 cubics, 2 quartics. Same three Hilbert functions mod 32003.
+  So the 72 points impose 71 conditions on quartics of P^8; defect 1.
+  Consistency remark (not verified, not needed): if the degree-18 surface of E6 is a smooth abelian surface A,
+  then Sigma = A cap {Phi0=Phi1=0} is cut on A by two members of |2H| and 4H = 2H + 2H + K_A, so Cayley-Bacharach
+  on A predicts defect exactly h^2(O_A) = 1. 18*2*2 = 72 also matches.
+
+-----------------------------------------------------------------------------------------
+E5.  Phi2 has no zero on Sigma.                                                      PASS
+-----------------------------------------------------------------------------------------
+Computed over QQ: R/(dF8,Phi0,Phi1,Phi2) has affine dimension 0 (Hilbert function 1,9,33,57,39,9,1,0,0,0),
+so no projective zero. Second test over QQ: (I^sat : Phi2) = I^sat.
+Remark: E5 is not independent of E1+E3. At a node of X' the only partial of F that can be nonzero is
+dF/dw_2 = Phi2, so "X smooth at the nodes of X'" and E5 are the same statement. They agree.
+
+-----------------------------------------------------------------------------------------
+E6.  Singular surface of F8; the Artinian quotient; pairing rank 54.                 PASS
+-----------------------------------------------------------------------------------------
+Computed over QQ:
+  (dF8): projective dimension 2, degree 18, Hilbert function 1, 9, 36, 84, 144, 225, 324, 441.
+  Saturation: Hilbert polynomial 9n^2, Hilbert function 1, 9, 36, 81, 144, 225, 324, 441, minimal generators
+    9 quadrics + 3 cubics. (Computed as (dF8) : z_0^infinity; certified to be the saturation: it contains (dF8),
+    has the same Hilbert polynomial, is unchanged by ":m", and equals (dF8):m.)
+  R/(dF8,Phi0,Phi1,Phi2): 1, 9, 33, 57, 39, 9, 1, 0 (total 149). Degree-6 standard monomial: q_2^6.
+  Pairing over QQ: exact multiplication matrices A_3 -> A_4 -> A_5 -> A_6 give the 165 x 57 matrix
+    functional(m*b) (m all cubic monomials, b the 57 standard cubics): rank 54. The 57x57 Gram matrix is
+    symmetric of rank 54; a second ordering of the three multiplications gives the identical matrix.
+  Mod p: p = 31991, direct 165x165 Gram matrix from normal forms of all 3003 sextic monomials: symmetric,
+    rank 54; and R/(K : m^3) has dimension 54 in degree 3 (second route to the rank). p = 30011: rank 54.
+  COULD NOT COMPLETE over QQ: the direct 3003-normal-form route (killed after about 5 minutes). The
+    multiplication-matrix route above is exact over QQ, so the QQ statement stands.
+  Not checked (not claimed): smoothness or irreducibility of the surface.
+
+-----------------------------------------------------------------------------------------
+SUPPORTING COMPUTATION FOR L3 (mod 32003 only, F4, not cross-checked)
+-----------------------------------------------------------------------------------------
+  f = F|_{w_2=1} on C^11, f_3 = F|_{w_2=0}, f_2 = Phi2.
+  {grad f_3 = 0, f_2 = 0} in P^10: empty.
+  Z = {11 partials of F in y, w_0, w_1} in P^11: dimension 0, degree 2048; Z cap {w_2=0}: degree 72.
+  Affine critical scheme of f: finite, length 1976 = 2^11 - 72. No critical point on f = 0.
+
+=========================================================================================
+REVIEW OF THE LOGIC
+=========================================================================================
+L1.  b_10(X') = 2.   Sound; needs the precise citation.
+  - The degree n*d/2 - n - 1 = 4 is the right one. I checked it against the source: Dimca's preprint MPI/89-6,
+    "Betti Numbers of Hypersurfaces and Defects of Linear Systems" (Duke Math. J. 60, 1990), where for
+    dim V = 2m-1 the linear system has degree mN - (sum of weights); for P^10 and cubics that is 5*3 - 11 = 4.
+    https://archive.mpim-bonn.mpg.de/4028/1/preprint_1989_6.pdf
+    I also sanity-checked the formula on known cases (general 6-nodal cubic threefold: linear forms, defect 1,
+    b_4 = 2; three lines in P^2: constants, defect 2, b_2 = 3).
+  - Small point to state: the theorem is about quartics of P^10, E4 is about quartics of P^8. The nodes lie in
+    P^8 and restriction of quartics is surjective, so the number of conditions is the same (71).
+  - The theorem gives the primitive part of H^10; b_10 = 1 + 1 = 2, and H_10 is dual over QQ.
+  - Numerology consistent: b_9(X') = 682 - 72 + 1 = 611, chi(X') = 11 - 611 = -600 = -672 + 72.
+
+L2.  The extra class is of Hodge type.   Sound, standard.
+  Filling in the step: the kernel of H_10(X') -> sum of H_10(X', X'-p) is the image of H_10(X' - Sigma), which is
+  H^8_c(X' - Sigma) = H^8(X') = QQ (Lefschetz), spanned by a linear section missing Sigma, of degree 3. So the
+  kernel is a line of nonzero degree and the degree-0 line injects. The local group is H~_9 of the link of a
+  9-dimensional node, which is QQ; it is Tate because it is built from the cohomology of a smooth 8-dimensional
+  quadric. All maps are morphisms of mixed Hodge structures. A textbook reference for the mixed Hodge structure
+  on local cohomology (Peters-Steenbrink, or Dimca's book) is enough.
+
+L3.  H_10(X') -> H_10(X) injective.   Conclusion correct; the argument as written has two unstated steps.
+  (a) "Fibre closures smooth along the hyperplane at infinity" is NOT the usual transversality hypothesis: every
+      closure meets the hyperplane at infinity in X', which is singular, so the closures are tangent to infinity at
+      the 72 nodes. The claim "only affine critical values are atypical" is still true here, but it needs the
+      following: where f_2 != 0 one can solve the equation of the total space for the coordinate at infinity, so
+      near infinity the pair (total space, divisor at infinity) is a product {f_3 = 0} x C_t with t the projection;
+      then Thom's isotopy lemma applies. I checked this by hand; it is the setting of Siersma-Tibar (Duke 1995).
+  (b) "0 is not atypical, so H^9(X - X') = 0" also needs that the general fibre has no cohomology in degree 9,
+      i.e. that the affine critical points of f are ISOLATED. Not stated. It is true: Z (above) meets infinity
+      in the 72 nodes, and at each of them Z is a reduced isolated point exactly because Phi2 != 0 there (bordered
+      Hessian has rank 11), so Z has no curve component; 2048 - 72 = 1976 affine critical points with multiplicity.
+      Confirmed mod 32003. Euler characteristic agrees: chi(X) - chi(X') = 1377 + 600 = 1977 = 1 + 1976.
+  Cleaner route, which I recommend citing instead: Dimca-Paunescu, "On the connectivity of complex affine
+  hypersurfaces II" (arXiv math/9906064, Topology 2000). With S(f) the affine cone {grad f_d = 0, f_e = 0}, their
+  theorem makes every fibre of f on C^(n+1) (n-1-dim S(f))-connected. Here n = 10 and S(f) = {0} by E3+E5, so
+  X - X' = f^-1(0) is 9-connected and H^9 = 0 directly, with no discussion of atypical values.
+  https://arxiv.org/abs/math/9906064
+  Lefschetz duality H_11(X,X') = H^9(X - X') and the exact sequence are standard.
+  Dimension count closes: 2 - 1367 + 1976 - 611 = 0.
+
+L4.  Rational (5,5) class on X not a multiple of h^5.   Sound, standard.
+  The image of the degree-0 class is nonzero (L3), rational, of type (5,5) (morphism of mixed Hodge structures
+  from a Tate structure), and has degree 0 against h^5 by the projection formula, while h^5 has degree 3.
+  This says nothing about algebraicity, and I make no statement about the Hodge conjecture.
+
+=========================================================================================
+THINGS THAT SURPRISED ME / CAVEATS
+=========================================================================================
+  1. Sigma is one Galois orbit (degree-72 form irreducible over QQ).
+  2. E5 is equivalent to smoothness of X at the nodes of X'; it is not an independent input.
+  3. Only the F4-type engines finish E1 in reasonable time; the classical engines timed out. E1 therefore rests on
+     two independent F4-type implementations (mathicgb F4; Macaulay2 "LinearAlgebra"), three primes and one
+     random coordinate change. E3 additionally has a non-F4 confirmation (mathicgb classic).
+  4. mathicgb F4 used a second thread despite GC_MARKERS=1 (user time exceeded wall time on the F4 runs); the
+     longest such run was 46 s.
+  5. E1 and E3 are mod-p computations plus deduction; E2, E4, E5, E6 are exact over QQ. I did not compute the
+     Jacobian ideals in 11 or 12 variables over QQ.
+  6. The supporting computation for L3 is at one prime, F4 only.
+
+FILES (all in /home/claude/blind_check4)
+  common.m2 (definitions), t0.m2, q1.m2 (E2/E4/E5 over QQ), sqfree.py (E2 squarefree), q3b.m2 (E6),
+  q3.m2 (E6 direct Gram, mod p), e1.m2, e3.m2, e3b.m2, e_alt.m2, e1_default.m2, modroute.m2, l3.m2; logs *.log;
+  mult_QQ.txt (the two 72x72 rational matrices).

@@ -1,0 +1,36 @@
+E1 engine LA prime 31991
+ -- warning: gb algorithm requested is experimental
+number of spairs removed by criterion = 1
+monomial info
+  nvars  = 12  nslots = 14  mask   = 268435456  hash values for each variable
+    1804289383
+    846930886
+    1681692777
+    1714636915
+    1957747793
+    424238335
+    719885386
+    1649760492
+    596516649
+    1189641421
+    1025202362
+    1350490027
+  #calls compare = 244112
+  #calls mult    = 14425413
+  #calls get comp= 4460689
+  #calls fromexp = 97
+  #calls toexp   = 20624
+  #calls fromvp  = 15211
+  #calls tovp    = 1483
+  #calls is equal= 14460841
+  #calls eq true = 14382693
+  #calls divide  = 37262
+  #calls weight  = 97
+  #calls unneeded= 1669064
+  #calls vp quot = 1098903
+done cpu 33.8479  elements 1483 max degree 13
+dim 0 degree 4096 HF {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0, 0}
+
+real	0m35.916s
+user	0m35.452s
+sys	0m0.143s

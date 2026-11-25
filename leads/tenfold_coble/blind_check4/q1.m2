@@ -1,0 +1,31 @@
+-- E2/E4/E5 over QQ (or over ZZ/p if an argument is given)
+kk = if #scriptCommandLine > 1 then ZZ/(value scriptCommandLine#1) else QQ;
+load "common.m2";
+stdio << "field " << toString kk << endl << flush;
+t = cpuTime();
+gI = gens gb ISig;
+stdio << "GB of I_Sigma: " << numColumns gI << " elements, max degree " << max flatten degrees source gI << "  time " << cpuTime()-t << endl << flush;
+stdio << "E2: dim (affine cone) " << dim ISig << "  degree " << degree ISig << endl << flush;
+stdio << "E4: HF(R/(dF8,Phi0,Phi1)) deg 0..8 " << hfl(8, ISig) << endl << flush;
+t = cpuTime();
+Icm = ISig : ideal vars R;
+stdio << "E4: HF(R/(I:m)) " << hfl(8, Icm) << "  time " << cpuTime()-t << endl << flush;
+t = cpuTime();
+Isat = saturate ISig;
+stdio << "E4: HF(R/I^sat) " << hfl(8, Isat) << "  time " << cpuTime()-t << endl << flush;
+stdio << "    I:m == I^sat ? " << (Icm == Isat) << "   (I^sat : m) == I^sat ? " << ((Isat : ideal vars R) == Isat) << endl << flush;
+stdio << "    degrees of min gens of I^sat " << toString tally flatten degrees source mingens Isat << endl << flush;
+t = cpuTime();
+K = ISig + ideal(P2);
+stdio << "E5/E6: K=(dF8,Phi0,Phi1,Phi2): dim " << dim K << " HF " << hfl(9, K) << "  time " << cpuTime()-t << endl << flush;
+stdio << "E5 alt: Phi2 a nonzerodivisor mod I^sat ? (Isat:Phi2)==Isat : " << ((Isat : ideal(P2)) == Isat) << endl << flush;
+-- multiplication matrices B_6 -> B_7 by l1, l2
+B = R/ISig;
+b6 = basis(6,B); b7 = basis(7,B);
+stdio << "dims B_6, B_7: " << numColumns b6 << " " << numColumns b7 << endl << flush;
+L1 = sub(l1,B); L2 = sub(l2,B);
+M1 = lift(last coefficients(L1*b6, Monomials => b7), kk);
+M2 = lift(last coefficients(L2*b6, Monomials => b7), kk);
+fn = if kk === QQ then "mult_QQ.txt" else "mult_p.txt";
+fn << toString entries M1 << endl << toString entries M2 << endl << close;
+stdio << "wrote " << fn << "  rank M1 " << rank M1 << " rank M2 " << rank M2 << endl << flush;

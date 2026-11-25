@@ -44,3 +44,6 @@ psi). Copied as-is; absolute paths `/home/claude/blind_check2`. `logs_step12/`: 
 quoted in section 10.
 `PREREG_k3.md`, `logs_k3/`, `blind_check3/`: pre-registration, outputs and the third blind checker's scripts and
 unedited report for section 11 (the Pfaffian / K3 control).
+`exact_member/`: a named member over QQ with its certificate (section 12 of the lead note); it has its own README.
+`blind_check4/`: the fourth blind checker's scripts, logs and unedited report for that certificate (one 2.6 MB data
+file of its run was left out).

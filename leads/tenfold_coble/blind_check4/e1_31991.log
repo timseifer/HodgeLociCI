@@ -1,0 +1,9 @@
+prime 31991  generators 12 degrees new Tally from {2 => 12}
+F4 done: 1483 elements, max degree 13  cpu 6.37563 wall 7
+dim of S/in(J) (affine) 0   degree (vector space dim) 4096
+HF {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0, 0}
+equals binomial(12,d) for d=0..14 ? true   HF(13) = 0
+
+real	0m8.288s
+user	0m11.165s
+sys	0m0.401s

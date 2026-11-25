@@ -1,0 +1,9 @@
+prime 32003: Z = {11 partials (y,w_0,w_1) = 0} in P^11: dim(affine cone) 1  degree 2048
+Z cap {w_2=0}: dim 1 degree 72
+affine critical scheme of f: dim 0  length 1976   (2^11 - 72 = 1976)
+critical points on the fibre f=0: ideal is the unit ideal ? true
+{grad f_3 = 0, f_2 = 0} in P^10: dim(affine cone) 0  (0 means empty)
+
+real	0m45.691s
+user	1m16.049s
+sys	0m2.030s

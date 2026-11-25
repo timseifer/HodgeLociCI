@@ -4,6 +4,13 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
+### Discoveries registry (142 -> 143 entries)
+- D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
+  rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
+  with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
+  items computed directly over QQ, two modulo three primes with a specialization step. Equation and scripts in
+  `leads/tenfold_coble/exact_member/`; `leads/TENFOLD_COBLE_LEAD.md`, section 12.
+
 ## [0.1.3] - 2026-11-25
 
 No change to the Macaulay2 package code or to any earlier result. All new mathematical content is AI-generated and

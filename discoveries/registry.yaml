@@ -5966,6 +5966,88 @@
   session_refs: |-
     Session of 25 Nov 2026 (Claude Fable 5.2, chat), third part.
 
+- id: D-TENFOLD-COBLE-EXACT-MEMBER
+  kind: result
+  area: explicit_cycles
+  title: "A named smooth cubic tenfold over QQ in the Coble family: its hyperplane section has exactly 72 nodes with exactly one relation (certificate over QQ); first-order Hodge locus of codimension 54"
+  statement: |-
+    The member. Variables z, p, q (three each; y for all nine) and w_0, w_1, w_2; h(a,b,c) = a^3 + b^3 + c^3 + 9abc;
+    M = sum_{i,j} x_{(i-j) mod 3} z_{(i+j) mod 3} p_i q_j with x = (4,3,3) (lam = 3, a = -221/378 in D-TENFOLD-COBLE-FAMILY):
+        F8   = -221 h(z) + 378 h(p) + 378 h(q) + 378 M
+        Phi0 = 2 z_0 p_0 + z_1 p_1 + 2 z_0 p_2 - p_2^2 - 2 p_0^2 - 2 z_1 z_2
+        Phi1 = -p_1 p_2 - 2 q_0 q_2 - 2 q_0^2 + 2 z_1 p_1 - p_1 q_0 - 2 q_1^2
+        Phi2 = 2 z_1 q_2 - 2 p_0 q_0 + p_2 q_1 + z_0 p_1 - p_1 q_2 + 2 p_2^2
+        F    = F8 + w_0 Phi0 + w_1 Phi1 + w_2 Phi2 + w_0^3 + w_1^3 + w_2^3,      X = {F = 0} in P^11.
+    The quadrics come from a fixed rule (leads/tenfold_coble/exact_member/make_member.py, candidate 1, first w-part; no
+    candidate was rejected). X' = X n {w_2 = 0}; Sigma = {dF8 = 0, Phi0 = Phi1 = 0} in the P^8 = {w = 0}.
+    Certificate (pre-registered, exact_member/PREREG_exact.md):
+    (X1) X is smooth. MOD 32003, 31991, 30011: the Jacobian ideal has no projective zero (Hilbert function of the
+    quotient binomial(12,d), 0 in degree 13; also after a random change of coordinates). Over QQ by specialization.
+    (X2) Sigma is 72 distinct points. EXACT over QQ: dimension 0, degree 72, squarefree projection of degree 72.
+    (X3) Sing(X') = Sigma, all ordinary double points. MOD the three primes: the Jacobian scheme of F|_{w_2=0} in P^10
+    has dimension 0 and length 72, all on the P^8. Over QQ by specialization (length <= 72) together with (X2).
+    (X4) The 72 points impose exactly 71 conditions on quartics. EXACT over QQ: the saturated ideal of Sigma has
+    Hilbert function 1, 9, 34, 63, 71, 72, 72 (also from the colon ideal by the irrelevant ideal).
+    (X5) Phi2 has no zero on Sigma. EXACT over QQ.
+    Also EXACT over QQ at this member: the singular surface of X n P^8 has degree 18, Hilbert polynomial 9n^2, ideal
+    9 quadrics + 3 cubics; k[y]/(dF8, Phi0, Phi1, Phi2) has Hilbert function (1, 9, 33, 57, 39, 9, 1, 0) and the pairing
+    on cubics has rank 54 (codimension of the first-order Hodge locus of the class at X).
+    Consequence (ARG + LIT, not computed): X' is a nodal cubic 9-fold with 72 nodes and defect 1, so b_10(X') = 2
+    (Dimca's formula); the extra class is of type (5,5) and H_10(X') -> H_10(X) is injective (D-TENFOLD-COBLE-CYCLE-CLASS,
+    argument A, step 3). Hence this smooth cubic tenfold with rational coefficients carries a rational Hodge class that
+    is not a multiple of h^5. By D-TENFOLD-COBLE-CYCLE-CLASS the class is algebraic (ARG).
+  status: PROVED_AI_UNREVIEWED
+  conditions: |-
+    (X2), (X4), (X5), the surface and the rank 54 are computed directly over QQ (Macaulay2). (X1) and (X3) are computed
+    modulo three primes and transferred to QQ by standard specialization arguments written out in PREREG_exact.md
+    (empty special fibre; upper semicontinuity of the length of a finite scheme over Z_(p)); those arguments are by an
+    AI and unreviewed. The modular Groebner bases for (X1) and (X3) use Macaulay2's F4 engine; (X3) was also run with
+    the default engine at one prime. The consequence about the Hodge class rests on cited theorems that were not
+    re-read and on an argument that no mathematician has read. Not a statement about the Hodge conjecture; the class
+    is algebraic if D-TENFOLD-COBLE-CYCLE-CLASS holds.
+  evidence: |-
+    leads/tenfold_coble/exact_member/ (member.m2, make_member.py, cert_QQ.m2, cert_modp.m2, PREREG_exact.md, logs/);
+    leads/TENFOLD_COBLE_LEAD.md section 12.
+  independent_check: |-
+    Blind check BC-EXACT (25 Nov 2026; a separate agent given the equation and the statements only; its own Macaulay2
+    and Python code and unedited report: leads/tenfold_coble/blind_check4/, without its 2.6 MB file of two 72x72
+    rational matrices). All six computed items PASS with the same numbers. Over QQ: Sigma (dimension 0, degree 72;
+    squarefree by an independent route, the characteristic polynomial of a 72x72 rational multiplication matrix in
+    python-flint; it also found that the degree-72 form is irreducible over QQ, so the 72 nodes are one Galois orbit and
+    none is rational); the Hilbert functions 1, 9, 34, 63, 71, 72, 72 (saturation, colon ideal) and
+    1, 9, 34, 66, 73, 72, 72; Phi2 without zero on Sigma; the surface (degree 18, 9n^2, 9 quadrics + 3 cubics); the
+    Hilbert function (1, 9, 33, 57, 39, 9, 1, 0) and rank 54 (exact multiplication matrices; also rank 54 mod two
+    primes by the direct Gram matrix). Mod 32003, 31991, 30011: X smooth (F4; a second F4-type engine, Macaulay2's
+    LinearAlgebra algorithm, at one prime; a random change of coordinates) and the Jacobian scheme of X' of dimension
+    0 and degree 72 (F4; mathicgb's classic engine at one prime; a random change of coordinates). The default
+    Buchberger engine did not finish for it either (time-outs, not disagreements). It accepted both specialization
+    arguments, noting that one prime suffices and that (X5) is the same statement as smoothness of X at the nodes.
+    Its review of the consequence: sound, with two steps of the injectivity argument that were not written out and
+    are now (the product structure near infinity where f_2 != 0; isolated affine critical points, which it confirmed:
+    2048 - 72 = 1976 at one prime, no critical point on f = 0), and a cleaner reference that gives the vanishing of
+    H^9(X - X') directly: Dimca-Paunescu, On the connectivity of complex affine hypersurfaces II, arXiv:math/9906064
+    (the theorem as it states it; the paper's existence and abstract were confirmed by search, the theorem was not
+    read here). It asks for the exact statement number in Dimca's 1990 paper, which is still to be supplied.
+    Not checked by it and not claimed: smoothness or irreducibility of the singular surface at this member;
+    algebraicity of the class.
+  not_established: |-
+    A human reading of the specialization arguments and of the consequence. (X1) and (X3) by a direct computation over
+    QQ (the 11-variable one was stopped after 17 minutes). That this X is off F_T and off the cone loci is clear from
+    its singular surface (a smooth surface of degree 18, not a plane plus a scroll) but was not made a separate item.
+  known_before: |-
+    Dimca, Duke Math. J. 60 (1990); Siersma-Tibar, Duke Math. J. 80 (1995); Thomas, Nodes and the Hodge conjecture,
+    arXiv:math/0212216 (the Hodge conjecture restated through nodal hyperplane sections; snippet read): none re-read
+    in full. The method note of O-EXACT-VERSIONS-OF-MOD-P-RANKS (rank over QQ is at least the rank mod p) is the same
+    specialization idea.
+  reproduce: |-
+    From leads/tenfold_coble/exact_member/ (Macaulay2 1.22):
+        M2 --script cert_QQ.m2                 (7 min)
+        M2 --script cert_modp.m2 32003         (15 s; also 31991, 30011; a second argument gives a random change of coordinates)
+  next_step: |-
+    The Fermat-point check (the explicit cubic arc of the family through Movasati's point in the order-12 engine).
+  session_refs: |-
+    Session of 25 Nov 2026 (Claude Fable 5.2, chat), fourth part.
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture

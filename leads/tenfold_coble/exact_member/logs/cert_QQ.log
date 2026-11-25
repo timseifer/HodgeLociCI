@@ -1,0 +1,8 @@
+QQ (X2) Sigma = {dF8 = 0, Phi0 = Phi1 = 0}: projective dim 0 ; degree 72 ; cpu 8.0557
+QQ (X5) Sigma ∩ {Phi2 = 0}: projective dim -1 (-1 = empty) ; cpu 12.9603
+QQ (X4) Hilbert function of R/((dF8, Phi0, Phi1) : m), d = 0..6: {1, 9, 34, 63, 71, 72, 72} ; cpu 45.0536
+QQ (X4) saturated ideal of Sigma: degree 72 ; Hilbert function d = 0..6: {1, 9, 34, 63, 71, 72, 72} ; cpu 165.565
+QQ (X2) projection of Sigma to the fixed line: degree 72 ; squarefree: true ; cpu 212.702
+QQ Sing(Y): projective dim 2 ; degree 18 ; Hilbert polynomial 9*i^2 ; generators by degree new Tally from {2 => 9, 3 => 3} ; cpu 213.017
+QQ first order: Hilbert function of R/(dF8, Phi0, Phi1, Phi2), d = 0..7: {1, 9, 33, 57, 39, 9, 1, 0} ; cpu 220.921
+QQ first order: rank of the pairing on the 165 cubics = 54 (the codimension of the first-order Hodge locus of the class at this tenfold) ; cpu 385.036

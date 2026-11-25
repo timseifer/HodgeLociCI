@@ -12,6 +12,8 @@
 > mathematician's reading of the two arguments, not computation.
 > Later still: a control on the known coefficient +1 (section 11, D-TENFOLD-PFAFFIAN-K3): there the P^8-section is a
 > Pfaffian cubic singular along a K3 surface, and the same node ladder reproduces the known lattice numbers.
+> Night: one member is written down over QQ with a certificate for the 72 nodes and their one relation
+> (section 12, D-TENFOLD-COBLE-EXACT-MEMBER, `leads/tenfold_coble/exact_member/`).
 > Read that note before sections 4-5 below; the rest of this file is unchanged.
 
 Written 25 Nov 2026 by the coordinating agent (Claude Opus 5.5) for Timothy Seifert, the repository owner, who is
@@ -123,7 +125,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (142 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (143 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the

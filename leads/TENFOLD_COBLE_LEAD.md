@@ -445,3 +445,55 @@ with -29, -21, 49 on both sides. Its caveats, all accepted:
    were computed as Z.Z_2 and Z'.Z'_2, which uses that members of one family are homologous. Neither was computed.
 3. Equal numbers show equal Gram matrices; they do not by themselves identify the classes.
 4. A smooth tenfold with the 56-nodal section was not constructed (Bertini argument only). Everything is MOD p.
+
+## 12. One member written down over QQ, with a certificate (25 Nov 2026, night)
+
+Aim: a named smooth cubic tenfold, off F_T and off the cone loci, on which the node picture of section 10 is
+established over QQ rather than MOD p. Pre-registration with the specialization arguments:
+`tenfold_coble/exact_member/PREREG_exact.md`; equation and scripts in the same folder.
+
+The member (x = (4,3,3), lam = 3, the member section 5 already treats over QQ; quadrics by a fixed rule, first
+candidate accepted). With h(a,b,c) = a^3 + b^3 + c^3 + 9abc and M = sum x_{i-j} z_{i+j} p_i q_j:
+
+    F8   = -221 h(z) + 378 h(p) + 378 h(q) + 378 M
+    Phi0 = 2 z_0 p_0 + z_1 p_1 + 2 z_0 p_2 - p_2^2 - 2 p_0^2 - 2 z_1 z_2
+    Phi1 = -p_1 p_2 - 2 q_0 q_2 - 2 q_0^2 + 2 z_1 p_1 - p_1 q_0 - 2 q_1^2
+    Phi2 = 2 z_1 q_2 - 2 p_0 q_0 + p_2 q_1 + z_0 p_1 - p_1 q_2 + 2 p_2^2
+    F    = F8 + w_0 Phi0 + w_1 Phi1 + w_2 Phi2 + w_0^3 + w_1^3 + w_2^3
+
+X = {F = 0}, X' = X ∩ {w_2 = 0}, Sigma = {dF8 = 0, Phi0 = Phi1 = 0} in the P^8.
+
+| Item | Result | How it holds over QQ |
+| --- | --- | --- |
+| X1: X is smooth | no singular point mod 32003, 31991, 30011 (the Jacobian quotient has Hilbert function binomial(12,d)); same after a random change of coordinates | MOD p + specialization: a projective scheme over Z_(p) with empty special fibre has empty generic fibre |
+| X2: Sigma is 72 distinct points | dimension 0, degree 72; its projection to a fixed line is a squarefree form of degree 72 | EXACT (computed over QQ) |
+| X3: Sing(X') = Sigma, all ordinary double points | mod p the Jacobian scheme of F restricted to w_2 = 0 has dimension 0 and length 72, all on the P^8 (three primes; two engines at 32003) | MOD p + specialization: over QQ the length is at most 72; it contains Sigma, of length 72; so it is Sigma, reduced, Tjurina number 1 at each point |
+| X4: the 72 points impose exactly 71 conditions on quartics | saturated ideal of Sigma has Hilbert function 1, 9, 34, 63, 71, 72, 72 | EXACT (computed over QQ; also via the colon ideal) |
+| X5: Phi2 has no zero on Sigma | empty | EXACT (computed over QQ) |
+| the singular surface of X ∩ P^8 | degree 18, Hilbert polynomial 9n^2, ideal 9 quadrics + 3 cubics | EXACT |
+| first order at this X | k[y]/(dF8, Phi) has Hilbert function (1, 9, 33, 57, 39, 9, 1, 0); pairing rank 54 | EXACT |
+
+What this gives (ARG + LIT, not computed): X' is a cubic 9-fold with exactly 72 nodes and defect 1, so its tenth
+Betti number is 2 (Dimca's formula, LIT); the extra class is of type (5,5) and maps injectively to H^10(X)
+(10.3, step 3). So this X, a smooth cubic tenfold with rational coefficients, has a rational Hodge class that is
+not a multiple of h^5, with first-order Hodge locus of codimension 54. By section 10 that class is the class of an
+algebraic cycle (ARG); nothing here is "a Hodge class not known to be algebraic".
+
+Practical note: the 12-variable smoothness check did not finish with Macaulay2's default Groebner engine (40
+minutes, and 10 with a Hilbert-driven run). With the F4 engine (`groebnerBasis(..., Strategy => "F4")`) it takes
+7 seconds; on the 11-variable problem both engines agree (3 minutes against 1 second).
+
+Independent check: blind check BC-EXACT (a separate agent, the equation and the statements only; its code and
+unedited report are in `tenfold_coble/blind_check4/`). All computed items PASS with the same numbers: the QQ items
+by its own routes (the 72 distinct points through the characteristic polynomial of a 72x72 rational matrix; the
+rank 54 through exact multiplication matrices), the two mod p items at the same three primes with F4, a second
+F4-type engine, mathicgb's classic engine for the node count, and random changes of coordinates. The default
+engine did not finish for it either. It accepted both specialization arguments. Its remarks, all taken in:
+1. The 72 nodes form a single Galois orbit (the degree-72 form is irreducible over QQ): none is a rational point.
+2. X5 is the same statement as "X is smooth at the nodes of X'", not an independent input.
+3. The injectivity step (10.3, step 3) skipped two things, both true here: near infinity the pair (total space,
+   divisor at infinity) is a product because f_2 != 0 at the nodes, and the affine critical points are isolated
+   (it counted 2048 - 72 = 1976 at one prime, none on f = 0). It recommends citing instead Dimca-Paunescu,
+   "On the connectivity of complex affine hypersurfaces II" (arXiv:math/9906064), which by its account gives that
+   X - X' is 9-connected directly. LIT: I confirmed the paper and its abstract by search; I did not read the theorem.
+4. The exact statement number of Dimca's formula in the 1990 paper is still to be supplied (its copy was garbled).

@@ -1,0 +1,16 @@
+field QQ
+GB of I_Sigma: 79 elements, max degree 6  time 11.3552
+E2: dim (affine cone) 1  degree 72
+E4: HF(R/(dF8,Phi0,Phi1)) deg 0..8 {1, 9, 34, 66, 73, 72, 72, 72, 72}
+E4: HF(R/(I:m)) {1, 9, 34, 63, 71, 72, 72, 72, 72}  time 43.6714
+E4: HF(R/I^sat) {1, 9, 34, 63, 71, 72, 72, 72, 72}  time 164.796
+    I:m == I^sat ? true   (I^sat : m) == I^sat ? true
+    degrees of min gens of I^sat new Tally from {2 => 11, 3 => 3, 4 => 2}
+E5/E6: K=(dF8,Phi0,Phi1,Phi2): dim 0 HF {1, 9, 33, 57, 39, 9, 1, 0, 0, 0}  time 5.83708
+E5 alt: Phi2 a nonzerodivisor mod I^sat ? (Isat:Phi2)==Isat : true
+dims B_6, B_7: 72 72
+wrote mult_QQ.txt  rank M1 72 rank M2 72
+
+real	5m12.562s
+user	5m8.355s
+sys	0m0.980s

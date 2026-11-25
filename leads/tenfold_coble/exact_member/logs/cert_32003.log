@@ -1,0 +1,6 @@
+p = 32003
+(X1) Jacobian ideal of F, 12 variables: projective dim of the zero set = -1 (-1 = smooth) ; Hilbert function of S/in(J), d = 0..13: {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0} ; cpu 6.67769
+(X3) Jacobian scheme of F|_{w_2=0} in P^10: projective dim 0 ; degree 72 ; with w_0 = w_1 = 0: degree 72 ; cpu 7.85392
+(X2) Sigma: projective dim 0 ; degree 72 ; projection to the fixed line: degree 72 ; squarefree: true
+(X5) Sigma ∩ {Phi2 = 0}: projective dim -1 (-1 = empty)
+(X4) Hilbert function of Sigma (saturated), d = 0..6: {1, 9, 34, 63, 71, 72, 72} ; cpu 14.0402
