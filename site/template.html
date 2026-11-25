@@ -57,6 +57,34 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .idref{font:.78em var(--mono);color:var(--accent);cursor:pointer;border-bottom:1px dotted currentColor;white-space:nowrap}
 .idref:hover{border-bottom-style:solid}
 
+/* headline results */
+#headlines{margin-top:30px}
+.hlhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.hlhead h2{margin:0}
+.hlhead .upd{color:var(--muted);font-size:.84rem}
+.hlcard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:18px 22px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:820px){.hlcard{grid-template-columns:1fr}}
+.hlcard h3{font:600 1.45rem/1.2 var(--serif);margin:6px 0 8px}
+.hlcard .tag{display:inline-block;font-size:.78rem;padding:2px 9px;border-radius:999px;background:var(--band);color:var(--pend);border:1px solid var(--line);margin-left:6px}
+.hlcard .date{color:var(--muted);font-size:.82rem}
+.hlcard p{margin:0 0 10px;font-size:.95rem}
+.hlcard .nums{color:var(--muted);font-size:.88rem}
+.hlcard .openstep{font-size:.88rem;border-top:1px solid var(--line);padding-top:10px;color:var(--muted)}
+.hlcard .openstep b{color:var(--ink)}
+.hlcard .hlinks{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem;margin-top:6px}
+.hlfig svg{width:100%;height:auto;display:block}
+.hlfig .slider{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);margin:4px 0 10px}
+.hlfig .slider input{flex:1}
+.hlfig .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.hlfig .metric{background:var(--band);border-radius:8px;padding:8px 10px}
+.hlfig .metric .l{font-size:.74rem;color:var(--muted)}
+.hlfig .metric .v{font:600 1.25rem var(--serif)}
+.hlfig .cap{font-size:.84rem;color:var(--muted);margin:8px 0 0;min-height:3.2em}
+.tower{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.tower div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.78rem;color:var(--muted)}
+.tower div b{display:block;color:var(--ink);font:600 .95rem var(--serif);margin:1px 0}
+.tower div.hi{border-color:var(--accent)}
+
 /* overview */
 .overview{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 .ovtop{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
@@ -228,6 +256,7 @@ footer.foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line)
   <p>Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. No human mathematician has reviewed it. Published papers were read by machine. "Settled" means exact computation or a proof in an AI-written, unreviewed note, nothing more. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</p></details>
 </header>
 
+<section id="headlines"></section>
 <section id="now"></section>
 </div>
 
@@ -359,6 +388,76 @@ function linkify(text){
   }
   f.append(text.slice(last)); return f;
 }
+
+// ---------- Headline results ----------
+const FIGURES = {
+  "coble-healing": function(){
+    const box=el("div",{class:"hlfig"});
+    const s=sv("svg",{viewBox:"0 0 520 230",role:"img","aria-label":"An elliptic scroll healing into an abelian surface"});
+    const cx=260, cy=110, R=170, r=52, N=18;
+    const g0=sv("g",{}), g1=sv("g",{});
+    s.append(g0,g1);
+    const base=sv("ellipse",{cx,cy,rx:R,ry:r,fill:"none",stroke:"var(--faint)","stroke-width":1,"stroke-dasharray":"4 4"});
+    const outer=sv("ellipse",{cx,cy,rx:R+26,ry:r+40,fill:"none",stroke:"var(--ok)","stroke-width":1.2});
+    const inner=sv("ellipse",{cx,cy:cy-4,rx:R-55,ry:r-31,fill:"none",stroke:"var(--ok)","stroke-width":1.2});
+    g0.append(base,outer,inner);
+    const items=[];
+    for (let i=0;i<N;i++){
+      const a=2*Math.PI*i/N, x=cx+R*Math.cos(a), y=cy+r*Math.sin(a), op=Math.sin(a)>0?1:0.35;
+      const ln=sv("line",{x1:x,y1:y-42,x2:x,y2:y+42,stroke:"var(--pend)","stroke-width":1.6,"stroke-linecap":"round"});
+      const lp=sv("ellipse",{cx:x,cy:y,rx:8+5*Math.abs(Math.cos(a)),ry:34,fill:"none",stroke:"var(--ok)","stroke-width":1.6});
+      g1.append(ln,lp); items.push({ln,lp,op});
+    }
+    const inp=el("input",{type:"range",min:"0",max:"100",step:"1",value:"0","aria-label":"Heal the surface"});
+    const mo=el("div",{class:"v"},"2"), co=el("div",{class:"v"},"55");
+    const hv=el("div",{class:"v",style:"color:var(--ok)"},"Hodge");
+    const cap=el("p",{class:"cap"});
+    function upd(){
+      const t=inp.value/100, healed=t>0.02;
+      items.forEach(o=>{ o.ln.setAttribute("opacity",((1-t)*o.op).toFixed(2)); o.lp.setAttribute("opacity",(t*o.op).toFixed(2)); o.lp.setAttribute("ry",(10+24*t).toFixed(1)); });
+      outer.setAttribute("opacity",(0.85*t).toFixed(2)); inner.setAttribute("opacity",(0.85*t).toFixed(2));
+      mo.textContent=healed?"3":"2"; co.textContent=healed?"54":"55";
+      hv.textContent=healed?"Hodge, 1st order":"Hodge";
+      hv.title=healed?"Shown to first order (mod p, exact at two points); all orders is the open step":"On F_T the class is carried by V";
+      cap.textContent=healed
+        ? "Healed: the P^8-section is a Coble cubic, singular along an abelian surface (a genus-2 Jacobian). One more modulus, one dimension more: codimension 54, the size of W."
+        : "Broken: the abelian surface has degenerated into the elliptic scroll T (lines over an elliptic curve). This boundary is the known family F_T, codimension 55.";
+    }
+    inp.oninput=upd; upd();
+    box.append(s,
+      el("div",{class:"slider"},el("span",{},"Broken (F_T)"),inp,el("span",{},"Healed (Coble family)")),
+      el("div",{class:"metrics"},
+        el("div",{class:"metric"},el("div",{class:"l"},"Moduli"),mo),
+        el("div",{class:"metric"},el("div",{class:"l"},"Codimension"),co),
+        el("div",{class:"metric"},el("div",{class:"l"},"Class with coefficient −1"),hv)),
+      cap,
+      el("div",{class:"tower"},
+        el("div",{},"Cubic fourfolds",el("b",{},"Sextic del Pezzo"),"Hassett's C_18"),
+        el("div",{},"Cubic eightfolds",el("b",{},"Segre P^2 × P^2"),"inside the TD family"),
+        el("div",{class:"hi"},"Cubic tenfolds",el("b",{},"Coble cubic"),"candidate, one step open")));
+    return box;
+  }
+};
+(function(){
+  const H=DATA.status.headlines||[], n=$("#headlines");
+  if (!H.length){ n.remove(); return; }
+  n.append(el("div",{class:"hlhead"},el("h2",{},"Headline results"),el("span",{class:"upd"},"Schematic figures; every claim carries its registry label")));
+  for (const h of H){
+    const ids=(h.registry||[]).filter(i=>BY[i]);
+    const left=el("div",{},
+      el("div",{},badge(h.status),el("span",{class:"tag"},h.tag||""),el("span",{class:"date",style:"margin-left:8px"},h.date||"")),
+      el("h3",{},h.title),
+      el("p",{},h.summary||""),
+      h.numbers?el("p",{class:"nums"},h.numbers):"",
+      h.open?el("p",{class:"openstep"},el("b",{},"Not settled: "),h.open):"",
+      el("div",{class:"hlinks"},
+        ...(h.links||[]).map(([t,u])=>el("a",{href:u},t+" →")),
+        ...ids.map(i=>{ const a=el("span",{class:"idref",title:BY[i].title,tabindex:"0",role:"link"},i); a.onclick=()=>openEntry(i); a.onkeydown=ev=>{ if(ev.key==="Enter") openEntry(i); }; return a; }),
+        ids.length?el("a",{href:"#map",onclick:ev=>{ ev.preventDefault(); showOnMap(ids); }},"Show on map →"):""));
+    const fig=FIGURES[h.figure]?FIGURES[h.figure]():el("div");
+    n.append(el("article",{class:"hlcard"},left,fig));
+  }
+})();
 
 // ---------- Working on now ----------
 (function(){
