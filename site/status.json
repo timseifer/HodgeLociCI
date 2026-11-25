@@ -7,22 +7,36 @@
       "title": "A 1917 cubic may explain a 2019 mystery on cubic tenfolds",
       "tag": "Candidate explanation \u00b7 awaiting review by a mathematician",
       "status": "MOD_P",
-      "summary": "For Movasati's pair of 5-planes on cubic tenfolds, the class with coefficient \u22121 seemed to stay a Hodge class on a region W, one dimension larger than anything known could explain (a question Movasati left open in 2019). The agents now find an explicit family that matches W at first order: tenfolds whose P^8-section is a Coble cubic, the cubic sevenfold singular along an abelian surface (Coble, 1917). Its boundary, where the abelian surface breaks into an elliptic scroll, is the known family F_T. Later the same day: each member carries an algebraic 5-fold, swept by 4-planes over a theta curve of the abelian surface, whose self-intersection comes out as \u2212144, where a multiple of the hyperplane class would give 48. If the two paper arguments behind that number hold, the class is algebraic on the whole family, which would settle the question in the plain way: by a cycle.",
+      "summary": "For Movasati's pair of 5-planes on cubic tenfolds, the class with coefficient \u22121 seemed to stay a Hodge class on a region W one dimension larger than anything known could explain, a question Movasati left open in 2019. The agents find an explicit family that matches W: tenfolds whose P^8-section is a Coble cubic, the cubic sevenfold singular along an abelian surface (Coble, 1917). Its boundary, where the abelian surface breaks into an elliptic scroll, is the known family F_T, and each member carries an algebraic 5-fold swept by 4-planes over a theta curve that would carry the class. The same mechanism, run on the known coefficient +1, finds a Pfaffian cubic singular along a K3 surface: the two special coefficients match the two kinds of surface with trivial canonical class.",
       "numbers": "Codimension 54 against 55, three moduli against two, leaving F_T in exactly the extra direction: mod p at two primes, exact over QQ at two points, blind-checked mod p. Evening: a hyperplane section through the P^8 has exactly 72 nodes with one relation among them; self-intersection \u2212144 against 48 (the same ladder reproduces the known \u221236); the explicit arc passes orders 2 and 3 exactly. All mod p at two primes; the inputs and order 2 blind-checked. Late evening: on the known coefficient +1 (Pfaffian cubic, K3 surface, 56 nodes) the same ladder returns the known lattice numbers, a second test of the method.",
       "open": "Two paper arguments by an AI (local classes at the 72 nodes; a ladder of self-intersections down to a cubic fourfold) have not been read by a mathematician. Their inputs are mod p, not exact, and order 3 was not blind-checked. Finite orders are evidence, not proof.",
       "figure": "coble-healing",
       "registry": [
         "D-TENFOLD-COBLE-FAMILY",
-        "D-TENFOLD-COBLE-ARC-ORDERS",
         "D-TENFOLD-COBLE-CYCLE-CLASS",
-        "O-TENFOLD-CONE-LEAD",
+        "D-TENFOLD-COBLE-ARC-ORDERS",
+        "D-TENFOLD-PFAFFIAN-K3",
         "D-TENFOLD-PRODUCT-POINTS",
-        "D-TENFOLD-PFAFFIAN-K3"
+        "O-TENFOLD-CONE-LEAD"
       ],
       "links": [
         [
           "Write-up",
           "https://github.com/timseifer/HodgeLociCI/blob/main/leads/TENFOLD_COBLE_LEAD.md"
+        ]
+      ],
+      "pairing": [
+        [
+          "Coefficient +1 (known)",
+          "Pfaffian cubic",
+          "singular along a K3 surface; 56 nodes, one relation",
+          "control"
+        ],
+        [
+          "Coefficient \u22121 (the mystery)",
+          "Coble cubic",
+          "singular along an abelian surface; 72 nodes, one relation",
+          "candidate"
         ]
       ]
     }

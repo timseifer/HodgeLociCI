@@ -4,6 +4,35 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-11-25
+
+No change to the Macaulay2 package code or to any earlier result. All new mathematical content is AI-generated and
+unreviewed; most of it is modulo primes and finite order. Nothing here is a statement about the Hodge conjecture.
+
+### Discoveries registry (133 at v0.1.2 -> 142 entries)
+- Candidate explanation of the tenfold lead (O-TENFOLD-CONE-LEAD stays OPEN pending review by a mathematician):
+  - D-TENFOLD-COBLE-FAMILY (MOD p; exact over QQ at two points; blind-checked): an explicit codimension-54 family of
+    cubic tenfolds whose P^8-section is a Coble cubic (singular along an abelian surface), with boundary the C_18
+    family F_T; its first-order Hodge locus equals the family's tangent space, and it leaves F_T in exactly the extra
+    direction.
+  - D-TENFOLD-PRODUCT-POINTS (paper argument, AI): the structure at product points that produced the family's
+    equation.
+  - D-TENFOLD-COBLE-CYCLE-CLASS (paper argument, AI; mod p inputs): hyperplane sections through the P^8 have 72 nodes
+    with one relation; the 4-plane cycle over a theta curve has self-intersection -144 (a multiple of h^5 would give
+    48), so it is not a multiple of h^5.
+  - D-TENFOLD-COBLE-ARC-ORDERS (MOD p): orders 2 and 3 of the Hodge condition hold exactly along the explicit arc.
+  - D-TENFOLD-PFAFFIAN-K3 (MOD p): on the known coefficient +1 the P^8-section is a Pfaffian cubic singular along a
+    K3 surface (56 nodes, one relation); the same self-intersection ladder reproduces known lattice numbers. A
+    positive control, not a new family.
+- Negative results: N-TENFOLD-CODIM54-SEARCH-2, N-TENFOLD-DIRECT-METHODS, N-TENFOLD-SINGULAR-SECTIONS,
+  N-TENFOLD-THIRD-DETERMINANT. They rule out only the cases tested.
+- New readable write-up: leads/TENFOLD_COBLE_LEAD.md; handoff leads/TENFOLD_HANDOFF.md; scripts, pre-registrations,
+  logs and three blind checkers' reports in leads/tenfold_coble/ and leads/tenfold_session_scripts/.
+
+### Progress page
+- "Headline results" section driven by `headlines` in site/status.json, with a schematic interactive figure.
+- Interactive research map; the page is rebuilt by CI on every push to main that touches the registry or the site.
+
 ## [0.1.2] - 2026-11-25
 
 No change to the Macaulay2 package code or to any earlier result. All new mathematical content is AI-generated and
