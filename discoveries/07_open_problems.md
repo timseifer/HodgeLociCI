@@ -973,7 +973,8 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 
 ```text
 PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
-explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS). The lead stands as an open
+explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS; a later singular-section test,
+N-TENFOLD-SINGULAR-SECTIONS, also explains nothing). The lead stands as an open
 question with the evidence above. If resumed: the undecided cases (~8 GB), order >= 4 / AG ideals, the Segre
 P^2 x P^2 cone family (codim 55, Hodge-tangent 50), expert input. Earlier plan for reference: (1) DONE; (2) DONE;
 (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth

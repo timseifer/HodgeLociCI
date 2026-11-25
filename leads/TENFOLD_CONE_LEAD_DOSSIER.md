@@ -60,7 +60,8 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
 - STATUS 25 Nov 2026: PAUSED as an open question (owner's stopping rule). Direct methods (N-TENFOLD-DIRECT-METHODS):
   the Artinian Gorenstein ideal of the class along the extra direction stays that of [V] in degree <= 3 to order 3,
   and a search over the admissible invariants (class a h^5 + b[V], b != 0) found no codim-54 family (three cases
-  undecided for memory). MOD p; rules out only what was tested.
+  undecided for memory). A later test of loci where a P^8-section is singular along a plane also explains nothing
+  (N-TENFOLD-SINGULAR-SECTIONS). MOD p; rules out only what was tested. Handoff: leads/TENFOLD_HANDOFF.md.
 - Second pre-registered search (25 Nov, N-TENFOLD-CODIM54-SEARCH-2; MOD p): ruled out among Thom-Sebastiani /
   Katsura-Shioda cycles, further degenerations of T, P^3-bundles, scrolls of degree 9 and 12, unions with V, and
   del Pezzo-guided families. A sharper check (normal-bundle sections vs explicit family) confirms the first search's

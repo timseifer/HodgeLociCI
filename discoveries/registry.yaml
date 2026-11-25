@@ -5523,6 +5523,43 @@
   session_refs: |-
     LEDGER_DISCOVERY.md "[CS3-T6]" PRE, "[CS3-M1]", "[CS3-M2]" (25 Nov).
 
+- id: N-TENFOLD-SINGULAR-SECTIONS
+  kind: negative
+  area: movasati_conjecture
+  title: "Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction"
+  statement: |-
+    Pre-registered (25 Nov 2026). Strata of Sigma = {X : X n P^8 singular along a plane Pi} (MOD 32003, 31991, 2 seeds,
+    4/4 identical; codim by count = codim by tangent): generic (rank-6 transversal quadric net) codim 1; net with a
+    common singular point 14; net inside I_{A u B}(2) (A, B the disjoint planes of T's net) 19; cones 64. F_T, V_Z
+    and Cone_T lie in the codim-1 and codim-19 strata (F_T and V_Z are cut out inside the codim-19 stratum by the
+    cubic C vanishing on T, resp. on A u B; containments EXACT by ideal inclusion). At points of F_T the tangent of
+    each stratum contains T F_T but NOT the extra direction G_e, and meets T NL exactly in T F_T. ARG: on these
+    strata the new 5-cycles are joins J(Pi, S_j) over 2-dim components of a fibre-jump locus; on the codim-19
+    stratum they are V (exactly on F_T), P1, P2 (V_Z).
+  status: RULED_OUT
+  conditions: |-
+    Only P^8-sections singular along a PLANE, the branch through the given (P^8, Pi), first order, MOD p. Not tested:
+    sections singular along non-planar surfaces (at points of F_T, Sing(X n P^8) has dimension 2 and degree 19, so it
+    contains more than Pi; components not determined), other branches.
+  evidence: |-
+    Session agent SS-T6, files leads/tenfold_session_scripts/ss_t6/ (scripts) and the session ledger.
+  independent_check: |-
+    None (nothing explained). Controls: V_Z codim 39, Cone_T 65, T NL 54 and T F_T 55 reproduced.
+  not_established: |-
+    The components of Sing(X n P^8) at points of F_T (a second 2-dim component birational to T is expected, ARG);
+    strata singular along such surfaces.
+  known_before: |-
+    The singularity constraint motivating the test: N-TENFOLD-DIRECT-METHODS (every hyperplane through the span of an
+    explaining cycle is tangent to X).
+  reproduce: |-
+    not reproducible from this repository as is: leads/tenfold_session_scripts/ss_t6/ (absolute paths to adjust).
+  do_not_repeat: |-
+    The plane-singular strata at first order.
+  next_step: |-
+    Sections singular along a non-planar surface (e.g. of type T), if the lead is resumed.
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[SS-T6]" (25 Nov, PRE to CLOSE 14:43Z).
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture
@@ -5668,7 +5705,8 @@
     a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
   next_step: |-
     PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
-    explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS). The lead stands as an open
+    explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS; a later singular-section test,
+    N-TENFOLD-SINGULAR-SECTIONS, also explains nothing). The lead stands as an open
     question with the evidence above. If resumed: the undecided cases (~8 GB), order >= 4 / AG ideals, the Segre
     P^2 x P^2 cone family (codim 55, Hodge-tangent 50), expert input. Earlier plan for reference: (1) DONE; (2) DONE;
     (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth

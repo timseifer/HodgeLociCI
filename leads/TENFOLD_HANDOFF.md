@@ -71,10 +71,11 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   of G_e, degree <= 3, to order 3: stays that of [V] (weak test). (M2) search over admissible invariants: seven
   constructions in cells of degree 3-21, none codim 54. Undecided (memory, ~8 GB): generic double structures on V,
   double structures in P^8, residual R25 (degree 24).
-- Singular-section loci (SS-T6, 25 Nov, closing when this was written): tenfolds with a P^8-section singular along
-  a plane: strata of codim 1, 14, 19, 64 (cones); F_T, V_Z, Cone_T lie in the codim-1 and codim-19 strata, but
-  their tangents do NOT contain G_e at points of F_T. Expected verdict NOT EXPLAINED (see the ledger excerpt / registry
-  once recorded).
+- Singular-section loci (N-TENFOLD-SINGULAR-SECTIONS): tenfolds with a P^8-section singular along a plane: strata
+  of codim 1, 14, 19, 64 (cones); F_T, V_Z, Cone_T lie in the codim-1 and codim-19 strata, but at points of F_T their
+  tangents contain T F_T and NOT G_e. NOT EXPLAINED. Side finding: at points of F_T, Sing(X n P^8) is 2-dimensional
+  of degree 19, so it contains more than the plane (a component birational to T is expected; OPEN); sections singular
+  along such non-planar surfaces are untested.
 - Not a symmetry artefact (finding 3), not semiregularity-forced (6).
 
 ## 5. Open threads, ranked by our estimate of value
@@ -85,7 +86,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
    effective Artin bound for this problem.
 2. A construction outside sections 4: the cycle Z must satisfy the invariants in section 3. Candidates not yet
    covered: double structures on V (generic), non-cone 5-folds spanning P^9-P^11 not built from V, other
-   correspondences, Hodge classes from singular sections with other singular-locus types.
+   correspondences, P^8-sections singular along a NON-planar surface (e.g. of type T; see the SS-T6 side finding).
 3. The Segre P^2 x P^2 cone family: codim 55, Hodge-tangent codim 50 (5-dim first-order excess), not F_T; order 2
    there untested. Possibly another view of the same phenomenon.
 4. Order >= 4 at F_T points (needs psi_4 / psi_5 on S_15, S_18; several CPU-hours per run), and the AG ideal to
@@ -108,7 +109,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (135 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (136 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the
@@ -116,7 +117,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
 - Progress page: site/build_site.py + site/status.json; GitHub Actions (.github/workflows/pages.yml) rebuilds
   gh-pages on every push to main that touches the registry or site.
 - Tenfold entries: O-TENFOLD-CONE-LEAD (main record), N-TENFOLD-CODIM54-SEARCH, N-TENFOLD-CODIM54-SEARCH-2,
-  N-TENFOLD-DIRECT-METHODS, D-TENFOLD-LAMBDA0-CHECK; readable summary leads/TENFOLD_CONE_LEAD_DOSSIER.md.
+  N-TENFOLD-DIRECT-METHODS, N-TENFOLD-SINGULAR-SECTIONS, D-TENFOLD-LAMBDA0-CHECK; readable summary leads/TENFOLD_CONE_LEAD_DOSSIER.md.
 - Engines:
   - tooling/fermat_series/ (fsc.cpp compiled kernel + fsc.py, w3eng.py, fe_ref.py reference): the Fermat tenfold
     arc expansion; test_fermat_series.py reproduces stored order-8 and order-11 results exactly.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T13:20Z",
+  "updated": "2026-11-25T15:00Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
     {
@@ -12,6 +12,7 @@
         "N-TENFOLD-CODIM54-SEARCH",
         "N-TENFOLD-CODIM54-SEARCH-2",
         "N-TENFOLD-DIRECT-METHODS",
+        "N-TENFOLD-SINGULAR-SECTIONS",
         "D-TENFOLD-LAMBDA0-CHECK"
       ]
     },
@@ -27,6 +28,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-25",
+      "what": "Tenfold lead: a pre-registered test of loci where a P^8-section is singular along a plane does not explain the extra direction (mod p). Handoff document for another model: leads/TENFOLD_HANDOFF.md. Lead still paused, NOT a candidate."
+    },
     {
       "when": "2026-11-25",
       "what": "Tenfold lead paused as an open question: direct methods (periods to equations along the arc; search by admissible invariants) found no explaining cycle (mod p; three cases undecided for memory). The evidence stands; still NOT a candidate."

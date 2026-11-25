@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (28)
+## Entries on this page (29)
 
 | id | status | title |
 |---|---|---|
@@ -40,6 +40,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-CODIM54-SEARCH](#n-tenfold-codim54-search) | `RULED_OUT` | Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it) |
 | [N-TENFOLD-CODIM54-SEARCH-2](#n-tenfold-codim54-search-2) | `RULED_OUT` | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
 | [N-TENFOLD-DIRECT-METHODS](#n-tenfold-direct-methods) | `RULED_OUT` | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
+| [N-TENFOLD-SINGULAR-SECTIONS](#n-tenfold-singular-sections) | `RULED_OUT` | Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction |
 
 ---
 
@@ -1298,3 +1299,50 @@ linear cycles near the Fermat point; machine-read); Lefschetz for singular hyper
 **Next step.** Lead paused (owner's stopping rule). Possible later: the three undecided cases with ~8 GB; AG ideal to order >= 4.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[CS3-T6]" PRE, "[CS3-M1]", "[CS3-M2]" (25 Nov).
+
+---
+
+## N-TENFOLD-SINGULAR-SECTIONS
+
+**Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+Pre-registered (25 Nov 2026). Strata of Sigma = {X : X n P^8 singular along a plane Pi} (MOD 32003, 31991, 2 seeds,
+4/4 identical; codim by count = codim by tangent): generic (rank-6 transversal quadric net) codim 1; net with a
+common singular point 14; net inside I_{A u B}(2) (A, B the disjoint planes of T's net) 19; cones 64. F_T, V_Z
+and Cone_T lie in the codim-1 and codim-19 strata (F_T and V_Z are cut out inside the codim-19 stratum by the
+cubic C vanishing on T, resp. on A u B; containments EXACT by ideal inclusion). At points of F_T the tangent of
+each stratum contains T F_T but NOT the extra direction G_e, and meets T NL exactly in T F_T. ARG: on these
+strata the new 5-cycles are joins J(Pi, S_j) over 2-dim components of a fibre-jump locus; on the codim-19
+stratum they are V (exactly on F_T), P1, P2 (V_Z).
+
+**Conditions.**
+
+Only P^8-sections singular along a PLANE, the branch through the given (P^8, Pi), first order, MOD p. Not tested:
+sections singular along non-planar surfaces (at points of F_T, Sing(X n P^8) has dimension 2 and degree 19, so it
+contains more than Pi; components not determined), other branches.
+
+**Evidence.** Session agent SS-T6, files leads/tenfold_session_scripts/ss_t6/ (scripts) and the session ledger.
+
+**Independent check.** None (nothing explained). Controls: V_Z codim 39, Cone_T 65, T NL 54 and T F_T 55 reproduced.
+
+**Not established.**
+
+The components of Sing(X n P^8) at points of F_T (a second 2-dim component birational to T is expected, ARG);
+strata singular along such surfaces.
+
+**Known before.**
+
+The singularity constraint motivating the test: N-TENFOLD-DIRECT-METHODS (every hyperplane through the span of an
+explaining cycle is tangent to X).
+
+**Reproduce.** not reproducible from this repository as is: leads/tenfold_session_scripts/ss_t6/ (absolute paths to adjust).
+
+**Do not repeat.** The plane-singular strata at first order.
+
+**Next step.** Sections singular along a non-planar surface (e.g. of type T), if the lead is resumed.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[SS-T6]" (25 Nov, PRE to CLOSE 14:43Z).
