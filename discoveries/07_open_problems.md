@@ -960,8 +960,8 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 In this order (owner's plan, 24 Nov): (1) DONE: blind check of order 2, order-3 test; (2) DONE: pre-registered
-codim-54 search, nothing explained among six named types (N-TENFOLD-CODIM54-SEARCH; two linkage residuals
-undecided); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
+codim-54 search, nothing explained among six named types (N-TENFOLD-CODIM54-SEARCH; all four linkage
+residuals tested); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
 member off the cone locus with an exact proof that the class is Hodge there. Also: a blind check of the order-3
 test. More random lambda = -1 directions at the Fermat point add little.
 

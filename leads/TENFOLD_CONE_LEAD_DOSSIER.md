@@ -53,8 +53,8 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
 
 ## Constructions tested, and why each fails to explain W
 - Pre-registered codim-54 search (24 Nov, N-TENFOLD-CODIM54-SEARCH; first order, MOD p): ruled out among six named
-  types (lattice/two-class reading; joins with the del Pezzo C_18 class; linkage residuals R22, R23 (R33, R222
-  undecided); degenerations of T; cones with point or line vertex; small-degree 5-folds incl. a 3 x 4 determinantal
+  types (lattice/two-class reading; joins with the del Pezzo C_18 class; linkage residuals R22, R23, R33,
+  R222; degenerations of T; cones with point or line vertex; small-degree 5-folds incl. a 3 x 4 determinantal
   one). The first-order Hodge lattice along F_T is <h^5, [V]>, so W would need a new 5-cycle. Not a proof that none
   exists.
 - Cones (Kloosterman Thm 5.3): equal to Cone_d. [LIT]

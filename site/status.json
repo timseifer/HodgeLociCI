@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T23:45Z",
+  "updated": "2026-11-25T02:05Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
     {
@@ -27,7 +27,7 @@
   "recent": [
     {
       "when": "2026-11-24",
-      "what": "Tenfold lead: pre-registered search for a known construction explaining the codim-54 branch: none of six named types explains it (first order, mod p; two cases undecided for memory). This rules out only those types. Lead still open, NOT a candidate."
+      "what": "Tenfold lead: pre-registered search for a known construction explaining the codim-54 branch: none of six named types explains it (first order, mod p; all four linkage residuals tested). This rules out only those types. Lead still open, NOT a candidate."
     },
     {
       "when": "2026-11-24",

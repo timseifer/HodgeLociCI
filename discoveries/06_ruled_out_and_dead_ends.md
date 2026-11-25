@@ -1142,7 +1142,8 @@ among the named types, at the tested members and to first order MOD p (32003, 31
 4/4 runs), so a codim-54 branch would be a Hodge locus of the single class [V] mod h^5 and needs a new cycle;
 (A) joins J(P^2, S) with other C_18-type surfaces: integrality leaves only the sextic del Pezzo class 4h^2 - T; its
 cone family has codim 55; (D) linkage residuals of V: R22 (class 4h^5 - [V]) and R23 (6h^5 - [V]) give codim 55
-(their deformations stay in F_T); R33 and R222 UNDECIDED (linear algebra exceeded memory); (E) degenerations of T
+(their deformations stay in F_T); R33 (9h^5 - [V]) and R222 (8h^5 - [V]) also codim 55 (streamed solver, 4/4 each);
+(E) degenerations of T
 (plane u quintic scroll, three planes u cubic scroll): codim 55; (B) cones with smaller vertex: line vertex codim
 >= 64 (count); point vertex excluded because a random X in F_T has no Eckardt-type point; (C) small-degree
 5-folds: J(line, v_3(P^2)) codim 34 (count), 3 x 4 rank <= 2 determinantal 5-fold codim 32; Pfaffian, Segre,
@@ -1152,7 +1153,7 @@ P^3-bundle and scroll cases excluded by integrality or done before.
 **Conditions.**
 
 Only the named types and the tested members; first order; MOD p at two primes; random points. This is NOT a proof
-that no codim-54 family exists. Not covered: R33, R222; non-reduced or singular irreducible degenerations of T;
+that no codim-54 family exists. Not covered: non-reduced or singular irreducible degenerations of T;
 P^3-bundles over T other than V; projected degree-9 scrolls; unions beyond U9/U12.
 
 **Evidence.**
@@ -1164,8 +1165,7 @@ in the session ledger.
 
 **Not established.**
 
-R33 and R222 (estimate: dense nullspaces 51975 x 7362 and 36279 x 3567 need about 6-10 GB; a sparse solver should
-fit in 3 GB). Side observation, OPEN: at sextic del Pezzo cone points J(Pi, S') the Hodge-tangent codim of [V'] is
+Side observation, OPEN: at sextic del Pezzo cone points J(Pi, S') the Hodge-tangent codim of [V'] is
 50 against family codim 55 (4/4, MOD p), not interpreted.
 
 **Known before.**
@@ -1178,6 +1178,6 @@ dimension <= 155).
 
 **Do not repeat.** The types above at first order; the del Pezzo class is the only other C_18 surface class allowed by integrality.
 
-**Next step.** R33 / R222 with a sparse solver; the del Pezzo observation (codim 50) as a separate pre-registered test.
+**Next step.** The del Pezzo observation (codim 50) as a separate pre-registered test (running); the types listed as not covered.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[CS-T6]" 17:40Z PRE (written ~17:10Z) to 23:31Z CLOSE (24 Nov).
