@@ -28,7 +28,9 @@ jobs:
           fetch-depth: 1
 
       - name: Registry check (must print RESULT OK)
-        run: python3 discoveries/check_registry.py | tee /tmp/check.txt && grep -q "RESULT: OK" /tmp/check.txt
+        run: |
+          python3 discoveries/check_registry.py | tee /tmp/check.txt
+          grep -q "RESULT: OK" /tmp/check.txt
 
       - name: Check out gh-pages
         run: |
