@@ -84,6 +84,14 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .tower div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.78rem;color:var(--muted)}
 .tower div b{display:block;color:var(--ink);font:600 .95rem var(--serif);margin:1px 0}
 .tower div.hi{border-color:var(--accent)}
+.pairhead{font-size:.8rem;color:var(--muted);margin:14px 0 6px}
+.pairing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pairing div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.78rem;color:var(--muted);position:relative}
+.pairing div b{display:block;color:var(--ink);font:600 .95rem var(--serif);margin:1px 0}
+.pairing div.hi{border-color:var(--accent)}
+.pairing .pk{display:table;margin-top:6px;font-size:.72rem;padding:1px 7px;border-radius:999px;border:1px solid var(--line)}
+.pairing .pk.control{color:var(--ok)}
+.pairing .pk.candidate{color:var(--pend)}
 
 /* overview */
 .overview{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
@@ -391,7 +399,7 @@ function linkify(text){
 
 // ---------- Headline results ----------
 const FIGURES = {
-  "coble-healing": function(){
+  "coble-healing": function(h){
     const box=el("div",{class:"hlfig"});
     const s=sv("svg",{viewBox:"0 0 520 230",role:"img","aria-label":"An elliptic scroll healing into an abelian surface"});
     const cx=260, cy=110, R=170, r=52, N=18;
@@ -434,7 +442,11 @@ const FIGURES = {
       el("div",{class:"tower"},
         el("div",{},"Cubic fourfolds",el("b",{},"Sextic del Pezzo"),"Hassett's C_18"),
         el("div",{},"Cubic eightfolds",el("b",{},"Segre P^2 × P^2"),"inside the TD family"),
-        el("div",{class:"hi"},"Cubic tenfolds",el("b",{},"Coble cubic"),"candidate, one step open")));
+        el("div",{class:"hi"},"Cubic tenfolds",el("b",{},"Coble cubic"),"candidate, awaiting review")));
+    if (h && h.pairing && h.pairing.length){
+      box.append(el("div",{class:"pairhead"},"Two special coefficients, two kinds of surface with trivial canonical class"),
+        el("div",{class:"pairing"},...h.pairing.map(([k,n,d,kind])=>el("div",{class:kind==="candidate"?"hi":""},k,el("b",{},n),d,el("span",{class:"pk "+kind},kind)))));
+    }
     return box;
   }
 };
@@ -454,7 +466,7 @@ const FIGURES = {
         ...(h.links||[]).map(([t,u])=>el("a",{href:u},t+" →")),
         ...ids.map(i=>{ const a=el("span",{class:"idref",title:BY[i].title,tabindex:"0",role:"link"},i); a.onclick=()=>openEntry(i); a.onkeydown=ev=>{ if(ev.key==="Enter") openEntry(i); }; return a; }),
         ids.length?el("a",{href:"#map",onclick:ev=>{ ev.preventDefault(); showOnMap(ids); }},"Show on map →"):""));
-    const fig=FIGURES[h.figure]?FIGURES[h.figure]():el("div");
+    const fig=FIGURES[h.figure]?FIGURES[h.figure](h):el("div");
     n.append(el("article",{class:"hlcard"},left,fig));
   }
 })();
