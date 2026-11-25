@@ -1,0 +1,18 @@
+=== C2 p=32003 seed=1
+S cap Psi1 cap Psi2: affine dim 1 degree 56  HF deg 1..7: {9, 28, 47, 55, 56, 56, 56}
+   reducedness test (affine dim after adding random Jacobian det; 0 = reduced): 0
+   [56 t=39.9462s]
+S cap lin cap quadric: affine dim 1 degree 28  HF deg 1..6: {8, 20, 27, 28, 28, 28}
+   reducedness test: 0
+S cap P^6: affine dim 1 degree 14  HF deg 1..5: {7, 13, 14, 14, 14}
+   reducedness test: 0
+   [28,14 t=86.9086s]
+F|P^6: Jacobian scheme affine dim 1 degree 14   degree of saturation 14
+F|P^5: Jacobian ideal affine dim 0 (0 = smooth cubic fourfold), F5 nonzero: true
+   [P6,P5 t=87.3566s]
+P^10: Jacobian scheme of f: affine dim 1 degree 56
+P^10: adding t1=t2=0: affine dim 1 degree 56
+
+real	5m0.021s
+user	5m1.534s
+sys	0m1.048s

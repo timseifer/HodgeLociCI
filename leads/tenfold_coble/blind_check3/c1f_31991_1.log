@@ -1,0 +1,10 @@
+=== C1(fast: no Hessian part) p=31991 seed=1
+M skew: true  deg F = {3}  numgens IS = 15
+affine dim IS = 3  degree = 14
+HilbPoly(R/IS) = 7*i^2+2
+affine dim J = 3 degree J = 14
+saturate(J) == IS : true
+J == IS : false   J subset IS: true
+HF R/J   deg 0..7: {1, 9, 36, 84, 126, 177, 254, 345}
+HF R/IS  deg 0..7: {1, 9, 30, 65, 114, 177, 254, 345}
+   [hf t=1.36459s]

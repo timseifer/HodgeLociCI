@@ -1,0 +1,9 @@
+=== C2(fast: no reducedness dets, no P^10) p=32003 seed=2
+S cap Psi1 cap Psi2: affine dim 1 degree 56  HF deg 1..7: {9, 28, 47, 55, 56, 56, 56}
+   [56 t=.220341s]
+S cap lin cap quadric: affine dim 1 degree 28  HF deg 1..6: {8, 20, 27, 28, 28, 28}
+S cap P^6: affine dim 1 degree 14  HF deg 1..5: {7, 13, 14, 14, 14}
+   [28,14 t=.274792s]
+F|P^6: Jacobian scheme affine dim 1 degree 14   degree of saturation 14
+F|P^5: Jacobian ideal affine dim 0 (0 = smooth cubic fourfold), F5 nonzero: true
+   [P6,P5 t=.763904s]

@@ -1,0 +1,14 @@
+p = value(commandLine#3); sd = value(commandLine#4);
+load "/home/claude/blind_check3/setup.m2";
+stdio << "=== C1(fast: no Hessian part) p=" << p << " seed=" << sd << endl << flush;
+stdio << "M skew: " << (M + transpose M == 0) << "  deg F = " << (degree F) << "  numgens IS = " << numgens IS << endl;
+stdio << "affine dim IS = " << dim IS << "  degree = " << degree IS << endl;
+stdio << "HilbPoly(R/IS) = " << toString hilbertPolynomial(IS, Projective=>false) << endl << flush;
+J = ideal jacobian matrix{{F}};
+stdio << "affine dim J = " << dim J << " degree J = " << degree J << endl;
+Jsat = saturate J;
+stdio << "saturate(J) == IS : " << (Jsat == IS) << endl;
+stdio << "J == IS : " << (J == IS) << "   J subset IS: " << isSubset(J, IS) << endl;
+stdio << "HF R/J   deg 0..7: " << toString apply(8, d -> hilbertFunction(d, coker gens J)) << endl;
+stdio << "HF R/IS  deg 0..7: " << toString apply(8, d -> hilbertFunction(d, coker gens IS)) << endl << flush;
+tick "hf";

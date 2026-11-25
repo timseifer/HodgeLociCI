@@ -1,0 +1,12 @@
+deg F = 3 ; I_S: 15 quadrics ; dim 2 degree 14 ; Hilbert polynomial 7*i^2+2
+Q1: Jacobian ideal: dim 2 degree 14 ; sat(J) == I_S: true ; J == I_S: false ; HF of R/J and R/I_S, d = 2..5: {(36, 30), (84, 65), (126, 114), (177, 177)}
+    Hessian rank >= 6 on S (S + four compressed 6x6 minors has no point): true ; a compressed 7x7 minor vanishes on S: true
+Q2: S ∩ {Psi1 = Psi2 = 0}: dim 0 degree 56 ; (degree of projection, squarefree) = (56, true) ; HF d = 1..6: {9, 28, 47, 55, 56, 56}
+    one level down (linear ∩ quadric): degree 28 ; HF d = 1..5: {8, 20, 27, 28, 28}
+    two levels down (S ∩ P^6): degree 14 ; HF d = 1..4: {7, 13, 14, 14}
+    Y ∩ P^6: Jacobian scheme dim 0 degree 14
+    Y ∩ P^5 smooth: true
+Q3: HF of A = R/(J, Phi), d = 0..8: {1, 9, 33, 57, 27, 9, 1, 0, 0}
+    HF of B = R/(I_S, Phi), d = 0..8: {1, 9, 27, 38, 27, 9, 1, 0, 0}
+    pairing on cubics through the socle of B: rank 38 ; kernel dimension 127 ; dim (I_S + Phi)_3 = 127 ; kernel == (I_S + Phi)_3: true
+    dim (I_S)_3 = 100 (= 1 + dimension of the family of Pfaffian cubics in P^8 if 100)

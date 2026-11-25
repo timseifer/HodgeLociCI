@@ -386,3 +386,62 @@ Not covered by the blind check: the sampled degree 12 of 10.5 (run after the bri
 - E2, E3: MOD p, finite order; the engine's characterisation of psi, psi3 is the previous agent's (ARG there).
 - That W# equals the registry's W at the Fermat point (Movasati's pair of 5-planes) is still ARG, as in section 7.
 - K1, K3 of section 4 are still unproved. They are no longer needed for the conclusion.
+
+## 11. A control on a known case: the coefficient +1 and a K3 surface (25 Nov 2026, late evening)
+
+Question asked by the owner: what next. Proposal: the same mechanism with a K3 surface in place of the abelian
+surface. Before running I read the registry and found that the family I had in mind is already there:
+"X ∩ P^8 is a Pfaffian cubic sevenfold" is, on tenfolds, the locus of the coefficient lambda_0 = +1
+(D-TENFOLD-LAMBDA0-CHECK: codim 38 = 39 - 1; D-LAMBDA1-PFAFFIAN-AND-SCROLL and D-PFAFFIAN-LAMBDA1 on sixfolds and
+eightfolds; Kloosterman, arXiv:2312.12363, Prop. 6.4, Cor. 6.5: quintic del Pezzo k-folds of class
+h^k + [P1] + [P2]). So nothing here is a new family, and its codimension was not re-tested. The run became a
+positive control: does the node picture of section 10, and its ladder, reproduce a lattice that is known
+independently? Pre-registration: `tenfold_coble/PREREG_k3.md`; scripts `pf1_section.m2`, `pf2_cycles.m2`. All MOD p
+(32003 seed 1; 31991 seed 2).
+
+Setting: M a 6x6 skew matrix of linear forms in 9 variables, Y = {Pf(M) = 0} in P^8.
+
+| Test | Result |
+| --- | --- |
+| Q1 singular locus | S = {4x4 Pfaffians = 0}: degree 14, Hilbert polynomial 7n^2 + 2 (a K3 surface of genus 8, LIT); sat(Jacobian ideal) = I_S; Hessian of rank 6 on all of S |
+| Q2 nodes | 56 reduced points, Hilbert function 9, 28, 47, 55, 56 (one relation on quartics); Jacobian scheme on P^10 of degree 56, all on the P^8 (31991 seed 2); 28 points with 27 on cubics; Y ∩ P^6 has 14 nodes with 13 on quadrics; Y ∩ P^5 smooth |
+| Q3 algebra | k[y]/(Jac, Phi) has Hilbert function (1, 9, 33, 57, 27, 9, 1, 0): degree 6 is one-dimensional, as for the Coble cubic; k[y]/(I_S, Phi) has (1, 9, 27, 38, 27, 9, 1); pairing rank 38, kernel (I_S + Phi)_3; dim (I_S)_3 = 100 |
+| Q4 cycles | Z' (five 4x4 Pfaffians of a 5x5 block; the quintic del Pezzo 5-fold): degree 5. Z (kernel of M meets a fixed 3-space): degree 7, ideal 3 quadrics + 1 cubic. Both contain S. Z ∪ Z' = Y ∩ {Pf_0123 = Pf_0124 = 0}, a complete intersection of degree 12 |
+| Q5 rulings at a point of S | all four 5-folds (two of each kind) are smooth there, tangent spaces contain T_pS and are isotropic; Z, Z_2 in one ruling (intersection P^3), Z', Z'_2 in the same ruling as each other (P^3), Z against Z' in different rulings (P^4 or P^2) |
+| Q6 on the cubic fourfold Y ∩ P^5 | D.D_2 = 13 (the known value for quintic del Pezzo surfaces on a Pfaffian cubic fourfold), sigma.sigma_2 = 21, sigma.D = 7 (lengths of proper intersections) |
+
+All as pre-registered. One thing I had wrong and corrected during the run: the 3x3 minors of the 6x3 block define Z
+only as a set (that scheme does not contain F; F^2 is in it); the reduced ideal is the residual of Z' in the
+complete intersection.
+
+What follows.
+- (EXACT argument, degrees MOD p) Degrees 5 and 7 are not divisible by 3 and h^5 is not divisible in H^10(X, Z)
+  (h^5.h^5 = 3), so neither class is a rational multiple of h^5. No ladder needed for that.
+- (ARG, arithmetic) The ladder of 10.4 with node counts 14, 28, 56 and local classes +1 for Z, -1 for Z':
+      Z'.Z' = 13 - 14 + 28 - 56 = -29,   Z.Z = 21 - 42 = -21,   Z.Z' = 7 + 14 - 28 + 56 = 49.
+  The registry's formula for linear cycles (D-INTERSECTION-NUMBERS: P.P = -21, P1.P2 = 3 for 5-planes meeting in a
+  plane) gives, for [Z'] = h^5 + P1 + P2 and [Z] = 3h^5 - P1 - P2: -29, -21 and 49. They agree. This is the
+  second known lattice the ladder reproduces (the first was [V]^2 = -36), now with both rulings and a mixed product.
+- So on cubic tenfolds the two coefficients that have an extra component show the same picture:
+
+  | coefficient | P^8-section | singular surface | nodes of a hyperplane section | codimension | cycle |
+  | --- | --- | --- | --- | --- | --- |
+  | +1 (the general rule) | Pfaffian cubic | K3, degree 14 | 56, one relation | 38 | quintic del Pezzo 5-fold (Kloosterman) |
+  | -1 (the lead W) | Coble cubic | abelian, degree 18 | 72, one relation | 54 | 4-planes over a theta curve (section 10) |
+
+  14 and 18 are also the discriminants attached to (1,1) and (1,-1) in D-CONE-DICTIONARY, and the P^5-sections are
+  cubic fourfolds of discriminant 14 (LIT) and, by 10.4, 18 (ARG). That the surface is exactly "K = 0" in both
+  cases is what makes the one relation among the nodes.
+- Not shown: that these are the only two. A natural question for a mathematician: which surfaces with K = 0 in P^8
+  are the singular locus of a cubic sevenfold with rank-6 Hessian along them.
+
+Independent check: blind check BC-PFAFF (a separate agent, definitions and statements only; its code and unedited
+report are in `tenfold_coble/blind_check3/`). MOD p, 2 to 4 runs per item: all of Q1-Q6 PASS, and by hand the
+indivisibility of h^5, the lattice numbers from Chern classes, and the ladder formula (re-derived a second time),
+with -29, -21, 49 on both sides. Its caveats, all accepted:
+1. Z and Z_2 are singular along a curve of degree 6 that meets S in 9 points, so they are smooth at points of S
+   only away from those 9. For random Psi the 56 nodes avoid them (it computed this).
+2. Local classes were computed at rational points of S and extended to the nodes by continuity; self-intersections
+   were computed as Z.Z_2 and Z'.Z'_2, which uses that members of one family are homologous. Neither was computed.
+3. Equal numbers show equal Gram matrices; they do not by themselves identify the classes.
+4. A smooth tenfold with the 56-nodal section was not constructed (Bertini argument only). Everything is MOD p.

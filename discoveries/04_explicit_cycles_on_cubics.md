@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (16)
+## Entries on this page (17)
 
 | id | status | title |
 |---|---|---|
@@ -28,6 +28,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-CYCLE-CONSTRAINTS-OTHER-LAMBDA](#d-cycle-constraints-other-lambda) | `MOD_P` | Constraints on any cycle carrying the class for lambda = 2, 1/2, -2, 3, 5/3: spans P^7, lies on no extra quadric |
 | [D-TENFOLD-COBLE-FAMILY](#d-tenfold-coble-family) | `MOD_P` | Tenfold lead: an explicit codim-54 family through F_T (P^8-section a Coble cubic); first-order Hodge locus of its class = the family; tangent to NL([V]) along F_T in the extra direction |
 | [D-TENFOLD-COBLE-CYCLE-CLASS](#d-tenfold-coble-cycle-class) | `PAPER_ARGUMENT_AI` | Tenfold lead: the 4-plane cycle on the Coble family has self-intersection -144, so its class is 4 h^5 +- 2 ([V] - 2 h^5); hyperplane sections with 72 nodes and one relation |
+| [D-TENFOLD-PFAFFIAN-K3](#d-tenfold-pfaffian-k3) | `MOD_P` | Cubic tenfolds, coefficient +1: the Pfaffian locus is 'P^8-section singular along a K3 surface of genus 8' (56 nodes, one relation); the node ladder reproduces the lattice of h^5 + P1 + P2 (a control for D-TENFOLD-COBLE-CYCLE-CLASS) |
 
 ## Related entries on other pages
 
@@ -1155,6 +1156,8 @@ leads/TENFOLD_COBLE_LEAD.md, section 10. Scripts in leads/tenfold_coble/: h1_nod
 h2_same_ruling.m2, h3_ft_limit.m2 (at F_T every (5,5) class supported on the section is a multiple of [V]_prim:
 Hilbert function (1,9,33,57,42,12,1,0)), h4_ladder_inputs.m2, h5c_cycle_sampling.m2. Pre-registration with the
 predictions: PREREG_step1.md. Two decomposition attempts (h5, h5b) did not finish and gave nothing.
+Added later the same day: a control on the coefficient +1, D-TENFOLD-PFAFFIAN-K3, where the same ladder
+reproduces the known numbers -29, -21 and 49.
 
 **Independent check.**
 
@@ -1216,3 +1219,107 @@ A one-page note for a mathematician with arguments A and B (the owner decides wh
 that: exact arithmetic for the node counts; the sign of c from the planes of V at a node of an F_T point.
 
 **Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), second part; leads/TENFOLD_COBLE_LEAD.md section 10.
+
+---
+
+## D-TENFOLD-PFAFFIAN-K3
+
+**Cubic tenfolds, coefficient +1: the Pfaffian locus is 'P^8-section singular along a K3 surface of genus 8' (56 nodes, one relation); the node ladder reproduces the lattice of h^5 + P1 + P2 (a control for D-TENFOLD-COBLE-CYCLE-CLASS)**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Not a new family: on tenfolds "X n P^8 is a Pfaffian cubic sevenfold" is the locus of the coefficient lambda_0 = +1
+of D-TENFOLD-LAMBDA0-CHECK (codim 38 = 39 - 1; here also 164 - 99 - 27 with 99 = 19 + 80), with the quintic del
+Pezzo 5-folds of Kloosterman's construction (D-LAMBDA1-PFAFFIAN-AND-SCROLL, D-PFAFFIAN-LAMBDA1 for sixfolds and
+eightfolds). The run was a pre-registered positive control of the mechanism of D-TENFOLD-COBLE-CYCLE-CLASS on a
+case whose lattice is known. M = 6x6 skew matrix of random linear forms in 9 variables, Y = {Pf(M) = 0} in P^8.
+Computed (MOD 32003 seed 1, 31991 seed 2; leads/tenfold_coble/PREREG_k3.md):
+(Q1) Sing(Y) = S = {4x4 Pfaffians = 0}: degree 14, Hilbert polynomial 7n^2 + 2 (a K3 surface of genus 8, LIT);
+the saturation of the Jacobian ideal is I_S; the Hessian has rank 6 on all of S.
+(Q2) S n {Psi_1 = Psi_2 = 0} is 56 reduced points with Hilbert function 9, 28, 47, 55, 56: one relation on quartics;
+a random completion on P^10 has Jacobian scheme of degree 56, all on the P^8 (56 nodes). One level down 28 points,
+27 on cubics; Y n P^6 has 14 nodes, 13 on quadrics; Y n P^5 is smooth.
+(Q3) k[y]/(Jac, Phi) has Hilbert function (1, 9, 33, 57, 27, 9, 1, 0) (degree 6 one-dimensional, as for the Coble
+cubic, whose function is (1, 9, 33, 57, 39, 9, 1, 0)); k[y]/(I_S, Phi) has (1, 9, 27, 38, 27, 9, 1); the pairing on
+cubics has rank 38 with kernel (I_S + Phi)_3; dim (I_S)_3 = 100.
+(Q4) Z' = five 4x4 Pfaffians of a 5x5 principal block (quintic del Pezzo 5-fold): degree 5. Z = {kernel of M meets
+a fixed 3-space}: degree 7, ideal 3 quadrics + 1 cubic. Both contain S; Z u Z' = Y n {Pf_0123 = Pf_0124 = 0}, a
+complete intersection of degree 12. (The 3x3 minors of the 6x3 block define Z only as a set.)
+(Q5) At a rational point of S all of Z, Z_2, Z', Z'_2 are smooth, their tangent 5-spaces contain T_pS and are
+isotropic for the Hessian; Z and Z_2 lie in one ruling, Z' and Z'_2 in the other.
+(Q6) On the smooth cubic fourfold Y n P^5 (lengths of proper intersections): D.D_2 = 13, sigma.sigma_2 = 21,
+sigma.D = 7 (sigma = Z n P^5, D = Z' n P^5).
+Consequences. (a) Degrees 5 and 7 are not divisible by 3 and h^5 is not divisible in H^10(X, Z), so neither class
+is a rational multiple of h^5. (b) (ARG, arithmetic) The ladder of D-TENFOLD-COBLE-CYCLE-CLASS with node counts
+14, 28, 56 and local classes +1 (Z), -1 (Z') gives Z'.Z' = 13 - 14 + 28 - 56 = -29, Z.Z = 21 - 42 = -21,
+Z.Z' = 7 + 42 = 49; D-INTERSECTION-NUMBERS (P.P = -21, P1.P2 = 3 for 5-planes meeting in a plane) gives the same
+three numbers for h^5 + P1 + P2 and 3h^5 - P1 - P2. This is the second known lattice the ladder reproduces (the
+first: [V]^2 = -36), now with both rulings and a mixed product. (c) Parallel on tenfolds: coefficient +1: Pfaffian
+cubic, K3 of degree 14, 56 nodes, codim 38; coefficient -1: Coble cubic, abelian surface of degree 18, 72 nodes,
+codim 54. In both the singular surface has K = 0, which is what gives the one relation among the nodes; 14 and 18
+are the discriminants of D-CONE-DICTIONARY for (1,1) and (1,-1).
+```
+
+**Conditions.**
+
+MOD p, two instances. The family and its del Pezzo cycles are not new (see known_before). The ladder and the
+local-class reading are paper arguments by an AI (as in D-TENFOLD-COBLE-CYCLE-CLASS), unreviewed. That Z has class
+3h^5 - P1 - P2 and Z' has class h^5 + P1 + P2 is taken from the registry and Z + Z' = 4h^5; not re-derived here.
+Nothing is EXACT over QQ. Not a statement about the Hodge conjecture: both classes are algebraic.
+
+**Evidence.**
+
+leads/tenfold_coble/pf1_section.m2, pf2_cycles.m2, PREREG_k3.md, logs in logs_k3/; leads/TENFOLD_COBLE_LEAD.md
+section 11.
+
+**Independent check.**
+
+Blind check BC-PFAFF (25 Nov 2026; a separate agent given the definitions and the statements only; its own
+Macaulay2 code and unedited report: leads/tenfold_coble/blind_check3/). MOD 32003 and 31991, 2 to 4 runs per item.
+PASS on all of Q1-Q6: the K3 surface and the Jacobian saturation, Hessian rank exactly 6 on S (and S smooth); 56
+reduced points with Hilbert function 9, 28, 47, 55, 56; 28 and 14 one and two levels down; Jacobian degree 56 on
+P^10, all on the P^8; both Hilbert functions and the pairing of rank 38 with kernel (I_S + Phi)_3; the two 5-folds
+(degrees 5 and 7, generators, the complete intersection, the non-reduced minors scheme; it also found the explicit
+generators of I_Z); the rulings at 9 rational points of S; the lengths 13, 21, 7, 7, with all four 5-folds
+arithmetically Cohen-Macaulay, so the lengths are intersection numbers. By hand: h^5 indivisible; P.P = -21 and
+P1.P2 = 3 from Chern classes; the ladder formula re-derived again, with -29, -21, 49 on both sides.
+Its caveats (accepted): (1) Z and Z_2 are singular along a curve of degree 6 that meets S in 9 points, so "smooth
+at p" holds away from those; for random Psi the 56 nodes avoid them (computed), but for special Psi the formula
+would need the local class of a singular Z. (2) The local classes were computed at rational points of S and extend
+to the nodes by continuity (S smooth and connected); the self-intersections are computed as Z.Z_2 and Z'.Z'_2,
+which uses that the two members of each family are homologous (connected families); not computed. (3) Equal
+numbers show equal Gram matrices, they do not by themselves identify the classes. (4) A smooth tenfold with the
+56-nodal hyperplane section was not constructed (Bertini). (5) Everything is MOD p.
+
+**Not established.**
+
+That K3 (genus 8) and abelian (3,3) are the only surfaces with K = 0 in P^8 that are the singular locus of a cubic
+sevenfold with rank-6 Hessian (not examined). A human reading of the ladder. Exact arithmetic.
+
+**Known before.**
+
+Kloosterman, arXiv:2312.12363 (Prop. 6.4, Cor. 6.5; machine-read earlier, tests/SOURCES.md): cones over G(2,5) and
+the coefficient +1. Beauville-Donagi (Pfaffian cubic fourfolds; D.D = 13, recalled). Mukai (K3 surfaces of genus 8
+are linear sections of G(2,6); recalled). The Pfaffian cubic is singular along the rank-2 forms (classical;
+recalled). This registry: D-TENFOLD-LAMBDA0-CHECK, D-LAMBDA1-PFAFFIAN-AND-SCROLL, D-PFAFFIAN-LAMBDA1,
+D-INTERSECTION-NUMBERS, D-CONE-DICTIONARY. Whether the K3 / 56-node description of the +1 locus on tenfolds, or the
+K3 / abelian parallel, is in the literature was not checked (O-LITERATURE-CHECK-DET-PFAFF applies).
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/ (Macaulay2 1.22):
+    M2 --script pf1_section.m2 32003 1            (7 min; add a third argument "full" for the P^10 Jacobian, +3 min)
+    M2 --script pf2_cycles.m2 32003 1             (5 s)
+```
+
+**Next step.**
+
+For a mathematician: classify surfaces with K = 0 in P^8 that are singular loci of cubic sevenfolds with nodes
+transversally; each would give a component of a Hodge locus of cubic tenfolds by the same mechanism. For the main
+target the mechanism matters only where no cycle through the nodes is visible; both cases here have one.
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), third part.

@@ -1,0 +1,207 @@
+BLIND CHECK 3 -- Pfaffian cubic in P^8: independent re-derivation
+==================================================================
+Everything below is MOD p evidence (p = 32003 and p = 31991), from my own
+Macaulay2 1.22 scripts in /home/claude/blind_check3. I did not read anything
+under /home/claude/work, /home/claude/blind_check, /home/claude/blind_check2
+or /home/claude/hodgelocici/leads. Nothing here says anything about the Hodge
+conjecture; the classes in C7 are classes of algebraic cycles.
+
+VERDICT TABLE
+  C1  PASS
+  C2  PASS
+  C3  PASS
+  C4  PASS (set-theoretic claim true; the two ideals differ as schemes)
+  C5  PASS at every rational point tested (9 points), with one caveat:
+      Z and Z_2 are NOT smooth at every point of S (9 exceptional points)
+  C6  PASS
+  C7  (a) PASS  (b) PASS  (c) arithmetic PASS, formula re-derived, agrees
+      with (b); assumptions and gaps are listed at the end
+
+RUNS (prime, seed = setRandomSeed value; M, quadrics, sections all random)
+  C1 full           : (32003,1) (31991,2)
+  C1 without Hessian: (32003,2) (31991,1)
+  C2 full           : (31991,2); (32003,1) gave all numbers, then hit my 300 s
+                      limit inside an unnecessary extra saturation
+  C2 without reducedness dets and without P^10: (32003,2) (31991,1)
+  C3                : all four (32003,1) (32003,2) (31991,1) (31991,2)
+  C4, C5, C6        : all four
+  extra checks (cx) : (32003,1) (31991,2)
+All runs of the same item gave identical numbers.
+
+------------------------------------------------------------------
+C1  PASS
+  I_S: 15 quadrics, affine dim 3 (surface), degree 14, Hilbert polynomial
+  7n^2 + 2.  [4 runs]
+  saturate(Jac F) == I_S: true.  Jac F == I_S: false (Jac F is contained in
+  I_S).  [4 runs]
+  Hilbert functions, degrees 0..7:
+     R/J   : 1, 9, 36, 84, 126, 177, 254, 345
+     R/I_S : 1, 9, 30, 65, 114, 177, 254, 345
+  so degrees 2..5 are 36/30, 84/65, 126/114, 177/177 as claimed.  [4 runs]
+  Hessian rank exactly 6 on all of S  [(32003,1), (31991,2)]:
+   - generic rank of Hess F over R/I_S is 6, and 3 random 7x7 compressions
+     A*Hess*B have determinant 0 in R/I_S  => rank <= 6 on S;
+   - 5 random 6x6 compressions A*Hess*A^T: all nonzero on S and their common
+     zero locus on S is empty (affine dim 0) => rank >= 6 at every point of S
+     (geometric points, not only rational ones).
+  Cross-check: 5 random 6x6 compressed minors of Jac(I_S) have no common zero
+  on S, so S is smooth. (By hand: Hess F(p) is the pull-back of the rank-6
+  Pluecker form, so rank 6 at p is equivalent to S being smooth at p.)
+
+C2  PASS
+  S cap {Psi_1 = Psi_2 = 0}: affine dim 1, degree 56, HF degrees 1..7 =
+     9, 28, 47, 55, 56, 56, 56.  [4 runs]
+     Reduced: one random 8x8 compressed Jacobian determinant vanishes at none
+     of the points.  [(32003,1), (31991,2)]
+  S cap {linear = quadric = 0}: degree 28, HF 8, 20, 27, 28, 28, 28; reduced.
+  S cap P^6: degree 14, HF 7, 13, 14, 14, 14; reduced.
+     [numbers 4 runs; reducedness 2 runs]
+  F restricted to a random P^6: Jacobian scheme affine dim 1 (projective
+     dim 0), degree 14 (also after saturation).  [4 runs]
+  F restricted to a random P^5: Jacobian ideal affine dim 0, i.e. smooth
+     cubic fourfold.  [4 runs]
+  P^10, f = F + t1 Psi1 + t2 Psi2 + t1^2 l11 + t1 t2 l12 + t2^2 l22 + random
+     cubic in t: Jacobian scheme projective dim 0, degree 56; with t1 = t2 = 0
+     added: degree 56.  [(32003,1), (31991,2)]
+     Equal lengths of a zero-dimensional scheme and a subscheme mean they are
+     equal, so all singular points lie in t = 0; together with the 56 reduced
+     points this means 56 ordinary double points.
+
+C3  PASS  [4 runs]
+  HF R/(Jac F, Phi), degrees 0..8: 1, 9, 33, 57, 27, 9, 1, 0, 0
+  HF R/(I_S, Phi),   degrees 0..8: 1, 9, 27, 38, 27, 9, 1, 0, 0
+  Degree 6 of R/(I_S, Phi) has one standard monomial; with the functional
+  "coefficient of that monomial in the normal form", the 165x165 pairing
+  matrix on cubic monomials is symmetric of rank 38; kernel dimension 127;
+  (I_S + Phi)_3 has dimension 127 and is killed by the pairing, hence equals
+  the kernel. dim (I_S)_3 = 100.
+  (Consistent by hand: h-vector (1,6,6,1) times (1+t)^3 = 1,9,27,38,27,9,1.)
+
+C4  PASS  [4 runs]
+  Z' (4x4 Pfaffians of rows/columns 0..4): 5 quadrics, projective dim 5,
+     degree 5, F in I_Z', I_Z' contained in I_S.
+  (F, Pf_0123, Pf_0124): codim 3, projective dim 5, degree 12.
+  Z = CI : I_Z': projective dim 5, degree 7, minimal generators of degrees
+     2,2,2,3; F in I_Z; I_Z contained in I_S; I_Z cap I_Z' == CI.
+  3x3 minors of columns 0,1,2: projective dim 5, degree 7, contained in I_Z,
+     F not in the minors ideal, minors ideal already saturated, F^2 in it.
+  Same set: minors subset I_Z and I_Z^2 subset minors, so the radicals agree.
+     I_Z itself is NOT contained in the minors ideal: the two ideals define
+     the same set but different schemes (the minors ideal is not radical).
+  Explicit form I found: with A = rows/columns 0,1,2 of M and B = rows 3,4,5,
+     columns 0,1,2, one has I_Z == (B * (a12, -a02, a01)^T, F): the three
+     quadrics say the kernel vector of A is killed by B.
+  By hand: rank of the 6x3 column block <= 2 is literally "ker M meets
+     <e0,e1,e2>", so the locus description is correct as a set.
+
+C5  PASS at rational points, with a caveat on "smooth at p"
+  Rational points of S found by decomposing S cap random P^6 (several
+  attempts where needed): 3 points (32003,1), 2 points (32003,2), 1 point
+  (31991,1), 3 points (31991,2): 9 points in all. At every one of them:
+     rank M(p) = 2, rank Hess F(p) = 6, affine dim T_pS = 3 (and T_pS is in
+     the kernel of Hess F(p));
+     Z, Z_2, Z', Z'_2: Zariski tangent space of affine dim 6, contains T_pS,
+     totally isotropic for Hess F(p);
+     projective dim of intersections of tangent spaces:
+        Z, Z_2: 3     Z', Z'_2: 3     Z, Z': 4
+        Z, Z'_2: 2    Z_2, Z': 2      Z_2, Z'_2: 4
+  Z_2 was built as (F, Pf_0345, Pf_1345) : I(block omitting 2); I checked that
+  the 3x3 minors of columns 3,4,5 lie in its ideal. Z_2: degree 7, generators
+  2,2,2,3. Z'_2: degree 5.
+  Family remark: modulo T_pS the intersections have LINEAR dimension 1, 1
+  (same family) and 2, 0, 0, 2 (different families). "Odd/even" in the claim
+  is right for linear dimension of the 3-spaces modulo T_pS; for projective
+  dimension inside the quadric the parity is the other way round.
+  CAVEAT (surprise): Z and Z_2 are not smooth at every point of S.
+     Sing(Z) has projective dim 1 (it is the locus where columns 0,1,2 have
+     rank <= 1: a curve of degree 6), and it meets S in a zero-dimensional
+     scheme: 9 points (degree of I_S + 2x2 minors = 9, matching the Schubert
+     number sigma_2 . sigma_1^6 = 9 on G(2,6)); the Jacobian-minor scheme
+     Sing(Z) cap S has length 27. Same numbers for Z_2. Z' and Z'_2 are smooth
+     everywhere. [(32003,1), (31991,2); the count 9 only in (31991,2)]
+     For random Psi the 56 nodes avoid these points: Sing(Z) cap nodes and
+     Sing(Z_2) cap nodes are empty in both runs.
+
+C6  PASS  [4 runs]
+  Random P^5: cubic fourfold smooth.
+  sigma, sigma_2: surfaces, degree 7, Hilbert polynomial (7/2)n^2+(3/2)n+1.
+  D, D_2: surfaces, degree 5, Hilbert polynomial (5/2)n^2+(5/2)n+1.
+  All four restricted ideals are saturated and contain the cubic.
+  Lengths (each intersection zero-dimensional):
+     D cap D_2 = 13, sigma cap sigma_2 = 21, sigma cap D_2 = 7,
+     sigma_2 cap D = 7.
+  sigma cap D and sigma_2 cap D_2 are one-dimensional (curves of degree 10).
+
+C7  by hand
+ (a) PASS. h^5.h^5 = 3. If h^5 = k*b with b integral then 3 = k^2 (b.b), so
+     k = +-1: h^5 is indivisible. If [W] = q h^5 with q rational then q is an
+     integer (indivisible vector in a torsion-free lattice), and
+     deg W = [W].h^5 = 3q. So degree not divisible by 3 forces [W] outside
+     Q.h^5. Assumed: X smooth, so H^10(X,Z) is torsion-free with an integral
+     intersection form (Lefschetz, Poincare duality).
+ (b) PASS. c_5 of the normal bundle: coefficient of h^5 in (1+h)^6/(1+3h) =
+     6 - 45 + 180 - 405 + 486 - 243 = -21 = (1-64)/3. Two 5-planes meeting in
+     a plane: excess bundle of rank 2 with total class (1+h)^3/(1+3h), h^2
+     coefficient 9 - 9 + 3 = 3 = (1+8)/3. h^5.P = 1.
+       (h^5+P1+P2)^2            = 3 - 21 - 21 + 2 + 2 + 6      = -29
+       (3h^5-P1-P2)^2           = 27 - 21 - 21 - 6 - 6 + 6     = -21
+       (h^5+P1+P2).(3h^5-P1-P2) = 9 - 1 - 1 + 3 + 21 - 3 + 3 - 3 + 21 = 49
+     Sum 4h^5; degrees 3+1+1 = 5 and 9-1-1 = 7. Assumed: a smooth cubic
+     tenfold with two 5-planes meeting exactly in a plane (the Fermat cubic
+     has such pairs).
+ (c) Formula: re-derived independently by blowing up the nodes of X' inside
+     X. With mu = multiplicity and L = class of the projectivised tangent
+     cone in the exceptional quadric Q of dimension 2(m-1):
+        Z.Z' (X) = (Z cap H').(Z' cap H') (X'') + sum_p [mu mu' - 2 (L.L')_Q]
+     and for L = aA + bB, n = a - b this bracket is -(-1)^(m-1) n n'. So the
+     stated formula is correct, sign included. Sanity checks on linear
+     spaces: plane in a cubic fourfold 3 = -1 + 4; P^3 in a cubic sixfold
+     -5 = 3 - 8; P^4: 11 = -5 + 16; P^5: -21 = 11 - 32.
+     Arithmetic with n = +1 for Z, Z_2 and -1 for Z', Z'_2:
+        Z'.Z' = 13 - 14 + 28 - 56 = -29   (levels: -1, 27, -29)
+        Z.Z   = 21 - 14 + 28 - 56 = -21   (levels: 7, 35, -21)
+        Z.Z'  = 7 + 14 - 28 + 56  = 49    (levels: 21, -7, 49)
+     These agree with (b): degrees 5 and 7, squares -29 and -21, product 49.
+     Independent consistency: Z + Z' is the complete intersection of class
+     4h^5, and 48 = -21 + 2*49 - 29, 28 = -21 + 49, 20 = 49 - 29; the same
+     three identities hold at every level of the ladder.
+     Agreement of numbers shows equal Gram matrices of <h^5, Z'> and
+     <h^5, h^5+P1+P2> (determinant -112); it does not identify the classes.
+     Extra computations I made for the ladder [(32003,1), (31991,2)]:
+        cubic 8-fold f restricted to {l_a = 0} in P^9: smooth;
+        its section t_2 = 0 (cubic 7-fold in P^8): Jacobian scheme degree 28;
+        further section l_b = 0 (cubic 6-fold in P^7): smooth;
+        its section t_1 = 0 (F on P^6): degree 14; F on P^5: smooth.
+        R/I has projective dimension 3 for Z, Z_2, Z', Z'_2, so all four are
+        arithmetically Cohen-Macaulay and the lengths of C6 are intersection
+        numbers.
+     What is assumed or not computed:
+      1. Self-intersections are computed as Z.Z_2 and Z'.Z'_2, so Z ~ Z_2 and
+         Z' ~ Z'_2 must be homologous in X. Reason offered: both pairs are
+         members of connected families (3-spaces in G(3,6), hyperplanes in
+         k^6). Not checked by computation.
+      2. The local classes are needed at the nodes, which are not rational
+         points. They were computed at 9 rational points of S only. They
+         extend to all nodes because S is smooth and connected, Z and Z_2 are
+         smooth along S away from 9 points, and the nodes avoid those points
+         (computed for random Psi). For special Psi through one of the 9
+         points the formula would need the local class of a singular Z.
+      3. A smooth cubic tenfold X with hyperplane section the 56-nodal f = 0
+         was not constructed; f + t_3 * (general quadric) is smooth by a
+         Bertini argument in characteristic 0. NOT COMPUTED.
+      4. Everything numerical is mod p; no lift to characteristic 0 was done.
+
+OPERATIONAL NOTES
+  - My first C1 attempt ran the full 8 minutes without finishing (dense 7x7
+    determinants in the polynomial ring) and used slightly more than one core
+    (M2 garbage-collector threads). All later runs used GC_MARKERS=1 and were
+    single-threaded; determinants were taken in the quotient ring with
+    Strategy => Cofactor.
+  - scriptCommandLineArgs is not defined in M2 1.22; arguments are read from
+    commandLine#3 and commandLine#4.
+  - Wall time used: about 60 minutes, twice the target.
+
+FILES (all in /home/claude/blind_check3)
+  setup.m2, c1.m2, c1f.m2, c2.m2, c2f.m2, c3.m2, c456.m2, cx.m2, chain1.sh
+  logs: c1_*.log, c1f_*.log, c2_*.log, c2f_*.log, c3_*.log, c456_*.log,
+        cx_*.log

@@ -1,0 +1,2 @@
+print scriptCommandLineArgs;
+print commandLine;

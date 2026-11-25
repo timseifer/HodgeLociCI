@@ -23,6 +23,8 @@ Times are for one core.
 | h4_ladder_inputs.m2 | 18 and 36 nodes one and two levels down; Y ∩ P^5 smooth; projection of A from a point of A has degree 17 | `M2 --script h4_ladder_inputs.m2 32003 1` | 6 s |
 | h5c_cycle_sampling.m2 | sampled points of the explicit cycle Z_a ∩ P^4: degree 12, genus 2 | `M2 --script h5c_cycle_sampling.m2 32003 1 260` | 1.5 min |
 | s2_arc_orders.m2 | orders 2 and 3 of the Hodge condition along the explicit arc at a point of F_T (uses `../tenfold_session_scripts/so_t6/solib.m2`, `so3_t6/o3lib.m2`); mode `T` or `N`; 4th argument `3` for order 3 | `M2 --script s2_arc_orders.m2 32003 1 T 3` | 4 min (order 2), 36 min and 2.7 GB (order 3) |
+| pf1_section.m2 | control on the coefficient +1: Pfaffian cubic in P^8, its K3 surface, 56 nodes and their relation, the algebra; 3rd argument `full` for the Jacobian on P^10 | `M2 --script pf1_section.m2 32003 1` | 7 min (full: +3 min) |
+| pf2_cycles.m2 | the del Pezzo 5-fold and the degree-7 5-fold, their rulings at a point of the K3, intersection numbers 13 / 21 / 7 on the cubic fourfold | `M2 --script pf2_cycles.m2 32003 1` | 5 s |
 
 `PREREG_step1.md`, `PREREG_step2.md`: the pre-registrations of the h- and s-scripts, written before the runs and kept
 as written (they include one prediction made mid-way, the ladder, and note which attempts gave nothing).
@@ -40,3 +42,5 @@ Its report is summarised in the registry entries D-TENFOLD-COBLE-FAMILY and D-TE
 note (nodes, defect, rulings, sections, the mathematics of the two arguments, order 2 with its own implementation of
 psi). Copied as-is; absolute paths `/home/claude/blind_check2`. `logs_step12/`: the outputs of the h- and s-scripts
 quoted in section 10.
+`PREREG_k3.md`, `logs_k3/`, `blind_check3/`: pre-registration, outputs and the third blind checker's scripts and
+unedited report for section 11 (the Pfaffian / K3 control).

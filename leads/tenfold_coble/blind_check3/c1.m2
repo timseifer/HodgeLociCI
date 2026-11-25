@@ -1,0 +1,36 @@
+p = value(commandLine#3); sd = value(commandLine#4);
+load "/home/claude/blind_check3/setup.m2";
+stdio << "=== C1 p=" << p << " seed=" << sd << endl << flush;
+stdio << "M skew: " << (M + transpose M == 0) << "  deg F = " << (degree F) << "  numgens IS = " << numgens IS << endl;
+stdio << "affine dim IS = " << dim IS << "  degree = " << degree IS << endl;
+stdio << "HilbPoly(R/IS) = " << toString hilbertPolynomial(IS, Projective=>false) << endl << flush;
+J = ideal jacobian matrix{{F}};
+stdio << "affine dim J = " << dim J << " degree J = " << degree J << endl;
+Jsat = saturate J;
+stdio << "saturate(J) == IS : " << (Jsat == IS) << endl;
+stdio << "J == IS : " << (J == IS) << "   J subset IS: " << isSubset(J, IS) << endl;
+stdio << "HF R/J   deg 0..7: " << toString apply(8, d -> hilbertFunction(d, coker gens J)) << endl;
+stdio << "HF R/IS  deg 0..7: " << toString apply(8, d -> hilbertFunction(d, coker gens IS)) << endl << flush;
+tick "hf";
+Hs = jacobian J;
+stdio << "Hessian size " << numrows Hs << "x" << numcols Hs << " symmetric: " << (entries Hs == entries transpose Hs) << endl;
+-- work in the coordinate ring of S; determinants by cofactor expansion there
+AS = R/IS;
+HA = sub(Hs, AS);
+stdio << "generic rank of Hess on S (9 - rank coker over R/IS) = " << (9 - rank coker HA) << endl << flush;
+ok7 = true;
+for trial from 1 to 3 do (
+  A = sub(random(kk^7, kk^9), AS); B = sub(random(kk^9, kk^7), AS);
+  d7 = det(A*HA*B, Strategy => Cofactor);
+  ok7 = ok7 and (d7 == 0);
+);
+stdio << "3 random 7x7 compressions of Hess vanish identically on S (rank<=6 on S): " << ok7 << endl << flush;
+tick "d7";
+d6 = apply(5, i -> (A = sub(random(kk^6, kk^9), AS); det(A*HA*transpose A, Strategy => Cofactor)));
+stdio << "random 6x6 compressed dets nonzero on S: " << toString apply(d6, d -> d != 0) << endl;
+stdio << "affine dim of (R/IS)/(5 random 6x6 compressed dets of Hess) = " << dim ideal d6 << "  (0 means rank>=6 at every point of S)" << endl << flush;
+tick "d6";
+JS = sub(jacobian IS, AS);
+e6 = apply(5, i -> (A = sub(random(kk^6, kk^9), AS); B = sub(random(kk^15, kk^6), AS); det(A*JS*B, Strategy => Cofactor)));
+stdio << "affine dim of (R/IS)/(5 random 6x6 compressed minors of Jac IS) = " << dim ideal e6 << "  (0 means S smooth)" << endl << flush;
+tick "smooth";

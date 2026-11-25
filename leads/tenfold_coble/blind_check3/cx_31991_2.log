@@ -1,0 +1,19 @@
+=== EXTRA checks (for C5/C7c) p=31991 seed=2
+proj. dim of R/I: Z 3, Z_2 3, Z' 3, Z'_2 3   (3 = codim => arithmetically Cohen-Macaulay)
+locus rank(columns 0,1,2) <= 1 (dim ker M cap <e0,e1,e2> >= 2): affine dim 2 degree 6;  intersected with S: affine dim 1 degree 9
+Z: Sing: affine dim 2 degree 42;  Sing cap S: affine dim 1 degree 27;  Sing cap (56 nodes): affine dim 0
+Z_2: Sing: affine dim 2 degree 42;  Sing cap S: affine dim 1 degree 27;  Sing cap (56 nodes): affine dim 0
+Z': Sing: affine dim 0;  Sing cap S: affine dim 0;  Sing cap (56 nodes): affine dim 0
+Z'_2: Sing: affine dim 0;  Sing cap S: affine dim 0;  Sing cap (56 nodes): affine dim 0
+   [sing t=114.419s]
+level m=5: X'' = X' cap {l_a=0} (cubic 8-fold in P^9): Jacobian (affine dim, degree) = (0,0)
+   [X4 t=140.835s]
+level m=4: X' = {t_2=0} (cubic 7-fold in P^8): Jacobian (affine dim, degree) = (1,28)
+level m=4: X'' = X' cap {l_b=0} (cubic 6-fold in P^7): Jacobian (affine dim, degree) = (0,0)
+level m=3: X' = {t_1=0} (cubic 5-fold in P^6): Jacobian (affine dim, degree) = (1,14)
+level m=3: X'' (cubic 4-fold in P^5): Jacobian (affine dim, degree) = (0,0)
+   [ladder t=143.359s]
+
+real	2m26.125s
+user	2m24.212s
+sys	0m0.570s

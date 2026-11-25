@@ -1,0 +1,26 @@
+scheme of 3x3 minors of the 6x3 block: dim 5 degree 7 ; contains F: false ; contained in the linked ideal: true ; equal: false ; radical of the minors scheme contains F (F^2 in it): true
+Q4:
+  Z' (omit 5): dim 5 degree 5 ; generators by degree new Tally from {2 => 5} ; F in ideal: true ; contains S: true
+  Z'_2 (omit 0): dim 5 degree 5 ; generators by degree new Tally from {2 => 5} ; F in ideal: true ; contains S: true
+  Z (cols 0,1,2): dim 5 degree 7 ; generators by degree new Tally from {2 => 3, 3 => 1} ; F in ideal: true ; contains S: true
+  Z_2 (cols 3,4,5): dim 5 degree 7 ; generators by degree new Tally from {2 => 3, 3 => 1} ; F in ideal: true ; contains S: true
+  Z ∪ Z': degree 12 ; generators by degree new Tally from {2 => 2, 3 => 1} ; equals the complete intersection (F, Pf_0123, Pf_0124): true (its degree 12, dim 5)
+Q5: rational point of S after 1 sections ; rank M(p) = 2 ; rank Hess F(p) = 6 ; dim T_pS (affine) = 3
+   T_p Z: affine dim 6 (6 = smooth 5-fold germ) ; contains T_pS: true ; isotropic for Hess F(p): true
+   T_p Z_2: affine dim 6 (6 = smooth 5-fold germ) ; contains T_pS: true ; isotropic for Hess F(p): true
+   T_p Z': affine dim 6 (6 = smooth 5-fold germ) ; contains T_pS: true ; isotropic for Hess F(p): true
+   T_p Z'_2: affine dim 6 (6 = smooth 5-fold germ) ; contains T_pS: true ; isotropic for Hess F(p): true
+   Z and Z_2: projective dimension of the intersection of the tangent spaces = 3 (3 or 5: same ruling ; 2 or 4: different rulings)
+   Z' and Z'_2: projective dimension of the intersection of the tangent spaces = 3 (3 or 5: same ruling ; 2 or 4: different rulings)
+   Z and Z': projective dimension of the intersection of the tangent spaces = 4 (3 or 5: same ruling ; 2 or 4: different rulings)
+   Z and Z'_2: projective dimension of the intersection of the tangent spaces = 2 (3 or 5: same ruling ; 2 or 4: different rulings)
+   Z_2 and Z': projective dimension of the intersection of the tangent spaces = 2 (3 or 5: same ruling ; 2 or 4: different rulings)
+   Z_2 and Z'_2: projective dimension of the intersection of the tangent spaces = 4 (3 or 5: same ruling ; 2 or 4: different rulings)
+Q6: Y ∩ P^5 smooth: true
+   sigma: dim 2 degree 7 ; Hilbert polynomial (7/2)*i^2+(3/2)*i+1
+   sigma_2: dim 2 degree 7 ; Hilbert polynomial (7/2)*i^2+(3/2)*i+1
+   D: dim 2 degree 5 ; Hilbert polynomial (5/2)*i^2+(5/2)*i+1
+   D_2: dim 2 degree 5 ; Hilbert polynomial (5/2)*i^2+(5/2)*i+1
+   D.D_2 (dim, length) = (0, 13)   [13 predicted]
+   sigma.sigma_2 = (0, 21)   [21 predicted]
+   sigma.D = (1, 10) ; sigma.D_2 = (0, 7) ; sigma_2.D = (0, 7)   [7 predicted]

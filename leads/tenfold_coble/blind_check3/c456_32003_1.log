@@ -1,0 +1,73 @@
+=== C4-C6 p=32003 seed=1
+Z': numgens 5 affine dim 6 degree 5  F in I_Z': true  I_Z' subset I_S: true
+CI (F,Pf0123,Pf0124): affine dim 6 degree 12  codim 3
+Z = CI : I_Z' : affine dim 6 degree 7  degrees of min gens {2, 2, 2, 3}
+   F in I_Z: true  I_Z subset I_S: true  I_Z cap I_Z' == CI: true
+   [C4 link t=.41038s]
+3x3 minors of columns 0,1,2: affine dim 6 degree 7  subset I_Z: true  F in minors: false
+   F in sat(minors): false   F^2 in sat(minors): true   minors saturated already: true
+   I_Z subset sat(minors): false   I_Z^2 subset sat(minors): true
+   I_Z == (B*pf(A), F): true   (B*pf(A)) : (a01,a02,a12) + (F) == I_Z ? true
+   [C4 minors t=1.38529s]
+Z_2: affine dim 6 degree 7 gens {2, 2, 2, 3}  minors(cols 3,4,5) subset I_Z2: true
+Z'_2: affine dim 6 degree 5
+   [second pair t=2.00695s]
+S cap random P^6 (attempt 1): degree 14, component degrees {14}
+S cap random P^6 (attempt 2): degree 14, component degrees {1, 1, 1, 4, 7}
+   [points t=3.25426s]
+--- rational point p = {-7703, -9940, 14018, -1199, -2552, -2705, 10415, 2145, -13318}
+   IS vanishes at p: true   rank M(p) = 2   rank Hess F(p) = 6
+   affine dim T_pS = 3   Hess(p) * T_pS == 0: true
+   Z: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z': affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z'_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   T_p Z cap T_p Z_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z' cap T_p Z'_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z cap T_p Z': projective dim 4   (dim modulo T_pS: 2)
+   T_p Z cap T_p Z'_2: projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z': projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z'_2: projective dim 4   (dim modulo T_pS: 2)
+--- rational point p = {3648, 1089, 9768, 14020, -10177, 6091, 10748, 2424, 2045}
+   IS vanishes at p: true   rank M(p) = 2   rank Hess F(p) = 6
+   affine dim T_pS = 3   Hess(p) * T_pS == 0: true
+   Z: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z': affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z'_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   T_p Z cap T_p Z_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z' cap T_p Z'_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z cap T_p Z': projective dim 4   (dim modulo T_pS: 2)
+   T_p Z cap T_p Z'_2: projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z': projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z'_2: projective dim 4   (dim modulo T_pS: 2)
+--- rational point p = {15012, -3488, -10144, -2282, 4315, 830, -11460, -8092, -12105}
+   IS vanishes at p: true   rank M(p) = 2   rank Hess F(p) = 6
+   affine dim T_pS = 3   Hess(p) * T_pS == 0: true
+   Z: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z': affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   Z'_2: affine dim T_p = 6  contains T_pS: true  totally isotropic for Hess F(p): true
+   T_p Z cap T_p Z_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z' cap T_p Z'_2: projective dim 3   (dim modulo T_pS: 1)
+   T_p Z cap T_p Z': projective dim 4   (dim modulo T_pS: 2)
+   T_p Z cap T_p Z'_2: projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z': projective dim 2   (dim modulo T_pS: 0)
+   T_p Z_2 cap T_p Z'_2: projective dim 4   (dim modulo T_pS: 2)
+   [C5 t=3.27835s]
+cubic fourfold smooth (affine dim of Jacobian ideal = 0)
+sigma: affine dim 3 degree 7 HilbPoly (7/2)*i^2+(3/2)*i+1  saturated: true  F5 in ideal: true
+sigma_2: affine dim 3 degree 7 HilbPoly (7/2)*i^2+(3/2)*i+1  saturated: true  F5 in ideal: true
+D: affine dim 3 degree 5 HilbPoly (5/2)*i^2+(5/2)*i+1  saturated: true  F5 in ideal: true
+D_2: affine dim 3 degree 5 HilbPoly (5/2)*i^2+(5/2)*i+1  saturated: true  F5 in ideal: true
+D cap D_2: affine dim 1 degree 13
+sigma cap sigma_2: affine dim 1 degree 21
+sigma cap D_2: affine dim 1 degree 7
+sigma_2 cap D: affine dim 1 degree 7
+sigma cap D: affine dim 2 degree 10
+sigma_2 cap D_2: affine dim 2 degree 10
+   [C6 t=3.59887s]
+
+real	0m4.928s
+user	0m4.578s
+sys	0m0.324s

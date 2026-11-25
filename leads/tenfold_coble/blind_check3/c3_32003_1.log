@@ -1,0 +1,16 @@
+=== C3 p=32003 seed=1
+HF R/(J,Phi)  deg 0..8: {1, 9, 33, 57, 27, 9, 1, 0, 0}
+HF R/(IS,Phi) deg 0..8: {1, 9, 27, 38, 27, 9, 1, 0, 0}
+   [hf t=.469518s]
+standard monomials occurring in degree 6: 1
+number of cubic monomials: 165
+rank of pairing matrix: 38   symmetric: true
+   [pairing t=15.5438s]
+dim (IS+Phi)_3 = 127   dim (IS)_3 = 100
+G * (IS+Phi)_3 == 0 : true    dim ker G = 127
+=> kernel equals (IS+Phi)_3 : true
+   [done t=106.601s]
+
+real	1m48.646s
+user	1m47.417s
+sys	0m0.286s

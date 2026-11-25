@@ -1,0 +1,19 @@
+=== C1 p=31991 seed=2
+M skew: true  deg F = {3}  numgens IS = 15
+affine dim IS = 3  degree = 14
+HilbPoly(R/IS) = 7*i^2+2
+affine dim J = 3 degree J = 14
+saturate(J) == IS : true
+J == IS : false   J subset IS: true
+HF R/J   deg 0..7: {1, 9, 36, 84, 126, 177, 254, 345}
+HF R/IS  deg 0..7: {1, 9, 30, 65, 114, 177, 254, 345}
+   [hf t=1.38099s]
+Hessian size 9x9 symmetric: true
+generic rank of Hess on S (9 - rank coker over R/IS) = 6
+3 random 7x7 compressions of Hess vanish identically on S (rank<=6 on S): true
+   [d7 t=25.9998s]
+random 6x6 compressed dets nonzero on S: {true, true, true, true, true}
+affine dim of (R/IS)/(5 random 6x6 compressed dets of Hess) = 0  (0 means rank>=6 at every point of S)
+   [d6 t=44.6585s]
+affine dim of (R/IS)/(5 random 6x6 compressed minors of Jac IS) = 0  (0 means S smooth)
+   [smooth t=61.6337s]
