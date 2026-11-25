@@ -46,6 +46,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-T5-CYCLE-SEARCH-CUBIC-SIXFOLDS](06_ruled_out_and_dead_ends.md#n-t5-cycle-search-cubic-sixfolds) | negative | `RULED_OUT` | 06 | Search for algebraic cycles of the lambda = 2, -2 two-plane classes and the triangle classes on cubic sixfolds: none found (closed) |
 | [N-TENFOLD-CODIM54-SEARCH](06_ruled_out_and_dead_ends.md#n-tenfold-codim54-search) | negative | `RULED_OUT` | 06 | Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it) |
 | [N-TENFOLD-CODIM54-SEARCH-2](06_ruled_out_and_dead_ends.md#n-tenfold-codim54-search-2) | negative | `RULED_OUT` | 06 | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
+| [N-TENFOLD-DIRECT-METHODS](06_ruled_out_and_dead_ends.md#n-tenfold-direct-methods) | negative | `RULED_OUT` | 06 | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
 | [O-TENFOLD-CONE-LEAD](07_open_problems.md#o-tenfold-cone-lead) | open | `OPEN` | 07 | Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d? |
 
 ---

@@ -971,11 +971,15 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 
 **Next step.**
 
-In this order (owner's plan, 24 Nov): (1) DONE: blind check of order 2, order-3 test; (2) DONE: pre-registered
-codim-54 searches, nothing explained among the named types (N-TENFOLD-CODIM54-SEARCH, -2); next: direct
-methods (periods to equations; search by invariants); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
-member off the cone locus with an exact proof that the class is Hodge there. Also: a blind check of the order-3
-test. More random lambda = -1 directions at the Fermat point add little.
+```text
+PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
+explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS). The lead stands as an open
+question with the evidence above. If resumed: the undecided cases (~8 GB), order >= 4 / AG ideals, the Segre
+P^2 x P^2 cone family (codim 55, Hodge-tangent 50), expert input. Earlier plan for reference: (1) DONE; (2) DONE;
+(3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
+member off the cone locus with an exact proof that the class is Hodge there. More random lambda = -1 directions
+at the Fermat point add little.
+```
 
 **Session references (files not public).**
 

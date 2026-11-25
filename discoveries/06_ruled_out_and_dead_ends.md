@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (27)
+## Entries on this page (28)
 
 | id | status | title |
 |---|---|---|
@@ -39,6 +39,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-SPECIAL-REGIONS-TARGET-FAMILIES](#n-special-regions-target-families) | `RULED_OUT` | Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata |
 | [N-TENFOLD-CODIM54-SEARCH](#n-tenfold-codim54-search) | `RULED_OUT` | Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it) |
 | [N-TENFOLD-CODIM54-SEARCH-2](#n-tenfold-codim54-search-2) | `RULED_OUT` | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
+| [N-TENFOLD-DIRECT-METHODS](#n-tenfold-direct-methods) | `RULED_OUT` | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
 
 ---
 
@@ -1247,3 +1248,53 @@ agent-written, machine-read): Prop. 2.1, Remark 5.2, Cor. 2(a), used for the cla
 **Next step.** Direct methods (periods to equations along the arcs; search by invariants), pre-registered as CS3-T6.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[CS2-T6]" (25 Nov, 03:43Z to CLOSE ~06:12Z).
+
+---
+
+## N-TENFOLD-DIRECT-METHODS
+
+**Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+Pre-registered (25 Nov 2026). (M1, periods to equations, Movasati's Artinian Gorenstein ideal) Along the formal arc
+of the extra direction at a random point of F_T, the degree <= 3 part of the AG ideal of the class, computed order
+by order to order 3 at two primes, stays equal to that of [V] (I_V + J plus the Hodge-tangent cubics): no new cycle
+is visible in degree <= 3 (DEGENERATES). Weak test: a direction moving V gives the same table. The three linear
+forms of I_V lift to order 3, so the class stays in a moving P^8 to that order (ARG). Controls: the AG ideal of a
+Fermat linear 5-plane reproduces Movasati's complete intersection; the pipeline matches the package's Fermat periods
+on a sixfold. (M2, search by invariants) An explaining 5-fold has class a h^5 + b[V], b != 0, degree 3a + 6b and
+square d^2/3 - 48 b^2, spans P^7..P^11, and every hyperplane through its span is tangent to X (ARG, LIT Lefschetz
+for singular hypersurfaces); Pfaffians and complete intersections are excluded. Seven constructions in the
+admissible cells (degrees 3 to 21, two cells not reached before) give family codim 55 (or 32), none 54; for three
+of them the incidence is smooth (all orders).
+
+**Conditions.**
+
+M1: degree <= 3, orders <= 3, one point, two primes. M2: only the tested constructions; MOD p; undecided for
+memory: generic double structures on V, double structures in P^8, the degree-24 residual R25 (need ~8 GB or a
+sparse solver). Not a proof that no codim-54 family exists.
+
+**Evidence.** Session agents CS3-M1, CS3-M2; files checks/cs3_m1/, checks/cs3_m2/ (session folder, not in this repository).
+
+**Independent check.** None (nothing explained).
+
+**Not established.**
+
+Higher degree / higher order AG ideals (order 4 needs a pole-10 functional); the three undecided M2 cases;
+saturation of the lattice <h^5, [V]> (a, b assumed integral).
+
+**Known before.**
+
+The Artinian Gorenstein / periods-to-equations approach: Movasati (e.g. arXiv:1902.00831 and his computations of
+linear cycles near the Fermat point; machine-read); Lefschetz for singular hypersurfaces: Kato, Dimca (machine-read).
+
+**Reproduce.** not reproducible from this repository: session scripts checks/cs3_m1/, checks/cs3_m2/.
+
+**Do not repeat.** The tested constructions; the degree <= 3 AG ideal to order 3 along G_e.
+
+**Next step.** Lead paused (owner's stopping rule). Possible later: the three undecided cases with ~8 GB; AG ideal to order >= 4.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[CS3-T6]" PRE, "[CS3-M1]", "[CS3-M2]" (25 Nov).

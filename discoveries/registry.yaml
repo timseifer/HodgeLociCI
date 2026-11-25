@@ -5483,6 +5483,46 @@
   session_refs: |-
     LEDGER_DISCOVERY.md "[CS2-T6]" (25 Nov, 03:43Z to CLOSE ~06:12Z).
 
+- id: N-TENFOLD-DIRECT-METHODS
+  kind: negative
+  area: movasati_conjecture
+  title: "Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle"
+  statement: |-
+    Pre-registered (25 Nov 2026). (M1, periods to equations, Movasati's Artinian Gorenstein ideal) Along the formal arc
+    of the extra direction at a random point of F_T, the degree <= 3 part of the AG ideal of the class, computed order
+    by order to order 3 at two primes, stays equal to that of [V] (I_V + J plus the Hodge-tangent cubics): no new cycle
+    is visible in degree <= 3 (DEGENERATES). Weak test: a direction moving V gives the same table. The three linear
+    forms of I_V lift to order 3, so the class stays in a moving P^8 to that order (ARG). Controls: the AG ideal of a
+    Fermat linear 5-plane reproduces Movasati's complete intersection; the pipeline matches the package's Fermat periods
+    on a sixfold. (M2, search by invariants) An explaining 5-fold has class a h^5 + b[V], b != 0, degree 3a + 6b and
+    square d^2/3 - 48 b^2, spans P^7..P^11, and every hyperplane through its span is tangent to X (ARG, LIT Lefschetz
+    for singular hypersurfaces); Pfaffians and complete intersections are excluded. Seven constructions in the
+    admissible cells (degrees 3 to 21, two cells not reached before) give family codim 55 (or 32), none 54; for three
+    of them the incidence is smooth (all orders).
+  status: RULED_OUT
+  conditions: |-
+    M1: degree <= 3, orders <= 3, one point, two primes. M2: only the tested constructions; MOD p; undecided for
+    memory: generic double structures on V, double structures in P^8, the degree-24 residual R25 (need ~8 GB or a
+    sparse solver). Not a proof that no codim-54 family exists.
+  evidence: |-
+    Session agents CS3-M1, CS3-M2; files checks/cs3_m1/, checks/cs3_m2/ (session folder, not in this repository).
+  independent_check: |-
+    None (nothing explained).
+  not_established: |-
+    Higher degree / higher order AG ideals (order 4 needs a pole-10 functional); the three undecided M2 cases;
+    saturation of the lattice <h^5, [V]> (a, b assumed integral).
+  known_before: |-
+    The Artinian Gorenstein / periods-to-equations approach: Movasati (e.g. arXiv:1902.00831 and his computations of
+    linear cycles near the Fermat point; machine-read); Lefschetz for singular hypersurfaces: Kato, Dimca (machine-read).
+  reproduce: |-
+    not reproducible from this repository: session scripts checks/cs3_m1/, checks/cs3_m2/.
+  do_not_repeat: |-
+    The tested constructions; the degree <= 3 AG ideal to order 3 along G_e.
+  next_step: |-
+    Lead paused (owner's stopping rule). Possible later: the three undecided cases with ~8 GB; AG ideal to order >= 4.
+  session_refs: |-
+    LEDGER_DISCOVERY.md "[CS3-T6]" PRE, "[CS3-M1]", "[CS3-M2]" (25 Nov).
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture
@@ -5627,11 +5667,13 @@
     Generic Fermat arcs at this point (obstructed at order 4); rank-2/3 normal directions to Cone_d (order 4); reading
     a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
   next_step: |-
-    In this order (owner's plan, 24 Nov): (1) DONE: blind check of order 2, order-3 test; (2) DONE: pre-registered
-    codim-54 searches, nothing explained among the named types (N-TENFOLD-CODIM54-SEARCH, -2); next: direct
-    methods (periods to equations; search by invariants); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
-    member off the cone locus with an exact proof that the class is Hodge there. Also: a blind check of the order-3
-    test. More random lambda = -1 directions at the Fermat point add little.
+    PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
+    explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS). The lead stands as an open
+    question with the evidence above. If resumed: the undecided cases (~8 GB), order >= 4 / AG ideals, the Segre
+    P^2 x P^2 cone family (codim 55, Hodge-tangent 50), expert input. Earlier plan for reference: (1) DONE; (2) DONE;
+    (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
+    member off the cone locus with an exact proof that the class is Hodge there. More random lambda = -1 directions
+    at the Fermat point add little.
   session_refs: |-
     LEDGER_DISCOVERY.md "[T6d]" 11:56Z-14:47Z (23 Nov); "[W1]"-"[W4]", "[COORD]" cloud entries, "[TS-T6]", "[SO-T6]"
     (24 Nov). Cloud logs: branch cloud-job-1, jobs/queue/results/ (not on main).
