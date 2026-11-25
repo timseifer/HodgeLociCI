@@ -1,0 +1,24 @@
+-- BC-SO3 tenfold export: own random point of F_T (BC-SO's T construction, own seeds), T NL / T F_T, G_e, GB data for o3np.py
+load "/home/claude/hodge/discovery/checks/bc_so3/o3bc.m2"; load "/home/claude/hodge/discovery/checks/bc_so3/exp3.m2";
+load "/home/claude/hodge/discovery/checks/bc_so/setup.m2";
+sd = value(scriptCommandLine#1); pr = value(scriptCommandLine#2);
+pf = x -> (print x; stdio << flush);
+D = setupX(pr, sd); S = D#"S"; kk = D#"kk"; F = D#"F"; IV = D#"IV";
+pf("seed", sd, "p", pr, "curve", D#"curve", "T smooth (dim sing locus)", dim singularLocus((ring D#"IT")/(D#"IT")), "deg T", degree D#"IT");
+E = engineSetup(F, IV); H = E#"H"; N = E#"N";
+pf("X smooth along V", dim(IV + H#"J") == 0, "sig", E#"sig", "nW", E#"nW", "gens degs", E#"degs", "mstd", N#"mstd");
+setRandomSeed(1000 + sd);
+(TNL, K0) = tangentData(H, N#"nuv");
+I3 = flatten entries D#"I3";
+Hm = Hom(module IV, S^1/IV); b0 = basis(0, Hm); cf = (matrix{{F}}) // (gens IV);
+homD = apply(numcols b0, i -> (phi := matrix{apply(numgens IV, j -> lift((matrix homomorphism(b0_{i}))_(0,j), S))}; (phi * cf)_(0,0)));
+famC = coefM(S, 3, matrix{I3 | homD});
+pf("dim T NL", numcols TNL, "dim T F_T", rank famC, "T F_T in T NL", rank(TNL | famC) == numcols TNL);
+Gc = TNL * random(kk^(numcols TNL), kk^1);
+pf("G_e outside T F_T", rank(famC | Gc) > rank famC);
+G = (basis(3, S) * sub(Gc, S))_(0,0);
+dir = "/home/claude/hodge/discovery/checks/bc_so3/x10_s" | toString sd | "_" | toString pr;
+opts = if #scriptCommandLine > 3 then new HashTable from {"syzdeg" => 5, "qv" => false, "resume" => true} else new HashTable from {"syzdeg" => 5, "qv" => false};
+exportData(dir, E, G, opts);
+wmat(dir | "/famC.txt", famC);
+pf "T10X DONE";

@@ -1,0 +1,34 @@
+load "setup.m2"; load "solib.m2"; load "order2.m2";
+sd = value(scriptCommandLine#1); pr = value(scriptCommandLine#2);
+tick = () -> print("  [cpu " | toString cpuTime() | " s]");
+D = setupX(pr, sd); S = D#"S"; kk = D#"kk"; F = D#"F"; IV = D#"IV";
+print("seed", sd, "p", pr, "curve (a,b,x0,y0)", D#"curve");
+print("T: codim, degree, hilbpoly", codim D#"IT", degree D#"IT", hilbertPolynomial(D#"IT", Projective=>false));
+H = hsData F; print("sig sig2 q0", H#"sig", H#"sig2", H#"q0");
+print("V: dim(proj), degree", dim IV - 1, degree IV, "F in I_V:", F % IV == 0);
+print("X smooth along V: dim(I_V + J) (affine) =", dim(IV + H#"J"));
+piv = piVector(H, IV); tick();
+(TNL, K0) = tangentData(H, piv);
+print("dim T NL", numcols TNL, "dim K0", numcols K0, "K0 == TNL as spaces:", rank(TNL|K0) == numcols TNL); tick();
+-- T F_T = (I_V)_3 + {phi(F) : phi in Hom(I_V, S/I_V)_0}
+Hm = Hom(module IV, S^1/IV); b0 = basis(0, Hm); print("dim Hom(I_V,S/I_V)_0", numcols b0); tick();
+cf = (matrix{{F}}) // (gens IV);
+phiF = matrix{apply(numcols b0, i -> ((matrix homomorphism(b0_{i})) * cf)_(0,0))};
+I3c = coefM(S, 3, D#"I3"); Phc = coefM(S, 3, phiF);
+Fam = I3c | Phc;
+print("dim (I_V)_3", rank I3c, "dim T F_T", rank Fam, "image of Hom_0 mod I_3:", rank Fam - rank I3c, "J_3 inside T F_T:", rank(Fam | coefM(S,3, flatten((vars S) ** transpose(jacobian matrix{{F}})))) == rank Fam);
+print("T F_T inside T NL:", rank(TNL | Fam) == numcols TNL);
+Fam = gens image Fam; Fam = Fam_(toList(0..rank Fam - 1)) ; Fam = mingens image Fam;
+C = psiSetup(H, IV, piv); print("gb (J in S/I_V^2) time", C#"gbTime", "std monomials deg sig", C#"std"); tick();
+print("syz consistency (in I^2, pi(div A)/(k+1), #syz gens)", syzTest(H, C, 2)); tick();
+G0 = random(3,S); m0 = (basis(H#"sig",S))_(0,101);
+print("psiG vs direct", ((psiG(H,{G0},C))#0)_(0,101), (psiDirect(H, matrix{{G0*m0}}, C))_(0,0)); tick();
+print("psi(F m) vs pi(m)", (psiDirect(H, matrix{{F*m0}}, C))_(0,0), (piv * coefM(S, H#"sig", matrix{{m0}}))_(0,0));
+psiFun = G -> (psiG(H, {G}, C))#0;
+o = orderTwo(H, Fam, TNL, K0, psiFun);
+print("RESULT dimTNL", o#"dimTNL", "dimTFT", o#"dimFam", "excess", o#"excess", "dimK0", o#"dimK0",
+     "rankB", o#"rankB", "rank[B;q]", o#"rankBq", "q=0", o#"qzero", "B=0", o#"Bzero", "rank psi(Ge u v) on S3xS3", o#"rankBfull"); tick();
+Bf = pairMat(S, 3, 3, o#"psiGe");
+print("nontriviality: rank psi(Ge w K), w in S_3, K in T NL:", rank(Bf * K0), " rank on (T NL) x (T NL):", rank((transpose TNL) * Bf * K0));
+for t from 1 to 2 do print("famCheck h in T F_T: (rank on TFT x TNL, rank on S3 x TNL, rank full)", famCheck(H, Fam, K0, psiFun));
+tick();

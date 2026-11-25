@@ -1,0 +1,101 @@
+# [CS3-M2] admissible lattice invariants (ARG/EXACT arithmetic): [Z] = a h^5 + b[V], d = 3a+6b, Z^2 = d^2/3 - 48 b^2, Z.V = 2d - 48b; span k in [7, min(11, d+4)]
+d= 3 b=-4 a=  9 Z^2= -765 Z.V=  198 span k in [7]
+d= 3 b=-3 a=  7 Z^2= -429 Z.V=  150 span k in [7]
+d= 3 b=-2 a=  5 Z^2= -189 Z.V=  102 span k in [7]
+d= 3 b=-1 a=  3 Z^2=  -45 Z.V=   54 span k in [7]
+d= 3 b= 1 a= -1 Z^2=  -45 Z.V=  -42 span k in [7]
+d= 3 b= 2 a= -3 Z^2= -189 Z.V=  -90 span k in [7]
+d= 3 b= 3 a= -5 Z^2= -429 Z.V= -138 span k in [7]
+d= 3 b= 4 a= -7 Z^2= -765 Z.V= -186 span k in [7]
+d= 6 b=-4 a= 10 Z^2= -756 Z.V=  204 span k in [7, 8, 9, 10]
+d= 6 b=-3 a=  8 Z^2= -420 Z.V=  156 span k in [7, 8, 9, 10]
+d= 6 b=-2 a=  6 Z^2= -180 Z.V=  108 span k in [7, 8, 9, 10]
+d= 6 b=-1 a=  4 Z^2=  -36 Z.V=   60 span k in [7, 8, 9, 10]
+d= 6 b= 1 a=  0 Z^2=  -36 Z.V=  -36 span k in [7, 8, 9, 10]
+d= 6 b= 2 a= -2 Z^2= -180 Z.V=  -84 span k in [7, 8, 9, 10]
+d= 6 b= 3 a= -4 Z^2= -420 Z.V= -132 span k in [7, 8, 9, 10]
+d= 6 b= 4 a= -6 Z^2= -756 Z.V= -180 span k in [7, 8, 9, 10]
+d= 9 b=-4 a= 11 Z^2= -741 Z.V=  210 span k in [7, 8, 9, 10, 11]
+d= 9 b=-3 a=  9 Z^2= -405 Z.V=  162 span k in [7, 8, 9, 10, 11]
+d= 9 b=-2 a=  7 Z^2= -165 Z.V=  114 span k in [7, 8, 9, 10, 11]
+d= 9 b=-1 a=  5 Z^2=  -21 Z.V=   66 span k in [7, 8, 9, 10, 11]
+d= 9 b= 1 a=  1 Z^2=  -21 Z.V=  -30 span k in [7, 8, 9, 10, 11]
+d= 9 b= 2 a= -1 Z^2= -165 Z.V=  -78 span k in [7, 8, 9, 10, 11]
+d= 9 b= 3 a= -3 Z^2= -405 Z.V= -126 span k in [7, 8, 9, 10, 11]
+d= 9 b= 4 a= -5 Z^2= -741 Z.V= -174 span k in [7, 8, 9, 10, 11]
+d=12 b=-4 a= 12 Z^2= -720 Z.V=  216 span k in [7, 8, 9, 10, 11]
+d=12 b=-3 a= 10 Z^2= -384 Z.V=  168 span k in [7, 8, 9, 10, 11]
+d=12 b=-2 a=  8 Z^2= -144 Z.V=  120 span k in [7, 8, 9, 10, 11]
+d=12 b=-1 a=  6 Z^2=    0 Z.V=   72 span k in [7, 8, 9, 10, 11]
+d=12 b= 1 a=  2 Z^2=    0 Z.V=  -24 span k in [7, 8, 9, 10, 11]
+d=12 b= 2 a=  0 Z^2= -144 Z.V=  -72 span k in [7, 8, 9, 10, 11]
+d=12 b= 3 a= -2 Z^2= -384 Z.V= -120 span k in [7, 8, 9, 10, 11]
+d=12 b= 4 a= -4 Z^2= -720 Z.V= -168 span k in [7, 8, 9, 10, 11]
+d=15 b=-4 a= 13 Z^2= -693 Z.V=  222 span k in [7, 8, 9, 10, 11]
+d=15 b=-3 a= 11 Z^2= -357 Z.V=  174 span k in [7, 8, 9, 10, 11]
+d=15 b=-2 a=  9 Z^2= -117 Z.V=  126 span k in [7, 8, 9, 10, 11]
+d=15 b=-1 a=  7 Z^2=   27 Z.V=   78 span k in [7, 8, 9, 10, 11]
+d=15 b= 1 a=  3 Z^2=   27 Z.V=  -18 span k in [7, 8, 9, 10, 11]
+d=15 b= 2 a=  1 Z^2= -117 Z.V=  -66 span k in [7, 8, 9, 10, 11]
+d=15 b= 3 a= -1 Z^2= -357 Z.V= -114 span k in [7, 8, 9, 10, 11]
+d=15 b= 4 a= -3 Z^2= -693 Z.V= -162 span k in [7, 8, 9, 10, 11]
+d=18 b=-4 a= 14 Z^2= -660 Z.V=  228 span k in [7, 8, 9, 10, 11]
+d=18 b=-3 a= 12 Z^2= -324 Z.V=  180 span k in [7, 8, 9, 10, 11]
+d=18 b=-2 a= 10 Z^2=  -84 Z.V=  132 span k in [7, 8, 9, 10, 11]
+d=18 b=-1 a=  8 Z^2=   60 Z.V=   84 span k in [7, 8, 9, 10, 11]
+d=18 b= 1 a=  4 Z^2=   60 Z.V=  -12 span k in [7, 8, 9, 10, 11]
+d=18 b= 2 a=  2 Z^2=  -84 Z.V=  -60 span k in [7, 8, 9, 10, 11]
+d=18 b= 3 a=  0 Z^2= -324 Z.V= -108 span k in [7, 8, 9, 10, 11]
+d=18 b= 4 a= -2 Z^2= -660 Z.V= -156 span k in [7, 8, 9, 10, 11]
+d=21 b=-4 a= 15 Z^2= -621 Z.V=  234 span k in [7, 8, 9, 10, 11]
+d=21 b=-3 a= 13 Z^2= -285 Z.V=  186 span k in [7, 8, 9, 10, 11]
+d=21 b=-2 a= 11 Z^2=  -45 Z.V=  138 span k in [7, 8, 9, 10, 11]
+d=21 b=-1 a=  9 Z^2=   99 Z.V=   90 span k in [7, 8, 9, 10, 11]
+d=21 b= 1 a=  5 Z^2=   99 Z.V=   -6 span k in [7, 8, 9, 10, 11]
+d=21 b= 2 a=  3 Z^2=  -45 Z.V=  -54 span k in [7, 8, 9, 10, 11]
+d=21 b= 3 a=  1 Z^2= -285 Z.V= -102 span k in [7, 8, 9, 10, 11]
+d=21 b= 4 a= -1 Z^2= -621 Z.V= -150 span k in [7, 8, 9, 10, 11]
+d=24 b=-4 a= 16 Z^2= -576 Z.V=  240 span k in [7, 8, 9, 10, 11]
+d=24 b=-3 a= 14 Z^2= -240 Z.V=  192 span k in [7, 8, 9, 10, 11]
+d=24 b=-2 a= 12 Z^2=    0 Z.V=  144 span k in [7, 8, 9, 10, 11]
+d=24 b=-1 a= 10 Z^2=  144 Z.V=   96 span k in [7, 8, 9, 10, 11]
+d=24 b= 1 a=  6 Z^2=  144 Z.V=    0 span k in [7, 8, 9, 10, 11]
+d=24 b= 2 a=  4 Z^2=    0 Z.V=  -48 span k in [7, 8, 9, 10, 11]
+d=24 b= 3 a=  2 Z^2= -240 Z.V=  -96 span k in [7, 8, 9, 10, 11]
+d=24 b= 4 a=  0 Z^2= -576 Z.V= -144 span k in [7, 8, 9, 10, 11]
+# (d, span k) cells: Castelnuovo bound pi(d, k-4) for the general curve section; lower bound h_Z(3) >= sum_j C(7-j,4) min(d, j(k-5)+1) (iterated hyperplane sections, Castelnuovo lemma for d points in uniform position in P^(k-5)); (S3) needs dim Sing(X n P^k) = 10 - k for k <= 10; (S4) cones need vertex dim v <= 10 - k
+d= 3 k= 7  pi(d,k-4)=  0  h_Z(3)>= 98  minimal-degree:yes
+d= 6 k= 7  pi(d,k-4)=  4  h_Z(3)>=111  minimal-degree:
+d= 6 k= 8  pi(d,k-4)=  2  h_Z(3)>=131  minimal-degree:
+d= 6 k= 9  pi(d,k-4)=  1  h_Z(3)>=146  minimal-degree:dP-type
+d= 6 k=10  pi(d,k-4)=  0  h_Z(3)>=161  minimal-degree:yes
+d= 9 k= 7  pi(d,k-4)= 12  h_Z(3)>=112  minimal-degree:
+d= 9 k= 8  pi(d,k-4)=  7  h_Z(3)>=139  minimal-degree:
+d= 9 k= 9  pi(d,k-4)=  4  h_Z(3)>=164  minimal-degree:
+d= 9 k=10  pi(d,k-4)=  3  h_Z(3)>=179  minimal-degree:
+d= 9 k=11  pi(d,k-4)=  2  h_Z(3)>=194  minimal-degree:
+d=12 k= 7  pi(d,k-4)= 25  h_Z(3)>=112  minimal-degree:
+d=12 k= 8  pi(d,k-4)= 15  h_Z(3)>=140  minimal-degree:
+d=12 k= 9  pi(d,k-4)= 10  h_Z(3)>=167  minimal-degree:
+d=12 k=10  pi(d,k-4)=  7  h_Z(3)>=192  minimal-degree:
+d=12 k=11  pi(d,k-4)=  5  h_Z(3)>=212  minimal-degree:
+d=15 k= 7  pi(d,k-4)= 42  h_Z(3)>=112  minimal-degree:
+d=15 k= 8  pi(d,k-4)= 26  h_Z(3)>=140  minimal-degree:
+d=15 k= 9  pi(d,k-4)= 18  h_Z(3)>=168  minimal-degree:
+d=15 k=10  pi(d,k-4)= 13  h_Z(3)>=195  minimal-degree:
+d=15 k=11  pi(d,k-4)= 10  h_Z(3)>=220  minimal-degree:
+d=18 k= 7  pi(d,k-4)= 64  h_Z(3)>=112  minimal-degree:
+d=18 k= 8  pi(d,k-4)= 40  h_Z(3)>=140  minimal-degree:
+d=18 k= 9  pi(d,k-4)= 28  h_Z(3)>=168  minimal-degree:
+d=18 k=10  pi(d,k-4)= 21  h_Z(3)>=196  minimal-degree:
+d=18 k=11  pi(d,k-4)= 16  h_Z(3)>=223  minimal-degree:
+d=21 k= 7  pi(d,k-4)= 90  h_Z(3)>=112  minimal-degree:
+d=21 k= 8  pi(d,k-4)= 57  h_Z(3)>=140  minimal-degree:
+d=21 k= 9  pi(d,k-4)= 40  h_Z(3)>=168  minimal-degree:
+d=21 k=10  pi(d,k-4)= 30  h_Z(3)>=196  minimal-degree:
+d=21 k=11  pi(d,k-4)= 24  h_Z(3)>=224  minimal-degree:
+d=24 k= 7  pi(d,k-4)=121  h_Z(3)>=112  minimal-degree:
+d=24 k= 8  pi(d,k-4)= 77  h_Z(3)>=140  minimal-degree:
+d=24 k= 9  pi(d,k-4)= 55  h_Z(3)>=168  minimal-degree:
+d=24 k=10  pi(d,k-4)= 42  h_Z(3)>=196  minimal-degree:
+d=24 k=11  pi(d,k-4)= 33  h_Z(3)>=224  minimal-degree:

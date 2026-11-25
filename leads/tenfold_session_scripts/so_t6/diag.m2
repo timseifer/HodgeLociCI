@@ -1,0 +1,14 @@
+pr = s -> (stderr << s << endl << flush);
+kk = ZZ/32003; S = kk[x_0..x_11]; setRandomSeed 1;
+load "/home/claude/hodge/discovery/checks/so_t6/w1lib.m2";
+load "/home/claude/hodge/discovery/checks/so_t6/solib.m2";
+I = trim w1cycle("J2T");
+B3 = super basis(3, I); F = (B3 * random(kk^(numColumns B3), kk^1))_(0,0);
+(piRow, IJ, m0) = soNF(F, I);
+Jr = flatten entries jacobian matrix{{F}}; g = flatten entries mingens I; GIJ = matrix{g | Jr};
+A = random(3, S);
+t0 = cpuTime(); c = matrix{{A * x_0^3*x_1^2*x_5}} // GIJ; pr("lift A*mu: " | toString(cpuTime()-t0) | " sizes " | toString apply(numRows c, i -> #terms c_(i,0)));
+t0 = cpuTime(); c = matrix{apply(20, j -> A * (flatten entries basis(6,S))#(random 12376))} // GIJ; pr("lift 20 A*mu: " | toString(cpuTime()-t0));
+t0 = cpuTime(); c2 = c^{0} // GIJ; pr("second-level lift of r_0 (20): " | toString(cpuTime()-t0));
+t0 = cpuTime(); c2 = c^{7} // GIJ; pr("second-level lift of r_7 (cubic gen, 20): " | toString(cpuTime()-t0));
+t0 = cpuTime(); P = random(9, S); pr("random deg 9 terms " | toString(#terms P)); c = matrix{{P}} // GIJ; pr("lift dense: " | toString(cpuTime()-t0));

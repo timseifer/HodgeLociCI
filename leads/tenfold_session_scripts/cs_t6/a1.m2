@@ -1,0 +1,25 @@
+-- CS-T6 type A: V' = J(Pi, S'), S' = sextic del Pezzo residual of T in (q1,q2,c). usage: M2 --script a1.m2 seed p
+pr = s -> (stderr << s << endl << flush);
+sd = value scriptCommandLine#1; p = value scriptCommandLine#2;
+kk = ZZ/p; S = kk[x_0..x_11]; setRandomSeed(sd);
+load "/home/claude/hodge/discovery/checks/w1/w1lib.m2";
+(R5, IT0) = w1T(); IT = (map(S, R5, {x_0,x_1,x_2,x_3,x_4,x_5})) IT0;
+q2s = select(flatten entries mingens IT, g -> first degree g == 2); c3s = flatten entries super basis(3, IT);
+rq = () -> sum(q2s, g -> random(kk) * g); rc = () -> sum(c3s, g -> random(kk) * g);
+IS = trim ((ideal(rq(), rq(), rc()) + ideal(x_6..x_11)) : (IT + ideal(x_6..x_11)));
+IS5 = trim(IS + ideal(x_6..x_11));
+pr("S': dim " | toString(dim IS5 - 1) | " deg " | toString degree IS5 | "; h0 I(2) = " | toString numColumns super basis(2, IS5));
+u = ideal(x_9, x_10, x_11);
+IV = trim(ideal((gens IS5) % ideal(x_6,x_7,x_8,x_9,x_10,x_11)) + u);
+pr("V': dim " | toString(dim IV - 1) | " deg " | toString degree IV);
+B3 = super basis(3, IV); F = (B3 * random(kk^(numColumns B3), kk^1))_(0,0);
+J = ideal jacobian matrix{{F}};
+IJ = ideal gens gb (IV + J); pr("X smooth along V': " | toString(dim IJ == 0));
+bt = lift(basis(6, S/IJ), S); m = numColumns bt;
+B6 = basis(6, S); mons = flatten entries B6; idx = new MutableHashTable; scan(#mons, i -> idx#(mons#i) = i);
+L3 = flatten entries basis(3, S);
+Cm = lift(last coefficients(B6 % IJ, Monomials => bt), kk);
+rks = apply(m, j -> (v := flatten entries Cm^{j}; rank matrix table(#L3, #L3, (a,b) -> v_(idx#(L3#a * L3#b)))));
+pr("m = " | toString m | ", codim T NL per functional " | toString rks);
+(c0, c1, h0) = w1codimP8(F, IV);
+pr("RESULT A dP6 seed " | toString sd | " p " | toString p | ": m " | toString m | ", T NL codim " | toString rks | ", Hom_0 " | toString h0 | ", family codim w/o moduli " | toString c0 | ", WITH " | toString c1);

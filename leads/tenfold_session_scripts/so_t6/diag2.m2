@@ -1,0 +1,12 @@
+pr = s -> (stderr << s << endl << flush);
+kk = ZZ/32003; S = kk[x_0..x_11]; setRandomSeed 1;
+load "/home/claude/hodge/discovery/checks/so_t6/w1lib.m2";
+load "/home/claude/hodge/discovery/checks/so_t6/solib.m2";
+I = trim w1cycle("J2T");
+B3 = super basis(3, I); F = (B3 * random(kk^(numColumns B3), kk^1))_(0,0);
+(piRow, IJ, m0) = soNF(F, I);
+t0 = cpuTime(); (psiB, pc) = soPsiB(F, I, piRow, IJ, m0, 0); pr("psiCub " | toString pc | " time " | toString(cpuTime()-t0));
+t0 = cpuTime(); (psiB2, pc2) = soPsiB(F, I, piRow, IJ, m0, 1); pr("psiCub split 1 " | toString pc2 | " time " | toString(cpuTime()-t0));
+P = random(3,S)*random(3,S)*random(3,S);
+t0 = cpuTime(); v = psiB matrix{{P}}; pr("dense generic eval " | toString v | " time " | toString(cpuTime()-t0));
+t0 = cpuTime(); v = psiB2 matrix{{P}}; pr("again other split " | toString v | " time " | toString(cpuTime()-t0));

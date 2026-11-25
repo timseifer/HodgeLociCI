@@ -1,0 +1,64 @@
+-- (c0b) Fermat cubic sixfold, linear cycle P^3: the M1 pipeline (engine levels 1-4 on standard monomials + Griffiths-Dwork
+-- extension along the arc + AG analysis) vs the package's closed-form periods fermatPeriodGD on ALL of S_4, along the
+-- arc (F0 + tW) o g_t^(-1), W in I_P,3 (P_t = g_t P stays in X_t: AG ideal must contain I_{P_t}).  usage: c0b.m2 seed prime
+path = append(path, "/home/claude/hodge/package/HodgeLociCI/M2/"); needsPackage "HodgeLociCI";
+sd = value scriptCommandLine#1; p = value scriptCommandLine#2;
+tag = "c0b_" | toString sd | "_" | toString p;
+logf = "/home/claude/hodge/discovery/checks/cs3_m1/log_" | tag | ".txt";
+pr = s -> (stderr << s << endl << flush; f := openOutAppend logf; f << s << endl; close f);
+S = fermatRing(3, 6, p); kk = coefficientRing S; setRandomSeed sd;
+
+load "/home/claude/hodge/discovery/checks/so3_t6/o3lib.m2";
+load "/home/claude/hodge/discovery/checks/cs3_m1/m1lib.m2";
+load "/home/claude/hodge/discovery/checks/cs3_m1/m1ag.m2";
+T0 = cpuTime(); tm = () -> toString(round(cpuTime() - T0)) | "s";
+F = sum(8, i -> S_i^3);
+L = {{0,1,1},{2,4,1},{3,6,1},{5,7,3}};
+I = fermatLinearSpaceIdeal(S, L); P = fermatPeriodPolynomial(S, L);
+H = o3Setup(F, flatten entries mingens I, 3, 1_kk);
+H#"PiT" = fermatPeriodGD(P, H#"m0", 4) * H#"PiT";
+Kv = new MutableHashTable;
+B4 = flatten entries basis(4, S); m1b = basis(1, S);
+pv = apply(B4, m -> fermatPeriodGD(P, m, 4));
+pvE = apply(B4, m -> lift(contract(m, H#"PiT"), kk));
+pr("START " | tag | "; engine pi == closed form on S_4: " | toString(pv == pvE));
+W = (super basis(3, I) * random(kk^(numColumns super basis(3, I)), kk^1))_(0,0);
+Am = random(kk^8, kk^8);
+R2 = kk[y_0..y_7, T]; toR = map(R2, S, {y_0,y_1,y_2,y_3,y_4,y_5,y_6,y_7}); toS = map(S, R2, gens S | {0});
+Ginv = sum(4, i -> (-1)^i * T^i * (sub(Am, R2))^i);
+sb = map(R2, R2, flatten entries ((vars R2)_{0..7} * transpose Ginv) | {T});
+coefT = (qq, i) -> toS sum(select(terms qq, u -> degree(T, u) == i), u -> u // T^i);
+Ft = sb(toR F + T * toR W);
+if coefT(Ft, 0) != F then error "arc";
+fs = apply(3, i -> coefT(Ft, i + 1));
+JD = m1JacSetup(F, 4, fs, "/home/claude/hodge/discovery/checks/cs3_m1/jac_" | tag); Bc = JD#"Bc";
+pr("std monomials " | toString(#(JD#"std")) | " (Jacobian ring dim in degree 4 = 70)");
+chk0 = m1Extend(JD, {}, 0, apply(JD#"std", i -> pv#i), toList(8:0_kk), {}, 4, 3);
+pr("DP order 0 == closed form: " | toString(chk0 == pv));
+lams = {pv};
+hx = agIndex 4;
+Jr = flatten entries jacobian matrix{{F}};
+Jk = new HashTable from {1 => map(kk^8, kk^0, 0), 2 => agCoef(Jr, 2), 3 => agCoef(flatten apply(Jr, u -> apply(8, l -> S_l * u)), 3)};
+IVJ = new HashTable from apply({1,2,3}, k -> k => (agCoef(flatten entries super basis(k, I), k) | Jk#k));
+Cs = new MutableHashTable; scan({1,2,3}, k -> Cs#k = {agCat(pv, k, 4, hx)});
+doAG = N -> (Ls := new HashTable from apply({1,2,3}, k -> k => agLead(Cs#k, N)); agReport(Ls, Jk, IVJ, "AG order N=" | toString N); Ls);
+doAG 0;
+allOK = true;
+for j from 1 to 3 do (
+    (lamB, mu) := m1Order(fs, j, Bc, m1b);
+    pr("order " | toString j | ": mu_j (Hodge, 0 expected) nonzero " | toString(#select(flatten entries mu, v -> v != 0)));
+    lamF := m1Extend(JD, fs, j, flatten entries lamB, flatten entries mu, lams, 4, 3);
+    lams = append(lams, lamF);
+    smp := if j < 3 then toList(0..#B4-1) else take(random toList(0..#B4-1), 25);
+    cfm := apply(smp, a -> (m := B4#a; sum(toList(1..j), r -> (E := m1E(fs, r, j); if E == 0 then 0_kk else ((-1)^r * binomial(3 + r, r)) * fermatPeriodGD(P, m * E, 4 + r)))));
+    ok := (cfm == apply(smp, a -> lamF#a)); if not ok then allOK = false;
+    pr("  lambda_" | toString j | " on " | toString(#smp) | " monomials of S_4: pipeline == closed form (fermatPeriodGD): " | toString ok | "; nonzero " | toString(#select(cfm, v -> v != 0)) | " " | tm());
+    scan({1,2,3}, k -> Cs#k = append(Cs#k, agCat(lamF, k, 4, hx)));
+    doAG j;
+    bad := 0;
+    LamD := apply(lams, v -> sum(#B4, a -> v#a * B4#a));
+    for q in flatten entries mingens I do (qq := sb(toR q); qs := apply(4, i -> coefT(qq, i));
+        for jj from 0 to j do if sum(jj + 1, i -> contract(qs#i, LamD#(jj - i))) != 0 then bad = bad + 1);
+    pr("  truncated I_{P_t} annihilated mod t^" | toString(j+1) | ": failures " | toString bad);
+    );
+pr("c0b " | (if allOK then "PASS" else "FAIL") | " " | tm());

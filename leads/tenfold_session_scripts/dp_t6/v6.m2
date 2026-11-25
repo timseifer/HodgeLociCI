@@ -1,0 +1,25 @@
+-- DP-T6 validation of qPair/qPairC (cross terms psi(G1 G2 mu)) against BC-SO direct GB psi on a sixfold non-CI cone
+load "/home/claude/hodge/discovery/checks/bc_so/solib.m2"; load "/home/claude/hodge/discovery/checks/bc_so/order2.m2";
+load "/home/claude/hodge/discovery/checks/bc_so/famlib.m2"; load "/home/claude/hodge/discovery/checks/dp_t6/dplib.m2";
+sd = value(scriptCommandLine#1); pr = value(scriptCommandLine#2); setRandomSeed sd;
+S2 = (ZZ/pr)[w_0..w_3, y_0, y_1, z_0, z_1]; kk = ZZ/pr;
+IC = minors(2, matrix{{w_0, w_1, w_2}, {w_1, w_2, w_3}});
+IV2 = ideal(z_0, z_1) + IC;
+I3b = super basis(3, IV2);
+F2 = (I3b * random(kk^(numcols I3b), kk^1))_(0,0);
+H = hsData F2; S = S2;
+N = nuSetup(H, IV2); C2 = psiSetup(H, IV2, N#"nuv");
+(TNL, K0) = tangentData(H, N#"nuv");
+bq = basis(H#"q0", S);
+G1 = (basis(3, S) * sub(TNL * random(kk^(numcols TNL), kk^1), S))_(0,0);
+G2 = (basis(3, S) * sub(TNL * random(kk^(numcols TNL), kk^1), S))_(0,0);
+ca1 = decomp(H, N, G1 * bq); ca2 = decomp(H, N, G2 * bq);
+I3l = flatten entries I3b;
+Mm2 = famMatrix(H, N, ca2, apply(I3l, w -> (w, null)));
+P2 = qPrep(H, N, G2, Mm2, I3b);
+v1 = qPairC(H, N, P2, ca1); v0 = qPair(H, N, G2, ca1, Mm2, I3b);
+ref = matrix(kk, {apply(numcols bq, m -> (psiDirect(H, matrix{{G1 * G2 * bq_(0,m)}}, C2))_(0,0))});
+Mm1 = famMatrix(H, N, ca1, apply(I3l, w -> (w, null)));
+P1 = qPrep(H, N, G1, Mm1, I3b);
+print("dims TNL", numcols TNL, "q0", H#"q0");
+print("cross psi(G1 G2 mu): qPairC == direct", v1 == ref, " qPair == qPairC", v0 == v1, " swapped == direct", qPairC(H, N, P1, ca2) == ref, " diag qPairC == qVector", qPairC(H,N,P1,ca1) == qVector(H,N,G1,ca1), " nonzero", ref != 0);

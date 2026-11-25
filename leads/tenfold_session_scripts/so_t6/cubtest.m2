@@ -1,0 +1,11 @@
+pr = s -> (stderr << s << endl << flush);
+kk = ZZ/32003; S = kk[x_0..x_11]; setRandomSeed value scriptCommandLine#1;
+load "/home/claude/hodge/discovery/checks/so_t6/w1lib.m2";
+load "/home/claude/hodge/discovery/checks/so_t6/solib.m2";
+load "/home/claude/hodge/discovery/checks/so_t6/cub.m2";
+I = trim w1cycle("J2T");
+B3 = super basis(3, I); F = (B3 * random(kk^(numColumns B3), kk^1))_(0,0);
+(piRow, IJ, m0) = soNF(F, I);
+pr("m0 = " | toString m0 | " HF_7(S/I^2) = " | toString hilbertFunction(7, S/(ideal gens trim(I^2))));
+t0 = cpuTime(); r1 = cubPsi(F, I, piRow, m0, 0, value scriptCommandLine#2); pr("split 0: " | toString r1 | " time " | toString(cpuTime()-t0));
+t0 = cpuTime(); r2 = cubPsi(F, I, piRow, m0, 1, value scriptCommandLine#2); pr("split 1: " | toString r2 | " time " | toString(cpuTime()-t0));

@@ -1,0 +1,10 @@
+pr = s -> (stderr << s << endl << flush);
+sd = 1; p = 32003;
+load "/home/claude/hodge/discovery/checks/cs3_m1/m1setup.m2";
+dat = value get "/home/claude/hodge/discovery/checks/so3_t6/t3_G_1_32003.txt";
+pr("F matches file: " | toString(dat#0 == F) | ", Ge matches: " | toString(dat#1 == Ge));
+J = ideal Jr;
+t1 = cpuTime(); GJ = gb(J, DegreeLimit => 6); pr("gb J deg<=6: " | toString(cpuTime()-t1) | " gens " | toString numColumns gens GJ);
+Bc = lift(basis(6, S/J), S); pr("std monomials deg 6: " | toString numColumns Bc);
+ch = B6_{0..499};
+t1 = cpuTime(); NFc = ch % GJ; Ac = (ch - NFc) // gens J; pr("lift 500 monomials: " | toString(cpuTime()-t1) | " terms " | toString sum(flatten entries Ac, a -> #terms a));

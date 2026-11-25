@@ -1,0 +1,13 @@
+pr = s -> (stderr << s << endl << flush);
+kk = ZZ/32003; S = kk[x_0..x_11]; setRandomSeed value scriptCommandLine#1;
+load "/home/claude/hodge/discovery/checks/so_t6/w1lib.m2";
+load "/home/claude/hodge/discovery/checks/so_t6/solib.m2";
+I = trim w1cycle("J2T");
+B3 = super basis(3, I); F = (B3 * random(kk^(numColumns B3), kk^1))_(0,0);
+(piRow, IJ, m0) = soNF(F, I);
+lin = soPsiBlin(F, I, piRow, IJ, m0);
+g = flatten entries mingens I; cs = select(g, u -> first degree u == 3);
+pr("cubic gens: " | toString cs);
+pr("lin(c_a m0): " | toString lin matrix{apply(cs, c -> c * m0)});
+A = random(3, S);
+pr("lin(c_a * A * random cubic): " | toString lin matrix{apply(cs, c -> c * A * random(3,S))});
