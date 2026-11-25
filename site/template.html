@@ -31,7 +31,27 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .sechead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:52px 0 6px}
 .sechead p{margin:0;color:var(--muted);font-size:.92rem}
 .sub{color:var(--muted);max-width:780px;margin:0}
-.caution{margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--pend);background:var(--panel);font-size:.92rem;border-radius:6px}
+.caution{margin:16px 0 0;padding:9px 14px;border:1px solid var(--line);border-left:3px solid var(--pend);background:var(--panel);font-size:.88rem;border-radius:6px;color:var(--muted)}
+.caution summary{cursor:pointer;list-style:none}.caution summary::-webkit-details-marker{display:none}
+.caution summary b{color:var(--ink);font-weight:600}.caution .more{color:var(--accent);margin-left:4px}.caution[open] .more{display:none}
+.caution p{margin:8px 0 2px}
+.fold{margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+.fold summary{cursor:pointer;font:600 1.05rem var(--serif)}
+#now{margin-top:30px}
+.nowhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.nowhead h2{margin:0}
+.nowhead .upd{color:var(--muted);font-size:.84rem}
+.leads{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.leadcard{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:border-color .15s,box-shadow .15s}
+.leadcard:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.leadcard h3{font:600 1.1rem/1.3 var(--serif);margin:0}
+.leadcard .state{color:var(--muted);font-size:.86rem}
+.leadcard .foot2{display:flex;align-items:center;gap:8px;margin-top:auto;font-size:.8rem;color:var(--accent)}
+.statline{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.84rem;color:var(--muted)}
+.statline .segbar{flex:1 1 240px;height:8px;margin:0;border-radius:4px}
+.statline .seglegend{font-size:.82rem}
+.recentfold{margin-top:10px;font-size:.86rem}
+.recentfold summary{cursor:pointer;color:var(--accent)}
 .badge{display:inline-block;font:600 .68rem/1.5 var(--sans);letter-spacing:.04em;padding:1px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap;vertical-align:middle}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle}
 .idref{font:.78em var(--mono);color:var(--accent);cursor:pointer;border-bottom:1px dotted currentColor;white-space:nowrap}
@@ -203,17 +223,18 @@ footer.foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line)
 <div class="wrap">
 <header>
   <h1>Hodge loci: where the agents are</h1>
-  <p class="sub">A live view of an AI-agent research project on <b>Hodge loci</b> (higher-dimensional Noether&ndash;Lefschetz loci) of combinations of linear and complete-intersection cycles in smooth hypersurfaces: what has been found, what was ruled out, what is open, and how each piece leads to the next. Built from the project's <a href="https://github.com/timseifer/HodgeLociCI/tree/main/discoveries">discoveries registry</a> and its Macaulay2 package <a href="https://github.com/timseifer/HodgeLociCI">HodgeLociCI</a>.</p>
-  <div class="caution"><b>Read this first.</b> Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. <b>No human mathematician has reviewed it.</b> Published papers were read by machine. Every entry carries a status label; an entry is exactly as strong as its label. "Settled" below means exact computation or a proof in an AI-written, unreviewed note, nothing more. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</div>
+  <p class="sub">AI agents working on Hodge loci of linear and complete-intersection cycles in hypersurfaces. Live from the <a href="https://github.com/timseifer/HodgeLociCI/tree/main/discoveries">discoveries registry</a> of <a href="https://github.com/timseifer/HodgeLociCI">HodgeLociCI</a>.</p>
+  <details class="caution"><summary><b>AI-generated, not reviewed by a human.</b> Each entry is only as strong as its status label. <span class="more">More</span></summary>
+  <p>Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. No human mathematician has reviewed it. Published papers were read by machine. "Settled" means exact computation or a proof in an AI-written, unreviewed note, nothing more. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</p></details>
 </header>
 
-<section class="overview" id="overview"></section>
-<section class="now" id="now"></section>
+<section id="now"></section>
 </div>
 
-<div class="wrap"><div class="sechead"><h2 id="map">The research map</h2><p>Every entry, by area. Lines run from an entry to the entries that cite it: foundations on the left, what followed to the right.</p></div></div>
+<div class="wrap"><div class="sechead"><h2 id="map">The research map</h2><p>Hover an entry to see what it builds on and what it led to.</p></div></div>
 <div class="mapshell">
   <div class="toolbar" id="toolbar">
+    <button class="chip" id="focuschip" title="Highlight the leads being worked on now and their lineage"><span class="pulse" style="margin:0;width:8px;height:8px"></span>Current work</button>
     <span id="chips" style="display:contents"></span>
     <span class="tb-spacer"></span>
     <input class="mapsearch" id="mq" type="search" placeholder="Find on map: Segre, X1, tenfold …" aria-label="Find on map">
@@ -234,20 +255,18 @@ footer.foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line)
     <div class="tip" id="tip"></div>
   </div>
   <div class="maplegend">
-    <span>Hover an entry to trace its lineage; click for the full entry. Drag to pan; pinch or Ctrl/&#8984;&thinsp;+&thinsp;scroll to zoom.</span>
     <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--up)" stroke-width="2" stroke-dasharray="6 4"/></svg>builds on</span>
     <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--down)" stroke-width="2" stroke-dasharray="6 4"/></svg>led to</span>
-    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--faint)" stroke-width="1.5"/></svg>cited in statement, conditions or evidence</span>
-    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--faint)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>cross-reference</span>
-    <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--open)"/><circle cx="11" cy="7" r="6.5" fill="none" stroke="var(--pend)" stroke-width="1.5"/></svg>being worked on now</span>
+    <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--open)"/><circle cx="11" cy="7" r="6.5" fill="none" stroke="var(--pend)" stroke-width="1.5"/></svg>being worked on</span>
+    <span class="tb-spacer"></span><span>Drag to pan · pinch or Ctrl/&#8984;+scroll to zoom</span>
   </div>
 </div>
 
 <div class="wrap">
-<div class="sechead"><h2 id="frontier">Settled, open, ruled out</h2><p>The same entries, sorted by how far each one got.</p></div>
+<div class="sechead"><h2 id="frontier">By status</h2></div>
 <div class="board" id="board"></div>
 
-<div class="sechead"><h2 id="explore">Search every entry</h2></div>
+<div class="sechead"><h2 id="explore">All entries</h2></div>
 <div class="controls">
   <input type="search" id="q" placeholder="Search: Segre, Pfaffian, pencil, lambda = -1, Fermat ...">
   <select id="fkind"><option value="">all kinds</option></select>
@@ -257,10 +276,9 @@ footer.foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line)
 </div>
 <div class="list" id="list"></div>
 
-<div class="sechead"><h2>What the status labels mean</h2></div>
-<div class="vocab" id="vocab"></div>
+<details class="fold"><summary>What the status labels mean</summary><div class="vocab" id="vocab"></div></details>
 
-<div class="sechead"><h2 id="run">Run it</h2></div>
+<details class="fold" id="run"><summary>Run it yourself</summary>
 <div class="runit">
   <p style="margin:0">Everything on this page can be re-checked with the package. With Docker (Macaulay2 1.22, the package and an MCP server in one image):</p>
   <pre>git clone https://github.com/timseifer/HodgeLociCI && cd HodgeLociCI
@@ -269,12 +287,13 @@ docker run --rm hodgelocici                    # quickstart, compared with its e
 docker run --rm hodgelocici tests/run_all.sh   # validation suite</pre>
   <p style="margin:0">For AI assistants, an MCP server with the tools <code>excess_formula</code>, <code>second_order_check</code>, <code>fermat_expansion</code> and <code>registry_search</code> (every output carries its status label): <code>docker run --rm -i hodgelocici python -m hodgelocici_mcp</code>. Setup for Claude Desktop and Claude Code: <a href="https://github.com/timseifer/HodgeLociCI/blob/main/mcp/README.md">mcp/README.md</a>; without Docker: <a href="https://github.com/timseifer/HodgeLociCI#requirements-and-installation">installation</a>. Cite: <a href="https://doi.org/10.5281/zenodo.24455334">doi:10.5281/zenodo.24455334</a>.</p>
 </div>
+</details>
 
 <footer class="foot">
   Author: Timothy Seifert. Code, data and text produced by AI agents under his direction; not reviewed by a human. Licence: MIT.
   Source: <a href="https://github.com/timseifer/HodgeLociCI">github.com/timseifer/HodgeLociCI</a>
   (registry: <code>discoveries/registry.yaml</code>; current activity: <code>site/status.json</code>).
-  Links between entries are read from the registry: an entry that mentions another entry's id is drawn as following it.
+  Links: an entry that mentions another entry's id is drawn as following it.
   <span id="built"></span>
 </footer>
 </div>
@@ -341,44 +360,34 @@ function linkify(text){
   f.append(text.slice(last)); return f;
 }
 
-// ---------- Overview ----------
-(function(){
-  const o=$("#overview"), cnt={};
-  for (const g in GROUPS) cnt[g]=E.filter(e=>e.group===g).length;
-  o.append(el("div",{class:"ovtop"},
-    el("span",{class:"big"},E.length+" entries in the registry · "+DATA.edges.length+" links between them"),
-    el("span",{class:"muted"},ACTIVE.size+" entries tied to work going on now")));
-  const bar=el("div",{class:"segbar",role:"group","aria-label":"Entries by how far they got"});
-  const leg=el("div",{class:"seglegend"});
-  for (const [g,v] of Object.entries(GROUPS)){
-    const go=()=>document.getElementById("col-"+g).scrollIntoView({behavior:"smooth",block:"start"});
-    bar.append(el("button",{style:"flex:"+cnt[g]+";background:"+v.col,title:v.name+": "+cnt[g]+" — "+v.desc,"aria-label":v.name+" "+cnt[g],onclick:go}));
-    leg.append(el("button",{onclick:go,title:v.desc},gdot(g),el("b",{},String(cnt[g])),v.name));
-  }
-  o.append(bar,leg);
-})();
-
-// ---------- Right now ----------
+// ---------- Working on now ----------
 (function(){
   const s=DATA.status, n=$("#now");
-  const left=el("div",{class:"panel"});
-  left.append(el("div",{class:"label"},el("span",{class:"pulse"}),"Right now · updated "+s.updated));
-  left.append(el("p",{class:"headline"},s.headline));
+  n.append(el("div",{class:"nowhead"},el("span",{class:"pulse"}),el("h2",{},"Working on now"),el("span",{class:"upd"},"updated "+String(s.updated||"").replace("T"," ").replace("Z"," UTC"))));
+  const leads=el("div",{class:"leads"});
   for (const a of s.active||[]){
-    const p=el("p",{class:"clamp"},a.summary);
-    const more=el("button",{class:"linkbtn",onclick:()=>{ p.classList.toggle("clamp"); more.textContent=p.classList.contains("clamp")?"Read more":"Show less"; }},"Read more");
-    const acts=el("div",{class:"acts"});
-    if ((a.registry||[]).length) acts.append(el("button",{class:"btn primary",onclick:()=>showOnMap(a.registry)},"Show on map"));
-    for (const id of a.registry||[]) if (BY[id]) acts.append(linkify(id));
-    left.append(el("div",{class:"lead"},el("h3",{},a.title+"  ",badge(a.status)),el("div",{class:"state"},a.state),p,more,acts));
+    const ids=(a.registry||[]).filter(i=>BY[i]);
+    const c=el("button",{class:"leadcard",title:a.summary,onclick:()=>showOnMap(ids)},
+      el("div",{},badge(a.status)),
+      el("h3",{},a.title),
+      el("div",{class:"state"},a.state),
+      el("div",{class:"foot2"},ids.length?("Show on map →"):""));
+    if (ids.length){ c.onmouseenter=()=>{ extraSet=new Set(ids); paint(); }; c.onmouseleave=()=>{ extraSet=focusOn?new Set(ACTIVE):null; paint(); }; }
+    leads.append(c);
   }
-  const right=el("div",{class:"panel"});
-  right.append(el("div",{class:"label"},"Recent activity"));
-  const ul=el("ul",{class:"timeline"}); const R=s.recent||[];
-  R.forEach((r,i)=>{ const li=el("li",{class:i===0?"first":""},el("time",{},r.when),linkify(r.what)); if(i>=5) li.hidden=true; ul.append(li); });
-  right.append(ul);
-  if (R.length>5){ const b=el("button",{class:"linkbtn"},"Show all "+R.length); b.onclick=()=>{ ul.querySelectorAll("li[hidden]").forEach(x=>x.hidden=false); b.remove(); }; right.append(b); }
-  n.append(left,right);
+  n.append(leads);
+  // one-line totals
+  const cnt={}; for (const g in GROUPS) cnt[g]=E.filter(e=>e.group===g).length;
+  const bar=el("div",{class:"segbar"}), leg=el("div",{class:"seglegend"});
+  for (const [g,v] of Object.entries(GROUPS)){
+    const go=()=>document.getElementById("col-"+g).scrollIntoView({behavior:"smooth",block:"start"});
+    bar.append(el("button",{style:"flex:"+cnt[g]+";background:"+v.col,title:v.name+": "+cnt[g]+". "+v.desc,"aria-label":v.name+" "+cnt[g],onclick:go}));
+    leg.append(el("button",{onclick:go,title:v.desc},gdot(g),el("b",{},String(cnt[g])),v.name));
+  }
+  n.append(el("div",{class:"statline"},el("span",{},E.length+" entries"),bar,leg));
+  const R=s.recent||[];
+  if (R.length){ const ul=el("ul",{class:"timeline"}); R.forEach((r,i)=>ul.append(el("li",{class:i===0?"first":""},el("time",{},r.when),linkify(r.what))));
+    n.append(el("details",{class:"recentfold"},el("summary",{},"Recent activity ("+R.length+")"),ul)); }
 })();
 
 // ---------- Map layout ----------
@@ -498,7 +507,10 @@ function paint(){
   }
 }
 function hover(id){ hovered=id; paint(); }
-function select(id){ selected=id; extraSet=null; paint(); }
+let focusOn=ACTIVE.size>0; const fchip=$("#focuschip");
+function setFocus(on){ focusOn=on; fchip.classList.toggle("off",!on); selected=null; extraSet=on?new Set(ACTIVE):null; paint(); }
+fchip.onclick=()=>setFocus(!focusOn);
+function select(id){ selected=id; extraSet=null; if(id===null&&focusOn){ focusOn=false; fchip.classList.add("off"); } paint(); }
 function showTip(e){
   const r=mapbox.getBoundingClientRect(); const x=e.x*T.k+T.x, y=e.y*T.k+T.y;
   const {up,down}=lineage([e.id]);
@@ -565,6 +577,7 @@ function render(){
 }
 for (const id of ["#q","#fkind","#farea","#fstatus"]) $(id).addEventListener("input",render);
 render();
+setFocus(focusOn);
 
 // ---------- Drawer ----------
 const FIELDS=[["statement","Statement"],["data","Data"],["conditions","Conditions"],["not_established","Not established"],["evidence","Evidence"],["independent_check","Independent check"],["known_before","Known before (as read by machine)"],["do_not_repeat","Do not repeat"],["next_step","Next step"],["reproduce","How to re-verify"]];
