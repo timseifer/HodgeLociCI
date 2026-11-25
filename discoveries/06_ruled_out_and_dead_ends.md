@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (26)
+## Entries on this page (27)
 
 | id | status | title |
 |---|---|---|
@@ -38,6 +38,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-THOM-SEBASTIANI-SEXTIC-FOURFOLDS](#n-thom-sebastiani-sextic-fourfolds) | `RULED_OUT` | Sextic fourfolds f(x) + g(y): no explicit member with a Hodge class outside the known algebraic cases |
 | [N-SPECIAL-REGIONS-TARGET-FAMILIES](#n-special-regions-target-families) | `RULED_OUT` | Excess for lambda outside {0, lambda_0} in quartic sixfolds, cubic tenfolds, sextic fourfolds: none at general points; all die on the jump divisor J; leads only on deeper strata |
 | [N-TENFOLD-CODIM54-SEARCH](#n-tenfold-codim54-search) | `RULED_OUT` | Tenfold lead: search for a codim-54 family containing the C_18 family F_T (six named construction types, none explains it) |
+| [N-TENFOLD-CODIM54-SEARCH-2](#n-tenfold-codim54-search-2) | `RULED_OUT` | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
 
 ---
 
@@ -1141,7 +1142,8 @@ among the named types, at the tested members and to first order MOD p (32003, 31
 (F) two-class / lattice reading: at random X in F_T the first-order Hodge lattice along F_T is <h^5, [V]> (m = 1,
 4/4 runs), so a codim-54 branch would be a Hodge locus of the single class [V] mod h^5 and needs a new cycle;
 (A) joins J(P^2, S) with other C_18-type surfaces: integrality leaves only the sextic del Pezzo class 4h^2 - T; its
-cone family has codim 55; (D) linkage residuals of V: R22 (class 4h^5 - [V]) and R23 (6h^5 - [V]) give codim 55
+cone family lies inside F_T (CORRECTION by the second search: every such X also contains a V-type cone; the
+first-order 'codim 55' was a tangent artefact); (D) linkage residuals of V: R22 (class 4h^5 - [V]) and R23 (6h^5 - [V]) give codim 55
 (their deformations stay in F_T); R33 (9h^5 - [V]) and R222 (8h^5 - [V]) also codim 55 (streamed solver, 4/4 each);
 (E) degenerations of T
 (plane u quintic scroll, three planes u cubic scroll): codim 55; (B) cones with smaller vertex: line vertex codim
@@ -1161,7 +1163,12 @@ P^3-bundles over T other than V; projected degree-9 scrolls; unions beyond U9/U1
 Session agent CS-T6, files checks/cs_t6/ (session folder, not in this repository); pre-registration and verdicts
 in the session ledger.
 
-**Independent check.** None (no type was explained, so no blind check was triggered by the pre-registration).
+**Independent check.**
+
+None (no type was explained, so no blind check was triggered by the pre-registration). RECHECK by the second
+search with a sharper test (h0(N_{Z/X}) equal to the dimension of the explicit family, so the incidence is smooth
+and nothing leaves F_T at any order): R22, R23, R33, R222 and the degenerations of T pass (verdicts stand and hold
+beyond first order).
 
 **Not established.**
 
@@ -1181,3 +1188,62 @@ dimension <= 155).
 **Next step.** The del Pezzo observation (codim 50) as a separate pre-registered test (running); the types listed as not covered.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[CS-T6]" 17:40Z PRE (written ~17:10Z) to 23:31Z CLOSE (24 Nov).
+
+---
+
+## N-TENFOLD-CODIM54-SEARCH-2
+
+**Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+```text
+Second pre-registered search (25 Nov 2026), same target and definitions as N-TENFOLD-CODIM54-SEARCH. Ruled out
+among the named types, at the tested members, MOD p (32003, 31991), with the ARG steps stated:
+(G) Thom-Sebastiani / Katsura-Shioda cycles (rStation #11): at the split points every class with a [P1]-[P2]
+component is a combination of cone classes and h^5 (lambda = -1 is the C_18 class of the cubic fourfold factor);
+non-planar product joins codim >= 64; off-split linkage residuals L1, L2, L3 codim 55 (L3 a lower bound);
+(I) cones over elliptic sextics and P^3-bundles J(l, W') lie only on singular cubics; rational scroll with a
+double line codim 55 (rigid); double structures on cubic scrolls codim >= 60; degree 9 and 12 scrolls codim >= 79;
+unions of V with linear sections along a ruling P^4, along J(l, T), along two rulings: codim 55;
+(H) del Pezzo-guided: every X containing a cone over a sextic del Pezzo residual also contains a V-type cone, so
+that family lies inside F_T, and at its points the reference tangent space equals T F_T: the del Pezzo excess
+of the dP6 order-2 test is the excess of NL([V]) over F_T jumping from 1 to 5 at special points of F_T (that its
+vertex direction is the limit of the generic extra direction is ARG only, untested).
+New check used (ARG): when the cycle Z moves inside X, compare h0(N_{Z/X}) with the dimension of the explicit
+family; equality gives a smooth incidence and excludes deformations leaving F_T at all orders (L1, I1b, I4a, I4e;
+first order only for L2, L3, I4b).
+```
+
+**Conditions.**
+
+Only the named types and tested members; MOD p; random points. NOT a proof that no codim-54 family exists.
+Not covered: other degrees or line bundles for the Thom-Sebastiani correspondences; other singular degenerations
+of T; other P^3-bundles; unions through other 4-folds of V.
+
+**Evidence.**
+
+Session agent CS2-T6, files checks/cs2_t6/ (session folder, not in this repository); pre-registration,
+amendment (type H) and verdicts in the session ledger.
+
+**Independent check.** None (nothing explained).
+
+**Not established.**
+
+OPEN: cubic tenfolds containing a cone over a projected Segre P^2 x P^2 form a family of codim exactly 55 (smooth
+incidence), not F_T, with Hodge-tangent codim 50 (a 5-dim first-order excess); order 2 there not tested.
+
+**Known before.**
+
+rStation paper #11 (u/lelong_ridge, 17 Oct 2026, https://rstation.ai/problems/hodge_conjecture/papers/11/v1;
+agent-written, machine-read): Prop. 2.1, Remark 5.2, Cor. 2(a), used for the class list at split points.
+
+**Reproduce.** not reproducible from this repository: session scripts checks/cs2_t6/.
+
+**Do not repeat.** Treating a family codim from the tangent space alone as final when the cycle moves inside X (check h0(N_{Z/X})).
+
+**Next step.** Direct methods (periods to equations along the arcs; search by invariants), pre-registered as CS3-T6.
+
+**Session references (files not public).** LEDGER_DISCOVERY.md "[CS2-T6]" (25 Nov, 03:43Z to CLOSE ~06:12Z).

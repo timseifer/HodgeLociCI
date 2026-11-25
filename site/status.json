@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T05:15Z",
+  "updated": "2026-11-25T06:25Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
     {
@@ -10,6 +10,7 @@
       "registry": [
         "O-TENFOLD-CONE-LEAD",
         "N-TENFOLD-CODIM54-SEARCH",
+        "N-TENFOLD-CODIM54-SEARCH-2",
         "D-TENFOLD-LAMBDA0-CHECK"
       ]
     },
@@ -25,6 +26,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-25",
+      "what": "Tenfold lead: second pre-registered construction search (Thom-Sebastiani cycles, degenerations, scrolls, unions, del Pezzo-guided): none explains the codim-54 branch (mod p; rules out only those types). Correction: the del Pezzo cone points lie inside F_T. Still an open lead, NOT a candidate."
+    },
     {
       "when": "2026-11-25",
       "what": "Tenfold lead: order 3 at C_18 points confirmed by a partly blind check (mod p); semiregularity test inconclusive by design (the cycle is not semiregular, so no conclusion); at del Pezzo cone points a quadric cone of extra directions survives order 2 (mod p). Second construction search running. Still an open lead, NOT a candidate."

@@ -50,12 +50,18 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
   divisor. [SO-T6, BC-SO, SO3-T6, BC-SO3]
 - Semiregularity (Buchweitz-Flenner, V not lci): NOT semiregular, so the theorem gives no conclusion; V is rigid in X,
   so a branch needs a different cycle of class a h^5 + b[V], b != 0. [SR-T6]
-- At sextic del Pezzo cone points the class has 5 extra first-order directions; a rank-4 quadric cone of them survives
-  order 2 (MOD p, 4/4; not blind-checked). [DP-T6]
+- At sextic del Pezzo cone points (special points of F_T: they also contain a V-type cone) the excess over F_T jumps
+  from 1 to 5; a rank-4 quadric cone of those directions survives order 2 (MOD p, 4/4; not blind-checked). [DP-T6,
+  CS2-T6]
 - lambda_0 = +1 for this configuration (checked): lambda = -1 is not the special coefficient of the general rule; its
   first-order excess is a property of special points (Fermat, Z_0, Cone_18). [D-TENFOLD-LAMBDA0-CHECK]
 
 ## Constructions tested, and why each fails to explain W
+- Second pre-registered search (25 Nov, N-TENFOLD-CODIM54-SEARCH-2; MOD p): ruled out among Thom-Sebastiani /
+  Katsura-Shioda cycles, further degenerations of T, P^3-bundles, scrolls of degree 9 and 12, unions with V, and
+  del Pezzo-guided families. A sharper check (normal-bundle sections vs explicit family) confirms the first search's
+  residual and degeneration verdicts beyond first order. OPEN side item: cones over projected Segre P^2 x P^2 give a
+  codim-55 family with Hodge-tangent codim 50.
 - Pre-registered codim-54 search (24 Nov, N-TENFOLD-CODIM54-SEARCH; first order, MOD p): ruled out among six named
   types (lattice/two-class reading; joins with the del Pezzo C_18 class; linkage residuals R22, R23, R33,
   R222; degenerations of T; cones with point or line vertex; small-degree 5-folds incl. a 3 x 4 determinantal

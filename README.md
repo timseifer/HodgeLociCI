@@ -291,7 +291,7 @@ A readable live view of the registry and of current work is published at
 
 
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
-nobody (person or agent) repeats the work: 133 entries in `discoveries/registry.yaml`, with readable pages by area
+nobody (person or agent) repeats the work: 134 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
 on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
 and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are

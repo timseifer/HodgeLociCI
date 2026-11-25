@@ -919,10 +919,11 @@ ARG).
 O_V applies: the map has a 1-dim kernel on the obstruction image, spanned by the extra direction; V is rigid in X
 (Ext^1_X(O_V,O_V) = 0). NOT SEMIREGULAR: neutral (the theorem gives no conclusion); a codim-54 branch would need
 a different cycle or sheaf with class a h^5 + b[V], b != 0.
-(DP-T6, MOD p, 2 seeds x 2 primes) At cones over sextic del Pezzo residuals V' = J(Pi, S') (class lattice
-isometric to <h^5, [V]>; family codim 55), the Hodge-tangent codim of [V'] is 50: of the 5 extra directions, a
-rank-4 quadric cone (projective dimension 3) survives order 2 and the rest die (PARTIAL); controls pass. Order 3
-there is OPEN; not blind-checked.
+(DP-T6, MOD p, 2 seeds x 2 primes) At cones over sextic del Pezzo residuals V' = J(Pi, S') the Hodge-tangent
+codim of [V'] is 50: of the 5 extra directions, a rank-4 quadric cone survives order 2 and the rest die
+(PARTIAL); controls pass; not blind-checked. CORRECTION (second search): these X lie in F_T (they also contain a
+V-type cone), so this is the excess of NL([V]) over F_T jumping from 1 to 5 at special points of F_T, not a
+separate family. Order 3 there is OPEN.
 Wording: finite-order arcs are evidence, not a proof that a component exists; NOT a candidate.
 
 **Not established.**
@@ -971,8 +972,8 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 In this order (owner's plan, 24 Nov): (1) DONE: blind check of order 2, order-3 test; (2) DONE: pre-registered
-codim-54 search, nothing explained among six named types (N-TENFOLD-CODIM54-SEARCH; all four linkage
-residuals tested); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
+codim-54 searches, nothing explained among the named types (N-TENFOLD-CODIM54-SEARCH, -2); next: direct
+methods (periods to equations; search by invariants); (3) an exact certificate at a split point (memory/core-hour estimate first); (4) a specific smooth
 member off the cone locus with an exact proof that the class is Hodge there. Also: a blind check of the order-3
 test. More random lambda = -1 directions at the Fermat point add little.
 
