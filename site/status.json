@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-25T02:05Z",
+  "updated": "2026-11-25T05:15Z",
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. One open lead on cubic tenfolds is under study; it is NOT a candidate and its evidence is mod p.",
   "active": [
     {
       "title": "Cubic tenfold lead (two 5-planes meeting in a P^2)",
       "state": "OPEN lead, NOT a candidate; evidence mod p, finite order",
-      "summary": "At the Fermat cubic tenfold with Movasati's pair of 5-planes, first-order directions for [P1] - [P2] (lambda = -1) extend as formal arcs: one to order 12 at two primes, 48/48 new ones to order 9, none obstructed; lambda = 2 controls are obstructed at order 6 (120/120; exact certificate at three directions), and 26 other coefficients are obstructed at order 6. lambda = -1 is not the special coefficient of the general rule (lambda_0 = +1, checked). Finite-order arcs are evidence, not a proof that a new component exists, and no specific smooth member off the cone locus is known. A pre-registered test at points without the Fermat symmetry (mod p, blind-checked) found the same pattern: lambda = -1 directions extend to order 6-8 while lambda = 2 is obstructed at order 6, so the survival is not an artefact of that symmetry; at C_18 points the extra direction is unobstructed at order 2 (mod p, blind-checked) and at order 3 (mod p, not yet blind-checked). This makes the lead stronger; it remains an open lead, NOT a candidate.",
+      "summary": "At the Fermat cubic tenfold with Movasati's pair of 5-planes, first-order directions for [P1] - [P2] (lambda = -1) extend as formal arcs: one to order 12 at two primes, 48/48 new ones to order 9, none obstructed; lambda = 2 controls are obstructed at order 6 (120/120; exact certificate at three directions), and 26 other coefficients are obstructed at order 6. lambda = -1 is not the special coefficient of the general rule (lambda_0 = +1, checked). Finite-order arcs are evidence, not a proof that a new component exists, and no specific smooth member off the cone locus is known. A pre-registered test at points without the Fermat symmetry (mod p, blind-checked) found the same pattern: lambda = -1 directions extend to order 6-8 while lambda = 2 is obstructed at order 6, so the survival is not an artefact of that symmetry; at C_18 points the extra direction is unobstructed at order 2 (mod p, blind-checked) and at order 3 (mod p, partly blind check agrees). This makes the lead stronger; it remains an open lead, NOT a candidate.",
       "status": "OPEN",
       "registry": [
         "O-TENFOLD-CONE-LEAD",
@@ -25,6 +25,10 @@
     }
   ],
   "recent": [
+    {
+      "when": "2026-11-25",
+      "what": "Tenfold lead: order 3 at C_18 points confirmed by a partly blind check (mod p); semiregularity test inconclusive by design (the cycle is not semiregular, so no conclusion); at del Pezzo cone points a quadric cone of extra directions survives order 2 (mod p). Second construction search running. Still an open lead, NOT a candidate."
+    },
     {
       "when": "2026-11-24",
       "what": "Tenfold lead: pre-registered search for a known construction explaining the codim-54 branch: none of six named types explains it (first order, mod p; all four linkage residuals tested). This rules out only those types. Lead still open, NOT a candidate."

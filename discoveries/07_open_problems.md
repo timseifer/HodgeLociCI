@@ -911,7 +911,18 @@ and its cross term included, the order-3 condition on the extra direction vanish
 third-order obstruction on a Fermat cubic sixfold is detected (and the unobstructed cases are not flagged); the
 third-order evaluator agrees with the package's Fermat periods; family directions (in T F_T) pass at both seeds.
 The freedom matrix was spot-checked on 2 random directions, not computed in full. Verdict SURVIVES (orders 2 and
-3). Not blind-checked; finite order.
+3). Check BC-SO3 (own derivation and code, own random points and positive control; PARTLY BLIND: it saw the
+SO3-T6 result lines before its own numbers, disclosed): AGREE at 2 points x 2 primes (the deciding number
+6 psi(G^2 g2) - 7 psi3(G^4) is 0 mod p with both parts nonzero; it also shows c3 vanishes on T F_T automatically,
+ARG).
+(SR-T6, MOD p, ARG, LIT) V is not a local complete intersection (depth 5); Buchweitz-Flenner semiregularity for
+O_V applies: the map has a 1-dim kernel on the obstruction image, spanned by the extra direction; V is rigid in X
+(Ext^1_X(O_V,O_V) = 0). NOT SEMIREGULAR: neutral (the theorem gives no conclusion); a codim-54 branch would need
+a different cycle or sheaf with class a h^5 + b[V], b != 0.
+(DP-T6, MOD p, 2 seeds x 2 primes) At cones over sextic del Pezzo residuals V' = J(Pi, S') (class lattice
+isometric to <h^5, [V]>; family codim 55), the Hodge-tangent codim of [V'] is 50: of the 5 extra directions, a
+rank-4 quadric cone (projective dimension 3) survives order 2 and the rest die (PARTIAL); controls pass. Order 3
+there is OPEN; not blind-checked.
 Wording: finite-order arcs are evidence, not a proof that a component exists; NOT a candidate.
 
 **Not established.**

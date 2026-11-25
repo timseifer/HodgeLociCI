@@ -1165,8 +1165,8 @@ in the session ledger.
 
 **Not established.**
 
-Side observation, OPEN: at sextic del Pezzo cone points J(Pi, S') the Hodge-tangent codim of [V'] is
-50 against family codim 55 (4/4, MOD p), not interpreted.
+Side observation: at sextic del Pezzo cone points J(Pi, S') the Hodge-tangent codim of [V'] is 50 against family
+codim 55; a rank-4 quadric cone of those directions survives order 2 (DP-T6, see O-TENFOLD-CONE-LEAD).
 
 **Known before.**
 

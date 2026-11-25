@@ -46,8 +46,12 @@ becomes a candidate, it is "a Hodge class not known to be algebraic", never a co
   extends. Blind check BC-TS: AGREE (own tables and order-6 driver; cone-geometry code shared). [TS-T6, BC-TS]
 - Orders 2 and 3 at C_18 points: the extra Hodge-tangent direction of F_T is unobstructed at order 2 (2 seeds x 2
   primes, MOD p; blind check BC-SO agrees) and at order 3 (4/4, MOD p; exact cancellation of two nonzero parts;
-  controls pass; not blind-checked), consistent with a codim-54 component containing F_T as a divisor. [SO-T6, BC-SO,
-  SO3-T6]
+  controls pass; partly blind check BC-SO3 agrees), consistent with a codim-54 component containing F_T as a
+  divisor. [SO-T6, BC-SO, SO3-T6, BC-SO3]
+- Semiregularity (Buchweitz-Flenner, V not lci): NOT semiregular, so the theorem gives no conclusion; V is rigid in X,
+  so a branch needs a different cycle of class a h^5 + b[V], b != 0. [SR-T6]
+- At sextic del Pezzo cone points the class has 5 extra first-order directions; a rank-4 quadric cone of them survives
+  order 2 (MOD p, 4/4; not blind-checked). [DP-T6]
 - lambda_0 = +1 for this configuration (checked): lambda = -1 is not the special coefficient of the general rule; its
   first-order excess is a property of special points (Fermat, Z_0, Cone_18). [D-TENFOLD-LAMBDA0-CHECK]
 
