@@ -4,94 +4,250 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hodge loci: where the agents are</title>
-<meta name="description" content="Live progress of AI agents working on Hodge loci (Noether-Lefschetz loci) of linear and complete-intersection cycles in hypersurfaces: results, dead ends, open problems. AI-generated, not reviewed by a human.">
+<meta name="description" content="Live progress of AI agents working on Hodge loci (Noether-Lefschetz loci) of linear and complete-intersection cycles in hypersurfaces: results, dead ends, open problems, and how they connect. AI-generated, not reviewed by a human.">
 <style>
 :root{
-  --bg:#fbfaf7; --panel:#ffffff; --ink:#1d1d1b; --muted:#6b6a65; --line:#e6e3dc; --accent:#2f5d8a;
-  --ok:#2e7d4f; --modp:#8a6d1f; --ai:#7a4fa0; --no:#a23b3b; --open:#2f5d8a; --stuck:#8a4b2f; --pend:#b5651d;
+  --bg:#fbfaf7; --panel:#ffffff; --ink:#1d1d1b; --muted:#6b6a65; --faint:#a9a69e; --line:#e6e3dc; --band:#f4f2ec; --accent:#2f5d8a;
+  --ok:#2e7d4f; --modp:#a07c1c; --ai:#7a4fa0; --no:#a23b3b; --open:#2f6fb0; --stuck:#8a4b2f; --pend:#c0661a;
+  --up:#2f6fb0; --down:#c0661a;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 28px rgba(0,0,0,.08);
 }
 @media (prefers-color-scheme: dark){:root{
-  --bg:#141412; --panel:#1c1c1a; --ink:#ecebe6; --muted:#a3a19a; --line:#2e2d2a; --accent:#8fb6dc;
-  --ok:#6cc08f; --modp:#d4b45a; --ai:#b996dc; --no:#e08282; --open:#8fb6dc; --stuck:#d39a7c; --pend:#e8a25c;}}
+  --bg:#141412; --panel:#1c1c1a; --ink:#ecebe6; --muted:#a3a19a; --faint:#66645e; --line:#2e2d2a; --band:#191917; --accent:#8fb6dc;
+  --ok:#6cc08f; --modp:#d4b45a; --ai:#b996dc; --no:#e08282; --open:#7fb0e6; --stuck:#d39a7c; --pend:#e8a25c;
+  --up:#7fb0e6; --down:#e8a25c; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.45);}}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
 a{color:var(--accent)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{padding:44px 0 18px;border-bottom:1px solid var(--line)}
-h1{font:600 2.1rem/1.15 var(--serif);margin:0 0 8px;letter-spacing:-.01em}
-h2{font:600 1.35rem/1.2 var(--serif);margin:40px 0 14px}
-.sub{color:var(--muted);max-width:760px;margin:0}
-.caution{margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--pend);background:var(--panel);font-size:.93rem;border-radius:6px}
-.now{margin-top:26px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
-.now .label{font:600 .75rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--pend);margin-right:8px;box-shadow:0 0 0 0 var(--pend);animation:p 2s infinite}
-@keyframes p{0%{box-shadow:0 0 0 0 rgba(181,101,29,.5)}70%{box-shadow:0 0 0 10px rgba(181,101,29,0)}100%{box-shadow:0 0 0 0 rgba(181,101,29,0)}}
-.now h3{font:600 1.15rem/1.3 var(--serif);margin:8px 0 6px}
-.recent{margin:14px 0 0;padding:0;list-style:none;font-size:.92rem;color:var(--muted)}
-.recent li{padding:4px 0;border-top:1px dashed var(--line)}
-.recent b{color:var(--ink);font-weight:600;margin-right:6px}
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer}
-.stat .n{font:600 1.8rem/1 var(--serif)}
-.stat .t{color:var(--muted);font-size:.85rem}
-.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.area{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;cursor:pointer}
-.area:hover,.stat:hover{border-color:var(--accent)}
-.area h4{margin:0 0 4px;font:600 1rem var(--serif)}
-.area p{margin:0 0 10px;color:var(--muted);font-size:.86rem}
-.bar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line)}
-.bar span{display:block;height:100%}
-.legendrow{font-size:.8rem;color:var(--muted);margin-top:6px}
-.opens{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;cursor:pointer}
-.card h4{margin:6px 0 6px;font:600 .98rem/1.3 var(--serif)}
-.card .next{font-size:.87rem;color:var(--muted)}
-.badge{display:inline-block;font:600 .7rem var(--sans);letter-spacing:.04em;padding:2px 7px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
-.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
-input[type=search]{flex:1 1 260px;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);font:inherit}
-select{padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);font:inherit}
+button{font:inherit;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{padding:44px 0 6px}
+h1{font:600 2.2rem/1.12 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
+h2{font:600 1.4rem/1.2 var(--serif);margin:0}
+.sechead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:52px 0 6px}
+.sechead p{margin:0;color:var(--muted);font-size:.92rem}
+.sub{color:var(--muted);max-width:780px;margin:0}
+.caution{margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--pend);background:var(--panel);font-size:.92rem;border-radius:6px}
+.badge{display:inline-block;font:600 .68rem/1.5 var(--sans);letter-spacing:.04em;padding:1px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap;vertical-align:middle}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle}
+.idref{font:.78em var(--mono);color:var(--accent);cursor:pointer;border-bottom:1px dotted currentColor;white-space:nowrap}
+.idref:hover{border-bottom-style:solid}
+
+/* overview */
+.overview{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.ovtop{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.ovtop .big{font:600 1.05rem var(--serif)}
+.ovtop .muted{color:var(--muted);font-size:.85rem}
+.segbar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:12px 0 10px;gap:2px}
+.segbar button{border:0;padding:0;height:100%;cursor:pointer;transition:filter .15s}
+.segbar button:hover{filter:brightness(1.12)}
+.seglegend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.86rem}
+.seglegend button{background:none;border:0;padding:0;cursor:pointer;color:var(--muted)}
+.seglegend button b{color:var(--ink);font:600 1rem var(--serif);margin:0 3px 0 6px}
+
+/* now */
+.now{margin-top:16px;display:grid;grid-template-columns:1.35fr 1fr;gap:16px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.label{font:600 .72rem var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--pend);margin-right:8px;animation:p 2s infinite;vertical-align:1px}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(192,102,26,.55)}70%{box-shadow:0 0 0 10px rgba(192,102,26,0)}100%{box-shadow:0 0 0 0 rgba(192,102,26,0)}}
+.headline{margin:10px 0 4px;font-size:.95rem}
+.lead{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.lead h3{font:600 1.08rem/1.3 var(--serif);margin:0 0 4px}
+.lead .state{color:var(--muted);font-size:.84rem}
+.lead p{margin:8px 0 0;font-size:.92rem}
+.lead p.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lead .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.btn{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px;font-size:.82rem;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.btn.primary:hover{filter:brightness(1.1);color:var(--panel)}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;font-size:.84rem}
+.timeline{list-style:none;margin:12px 0 0;padding:0;position:relative}
+.timeline:before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 12px 22px;font-size:.88rem;color:var(--muted)}
+.timeline li:before{content:"";position:absolute;left:0;top:6px;width:9px;height:9px;border-radius:50%;background:var(--panel);border:2px solid var(--faint)}
+.timeline li.first:before{border-color:var(--pend);background:var(--pend)}
+.timeline time{display:block;font:600 .74rem var(--sans);letter-spacing:.05em;color:var(--ink);margin-bottom:1px}
+
+/* map */
+.mapshell{position:relative;margin:14px auto 0;max-width:1640px;padding:0 20px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px 4px 9px;font-size:.84rem;cursor:pointer;user-select:none}
+.chip .n{color:var(--muted);font-size:.78rem}
+.chip.off{opacity:.42}
+.chip.off .dot{background:transparent!important;box-shadow:inset 0 0 0 1.5px var(--faint)}
+.tb-spacer{flex:1}
+.mapsearch{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:.86rem;width:220px}
+.zoombtns{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--panel)}
+.zoombtns button{border:0;background:none;padding:4px 11px;cursor:pointer;font-size:.9rem}
+.zoombtns button+button{border-left:1px solid var(--line)}
+.zoombtns button:hover{color:var(--accent)}
+.map{position:relative;height:min(80vh,860px);min-height:420px;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;touch-action:none;cursor:grab}
+.map.dragging{cursor:grabbing}
+.map svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lanelabels{position:absolute;left:0;top:0;bottom:0;width:0;pointer-events:none}
+.lanelabel{position:absolute;left:12px;pointer-events:auto;cursor:pointer;background:color-mix(in srgb,var(--panel) 88%,transparent);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:8px;padding:6px 9px;width:150px;transform-origin:left top}
+.lanelabel b{display:block;font:600 .82rem/1.2 var(--serif)}
+.lanelabel .mini{display:flex;height:4px;border-radius:2px;overflow:hidden;margin-top:5px;gap:1px}
+.lanelabel .mini span{height:100%}
+.lanelabel small{color:var(--muted);font-size:.7rem}
+.lanelabel:hover{border-color:var(--accent)}
+.lanelabel.compact{padding:3px 8px}.lanelabel.compact small,.lanelabel.compact .mini{display:none}.lanelabel.compact b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.flowhint{position:absolute;right:14px;top:12px;font-size:.74rem;color:var(--muted);background:color-mix(in srgb,var(--panel) 85%,transparent);padding:3px 9px;border-radius:999px;border:1px solid var(--line);pointer-events:none}
+.maplegend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--muted);margin-top:8px;align-items:center}
+.maplegend svg{vertical-align:middle;margin-right:4px}
+.tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:10px;padding:10px 12px;max-width:330px;font-size:.84rem;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s;z-index:5}
+.tip.show{opacity:1;transform:none}
+.tip .t{font:600 .95rem/1.3 var(--serif);margin:5px 0 4px}
+.tip .m{color:var(--muted);font-size:.78rem}
+.tip .rel{margin-top:6px;font-size:.78rem}
+.tip .rel span{display:inline-flex;align-items:center;gap:4px;margin-right:12px}
+
+/* svg */
+.edge{fill:none;stroke:var(--faint);stroke-width:1.1;opacity:.55;transition:opacity .18s,stroke .18s}
+.edge.weak{stroke-dasharray:3 3}
+.edge.back{stroke-dasharray:1 4}
+.edge.dim{opacity:.06}
+.edge.up{stroke:var(--up);opacity:.95;stroke-width:1.8}
+.edge.down{stroke:var(--down);opacity:.95;stroke-width:1.8}
+.edge.up,.edge.down{stroke-dasharray:6 5;animation:flow 1.1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-22}}
+.node{cursor:pointer;transition:opacity .18s}
+.node circle.c{stroke:var(--panel);stroke-width:2}
+.node.dim{opacity:.13}
+.node.filtered{opacity:.08}
+.node .lbl{font:10px var(--mono);fill:var(--muted);opacity:0;transition:opacity .15s;pointer-events:none;paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round}
+.showlabels .node .lbl{opacity:1}
+.node.hl .lbl,.node.sel .lbl{opacity:1;fill:var(--ink)}
+.node.sel circle.c{stroke:var(--ink);stroke-width:2.5}
+.node:focus{outline:none}
+.node:focus-visible circle.c{stroke:var(--accent);stroke-width:3}
+.ring{fill:none;stroke:var(--pend);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 2.2s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.lane{fill:var(--band);pointer-events:none}
+.lanesep{stroke:var(--line)}
+
+/* frontier board */
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;min-height:0}
+.col header{padding:14px 14px 10px;border-bottom:1px solid var(--line)}
+.col header .n{font:600 1.9rem/1 var(--serif)}
+.col header .t{font:600 .92rem var(--serif);margin-top:4px}
+.col header .d{color:var(--muted);font-size:.78rem;margin-top:2px}
+.col .items{overflow:auto;max-height:470px;padding:6px}
+.item{display:block;width:100%;text-align:left;background:none;border:0;border-radius:8px;padding:8px 9px;cursor:pointer}
+.item:hover{background:var(--band)}
+.item .it{font-size:.86rem;line-height:1.35}
+.item .im{font-size:.72rem;color:var(--muted);margin-top:3px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.item .nx{font-size:.76rem;color:var(--muted);margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.item.active .it:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pend);margin-right:6px;vertical-align:1px;animation:p 2s infinite}
+.areatag{font:.68rem var(--sans);color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px}
+
+/* explorer */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 12px}
+input[type=search]{flex:1 1 260px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:inherit}
+select{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:inherit}
 .count{color:var(--muted);font-size:.88rem}
 .list{border-top:1px solid var(--line)}
-.row{border-bottom:1px solid var(--line);padding:10px 4px}
-.row .head{display:flex;gap:10px;align-items:baseline;cursor:pointer}
-.row .id{font:.75rem var(--mono);color:var(--muted);min-width:0}
+.row{display:flex;gap:12px;align-items:baseline;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;padding:10px 6px;cursor:pointer}
+.row:hover{background:var(--panel)}
 .row .title{flex:1}
-.detail{display:none;margin:10px 0 4px;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:6px;font-size:.92rem}
-.row.open .detail{display:block}
-.detail h5{margin:12px 0 4px;font:600 .75rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.detail h5:first-child{margin-top:0}
-.detail pre{white-space:pre-wrap;font:.82rem/1.45 var(--mono);margin:0}
-.vocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;font-size:.88rem}
-.vocab div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
-.runit{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:.92rem}
+.row .id{font:.72rem var(--mono);color:var(--muted)}
+.row .links{font-size:.74rem;color:var(--muted);white-space:nowrap}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.scrim.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(500px,100vw);background:var(--panel);border-left:1px solid var(--line);box-shadow:var(--shadow);transform:translateX(102%);transition:transform .25s ease;z-index:21;display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.dhead{padding:18px 20px 14px;border-bottom:1px solid var(--line)}
+.dhead .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dhead .x{margin-left:auto;background:none;border:0;font-size:1.4rem;line-height:1;cursor:pointer;color:var(--muted);padding:2px 6px}
+.dhead h3{font:600 1.25rem/1.3 var(--serif);margin:10px 0 6px}
+.dhead .meta{font-size:.8rem;color:var(--muted)}
+.dhead .meta code{font-family:var(--mono)}
+.dbody{overflow:auto;padding:4px 20px 30px}
+.rels{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px}
+.rel{border:1px solid var(--line);border-radius:10px;padding:10px}
+.rel h5{margin:0 0 6px!important}
+.rel .none{color:var(--faint);font-size:.8rem}
+.relitem{display:flex;gap:7px;align-items:flex-start;width:100%;text-align:left;background:none;border:0;padding:4px 2px;cursor:pointer;font-size:.8rem;line-height:1.3;border-radius:6px}
+.relitem:hover{background:var(--band)}
+.relitem .dot{margin-top:4px;flex:none;width:8px;height:8px}
+.relitem em{font-style:normal;color:var(--faint);font-size:.7rem}
+.dbody h5{margin:18px 0 5px;font:600 .72rem var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.dbody pre{white-space:pre-wrap;font:.8rem/1.5 var(--mono);margin:0;overflow-wrap:anywhere}
+.dbody .ne{border-left:3px solid var(--pend);padding-left:10px}
+
+.vocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;font-size:.88rem;margin-top:14px}
+.vocab div{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+.runit{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem;margin-top:14px}
 .runit pre{white-space:pre-wrap;font:.82rem/1.5 var(--mono);margin:8px 0;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
-footer{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
-@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)} h1{font-size:1.6rem}}
+footer.foot{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+
+@media (max-width:980px){.board{grid-template-columns:1fr 1fr}.now{grid-template-columns:1fr}}
+@media (max-width:640px){
+  h1{font-size:1.65rem}.board{grid-template-columns:1fr}.mapsearch{width:100%}
+  .lanelabel{width:auto;max-width:120px;padding:4px 7px}.lanelabel small,.lanelabel .mini{display:none}
+  .rels{grid-template-columns:1fr}.map{height:62vh}.flowhint{display:none}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>Hodge loci: where the agents are</h1>
-  <p class="sub">A live view of an AI-agent research project on <b>Hodge loci</b> (higher-dimensional Noether&ndash;Lefschetz loci) of combinations of linear and complete-intersection cycles in smooth hypersurfaces: what has been found, what was ruled out, and what is open. Built from the project's <a href="https://github.com/timseifer/HodgeLociCI/tree/main/discoveries">discoveries registry</a> and its Macaulay2 package <a href="https://github.com/timseifer/HodgeLociCI">HodgeLociCI</a>.</p>
-  <div class="caution"><b>Read this first.</b> Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. <b>No human mathematician has reviewed it.</b> Published papers were read by machine. Every entry carries a status label; an entry is exactly as strong as its label. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</div>
-  <section class="now" id="now"></section>
+  <p class="sub">A live view of an AI-agent research project on <b>Hodge loci</b> (higher-dimensional Noether&ndash;Lefschetz loci) of combinations of linear and complete-intersection cycles in smooth hypersurfaces: what has been found, what was ruled out, what is open, and how each piece leads to the next. Built from the project's <a href="https://github.com/timseifer/HodgeLociCI/tree/main/discoveries">discoveries registry</a> and its Macaulay2 package <a href="https://github.com/timseifer/HodgeLociCI">HodgeLociCI</a>.</p>
+  <div class="caution"><b>Read this first.</b> Everything here was produced by AI agents (Anthropic's Claude) under the direction of Timothy Seifert and checked only by other AI agents. <b>No human mathematician has reviewed it.</b> Published papers were read by machine. Every entry carries a status label; an entry is exactly as strong as its label. "Settled" below means exact computation or a proof in an AI-written, unreviewed note, nothing more. This is not a list of established theorems, and nothing here is, or bears on, a proof or disproof of the Hodge conjecture.</div>
 </header>
 
-<h2>The map</h2>
-<div class="stats" id="stats"></div>
-<div class="legendrow" id="legend"></div>
-<h2>By area</h2>
-<div class="areas" id="areas"></div>
+<section class="overview" id="overview"></section>
+<section class="now" id="now"></section>
+</div>
 
-<h2>Open problems</h2>
-<p class="sub" style="margin-bottom:12px">Each with the single most useful next step, as recorded. Click a card for the full entry.</p>
-<div class="opens" id="opens"></div>
+<div class="wrap"><div class="sechead"><h2 id="map">The research map</h2><p>Every entry, by area. Lines run from an entry to the entries that cite it: foundations on the left, what followed to the right.</p></div></div>
+<div class="mapshell">
+  <div class="toolbar" id="toolbar">
+    <span id="chips" style="display:contents"></span>
+    <span class="tb-spacer"></span>
+    <input class="mapsearch" id="mq" type="search" placeholder="Find on map: Segre, X1, tenfold …" aria-label="Find on map">
+    <button class="chip" id="lbltoggle" title="Show every label">Labels</button>
+    <span class="zoombtns"><button id="zin" title="Zoom in" aria-label="Zoom in">+</button><button id="zout" title="Zoom out" aria-label="Zoom out">&minus;</button><button id="zfit" title="Fit to view">Fit</button></span>
+  </div>
+  <div class="map" id="mapbox">
+    <svg id="svg" role="img" aria-label="Graph of registry entries and the links between them">
+      <defs>
+        <marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="var(--faint)"/></marker>
+        <marker id="ahu" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="var(--up)"/></marker>
+        <marker id="ahd" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="var(--down)"/></marker>
+      </defs>
+      <g id="vp"><g id="lanes"></g><g id="edges"></g><g id="nodes"></g></g>
+    </svg>
+    <div class="lanelabels" id="lanelabels"></div>
+    <div class="flowhint">foundations &nbsp;&rarr;&nbsp; what followed</div>
+    <div class="tip" id="tip"></div>
+  </div>
+  <div class="maplegend">
+    <span>Hover an entry to trace its lineage; click for the full entry. Drag to pan; pinch or Ctrl/&#8984;&thinsp;+&thinsp;scroll to zoom.</span>
+    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--up)" stroke-width="2" stroke-dasharray="6 4"/></svg>builds on</span>
+    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--down)" stroke-width="2" stroke-dasharray="6 4"/></svg>led to</span>
+    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--faint)" stroke-width="1.5"/></svg>cited in statement, conditions or evidence</span>
+    <span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--faint)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>cross-reference</span>
+    <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--open)"/><circle cx="11" cy="7" r="6.5" fill="none" stroke="var(--pend)" stroke-width="1.5"/></svg>being worked on now</span>
+  </div>
+</div>
 
-<h2 id="explore">Explore every entry</h2>
+<div class="wrap">
+<div class="sechead"><h2 id="frontier">Settled, open, ruled out</h2><p>The same entries, sorted by how far each one got.</p></div>
+<div class="board" id="board"></div>
+
+<div class="sechead"><h2 id="explore">Search every entry</h2></div>
 <div class="controls">
   <input type="search" id="q" placeholder="Search: Segre, Pfaffian, pencil, lambda = -1, Fermat ...">
   <select id="fkind"><option value="">all kinds</option></select>
@@ -101,10 +257,10 @@ footer{margin:50px 0 30px;padding-top:16px;border-top:1px solid var(--line);colo
 </div>
 <div class="list" id="list"></div>
 
-<h2>What the status labels mean</h2>
+<div class="sechead"><h2>What the status labels mean</h2></div>
 <div class="vocab" id="vocab"></div>
 
-<h2 id="run">Run it</h2>
+<div class="sechead"><h2 id="run">Run it</h2></div>
 <div class="runit">
   <p style="margin:0">Everything on this page can be re-checked with the package. With Docker (Macaulay2 1.22, the package and an MCP server in one image):</p>
   <pre>git clone https://github.com/timseifer/HodgeLociCI && cd HodgeLociCI
@@ -114,120 +270,334 @@ docker run --rm hodgelocici tests/run_all.sh   # validation suite</pre>
   <p style="margin:0">For AI assistants, an MCP server with the tools <code>excess_formula</code>, <code>second_order_check</code>, <code>fermat_expansion</code> and <code>registry_search</code> (every output carries its status label): <code>docker run --rm -i hodgelocici python -m hodgelocici_mcp</code>. Setup for Claude Desktop and Claude Code: <a href="https://github.com/timseifer/HodgeLociCI/blob/main/mcp/README.md">mcp/README.md</a>; without Docker: <a href="https://github.com/timseifer/HodgeLociCI#requirements-and-installation">installation</a>. Cite: <a href="https://doi.org/10.5281/zenodo.24455334">doi:10.5281/zenodo.24455334</a>.</p>
 </div>
 
-<footer>
+<footer class="foot">
   Author: Timothy Seifert. Code, data and text produced by AI agents under his direction; not reviewed by a human. Licence: MIT.
   Source: <a href="https://github.com/timseifer/HodgeLociCI">github.com/timseifer/HodgeLociCI</a>
   (registry: <code>discoveries/registry.yaml</code>; current activity: <code>site/status.json</code>).
+  Links between entries are read from the registry: an entry that mentions another entry's id is drawn as following it.
   <span id="built"></span>
 </footer>
 </div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Entry details"><div class="dhead" id="dhead"></div><div class="dbody" id="dbody"></div></aside>
 
 <script>
 const DATA = /*__DATA__*/null;
 const AREAS = {
   first_order:["First order","Excess of the Hodge locus over the locus where both cycles persist; the level tau and the special coefficient."],
   second_order:["Second order","Whether the excess directions survive at second order."],
-  movasati_conjecture:["Movasati's Conjecture 1","The full germ at Fermat points; conditional AI computations, not a refutation."],
   fermat_expansion:["Fermat expansions","Higher-order expansions by pole-order reduction; certificates."],
+  movasati_conjecture:["Movasati's Conjecture 1","The full germ at Fermat points; conditional AI computations, not a refutation."],
   explicit_cycles:["Explicit cycles on cubics","Sums of two determinants, Pfaffians, Segre fourfolds."],
   fake_linear_cycles:["Fake linear cycles","Quartic sixfolds: explained loci, killed candidates, open regimes."],
   methods:["Methods","Techniques that worked and are worth reusing."]
 };
-const KINDS = {result:["Results","var(--ok)"], negative:["Negative results","var(--no)"], dead_end:["Dead ends","var(--stuck)"], correction:["Corrections","var(--ai)"], open:["Open problems","var(--open)"]};
+const KINDS = {result:"Result", negative:"Negative result", dead_end:"Dead end", correction:"Correction", open:"Open problem"};
 const STATUS = {
   EXACT:["exact","var(--ok)","Computed in exact arithmetic for the given input. Says nothing about other inputs."],
-  MOD_P:["mod p","var(--modp)","Computed modulo a prime at one or a few instances. Evidence, not a proof."],
   PROVED_AI_UNREVIEWED:["proved (AI, unreviewed)","var(--ai)","A theorem of an AI-written note that no human has reviewed. The note is not public."],
+  MOD_P:["mod p","var(--modp)","Computed modulo a prime at one or a few instances. Evidence, not a proof."],
   PAPER_ARGUMENT_AI:["paper argument (AI)","var(--ai)","An argument written by an AI agent, read at most once by another agent."],
   COMPUTED_ONLY:["computed only","var(--modp)","What a computation gives; no proof is claimed."],
   CONJECTURE:["conjecture","var(--open)","Believed, not shown."],
-  RULED_OUT:["ruled out","var(--no)","Tried and shown not to work (in the stated sense)."],
   OPEN:["open","var(--open)","Not settled."],
+  PENDING_CHECK:["awaiting check","var(--pend)","A new claim that an independent blind check has not yet reproduced."],
   STUCK:["stuck","var(--stuck)","Attempted; blocked, with the reason recorded."],
-  PENDING_CHECK:["awaiting check","var(--pend)","A new claim that an independent blind check has not yet reproduced."]
+  RULED_OUT:["ruled out","var(--no)","Tried and shown not to work (in the stated sense)."]
 };
+// How far an entry got. "Settled" = exact computation or a proof in an AI-written, unreviewed note: nothing more.
+const GROUPS = {
+  settled:{name:"Settled", col:"var(--ok)", st:["EXACT","PROVED_AI_UNREVIEWED"], desc:"Exact computation, or proved in an AI-written note no human has reviewed."},
+  evidence:{name:"Evidence", col:"var(--modp)", st:["MOD_P","COMPUTED_ONLY","PAPER_ARGUMENT_AI"], desc:"Mod p computations and AI paper arguments: support, not proof."},
+  open:{name:"Open / in progress", col:"var(--open)", st:["OPEN","CONJECTURE","PENDING_CHECK"], desc:"Not settled. Leads being worked on now are marked."},
+  closed:{name:"Ruled out / stuck", col:"var(--no)", st:["RULED_OUT","STUCK"], desc:"Tried and shown not to work, or blocked, with the reason recorded."}
+};
+const groupOf = s => { for (const [g,v] of Object.entries(GROUPS)) if (v.st.includes(s)) return g; return "evidence"; };
 const $ = s => document.querySelector(s);
-const el = (tag, attrs={}, ...kids) => { const e=document.createElement(tag); for (const [k,v] of Object.entries(attrs)) { if(k==="class") e.className=v; else if(k==="style") e.style.cssText=v; else e.setAttribute(k,v);} for(const c of kids){ if(c==null) continue; e.append(c.nodeType?c:document.createTextNode(c)); } return e; };
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs={}, ...kids) => { const e=document.createElement(tag); for (const [k,v] of Object.entries(attrs)) { if(k==="class") e.className=v; else if(k==="style") e.style.cssText=v; else if(k.startsWith("on")) e[k]=v; else e.setAttribute(k,v);} for(const c of kids){ if(c==null||c===false) continue; e.append(c.nodeType?c:document.createTextNode(c)); } return e; };
+const sv = (tag, attrs={}) => { const e=document.createElementNS(NS,tag); for (const [k,v] of Object.entries(attrs)) e.setAttribute(k,v); return e; };
 const badge = s => { const t=STATUS[s]||[s,"var(--muted)",""]; return el("span",{class:"badge",style:"color:"+t[1],title:t[2]},t[0]); };
-const E = DATA.entries;
+const gdot = g => el("span",{class:"dot",style:"background:"+GROUPS[g].col});
+const E = DATA.entries, BY = Object.fromEntries(E.map(e=>[e.id,e]));
+E.forEach((e,i)=>{ e.idx=i; e.group=groupOf(e.status); e.parents=[]; e.children=[]; });
+const LINKKIND = {};
+for (const l of DATA.edges){ BY[l.to].parents.push(l.from); BY[l.from].children.push(l.to); LINKKIND[l.from+">"+l.to]=l.kind; }
+const ACTIVE = new Set((DATA.status.active||[]).flatMap(a=>a.registry||[]));
+const short = id => { const s=id.replace(/^[A-Z]-/,""); return s.length>19 ? s.slice(0,18)+"…" : s; };
 
-// Now panel
-(function(){
-  const s = DATA.status, n=$("#now");
-  n.append(el("div",{class:"label"},el("span",{class:"pulse"}),"Right now  ·  updated "+s.updated));
-  n.append(el("p",{style:"margin:8px 0 0"},s.headline));
-  for (const a of s.active){
-    const d=el("div",{style:"margin-top:14px"});
-    d.append(el("h3",{},a.title+"  ",badge(a.status)));
-    d.append(el("div",{style:"color:var(--muted);font-size:.85rem"},"State: "+a.state));
-    d.append(el("p",{style:"margin:6px 0 0"},a.summary));
-    n.append(d);
+// Turn entry ids mentioned in any text into clickable links.
+const IDRE = /\b[A-Z]-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b/g;
+function linkify(text){
+  const f=document.createDocumentFragment(); let last=0; text=String(text);
+  for (const m of text.matchAll(IDRE)){
+    if (!BY[m[0]]) continue;
+    f.append(text.slice(last,m.index));
+    const a=el("span",{class:"idref",title:BY[m[0]].title,tabindex:"0",role:"link"},m[0]);
+    a.onclick=()=>openEntry(m[0]); a.onkeydown=ev=>{ if(ev.key==="Enter") openEntry(m[0]); };
+    f.append(a); last=m.index+m[0].length;
   }
-  const ul=el("ul",{class:"recent"});
-  for (const r of s.recent) ul.append(el("li",{},el("b",{},r.when),r.what));
-  n.append(ul);
+  f.append(text.slice(last)); return f;
+}
+
+// ---------- Overview ----------
+(function(){
+  const o=$("#overview"), cnt={};
+  for (const g in GROUPS) cnt[g]=E.filter(e=>e.group===g).length;
+  o.append(el("div",{class:"ovtop"},
+    el("span",{class:"big"},E.length+" entries in the registry · "+DATA.edges.length+" links between them"),
+    el("span",{class:"muted"},ACTIVE.size+" entries tied to work going on now")));
+  const bar=el("div",{class:"segbar",role:"group","aria-label":"Entries by how far they got"});
+  const leg=el("div",{class:"seglegend"});
+  for (const [g,v] of Object.entries(GROUPS)){
+    const go=()=>document.getElementById("col-"+g).scrollIntoView({behavior:"smooth",block:"start"});
+    bar.append(el("button",{style:"flex:"+cnt[g]+";background:"+v.col,title:v.name+": "+cnt[g]+" — "+v.desc,"aria-label":v.name+" "+cnt[g],onclick:go}));
+    leg.append(el("button",{onclick:go,title:v.desc},gdot(g),el("b",{},String(cnt[g])),v.name));
+  }
+  o.append(bar,leg);
 })();
 
-// Stats
+// ---------- Right now ----------
 (function(){
-  const st=$("#stats");
-  for (const [k,[name,col]] of Object.entries(KINDS)){
-    const c=E.filter(e=>e.kind===k).length;
-    const d=el("div",{class:"stat",title:"Show "+name.toLowerCase()},el("div",{class:"n",style:"color:"+col},String(c)),el("div",{class:"t"},name));
-    d.onclick=()=>{ $("#fkind").value=k; render(); location.hash="explore"; };
-    st.append(d);
+  const s=DATA.status, n=$("#now");
+  const left=el("div",{class:"panel"});
+  left.append(el("div",{class:"label"},el("span",{class:"pulse"}),"Right now · updated "+s.updated));
+  left.append(el("p",{class:"headline"},s.headline));
+  for (const a of s.active||[]){
+    const p=el("p",{class:"clamp"},a.summary);
+    const more=el("button",{class:"linkbtn",onclick:()=>{ p.classList.toggle("clamp"); more.textContent=p.classList.contains("clamp")?"Read more":"Show less"; }},"Read more");
+    const acts=el("div",{class:"acts"});
+    if ((a.registry||[]).length) acts.append(el("button",{class:"btn primary",onclick:()=>showOnMap(a.registry)},"Show on map"));
+    for (const id of a.registry||[]) if (BY[id]) acts.append(linkify(id));
+    left.append(el("div",{class:"lead"},el("h3",{},a.title+"  ",badge(a.status)),el("div",{class:"state"},a.state),p,more,acts));
   }
-  $("#legend").textContent = E.length+" entries in the registry. Click a number or an area to filter the list below.";
+  const right=el("div",{class:"panel"});
+  right.append(el("div",{class:"label"},"Recent activity"));
+  const ul=el("ul",{class:"timeline"}); const R=s.recent||[];
+  R.forEach((r,i)=>{ const li=el("li",{class:i===0?"first":""},el("time",{},r.when),linkify(r.what)); if(i>=5) li.hidden=true; ul.append(li); });
+  right.append(ul);
+  if (R.length>5){ const b=el("button",{class:"linkbtn"},"Show all "+R.length); b.onclick=()=>{ ul.querySelectorAll("li[hidden]").forEach(x=>x.hidden=false); b.remove(); }; right.append(b); }
+  n.append(left,right);
 })();
 
-// Areas
+// ---------- Map layout ----------
+const LANES = Object.keys(AREAS).filter(a=>E.some(e=>e.area===a));
+const COLW=150, ROWH=21, LEFT=190, LANEPAD=13, TOP=26, R=6.5;
+// Layout uses the links without cycles (a depth-first pass in registry order drops the few back links).
+const back=new Set(); (function(){ const st={}; const dfs=u=>{ st[u]=1; for(const v of BY[u].children){ if(st[v]===1) back.add(u+">"+v); else if(!st[v]) dfs(v); } st[u]=2; }; for(const e of E) if(!st[e.id]) dfs(e.id); })();
+const depth={}; const dp=u=>{ if(u in depth) return depth[u]; depth[u]=0; let d=0; for(const p of BY[u].parents) if(!back.has(p+">"+u)) d=Math.max(d,dp(p)+1); return depth[u]=d; };
+E.forEach(e=>dp(e.id));
+const MAXD=Math.max(...Object.values(depth));
+const cells={}; for (const e of E){ const k=e.area+"|"+depth[e.id]; (cells[k]=cells[k]||[]).push(e); }
+const laneH={}, laneTop={};
+let y0=TOP; for (const a of LANES){ let m=1; for(let d=0;d<=MAXD;d++) m=Math.max(m,(cells[a+"|"+d]||[]).length); laneH[a]=m*ROWH+LANEPAD*2; laneTop[a]=y0; y0+=laneH[a]; }
+const H=y0+TOP, W=LEFT+MAXD*COLW+200;
+const place=()=>{ for(const k in cells){ const [a]=k.split("|"); const arr=cells[k]; const lh=laneH[a]-LANEPAD*2; const off=(lh-arr.length*ROWH)/2; arr.forEach((e,i)=>{ e.x=LEFT+depth[e.id]*COLW; e.y=laneTop[a]+LANEPAD+off+i*ROWH+ROWH/2; }); } };
+place();
+// A few barycentre sweeps to reduce crossings inside each lane.
+for (let it=0; it<4; it++){
+  const key = it%2===0 ? (e=>e.parents) : (e=>e.children);
+  for (const k in cells){ cells[k].sort((a,b)=>{ const ba=bary(a,key(a)), bb=bary(b,key(b)); return ba-bb || a.idx-b.idx; }); }
+  place();
+}
+function bary(e,list){ if(!list.length) return e.y; return list.reduce((s,id)=>s+BY[id].y,0)/list.length; }
+
+// ---------- Map drawing ----------
+const svg=$("#svg"), vp=$("#vp"), gL=$("#lanes"), gE=$("#edges"), gN=$("#nodes"), mapbox=$("#mapbox"), tip=$("#tip");
+LANES.forEach((a,i)=>{ if(i%2===0) gL.append(sv("rect",{class:"lane",x:-4000,y:laneTop[a],width:W+8000,height:laneH[a]})); });
+const EDGEEL={};
+for (const l of DATA.edges){
+  const s=BY[l.from], t=BY[l.to], isBack=back.has(l.from+">"+l.to);
+  let d;
+  if (t.x>s.x){ const dx=Math.max(36,(t.x-s.x)*0.5); d=`M${s.x+R},${s.y} C${s.x+R+dx},${s.y} ${t.x-R-dx},${t.y} ${t.x-R-1},${t.y}`; }
+  else { const lift=Math.min(110,40+Math.abs(t.y-s.y)*0.15+(s.x-t.x)*0.12); d=`M${s.x},${s.y-R} C${s.x+30},${s.y-lift} ${t.x-30},${t.y-lift} ${t.x},${t.y-R-1}`; }
+  const p=sv("path",{d,class:"edge "+(l.kind==="weak"?"weak ":"")+(isBack?"back":""),"marker-end":"url(#ah)"});
+  gE.append(p); EDGEEL[l.from+">"+l.to]=p;
+}
+const NODEEL={};
+for (const e of E){
+  const g=sv("g",{class:"node",transform:`translate(${e.x},${e.y})`,tabindex:"0",role:"button","aria-label":e.title});
+  if (ACTIVE.has(e.id)) g.append(sv("circle",{class:"ring",r:R}));
+  g.append(sv("circle",{class:"c",r:R,fill:GROUPS[e.group].col}));
+  if (e.kind==="open") g.append(sv("circle",{r:2.6,fill:"var(--panel)"}));
+  if (e.kind==="correction") g.append(sv("path",{d:"M-3,0 L3,0",stroke:"var(--panel)","stroke-width":1.8}));
+  const t=sv("text",{class:"lbl",x:R+5,y:3.5}); t.textContent=short(e.id); g.append(t);
+  g.onmouseenter=ev=>{ hover(e.id); showTip(e); };
+  g.onmouseleave=()=>{ hover(null); tip.classList.remove("show"); };
+  g.onfocus=()=>{ hover(e.id); };
+  g.onblur=()=>hover(null);
+  g.onclick=ev=>{ ev.stopPropagation(); select(e.id); openEntry(e.id,{fromMap:true}); };
+  g.onkeydown=ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); select(e.id); openEntry(e.id,{fromMap:true}); } };
+  gN.append(g); NODEEL[e.id]=g;
+}
+// Lane labels pinned to the left edge; they follow vertical pan and zoom.
+const LL=$("#lanelabels"); const LLEL={};
+for (const a of LANES){
+  const es=E.filter(e=>e.area===a); const mini=el("div",{class:"mini"});
+  for (const [g,v] of Object.entries(GROUPS)){ const c=es.filter(e=>e.group===g).length; if(c) mini.append(el("span",{style:"flex:"+c+";background:"+v.col})); }
+  const parts=Object.entries(GROUPS).map(([g,v])=>[es.filter(e=>e.group===g).length,v.name.split(" ")[0].toLowerCase()]).filter(x=>x[0]).map(x=>x[0]+" "+x[1]).join(" · ");
+  const d=el("div",{class:"lanelabel",title:AREAS[a][1]},el("b",{},AREAS[a][0]),el("small",{},es.length+" entries"),mini);
+  d.title=AREAS[a][1]+"\n"+parts;
+  d.onclick=()=>{ zoomToBox(LEFT-40, laneTop[a], W, laneTop[a]+laneH[a]); };
+  LL.append(d); LLEL[a]=d;
+}
+
+// ---------- Pan & zoom ----------
+let T={k:1,x:0,y:0};
+function apply(){
+  vp.setAttribute("transform",`translate(${T.x},${T.y}) scale(${T.k})`);
+  for (const a of LANES){ const top=laneTop[a]*T.k+T.y, h=laneH[a]*T.k; const d=LLEL[a]; const cp=h<92||mapbox.clientWidth<640; d.classList.toggle("compact",cp); d.style.top=(top+(cp?Math.max(2,(h-26)/2):8))+"px"; d.style.display=(top+h<0||top>mapbox.clientHeight)?"none":""; }
+  mapbox.classList.toggle("showlabels", labelsAlways || T.k>=1.05);
+}
+function fit(){
+  const w=mapbox.clientWidth, h=mapbox.clientHeight, gutter=w<640?150:180;
+  const k=Math.min((w-gutter-16)/(MAXD*COLW+150), (h-10)/H);
+  T.k=Math.max(.3,Math.min(1.4,k)); T.x=gutter-(LEFT-R-4)*T.k; T.y=Math.max(0,(h-H*T.k)/2); apply();
+}
+function zoomAt(f,cx,cy){ const k=Math.max(.25,Math.min(3,T.k*f)); f=k/T.k; T.x=cx-(cx-T.x)*f; T.y=cy-(cy-T.y)*f; T.k=k; apply(); }
+function zoomToBox(x0,y0,x1,y1,maxk=1.4){ const w=mapbox.clientWidth, h=mapbox.clientHeight; const k=Math.max(.3,Math.min(maxk,Math.min((w-60)/(x1-x0),(h-60)/(y1-y0)))); T.k=k; T.x=(w-(x1+x0)*k)/2; T.y=(h-(y1+y0)*k)/2; vp.style.transition="transform .4s"; apply(); setTimeout(()=>vp.style.transition="",450); }
+$("#zin").onclick=()=>zoomAt(1.3,mapbox.clientWidth/2,mapbox.clientHeight/2);
+$("#zout").onclick=()=>zoomAt(1/1.3,mapbox.clientWidth/2,mapbox.clientHeight/2);
+$("#zfit").onclick=fit;
+mapbox.addEventListener("wheel",ev=>{ if(!(ev.ctrlKey||ev.metaKey)) return; ev.preventDefault(); const r=mapbox.getBoundingClientRect(); zoomAt(Math.exp(-ev.deltaY*0.0022),ev.clientX-r.left,ev.clientY-r.top); },{passive:false});
+const ptrs=new Map(); let drag=null, moved=false, pinch=null;
+mapbox.addEventListener("pointerdown",ev=>{ if(ev.target.closest(".lanelabel")) return; ptrs.set(ev.pointerId,{x:ev.clientX,y:ev.clientY}); moved=false;
+  if(ptrs.size===1){ drag={x:ev.clientX,y:ev.clientY,tx:T.x,ty:T.y}; }
+  else if(ptrs.size===2){ const [a,b]=[...ptrs.values()]; pinch={d:Math.hypot(a.x-b.x,a.y-b.y),k:T.k}; drag=null; } });
+mapbox.addEventListener("pointermove",ev=>{ if(!ptrs.has(ev.pointerId)) return; ptrs.set(ev.pointerId,{x:ev.clientX,y:ev.clientY});
+  if(pinch && ptrs.size===2){ const [a,b]=[...ptrs.values()]; const r=mapbox.getBoundingClientRect(); const d=Math.hypot(a.x-b.x,a.y-b.y); zoomAt((pinch.k*d/pinch.d)/T.k,(a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top); moved=true; return; }
+  if(drag){ const dx=ev.clientX-drag.x, dy=ev.clientY-drag.y; if(!moved && Math.hypot(dx,dy)<4) return; if(!moved){ moved=true; mapbox.classList.add("dragging"); mapbox.setPointerCapture(ev.pointerId); tip.classList.remove("show"); } T.x=drag.tx+dx; T.y=drag.ty+dy; apply(); } });
+const endPtr=ev=>{ ptrs.delete(ev.pointerId); if(ptrs.size<2) pinch=null; if(!ptrs.size){ drag=null; mapbox.classList.remove("dragging"); } };
+mapbox.addEventListener("pointerup",endPtr); mapbox.addEventListener("pointercancel",endPtr);
+svg.addEventListener("click",ev=>{ if(moved){ moved=false; return; } if(!ev.target.closest(".node")) select(null); }, true);
+let labelsAlways=false; $("#lbltoggle").onclick=()=>{ labelsAlways=!labelsAlways; $("#lbltoggle").classList.toggle("off",!labelsAlways); apply(); };
+$("#lbltoggle").classList.add("off");
+// Re-run fit when the map first becomes visible at a real size.
+new ResizeObserver(()=>{ if(!fitted && mapbox.clientWidth>0){ fitted=true; fit(); } }).observe(mapbox); let fitted=false;
+
+// ---------- Lineage highlighting ----------
+function walk(id,dir){ const seen=new Set(), st=[id]; while(st.length){ const u=st.pop(); for(const v of BY[u][dir]) if(!seen.has(v)&&v!==id){ seen.add(v); st.push(v); } } return seen; }
+let selected=null, hovered=null, extraSet=null;
+function lineage(ids){
+  const up=new Set(), down=new Set();
+  for (const id of ids){ walk(id,"parents").forEach(x=>up.add(x)); walk(id,"children").forEach(x=>down.add(x)); }
+  return {up,down};
+}
+function paint(){
+  const focus = hovered ? [hovered] : selected ? [selected] : extraSet ? [...extraSet] : null;
+  for (const e of E){ const n=NODEEL[e.id]; n.classList.toggle("sel", e.id===selected || (!!extraSet && extraSet.has(e.id))); }
+  if (!focus){ for(const e of E) NODEEL[e.id].classList.remove("dim","hl"); for(const k in EDGEEL){ const p=EDGEEL[k]; p.classList.remove("dim","up","down"); p.setAttribute("marker-end","url(#ah)"); } applyFilter(); return; }
+  const {up,down}=lineage(focus); const F=new Set(focus);
+  for (const e of E){ const on=F.has(e.id)||up.has(e.id)||down.has(e.id); NODEEL[e.id].classList.toggle("dim",!on); NODEEL[e.id].classList.toggle("hl",on); NODEEL[e.id].classList.remove("filtered"); }
+  for (const k in EDGEEL){ const [a,b]=k.split(">"); const p=EDGEEL[k];
+    const u = up.has(a)&&(up.has(b)||F.has(b)); const d = (F.has(a)||down.has(a))&&down.has(b);
+    p.classList.toggle("up",u); p.classList.toggle("down",d&&!u); p.classList.toggle("dim",!(u||d));
+    p.setAttribute("marker-end", u?"url(#ahu)":d?"url(#ahd)":"url(#ah)");
+    if(u||d) gE.appendChild(p);
+  }
+}
+function hover(id){ hovered=id; paint(); }
+function select(id){ selected=id; extraSet=null; paint(); }
+function showTip(e){
+  const r=mapbox.getBoundingClientRect(); const x=e.x*T.k+T.x, y=e.y*T.k+T.y;
+  const {up,down}=lineage([e.id]);
+  tip.replaceChildren(el("div",{},badge(e.status)," ",el("span",{class:"m"},KINDS[e.kind]+" · "+AREAS[e.area][0])),
+    el("div",{class:"t"},e.title), el("div",{class:"m",style:"font-family:var(--mono)"},e.id),
+    el("div",{class:"rel"},el("span",{style:"color:var(--up)"},"← builds on "+up.size),el("span",{style:"color:var(--down)"},"led to "+down.size+" →")));
+  const tw=Math.min(330,r.width-16), th=tip.offsetHeight||150; let left=x+16, top=y+14;
+  if(left+tw>r.width-8) left=x-tw-16; if(left<8) left=8; if(top+th>r.height-8) top=y-th-14;
+  tip.style.left=left+"px"; tip.style.top=Math.max(8,top)+"px"; tip.classList.add("show");
+}
+function showOnMap(ids){
+  ids=ids.filter(i=>BY[i]); if(!ids.length) return;
+  selected=null; extraSet=new Set(ids); paint();
+  const {up,down}=lineage(ids); const all=[...ids,...up,...down].map(i=>BY[i]);
+  document.getElementById("map").scrollIntoView({behavior:"smooth",block:"start"});
+  setTimeout(()=>zoomToBox(Math.min(...all.map(e=>e.x))-40,Math.min(...all.map(e=>e.y))-30,Math.max(...all.map(e=>e.x))+160,Math.max(...all.map(e=>e.y))+30,1.2),350);
+}
+
+// ---------- Map filters ----------
+const groupOn=Object.fromEntries(Object.keys(GROUPS).map(g=>[g,true]));
+for (const [g,v] of Object.entries(GROUPS)){
+  const c=el("button",{class:"chip",title:v.desc},gdot(g),v.name,el("span",{class:"n"},String(E.filter(e=>e.group===g).length)));
+  c.onclick=()=>{ groupOn[g]=!groupOn[g]; c.classList.toggle("off",!groupOn[g]); paint(); };
+  $("#chips").append(c);
+}
+$("#mq").addEventListener("input",()=>paint());
+function applyFilter(){
+  const q=$("#mq").value.toLowerCase().trim();
+  const vis=e=>groupOn[e.group] && (!q || (e.id+" "+e.title+" "+e.statement).toLowerCase().includes(q));
+  for (const e of E) NODEEL[e.id].classList.toggle("filtered",!vis(e));
+  for (const k in EDGEEL){ const [a,b]=k.split(">"); EDGEEL[k].classList.toggle("dim",!(vis(BY[a])&&vis(BY[b]))); }
+}
+
+// ---------- Frontier board ----------
 (function(){
-  const box=$("#areas");
-  for (const [a,[name,desc]] of Object.entries(AREAS)){
-    const es=E.filter(e=>e.area===a); if(!es.length) continue;
-    const bar=el("div",{class:"bar"});
-    for (const [k,[,col]] of Object.entries(KINDS)){ const c=es.filter(e=>e.kind===k).length; if(c) bar.append(el("span",{style:"width:"+(100*c/es.length)+"%;background:"+col,title:c+" "+KINDS[k][0].toLowerCase()})); }
-    const parts=Object.entries(KINDS).map(([k,[nm]])=>[es.filter(e=>e.kind===k).length,nm.toLowerCase()]).filter(x=>x[0]).map(x=>x[0]+" "+x[1]).join(" · ");
-    const d=el("div",{class:"area"},el("h4",{},name),el("p",{},desc),bar,el("div",{class:"legendrow"},parts));
-    d.onclick=()=>{ $("#farea").value=a; $("#fkind").value=""; render(); location.hash="explore"; };
-    box.append(d);
+  const box=$("#board");
+  for (const [g,v] of Object.entries(GROUPS)){
+    let es=E.filter(e=>e.group===g);
+    if (g==="open") es.sort((a,b)=>(ACTIVE.has(b.id)-ACTIVE.has(a.id))||(a.kind==="open"?-1:0)-(b.kind==="open"?-1:0)||a.idx-b.idx);
+    else es.sort((a,b)=>LANES.indexOf(a.area)-LANES.indexOf(b.area)||a.idx-b.idx);
+    const items=el("div",{class:"items"});
+    for (const e of es){
+      const nx=(e.next_step||"").replace(/\s+/g," ").trim();
+      items.append(el("button",{class:"item"+(ACTIVE.has(e.id)?" active":""),onclick:()=>openEntry(e.id)},
+        el("div",{class:"it"},e.title),
+        el("div",{class:"im"},badge(e.status),el("span",{class:"areatag"},AREAS[e.area][0]), e.children.length?("led to "+e.children.length):null),
+        g==="open"&&nx ? el("div",{class:"nx"},"Next: "+nx) : null));
+    }
+    box.append(el("div",{class:"col",id:"col-"+g},
+      el("header",{},el("div",{class:"n",style:"color:"+v.col},String(es.length)),el("div",{class:"t"},v.name),el("div",{class:"d"},v.desc)),items));
   }
 })();
 
-// Open problems
-(function(){
-  const box=$("#opens");
-  for (const e of E.filter(e=>e.kind==="open")){
-    const nx=(e.next_step||"").split("\n").join(" ");
-    const d=el("div",{class:"card"},badge(e.status),el("h4",{},e.title),el("div",{class:"next"},nx?("Next: "+(nx.length>240?nx.slice(0,240)+"…":nx)):""));
-    d.onclick=()=>openEntry(e.id);
-    box.append(d);
-  }
-})();
-
-// Explorer
+// ---------- Explorer ----------
 const fill=(sel,obj,lab)=>{ for(const [k,v] of Object.entries(obj)) if(E.some(e=>e[lab]===k)) sel.append(el("option",{value:k},Array.isArray(v)?v[0]:v)); };
 fill($("#fkind"),KINDS,"kind"); fill($("#farea"),AREAS,"area"); fill($("#fstatus"),STATUS,"status");
-const FIELDS=[["statement","Statement"],["data","Data"],["conditions","Conditions"],["not_established","Not established"],["evidence","Evidence"],["independent_check","Independent check"],["known_before","Known before (as read by machine)"],["do_not_repeat","Do not repeat"],["next_step","Next step"],["reproduce","How to re-verify"]];
-function row(e){
-  const r=el("div",{class:"row",id:"e-"+e.id});
-  const h=el("div",{class:"head"},badge(e.status),el("span",{class:"title"},e.title),el("span",{class:"id"},e.id));
-  const d=el("div",{class:"detail"});
-  for (const [f,lab] of FIELDS){ if(e[f] && String(e[f]).trim() && String(e[f]).trim()!=="none"){ d.append(el("h5",{},lab), el("pre",{},String(e[f]))); } }
-  d.append(el("h5",{},"Status"), el("pre",{},(STATUS[e.status]||[e.status,"",""])[2]));
-  h.onclick=()=>r.classList.toggle("open");
-  r.append(h,d); return r;
-}
 function render(){
   const q=$("#q").value.toLowerCase().trim(), k=$("#fkind").value, a=$("#farea").value, s=$("#fstatus").value;
-  const L=$("#list"); L.innerHTML="";
+  const L=$("#list"); L.replaceChildren();
   const hits=E.filter(e=>(!k||e.kind===k)&&(!a||e.area===a)&&(!s||e.status===s)&&(!q||JSON.stringify(e).toLowerCase().includes(q)));
-  for (const e of hits) L.append(row(e));
+  for (const e of hits) L.append(el("button",{class:"row",onclick:()=>openEntry(e.id)},badge(e.status),el("span",{class:"title"},e.title),
+    el("span",{class:"links"},(e.parents.length||e.children.length)?("↤"+e.parents.length+" ↦"+e.children.length):""),el("span",{class:"id"},e.id)));
   $("#count").textContent=hits.length+" of "+E.length;
 }
-function openEntry(id){ $("#q").value=""; $("#fkind").value=""; $("#farea").value=""; $("#fstatus").value=""; render(); const r=document.getElementById("e-"+id); if(r){ r.classList.add("open"); r.scrollIntoView({behavior:"smooth",block:"start"}); } }
 for (const id of ["#q","#fkind","#farea","#fstatus"]) $(id).addEventListener("input",render);
 render();
+
+// ---------- Drawer ----------
+const FIELDS=[["statement","Statement"],["data","Data"],["conditions","Conditions"],["not_established","Not established"],["evidence","Evidence"],["independent_check","Independent check"],["known_before","Known before (as read by machine)"],["do_not_repeat","Do not repeat"],["next_step","Next step"],["reproduce","How to re-verify"]];
+const drawer=$("#drawer"), scrim=$("#scrim");
+function relList(title,ids,color,arrow){
+  const box=el("div",{class:"rel"},el("h5",{style:"color:"+color},title+" ("+ids.length+")"));
+  if(!ids.length) box.append(el("div",{class:"none"},"none"));
+  for (const id of ids){ const r=BY[id]; const lk=LINKKIND[arrow==="up"?id+">"+cur:cur+">"+id];
+    box.append(el("button",{class:"relitem",onclick:()=>openEntry(id),title:id},gdot(r.group),el("span",{},r.title," ",el("em",{},lk==="weak"?"(cross-ref)":"")))); }
+  return box;
+}
+let cur=null;
+function openEntry(id,opts={}){
+  const e=BY[id]; if(!e) return; cur=id;
+  const share=el("button",{class:"btn",onclick:()=>{ const u=location.href.split("#")[0]+"#e-"+id; navigator.clipboard&&navigator.clipboard.writeText(u); share.textContent="Link copied"; setTimeout(()=>share.textContent="Copy link",1400); }},"Copy link");
+  $("#dhead").replaceChildren(
+    el("div",{class:"top"},badge(e.status),el("span",{class:"meta"},KINDS[e.kind]+" · "+AREAS[e.area][0]),ACTIVE.has(id)?el("span",{class:"badge",style:"color:var(--pend)"},"being worked on"):null,
+      el("button",{class:"x",onclick:closeDrawer,"aria-label":"Close"},"×")),
+    el("h3",{},e.title),
+    el("div",{class:"meta"},el("code",{},e.id)," · ",(STATUS[e.status]||["","",""])[2]),
+    el("div",{class:"acts",style:"display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"},
+      opts.fromMap?null:el("button",{class:"btn primary",onclick:()=>{ closeDrawer(); showOnMap([id]); }},"Show on map"),share));
+  const b=$("#dbody"); b.replaceChildren();
+  b.append(el("div",{class:"rels"},relList("← Builds on",e.parents,"var(--up)","up"),relList("Led to →",e.children,"var(--down)","down")));
+  for (const [f,lab] of FIELDS){ const v=String(e[f]||"").trim(); if(v && v!=="none"){ b.append(el("h5",{},lab), el("pre",{class:f==="not_established"?"ne":""},linkify(v))); } }
+  b.scrollTop=0;
+  drawer.classList.add("show"); drawer.setAttribute("aria-hidden","false"); scrim.classList.add("show");
+  history.replaceState(null,"","#e-"+id);
+  if (opts.fromMap!==true && selected!==null) { select(id); }
+}
+function closeDrawer(){ drawer.classList.remove("show"); drawer.setAttribute("aria-hidden","true"); scrim.classList.remove("show"); cur=null; if(location.hash.startsWith("#e-")) history.replaceState(null,"",location.pathname+location.search); }
+scrim.onclick=closeDrawer;
+document.addEventListener("keydown",ev=>{ if(ev.key==="Escape"){ if(drawer.classList.contains("show")) closeDrawer(); else { select(null); } } });
 if (location.hash.startsWith("#e-")) openEntry(location.hash.slice(3));
 
 // Vocabulary
