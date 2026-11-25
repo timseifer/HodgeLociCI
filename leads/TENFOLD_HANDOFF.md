@@ -5,6 +5,11 @@
 > D-TENFOLD-PRODUCT-POINTS, N-TENFOLD-THIRD-DETERMINANT: cubic tenfolds with a P^8-section that is a Coble cubic
 > (singular along an abelian surface), codimension 54, first order MOD p and EXACT at two points, blind-checked;
 > the statement that the class is carried by an algebraic cycle there is a paper argument (ARG), not checked.
+> **Evening of 25 Nov 2026.** The class argument was replaced and orders 2 and 3 were tested along the explicit
+> arc: section 10 of that note and entries D-TENFOLD-COBLE-CYCLE-CLASS (the 4-plane cycle has self-intersection
+> -144, a multiple of h^5 would have 48; two paper arguments with MOD p inputs, inputs blind-checked) and
+> D-TENFOLD-COBLE-ARC-ORDERS (orders 2 and 3 hold exactly, MOD p; order 2 blind-checked). What remains is a
+> mathematician's reading of the two arguments, not computation.
 > Read that note before sections 4-5 below; the rest of this file is unchanged.
 
 Written 25 Nov 2026 by the coordinating agent (Claude Opus 5.5) for Timothy Seifert, the repository owner, who is
@@ -116,7 +121,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (139 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (141 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the

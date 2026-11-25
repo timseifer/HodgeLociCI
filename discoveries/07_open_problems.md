@@ -972,6 +972,11 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
+UPDATE 25 Nov 2026 (evening): the class argument was replaced (D-TENFOLD-COBLE-CYCLE-CLASS: the 4-plane cycle has
+self-intersection -144, so it is 4 h^5 +- 2 ([V] - 2 h^5); two paper arguments with MOD p inputs) and the explicit
+arc passes orders 2 and 3 exactly (D-TENFOLD-COBLE-ARC-ORDERS, MOD p). If those arguments hold, W exists, is the
+Coble family, and the class is algebraic on it. This entry stays OPEN until a mathematician has read the two
+arguments; what remains is review, not computation.
 RESUMED 25 Nov 2026 with a candidate explanation: D-TENFOLD-COBLE-FAMILY (cubic tenfolds with a P^8-section that
 is a Coble cubic; codim 54; first order MOD p and EXACT at two points; the class statement is ARG) and
 D-TENFOLD-PRODUCT-POINTS. This entry stays OPEN until the class argument is replaced by a computation and a

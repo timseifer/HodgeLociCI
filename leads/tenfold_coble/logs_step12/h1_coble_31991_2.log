@@ -1,0 +1,6 @@
+mode coble ; a = -10218
+Sing(Y): dim 2 degree 18
+H1: Sigma = Sing(Y) ∩ {Psi1=Psi2=0}: dim 0 degree 72 ; (degree of projection to a line, squarefree) = (72, true)
+H2: Hilbert function of Sigma, d = 1..6: {9, 34, 63, 71, 72, 72}
+    defect = degree - HF(4) = 1
+    control (linear ∩ quadric section, 36 points): degree - HF(4) = 0

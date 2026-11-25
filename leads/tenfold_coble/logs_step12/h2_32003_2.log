@@ -1,0 +1,15 @@
+type B plane: solution set dim 0 degree 1 ; v+ = {-14335, 9932, 463, 9958, 1}
+sigma preserves F: true
+F vanishes on P: true
+g = sigma^1 : F vanishes on gP: true ; gP = P: false
+   H3: projective dimension of P ∩ gP = 1 (degree 1)
+   (P ∩ gP) ∩ A: dim 0 degree 2
+   the line meets A where s^2-7466*s-12670 = 0 ; factors: (s+15106)*(s+9431)
+   H3b at a point of degree 1: rank Hess = 6 ; dim T_pA = 3 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)
+   H3b at a point of degree 1: rank Hess = 6 ; dim T_pA = 3 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)
+g = sigma^2 : F vanishes on gP: true ; gP = P: false
+   H3: projective dimension of P ∩ gP = 1 (degree 1)
+   (P ∩ gP) ∩ A: dim 0 degree 2
+   the line meets A where s^2-117*s+11874 = 0 ; factors: (s-13126)*(s+13009)
+   H3b at a point of degree 1: rank Hess = 6 ; dim T_pA = 3 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)
+   H3b at a point of degree 1: rank Hess = 6 ; dim T_pA = 3 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)

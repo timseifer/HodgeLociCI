@@ -1,0 +1,10 @@
+point a on A: true
+rank Hess F(a) = 6 ; dim T_aA (affine) = 3 ; T_aA in ker Hess: true
+span(a, V) = T_aA: true
+deg Qa = 2 rank 6 ; deg G = 5
+tau values tried: 30 ; rational points on linear components (points of Z_a ∩ P^4): 30 ; tau with both: 15 ; rational points on the non-linear residual: 43
+   degree 2 : number of monomials 15 ; rank of evaluation at the 30 points = 14 ; (12 d - 1 = 23)
+   degree 3 : number of monomials 35 ; rank of evaluation at the 30 points = 29 ; (12 d - 1 = 35)
+   degree 4 : number of monomials 70 ; rank of evaluation at the 30 points = 30 ; (12 d - 1 = 47)
+   degree 5 : number of monomials 126 ; rank of evaluation at the 30 points = 30 ; (12 d - 1 = 59)
+   degree 6 : number of monomials 210 ; rank of evaluation at the 30 points = 30 ; (12 d - 1 = 71)

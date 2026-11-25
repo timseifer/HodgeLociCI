@@ -1,0 +1,26 @@
+T7-dual instance inst_31991_2.txt p = 31991 lam = 17689 x = [31659, 27855, 10089] dx = [27275, 30169, 18358] a1 = 10773 a2 = 6458
+pi: rank of (JT)_6 = 3002 of 3003 -> dim (T/JT)_6 = 1
+pi vanishes on (I_V)_6 (all generator*monomial products)? True
+first-order condition pi(Q*A) = 0 for all 165 cubic monomials Q in z,p,q? True
+normal matrix M D M^T: size 6435 nnz 1936935  built at t=10.6s
+inverse computed at t=127.8s
+phase 1 (Psi_l on T_8): equations violated: 0 of 416988
+phase 1: inconsistencies between different factorisations x_i*m7 of the same degree-8 monomial: 0
+phase 2 (Psi0 on T_9): equations violated: 0 of 694980
+phase 2: inconsistencies between different factorisations mu*m7 of the same degree-9 monomial: 0
+functionals built at t=129.4s
+#Q (w-degree 0, of 165) with pi(Q h(z)) != 0: 165 ; with psi(Q A^2) != 0: 165
+E2, w-degree 0: pi(Q*a2*h(z)) == 3 psi(Q A^2):  agree on 165 of 165 cubic monomials Q
+   with 2*a2 in place of a2: agree on 0 of 165;  with 0 in place of a2: agree on 0 of 165
+   distinct values of 3 psi(Q A^2)/pi(Q h(z)) where the denominator is nonzero: [6458]  (a2 = 6458, 2*a2 = 12916)
+E2, w-degree 1: psi(w_m Q' A^2) == 0 (= pi(w_m Q' g2)/3):  agree on 135 of 135 monomials Q = w_m Q'
+E2, w-degree >= 2: 64 monomials, both sides are 0 by construction (Q A^2 in (w)^2, Q g2 in (w))
+psi on (I_V^2)_9, w-degree 0 part: nonzero on 0 of 11187 generator*monomial products
+psi on w_l*(I_V)_8 (w-degree 1 part of I^2): nonzero on 0 of 34749 products
+control: psi on (I_V)_9 (first power only): nonzero on 25310 of 25311 products
+control: Psi0 nonzero on 24310 of 24310 degree-9 monomials; Psi_l nonzero on [12870, 12870, 12869] of 12870 degree-8 monomials
+total time 129.4s
+
+real	2m9.770s
+user	2m7.100s
+sys	0m1.344s

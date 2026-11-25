@@ -1,0 +1,21 @@
+T7 p=32003 seed=1 lam=-11738 x={14651, -3125, -9521}
+T7 dx={8792, -7634, 10080} a1=14806 a2=2686
+T7: HF of T/JT = S/(Jac + (w)): {1, 9, 33, 57, 42, 12, 1, 0, 0, 0}
+T7: V: affine dim of I0 in T = 6, degree 6; F8 in I0? true
+T7: dim (T/(JT+I0))_6 = 1  (1 => pi vanishes on (I+Jac)_6 and is unique up to scale)
+T7: first-order condition pi(Q*A) = 0 for all 165 cubic monomials Q in z,p,q: true
+instance written to /home/claude/blind_check2/inst_32003_1.txt
+M2DIRECT W0 indices {0, 17, 50, 88, 120, 164}
+M2DIRECT W0 exps {{3, 0, 0, 0, 0, 0, 0, 0, 0}, {1, 0, 2, 0, 0, 0, 0, 0, 0}, {0, 2, 0, 0, 0, 0, 1, 0, 0}, {0, 0, 1, 2, 0, 0, 0, 0, 0}, {0, 0, 0, 1, 0, 2, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 3}}
+M2DIRECT W0 psi {-283, -10382, -11371, 62, -7373, -4885}
+M2DIRECT W0 piQh {-1442, 11784, 8554, 429, 8344, -7476}
+M2DIRECT W0 E2 agree (a2*pi(Q h) == 3 psi(Q A^2)): {true, true, true, true, true, true}
+   time 203.463
+M2DIRECT W1 m= 0 exps {{2, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 0, 1, 0, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 2}} psi {0, 0, 0, 0}
+M2DIRECT W1 m= 1 exps {{2, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 0, 1, 0, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 2}} psi {0, 0, 0, 0}
+M2DIRECT W1 m= 2 exps {{2, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 0, 1, 0, 0, 0}, {0, 0, 0, 1, 0, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 2}} psi {0, 0, 0, 0}
+   time 222.755
+
+real	3m46.022s
+user	3m43.626s
+sys	0m0.322s

@@ -1,0 +1,16 @@
+MODE coble p=31991 seed=2 lam=-332 x={-4136, 10089, -14014} a=-1145
+dim J (affine) = 3  degree J = 18
+                          2
+hilbertPolynomial R/J = 9i
+dim (J + 4 random compressed 6x6 minors of Hessian) (affine) = 0
+(0 means Hessian has rank>=6 everywhere on Sing, so Sing scheme is smooth of dim 2)
+Jsat numgens by degree: Tally{2 => 9}
+                              3 => 3
+Jsat == J ? false
+random compressed 7x7 minor in Jsat? true
+HF(R/Jsat, 0..6) = {1, 9, 36, 81, 144, 225, 324}
+time 523.679
+
+real	8m52.028s
+user	8m44.205s
+sys	0m1.714s

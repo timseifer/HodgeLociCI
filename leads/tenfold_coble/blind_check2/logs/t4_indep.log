@@ -1,0 +1,28 @@
+mode coble p 32003 seed 11 lam 1243 x [13279, 25258, 17313] a 29347
+ degree 2 monomials 45 rank 12 HF 33
+ degree 3 monomials 165 rank 108 HF 57
+ degree 4 monomials 495 rank 456 HF 39
+ degree 5 monomials 1287 rank 1278 HF 9
+ degree 6 monomials 3003 rank 3002 HF 1
+ degree 7 monomials 6435 rank 6435 HF 0
+HF: [1, 9, 33, 57, 39, 9, 1, 0] total 149
+
+real	2m0.705s
+user	1m57.430s
+sys	0m2.324s
+mode ft p 31991 seed 12 lam 24391 x [6131, 9057, 8860] a 0
+ degree 2 monomials 45 rank 12 HF 33
+ degree 3 monomials 165 rank 108 HF 57
+ degree 4 monomials 495 rank 453 HF 42
+ degree 5 monomials 1287 rank 1275 HF 12
+ degree 6 monomials 3003 rank 3002 HF 1
+ degree 7 monomials 6435 rank 6435 HF 0
+HF: [1, 9, 33, 57, 42, 12, 1, 0] total 155
+mode coble p 31991 seed 13 lam 13312 x [29473, 20604, 19984] a 8087
+ degree 2 monomials 45 rank 12 HF 33
+ degree 3 monomials 165 rank 108 HF 57
+ degree 4 monomials 495 rank 456 HF 39
+ degree 5 monomials 1287 rank 1278 HF 9
+ degree 6 monomials 3003 rank 3002 HF 1
+ degree 7 monomials 6435 rank 6435 HF 0
+HF: [1, 9, 33, 57, 39, 9, 1, 0] total 149

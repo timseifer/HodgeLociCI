@@ -1,0 +1,44 @@
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 1, 4, 5, 15, 47}
+   time 8.99898
+T2 comparison: Sing ∩ {linear = quadric = 0}: degree 36 dim 1, HF 0..6: {1, 8, 26, 35, 36, 36, 36}
+   time 10.5047
+T1: ninefold f: Jacobian ideal affine dim = 1, degree = 72
+T1: Jacobian ideal + (t1,t2): affine dim = 1, degree = 72
+   time 210.555
+
+real	3m34.959s
+user	3m31.410s
+sys	0m0.288s
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 2, 2, 2, 32, 34}
+   time 8.6845
+T2 comparison: Sing ∩ {linear = quadric = 0}: degree 36 dim 1, HF 0..6: {1, 8, 26, 35, 36, 36, 36}
+   time 10.227
+T1: ninefold f: Jacobian ideal affine dim = 1, degree = 72
+T1: Jacobian ideal + (t1,t2): affine dim = 1, degree = 72
+   time 216.486
+
+real	3m40.275s
+user	3m37.203s
+sys	0m0.364s
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 2, 2, 3, 9, 56}
+   time 8.90338
+T2 comparison: Sing ∩ {linear = quadric = 0}: degree 36 dim 1, HF 0..6: {1, 8, 26, 35, 36, 36, 36}
+   time 10.4372
+T1: ninefold f: Jacobian ideal affine dim = 1, degree = 72
+T1: Jacobian ideal + (t1,t2): affine dim = 1, degree = 72
+   time 207.987
+
+real	3m32.294s
+user	3m28.765s
+sys	0m0.345s
+
+[exited with code 0]

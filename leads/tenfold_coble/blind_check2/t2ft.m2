@@ -1,0 +1,37 @@
+-- T2 in F_T mode
+pp = value(scriptCommandLine#1); sd = value(scriptCommandLine#2); mode = "ft";
+load "/home/claude/blind_check2/lib.m2";
+t0 = cpuTime();
+<< "FT: J affine dim = " << dim J << ", degree = " << degree J << endl << flush;
+IPl = ideal(p_0,p_1,p_2,q_0,q_1,q_2);
+<< "FT: J contained in ideal of plane {p=q=0}? " << isSubset(J, IPl) << endl << flush;
+ell = random(1, R);
+Jsat = saturate(J, ell);
+<< "FT: sat(J): gens by degree " << tally apply(flatten entries mingens Jsat, f -> first degree f) << ", HF 0..5 " << apply(6, d -> hilbertFunction(d, R/Jsat)) << endl << flush;
+<< "FT: hilbert polynomial of R/sat(J): " << hilbertPolynomial(R/Jsat, Projective=>false) << endl << flush;
+I18 = saturate(Jsat, IPl);
+<< "FT: residual I18 = sat(J):plane^inf : affine dim = " << dim I18 << ", degree = " << degree I18 << ", gens by degree " << tally apply(flatten entries mingens I18, f -> first degree f) << endl << flush;
+<< "FT: hilbert polynomial of R/I18: " << hilbertPolynomial(R/I18, Projective=>false) << endl << flush;
+<< "FT: intersect(I18, IPl) == sat(J) ? " << (intersect(I18, IPl) == Jsat) << endl << flush;
+<< "FT: (I18 + IPl): affine dim " << dim(I18+IPl) << " degree " << degree(I18+IPl) << endl << flush;
+<< "   time " << cpuTime()-t0 << endl << flush;
+-- V
+IV = ideal(diff(z_0,F), diff(z_1,F), diff(z_2,F), hcub(lam,ps), hcub(lam,qs));
+<< "FT: V: affine dim " << dim IV << ", degree " << degree IV << "; F in I_V? " << (F % IV == 0) << "; I_V subset I18? " << isSubset(IV, I18) << endl << flush;
+Psi1 = random(2, R); Psi2 = random(2, R);
+I76 = saturate(J + ideal(Psi1,Psi2), ell);
+<< "T2-FT: Sing ∩ {Psi1=Psi2=0}: affine dim " << dim I76 << ", degree " << degree I76 << ", HF 0..8: " << apply(9, d -> hilbertFunction(d, R/I76)) << endl << flush;
+S2 = kk[s,t];
+l0 = random(1,R); l1 = random(1,R);
+phi = map(R/I76, S2, {sub(l0, R/I76), sub(l1, R/I76)});
+G = (ker phi)_0;
+use S2;
+<< "T2-FT: projection to a line: binary form degree " << first degree G << ", gcd(G,G') degree " << first degree gcd(G, diff(s,G)) << ", factor degrees " << sort apply(toList factor G, f -> first degree f#0) << endl << flush;
+use R;
+I4 = saturate(IPl + ideal(Psi1,Psi2), ell);
+<< "T2-FT: plane part: degree " << degree I4 << ", HF 0..5: " << apply(6, d -> hilbertFunction(d, R/I4)) << endl << flush;
+I72 = saturate(I18 + ideal(Psi1,Psi2), ell);
+<< "T2-FT: degree-18-surface part: affine dim " << dim I72 << ", degree " << degree I72 << ", HF 0..8: " << apply(9, d -> hilbertFunction(d, R/I72)) << endl << flush;
+<< "T2-FT: intersect(I4, I72) == I76 ? " << (intersect(I4, I72) == I76) << endl << flush;
+<< "T2-FT: (I4 + I72) affine dim (0 => disjoint) = " << dim(I4+I72) << endl << flush;
+<< "   time " << cpuTime()-t0 << endl << flush;

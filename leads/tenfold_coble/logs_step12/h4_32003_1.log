@@ -1,0 +1,7 @@
+Sing(Y): dim 2 degree 18
+L1: Y ∩ P^6: Jacobian scheme dim 0 degree 18 ; HF of the node set, d = 1..4: {7, 17, 18, 18} ; defect in degree 2 = 1
+L2: Sing(Y ∩ P^7) ∩ quadric: dim 0 degree 36 ; HF d = 1..5: {8, 26, 35, 36, 36} ; defect in degree 3 = 1
+L3: Y ∩ P^5 smooth: true
+L4: rational point of A found after 1 linear sections; number of linear forms vanishing at it: 8
+    projection of A from the point: dim 2 degree 17 (17 expected; then the projection is birational)
+    control, projection from a general point: degree 18 (18 expected)

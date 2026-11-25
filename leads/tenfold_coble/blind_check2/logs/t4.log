@@ -1,0 +1,16 @@
+MODE ft p=32003 seed=1 lam=-11738 x={14651, -3125, -9521} a=0
+T4 (ft): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 42, 12, 1, 0, 0, 0}; total length 155
+MODE ft p=32003 seed=2 lam=683 x={-344, -4148, 10089} a=0
+T4 (ft): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 42, 12, 1, 0, 0, 0}; total length 155
+MODE ft p=31991 seed=1 lam=-13752 x={14651, -3113, -9509} a=0
+T4 (ft): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 42, 12, 1, 0, 0, 0}; total length 155
+MODE ft p=31991 seed=2 lam=-14302 x={-332, -4136, 10089} a=0
+T4 (ft): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 42, 12, 1, 0, 0, 0}; total length 155
+MODE coble p=32003 seed=1 lam=14651 x={-3125, -9521, -2716} a=15264
+T4 (coble): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 39, 9, 1, 0, 0, 0}; total length 149
+MODE coble p=32003 seed=2 lam=-344 x={-4148, 10089, -14026} a=-6534
+T4 (coble): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 39, 9, 1, 0, 0, 0}; total length 149
+MODE coble p=31991 seed=1 lam=14651 x={-3113, -9509, -2704} a=890
+T4 (coble): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 39, 9, 1, 0, 0, 0}; total length 149
+MODE coble p=31991 seed=2 lam=-332 x={-4136, 10089, -14014} a=-1145
+T4 (coble): affine dim = 0; HF degrees 0..9: {1, 9, 33, 57, 39, 9, 1, 0, 0, 0}; total length 149

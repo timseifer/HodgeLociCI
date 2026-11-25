@@ -1,0 +1,60 @@
+MODE coble p=32003 seed=2 lam=-344 x={-4148, 10089, -14026} a=-6534
+T3: iota preserves F? true
+T3: sigma preserves F? true
+T3: iota*bm == -bm ? true ; iota*bp == bp ? true
+T3: F restricted to P(V_-) is zero? true
+T3: conditions on v_+: number of nonzero coefficient equations = 11, degrees Tally{1 => 10}
+                                                                                   3 => 1
+T3: locus of v_+ in P(V_+): affine dim 1, degree 1
+T3: saturated ideal generators degrees: {1, 1, 1, 1}, HF 0..3 {1, 1, 1, 1}
+T3: v_+ coordinates in basis (z0, z1+z2, p0+q0, p1+q2, p2+q1): {7927, 12685, 13649, 9721, 1}
+T3: rank of P basis = 5; F restricted to P identically zero? true
+T3: F(Psig v) == F(v) ? true; Psig^3 == 1 ? true
+---- pair (P, sigma(P)) ----
+T3: F vanishes on sigma(P)? true
+T3: dim(P ∩ sigma(P)) as linear spaces = 2  (2 = projective line); rank(P|sigma(P)) = 8
+                                                                      2                  2
+T3: line ∩ Sing(Y): affine dim 1, degree (length) 2; saturated gens {s  + 7856s*t + 9396t }
+T3: factorisation of the binary form: (2212s - t)(1627s + t)(-9396)
+T3: 2 kk-rational point(s) (multiplicities {1, 1})
+  point p0 = {3120, 3120, 11702, 8696, -2213, -2056, -2211, -2368, 8541}
+  all partials vanish at p0? true
+  rank Hess F(p0) = 6
+  dim ker Hess = 3; p0 in ker? true
+  dim span(P, T_p0 A) = 6 (proj dim 5); dim span(sigma(P), T_p0 A) = 6 (proj dim 5)
+  Hess vanishes identically on span(P,TA)? true; on span(sigma(P),TA)? true
+  rank(span1|span2) = 8; dim of intersection of the two spans = 4 (proj dim 3)
+  dim of P ∩ T_p0A = 2
+  point p0 = {-20, -20, 6900, 7946, -1626, -14141, -1628, 10887, -11544}
+  all partials vanish at p0? true
+  rank Hess F(p0) = 6
+  dim ker Hess = 3; p0 in ker? true
+  dim span(P, T_p0 A) = 6 (proj dim 5); dim span(sigma(P), T_p0 A) = 6 (proj dim 5)
+  Hess vanishes identically on span(P,TA)? true; on span(sigma(P),TA)? true
+  rank(span1|span2) = 8; dim of intersection of the two spans = 4 (proj dim 3)
+  dim of P ∩ T_p0A = 2
+---- pair (P, sigma^2(P)=sigma^-1(P)) ----
+T3: F vanishes on sigma^2(P)=sigma^-1(P)? true
+T3: dim(P ∩ sigma^2(P)=sigma^-1(P)) as linear spaces = 2  (2 = projective line); rank(P|sigma^2(P)=sigma^-1(P)) = 8
+                                                                      2                  2
+T3: line ∩ Sing(Y): affine dim 1, degree (length) 2; saturated gens {s  - 7856s*t + 9396t }
+T3: factorisation of the binary form: (2212s + t)(1627s - t)(-9396)
+T3: 2 kk-rational point(s) (multiplicities {1, 1})
+  point p0 = {3120, 11702, 3120, -2211, 8541, -2368, 8696, -2056, -2213}
+  all partials vanish at p0? true
+  rank Hess F(p0) = 6
+  dim ker Hess = 3; p0 in ker? true
+  dim span(P, T_p0 A) = 6 (proj dim 5); dim span(sigma^2(P)=sigma^-1(P), T_p0 A) = 6 (proj dim 5)
+  Hess vanishes identically on span(P,TA)? true; on span(sigma^2(P)=sigma^-1(P),TA)? true
+  rank(span1|span2) = 8; dim of intersection of the two spans = 4 (proj dim 3)
+  dim of P ∩ T_p0A = 2
+  point p0 = {-20, 6900, -20, -1628, -11544, 10887, 7946, -14141, -1626}
+  all partials vanish at p0? true
+  rank Hess F(p0) = 6
+  dim ker Hess = 3; p0 in ker? true
+  dim span(P, T_p0 A) = 6 (proj dim 5); dim span(sigma^2(P)=sigma^-1(P), T_p0 A) = 6 (proj dim 5)
+  Hess vanishes identically on span(P,TA)? true; on span(sigma^2(P)=sigma^-1(P),TA)? true
+  rank(span1|span2) = 8; dim of intersection of the two spans = 4 (proj dim 3)
+  dim of P ∩ T_p0A = 2
+extra: P ∩ Sing(Y): affine dim 2, degree 6, Hilbert polynomial 6i - 1
+extra: v_+ itself: partials vanish there (v_+ in Sing Y)? false

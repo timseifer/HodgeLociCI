@@ -1,0 +1,14 @@
+MODE coble p=31991 seed=1 lam=14651 x={-3113, -9509, -2704} a=890
+T5a: Y ∩ P^6: Jacobian scheme affine dim 1, degree 18; HF of saturated ideal, degrees 0..5: {1, 7, 17, 18, 18, 18}
+T5a: projection to a line: binary form degree 18, gcd(G,G') degree 0 (0 => 18 distinct points, each of Jacobian length 1 => nodes); factor degrees {0, 1, 2, 5, 10}
+T5b: Sing(Y ∩ P^7): affine dim 2, degree 18
+T5b: Sing(Y ∩ P^7) ∩ quadric: affine dim 1, degree 36; HF degrees 0..6: {1, 8, 26, 35, 36, 36, 36}
+T5b: projection to a line: binary form degree 36, gcd(G,G') degree 0
+T5c: Y ∩ P^5: Jacobian ideal affine dim 0 (0 => smooth cubic fourfold); HF of Jacobian ring: {1, 6, 15, 20, 15, 6, 1, 0}
+   time 2.39499
+T5d: found kk-point a of A after 1 random P^6 sections (18 points: degree 18): a = {5179, 10138, 7480, 871, 15501, -4223, 12596, -11584, 1}
+T5d: a in Sing(Y)? true
+T5d: HF (degrees 1..6) of the image of A projected from a in A: {8, 33, 75, 134, 210, 303}; second differences {17, 17, 17, 17}
+   time 15.0626
+T5d: HF (degrees 1..6) of the image of A projected from a random point of P^8: {8, 36, 81, 144, 225, 324}; second differences {17, 18, 18, 18}
+   time 19.9581

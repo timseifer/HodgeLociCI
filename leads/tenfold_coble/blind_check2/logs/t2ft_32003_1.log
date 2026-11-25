@@ -1,0 +1,27 @@
+MODE ft p=32003 seed=1 lam=-11738 x={14651, -3125, -9521} a=0
+FT: J affine dim = 3, degree = 19
+FT: J contained in ideal of plane {p=q=0}? true
+FT: sat(J): gens by degree Tally{2 => 9}, HF 0..5 {1, 9, 36, 82, 147, 231}
+                                 3 => 2
+                                    19 2   3
+FT: hilbert polynomial of R/sat(J): --i  - -i + 1
+                                     2     2
+FT: residual I18 = sat(J):plane^inf : affine dim = 3, degree = 18, gens by degree Tally{2 => 9}
+                                                                                        3 => 3
+                                   2
+FT: hilbert polynomial of R/I18: 9i
+FT: intersect(I18, IPl) == sat(J) ? true
+FT: (I18 + IPl): affine dim 2 degree 3
+   time 1.33221
+FT: V: affine dim 6, degree 6; F in I_V? true; I_V subset I18? true
+T2-FT: Sing ∩ {Psi1=Psi2=0}: affine dim 1, degree 76, HF 0..8: {1, 9, 34, 64, 75, 76, 76, 76, 76}
+T2-FT: projection to a line: binary form degree 76, gcd(G,G') degree 0, factor degrees {0, 3, 4, 6, 9, 54}
+T2-FT: plane part: degree 4, HF 0..5: {1, 3, 4, 4, 4, 4}
+T2-FT: degree-18-surface part: affine dim 1, degree 72, HF 0..8: {1, 9, 34, 63, 71, 72, 72, 72, 72}
+T2-FT: intersect(I4, I72) == I76 ? true
+T2-FT: (I4 + I72) affine dim (0 => disjoint) = 0
+   time 19.3893
+
+real	0m20.973s
+user	0m20.560s
+sys	0m0.099s

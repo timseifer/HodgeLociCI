@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (15)
+## Entries on this page (16)
 
 | id | status | title |
 |---|---|---|
@@ -27,6 +27,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-CONE-DICTIONARY](#d-cone-dictionary) | `PAPER_ARGUMENT_AI` | Cone-type points: classes r P1 + s P2 are cones over classes of discriminant 8r^2 - 2rs + 8s^2 on cubic fourfolds |
 | [D-CYCLE-CONSTRAINTS-OTHER-LAMBDA](#d-cycle-constraints-other-lambda) | `MOD_P` | Constraints on any cycle carrying the class for lambda = 2, 1/2, -2, 3, 5/3: spans P^7, lies on no extra quadric |
 | [D-TENFOLD-COBLE-FAMILY](#d-tenfold-coble-family) | `MOD_P` | Tenfold lead: an explicit codim-54 family through F_T (P^8-section a Coble cubic); first-order Hodge locus of its class = the family; tangent to NL([V]) along F_T in the extra direction |
+| [D-TENFOLD-COBLE-CYCLE-CLASS](#d-tenfold-coble-cycle-class) | `PAPER_ARGUMENT_AI` | Tenfold lead: the 4-plane cycle on the Coble family has self-intersection -144, so its class is 4 h^5 +- 2 ([V] - 2 h^5); hyperplane sections with 72 nodes and one relation |
 
 ## Related entries on other pages
 
@@ -1046,6 +1047,8 @@ did not finish); Macaulay2 instances with the same seed at the two primes are co
 
 **Not established.**
 
+UPDATE 25 Nov 2026 (evening): the class argument below was replaced by D-TENFOLD-COBLE-CYCLE-CLASS (still ARG, with
+computed inputs), and orders 2 and 3 along the explicit arc were tested (D-TENFOLD-COBLE-ARC-ORDERS). Earlier text:
 (ARG, not checked) That the continuation of [V] is Hodge on all of W#. Argument: a Coble cubic contains the 4-planes
 spanned by the theta curves of the abelian surface A (genus-2 sextics; secant threefold of degree 8 inside a cubic);
 Z_Theta = union of the 4-planes over a theta curve is a 5-fold of degree 12; cycle classes from the section have
@@ -1081,6 +1084,8 @@ From leads/tenfold_coble/ (Macaulay2 1.22; 20 s each MOD p, minutes over QQ):
 **Next step.**
 
 ```text
+(1) and (2) below were done on 25 Nov 2026 (evening), in a different way for (1): see
+D-TENFOLD-COBLE-CYCLE-CLASS and D-TENFOLD-COBLE-ARC-ORDERS. Open: (3), (4), (5). Earlier text:
 (1) Replace the class ARG by a computation (intersection count of Z_f with T' in a cubic fourfold section at a point
 of F_T: 18 expected; or the cylinder map by residues). (2) Orders 2 and 3 along the explicit arc at a point of F_T
 with the so3_t6 machinery. (3) Exact arithmetic at a second member; irreducibility of the surface. (4) Read
@@ -1088,3 +1093,126 @@ Gruson-Sam sections 3-4 and match the boundary types. (5) A one-page note for a 
 ```
 
 **Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat); leads/TENFOLD_COBLE_LEAD.md.
+
+---
+
+## D-TENFOLD-COBLE-CYCLE-CLASS
+
+**Tenfold lead: the 4-plane cycle on the Coble family has self-intersection -144, so its class is 4 h^5 +- 2 ([V] - 2 h^5); hyperplane sections with 72 nodes and one relation**
+
+kind: `result` | area: `explicit_cycles` | status: **`PAPER_ARGUMENT_AI`**
+
+**Statement.**
+
+```text
+Setting: D-TENFOLD-COBLE-FAMILY. X a member (X n P^8 = Y, a Coble cubic singular along the abelian surface A),
+Z_Theta = union of the 4-planes P^4_x of Y over a theta curve of A (all through one point a of A), a 5-fold.
+Claim (ARG, AI, unreviewed; inputs MOD 32003 and 31991, pre-registered in leads/tenfold_coble/PREREG_step1.md):
+Z_Theta.Z_Theta = -144 on X, whereas a multiple of h^5 of the same degree 12 has 48. Hence [Z_Theta] is not a
+multiple of h^5; with v_0 = [V] - 2 h^5 (v_0^2 = -48) it is 4 h^5 + c v_0, c^2 = 4: [Z_Theta] = 2 [V] or
+8 h^5 - 2 [V] (sign not determined). With D-TENFOLD-COBLE-FAMILY (the first-order Hodge locus of the class on the
+section equals the tangent space of the family, codim 54) this gives (ARG): the family is a component of the Hodge
+locus of [V], of codimension 54, smooth at its general point, with F_T in its closure, and [V] is algebraic with
+rational coefficients on it. That is the component W asked for in O-TENFOLD-CONE-LEAD, explained by a cycle; it is
+not a Hodge class not known to be algebraic.
+Mechanism (MOD p; reason ARG). A general hyperplane H containing the P^8 is tangent to X at the 72 points
+A n {Psi_1 = Psi_2 = 0}; X n H has exactly 72 ordinary double points (Jacobian scheme of degree 72, nothing off the
+P^8). The 72 points fail by exactly one to impose independent conditions on quartics (Hilbert function
+9, 34, 63, 71, 72), which is Cayley-Bacharach on a surface with K = 0; by Dimca's formula (LIT) H_10(X n H) has one
+extra class. The same one level down (36 points, cubics) and two levels down (Y n P^6 has 18 nodes, quadrics). At a
+point of F_T: 76 = 4 + 72 nodes, the 4 on the plane independent, the 72 fail by one.
+Argument A (ARG + LIT). (1) A 5-cycle in X' = X n H with a non-zero local class at a node is not a rational multiple
+of the linear section in H_10(X') (local homology of a node; Lefschetz). (2) Z_Theta has two smooth branches at each
+node, in the same ruling, so local class +-2. Checked: two 4-planes of the family through common points of A (the
+iota-invariant plane and its images under the index shift) meet in exactly a line, and their spans with the tangent
+plane of A are 5-planes in the tangent cone meeting in a P^3. (3) H_10(X') -> H_10(X) is injective because X - X' is
+a typical fibre of a polynomial with isolated singularities at infinity, hence a bouquet of 10-spheres
+(Siersma-Tibar 1995, Parusinski 1995; LIT, snippets read).
+Argument B (ARG; classical intersection theory). Blow-up formula for X smooth of dimension 2m, X' = X n H nodal,
+Z, Z' of dimension m in X', X'' = X' n H':
+    Z.Z' = (Z n H').(Z' n H') on X''  -  (-1)^(m-1) sum_p n_p(Z) n_p(Z').
+Three levels (72, 36, 18 nodes) down to the smooth cubic fourfold Y n P^5 and the surface S = Z n P^5:
+Z.Z = S.S - 54 n^2. Test: V at F_T, S = T (T.T = 18, the C_18 scroll), n = 1: 18 - 54 = -36 = [V]^2 of this
+registry. Z_Theta: n = 2; S = image of a ruled surface over a genus-2 curve, degree 12, sections of genus 2,
+delta double points, S.S = 38 + 2 delta; delta = degree of the projection of A from a point of A = 17 (computed);
+S.S = 72, Z.Z = -144. No degree d makes the result d^2/3 when delta = 17.
+Explicit cycle (MOD p). For a rational point a of A, Z_a lies in Y n Q_a n {G = 0} (Q_a tangent cone, G quintic).
+254 (resp. 236) sampled rational points of Z_a n P^4 have Hilbert function 14, 29, 47, 59, 71, 83, 95 in degrees
+2..8 = 12 d - 1 from degree 4: degree 12, arithmetic genus 2, as c_1 = -6 Theta predicts.
+```
+
+**Conditions.**
+
+Arguments A and B are paper arguments by an AI; no mathematician has read them. Their computed inputs are MOD p
+(two primes, few seeds): 72 / 36 / 18 nodes and the Hilbert functions, the ruling test, the projection degree 17,
+the sampled degree 12. Lattice data [V]^2 = -36, h^5.[V] = 6 are this registry's; T.T = 18 is LIT (recalled).
+The abelian-surface structure of Sing(Y) rests on D-TENFOLD-COBLE-FAMILY and LIT. Nothing here is EXACT over QQ.
+Not a statement about the Hodge conjecture: the class is algebraic if the argument holds.
+
+**Evidence.**
+
+leads/TENFOLD_COBLE_LEAD.md, section 10. Scripts in leads/tenfold_coble/: h1_nodal_section.m2 (nodes, defect),
+h2_same_ruling.m2, h3_ft_limit.m2 (at F_T every (5,5) class supported on the section is a multiple of [V]_prim:
+Hilbert function (1,9,33,57,42,12,1,0)), h4_ladder_inputs.m2, h5c_cycle_sampling.m2. Pre-registration with the
+predictions: PREREG_step1.md. Two decomposition attempts (h5, h5b) did not finish and gave nothing.
+
+**Independent check.**
+
+Blind check BC-COBLE-2 (25 Nov 2026; a separate agent given the definitions and the statements, not the scripts,
+logs or notes; its own Macaulay2 and Python code and its unedited report: leads/tenfold_coble/blind_check2/). MOD
+32003 and 31991. PASS: 72 reduced nodes and Jacobian degree 72 on P^10, all on the P^8 (4 full runs); Hilbert
+function 1, 9, 34, 63, 71, 72 (5 runs), control 36; at F_T 76 = 4 + 72 points, 75 = 4 + 71 on quartics (4 runs);
+the two 4-planes meet in a line with two points on A, rank 6, isotropic 5-planes meeting in a P^3, for sigma and
+sigma^2 (7 runs); F_T Hilbert function (1,9,33,57,42,12,1,0) (4 runs in M2, 1 independent run in Python); 18 nodes
+with 17 on quadrics, 36 points with 35 on cubics, Y n P^5 smooth, projection degree 17 against 18 (4 runs).
+Mathematics re-derived by hand: the blow-up formula (signs right for m = 3, 4, 5; tested on a P^m in a smooth cubic
+2m-fold with 2^m nodes, where it returns the top Chern class of the normal bundle, m = 2..5); the ladder for V,
+whose assumption "local class 0 at the plane nodes" it then checked by computation (the scroll has class
+3 sA + 3 sB in the transversal quadric); c_1 = -6 theta by GRR in two ways; the double point arithmetic; argument
+A, for whose third step it supplied a shorter justification (all fibre closures are smooth along infinity, Thom's
+isotopy lemma, the fibre is 9-connected) that does not need the quoted bouquet theorem.
+Its objections (accepted): (1) one statement in the brief was false: the Hilbert function of k[z,p,q]/(dF, Phi) at
+a general member is (1,9,33,57,39,9,1,0), not (..,42,12,..); a slip in the brief only (D-TENFOLD-COBLE-FAMILY has
+39, 9; nothing here uses those two values). (2) Degree 12 and square -144 are shared by 2[V] and 8 h^5 - 2[V]:
+consistency, not identification. (3) That S has exactly 17 transversal double points and no pinch or triple
+points, that the scroll maps birationally onto Z, and the passage from the tested pair of planes to a general pair
+are inputs with a paper argument only (written into the lead note after its report; unchecked).
+Not covered by the blind check: the sampled degree 12 (run after the brief was written); the lattice value
+[V]^2 = -36 (taken from this registry).
+
+**Not established.**
+
+A human check of: the blow-up formula (signs, local terms); absence of other singularities of the sections at the
+two lower levels (only counted); that S has exactly 17 ordinary double points; the hypotheses of the bouquet theorem;
+the Dimca formula as used (not needed for A or B). The sign of c. Exact arithmetic. That the family is the
+registry's W at the Fermat point (ARG, as before).
+
+**Known before.**
+
+Benedetti, Manivel, Tanturri, The geometry of the Coble cubic and orbital degeneracy loci, arXiv:1904.10848 (abstract
+read): the abelian surface is the Fano variety of P^4's of the Coble cubic and each P^4 cuts it in a theta divisor.
+Dimca, Betti numbers of hypersurfaces and defects of linear systems, Duke Math. J. 60 (1990) (degree of the linear
+system as quoted in Kloosterman, arXiv:1612.06726, Theorem 2.5). Siersma, Tibar, Singularities at infinity and their
+vanishing cycles, Duke Math. J. 80 (1995); Parusinski (1995). Addington, Hassett, Tschinkel, Varilly-Alvarado
+(C_18). Nodal hyperplane sections and defect as the source of special classes are classical in dimension 4 (cubic
+fourfolds with a 6-nodal hyperplane section and cubic scrolls); we found no source for cubic tenfolds or for Coble
+cubics in this role (search not exhaustive).
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/ (Macaulay2 1.22; seconds each unless noted):
+    M2 --script h1_nodal_section.m2 32003 1 coble          (add a 5th argument "full" for the P^10 Jacobian, 3 min)
+    M2 --script h1_nodal_section.m2 32003 1 ft
+    M2 --script h2_same_ruling.m2 32003 2
+    M2 --script h3_ft_limit.m2 32003 1
+    M2 --script h4_ladder_inputs.m2 32003 1
+    M2 --script h5c_cycle_sampling.m2 32003 1 260           (1.5 min)
+```
+
+**Next step.**
+
+A one-page note for a mathematician with arguments A and B (the owner decides whether to send it). If wanted before
+that: exact arithmetic for the node counts; the sign of c from the planes of V at a node of an F_T point.
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), second part; leads/TENFOLD_COBLE_LEAD.md section 10.

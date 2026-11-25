@@ -1,0 +1,9 @@
+mode ft ; a = 0
+Sing(Y): dim 2 degree 19
+H1: Sigma = Sing(Y) ∩ {Psi1=Psi2=0}: dim 0 degree 76 ; (degree of projection to a line, squarefree) = (76, true)
+H2: Hilbert function of Sigma, d = 1..6: {9, 34, 64, 75, 76, 76}
+    defect = degree - HF(4) = 1
+    control (linear ∩ quadric section, 38 points): degree - HF(4) = 0
+    (ft) components of Sing(Y): {(2, 1), (2, 18)}
+    (ft) nodes on the component of degree 1: 4 ; HF(4) = 4
+    (ft) nodes on the component of degree 18: 72 ; HF(4) = 71

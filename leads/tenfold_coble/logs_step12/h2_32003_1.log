@@ -1,0 +1,13 @@
+type B plane: solution set dim 0 degree 1 ; v+ = {-5100, 13152, -4183, -3909, 1}
+sigma preserves F: true
+F vanishes on P: true
+g = sigma^1 : F vanishes on gP: true ; gP = P: false
+   H3: projective dimension of P ∩ gP = 1 (degree 1)
+   (P ∩ gP) ∩ A: dim 0 degree 2
+   the line meets A where s^2+8784*s+13003 = 0 ; factors: (s^2+8784*s+13003)
+   H3b at a point of degree 2: rank Hess = 6 ; dim T_pA = 6 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)
+g = sigma^2 : F vanishes on gP: true ; gP = P: false
+   H3: projective dimension of P ∩ gP = 1 (degree 1)
+   (P ∩ gP) ∩ A: dim 0 degree 2
+   the line meets A where s^2+13937*s+6219 = 0 ; factors: (s^2+13937*s+6219)
+   H3b at a point of degree 2: rank Hess = 6 ; dim T_pA = 6 ; dim span(P,TA) = 6 ; dim span(gP,TA) = 6 ; isotropic for the tangent cone: true true ; affine dim of the intersection of the spans = 4 (4 = same ruling, 5 = different)

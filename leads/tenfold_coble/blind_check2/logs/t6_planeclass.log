@@ -1,0 +1,14 @@
+MODE ft p=32003 seed=1 lam=-11738 x={14651, -3125, -9521} a=0
+det B(z*) = -14524
+T: affine dim 3 (3 = surface), degree 6; T inside the quadric Q_z? true
+trial 0: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+trial 1: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+trial 2: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+two planes of family A meet in affine dim 1 (1 = a point, as expected for the same family in Q^4)
+MODE ft p=31991 seed=2 lam=-14302 x={-332, -4136, 10089} a=0
+det B(z*) = -4656
+T: affine dim 3 (3 = surface), degree 6; T inside the quadric Q_z? true
+trial 0: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+trial 1: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+trial 2: plane A in quadric? true, plane B in quadric? true; dim(A ∩ B) affine = 0; T.A: affine dim 1 degree 3; T.B: affine dim 1 degree 3
+two planes of family A meet in affine dim 1 (1 = a point, as expected for the same family in Q^4)

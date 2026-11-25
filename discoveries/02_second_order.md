@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (11)
+## Entries on this page (12)
 
 | id | status | title |
 |---|---|---|
@@ -23,6 +23,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-CUBIC-SIXFOLD-DETC](#d-cubic-sixfold-detc) | `PROVED_AI_UNREVIEWED` | Cubic sixfolds, two 3-planes meeting in a point: Hessian = nu * det C * ((lambda-1)/lambda) * A^2 |
 | [D-CUBIC-EIGHTFOLD-INVARIANT](#d-cubic-eightfold-invariant) | `PROVED_AI_UNREVIEWED` | Cubic eightfolds (4-planes meeting in a line) and sixfolds (3-planes meeting in a line): the invariant D |
 | [D-SURFACES-DISJOINT-CURVES](#d-surfaces-disjoint-curves) | `PROVED_AI_UNREVIEWED` | Disjoint complete-intersection curves on surfaces (tau = 0, c = 2): law (r+1)/r, special coefficient -1 |
+| [D-TENFOLD-COBLE-ARC-ORDERS](#d-tenfold-coble-arc-orders) | `MOD_P` | Tenfold lead: the explicit arc of the Coble family through a point of F_T satisfies the Hodge condition for [V] exactly at orders 2 and 3 (prescribed terms, no freedom; MOD p) |
 
 ## Related entries on other pages
 
@@ -842,3 +843,66 @@ and the values obey the factor (lambda + 1)/lambda.
 
 deliverables/hodge_loci_session/papers/paper2.tex; LEDGER.md "OCTIC SURFACES", "REFEREE 6", "REFEREE 7", "REFEREE
 6b", "REFEREE 8", "REFEREE 9".
+
+---
+
+## D-TENFOLD-COBLE-ARC-ORDERS
+
+**Tenfold lead: the explicit arc of the Coble family through a point of F_T satisfies the Hodge condition for [V] exactly at orders 2 and 3 (prescribed terms, no freedom; MOD p)**
+
+kind: `result` | area: `second_order` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+At a point of F_T (x on the curve h_lam(x) = 0, a = 0; tenfold F = F_8 + sum_k w_k (random quadric)) the family
+D-TENFOLD-COBLE-FAMILY gives the exact polynomial arc F_t = F + tA + t^2 g2 + t^3 g3, x(t) = x + t dx, lam and the
+w-part fixed, a(t) = -h_lam(x + t dx)/(27(1+lam^3)) = t a1 + t^2 a2 + t^3 a3, A = M_dx + a1 h_lam(z),
+g2 = a2 h_lam(z), g3 = a3 h_lam(z). With pi, psi, psi3 the periods of [V] of pole order 6, 7, 8, the Hodge condition
+for the flat class is, for all 364 cubic monomials Q,
+    E2: pi(Q g2) = 3 psi(Q A^2),      E3: pi(Q g3) = 6 psi(Q A g2) - 7 psi3(Q A^3).
+Pre-registered (leads/tenfold_coble/PREREG_step2.md) as exact identities with prescribed g2, g3; the earlier
+SO-T6 / SO3-T6 runs of O-TENFOLD-CONE-LEAD tested only solvability for some g2, g3.
+Results (MOD p): E2 holds for all 364 Q for dx transversal to F_T (32003, seed 1) and for dx tangent to F_T
+(a1 = 0; 31991, seed 2), 165 non-zero entries on each side; controls a2 -> 2 a2 and a2 -> 0 fail. E3 holds for all
+364 Q for dx transversal (32003, seed 1; 36 minutes), 165 non-zero entries on each side; controls a3 -> 2 a3 and
+a3 -> 0 fail. The same at 31991, seed 2 (dx transversal): E2 and E3 hold for all 364 Q; the controls fail.
+So the relation 27(1+lam^3) a + h_lam(x) = 0 is correct to third order in x at the tested points.
+```
+
+**Conditions.**
+
+MOD p, the listed instances; finite order (evidence, not proof). The periods psi, psi3 are computed by the previous
+agent's engine (so_t6/solib.m2, so3_t6/o3lib.m2, unchanged), whose characterisation (psi_m vanishes on I_V^m,
+Griffiths-Dwork reduction) is ARG in O-TENFOLD-CONE-LEAD.
+
+**Evidence.** leads/tenfold_coble/s2_arc_orders.m2, PREREG_step2.md; leads/TENFOLD_COBLE_LEAD.md section 10.6.
+
+**Independent check.**
+
+Blind check BC-COBLE-2, item T7 (same agent as in D-TENFOLD-COBLE-CYCLE-CLASS): E2 with its own implementation,
+which does not use so_t6/solib.m2 or so3_t6/o3lib.m2: psi is determined by psi((w)^2) = 0 and the Griffiths-Dwork
+rule, solved as overdetermined linear systems on the degree-7 Macaulay matrix (python-flint; all equations verified,
+0 violated of about 1.1 million; psi then vanishes on the rest of (I_V^2)_9 as a check), with 18 values cross-checked
+by Groebner division in Macaulay2. E2 holds for all 364 Q at 5 instances (32003 seeds 1, 2; 31991 seeds 1, 2; one
+instance generated in Python): for the 165 Q without w the ratio 3 psi(Q A^2)/pi(Q h_lam(z)) is one number, equal
+to a2 (2686 and 6458 at the two instances also run here); with 2 a2 or 0 none of the 165 agree; the other Q give
+0 = 0. E3 (order 3) was NOT blind-checked: it was run here at two primes with the same engine (o3lib.m2).
+
+**Not established.** Orders >= 4; exact arithmetic; an implementation of psi3 independent of o3lib.m2 for E3.
+
+**Known before.**
+
+The order-2 and order-3 period engine and the solvability results: previous agent (O-TENFOLD-CONE-LEAD, SO-T6,
+SO3-T6, blind checks BC-SO, BC-SO3).
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/ (needs ../tenfold_session_scripts/so_t6/solib.m2 and so3_t6/o3lib.m2):
+    M2 --script s2_arc_orders.m2 32003 1 T          (order 2, 4 min)
+    M2 --script s2_arc_orders.m2 31991 2 N          (order 2, tangent direction)
+    M2 --script s2_arc_orders.m2 32003 1 T 3        (orders 2 and 3, 36 min, 2.7 GB)
+```
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), second part.

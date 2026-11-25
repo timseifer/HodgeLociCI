@@ -1,0 +1,16 @@
+h_lam(x) = 0 ; F in I_V: true ; dim V = 5 degree 6
+m0 = q_2^6 ; rank of the first-order pairing = 54 (codim of T NL; 54 expected) 14s
+mode T : (a1, a2, a3) = (10773,6458,12835) ; expansion check at t = 1, 2, 5: (true,true,true)
+E1: pi(Q A) = 0 for all Q: true ; pi(Q h_lam(z)) = 0 for all Q (must be false for the controls to have power): false
+engine setup: m0 true, PiT == Pi6: true 26s
+psi(c m0) for the cubic generators: {-13949, -3126} 43s
+E2: 3 psi(Q A^2): nonzero entries 165 of 364 ; pi(Q g2): nonzero entries 165
+RESULT E2 (pi(Q g2) = 3 psi(Q A^2) for all 364 Q): true   225s
+   controls: a2 -> 2 a2: false ; a2 -> 0: false ; solvable for some g2 at all: true
+E2 T p 31991 seed 2 : true ; controls false false
+psi(Q A g2) done 389s
+psi3(Q A^3) done; keys {1} 2153s
+E3: 6 psi(Q A g2) - 7 psi3(Q A^3): nonzero 165 of 364 ; pi(Q g3): nonzero 165
+RESULT E3 (pi(Q g3) = 6 psi(Q A g2) - 7 psi3(Q A^3) for all 364 Q): true   2153s
+   controls: a3 -> 2 a3: false ; a3 -> 0: false ; solvable for some g3: true
+E3 T p 31991 seed 2 : true ; controls false false

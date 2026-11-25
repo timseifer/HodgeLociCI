@@ -1,0 +1,9 @@
+Run "M2 --script t0_setup.m2 32003 1 coble" (screen output, 359 s CPU):
+MODE coble p=32003 seed=1 lam=14651 x={-3125, -9521, -2716} a=15264
+dim J (affine) = 3  degree J = 18
+hilbertPolynomial R/J = 9i^2
+dim (J + 4 random compressed 6x6 minors of Hessian) (affine) = 0
+Jsat numgens by degree: Tally{2 => 9, 3 => 3}
+Jsat == J ? false
+random compressed 7x7 minor in Jsat? true
+HF(R/Jsat, 0..6) = {1, 9, 36, 81, 144, 225, 324}

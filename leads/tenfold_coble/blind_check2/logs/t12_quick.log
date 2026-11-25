@@ -1,0 +1,32 @@
+MODE coble p=32003 seed=2 lam=-344 x={-4148, 10089, -14026} a=-6534
+T1: Sigma: affine dim = 1, degree = 72
+T2: HF of Sigma (saturated ideal), degrees 0..8: {1, 9, 34, 63, 71, 72, 72, 72, 72}
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 1, 4, 5, 15, 47}
+   time 9.1552
+MODE coble p=31991 seed=1 lam=14651 x={-3113, -9509, -2704} a=890
+T1: Sigma: affine dim = 1, degree = 72
+T2: HF of Sigma (saturated ideal), degrees 0..8: {1, 9, 34, 63, 71, 72, 72, 72, 72}
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 2, 2, 2, 32, 34}
+   time 8.92579
+MODE coble p=31991 seed=2 lam=-332 x={-4136, 10089, -14014} a=-1145
+T1: Sigma: affine dim = 1, degree = 72
+T2: HF of Sigma (saturated ideal), degrees 0..8: {1, 9, 34, 63, 71, 72, 72, 72, 72}
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 2, 2, 3, 9, 56}
+   time 8.80028
+MODE coble p=32003 seed=3 lam=-2221 x={-11199, -12014, -6276} a=4975
+T1: Sigma: affine dim = 1, degree = 72
+T2: HF of Sigma (saturated ideal), degrees 0..8: {1, 9, 34, 63, 71, 72, 72, 72, 72}
+T2: degree of saturated ideal = 72
+T1: projection of Sigma to a random line: binary form of degree 72, numgens ker = 1
+T1: gcd(G, dG/ds) degree = 0  (0 => 72 distinct geometric points)
+T1: factor degrees of G over kk: {0, 1, 11, 29, 31}
+   time 9.22023
