@@ -5560,6 +5560,176 @@
   session_refs: |-
     LEDGER_DISCOVERY.md "[SS-T6]" (25 Nov, PRE to CLOSE 14:43Z).
 
+- id: D-TENFOLD-COBLE-FAMILY
+  kind: result
+  area: explicit_cycles
+  title: "Tenfold lead: an explicit codim-54 family through F_T (P^8-section a Coble cubic); first-order Hodge locus of its class = the family; tangent to NL([V]) along F_T in the extra direction"
+  statement: |-
+    Family (25 Nov 2026). In P^8 with coordinates z, p, q (three blocks of three, indices mod 3) let
+    h_lam(v) = v0^3 + v1^3 + v2^3 + 3 lam v0 v1 v2, M_x(z,p,q) = sum_{i,j} z_{i+j} x_{i-j} p_i q_j, and
+        F#(z,p,q) = a h_lam(z) + b h_lam(p) + c h_lam(q) + M_x(z,p,q),    27 (1 + lam^3) a b c + h_lam(x) = 0.
+    W# = {cubic tenfolds X with a P^8-section projectively equivalent to some F# = 0}. a = 0 forces h_lam(x) = 0 and
+    gives X n P^8 = h_lam(p) + h_lam(q) + M_x, which contains V = J(Pi, T): that is F_T. Three moduli against two.
+    Computed, pre-registered (N1-N4; b = c = 1; MOD 32003 and 31991, 3 members and 3 points of F_T; EXACT over QQ at the
+    member x = (4,3,3), lam = 3 (a = -221/378) and at the point of F_T x = (4,3,3), lam = -59/54):
+    (N1) Sing(F# = 0) is a surface of degree 18 with Hilbert polynomial 9 n^2, on 9 quadrics. Controls: a -> 2a gives
+    a smooth cubic sevenfold; a -> 0 with x generic gives only a plane.
+    (N2) With three random quadrics Phi (the w-derivatives of a tenfold through the section), A = k[z,p,q]/(dF#, Phi)
+    has Hilbert function (1, 9, 33, 57, 39, 9, 1); the pairing A_3 x A_3 -> A_6 has rank 54.
+    (N3) The kernel of that pairing is the ideal part plus the four derivatives of F# along the family (a moving with x
+    and lam). So the tangent space of W# has codimension 54 and equals the first-order Hodge locus of the class
+    functional supported on the section. Controls (z-cubic coefficient doubled; pure tensor move; h_lam(z) alone) fail.
+    (N4) At points of F_T the same derivatives lie in the kernel of the pairing of [V] (Hilbert function
+    (1, 9, 33, 57, 42, 12, 1), rank 54); the combination tangent to the curve h_lam(x) = 0 has no z-cubic; the
+    transversal one is the extra direction: G_e = M_dx - (grad h_lam(x).dx / (27 (1 + lam^3))) h_lam(z), coefficient
+    exact (the doubled coefficient fails).
+    (P4, MOD 32003, one member) The member contains a 4-plane meeting Sing in a curve with Hilbert polynomial 6n - 1
+    (a genus-2 sextic); h^0 of its normal bundle in the cubic sevenfold is 2. At a point of F_T, Sing = a plane + a
+    surface of degree 18, and a 4-plane J(Pi, ruling) of V meets Sing in the plane and a twisted cubic.
+    (EXACT algebra, by hand) For a = b = c the relation becomes the Burkhardt quartic
+    y0^4 - y0 (y1^3+y2^3+y3^3+y4^3) + 3 y1 y2 y3 y4 = 0 under a = t y0, lam a = -t y1, x = -3t (y2,y3,y4); block
+    scalings reduce every member to a = b = c. The 3x3 determinant is the member lam -> infinity, x a coordinate point.
+  status: MOD_P
+  conditions: |-
+    MOD p at the listed instances, EXACT over QQ at one member and one point of F_T; first order only. The identification
+    of the members with Coble cubics rests on N1, the Burkhardt identity and LIT; irreducibility and smoothness of the
+    degree-18 surface were not checked. AI-generated, not reviewed by a mathematician. Not a statement about the Hodge
+    conjecture: if the ARG under not_established holds, the class is algebraic on the family.
+  evidence: |-
+    Scripts in leads/tenfold_coble/ (n1_candidate_family.m2, n1_candidate_family_exact.m2, p4b_theta_planes.m2,
+    p4c_ft_planes.m2); derivation and discussion in leads/TENFOLD_COBLE_LEAD.md, sections 5-6. The relation was derived
+    from D-TENFOLD-PRODUCT-POINTS (identity K3) before any of N1-N4 was run.
+  independent_check: |-
+    Blind check BC-COBLE (25 Nov 2026; a separate agent given only the definitions and the statements; own Macaulay2
+    and Python code; it did not see the scripts or the derivation). N1: PASS at 6 instances (2 primes x 3), and more:
+    the surface is smooth (2 instances), unmixed, with h^0(O) = 1, h^1(O) = 2, h^2(O) = 1 (5 instances); its saturated
+    ideal is the 9 partial derivatives plus 3 cubics. Controls PASS (at a = 0, x generic, the singular scheme is a
+    non-reduced structure on the plane). N2, N3: PASS at 8 instances (6 Macaulay2, 2 Python), with the finding that the
+    four family derivatives lie in the saturated ideal of the singular surface and that the kernel is (that ideal)_3 +
+    I_3, independent of Phi. N4: PASS at 8 instances. Burkhardt identity: PASS, exact (sympy); the substitution is unique
+    up to rescaling t. NOT blind-checked: the 4-plane runs (P4), the exact runs over QQ, and the class argument (ARG).
+    Checker's caveats: modular evidence at a handful of points; primality of the surface ideal only indirectly (isPrime
+    did not finish); Macaulay2 instances with the same seed at the two primes are correlated (the Python runs are not).
+  not_established: |-
+    (ARG, not checked) That the continuation of [V] is Hodge on all of W#. Argument: a Coble cubic contains the 4-planes
+    spanned by the theta curves of the abelian surface A (genus-2 sextics; secant threefold of degree 8 inside a cubic);
+    Z_Theta = union of the 4-planes over a theta curve is a 5-fold of degree 12; cycle classes from the section have
+    functionals in the dual of A_6 (one-dimensional), so the cylinder map H^2(A) -> H^10(X) factors through the
+    polarization for general A; specializing to F_T, [Z_Theta] -> 2 [V]. Then W# is in NL([V]), has the dimension of its
+    tangent space, and is the codim-54 component W of O-TENFOLD-CONE-LEAD, with (1/2)[Z_Theta] the class. Weak steps:
+    the specialization of the family of 4-planes to F_T, and that V = Z_sigma there. Also not established: anything
+    beyond first order at a general member; that W# is the registry's W at the Fermat point (ARG: same closure,
+    determinant limit); exact arithmetic at more points.
+  known_before: |-
+    Coble (1917); Beauville, The Coble hypersurfaces, C. R. Acad. Sci. Paris 337 (2003), Proposition (unique cubic in P^8
+    singular along the abelian surface; read in the arXiv version math/0306097); Ren, Sam, Schrader, Sturmfels,
+    arXiv:1303.1132 (Coble cubics parametrized by the Burkhardt quartic; snippet read); Gruson, Sam, arXiv:1301.5276
+    (Theorem 3.6: the abelian surface as a Fano variety of the Coble cubic; degenerations; only the introduction
+    machine-read); Gruson, Sam, Weyman, arXiv:1203.2575. We found no source relating Coble cubics to Hodge loci of cubic
+    tenfolds (search not exhaustive). The lead, the numbers 54 / 55 and the excluded constructions: O-TENFOLD-CONE-LEAD,
+    N-TENFOLD-CODIM54-SEARCH, N-TENFOLD-CODIM54-SEARCH-2, N-TENFOLD-DIRECT-METHODS, N-TENFOLD-SINGULAR-SECTIONS (whose
+    next step, sections singular along a non-planar surface, is what this entry does). rStation papers #5 and #11
+    (u/lelong_ridge, Oct 2026) for the open question of a component of slice dimension > 155.
+  reproduce: |-
+    From leads/tenfold_coble/ (Macaulay2 1.22; 20 s each MOD p, minutes over QQ):
+        M2 --script n1_candidate_family.m2 32003 1 coble
+        M2 --script n1_candidate_family.m2 32003 1 ft
+        M2 --script n1_candidate_family_exact.m2 1 coble
+        M2 --script p4b_theta_planes.m2 32003 1
+  next_step: |-
+    (1) Replace the class ARG by a computation (intersection count of Z_f with T' in a cubic fourfold section at a point
+    of F_T: 18 expected; or the cylinder map by residues). (2) Orders 2 and 3 along the explicit arc at a point of F_T
+    with the so3_t6 machinery. (3) Exact arithmetic at a second member; irreducibility of the surface. (4) Read
+    Gruson-Sam sections 3-4 and match the boundary types. (5) A one-page note for a mathematician (owner decides).
+  session_refs: |-
+    Session of 25 Nov 2026 (Claude Fable 5.2, chat); leads/TENFOLD_COBLE_LEAD.md.
+
+- id: D-TENFOLD-PRODUCT-POINTS
+  kind: result
+  area: movasati_conjecture
+  title: "Tenfold lead: exact structure at product points C(w,z) + c_1(p) + c_2(q); the cubic model is a determinant; two period identities on the rank-one locus"
+  statement: |-
+    (a) Framework (PROVED, AI, unreviewed; short): a cubic tenfold has h^{7,3} = 1, so for an integral class delta the
+    Hodge locus is the critical locus of W_delta(F) = int_delta Res(Omega/F^4) (Euler relation), with Hessian
+    delta(HK) on R_3. Near a general point of F_T (one extra kernel direction t) the reduced function is t^N h(t,s) or 0:
+    either a smooth codim-54 component with tangent T F_T + G_e, or F_T with multiplicity N-1 and G_e obstructed at
+    order N-1 (N >= 5 by the registry's orders 2 and 3, MOD p).
+    (b) Product points X_0 = C(w,z) + c_1(p) + c_2(q), C a cubic fourfold containing Pi = {w = 0}, c_1, c_2 isomorphic
+    plane cubics, class [J(Pi, T_phi)] (EXACT, by hand, from the tensor decomposition of the Jacobian ring): Hessian rank
+    38, kernel 182, normal kernel to the cone locus = the 27 directions z_k p_i q_j. Periods multiply:
+    W(F_0 + H) = (beta x gamma)(exp(-H)); on the elliptic side << S (x) T >> = div(S) pi(T) - pi(S) div(T).
+    (c) Cubic term on tensors (EXACT, by hand, for c_1 = c_2 = h_lam; ratio 1/3 checked MOD p): Delta(M) =
+    f_beta(nu(M(z))) with nu(B) = -2 det(B'), B'_{(i+j),(i-j)} = b_ij. Its critical cones are the two Segre cones of
+    rank-one B' (dimension 11): tensors alpha X_1 + beta X_2 + gamma X_3 in Hesse form with (alpha:beta:gamma) free; F_T
+    is the curve h_lam(alpha,beta,gamma) = 0. Hessian corank at Hesse tensors 11 = 10 + 1 (MOD 32003, 31991; 3 runs),
+    the registry's 16 = 27 - 11.
+    (d) Period identities for rank-one B' = u (x) x, x not on the curve (MOD p): K1 << exp(-B) >> = 0 through degree 18
+    (32003) and 15 (31991); K3 << p0p1p2 exp(-B) >> = -exp(-c) through degree 12 (both primes), with
+    c = h_lam(x) h_lam(u) / (27 (1 + lam^3)) (cubic term EXACT, symbolic over QQ(lam)). Controls: generic B nonzero;
+    rank two nonzero, its degree-6 term depending only on the adjugate.
+    (e) First order at a general point of F_T in nine variables: S/(I_V + J) = k[z,p,q]/(I_V8, dF_8/dp, dF_8/dq, Phi);
+    Hilbert function (1, 9, 33, 57, 42, 12, 1), pairing rank 54 (MOD 32003, 31991): the registry's 54 by a 20-second
+    computation. With a mu_3-graded completion the extra direction is invariant and has a z-cubic component.
+  status: PAPER_ARGUMENT_AI
+  conditions: |-
+    (a), (b), (c) are hand derivations by an AI, read once; numbers MOD p as stated. K1 and K3 have no proof. The class at
+    the product points is [Pi] x [graph], which at the Fermat fourfold is not Movasati's class [P1] - [P2] (different
+    annihilator in degree 2); the Fermat-point computations of O-TENFOLD-CONE-LEAD are not re-derived here.
+  evidence: |-
+    leads/TENFOLD_COBLE_LEAD.md sections 1-4; scripts leads/tenfold_coble/c1_general_point.m2, c1b_graded_completion.m2,
+    d1_cubic_model.m2, k1_rank_one_vanishing.m2, k2_rank_two.m2, k3_exponential.m2, s1_closed_form_c.m2.
+  independent_check: |-
+    The same blind check (BC-COBLE): K1 PASS for m <= 5 and K3 PASS for m <= 4 at 12 rank-one instances (own Python
+    implementation, two primes), with the alternatives c -> -c, 2c and c without its denominator rejected;
+    nu = -2 det(B') confirmed at 24 instances and by hand. NOT blind-checked: (a), (b), the corank 11 in (c), and (e)
+    (which reproduces the 54 of O-TENFOLD-CONE-LEAD by another route and so is itself a cross-check of that entry).
+  not_established: |-
+    Proofs of K1 and K3; a geometric reason for them (the expected one is D-TENFOLD-COBLE-FAMILY); the reduced potential
+    beyond the cubic term; that product points are general enough for conclusions about W.
+  known_before: |-
+    Thom-Sebastiani / Shioda-Katsura structure of sums: rStation #11 (u/lelong_ridge) and classical; Griffiths residues;
+    3x3x3 tensors and elliptic curves (Hesse normal form, classical); the superpotential description of Hodge loci for
+    Calabi-Yau fourfolds is standard in the physics literature (not checked against a source). The numbers 38, 27, 16,
+    54: O-TENFOLD-CONE-LEAD (at the Fermat point and at random points of F_T).
+  reproduce: |-
+    From leads/tenfold_coble/:
+        M2 --script c1_general_point.m2 32003 1
+        M2 --script d1_cubic_model.m2 32003 1
+        M2 --script k1_rank_one_vanishing.m2 32003 2 6
+        M2 --script k3_exponential.m2 32003 7 4
+        M2 --script s1_closed_form_c.m2
+  session_refs: |-
+    Session of 25 Nov 2026 (Claude Fable 5.2, chat); leads/TENFOLD_COBLE_LEAD.md.
+
+- id: N-TENFOLD-THIRD-DETERMINANT
+  kind: negative
+  area: movasati_conjecture
+  title: "Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor'"
+  statement: |-
+    Pre-registered (25 Nov 2026). T is given by a 3x3x3 tensor M; the section of a general X in F_T is
+    M(z,p,q) + b e_1(p) + c e_2(q) with e_1, e_2 the determinant cubics. Hypothesis: W is obtained by adding
+    a e_0(z), e_0 = det M(z,.,.) (a 3-moduli family). At random points of F_T, e_0(z) is not in the kernel of the pairing
+    of [V] (MOD 32003, 31991; general and graded completions): dead at first order. The family that passes the same test
+    (D-TENFOLD-COBLE-FAMILY) has the cubics in the Hesse pencils of e_0, e_1, e_2 with one relation, not the e_i themselves.
+  status: RULED_OUT
+  conditions: |-
+    First order, MOD p, the named family only.
+  evidence: |-
+    leads/tenfold_coble/c1_general_point.m2 (line H1), c1b_graded_completion.m2.
+  independent_check: |-
+    None (a negative at first order; the positive counterpart D-TENFOLD-COBLE-FAMILY was blind-checked).
+  not_established: |-
+    n/a
+  known_before: |-
+    n/a
+  reproduce: |-
+    From leads/tenfold_coble/:
+        M2 --script c1_general_point.m2 32003 1
+  do_not_repeat: |-
+    Adding the determinant cubic of the tensor in the vertex variables with a free coefficient.
+  session_refs: |-
+    Session of 25 Nov 2026 (Claude Fable 5.2, chat).
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture
@@ -5704,6 +5874,10 @@
     Generic Fermat arcs at this point (obstructed at order 4); rank-2/3 normal directions to Cone_d (order 4); reading
     a fermatExtendArc obstruction at order > 4 here as final without testing removability (order 5 was removable).
   next_step: |-
+    RESUMED 25 Nov 2026 with a candidate explanation: D-TENFOLD-COBLE-FAMILY (cubic tenfolds with a P^8-section that
+    is a Coble cubic; codim 54; first order MOD p and EXACT at two points; the class statement is ARG) and
+    D-TENFOLD-PRODUCT-POINTS. This entry stays OPEN until the class argument is replaced by a computation and a
+    mathematician has looked at it; next steps are listed there. Earlier text follows.
     PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
     explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS; a later singular-section test,
     N-TENFOLD-SINGULAR-SECTIONS, also explains nothing). The lead stands as an open

@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (14)
+## Entries on this page (15)
 
 | id | status | title |
 |---|---|---|
@@ -26,6 +26,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-SEGRE-FOURFOLD](#d-segre-fourfold) | `MOD_P` | Segre fourfold P^2 x P^2 in a cubic eightfold: 27 conditions to contain it, Hodge locus of codimension 26 |
 | [D-CONE-DICTIONARY](#d-cone-dictionary) | `PAPER_ARGUMENT_AI` | Cone-type points: classes r P1 + s P2 are cones over classes of discriminant 8r^2 - 2rs + 8s^2 on cubic fourfolds |
 | [D-CYCLE-CONSTRAINTS-OTHER-LAMBDA](#d-cycle-constraints-other-lambda) | `MOD_P` | Constraints on any cycle carrying the class for lambda = 2, 1/2, -2, 3, 5/3: spans P^7, lies on no extra quadric |
+| [D-TENFOLD-COBLE-FAMILY](#d-tenfold-coble-family) | `MOD_P` | Tenfold lead: an explicit codim-54 family through F_T (P^8-section a Coble cubic); first-order Hodge locus of its class = the family; tangent to NL([V]) along F_T in the extra direction |
 
 ## Related entries on other pages
 
@@ -979,3 +980,111 @@ support T of a cycle then L * P_T = 0 in the Jacobian ring and the tangent codim
 **Reproduce.** not reproducible from this repository: see D-RANK-INVARIANT.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[T2] 04:20Z", "[T2] 04:21Z", "[T3] 16:30Z", "[T3] 16:33Z".
+
+---
+
+## D-TENFOLD-COBLE-FAMILY
+
+**Tenfold lead: an explicit codim-54 family through F_T (P^8-section a Coble cubic); first-order Hodge locus of its class = the family; tangent to NL([V]) along F_T in the extra direction**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Family (25 Nov 2026). In P^8 with coordinates z, p, q (three blocks of three, indices mod 3) let
+h_lam(v) = v0^3 + v1^3 + v2^3 + 3 lam v0 v1 v2, M_x(z,p,q) = sum_{i,j} z_{i+j} x_{i-j} p_i q_j, and
+    F#(z,p,q) = a h_lam(z) + b h_lam(p) + c h_lam(q) + M_x(z,p,q),    27 (1 + lam^3) a b c + h_lam(x) = 0.
+W# = {cubic tenfolds X with a P^8-section projectively equivalent to some F# = 0}. a = 0 forces h_lam(x) = 0 and
+gives X n P^8 = h_lam(p) + h_lam(q) + M_x, which contains V = J(Pi, T): that is F_T. Three moduli against two.
+Computed, pre-registered (N1-N4; b = c = 1; MOD 32003 and 31991, 3 members and 3 points of F_T; EXACT over QQ at the
+member x = (4,3,3), lam = 3 (a = -221/378) and at the point of F_T x = (4,3,3), lam = -59/54):
+(N1) Sing(F# = 0) is a surface of degree 18 with Hilbert polynomial 9 n^2, on 9 quadrics. Controls: a -> 2a gives
+a smooth cubic sevenfold; a -> 0 with x generic gives only a plane.
+(N2) With three random quadrics Phi (the w-derivatives of a tenfold through the section), A = k[z,p,q]/(dF#, Phi)
+has Hilbert function (1, 9, 33, 57, 39, 9, 1); the pairing A_3 x A_3 -> A_6 has rank 54.
+(N3) The kernel of that pairing is the ideal part plus the four derivatives of F# along the family (a moving with x
+and lam). So the tangent space of W# has codimension 54 and equals the first-order Hodge locus of the class
+functional supported on the section. Controls (z-cubic coefficient doubled; pure tensor move; h_lam(z) alone) fail.
+(N4) At points of F_T the same derivatives lie in the kernel of the pairing of [V] (Hilbert function
+(1, 9, 33, 57, 42, 12, 1), rank 54); the combination tangent to the curve h_lam(x) = 0 has no z-cubic; the
+transversal one is the extra direction: G_e = M_dx - (grad h_lam(x).dx / (27 (1 + lam^3))) h_lam(z), coefficient
+exact (the doubled coefficient fails).
+(P4, MOD 32003, one member) The member contains a 4-plane meeting Sing in a curve with Hilbert polynomial 6n - 1
+(a genus-2 sextic); h^0 of its normal bundle in the cubic sevenfold is 2. At a point of F_T, Sing = a plane + a
+surface of degree 18, and a 4-plane J(Pi, ruling) of V meets Sing in the plane and a twisted cubic.
+(EXACT algebra, by hand) For a = b = c the relation becomes the Burkhardt quartic
+y0^4 - y0 (y1^3+y2^3+y3^3+y4^3) + 3 y1 y2 y3 y4 = 0 under a = t y0, lam a = -t y1, x = -3t (y2,y3,y4); block
+scalings reduce every member to a = b = c. The 3x3 determinant is the member lam -> infinity, x a coordinate point.
+```
+
+**Conditions.**
+
+MOD p at the listed instances, EXACT over QQ at one member and one point of F_T; first order only. The identification
+of the members with Coble cubics rests on N1, the Burkhardt identity and LIT; irreducibility and smoothness of the
+degree-18 surface were not checked. AI-generated, not reviewed by a mathematician. Not a statement about the Hodge
+conjecture: if the ARG under not_established holds, the class is algebraic on the family.
+
+**Evidence.**
+
+Scripts in leads/tenfold_coble/ (n1_candidate_family.m2, n1_candidate_family_exact.m2, p4b_theta_planes.m2,
+p4c_ft_planes.m2); derivation and discussion in leads/TENFOLD_COBLE_LEAD.md, sections 5-6. The relation was derived
+from D-TENFOLD-PRODUCT-POINTS (identity K3) before any of N1-N4 was run.
+
+**Independent check.**
+
+Blind check BC-COBLE (25 Nov 2026; a separate agent given only the definitions and the statements; own Macaulay2
+and Python code; it did not see the scripts or the derivation). N1: PASS at 6 instances (2 primes x 3), and more:
+the surface is smooth (2 instances), unmixed, with h^0(O) = 1, h^1(O) = 2, h^2(O) = 1 (5 instances); its saturated
+ideal is the 9 partial derivatives plus 3 cubics. Controls PASS (at a = 0, x generic, the singular scheme is a
+non-reduced structure on the plane). N2, N3: PASS at 8 instances (6 Macaulay2, 2 Python), with the finding that the
+four family derivatives lie in the saturated ideal of the singular surface and that the kernel is (that ideal)_3 +
+I_3, independent of Phi. N4: PASS at 8 instances. Burkhardt identity: PASS, exact (sympy); the substitution is unique
+up to rescaling t. NOT blind-checked: the 4-plane runs (P4), the exact runs over QQ, and the class argument (ARG).
+Checker's caveats: modular evidence at a handful of points; primality of the surface ideal only indirectly (isPrime
+did not finish); Macaulay2 instances with the same seed at the two primes are correlated (the Python runs are not).
+
+**Not established.**
+
+(ARG, not checked) That the continuation of [V] is Hodge on all of W#. Argument: a Coble cubic contains the 4-planes
+spanned by the theta curves of the abelian surface A (genus-2 sextics; secant threefold of degree 8 inside a cubic);
+Z_Theta = union of the 4-planes over a theta curve is a 5-fold of degree 12; cycle classes from the section have
+functionals in the dual of A_6 (one-dimensional), so the cylinder map H^2(A) -> H^10(X) factors through the
+polarization for general A; specializing to F_T, [Z_Theta] -> 2 [V]. Then W# is in NL([V]), has the dimension of its
+tangent space, and is the codim-54 component W of O-TENFOLD-CONE-LEAD, with (1/2)[Z_Theta] the class. Weak steps:
+the specialization of the family of 4-planes to F_T, and that V = Z_sigma there. Also not established: anything
+beyond first order at a general member; that W# is the registry's W at the Fermat point (ARG: same closure,
+determinant limit); exact arithmetic at more points.
+
+**Known before.**
+
+Coble (1917); Beauville, The Coble hypersurfaces, C. R. Acad. Sci. Paris 337 (2003), Proposition (unique cubic in P^8
+singular along the abelian surface; read in the arXiv version math/0306097); Ren, Sam, Schrader, Sturmfels,
+arXiv:1303.1132 (Coble cubics parametrized by the Burkhardt quartic; snippet read); Gruson, Sam, arXiv:1301.5276
+(Theorem 3.6: the abelian surface as a Fano variety of the Coble cubic; degenerations; only the introduction
+machine-read); Gruson, Sam, Weyman, arXiv:1203.2575. We found no source relating Coble cubics to Hodge loci of cubic
+tenfolds (search not exhaustive). The lead, the numbers 54 / 55 and the excluded constructions: O-TENFOLD-CONE-LEAD,
+N-TENFOLD-CODIM54-SEARCH, N-TENFOLD-CODIM54-SEARCH-2, N-TENFOLD-DIRECT-METHODS, N-TENFOLD-SINGULAR-SECTIONS (whose
+next step, sections singular along a non-planar surface, is what this entry does). rStation papers #5 and #11
+(u/lelong_ridge, Oct 2026) for the open question of a component of slice dimension > 155.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/ (Macaulay2 1.22; 20 s each MOD p, minutes over QQ):
+    M2 --script n1_candidate_family.m2 32003 1 coble
+    M2 --script n1_candidate_family.m2 32003 1 ft
+    M2 --script n1_candidate_family_exact.m2 1 coble
+    M2 --script p4b_theta_planes.m2 32003 1
+```
+
+**Next step.**
+
+```text
+(1) Replace the class ARG by a computation (intersection count of Z_f with T' in a cubic fourfold section at a point
+of F_T: 18 expected; or the cylinder map by residues). (2) Orders 2 and 3 along the explicit arc at a point of F_T
+with the so3_t6 machinery. (3) Exact arithmetic at a second member; irreducibility of the surface. (4) Read
+Gruson-Sam sections 3-4 and match the boundary types. (5) A one-page note for a mathematician (owner decides).
+```
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat); leads/TENFOLD_COBLE_LEAD.md.

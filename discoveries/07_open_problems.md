@@ -972,6 +972,10 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
+RESUMED 25 Nov 2026 with a candidate explanation: D-TENFOLD-COBLE-FAMILY (cubic tenfolds with a P^8-section that
+is a Coble cubic; codim 54; first order MOD p and EXACT at two points; the class statement is ARG) and
+D-TENFOLD-PRODUCT-POINTS. This entry stays OPEN until the class argument is replaced by a computation and a
+mathematician has looked at it; next steps are listed there. Earlier text follows.
 PAUSED (25 Nov 2026, owner's stopping rule: three pre-registered searches and the direct methods found no
 explaining construction; N-TENFOLD-CODIM54-SEARCH, -2, N-TENFOLD-DIRECT-METHODS; a later singular-section test,
 N-TENFOLD-SINGULAR-SECTIONS, also explains nothing). The lead stands as an open

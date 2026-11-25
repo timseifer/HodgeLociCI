@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (16)
+## Entries on this page (17)
 
 | id | status | title |
 |---|---|---|
@@ -28,6 +28,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TANGENT-OF-W-TURNS](#d-tangent-of-w-turns) | `EXACT` | At a Fermat point of the divisor D the tangent hyperplane of W_lambda turns linearly with lambda |
 | [D-FERMAT-RATIONAL-PAIRS-ORDER2](#d-fermat-rational-pairs-order2) | `EXACT` | Rational Fermat pairs: the order-2 form vanishes exactly at lambda_0 = (-1)^(c-1), no other special value |
 | [D-FERMAT-LINEAR-CYCLES-SPAN](#d-fermat-linear-cycles-span) | `EXACT` | Fermat varieties: for which (dimension, degree) the linear cycles span all Hodge classes (night-run counts) |
+| [D-TENFOLD-PRODUCT-POINTS](#d-tenfold-product-points) | `PAPER_ARGUMENT_AI` | Tenfold lead: exact structure at product points C(w,z) + c_1(p) + c_2(q); the cubic model is a determinant; two period identities on the rank-one locus |
 
 ## Related entries on other pages
 
@@ -48,6 +49,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-CODIM54-SEARCH-2](06_ruled_out_and_dead_ends.md#n-tenfold-codim54-search-2) | negative | `RULED_OUT` | 06 | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
 | [N-TENFOLD-DIRECT-METHODS](06_ruled_out_and_dead_ends.md#n-tenfold-direct-methods) | negative | `RULED_OUT` | 06 | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
 | [N-TENFOLD-SINGULAR-SECTIONS](06_ruled_out_and_dead_ends.md#n-tenfold-singular-sections) | negative | `RULED_OUT` | 06 | Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction |
+| [N-TENFOLD-THIRD-DETERMINANT](06_ruled_out_and_dead_ends.md#n-tenfold-third-determinant) | negative | `RULED_OUT` | 06 | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
 | [O-TENFOLD-CONE-LEAD](07_open_problems.md#o-tenfold-cone-lead) | open | `OPEN` | 07 | Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d? |
 
 ---
@@ -1047,3 +1049,82 @@ Hodge classes of a Fermat variety and the rank of the period matrix of all linea
 periods of linear spaces with fermatPeriodPolynomial but has no function for the full Hodge-class count).
 
 **Session references (files not public).** LEDGER.md "Facts" (first two items), "Open targets (ranked)" (item 3); session folder fermat/.
+
+---
+
+## D-TENFOLD-PRODUCT-POINTS
+
+**Tenfold lead: exact structure at product points C(w,z) + c_1(p) + c_2(q); the cubic model is a determinant; two period identities on the rank-one locus**
+
+kind: `result` | area: `movasati_conjecture` | status: **`PAPER_ARGUMENT_AI`**
+
+**Statement.**
+
+```text
+(a) Framework (PROVED, AI, unreviewed; short): a cubic tenfold has h^{7,3} = 1, so for an integral class delta the
+Hodge locus is the critical locus of W_delta(F) = int_delta Res(Omega/F^4) (Euler relation), with Hessian
+delta(HK) on R_3. Near a general point of F_T (one extra kernel direction t) the reduced function is t^N h(t,s) or 0:
+either a smooth codim-54 component with tangent T F_T + G_e, or F_T with multiplicity N-1 and G_e obstructed at
+order N-1 (N >= 5 by the registry's orders 2 and 3, MOD p).
+(b) Product points X_0 = C(w,z) + c_1(p) + c_2(q), C a cubic fourfold containing Pi = {w = 0}, c_1, c_2 isomorphic
+plane cubics, class [J(Pi, T_phi)] (EXACT, by hand, from the tensor decomposition of the Jacobian ring): Hessian rank
+38, kernel 182, normal kernel to the cone locus = the 27 directions z_k p_i q_j. Periods multiply:
+W(F_0 + H) = (beta x gamma)(exp(-H)); on the elliptic side << S (x) T >> = div(S) pi(T) - pi(S) div(T).
+(c) Cubic term on tensors (EXACT, by hand, for c_1 = c_2 = h_lam; ratio 1/3 checked MOD p): Delta(M) =
+f_beta(nu(M(z))) with nu(B) = -2 det(B'), B'_{(i+j),(i-j)} = b_ij. Its critical cones are the two Segre cones of
+rank-one B' (dimension 11): tensors alpha X_1 + beta X_2 + gamma X_3 in Hesse form with (alpha:beta:gamma) free; F_T
+is the curve h_lam(alpha,beta,gamma) = 0. Hessian corank at Hesse tensors 11 = 10 + 1 (MOD 32003, 31991; 3 runs),
+the registry's 16 = 27 - 11.
+(d) Period identities for rank-one B' = u (x) x, x not on the curve (MOD p): K1 << exp(-B) >> = 0 through degree 18
+(32003) and 15 (31991); K3 << p0p1p2 exp(-B) >> = -exp(-c) through degree 12 (both primes), with
+c = h_lam(x) h_lam(u) / (27 (1 + lam^3)) (cubic term EXACT, symbolic over QQ(lam)). Controls: generic B nonzero;
+rank two nonzero, its degree-6 term depending only on the adjugate.
+(e) First order at a general point of F_T in nine variables: S/(I_V + J) = k[z,p,q]/(I_V8, dF_8/dp, dF_8/dq, Phi);
+Hilbert function (1, 9, 33, 57, 42, 12, 1), pairing rank 54 (MOD 32003, 31991): the registry's 54 by a 20-second
+computation. With a mu_3-graded completion the extra direction is invariant and has a z-cubic component.
+```
+
+**Conditions.**
+
+```text
+(a), (b), (c) are hand derivations by an AI, read once; numbers MOD p as stated. K1 and K3 have no proof. The class at
+the product points is [Pi] x [graph], which at the Fermat fourfold is not Movasati's class [P1] - [P2] (different
+annihilator in degree 2); the Fermat-point computations of O-TENFOLD-CONE-LEAD are not re-derived here.
+```
+
+**Evidence.**
+
+leads/TENFOLD_COBLE_LEAD.md sections 1-4; scripts leads/tenfold_coble/c1_general_point.m2, c1b_graded_completion.m2,
+d1_cubic_model.m2, k1_rank_one_vanishing.m2, k2_rank_two.m2, k3_exponential.m2, s1_closed_form_c.m2.
+
+**Independent check.**
+
+The same blind check (BC-COBLE): K1 PASS for m <= 5 and K3 PASS for m <= 4 at 12 rank-one instances (own Python
+implementation, two primes), with the alternatives c -> -c, 2c and c without its denominator rejected;
+nu = -2 det(B') confirmed at 24 instances and by hand. NOT blind-checked: (a), (b), the corank 11 in (c), and (e)
+(which reproduces the 54 of O-TENFOLD-CONE-LEAD by another route and so is itself a cross-check of that entry).
+
+**Not established.**
+
+Proofs of K1 and K3; a geometric reason for them (the expected one is D-TENFOLD-COBLE-FAMILY); the reduced potential
+beyond the cubic term; that product points are general enough for conclusions about W.
+
+**Known before.**
+
+Thom-Sebastiani / Shioda-Katsura structure of sums: rStation #11 (u/lelong_ridge) and classical; Griffiths residues;
+3x3x3 tensors and elliptic curves (Hesse normal form, classical); the superpotential description of Hodge loci for
+Calabi-Yau fourfolds is standard in the physics literature (not checked against a source). The numbers 38, 27, 16,
+54: O-TENFOLD-CONE-LEAD (at the Fermat point and at random points of F_T).
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/:
+    M2 --script c1_general_point.m2 32003 1
+    M2 --script d1_cubic_model.m2 32003 1
+    M2 --script k1_rank_one_vanishing.m2 32003 2 6
+    M2 --script k3_exponential.m2 32003 7 4
+    M2 --script s1_closed_form_c.m2
+```
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat); leads/TENFOLD_COBLE_LEAD.md.

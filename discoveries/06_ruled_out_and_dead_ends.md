@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (29)
+## Entries on this page (30)
 
 | id | status | title |
 |---|---|---|
@@ -41,6 +41,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-CODIM54-SEARCH-2](#n-tenfold-codim54-search-2) | `RULED_OUT` | Tenfold lead: second search for a codim-54 family containing F_T (Thom-Sebastiani cycles, more degenerations, scrolls, unions, del Pezzo-guided): none explains it |
 | [N-TENFOLD-DIRECT-METHODS](#n-tenfold-direct-methods) | `RULED_OUT` | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
 | [N-TENFOLD-SINGULAR-SECTIONS](#n-tenfold-singular-sections) | `RULED_OUT` | Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction |
+| [N-TENFOLD-THIRD-DETERMINANT](#n-tenfold-third-determinant) | `RULED_OUT` | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
 
 ---
 
@@ -1346,3 +1347,40 @@ explaining cycle is tangent to X).
 **Next step.** Sections singular along a non-planar surface (e.g. of type T), if the lead is resumed.
 
 **Session references (files not public).** LEDGER_DISCOVERY.md "[SS-T6]" (25 Nov, PRE to CLOSE 14:43Z).
+
+---
+
+## N-TENFOLD-THIRD-DETERMINANT
+
+**Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor'**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+Pre-registered (25 Nov 2026). T is given by a 3x3x3 tensor M; the section of a general X in F_T is
+M(z,p,q) + b e_1(p) + c e_2(q) with e_1, e_2 the determinant cubics. Hypothesis: W is obtained by adding
+a e_0(z), e_0 = det M(z,.,.) (a 3-moduli family). At random points of F_T, e_0(z) is not in the kernel of the pairing
+of [V] (MOD 32003, 31991; general and graded completions): dead at first order. The family that passes the same test
+(D-TENFOLD-COBLE-FAMILY) has the cubics in the Hesse pencils of e_0, e_1, e_2 with one relation, not the e_i themselves.
+
+**Conditions.** First order, MOD p, the named family only.
+
+**Evidence.** leads/tenfold_coble/c1_general_point.m2 (line H1), c1b_graded_completion.m2.
+
+**Independent check.** None (a negative at first order; the positive counterpart D-TENFOLD-COBLE-FAMILY was blind-checked).
+
+**Not established.** n/a
+
+**Known before.** n/a
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/:
+    M2 --script c1_general_point.m2 32003 1
+```
+
+**Do not repeat.** Adding the determinant cubic of the tensor in the vertex variables with a free coefficient.
+
+**Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat).
