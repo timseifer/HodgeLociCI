@@ -1,0 +1,6 @@
+p = 32029, seed 1, lambda = -1 ; order 5: rank D = 14 ; o_5 in Im D: true ; cpu 1165.16
+tangent net directions (kernel of D on nets): 13
+order 6 with the corrected T_2: in Im D: true ; cpu 1314.58
+RESULT with T_2 and T_3 corrected: arc reached order 6 ; obstructed at order 7 ; cpu 1797.31
+RESULT fermatVerifyArc on the first six terms: pass true ; first failing order null ; forms 221
+DONE cpu 1905.41

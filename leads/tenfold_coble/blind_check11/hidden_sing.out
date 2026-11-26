@@ -1,0 +1,27 @@
+D cap M: dim of cone, mult:
+1
+24
+affine chart s3=1: dim, vdim:
+0
+24
+size of lex GB:
+4
+LEADMON
+s2^24
+LEADMON
+s4
+LEADMON
+s1
+LEADMON
+s0
+factor degrees of the univariate generator (degree, multiplicity):
+0
+1
+2
+1
+22
+1
+
+real	0m0.985s
+user	0m0.954s
+sys	0m0.002s

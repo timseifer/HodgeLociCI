@@ -1,0 +1,10 @@
+rank of (B11,B12,B22): 3
+dim N = 6 ; T in N: True
+dim N/T = 3
+Qa on N: uses variables []  factorisation: ZERO
+l1 on N: uses variables [0, 1, 2]  factorisation: [('659547*c0^2 - 238032*c0*c1 - 1438560*c1^2 + 233073*c0*c2 + 35922*c1*c2 - 925*c2^2', 1)]
+l2 on N: uses variables [0, 1, 2]  factorisation: [('659547*c0^2 - 238032*c0*c1 - 1438560*c1^2 + 233073*c0*c2 + 35922*c1*c2 - 925*c2^2', 1)]
+F on N: uses variables [0, 1, 2, 4, 5]  factorisation: [('4698*c1 - 261*c2 + 1463*d1 - 665*d2', 1), ('659547*c0^2 - 238032*c0*c1 - 1438560*c1^2 + 233073*c0*c2 + 35922*c1*c2 - 925*c2^2', 1)]
+B11 on N: uses variables []  factorisation: ZERO
+B12 on N: uses variables []  factorisation: ZERO
+B22 on N: uses variables []  factorisation: ZERO

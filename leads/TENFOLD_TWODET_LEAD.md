@@ -308,3 +308,41 @@ arc, the honest cone member, the argument of step 3, the cone map), not the runs
 - Cone map: sound; the pairing formula proved in general; the caveat on "applied twice" is in step 1.
 - Not checked by it: the period formula itself by another method; the order-4 and order-5 runs (these rest on
   repetition at a second prime and seed by the same scripts).
+
+### 7.8 Order 6 at Movasati's point (26 Nov, later; owner: "queue this work up")
+
+Predictions written first: PREREG_vz.md, section 6. Script `vz6_order6.m2`; registry D-TENFOLD-MOVASATI-ORDER6.
+Same direction of the 13-dimensional piece as in 7.4, T_2 corrected so that order 5 holds. The order-6 vector
+can be moved by T_3 (by the image Im D of rank 14) and by changes of T_2 inside ker D.
+
+| | prediction | result (MOD 32029, seed 1) |
+|---|---|---|
+| P7a, lambda = -1 | order 6 is removable | the order-6 vector is not zero and lies in Im D: removed by a change of T_3; the corrected arc passes the package's check to order 6 (221 forms); its default continuation stops at order 7 (not analysed) |
+| P7b, lambda = 2 | not removable | not in Im D; the changes under 13 tangent net directions, y_0 and 6 random D-free elements of ker L all lie in Im D, so it stays outside: obstructed modulo these corrections |
+
+So the 13-dimensional piece separates lambda = -1 from lambda = 2 at order 6, the order at which T6 saw a rank-1
+direction fail for lambda = 2. This is what the conditional statement of 7.0 needs at this point, one order
+further than before; it is still finite order, one prime, one direction, and for lambda = 2 "obstructed" means
+modulo the corrections that were tested. The first bullet of 7.5 ("order 6 on direction d ... Not run") is
+superseded by this.
+
+### 7.9 Queued by the owner, not started: the matrices along T2's sixfold arc (notes only; nothing below was run)
+
+This is the step that would replace the sixfold paper chain (S) by a computation
+(O-RECOVER-MATRICES-AND-LIMIT-OF-T, STUCK since team T2). Starting points, all unverified (ideas, ARG at best):
+- Write a cubic of D as G = l s + C_3 with C_3 = z f^T C h + K(f, h) on the hyperplane l = 0. rank C = 2 means
+  that the quadratic part f^T C h has rank 4, i.e. is a 2 x 2 determinant of four independent linear forms. A
+  3 x 3 determinant whose z-part is a nilpotent matrix of rank 1 has exactly this shape (z times one 2 x 2 minor
+  plus terms without z). This may be why the condition is det C = 0, and it suggests the leading matrices.
+- Three kinds of boundary points of the sixfold family are now distinguished by how the pair (A, B) degenerates:
+  B -> -A with A finite (the cubics containing a flag threefold V_6, a divisor; tangent type); both -> l times
+  the identity isotropically (equal trace and second coefficient: the Coble rung, codimension 11,
+  D-COBLE-SECTION-TWO-DETERMINANTS); both -> l times the identity anisotropically (D, by D-DEGENERATION-ALONG-ARC).
+- A computational route: (1) the arc to high order modulo p (the exported arc is valid to order 9; T2 used 25 and
+  found it too little); the exact Python implementation of the period formula written by blind check 10
+  (`blind_check10/B_own.py`) is a base for a fast series engine; (2) the kernel of the catalecticant and its
+  splitting into two nets (tools of `leads/tenfold_coble/pairing/pr13_arc_algebra.m2`, `pr14_arc_split.m2`);
+  (3) each matrix from the linear syzygies of its net, or from the Lie algebra of its determinantal cubic
+  (`detrep_lib.m2`), over the series field; (4) the flat limit of T and its class at the cubic of D. By the cone
+  map the same matrices give explicit degenerations onto the eightfold point X1 and the tenfold cone points.
+- Cost: several hours; the series engine is the bottleneck.

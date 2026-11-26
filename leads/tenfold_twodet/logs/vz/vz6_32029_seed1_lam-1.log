@@ -1,0 +1,4 @@
+p = 32029, seed 1, lambda = -1 ; order 5: rank D = 14 ; o_5 in Im D: true ; cpu 1008.34
+tangent net directions (kernel of D on nets): 13
+RESULT order 6 with the corrected T_2: obstruction vector zero: false ; in Im D (removable by T_3 alone): true ; cpu 1150.19
+(run stopped here by hand: the order-6 vector is already in Im D, so the further directions were not needed)

@@ -1,0 +1,12 @@
+P_B cap T in the basis (a,v1,v2): (v1,v2)-components [('0', '0'), ('5/11', '1')]
+t_B = 11/5
+dim(P_B cap M) = 1
+y_B in chart s3=1: (s0,s1,s2,s4) = ['-163/17', '-208/17', '149/17', '395/17']
+tau-test at y_B: status = Jacobian rank < 4: test not applicable ; rank J = 3 ; tau(y_B) = t_B: True
+generators of the generic degree-2 component vanish at (t_B, y_B): [True, True, True, True]
+at t_B the quadratic in s2 is c2*s2^2+c1*s2+c0 with c2 != 0: True ; discriminant c1^2-4c0c2 = 0  (0 => t_B is a branch value: the two planes coincide)
+other leading coefficients nonzero at t_B: [True, True, True]
+dim ker J(y_B) = 6 ; P_B inside it: True
+F restricted to P(ker J(y_B)) factors with degrees: [(1, 1), (2, 1)]
+   factor of degree 1 at y_B: 0
+   factor of degree 2 at y_B: 0

@@ -1,0 +1,22 @@
+degree-12 point on L : dim(Pi_y cap M) (affine) = 1
+    at y_M = Pi_y cap M: l1=0: False  l2=0: False  rankJ: 4  on Z_a: True
+    tau(y_M) == tau(y): True
+    generators of the generic degree-2 component vanish at (tau(y), y_M): [True, True, True, True]
+    leading coefficients at tau(y) nonzero: [True, True, True, True]
+RESULTS: {'L deg 12': True}
+degree-8 point on pi : dim(Pi_y cap M) (affine) = 1
+    at y_M = Pi_y cap M: l1=0: False  l2=0: False  rankJ: 4  on Z_a: True
+    tau(y_M) == tau(y): True
+    generators of the generic degree-2 component vanish at (tau(y), y_M): [True, True, True, True]
+    leading coefficients at tau(y) nonzero: [True, True, True, True]
+degree-8 point on pi_2 : dim(Pi_y cap M) (affine) = 1
+    at y_M = Pi_y cap M: l1=0: False  l2=0: False  rankJ: 4  on Z_a: True
+    tau(y_M) == tau(y): True
+    generators of the generic degree-2 component vanish at (tau(y), y_M): [True, True, True, True]
+    leading coefficients at tau(y) nonzero: [True, True, True, True]
+degree-8 point on pi_3 : dim(Pi_y cap M) (affine) = 1
+    at y_M = Pi_y cap M: l1=0: False  l2=0: False  rankJ: 4  on Z_a: True
+    tau(y_M) == tau(y): True
+    generators of the generic degree-2 component vanish at (tau(y), y_M): [True, True, True, True]
+    leading coefficients at tau(y) nonzero: [True, True, True, True]
+RESULTS (degree-8 points): {'pi': True, 'pi_2': True, 'pi_3': True}

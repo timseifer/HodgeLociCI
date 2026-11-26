@@ -1,0 +1,37 @@
+=== component 0  ( 4 generators )
+minimal polynomial of s2 depends on t: False
+    F (y) == 0: True
+    Qa (y) == 0: True
+    l1 (y) == 0: True
+    l2 (y) == 0: True
+    B11 (y) == 0: True
+    B12 (y) == 0: True
+    B22 (y) == 0: True
+    G (y) == 0: True
+    l1 + t*l2 == 0: True ; B11+2t*B12+t^2*B22 == 0: True
+    -> point of V (lies on S_tau for every tau); skipping plane test
+=== component 1  ( 4 generators )
+minimal polynomial of s2 depends on t: True
+    F (y) == 0: True
+    Qa (y) == 0: True
+    l1 (y) == 0: False
+    l2 (y) == 0: False
+    B11 (y) == 0: False
+    B12 (y) == 0: False
+    B22 (y) == 0: False
+    G (y) == 0: True
+    l1 + t*l2 == 0: True ; B11+2t*B12+t^2*B22 == 0: True
+    l_tau(y)=0 : True
+    b_tau(y)=0 : True
+    rankJ : 4
+    a in tangent : True
+    a+vtau in tangent : True
+    y in tangent : True
+    nonvanishing cubic coefficients of F on tangent : 0
+    tangent in Y : True
+    on Z_a : True
+    status : ok
+    discriminant of the quadratic: numerator degree 24 , denominator degree 24
+    numerator factorisation (degree, mult): [(1, 1), (5, 1), (9, 2)]
+    denominator factorisation (degree, mult): [(12, 2)]
+    time: 8.6s

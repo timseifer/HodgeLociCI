@@ -1,0 +1,53 @@
+=== plane: pi (statement)
+F restricted to the plane is identically zero: True
+Q_a on plane: total degree 2  terms 6
+G on plane: total degree 5  terms 21
+gcd(Q_a, G) on plane: 1
+Q_a irreducible on plane? factorisation: [('124924*u0^2 - 274036*u0*u1 - 71765*u1^2 + 79432*u0*u2 + 117280*u1*u2 - 35300*u2^2', 1)]
+Q(1,0,0) = -62462/9
+Res_{u0}(Q,G): total degree 10 ; is zero: False
+dehomogenised (u2=1) resultant: degree 10  (10 means no point with u2=0 lost)
+squarefree: True
+irreducible factors over QQ (degree, multiplicity): [(2, 1), (8, 1)]
+gcd(Res(Q,l1), Res(Q,l2)) = 1  (1 => no point of plane cap {Q_a=0} with l1=l2=0)
+--- closed point of degree 2 ; min poly of u1/u2: x^2 + (-426972219/698993651)*x + 15809409/698993651
+degree in u0 of gcd(Q,G) over the field: 1
+    F=0 : True
+    Qa=0 : True
+    G=0 : True
+    l1=0 : False
+    l2=0 : False
+    l_tau(y)=0 : True
+    b_tau(y)=0 : True
+    rankJ : 4
+    a in tangent : True
+    a+vtau in tangent : True
+    y in tangent : True
+    nonvanishing cubic coefficients of F on tangent : 35
+    tangent in Y : False
+    on Z_a : False
+    status : ok
+    rank Jac(F,Q_a,G) at y: 3 ; affine dim of (T_y W cap plane): 1  (1 = only the point itself)
+    degree of QQ(tau) : 2
+    time for tests: 0.0s
+--- closed point of degree 8 ; min poly of u1/u2: x^8 + (-69114388471811684657466386199987/19862747941873396005639436158965)*x^7 + 106536794892230324470957869410256/19862747941873396005639436158965*x^6 + (-19014022603549176862759528539879/3972549588374679201127887231793)*x^5 + 53741088808427586584340538119972/19862747941873396005639436158965*x^4 + (-19714191056594884708621187250447/19862747941873396005639436158965)*x^3 + 4585514966587559895384737005191/19862747941873396005639436158965*x^2 + (-123743042968777779411760420836/3972549588374679201127887231793)*x + 37104121690460944017784421472/19862747941873396005639436158965
+degree in u0 of gcd(Q,G) over the field: 1
+    F=0 : True
+    Qa=0 : True
+    G=0 : True
+    l1=0 : False
+    l2=0 : False
+    l_tau(y)=0 : True
+    b_tau(y)=0 : True
+    rankJ : 4
+    a in tangent : True
+    a+vtau in tangent : True
+    y in tangent : True
+    nonvanishing cubic coefficients of F on tangent : 0
+    tangent in Y : True
+    on Z_a : True
+    status : ok
+    rank Jac(F,Q_a,G) at y: 3 ; affine dim of (T_y W cap plane): 1  (1 = only the point itself)
+    degree of QQ(tau) : 8
+    time for tests: 0.2s
+SUMMARY pi (statement) : [(2, False, 3, 1), (8, True, 3, 1)]

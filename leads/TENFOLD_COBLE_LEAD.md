@@ -1396,3 +1396,90 @@ Its objections and additions (accepted; worked into the text above):
 
 Not checked by it: the second certificate (31991; only `check_certificate.m2` has seen it); R8, R9, R10, R12-R14
 (the tests at the point and along the arcs) and 16.5; the tenfold family of 16.8. Those rest on my runs alone.
+
+## 17. The intersection count of section 14, exactly over QQ at a named member (26 Nov 2026, evening)
+
+Owner's request: make the headline exact where it is still MOD p. This section does it for the count on which
+the class statement rests. Scripts, logs and the pre-registration: `leads/tenfold_coble/plane_test/exact/`.
+Registry: D-TENFOLD-COBLE-PLANE-COUNT-EXACT. Labels as before; nothing here is a statement about the Hodge
+conjecture (the cycle is algebraic).
+
+### 17.0 Result
+
+At the Coble cubic Y with lam = -2, x = (8, 18, 1) (so a0 = 29: integer coefficients) and the point
+a = (0, 1, -1, 1, 2, 3, -1, -3, -2) of Sing(Y), for the cycle Z_a (the union of the 4-planes of Y through a that
+contain a tangent line of Sing(Y) at a), an explicit rational plane pi in a rational 4-plane P' of Y, the 5-plane
+Lambda over pi and an explicit rational tenfold X = F + sum w_k Phi_k:
+
+- **Lambda . Z_a = 8** (EXACT over QQ; Z_a read as its 5-dimensional part, see 17.4): pi n {Q_a = G = 0} is 10 reduced points, one closed point of degree 8 and
+  one of degree 2; the 8 lie on Z_a (a 4-plane of Y through a and the point is exhibited over the degree-8
+  field), the 2 do not (the only candidate plane is not in Y); at the 8 the intersection is transversal.
+- **deg Z_a = 12** (EXACT over QQ): a rational P^3 meets Y n {Q_a = G = 0} in 30 reduced points, closed points of
+  degrees 12 and 18; the 12 lie on Z_a and the 18 do not (the checker's run; mine was stopped).
+- X is smooth (its reductions modulo 32003 and 31991 are; a singular point over QQ would specialise) and contains
+  Lambda.
+- Hence on X the class [Z_a] is not a rational multiple of h^5: such a multiple c h^5 would have
+  Lambda . (c h^5) = c and degree 3c, and 8 is not 12 / 3. (ARG on exact numbers: three lines.)
+
+What stays an argument: that the same holds on every smooth tenfold with this P^8-section and on the other
+members of the family (the cycle does not change; connectedness), as in section 14.
+
+### 17.1 Why no number field was needed for the member
+
+The earlier entry said an exact run "needs a point of A over a number field". The involution
+iota: z_1 <-> z_2, p_0 <-> q_0, p_1 <-> q_2, p_2 <-> q_1 preserves the normal form, and for a point b of its odd
+eigenspace the conditions grad F(b) = 0 are linear in (lam, x): they cut out a line of parameters. So every
+rational odd point lies on Sing(Y) for a line of rational Coble cubics. With b = (1; 1, 2, 3): lam = -2 and
+x = (15 + u, 33 + 3u, 2u)/2; u = 1 gives the member above. Two more rational objects come with it: the 4-plane P_B
+through the odd eigenspace (it lies in Y, passes through a and contains a tangent line of Sing(Y) there, so Z_a
+has a rational plane), and its image P' = g(P_B) under the rational symmetry
+g: z_k -> z_(k+2), p_i -> p_(i+1), q_j -> q_(j+1), which does not pass through a. P_B n P' is a line.
+
+### 17.2 How membership is certified
+
+A 4-plane Pi of Y through a and a + v_tau (v_tau a tangent direction of Sing(Y) at a) lies in
+{F = Q_a = l_tau = b_tau = 0}: expand F on the plane spanned by a, a + v_tau and y. So for y on such a plane
+Q_a(y) = G(y) = 0, and tau = (l_2(y), -l_1(y)) is determined when (l_1, l_2)(y) != 0 (checked: no point of pi or
+of the P^3 on Q_a has l_1 = l_2 = 0). When the fibre {F = Q_a = l_tau = b_tau = 0} is smooth at y, its tangent
+space is the only candidate plane. "On Z_a": the candidate lies in Y and contains a, y and a + v_tau.
+"Not on Z_a": the candidate does not lie in Y. Both are identities in the residue field of the closed point
+(degree 2, 8, 12 over QQ), computed with determinants and substitutions only: the kernel is written by Cramer's
+rule and checked by multiplication, because `kernel` over a field made by toField is not reliable in Macaulay2
+1.22 (the first version of the script returned "kernel not verified"; see also N-M2-TOFIELD-IDEAL-QUOTIENT).
+
+### 17.3 The numbers
+
+| | what | result | label |
+|---|---|---|---|
+| member | grad F(a) = 0; rank Hess_a = 6; P_B and P' in Y; a on P_B, not on P'; no special-parameter relation | all true | EXACT |
+| E1 | pi n {Q_a = G = 0}: degree 10, reduced; closed points 8 + 2 | as predicted | EXACT |
+| E1 | degree-8 point on Z_a; degree-2 point not; CI smooth and transversal at both | as predicted | EXACT |
+| E2 | P^3 n Y n {Q_a = G = 0}: degree 30, reduced; closed points 12 + 18; the 12 on Z_a | as predicted | EXACT |
+| X | Lambda in X; X smooth modulo 32003 and 31991 (denominator 1380) | true | EXACT / by reduction |
+
+### 17.4 Blind check 11, and the gap it closed
+
+A separate agent, given the definitions and the claims only (no code, no repository), redid everything with its
+own exact arithmetic (Python on python-flint for the number fields, Singular and Macaulay2 only over QQ, ZZ/p and
+QQ(t)): `leads/tenfold_coble/blind_check11/REPORT.txt`.
+
+- CONFIRMED exactly: the member and the planes; 10 = 8 + 2 on pi with the memberships and transversality; the
+  same count on two planes of its own; 30 = 12 + 18 on the P^3 with the 12 on Z_a; a smooth X of its own with
+  Lambda inside; Sing(Y) of dimension 2, degree 18, Hilbert polynomial 9 n^2 over QQ, and smooth (by reduction).
+  It decided the degree-18 point directly: NOT on Z_a (my run of that test had been stopped as too slow).
+- **A gap in my chain, found and closed by the checker.** My argument for "deg Z_a = 12" and for transversality
+  assumed that Z_a is 5-dimensional at the points found; nothing in my runs showed that the family of planes is
+  infinite (a finite set of 4-planes would have no class in dimension 5). The checker proved it by an exact
+  computation over QQ(t): for the direction tau = (1 : t) with t an indeterminate there is a plane of the family
+  defined over a quadratic extension of QQ(t), so the planes are parametrised by a double cover of the tau-line
+  (discriminant with a factor of degree 1 and one of degree 5: genus 2, as the theta-curve picture says), and the
+  planes through the degree-12 point and through the eight points of pi are specialisations of it. Hence the
+  5-dimensional part Z5 of Z_a is irreducible, equal to the degree-12 component of Y n {Q_a = G = 0}, and the
+  statements of 17.0 hold for Z5: deg Z5 = 12, Lambda . Z5 = 8, [Z5] is not a rational multiple of h^5.
+- Its other remarks, all accepted: the membership test is only sufficient where the Jacobian rank is 4 (the
+  rational plane P_B sits over a branch point, t = 11/5, where the fibre contains it doubly, so the test does not
+  see P_B itself); points with l_1 = l_2 = 0 exist on Z_a (a is one) but no plane of the family lies in
+  {l_1 = l_2 = 0}; pure 5-dimensionality of Z_a is not established and not needed; the Phi_k must involve the w
+  (mine do); a robust form of the conclusion needs only "Z5 is not empty".
+- A structural by-product: {B_11 = B_12 = B_22 = 0} is a P^5 through the tangent plane of Sing(Y) at a, and it meets
+  Y in P_B and a rank-3 quadric cone that lies in every fibre.

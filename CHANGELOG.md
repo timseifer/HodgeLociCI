@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 163 entries)
+### Discoveries registry (142 -> 165 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -64,6 +64,12 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   order 4, and order 5 after a change of T_2 (lambda = -1 and 2); a model cone of 27 quadrics.
 - C-TENFOLD-ORDER4-RANK2 (correction to O-TENFOLD-CONE-LEAD): "rank 2 and 3 obstructed at order 4, so
   dim W <= dim Cone_T + 11" holds for generic nets only; with the model the bound is codimension 52, not 54.
+- D-TENFOLD-COBLE-PLANE-COUNT-EXACT (EXACT over QQ at one named member): the 5-plane meets the 4-plane cycle of the
+  Coble family transversally in 8 points and the cycle has degree 12, so its class is not a multiple of h^5.
+  Blind-checked with independent exact arithmetic, which also supplied a missing step (the family of planes is
+  one-dimensional). `leads/tenfold_coble/plane_test/exact/`, `leads/TENFOLD_COBLE_LEAD.md` section 17.
+- D-TENFOLD-MOVASATI-ORDER6 (MOD p, one prime): on the 13-dimensional piece at Movasati's point, order 6 passes for
+  lambda = -1 and is obstructed for lambda = 2 modulo the first-order corrections tested.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

@@ -1,0 +1,4 @@
+gradG.d equals d/ds G(y+s d)|_0: True ; Euler: gradG.y = 5G: True
+identity F(y + s*v_tau + u*a) = F(y) + s*l_tau(y) + (u/2)*Q_a(y) + (s^2/2)*b_tau(y): True
+random rational point of P_B: status Jacobian rank < 4: test not applicable ; rankJ 3 ; on Z_a: None ; tangent == P_B: None ; tau = (Fraction(18605, 87), Fraction(40931, 87))
+random point of P': F = 0  Q_a = -50544  (not on the cone Q_a=0, as expected)

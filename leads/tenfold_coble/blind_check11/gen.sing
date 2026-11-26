@@ -1,0 +1,44 @@
+ring r=(0,t),(s0,s1,s2,s3,s4),dp;
+option(redSB);
+poly F=-1716*s0^3 + 2144*s0^2*s1 - 416*s0*s1^2 - 1690*s1^3 - 480*s0^2*s2 + 975*s0*s1*s2 - 3132*s1^2*s2 + 255*s0*s2^2 - 1213*s1*s2^2 - 191*s2^3 - 761*s0^2*s3 - 1134*s0*s1*s3 + 3810*s1^2*s3 + 83*s0*s2*s3 + 4076*s1*s2*s3 + 808*s2^2*s3 + 1571*s0*s3^2 - 2416*s1*s3^2 - 1486*s2*s3^2 + 209*s3^3 - 18*s0^2*s4 - 335*s0*s1*s4 + 203*s1^2*s4 + 38*s0*s2*s4 - 193*s1*s2*s4 - 40*s2^2*s4 + 63*s0*s3*s4 - 124*s1*s3*s4 + 220*s2*s3*s4 + 51*s3^2*s4 - 24*s0*s4^2 + 63*s1*s4^2 + 6*s2*s4^2 - 54*s3*s4^2 + 2*s4^3;
+poly Qa=-806*s0^2 - 256*s0*s1 + 2276*s1^2 - 258*s0*s2 + 3660*s1*s2 + 916*s2^2 + 3068*s0*s3 - 3088*s1*s3 - 1778*s2*s3 - 526*s3^2 - 16*s0*s4 - 284*s1*s4 + 38*s2*s4 + 96*s3*s4 - 42*s4^2;
+poly l1=-167854*s0^2 - 243908*s0*s1 - 27863*s1^2 - 103464*s0*s2 - 25257*s1*s2 + 14837*s2^2 + 315544*s0*s3 + 196734*s1*s3 + 241390*s2*s3 - 279700*s3^2 - 22240*s0*s4 + 24930*s1*s4 + 5994*s2*s4 - 58290*s3*s4 + 1146*s4^2;
+poly l2=-509363*s0^2 + 495866*s0*s1 - 33271*s1^2 - 68499*s0*s2 + 148719*s1*s2 + 67807*s2^2 - 156052*s0*s3 - 130710*s1*s3 - 104479*s2*s3 + 176845*s3^2 - 35210*s0*s4 - 23148*s1*s4 + 13149*s2*s4 + 16530*s3*s4 - 4863*s4^2;
+poly B11=8822120*s0 - 11402120*s1 - 5070120*s2 - 6308560*s3 - 179600*s4;
+poly B12=-3029264*s0 - 855904*s1 + 3338160*s2 - 9624692*s3 - 2545732*s4;
+poly B22=-29713192*s0 + 12686608*s1 - 12391080*s2 + 5607824*s3 - 1148096*s4;
+poly lt=l1+t*l2;
+poly bt=B11+2*t*B12+t^2*B22;
+ideal I=F,Qa,lt,bt;
+ideal S=std(I);
+print("M cap S_t over QQ(t): dim of cone, mult:"); dim(S); mult(S);
+ring ra=(0,t),(s0,s1,s2,s4),dp;
+option(redSB);
+map phi=r,s0,s1,s2,1,s4;
+ideal Ia=phi(I);
+ideal Sa=std(Ia);
+print("affine chart s3=1: dim, vdim:"); dim(Sa); vdim(Sa);
+ring rl=(0,t),(s0,s1,s4,s2),lp;
+option(redSB);
+ideal Sl=fglm(ra,Sa);
+print("size of lex GB:"); size(Sl);
+int i;
+for(i=1;i<=size(Sl);i++){ print("LEADMON"); print(leadmonom(Sl[i])); }
+list fa=factorize(Sl[1]);
+print("factor degrees of the univariate generator (in s2):");
+for(i=1;i<=size(fa[1]);i++){ print(deg(fa[1][i])); print(fa[2][i]); }
+// the low-degree factor(s): compute the components
+write(":w gen_lex.txt", string(Sl[1]));
+for(i=2;i<=size(Sl);i++){ write(":a gen_lex.txt", string(Sl[i])); }
+int j;
+ideal C;
+write(":w gen_comp.txt", "START");
+for(i=2;i<=size(fa[1]);i++){
+  if (deg(fa[1][i]) <= 4) {
+    C = Sl, fa[1][i];
+    C = std(C);
+    write(":a gen_comp.txt", "COMPONENT");
+    for(j=1;j<=size(C);j++){ write(":a gen_comp.txt", string(C[j])); }
+  }
+}
+quit;

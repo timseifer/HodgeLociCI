@@ -39,6 +39,7 @@ All scripts are run from the repository root (they load the package from `M2/Hod
 | `vz3_order4_model_cone.m2 p seed` | MOD p, polynomials only: the 27 model quadrics on nets z_0 A + z_1 B + z_2 C | Jacobian rank 14 / 16 / 18 on the pieces of dimension 13 / 11 / 9 |
 | `vz4_order4_movasati.m2 p seed lambda order [cases]` | MOD p: order 4 at Movasati's point along eight kinds of direction | generic rank 3 and rank 2: obstructed at 4; Segre, the 13-dimensional piece, z_0 C': pass |
 | `vz5_order5_removability.m2 p seed lambda [case]` | MOD p: is the order-5 obstruction removable by a change of T_2? | yes for lambda = -1 and 2 on the 13-dimensional piece; image of rank 14 |
+| `vz6_order6.m2 p seed lambda [nrandom]`, `vz6b_verify_order6.m2 p seed lambda` | MOD p: order 6 on the same direction, T_2 corrected | lambda = -1: removable by T_3, corrected arc verified to order 6; lambda = 2: obstructed modulo the corrections tested |
 
 Reproduce:
 

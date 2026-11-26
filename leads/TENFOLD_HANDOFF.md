@@ -35,6 +35,10 @@
 > D-TENFOLD-CONE-POINTS-TWO-DET; rests on the sixfold paper chain). At Movasati's point the order-4 statement of
 > section 2 below is corrected: special nets of rank 2 and 3 pass order 4 (C-TENFOLD-ORDER4-RANK2,
 > D-TENFOLD-ORDER4-MODEL-CONE); the bound is codimension 52, not 54, if the model of 27 quadrics holds.
+> 26 Nov, later: the intersection count of section 14 of the Coble note is EXACT over QQ at a named member
+> (section 17 there; D-TENFOLD-COBLE-PLANE-COUNT-EXACT). Order 6 at Movasati's point on the 13-dimensional piece:
+> passes for lambda = -1, obstructed for 2 (D-TENFOLD-MOVASATI-ORDER6; one prime). Queued by the owner and not
+> started: the matrices A(eps), B(eps) along T2's sixfold arc (O-RECOVER-MATRICES-AND-LIMIT-OF-T).
 > Read that note before sections 4-5 below; the rest of this file is unchanged.
 
 Written 25 Nov 2026 by the coordinating agent (Claude Opus 5.5) for Timothy Seifert, the repository owner, who is
@@ -146,7 +150,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (163 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (165 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the

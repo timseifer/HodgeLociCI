@@ -1,0 +1,1 @@
+gen_lex.txt (12 MB, the lex Groebner basis over QQ(t) written by gen.sing) is not kept in the repository; gen_prep.py and gen.sing regenerate it (about 3 minutes).

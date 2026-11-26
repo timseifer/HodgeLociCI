@@ -1,0 +1,9 @@
+univariate generator degree: 24 ; squarefree: True
+--- closed point of degree 2 : F,Qa,l1,l2 vanish: [True, True, True, True] ; B11,B12,B22 vanish: [True, True, True]
+    rank Jac(F,Q_a,l1,l2) at the point: 4
+    D smooth of dim 4 there; nonvanishing cubic coefficients of F on T_y D: 34 of 35  -> component of D through the point is a 4-plane in Y: False
+    time 0.0s
+--- closed point of degree 22 : F,Qa,l1,l2 vanish: [True, True, True, True] ; B11,B12,B22 vanish: [False, False, False]
+    rank Jac(F,Q_a,l1,l2) at the point: 4
+    D smooth of dim 4 there; nonvanishing cubic coefficients of F on T_y D: 35 of 35  -> component of D through the point is a 4-plane in Y: False
+    time 16.4s

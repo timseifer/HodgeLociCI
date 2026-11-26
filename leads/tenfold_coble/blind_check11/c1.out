@@ -1,0 +1,39 @@
+a0 = 29  h(x) = 5481  27(1+lam^3) = -189
+number of monomials of F: 21
+F(a) = 0   grad F(a) = [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+H_a =
+   ['0', '174', '-174', '-8', '-2', '-54', '8', '54', '2']
+   ['174', '174', '0', '-3', '-18', '-16', '36', '1', '24']
+   ['-174', '0', '-174', '-36', '-24', '-1', '3', '16', '18']
+   ['-8', '-3', '-36', '6', '-18', '-12', '0', '1', '-18']
+   ['-2', '-18', '-24', '-18', '12', '-6', '18', '-8', '0']
+   ['-54', '-16', '-1', '-12', '-6', '18', '-1', '0', '8']
+   ['8', '36', '3', '0', '18', '-1', '-6', '12', '18']
+   ['54', '1', '16', '1', '-8', '0', '12', '-18', '6']
+   ['2', '24', '18', '-18', '0', '8', '18', '6', '-12']
+rank H_a = 6
+dim T = 3
+a in T: True
+F|_T identically 0 (trilinear form vanishes on T): True
+iota preserves F: True
+a in odd eigenspace: True
+F vanishes on odd eigenspace: True
+rank of the 10x5 linear system for v: 4
+solution space dimension: 1
+  e = ['1/3', '-1/3', '4/9', '1/18', '1']
+v (even point) = ['6', '-6', '-6', '8', '1', '18', '8', '18', '1']  F(v) = 0
+tri(o_m, v, v) all zero: True
+dim P_B (affine) = 5   P_B in Y: True
+a in P_B: True
+dim (P_B cap T) (affine) = 2  -> P_B contains a line of P(T) through a: True ; contains all of P(T): False
+substitution preserves F: True
+phi: (gy)_i = y_SUB(i) : in Y True ; contains a: False ; dim(P_B cap P') affine = 2 ; contains pi: False
+phi^-1: (gy)_SUB(i) = y_i : in Y True ; contains a: False ; dim(P_B cap P') affine = 2 ; contains pi: True
+rank of pi columns: 3 ; a in pi: False
+pi in Y: True
+rank of L columns: 4
+v1 = ['-14/87', '44/783', '-89/783', '916/783', '266/783', '133/261', '1', '0', '0']
+v2 = ['38/87', '-281/783', '-268/783', '-13/783', '-26/783', '248/261', '0', '1', '0']
+P_B cap T spanned by:
+    ['4/11', '-1/3', '-13/33', '17/33', '4/33', '13/11', '5/11', '1', '0']
+    ['-6/11', '0', '12/11', '-14/11', '-13/11', '-36/11', '-2/11', '0', '1']

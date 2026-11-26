@@ -1,0 +1,8 @@
+conic kappa on N/T: determinant of Gram matrix = -25854675/10469  (nonzero => smooth conic => V_4 = cone over a smooth conic,
+   an irreducible rank-3 quadric of dimension 4, containing no 4-plane)
+l1|_N proportional to l2|_N: True
+ratio l1:l2 on N = -33 : 15
+linear factor of F|_N in (c0,c1,c2,d0,d1,d2): [0, 4698, -261, 0, 1463, -665]
+dim Pi_N = 5 ; Pi_N in Y: True
+Pi_N == P_B: True
+a in Pi_N: True ; dim(Pi_N cap T) = 2

@@ -1,0 +1,2 @@
+relations x_i + x_j = lam*x_k with {i,j,k}={0,1,2}: [] ; with arbitrary indices (i,j,k): []
+h(x) = 5481  1+lam^3 = -7

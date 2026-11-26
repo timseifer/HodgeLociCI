@@ -184,3 +184,32 @@ T3 is about cubics literally of the form, not limits; the two-step pairing formu
 a general member is not an iterated one-step cone (flatness is needed); P2 is a formal consequence of the
 eightfold statement. Deviation: the wall-clock times first written in this file were wrong by about half an hour
 and were corrected from the file times.
+
+## 6. Added 26 Nov, 17:40 UTC, BEFORE the order-6 runs (script vz6; owner: "queue this work up")
+
+Setting as in section 4: direction (d) of the 13-dimensional piece at Movasati's point; T_2 corrected so that
+order 5 holds. On the germ Sigma the order-6 condition along tau_1 eps + tau_2 eps^2 + tau_3 eps^3 is
+  Psi_6(tau_1) + DPsi_5(tau_1)[tau_2] + (1/2) D^2 Psi_4(tau_1)[tau_2, tau_2] + DPsi_4(tau_1)[tau_3] = 0.
+tau_3 moves it by the image Im D of rank 14 found in P6. tau_2 is fixed only modulo ker D; for k in ker D tangent
+to the zero set of Psi_4 the quadratic term D^2 Psi_4[k, k] lies in Im D, so modulo Im D the order-6 vector is
+affine in k. Test: the order-6 vector o6 for the corrected T_2; the vectors o6(T_2 + k) - o6 for k over the 13
+net directions tangent to the piece, for y_0, and for a few random elements of ker L made D-free; is o6 in
+Im D + their span?
+P7a (lambda = -1). Prediction: yes (order 6 is removable). If the closure of the two-determinant family passes
+through this point with tangent cone the cylinder over the piece (T5 + T6 of this file), an arc with this T_1
+should exist.
+- yes: one more order of consistency; still finite order.
+- no, and the random directions add nothing to the span: no arc with this leading term in integer powers of eps
+  passes order 6 for [P1] - [P2]. Tension with the conditional statement at this point, to be recorded as open
+  (possible exits: (S) fails at the points C = 0; the tangent cone is smaller; fractional powers).
+- no, but random directions keep enlarging the span: the test is incomplete (the directions of T Z_0 matter);
+  report as undecided.
+P7b (lambda = 2). Prediction: not removable (T6 found this for a rank-1 direction at lambda = 2; on eightfolds
+lambda = 2 is obstructed at order 5).
+- not removable for 2 and removable for -1: the 13-dimensional piece singles out lambda = -1 at order 6.
+- removable for both: order 6 does not separate them either.
+
+Outcomes of section 6 (26 Nov, about 19:55 UTC; MOD 32029, seed 1): P7a as predicted (the order-6 vector lies in
+Im D; the arc with T_2 and T_3 corrected passes fermatVerifyArc to order 6; default continuation obstructed at
+order 7, not analysed). P7b as predicted (not in Im D; 13 tangent net directions, y_0 and 6 random D-free
+elements of ker L all change the vector inside Im D only). One prime and one direction; no blind check.

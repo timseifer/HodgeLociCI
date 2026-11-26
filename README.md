@@ -23,13 +23,13 @@ Short versions of the headline items of the [progress page](https://timseifer.gi
 from the discovery work around the package (`leads/`, `discoveries/`), are AI-generated and unreviewed, and carry
 the status label of their registry entries. None is a statement for or against the Hodge conjecture.
 
-- **A 1917 cubic and a hidden Hodge locus on cubic tenfolds** (25 Nov 2026; MOD p at two primes, one member exact
-  over QQ; a proposed explanation awaiting review). For Movasati's pair of 5-planes on cubic tenfolds the class with
+- **A 1917 cubic and a hidden Hodge locus on cubic tenfolds** (25 Nov 2026; key numbers EXACT over QQ at one named
+  member since 26 Nov, other runs MOD p; a proposed explanation awaiting review). For Movasati's pair of 5-planes on cubic tenfolds the class with
   coefficient -1 appears to stay a Hodge class on a locus one dimension larger than the known families explain. The
   proposed explanation is an explicit family of codimension 54: tenfolds whose `P^8`-section is a Coble cubic, the
   cubic sevenfold singular along an abelian surface (Coble, 1917). Each member carries an algebraic fivefold that is
   expected to carry the class. Write-up: [`leads/TENFOLD_COBLE_LEAD.md`](leads/TENFOLD_COBLE_LEAD.md); registry
-  `D-TENFOLD-COBLE-FAMILY`, `D-TENFOLD-COBLE-EXACT-MEMBER`, `D-TENFOLD-COBLE-PLANE-COUNT`.
+  `D-TENFOLD-COBLE-FAMILY`, `D-TENFOLD-COBLE-EXACT-MEMBER`, `D-TENFOLD-COBLE-PLANE-COUNT-EXACT`.
 - **Why the special coefficients are +1 and -1: K3 and abelian surfaces** (26 Nov 2026; a short argument by an AI,
   most numbers MOD p). For two planes meeting in codimension 3 on cubic hypersurfaces only the coefficients +1 and
   -1 gain extra room. Proposed reason: the nodes of a hyperplane section carry one relation exactly when the
@@ -324,7 +324,7 @@ A readable live view of the registry and of current work is published at
 
 
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
-nobody (person or agent) repeats the work: 163 entries in `discoveries/registry.yaml`, with readable pages by area
+nobody (person or agent) repeats the work: 165 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
 on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
 and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are

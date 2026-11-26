@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (29)
+## Entries on this page (30)
 
 | id | status | title |
 |---|---|---|
@@ -41,6 +41,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-TWO-DETERMINANT-FAMILY](#d-tenfold-two-determinant-family) | `MOD_P` | Cubic tenfolds l_1*Q_1 + l_2*Q_2 + det A + det B: codimension 52, a hyperplane section with 72 nodes and one relation; not the Coble family (a new lead) |
 | [D-TENFOLD-TWO-DET-CLASS](#d-tenfold-two-det-class) | `EXACT` | Tenfold two-determinant family: the fivefold T5 has T5.T5 = -21; [T5] - 3h^5 is a second difference of four planes on the Fermat tenfold, primitive of norm -48 and divisibility 1, and not a two-plane class there |
 | [D-TENFOLD-TWO-DET-HODGE-LOCUS](#d-tenfold-two-det-hodge-locus) | `PAPER_ARGUMENT_AI` | Tenfold two-determinant family: a reduced component of codimension 52 of the Hodge locus of its class, and that class is in the monodromy orbit of [P1] - [P2] (arguments) |
+| [D-TENFOLD-COBLE-PLANE-COUNT-EXACT](#d-tenfold-coble-plane-count-exact) | `EXACT` | Tenfold lead: the intersection count of D-TENFOLD-COBLE-PLANE-COUNT exactly over QQ at a named member (Lambda . Z_a = 8, deg Z_a = 12), so the class of the 4-plane cycle is not a multiple of h^5 there |
 
 ## Related entries on other pages
 
@@ -1534,6 +1535,8 @@ ratio 2/3 survives; or a computation over a number field containing a point of A
 
 **Not established.**
 
+UPDATE 26 Nov 2026 (evening): the exact run exists, D-TENFOLD-COBLE-PLANE-COUNT-EXACT (a rational member with a
+rational point of Sing(Y); Lambda . Z_a = 8 and deg Z_a = 12 over QQ). Earlier text:
 An exact (characteristic 0) run: it needs a point of A over a number field. One attempt at a rational member
 (lam = 3, x = (4,3,5)) was dropped: that member is special (x_0 + x_2 = lam x_1; its singular locus has degree 21,
 see the blind check's scan). A human reading. Whether the secant variety of A carries the same class.
@@ -2520,3 +2523,115 @@ From the repository root (Macaulay2 1.22; about 2 minutes):
 ```
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), ninth part (owner: 'Yes go ahead' on the class of the tenfold two-determinant family).
+
+---
+
+## D-TENFOLD-COBLE-PLANE-COUNT-EXACT
+
+**Tenfold lead: the intersection count of D-TENFOLD-COBLE-PLANE-COUNT exactly over QQ at a named member (Lambda . Z_a = 8, deg Z_a = 12), so the class of the 4-plane cycle is not a multiple of h^5 there**
+
+kind: `result` | area: `explicit_cycles` | status: **`EXACT`**
+
+**Statement.**
+
+```text
+Named member (normal form of D-TENFOLD-COBLE-FAMILY): lam = -2, x = (8, 18, 1), a0 = 29, so
+  F = 29 h(z) + h(p) + h(q) + sum_{i,j} z_(i+j) x_(i-j) p_i q_j,  h(v) = v_0^3 + v_1^3 + v_2^3 - 6 v_0 v_1 v_2,
+with integer coefficients; Y = {F = 0} in P^8; a = (0, 1, -1, 1, 2, 3, -1, -3, -2).
+Z_a = the union of the 4-planes of Y through a that contain a line through a of P(ker Hess_a F) (the tangent
+plane of Sing(Y) at a). Q_a, l_1, l_2, G as in D-TENFOLD-COBLE-PLANE-COUNT.
+(0) (EXACT; why an exact run is possible.) iota: z_1 <-> z_2, p_0 <-> q_0, p_1 <-> q_2, p_2 <-> q_1 preserves the
+normal form. For a point b of its odd eigenspace the conditions grad F(b) = 0 are linear in (lam, x) and define
+a line of parameters; b = (0,1,-1,1,2,3,-1,-3,-2) gives lam = -2, x = (15 + u, 33 + 3u, 2u)/2, and u = 1 is the
+member above. So no number field is needed for the point of Sing(Y). The 4-plane P_B through the odd eigenspace
+lies in Y, passes through a and contains a line of P(ker Hess_a) through a: a rational plane of Z_a. Its image
+P' under the rational symmetry g: z_k -> z_(k+2), p_i -> p_(i+1), q_j -> q_(j+1) lies in Y, does not contain a,
+and meets P_B in a line.
+(1) (EXACT over QQ.) grad F(a) = 0; the Hessian at a has rank 6; none of the special-parameter relations holds.
+(2) (EXACT over QQ.) For an explicit rational plane pi in P': pi n {Q_a = G = 0} has dimension 0 and degree 10 and
+is reduced, with one closed point of degree 8 and one of degree 2; no point of pi n Q_a has l_1 = l_2 = 0. The
+points of the degree-8 point lie on Z_a: a 4-plane inside Y through a, the point, and the tangent direction is
+exhibited over the residue field. The points of the degree-2 point do not: the only candidate plane (the tangent
+space of the smooth fibre {F = Q_a = l_tau = b_tau = 0}) is not in Y. At all ten points Y n {Q_a = G = 0} is
+smooth, and its tangent space meets pi only in the point.
+(3) (EXACT over QQ.) For an explicit rational P^3: P^3 n Y n {Q_a = G = 0} has dimension 0 and degree 30 and is
+reduced, with closed points of degrees 12 and 18; the points of the degree-12 point lie on Z_a.
+(4) (EXACT, smoothness by reduction.) X = F + sum_k w_k Phi_k (explicit, rational; file X_exact.txt) contains the
+5-plane Lambda = {y in pi, w free}; its reductions modulo 32003 and 31991 are smooth, so X is smooth.
+(5) (EXACT over QQ(t); computed by the blind check, which found that my chain lacked it.) The family of planes is
+one-dimensional: for the direction tau = (1 : t), t an indeterminate, there is a plane of the family over a
+quadratic extension of QQ(t) (a double cover of the tau-line of genus 2), and the planes through the points of
+(2) and (3) are specialisations of it. So the 5-dimensional part Z5 of Z_a is irreducible and equals the
+degree-12 component of Y n {Q_a = G = 0}; the degree-18 point of (3) is not on Z_a (decided directly).
+(6) (ARG on (1)-(5), a few lines.) Lambda and Z5 meet transversally in exactly 8 points, so Lambda . Z5 = 8;
+deg Z5 = 12. A multiple c h^5 would have Lambda . (c h^5) = c and degree 3c. Hence [Z5] is not a rational
+multiple of h^5 on X. This replaces "MOD p" by "EXACT at one named member" for the count behind the class
+statement of D-TENFOLD-COBLE-PLANE-COUNT.
+```
+
+**Conditions.**
+
+```text
+(1)-(3) are computed over QQ with Macaulay2 1.22: Groebner bases and primary decomposition over QQ, and, at the
+closed points, identities in the residue field (determinants and substitutions; kernels by Cramer's rule,
+checked by multiplication; `kernel` over a field made by toField was not used after it failed its check). (4):
+smoothness of X is by reduction modulo two primes not dividing the denominator 1380 (a singular point over QQ
+would specialise). (5) is the checker's computation (Singular over QQ(t), re-verified in exact Python arithmetic). (6) is an argument: it uses that a transversal intersection of subvarieties of complementary
+dimension computes the product of their classes, and the membership criterion written out in
+leads/TENFOLD_COBLE_LEAD.md, section 17.2. One member, one point a, one plane pi, one P^3.
+```
+
+**Evidence.**
+
+leads/tenfold_coble/plane_test/exact/ (PREREG_exact_plane.md, ex1_setup.m2, ex2_count.m2, X_exact.txt, logs/);
+leads/tenfold_coble/blind_check11/ (the checker's scripts, including the computation of (5));
+leads/TENFOLD_COBLE_LEAD.md, section 17.
+
+**Independent check.**
+
+```text
+Blind check 11 (26 Nov 2026; a separate agent given the definitions and the claims only, no code and no
+repository; its own exact arithmetic: Python on python-flint for the number fields, Singular and Macaulay2 only
+over QQ, ZZ/p and QQ(t); every inverse verified by multiplication). CONFIRMED exactly: (0), (1); (2) with all
+numbers, and again 8 + 2 on two planes of its own choice; (3), and it decided the degree-18 point directly (not
+on Z_a; my own run of that test was stopped as too slow); (4) for a tenfold of its own (smooth modulo 32003 by
+two engines; Lambda inside); Sing(Y) of dimension 2 and degree 18 with Hilbert polynomial 9 n^2 over QQ, and
+smooth by reduction. IT FOUND A GAP in my chain: nothing in my runs showed that the family of planes is infinite,
+so "deg Z_a = 12" and transversality were not justified. It closed the gap itself by the computation recorded as
+(5), and it restated the result for the 5-dimensional part Z5. Its other remarks (accepted): the membership test
+is only sufficient where the Jacobian rank is 4 (it does not see the plane P_B, which lies over a branch point
+of the double cover); points with l_1 = l_2 = 0 exist on Z_a but no plane of the family lies in that locus; pure
+5-dimensionality of Z_a is not established and not needed; the quadrics Phi_k must involve the w. Not checked by
+anyone but the checker: (5). Report and scripts: leads/tenfold_coble/blind_check11/.
+```
+
+**Not established.**
+
+The deformation step of D-TENFOLD-COBLE-PLANE-COUNT (the same holds on every smooth tenfold with this
+P^8-section, and on the other members of the family): an argument, as before. That Sing(Y) is a smooth abelian
+surface (over QQ: dimension 2, degree 18, Hilbert polynomial 9 n^2; smooth by reduction; "abelian" not proved).
+Pure 5-dimensionality of Z_a (4-dimensional extra components would not change the class).
+Orders 2 and 3 of the explicit arc (D-TENFOLD-COBLE-ARC-ORDERS) are still MOD p. Nothing about the Hodge
+conjecture: this makes the class algebraic and non-trivial at this member.
+
+**Known before.**
+
+The count and its method: D-TENFOLD-COBLE-PLANE-COUNT (MOD p, eight runs, blind-checked), which asked for "one
+fully certified triple (a, pi, X) in characteristic 0". The linearity in (lam, x) at odd points and the rational
+planes P_B, g(P_B) were not found in the registry. Literature not searched.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/plane_test/exact/ (Macaulay2 1.22):
+    M2 --script ex2_count.m2 pi        (about 1 minute)
+    M2 --script ex2_count.m2 p3        (about 10 minutes for the degree-12 point; the degree-18 point is slow)
+Expected lines: logs/ex2_pi.log, logs/ex2_p3.log.
+```
+
+**Next step.**
+
+The same at a second rational member (another odd point b), if wanted. Orders 2 and 3 of the explicit arc
+exactly (the engine of D-TENFOLD-COBLE-ARC-ORDERS over QQ; cost not measured).
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eleventh part (owner: 'work on making the headline result exact'; 'queue this work up').

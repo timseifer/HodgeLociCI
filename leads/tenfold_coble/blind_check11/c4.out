@@ -1,0 +1,42 @@
+univariate generator: degree 30
+squarefree: True
+factor degrees over QQ: [(18, 1), (12, 1)]
+--- closed point of degree 12
+    F=0 : True
+    Qa=0 : True
+    G=0 : True
+    l1=0 : False
+    l2=0 : False
+    l_tau(y)=0 : True
+    b_tau(y)=0 : True
+    rankJ : 4
+    a in tangent : True
+    a+vtau in tangent : True
+    y in tangent : True
+    nonvanishing cubic coefficients of F on tangent : 0
+    tangent in Y : True
+    on Z_a : True
+    status : ok
+    time: 0.8s
+    rank Jac(F,Q_a,G) at y: 3 ; affine dim of (T_y W cap L): 1  (1 = transversal, reduced point)
+    time: 0.4s
+--- closed point of degree 18
+    F=0 : True
+    Qa=0 : True
+    G=0 : True
+    l1=0 : False
+    l2=0 : False
+    l_tau(y)=0 : True
+    b_tau(y)=0 : True
+    rankJ : 4
+    a in tangent : True
+    a+vtau in tangent : True
+    y in tangent : True
+    nonvanishing cubic coefficients of F on tangent : 35
+    tangent in Y : False
+    on Z_a : False
+    status : ok
+    time: 8.6s
+    rank Jac(F,Q_a,G) at y: 3 ; affine dim of (T_y W cap L): 1  (1 = transversal, reduced point)
+    time: 4.8s
+SUMMARY: [(12, True, 3, 1), (18, False, 3, 1)]

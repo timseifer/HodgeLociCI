@@ -1,0 +1,168 @@
+BLIND CHECK 11 -- cubic sevenfold Y = {F=0} (lam=-2, x=(8,18,1)), point a, the family Z_a, plane pi, P^3 L
+=====================================================================================================
+All code in /home/claude/blind_check11 was written from the definitions in the task only.
+Arithmetic: exact over QQ, over number fields QQ[t]/(m) and over QQ(t)[alpha]/(m2) (own Python classes in
+fields.py on top of python-flint ring arithmetic; every inverse is verified by multiplication).  Singular/M2 were used
+only over QQ, ZZ/p or QQ(t) polynomial rings for Groebner bases / factorisation; whatever they returned for points
+was re-verified in Python.  Only two things are modular: smoothness of X (C5) and smoothness of Sing(Y) (bonus in C7),
+both mod 32003 with the standard specialisation argument.
+
+Files: common.py (F, trilinear form, linear algebra), fields.py (fields), ztest.py (forms Q_a,l_i,B_ij,G and tests),
+       sanity.py (self-checks: grad G, the expansion identity of C2, behaviour on P_B).
+
+VERDICTS
+  C1 CONFIRMED.
+  C2 CONFIRMED as a statement about points with (l1,l2)(y) != 0 and Jacobian rank 4; NOT complete as a description
+     of Z_a (see C2: the test cannot see P_B itself, and it says nothing about dim Z_a).
+  C3 CONFIRMED (all numbers).  The consequence "Lambda.Z_a = 8" needs dim_y Z_a = 5 at the 8 points, which the
+     author's C1-C5 do not prove; I proved it by an extra exact computation (section G below).
+  C4 Count CONFIRMED (30 reduced points, 12 + 18, the 12 on Z_a).  The author's ARGUMENT for deg Z_a = 12 has a gap;
+     the degree-18 point was decided directly (NOT on Z_a); with section G: deg of the 5-dimensional part = 12.
+  C5 CONFIRMED (my X, smooth mod 32003 by two engines; Lambda in X exactly).  Note: Phi_k must involve w.
+  C6 Conclusion CONFIRMED for the 5-dimensional part of Z_a, using section G.  Not justified by C1-C5 alone.
+     Pure-dimensionality of Z_a: NOT ESTABLISHED (and not needed).
+  C7 CONFIRMED over QQ (dim 2, degree 18, Hilbert polynomial 9n^2); parameters pass the author's test.
+  Repetition with own planes pi_2, pi_3 in P': EXACT over QQ, again 8 (on Z_a) + 2 (not), transversal.
+
+-----------------------------------------------------------------------------------------------------
+C1  (c1.py -> c1.out)                                                                       CONFIRMED
+  a0 = -5481/(-189) = 29.  F(a)=0, grad F(a)=0, rank H_a = 6, T = ker H_a has dimension 3 and contains a.
+  Extra: the trilinear form of F vanishes on T, i.e. P(T) lies in Y (needed in C2).
+  iota preserves F; a is in the odd eigenspace; F vanishes on the odd eigenspace.
+  P_B: for v in the even eigenspace the condition "span(odd, v) in Y" is 10 linear conditions (rank 4 in 5 unknowns)
+  plus F(v)=0 plus 4 quadratic ones; the linear system has a 1-dimensional solution v = (6,-6,-6,8,1,18,8,18,1), and it
+  satisfies the others.  So P_B exists and is unique.  P_B in Y (all 35 cubic coefficients vanish), a in P_B,
+  dim(P_B cap T) = 2: P_B contains exactly one line of P(T) through a (direction 5*v1 + 11*v2 in my basis), not all
+  of P(T).  So P_B is a plane of Z_a.
+  g: the substitution z_k->z_(k+2), p_i->p_(i+1), q_j->q_(j+1) preserves F.  Of the two point maps it induces, pi lies in
+  the image of P_B under  (g y)_{sigma(i)} = y_i  (the value of z_k moves to z_(k+2), of p_i to p_(i+1), q_j to q_(j+1));
+  with the inverse convention pi is NOT in the image.  For this P': P' in Y, a not in P', P_B cap P' is a line,
+  pi in P', a not in pi, pi is a plane (rank 3), L is a P^3 (rank 4).
+
+-----------------------------------------------------------------------------------------------------
+C2  (sanity.py, hidden_prep.py, hidden_check.py, vlocus.py, pb_link.py)        CORRECT WHERE IT APPLIES; INCOMPLETE
+  Correct parts (identity checked as an exact polynomial identity in y,s,u,tau in sanity.py):
+     F(y + s v_tau + u a) = F(y) + s l_tau(y) + (u/2) Q_a(y) + (s^2/2) b_tau(y)
+  (uses F(a)=0, grad F(a)=0, v_tau in ker H_a, F|_T = 0).  Hence on a plane Pi of the family: Q_a = l_tau = b_tau = 0,
+  G = 0 (G/2 is b_tau at tau=(l2,-l1)), and tau is forced where (l1,l2) != 0.  If S_tau = {F=Q_a=l_tau=b_tau=0} has
+  Jacobian rank 4 at y, the only candidate plane through y is T_y S_tau.  "contains a and a+v_tau" is automatic at
+  points of W = Y cap {Q_a=G=0} (J.a = 0 and J.v_tau = 0 identically); the real condition is F|_{T_y S_tau} = 0.
+  Z_a is closed (the planes form a closed subset of the Grassmannian; union of a proper family).
+  G is independent of the choice of v1,v2 up to a scalar and multiples of Q_a.
+  Gaps / answers to the questions:
+  (a) Not every plane is detected: on P_B the Jacobian of (F,Q_a,l_tau,b_tau) has rank 3 at a random rational point
+      (sanity.py, pb_link.py), so the test is "not applicable" there although P_B is a plane of Z_a.  Reason found:
+      the planes come in pairs per direction (double cover of the tau-line branched at 6 points, section G) and
+      P_B sits over the rational branch value t = 11/5, where S_tau contains P_B with multiplicity 2.  Such planes are
+      limits of detected ones (shown for P_B: pb_link.py + pb_mult.sing, local multiplicity exactly 2), so the
+      closed set is not affected, but the test is only sufficient where the rank is 4.
+  (b) Points with (l1,l2)(y) = (0,0): there the direction is not forced and the test as stated does not apply (one
+      would have to try both roots of b_tau(y)=0).  Such points do lie on Z_a (e.g. a).  I checked exactly that no
+      plane of the family lies entirely in {l1=l2=0}: D = Y cap {Q_a=l1=l2=0} is pure of dimension 4, degree 24,
+      D cap M (M a rational P^4) = 24 reduced points (degrees 2 + 22), D is smooth at all of them and F does not
+      vanish on T_y D (34 resp. 35 of 35 cubic coefficients nonzero), so no component of D is a 4-plane in Y.
+      Consequently no plane of the family contains all of P(T) either.  None of the test points in C3/C4 has
+      l1=l2=0, so nothing is missed there.
+  (c) New structural fact (vlocus.py, hidden_prep.py): N = {B11=B12=B22=0} is a P^5 containing P(T) with Q_a|_N = 0,
+      l1|_N : l2|_N = -33 : 15 times one conic kappa, F|_N = (linear form) * kappa.  So N cap Y = P_B  union  V_4,
+      V_4 = {kappa=0} a rank-3 quadric cone of dimension 4 (kappa smooth, Gram determinant -25854675/10469).
+      Every point of V_4 lies on S_tau for EVERY tau: V_4 is a fixed component of all S_tau.  It contains no 4-plane.
+  (d) The logic gives no information on dim Z_a (see C6).
+  (e) NOT CHECKED: whether there are finitely many further isolated planes with special directions (they would be
+      4-dimensional components of Z_a inside the degree-18 component of W).  Irrelevant for a codimension-5 class.
+
+-----------------------------------------------------------------------------------------------------
+C3  (c3.py -> c3.out)                                                                        CONFIRMED
+  F vanishes identically on pi.  Q_a|_pi is an irreducible conic, G|_pi a quintic, gcd 1.  Res_{u0}(Q,G) has degree 10
+  with no root at infinity, is squarefree, and factors over QQ with degrees 2 and 8: the scheme is 0-dimensional of
+  degree 10, reduced, one closed point of degree 8 and one of degree 2.
+  gcd(Res(Q,l1), Res(Q,l2)) = 1 and Q(1,0,0) != 0: no point of pi cap {Q_a=0} has l1 = l2 = 0.
+  Degree-8 point (field QQ[t]/(m8)): (l1,l2) != 0, Jacobian rank 4, F vanishes on the tangent 4-plane (0 of 35
+  coefficients nonzero), a and a+v_tau in it  => on Z_a.   QQ(tau) has degree 8 (8 different directions).
+  Degree-2 point: rank 4, 35 of 35 coefficients nonzero => NOT on Z_a (rigorous: rank 4 and (l1,l2) != 0).
+  At both points rank Jac(F,Q_a,G) = 3 (W smooth of dimension 5) and T_y W cap pi = {y}.
+  Consequence "Lambda and Z_a meet transversally in exactly 8 points": the set statement is right
+  (Lambda cap Z_a = pi cap Z_a, inside the 10 points).  Transversality needs T_y Z_a = T_y W, i.e. dim_y Z_a = 5.
+  This is NOT implied by C1-C5 (a priori the plane through y could be isolated).  Closed in section G:
+  gen_link2.py shows that the plane through each of the 8 points is a member of the 1-parameter family.
+  Repetition (c3_pi2.py -> c3_pi2.out, EXACT over QQ): pi_2, pi_3 = spans of own integer combinations of a basis of
+  P'; both give degree 10, reduced, 8 + 2, the 8 on Z_a, the 2 not, rank 3, transversal; no l1=l2=0 point.
+
+-----------------------------------------------------------------------------------------------------
+C4  (c4_prep.py, c4.sing, c4_dim.m2, c4.py -> c4.out)             COUNT CONFIRMED; ARGUMENT HAS A GAP (REPAIRED)
+  Singular and M2 over QQ: L cap W has projective dimension 0 and degree 30.  Lex basis on the chart s3=1 is in shape
+  position (univariate polynomial of degree 30, squarefree, factors 12 + 18).  Python re-verification: both closed
+  points satisfy F=Q_a=G=0 exactly; rank Jac(F,Q_a,G) = 3 and T_y W cap L = {y} at both (so the 30 points are
+  reduced, W is smooth there).  L cap W cap {l1=l2=0} is empty.
+  Degree-12 point: rank 4, F vanishes on the tangent plane => on Z_a.
+  Degree-18 point, decided directly: rank 4, 35 of 35 coefficients nonzero => NOT on Z_a.
+  The author's argument: (i) "Z_a contains the degree-12 point, hence the degree-12 part of W" and (ii) "if it also
+  contained the degree-18 point then Z_a = W" both silently assume that Z_a is 5-dimensional at those points.  Points
+  of Z_a on L only show that some plane of the family passes there.  Without a proof that the family is infinite, Z_a
+  could be a finite union of 4-planes and "deg Z_a" in dimension 5 would be 0.
+  Repaired statement (rigorous with section G): W is pure of dimension 5 and generically reduced; its components over
+  QQ are W_12 and W_18 (through the two Galois orbits on L).  The 5-dimensional part Z5 of Z_a is a nonempty Galois
+  stable union of components of W avoiding the 18 points, hence Z5 = W_12 and deg Z5 = 12.
+
+-----------------------------------------------------------------------------------------------------
+G  EXTRA: the family is 1-dimensional (gen_prep.py, gen.sing, gen_check.py, gen_link.py, gen_link2.py, pb_link.py)
+  For tau = (1:t), t an indeterminate, S_t cap M was computed over QQ(t) (M = span(L, e_p0 + e_q2), a P^4):
+  degree 12, splitting over QQ(t) as 2 + 2 + 8.
+   - one degree-2 point is independent of t: it is V_4 cap M (see C2(c));
+   - the other degree-2 point y_t is defined over K = QQ(t)[alpha]/(m2).  gen_check.py verifies in K, exactly:
+     F=Q_a=G=0, l1+t*l2=0, Jacobian rank 4, F vanishes identically on the tangent 4-plane, a and a+v_t in it.
+     So there is a plane of the family with transcendental direction t: infinitely many planes, Z_a has a component
+     of dimension 5.  The discriminant of m2 is (degree 1)(degree 5)(degree 9)^2 / (degree 12)^2: the planes are
+     parametrised by a genus-2 double cover of the tau-line (as the theta-curve picture predicts); the degree-1
+     factor vanishes at t = 11/5, the direction of P_B.
+   - gen_link*.py: for the degree-12 point on L and the degree-8 points on pi, pi_2, pi_3, the point Pi_y cap M
+     satisfies the equations of that generic component at t = tau(y) (leading coefficients nonzero there, rank 4 at
+     Pi_y cap M).  Hence these planes are specialisations of the generic one and the points lie on the irreducible
+     5-dimensional variety Z' swept by the family.  Z' has degree >= 12 and <= 12, so Z' = Z5 = W_12.
+  The degree-8 residual part of S_t contains no plane of the family generically (else the 18 points were on Z_a).
+
+-----------------------------------------------------------------------------------------------------
+C5  (c5_prep.py, c5_lambda.sing, c5_smooth.m2, c5_smooth_slim.sing; X in c5_X.txt, choice in c5_choice.json)  CONFIRMED
+  Remark on the statement: if the Phi_k are quadrics in y only, X is singular along the plane {y=0}.  The Phi_k must
+  be quadrics of P^11 in the ideal (lambda_1..lambda_6), i.e. involve w.  This is the general form of a cubic
+  containing Lambda and restricting to F on w=0.
+  My choice: Phi_k = sum_i lambda_i * mu_ki, lambda_i the six integer linear forms cutting pi, mu_ki linear forms in
+  all 12 variables with three or four coefficients +-1 (random seed 1; w_k*lambda_k included).  Over QQ: X has
+  integer coefficients, X reduces to 0 modulo (lambda_i) (Lambda in X), X|_{w=0} = F.
+  Smoothness mod 32003: the 12 partials have only the origin as common zero; M2 (F4): dim 0; Singular (slimgb):
+  dim 0, vdim 4096 = 2^12.  Specialisation: X has integer coefficients, the singular locus of the family over ZZ_(p)
+  is proper, so an empty special fibre forces an empty generic fibre: X is smooth over QQ.
+
+-----------------------------------------------------------------------------------------------------
+C6                                                               CONCLUSION HOLDS, but not from C1-C5 alone
+  What is proved (C1-C5 + section G), for Z5 = W_12 = the 5-dimensional part of Z_a (irreducible, reduced):
+     deg Z5 = 12;  Lambda cap Z5 = 8 points, all smooth points of Z5 (Z5 = W near them), Lambda and X smooth there,
+     T_y Z5 cap Lambda = T_y W cap pi = {y}: transversal.  So Lambda.Z5 = 8.
+  If [Z5] = c h^5 then c = Lambda.Z5 = 8 and 3c = deg = 12: contradiction.  Not a rational multiple of h^5.
+  Robustness: knowing only that Z5 is nonempty (first half of section G) plus C3/C4, Z5 is W_12 or W_18 and
+  pi cap Z5 is empty or the 8 points, so Lambda.Z5 is 0 or 8 while deg/3 is 4 or 6: the conclusion already follows.
+  What was missing in the author's chain: dim Z_a = 5 is NOT established by C1-C5 (nothing there shows the family is
+  infinite; the C4 degree argument presupposes it).  The theta-curve description would give it, but it is not
+  verified in C1-C7.  Section G supplies an exact proof.
+  Remaining assumptions / caveats:
+   - standard theorem, not an extra hypothesis: for subvarieties of complementary dimension in a smooth projective
+     variety meeting transversally at smooth points, the number of points is the cup product of the classes;
+   - "class of Z_a" must be read as the class of Z5.  Pure 5-dimensionality of Z_a is not established (C2(e));
+     extra 4-dimensional components would not change the class;
+   - the result is for X containing Lambda.  Remark (not computed): since Z5 lies in every cubic restricting to F on
+     w=0 and these form a connected family, proportionality to h^5 is constant on its smooth members, so the
+     statement extends to all smooth cubics of that form.
+
+-----------------------------------------------------------------------------------------------------
+C7  (c7_prep.py, c7.m2 -> c7.out, c7_params.out; bonus c7_smooth.m2 -> c7_smooth.out)       CONFIRMED
+  Over QQ (M2): the Jacobian ideal of F has projective dimension 2, degree 18, Hilbert polynomial 9n^2 (it is not
+  saturated; saturation = 9 quadrics + 3 cubics).  Same dimension and degree mod 32003.
+  Bonus (mod 32003, implies QQ): Sing(Y) together with 8 principal 6x6 minors of the Hessian has no point, so the
+  Hessian has rank 6 along Sing(Y): Sing(Y) is a smooth surface.  Consistent with an abelian surface (chi(O)=0,
+  H.K=0); that it IS an abelian surface was not proved.
+  Parameters: no relation x_i + x_j = lam*x_k (any indices), h(x) = 5481, 1+lam^3 = -7.
+
+-----------------------------------------------------------------------------------------------------
+Run times (machine shared): everything under 20 s except the QQ(t) Groebner basis gen.sing (about 2.7 min) and the
+Singular slimgb smoothness run (32 s).  Plain Singular std on the smoothness ideal did not finish in 110 s and was
+replaced by M2 F4 and Singular slimgb.

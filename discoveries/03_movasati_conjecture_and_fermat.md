@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (21)
+## Entries on this page (22)
 
 | id | status | title |
 |---|---|---|
@@ -33,6 +33,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-COBLE-FERMAT-ARCS](#d-tenfold-coble-fermat-arcs) | `MOD_P` | Explicit arcs of the Coble family through the Fermat tenfold, with no symmetry and no free terms: the three-plane class satisfies all period equations to orders 10-12 (MOD p); every change to the Coble relation fails at the predicted order |
 | [D-TENFOLD-CONE-POINTS-TWO-DET](#d-tenfold-cone-points-two-det) | `PAPER_ARGUMENT_AI` | Tenfold two-determinant family and V_Z: at cone points over the sixfold divisor D its class is +-([P1] - [P2]), conditional on the sixfold identification (cone map applied twice); exact cone arc to order 9; no smooth honest member carries a two-plane class |
 | [D-TENFOLD-ORDER4-MODEL-CONE](#d-tenfold-order4-model-cone) | `MOD_P` | Tenfold Movasati point: special nets of rank 2 (a 13-dimensional piece) and of rank 3 pass order 4; a model cone of 27 quadrics; the order-5 obstruction on the 13-dimensional piece is removable for lambda = -1 and 2 |
+| [D-TENFOLD-MOVASATI-ORDER6](#d-tenfold-movasati-order6) | `MOD_P` | Tenfold Movasati point, a direction of the 13-dimensional piece: order 6 passes for lambda = -1 (by a change of T_3) and is obstructed for lambda = 2 modulo the first-order corrections tested |
 
 ## Related entries on other pages
 
@@ -1565,9 +1566,86 @@ Expected lines: leads/tenfold_twodet/logs/vz/.
 
 **Next step.**
 
+UPDATE 26 Nov 2026 (later): order 6 was run, D-TENFOLD-MOVASATI-ORDER6: it passes for lambda = -1 and is obstructed
+for lambda = 2 modulo the first-order corrections tested. Earlier text:
 Order 6 on a direction of the 13-dimensional piece, for lambda = -1 and 2: the order-6 vector modulo the image of
 rank 14 and modulo the first-order changes of T_2 along the 13 tangent directions of the piece (about 15 runs of
 4 minutes per lambda and prime). A proof or a full computation that the order-4 forms are the model quadrics
 (27 x 27 coefficient extraction on a basis of nets).
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), tenth part (owner: 'Yes begin' on whether the tenfold two-determinant family meets V_Z with the class [P1] - [P2]).
+
+---
+
+## D-TENFOLD-MOVASATI-ORDER6
+
+**Tenfold Movasati point, a direction of the 13-dimensional piece: order 6 passes for lambda = -1 (by a change of T_3) and is obstructed for lambda = 2 modulo the first-order corrections tested**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Setting and notation: D-TENFOLD-ORDER4-MODEL-CONE (Fermat cubic tenfold, Movasati's pair, T_1 = y_0 + a
+deformation whose net lies in the 13-dimensional piece of the model cone; D = the order-5 map on first-order
+changes of T_2, of rank 14). T_2 is first corrected so that order 5 holds. On the smooth germ Sigma the order-6
+condition is Psi_6 + DPsi_5[tau_2] + (1/2) D^2 Psi_4[tau_2, tau_2] + DPsi_4[tau_3] = 0: tau_3 moves the order-6
+vector by Im D, and tau_2 may still be changed by elements of ker D.
+(1) (MOD 32029, seed 1.) lambda = -1: the order-6 obstruction vector of the package's default continuation is not
+zero, and it lies in Im D. So it is removed by a change of T_3; checked directly: with T_2 and T_3 corrected the
+arc passes fermatVerifyArc to order 6 (all 221 forms). The package's default continuation of that arc is
+obstructed at order 7; whether that is removable was not tested.
+(2) (MOD 32029, seed 1, the same T_1.) lambda = 2: the order-6 vector does not lie in Im D. Its changes under
+T_2 -> T_2 + k were computed for k over the 13 net directions tangent to the piece, for y_0, and for 6 random
+elements of ker L made D-free: every one of these changes lies in Im D (the rank stays 14), so the order-6
+vector is not in Im D plus their span. Modulo the first-order corrections tested, the direction is obstructed at
+order 6 for lambda = 2.
+(3) So the directions of the 13-dimensional piece separate lambda = -1 from lambda = 2 at order 6 (at order 4
+and 5 they do not). T6 found the same order for a rank-1 direction at lambda = 2 (O-TENFOLD-CONE-LEAD); on
+eightfolds the separation is at order 5 (D-X1-ORDER5-FORMULA).
+Both outcomes were predicted before the runs (PREREG_vz.md, section 6, P7a and P7b).
+```
+
+**Conditions.**
+
+One prime, one seed, one direction; the package's Fermat engine. (2) is "modulo first-order corrections": the
+changes of T_2 that were tested are 20 directions of ker D, not all of it (ker D has dimension 168; that the
+random ones add nothing supports, and does not prove, that none does), and arcs with a different leading term or
+with fractional powers of eps are not covered. (1) is a finite-order statement.
+
+**Evidence.**
+
+leads/tenfold_twodet/vz6_order6.m2, logs/vz/vz6_32029_seed1_lam-1.log (stopped by hand after (1): the further
+directions are not needed when the vector is already in Im D), logs/vz/vz6_32029_seed1_lam2.log,
+vz6b_verify_order6.m2 and logs/vz/vz6b_32029_seed1_lam-1.log (the corrected arc verified to order 6);
+leads/tenfold_twodet/PREREG_vz.md, section 6; leads/TENFOLD_TWODET_LEAD.md, section 7.8.
+
+**Independent check.**
+
+None (one prime, one seed, one direction, by the same family of scripts as D-TENFOLD-ORDER4-MODEL-CONE). The
+predictions were written before the runs (PREREG_vz.md, section 6).
+
+**Not established.**
+
+A second prime and a second direction. Orders 7 and higher for lambda = -1. That a component of codimension 52
+exists at this point (finite order). For lambda = 2: obstruction for every arc (see conditions).
+
+**Known before.**
+
+The method (removability modulo first-order corrections) and the order-6 obstruction at lambda = 2 on a rank-1
+direction: team T6, O-TENFOLD-CONE-LEAD. The 13-dimensional piece: D-TENFOLD-ORDER4-MODEL-CONE.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22; primes must be 1 mod 6):
+    M2 --script leads/tenfold_twodet/vz6_order6.m2 32029 1 -1 6     (about 20 minutes to the first RESULT line)
+    M2 --script leads/tenfold_twodet/vz6_order6.m2 32029 1 2 6      (about 1.5 hours)
+```
+
+**Next step.**
+
+A second prime and seed for both lambda. Order 7 for lambda = -1: the default continuation is obstructed there;
+the test is the same scheme one order up (changes of T_4 by Im D, of T_3 and T_2 inside the kernels).
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eleventh part (owner: 'queue this work up').

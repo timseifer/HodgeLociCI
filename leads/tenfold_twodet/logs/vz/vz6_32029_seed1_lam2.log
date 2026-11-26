@@ -1,0 +1,26 @@
+p = 32029, seed 1, lambda = 2 ; order 5: rank D = 14 ; o_5 in Im D: true ; cpu 1032.29
+tangent net directions (kernel of D on nets): 13
+RESULT order 6 with the corrected T_2: obstruction vector zero: false ; in Im D (removable by T_3 alone): false ; cpu 1180.01
+  tangent direction 1 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1315.21
+  tangent direction 2 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1430
+  tangent direction 3 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1546.2
+  tangent direction 4 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1660.7
+  tangent direction 5 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1775.05
+  tangent direction 6 of 13 : rank so far 14 ; o6 in the span: false ; cpu 1894.65
+  tangent direction 7 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2020.49
+  tangent direction 8 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2145.98
+  tangent direction 9 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2288.86
+  tangent direction 10 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2428.05
+  tangent direction 11 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2562.38
+  tangent direction 12 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2703.19
+  tangent direction 13 of 13 : rank so far 14 ; o6 in the span: false ; cpu 2835.87
+RESULT after the tangent net directions: rank 14 ; o6 in Im D + span: false
+  y_0 : rank 14 ; o6 in the span: false
+  random D-free element of ker L 1 : rank 14 -> 14 ; o6 in the span: false ; cpu 3299.04
+  random D-free element of ker L 2 : rank 14 -> 14 ; o6 in the span: false ; cpu 3611.8
+  random D-free element of ker L 3 : rank 14 -> 14 ; o6 in the span: false ; cpu 3912.83
+  random D-free element of ker L 4 : rank 14 -> 14 ; o6 in the span: false ; cpu 4214.17
+  random D-free element of ker L 5 : rank 14 -> 14 ; o6 in the span: false ; cpu 4508.14
+  random D-free element of ker L 6 : rank 14 -> 14 ; o6 in the span: false ; cpu 4808.31
+RESULT final: rank 14 ; o6 in Im D + span of all tested first-order changes: false
+DONE cpu 4808.32
