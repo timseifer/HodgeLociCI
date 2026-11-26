@@ -1,0 +1,3 @@
+R4: pairwise intersections of the three planes: P^2 ; kappa^2 = -48 ; kappa . h^5 = 0
+    values of kappa . P over all planes: {-16: 27, -8: 2160, -4: 57996, -2: 556848, -1: 898560, 0: 4546773, 1: 898560, 2: 556848, 4: 57996, 8: 2160, 16: 27}
+    gcd 1 ; a value +-1 occurs: True ; planes with kappa . P = -24 (needed for a two-plane class): 0

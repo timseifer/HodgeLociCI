@@ -1,0 +1,7 @@
+T5: dimension 5, degree 9 ; contained in X: true
+Hilbert function of S / (I(T5) + J), degrees 0..7: {1, 10, 37, 52, 35, 10, 1, 0}
+Hilbert function of S / (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)): {1, 10, 35, 52, 35, 10, 1, 0} ; cpu 1.56035
+nodes: degree 72, dimension 0 ; they lie on T5: true ; T5 is smooth at each of them (a random 6 x 6 minor of the Jacobian matrix vanishes at none): true ; cpu 6.37528
+package, hodgeLocusTangentCodim(F, I(T5)): codim 52 ; smooth: true ; codimension of ((I + J) : m^e)_d in S_d, MOD p (computed over ZZ/32003 at one instance: evidence, not a proof); it is the tangent codimension of the Hodge locus of the class PROVIDED the primitive class is nonzero (then the period functional spans the annihilator of (I+J)_t) ; cpu 82.942
+DONE p 32003 seed 1
+EXIT 0

@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (31)
+## Entries on this page (32)
 
 | id | status | title |
 |---|---|---|
@@ -43,6 +43,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-SINGULAR-SECTIONS](#n-tenfold-singular-sections) | `RULED_OUT` | Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction |
 | [N-TENFOLD-THIRD-DETERMINANT](#n-tenfold-third-determinant) | `RULED_OUT` | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
 | [N-BIELLIPTIC-NOT-SINGULAR-LOCUS](#n-bielliptic-not-singular-locus) | `RULED_OUT` | A bielliptic surface of degree 18 in P^8 (K of order 2, type (3,3)) is not the singular locus of any cubic |
+| [N-M2-TOFIELD-IDEAL-QUOTIENT](#n-m2-tofield-ideal-quotient) | `RULED_OUT` | Macaulay2 1.22 returned a wrong ideal quotient over toField(QQ[w]/(w^2+w+1)) (reproducible): do not use colon ideals or their Hilbert functions over such a field as exact evidence |
 
 ---
 
@@ -1448,3 +1449,66 @@ From leads/tenfold_coble/pairing/ (Macaulay2 1.22):
 **Do not repeat.** Do not redo this embedding or the one by L + K_S. The bielliptic type with group Z/2 x Z/2 would be new.
 
 **Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), seventh part (owner's question on the K3 / abelian pairing).
+
+---
+
+## N-M2-TOFIELD-IDEAL-QUOTIENT
+
+**Macaulay2 1.22 returned a wrong ideal quotient over toField(QQ[w]/(w^2+w+1)) (reproducible): do not use colon ideals or their Hilbert functions over such a field as exact evidence**
+
+kind: `dead_end` | area: `methods` | status: **`RULED_OUT`**
+
+**Statement.**
+
+Over K = toField(QQ[w]/(w^2+w+1)), S = K[x_0..x_11], J the Jacobian ideal of the Fermat cubic and a a difference of
+two of the standard degree-6 representatives of Fermat planes, the command J : ideal a returned an ideal C with a
+generator g such that g*a is NOT in J, and S/C has the impossible Hilbert function 1, 9, 27, 37, 24, 6, 0, 0, while
+linear algebra over the same field (the rank of multiplication by a from S_3 to (S/J)_9) gives 38. The same
+computation over ZZ/p with p = 1 mod 3 behaves correctly (blind check 9).
+
+**Conditions.**
+
+Macaulay2 1.22 as installed in the project's container; one example; reproduced twice (by the checker and by the
+main agent). The cause was not investigated and nothing was reported upstream (the owner decides about contact).
+"Ruled out" here means: this tool, for this purpose.
+
+**Evidence.**
+
+leads/tenfold_twodet/tooling_tofield_colon.m2 (the checker's diag2.m2 with a header) and
+logs/tooling_tofield_colon.log; leads/tenfold_twodet/blind_check9/REPORT.txt, caveat 4.
+
+**Independent check.**
+
+Found by blind check 9 (caveat 4 of leads/tenfold_twodet/blind_check9/REPORT.txt) and reproduced by the main agent
+with the same script in the same container (the same wrong output). No third check; the cause was not
+investigated.
+
+**Not established.**
+
+Which other operations over such fields are affected (saturation, kernels, Hilbert functions of other ideals).
+Whether any EXACT entry of this registry rests on such an operation: the package's Fermat code makes its
+cyclotomic field with toField but does its own linear algebra (a comment in M2/HodgeLociCI/Fermat.m2 already
+notes that `kernel` over such a field may return a non-minimal generating set) and uses no colon ideals; the lead
+scripts were not audited.
+
+**Known before.** The comment in M2/HodgeLociCI/Fermat.m2 about `kernel` over a field made by toField. Not searched for upstream.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22; about 1 minute):
+    M2 --script leads/tenfold_twodet/tooling_tofield_colon.m2
+```
+
+**Do not repeat.**
+
+Do not present the result of I : J, quotient, saturate, or a Hilbert function built on them, over a field made by
+toField from a quotient of QQ[w], as EXACT. Use ZZ/p with p = 1 mod 3 at two primes (label MOD p), or plain linear
+algebra over the same field (%, coefficients, rank), or exact arithmetic outside Macaulay2.
+
+**Next step.**
+
+Audit the lead scripts that claim EXACT results over Q(w) for colon ideals and saturations. The owner may wish to
+report the example to the Macaulay2 developers.
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), ninth part (owner: 'Yes go ahead' on the class of the tenfold two-determinant family).

@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (27)
+## Entries on this page (29)
 
 | id | status | title |
 |---|---|---|
@@ -39,6 +39,8 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE](#d-eightfold-coble-rung-in-two-det-closure) | `PAPER_ARGUMENT_AI` | The eightfold Coble rung lies in the closure of l*Q + det A + det B: an explicit degeneration det(t + eA) - det(t + eB), after tests at the point and at a nearby point |
 | [D-EIGHTFOLD-RUNG-TANGENT-CONE](#d-eightfold-rung-tangent-cone) | `MOD_P` | At an eightfold of the Coble rung the first-order Hodge locus (codimension 25) is spanned by the node-keeping deformations of two members of the pencil; tangent cone = rung x cone over P^1 x P^1 |
 | [D-TENFOLD-TWO-DETERMINANT-FAMILY](#d-tenfold-two-determinant-family) | `MOD_P` | Cubic tenfolds l_1*Q_1 + l_2*Q_2 + det A + det B: codimension 52, a hyperplane section with 72 nodes and one relation; not the Coble family (a new lead) |
+| [D-TENFOLD-TWO-DET-CLASS](#d-tenfold-two-det-class) | `EXACT` | Tenfold two-determinant family: the fivefold T5 has T5.T5 = -21; [T5] - 3h^5 is a second difference of four planes on the Fermat tenfold, primitive of norm -48 and divisibility 1, and not a two-plane class there |
+| [D-TENFOLD-TWO-DET-HODGE-LOCUS](#d-tenfold-two-det-hodge-locus) | `PAPER_ARGUMENT_AI` | Tenfold two-determinant family: a reduced component of codimension 52 of the Hodge locus of its class, and that class is in the monodromy orbit of [P1] - [P2] (arguments) |
 
 ## Related entries on other pages
 
@@ -2306,6 +2308,9 @@ From leads/tenfold_coble/pairing/ (Macaulay2 1.22; about 2 minutes):
 **Next step.**
 
 ```text
+UPDATE 26 Nov 2026 (later): (1) is done: D-TENFOLD-TWO-DET-CLASS (T5.T5 = -21, norm -48, a four-plane class at the
+Fermat point) and D-TENFOLD-TWO-DET-HODGE-LOCUS (component of codimension 52; orbit of [P1] - [P2]). (2), (3) are open
+there as item (4). Earlier text:
 (1) The class: the 5-fold of rows, its self-intersection (51-type count on the Fermat tenfold as in
 D-EIGHTFOLD-FAMILY-TD), the pairing kernel by the functional of the nodes. (2) Does the family contain tenfolds with
 two 5-planes meeting in a plane, and with which class (the plane lemma of D-GENERAL-CUBIC-OF-D-IS-LIMIT suggests
@@ -2314,3 +2319,200 @@ this may bear on the main lead.
 ```
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eighth part (owner: 'go ahead' on the open point of 15.5; 'continue on this line').
+
+---
+
+## D-TENFOLD-TWO-DET-CLASS
+
+**Tenfold two-determinant family: the fivefold T5 has T5.T5 = -21; [T5] - 3h^5 is a second difference of four planes on the Fermat tenfold, primitive of norm -48 and divisibility 1, and not a two-plane class there**
+
+kind: `result` | area: `explicit_cycles` | status: **`EXACT`**
+
+**Statement.**
+
+```text
+Family: cubic tenfolds F = l_1 Q_1 + l_2 Q_2 + det A + det B (D-TENFOLD-TWO-DETERMINANT-FAMILY).
+T5 = {l_1 = l_2 = 0} n {rows 1, 2 of A proportional} n {rows 1, 2 of B proportional}: a fivefold of degree 9 in X.
+f(m) = (1 - (-2)^(m+1))/3 is the intersection number of two 5-planes of a smooth cubic tenfold meeting in a P^m.
+(1) (EXACT.) The Fermat tenfold is a member: x_i^3 + x_j^3 is a product of three linear forms and acf + bde =
+det [[a,b,0],[0,c,d],[e,0,f]]; pairs (01)(23) for A, (45)(67) for B, l_1 = x_8 + x_9, l_2 = x_10 + x_11. There T5 is the
+sum of 9 Fermat 5-planes, with multiplicity 1.
+(2) (EXACT, by counting on the Fermat tenfold.) [T5].[T5] = -21, [T5].h^5 = 9, and
+        [T5] - 3h^5 = delta_2 := P_(++) - P_(+-) - P_(-+) + P_(--),
+four planes in the P^9 l_1 = l_2 = 0, where P_(++) meets P_(+-) and P_(-+) in a P^3 and P_(--) in a line: the two sides
+have the same intersection number with each of the 7 577 955 Fermat planes. delta_2 . h^5 = 0, delta_2^2 = -48.
+(3) (EXACT.) Over all Fermat planes P the values of delta_2 . P are 0, +-1, +-2, +-3, +-4, +-6, +-8, +-12 (12 occurs 72
+times, 1 occurs 898560 times). So delta_2 is primitive in H^10(X, Z), and of divisibility 1 in L = (h^5)^perp
+(there are planes with delta_2 . (P - P') = 1).
+(4) (EXACT.) No Fermat plane has delta_2 . P = -24, the value ([P1] - [P2]) . P1 for two 5-planes meeting in a P^2:
+at the Fermat point the class of this family is not a difference of two planes. The same scan on the Fermat
+eightfold (T4.T4 = 51 as in D-EIGHTFOLD-FAMILY-TD, norm 24, values up to +-6, would need 12) and sixfold (T.T = 15,
+norm -12, values up to +-3, would need -6) gives the same answer for the earlier families.
+(5) (MOD 32003 and 31991, random member.) T5 has dimension 5 and degree 9 and lies in X; the 72 nodes of the
+hyperplane section through the P^9 lie on T5 and T5 is smooth at each. So D-NODES-DISCRIMINANT-IDENTITY applies:
+3 T5.T5 - 81 = -2 x 72, T5.T5 = -21 again, by a route independent of (2).
+```
+
+**Conditions.**
+
+```text
+(1)-(4): exact combinatorics on the Fermat cubics, given the formula f(m) (excess intersection; standard) and the
+description of the intersection of two Fermat planes by the cycles of the union of their pairings (validated
+against ranks on the Fermat fourfold, 4000 random pairs, and against the registry's T4.T4 = 51). (4) is about
+Fermat planes; that these are all the 5-planes of the Fermat tenfold is recalled from the literature, not
+re-read. (5): MOD p, two primes, one random member each; the member at 32003 was tested smooth.
+That [T5] at a general member specialises to the sum of the 9 planes with its class is the usual conservation of
+number (the two determinantal loci still meet the P^9 properly): an argument.
+```
+
+**Evidence.**
+
+leads/tenfold_twodet/: PREREG_twodet.md (theory and predictions written first; two predictions failed and are
+recorded there), fermat_planes.py, td1_general_member.m2, logs/. Write-up: leads/TENFOLD_TWODET_LEAD.md.
+
+**Independent check.**
+
+Blind check 9 (26 Nov 2026; a separate agent with the definitions and the claims only; own Python and Macaulay2
+code; it read none of my files). CONFIRMED, exact: the formula f(m) (excess bundle recomputed; cross-checked on
+7000 pairs of Fermat planes against a determinant formula and honest ranks); (1) with the actual minors (I(T5) is
+the intersection of the 9 plane ideals, radical; also MOD 7, 20011, 30013); (2) T5.T5 = -21, T5.h^5 = 9, norm -48,
+and equality of the pairings with all 7 577 955 planes, in the stronger form [T5] = 3h^5 + delta_2 in H; (3) the
+histogram exactly as stated, gcd 1, with explicit witnesses for divisibility 1; (4) no value +-24, while each
+[P1] - [P2] has exactly one plane with -24 and one with +24. Its remark: taking columns instead of rows for A (or
+B) changes delta_2 into -delta_2. (5) was not in its brief beyond "T5 has dimension 5, degree 9, lies in X" (MOD
+p, confirmed). Report: leads/tenfold_twodet/blind_check9/REPORT.txt.
+
+**Not established.**
+
+Whether delta_2 is a two-plane class at other points: on sixfolds the family det A + det B carries [P1] - [P2]
+along the divisor D of D-CUBIC-SIXFOLD-DETC, which need not contain the Fermat point, so (4) says nothing about
+V_Z. Nothing about the Hodge conjecture: T5 is an algebraic cycle.
+
+**Known before.**
+
+The method and the eightfold number: D-EIGHTFOLD-FAMILY-TD (teams T2, T3; exact count T4.T4 = 51 on the Fermat
+eightfold). The four-plane form of the class and the statements (3), (4) were not found in the registry. Fermat
+planes and their intersection numbers are classical (Shioda, Aoki-Shioda; Degtyarev-Shimada for the lattices):
+recalled, not re-read.
+
+**Reproduce.**
+
+```text
+From the repository root (Python 3 with numpy; Macaulay2 1.22):
+    python3 leads/tenfold_twodet/fermat_planes.py validate
+    python3 leads/tenfold_twodet/fermat_planes.py scan 12
+    M2 --script leads/tenfold_twodet/td1_general_member.m2 32003 1
+```
+
+**Next step.** See D-TENFOLD-TWO-DET-HODGE-LOCUS.
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), ninth part (owner: 'Yes go ahead' on the class of the tenfold two-determinant family).
+
+---
+
+## D-TENFOLD-TWO-DET-HODGE-LOCUS
+
+**Tenfold two-determinant family: a reduced component of codimension 52 of the Hodge locus of its class, and that class is in the monodromy orbit of [P1] - [P2] (arguments)**
+
+kind: `result` | area: `explicit_cycles` | status: **`PAPER_ARGUMENT_AI`**
+
+**Statement.**
+
+```text
+delta_2 = [T5] - 3h^5 on F = l_1 Q_1 + l_2 Q_2 + det A + det B (D-TENFOLD-TWO-DET-CLASS): orthogonal to h^5, norm -48,
+primitive, divisibility 1 in L = (h^5)^perp.
+(1) Component (ARG on MOD p numbers). I = (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)) contains the Jacobian ideal; S/I is
+Gorenstein with Hilbert function 1, 10, 35, 52, 35, 10, 1 (computed, two primes; Gorenstein because the cone over
+the curve {rank A <= 1} n {rank B <= 1} is arithmetically Gorenstein and Q_1, Q_2 are a regular sequence on it);
+I_3 is the tangent space of the family, along which T5 stays algebraic, so I lies in the annihilator of the class,
+and a Gorenstein quotient of socle degree 6 has no proper quotient of the same socle degree: I is the annihilator.
+So the first-order Hodge locus of delta_2 has codimension 52 and the family is a reduced component of the Hodge
+locus of delta_2. Computed independently of this argument: S/(I(T5) + J) has Hilbert function
+1, 10, 37, 52, 35, 10, 1, 0 and the package routine hodgeLocusTangentCodim(F, I(T5)) returns 52 (two primes).
+(2) Orbit (ARG + LIT). L is even (the Wu class of X in degree 10 is h^5, from w = (1+h)^11 mod 2), indefinite
+of large rank, with discriminant group Z/3; by Eichler's criterion primitive vectors of the same norm and the same
+class in L*/L are in one orbit of the stable orthogonal group, which is the monodromy group of smooth cubic
+tenfolds up to the spinor-norm condition (Beauville). For two 5-planes meeting in a P^2, [P1] - [P2] is primitive of
+norm -48 and divisibility 1. So delta_2 is in the monodromy orbit of [P1] - [P2].
+(3) Consequence. In the global sense (some parallel transport of the class) the Hodge locus of Movasati's class
+[P1] - [P2] on cubic tenfolds has, besides V_Z (codimension 39), this component of codimension 52, and the Coble
+family (codimension 54, D-TENFOLD-COBLE-FAMILY): its class at the Fermat point, kappa = h^5 - [P_1] - [P_2] - [P_3]
+(C-TENFOLD-FERMAT-POINT-CLASS), is also primitive of norm -48 and divisibility 1 (EXACT, the same count: values of
+kappa . P are 0, +-1, +-2, +-4, +-8, +-16). These are three different families: at the Fermat point their classes
+are a two-plane class, a four-plane class (D-TENFOLD-TWO-DET-CLASS) and the three-plane class kappa.
+(4) OPEN: whether the closure of this family meets V_Z at a point where delta_2 = +-([P1] - [P2]), that is, whether
+it is a second component of the Hodge locus of [P1] - [P2] in the local sense somewhere on V_Z, as the sixfold
+family is along the divisor D of D-CUBIC-SIXFOLD-DETC. At a point of V_Z whose Hodge lattice has rank 3 the only
+primitive classes of norm -48 orthogonal to h^5 are +-([P1] - [P2]) (4a^2 - ab + 4b^2 = 9 has only (1,-1) up to
+sign among a + b = 0 mod 3), so there the identification would be automatic. At the Fermat tenfold with
+Movasati's pair it does not happen (D-TENFOLD-TWO-DET-CLASS (4); also O-TENFOLD-CONE-LEAD bounds an extra component
+there by codimension >= 54).
+```
+
+**Conditions.**
+
+```text
+(1): the numbers are MOD p (32003 seed 1, 31991 seed 2; the member at 32003 tested smooth); the argument is by an
+AI, unreviewed; first order only (a reduced component because the tangent space of the Hodge locus equals that of
+the family). (2): an argument on two theorems machine-read on 26 Nov in secondary sources, the original papers not
+opened (Beauville's theorem as Theorem 2.9 of Huybrechts' notes "The geometry of cubic hypersurfaces", with
+Corollary 2.14 for the evenness of L; Eichler's criterion as quoted from Gritsenko, Hulek, Sankaran, Prop. 3.3, in
+later papers), and on a Wu class computation done by hand that agrees with that Corollary. Nothing here is about the Hodge conjecture: T5 is an algebraic cycle, and a
+class in the orbit of an algebraic class need not be discussed as anything else.
+```
+
+**Evidence.**
+
+leads/tenfold_twodet/td1_general_member.m2 and logs/td1_*; fermat_planes.py kappa and logs/fermat_kappa.log;
+leads/tenfold_coble/pairing/pr16_tenfold_twodet.m2 for the
+Hilbert function of S/I and the 72 nodes; PREREG_twodet.md, section 1 (T5, T6 written before the runs).
+leads/TENFOLD_TWODET_LEAD.md, sections 1 and 3.
+
+**Independent check.**
+
+Blind check 9 (as in D-TENFOLD-TWO-DET-CLASS). (2): the Wu class computation SOUND (v = 1 + h + h^3 + h^4 + h^5, so L is
+even); Eichler's hypotheses met (rank L = 1366, signature (440, 926), L = A2 + U^438 + E8(-1)^61 by Nikulin);
+the transvections lie in the monodromy group; [P1] - [P2] primitive of divisibility 1 CONFIRMED exactly for 7
+incidence types of Fermat pairs; it points out that divisibility is not vacuous (-48 is also the norm of
+primitive vectors of divisibility 3). It was recalling the two theorems, not reading them; I read them in
+secondary sources afterwards (see conditions). (1): SOUND, and CONFIRMED more strongly than I had it: at the
+Fermat point, exactly, all generators of I kill the class and the pairing has rank 52 (three primes), so the
+annihilator is I there, and codimension 52 with reducedness follows at the general member by semicontinuity;
+MOD 32003, 30011, 10007 at random members the Hilbert function 1, 10, 35, 52, 35, 10, 1. It notes that "I contains J"
+and "I_3 is the tangent space" are identities, so the only real hypothesis is that S/I has finite length.
+Its caveats, accepted: (a) the ideal of the argument has all nine minors of each matrix, the ideal of T5 only
+3 + 3 (two different ideals; the statement above uses each where it belongs); (b) (2) is a statement about the
+lattice only: the same orbit, different components of different dimension (38 or 39 against 52 at the Fermat
+point), which is what (3) and (4) say. NOT CHECKED by it: the annihilator at a random member directly (too heavy).
+
+**Not established.**
+
+```text
+(4). Characteristic 0 for the numbers. Higher order is not needed for (1) as stated, but "component" is in the
+sense of the scheme defined by the class near a general member. The literature statements were read in secondary
+sources only.
+```
+
+**Known before.**
+
+The same statement and argument one dimension down: D-EIGHTFOLD-FAMILY-TD (the family is, near a general member, the
+Hodge locus of [T4], codimension 26). Kloosterman arXiv:2312.12363 and rStation papers #5 and #11 (u/lelong_ridge,
+Oct 2026) concern the Hodge locus of the two-plane classes near V_Z and at the Fermat point: this entry does not
+give a component through V_Z, so it does not answer the question posed there.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22; about 2 minutes):
+    M2 --script leads/tenfold_twodet/td1_general_member.m2 32003 1
+```
+
+**Next step.**
+
+```text
+(4): degenerate the pair (A, B) until the cubic acquires two 5-planes meeting in a P^2, as T2 did on sixfolds
+(D-GENERAL-CUBIC-OF-D-IS-LIMIT, D-DEGENERATION-ALONG-ARC); or look on V_Z for the points where the pairing of
+[P1] - [P2] has rank below 39 at lambda = -1 and compare the kernel with the tangent space of this family.
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), ninth part (owner: 'Yes go ahead' on the class of the tenfold two-determinant family).

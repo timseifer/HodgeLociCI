@@ -1,0 +1,2 @@
+validate (1): fourfold, 4000 random pairs of planes, cycle method against ranks: mismatches 0 of 4000
+            values of P.P' on the fourfold: {3: 1, -1: 24, 1: 156, 0: 224} (3 = self, -1 line, 1 point, 0 disjoint)

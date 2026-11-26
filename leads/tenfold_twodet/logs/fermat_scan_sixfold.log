@@ -1,0 +1,7 @@
+Fermat cubic of dimension 6: 105 pairings x 81 exponent vectors = 8505 planes of dimension 3; f = [0, 1, -1, 3, -5]
+R2: T.T = 15 ; T.h = 9 ; [T] - 3h and the second difference of four planes have the same pairing with every plane: True ; delta_2^2 = -12
+    values of delta_2 . P over all planes: {-3: 72, -2: 540, -1: 1080, 0: 5121, 1: 1080, 2: 540, 3: 72}
+    gcd of these values: 1 ; an odd value occurs: True ; all values are 0 mod 3: False
+R3: planes with delta_2 . P = delta_2^2 / 2 = -6: 0
+    candidates tested: 0 ; pairs (P1, P2) with [P1] - [P2] = delta_2 (equal pairings with all planes): 0
+real	0m0.134s

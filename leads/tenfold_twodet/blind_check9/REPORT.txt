@@ -1,0 +1,54 @@
+BLIND CHECK 9 -- cubic tenfolds, family F = l1 Q1 + l2 Q2 + det A + det B.  Own code only, in /home/claude/blind_check9.
+VERDICT: nothing refuted. C1-C3 hold as stated; C4-C6 are sound. Four caveats at the end (wording, scope, tooling).
+
+D2 CONFIRMED (exact). Excess bundle from c(TX), c(TP): c(E) = (1+h)^(m+1)/(1+3h), degree-m coefficient = (1-(-2)^(m+1))/3
+   = 0,1,-1,3,-5,11,-21; c_5(N_P/X) = -21. Independent cross-check on Fermat: with the Jacobian-determinant representatives
+   a_P = sgn(pairing) prod c_k (x_i - c_k x_j) (formula recalled from the literature), [x_0..x_11] a_P a_P' = (-2)^(m+1),
+   i.e. P.P' = f(m): 0 mismatches on 7000 pairs, all m = -1..5 hit, m from honest ranks (SVD = rank mod 7 = cycle formula).
+C1 CONFIRMED. The three identities are exact. Rows 1,2 of A0 give the minors ac, ad, bd with a,c,b,d independent, so I(T5)
+   is squarefree monomial in suitable coordinates: 9 planes, radical (exact, by hand). M2 over F_p (p = 7, 20011, 30013):
+   I(T5) = intersection of the 9 ideals p(k1..k4), (k1,k2),(k3,k4) in {(0,0),(0,1),(1,1)}; degree 9; radical; exactly 9 of
+   the 81 p(k) lie in T5. Naming: a: k1=0, c: k1=1, b: k2=0, d: k2=1.
+C2 CONFIRMED (exact). [T5]^2 = -21, [T5].h^5 = 9, delta_2.h^5 = 0, delta_2^2 = -48; ([T5]-3h^5).P = delta_2.P for all
+   7577955 planes; the row-sum reason holds. TRUE IN A STRONGER FORM: [T5] = 3h^5 + delta_2 in H (L-shape = row 0 - e02
+   + e11, expand bilinearly, cross terms vanish); a_T5 = a_delta2 in the Jacobian ring, exact Z[w] arithmetic.
+C3 CONFIRMED (exact). Histogram of delta_2.P is exactly the claimed one and symmetric: +-12:72, +-8:540, +-6:4176,
+   +-4:32400, +-3:59904, +-2:511920, +-1:898560, 0:4562811. No +-24. Primitive in H (gcd 1). Divisibility 1 in L:
+   P = (01)(24)(35)(67)(89)(10 11) with exponents (0,0,0,0,1,1) has delta_2.P = 1; P' = p(0,0,0,1) has delta_2.P' = 0.
+C4 SOUND. w(X) = (1+h)^11 mod 2 (computed from c(X)); solving Sq(v) = w with Sq(h^k) = (h+h^2)^k gives
+   v = 1+h+h^3+h^4+h^5, remainder 0 through h^10. So v_10 = h^5, x.x = x.h^5 mod 2 on H, L is even.
+C5 SOUND, modulo two theorems I am RECALLING, not reading (Eichler criterion as in Gritsenko-Hulek-Sankaran; Beauville 1986).
+   - rank L = 1366 (Hodge numbers 1,220,924,220,1), signature (440,926): indefinite; sign(H) = -485 = 3 = h^5.h^5 mod 8.
+     |disc L| = 3, q = 2/3 mod 2; Nikulin gives L = A2 + U^438 + E8(-1)^61, so U+U splits off (needs evenness, C4).
+   - Monodromy as I recall it: isometries of H fixing h^5 (= stable orthogonal group of L) with real spinor norm 1,
+     normalised so reflections in (-2)-vanishing cycles have norm 1. Eichler transvections are unipotent, so they lie in
+     the identity component of O(L_R): spinor norm 1 for either sign convention, det 1. Hence inside the monodromy group.
+   - [P1]-[P2]: norm -48 exact; primitive and divisibility 1 in L CONFIRMED exactly for 7 combinatorial types of Fermat
+     pairs meeting in a P^2 (gcd of differences of (P1-P2).P over all planes = 1). Divisibility 1 is the right invariant
+     (v* = v, trivial class) and is NOT vacuous: -48 = 6 mod 18 is also a norm of primitive vectors of divisibility 3.
+C6 SOUND; conclusion CONFIRMED exactly at the Fermat point, MOD p at random members.
+   - Gorenstein: the product of two rank<=1 3x3 determinantal rings is CM Gorenstein of dim 10; S/I is its quotient by a
+     system of parameters as soon as S/I has finite length, and then HF = (1+4t+t^2)^2 (1+t)^2 = 1,10,35,52,35,10,1.
+   - "I_3 in Ann_3 => I in Ann" is correct: I is generated in degrees <= 3, and g in Ann_k iff g S_(3-k) in Ann_3.
+     "Hence equal" needs class != 0 (norm -48) and both socle degrees 6: fine.
+   - Two of the three hypotheses are identities: image(dF) = I_3 and J in I. Only finite length of S/I is a hypothesis.
+   - MOD p (32003, 30011, 10007), random members: HF 1,10,35,52,35,10,1; J in I; differential (dual numbers, 396
+     parameters) has rank 312 = dim I_3; T5 has dimension 5, degree 9, lies in X.
+   - Fermat, exact: all 22 generators of I kill a_delta2 in Q(w)[x]/(x_i^2); a_delta2 != 0; V(I) empty; rank of a_delta2
+     on R_3 is 52 mod 20011, 30013, 1000003; M2 mod p: (J : a_delta2) = I. So Ann = I at Fermat; by semicontinuity
+     codimension 52 and reducedness hold at the generic member in characteristic 0, not only mod p.
+   - Split non-Fermat member F1(x0..x5)+F2(x6..x11), MOD 32003: a_T = alpha*beta, (J_i : alpha) = I_i with HF 1,5,5,1,
+     rank 2 + 2*5*5 = 52.
+   NOT CHECKED: Ann(a_T) at a generic nine-plane member; the Groebner basis of J for a generic cubic in 12 variables
+   did not finish in 9 minutes, too heavy on this machine.
+CAVEATS
+1. C6 needs ALL nine 2x2 minors of each 3x3 matrix. (D4) defines T5 with the 3+3 minors of rows 1,2 only; with those,
+   J is not in the ideal and the quotient is not artinian (MOD p: HF 1,10,47,144,...). State which ideal is meant.
+2. C5 is a lattice statement only. It does not place the (D4) family in the Hodge-locus component through cubics
+   containing P1 and P2: that locus has codimension <= 39 (102 conditions - 63 parameters), and at Fermat the
+   first-order codimension for P1-P2 is 38 or 39 (MOD p, 7 types) against 52 for delta_2. Same orbit, different components.
+3. Using columns instead of rows for A or B changes the primitive part of [T5] by a sign (exact on Fermat; forced by
+   Macaulay duality since I is transposition-invariant). Harmless, but the sign of delta_2 depends on that choice.
+4. TOOLING: M2 1.22 over toField(QQ[w]/(w^2+w+1)) returned a wrong ideal quotient (a generator g of J:a with g*a not in
+   J; impossible HF 1,9,27,37,24,6,0; linear algebra over the same field gives 38). Do not trust "exact over Q(w)" M2
+   colon/HF output; I used F_p with p = 1 mod 3 plus exact Python instead.

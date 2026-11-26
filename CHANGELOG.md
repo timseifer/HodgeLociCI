@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 157 entries)
+### Discoveries registry (142 -> 160 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -48,6 +48,14 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   the node-keeping deformations of two members of the pencil; tangent cone = rung x cone over P^1 x P^1.
 - D-TENFOLD-TWO-DETERMINANT-FAMILY (MOD p; a new lead): cubic tenfolds l_1 Q_1 + l_2 Q_2 + det A + det B have
   codimension 52 and a hyperplane section with 72 nodes and one relation; not the Coble family; class not computed.
+- D-TENFOLD-TWO-DET-CLASS (EXACT on the Fermat tenfold; MOD p at a random member): the fivefold T5 of the family
+  l_1 Q_1 + l_2 Q_2 + det A + det B has T5.T5 = -21; [T5] - 3h^5 is a second difference of four planes there, primitive of
+  norm -48 and divisibility 1, and not a two-plane class at the Fermat point. `leads/tenfold_twodet/`.
+- D-TENFOLD-TWO-DET-HODGE-LOCUS (paper argument by an AI, unreviewed): the family is a reduced component of codimension
+  52 of the Hodge locus of that class, and the class is in the monodromy orbit of [P1] - [P2]. Open: whether it
+  meets V_Z with that class. `leads/TENFOLD_TWODET_LEAD.md`.
+- N-M2-TOFIELD-IDEAL-QUOTIENT (a caution): Macaulay2 1.22 returned a wrong ideal quotient over
+  toField(QQ[w]/(w^2+w+1)); found by the blind checker, reproduced. Do not use such output as exact evidence.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

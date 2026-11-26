@@ -1,0 +1,5 @@
+HF S/(J:a) over toField: {1, 9, 27, 37, 24, 6, 0, 0}
+every generator g of the computed colon satisfies g*a in J: false
+degrees of generators of computed colon: new Tally from {1 => 3, 2 => 18, 3 => 2}
+number of generators g with g*a NOT in J: 1
+honest linear algebra over the same field: rank of S_3 -> (S/J)_9 = 38

@@ -1,0 +1,31 @@
+-- non-Fermat member of (D4) for which T5 is a union of 9 planes: explicit class in the Jacobian ring, MOD p
+p = 32003; setRandomSeed 77;
+kk = ZZ/p; S = kk[x_0..x_11];
+r = () -> random(1,S);
+(a,b,c,d,e,f) = (r(),r(),r(),r(),r(),r());
+(a',b',c',d',e',f') = (r(),r(),r(),r(),r(),r());
+l1 = r(); l2 = r(); Q1 = random(2,S); Q2 = random(2,S);
+A = matrix{{a,b,0},{0,c,d},{e,0,f}}; B = matrix{{a',b',0},{0,c',d'},{e',0,f'}};
+F = l1*Q1 + l2*Q2 + det A + det B;
+I = ideal(l1,l2,Q1,Q2) + minors(2,A) + minors(2,B);
+<< "HF(S/I) = " << toString apply(8, i -> hilbertFunction(i, S/I)) << endl;
+IT = ideal(l1,l2) + minors(2, A^{0,1}) + minors(2, B^{0,1});
+compsA = {((a,b),(c*f,d*e)), ((a,d),(c*f,b*e)), ((c,d),(a*f,b*e))};
+compsB = {((a',b'),(c'*f',d'*e')), ((a',d'),(c'*f',b'*e')), ((c',d'),(a'*f',b'*e'))};
+aT = 0_S; pls = {};
+for u in compsA do for v in compsB do (
+    fs := {l1,l2,u#0#0,u#0#1,v#0#0,v#0#1}; gs := {Q1,Q2,u#1#0,u#1#1,v#1#0,v#1#1};
+    assert(sum(6, t -> fs#t*gs#t) == F);
+    aT = aT + det jacobian matrix{fs|gs};
+    pls = append(pls, ideal fs));
+<< "I(T5) == intersection of 9 planes: " << (IT == intersect pls) << endl;
+J = ideal jacobian ideal F;
+t0 = cpuTime();
+G = gb(J, DegreeLimit => 9);
+<< "gb of J to degree 9: " << cpuTime() - t0 << " s" << endl;
+<< "a_T in J ? " << ((matrix{{aT}}) % G == 0) << endl;
+<< "a_T * (generators of I) in J ? " << ((aT * gens I) % G == 0) << endl;
+M3 = basis(3,S);
+R9 = (aT * M3) % G;
+<< "rank of multiplication by a_T, S_3 -> (S/J)_9 : " << rank (coefficients(R9))#1 << "  (kernel dim " << 364 - rank (coefficients(R9))#1 << ", dim I_3 = " << 364 - hilbertFunction(3, S/I) << ")" << endl;
+<< "dim (S/J)_k for k<=9 from partial gb: " << toString apply(10, k -> numcols basis(k,S) - rank (coefficients((basis(k,S)) % G - basis(k,S)*0))#1 ) << endl;
