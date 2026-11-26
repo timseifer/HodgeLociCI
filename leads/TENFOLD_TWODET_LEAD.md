@@ -346,3 +346,12 @@ This is the step that would replace the sixfold paper chain (S) by a computation
   (`detrep_lib.m2`), over the series field; (4) the flat limit of T and its class at the cubic of D. By the cone
   map the same matrices give explicit degenerations onto the eightfold point X1 and the tenfold cone points.
 - Cost: several hours; the series engine is the bottleneck.
+- A first probe (26 Nov, 20:00 UTC, MOD 32029): the package's order-by-order extension, restricted to the arc's
+  own nine monomials with the normalisation of T2, stops at order 10 ("obstructed"): the first-order map is
+  singular on that slice, as it must be at a point where two components meet. So the exported arc cannot be
+  continued with `fermatExtendArc` as it stands; a solver that carries the lower terms along (T2's Newton
+  iteration on series) has to be written first.
+- An observation, not used yet: none of the nine monomials contains y_5 (x_5 in the eightfold file), so every
+  cubic of the arc is y_5^3 + Phi_eps(y_0..y_4, y_6, y_7), a cyclic triple cover of P^6. A matrix
+  y_5 * 1 + N with tr N = 0 and vanishing second coefficient has determinant y_5^3 + det N, so an ansatz
+  equivariant for y_5 -> zeta_3 y_5 is natural for one of the two matrices.
