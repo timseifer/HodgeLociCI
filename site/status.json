@@ -4,6 +4,33 @@
   "headlines": [
     {
       "date": "26 Nov 2026",
+      "title": "Two determinants on cubic tenfolds: a second explicit family for Movasati's class",
+      "tag": "Conditional on an unreviewed paper chain \u00b7 finite-order evidence \u00b7 the class is algebraic on the family",
+      "status": "PAPER_ARGUMENT_AI",
+      "summary": "Cubic tenfolds of the form l\u2081Q\u2081 + l\u2082Q\u2082 + det A + det B form a family of codimension 52. Each member carries an explicit algebraic 5-fold whose class has the lattice invariants of Movasati's class [P1] \u2212 [P2]. The cone construction of the earlier teams, applied once more, takes the known sixfold and eightfold families to this one, and if the sixfold argument it rests on holds, the family reaches the two-plane locus carrying Movasati's class, also at Movasati's own point. A separate finite-order computation at that point finds room for exactly this: a 13-dimensional cone of directions that the earlier sampling had missed, which turns the recorded bound 54 into 52. The same count gives the known families on sixfolds (8) and eightfolds (26).",
+      "numbers": "Class: T5\u00b7T5 = \u221221, norm \u221248, primitive, divisibility 1, exact on the Fermat tenfold. Tangent codimension 52: mod p at two primes. The cone arc on the Fermat tenfold keeps [P1] \u2212 [P2] a Hodge class to order 9, exactly; it is a formal consequence of the eightfold arc. The model cone of 27 quadrics has six components, of dimensions 13, 11, 11, 9, 9, 9 (computed, blind-checked). At Movasati's point generic directions are obstructed at order 4, while the 13-dimensional piece passes order 4 and, after a change of the second-order term, order 5: mod p at two primes.",
+      "open": "The sixfold identification is a paper chain by an AI; the matrices along the degeneration were never recovered. At Movasati's point the evidence stops at order 5, and the coefficient 2 behaves like \u22121 to that order, so nothing yet singles out \u22121 there. That the order-4 forms are exactly the 27 model quadrics is tested on samples, not proved. No smooth member of the family itself carries a two-plane class; the meeting points are limits. If all of it holds, this is a component on which the class is algebraic: an explanation, not an unexplained class. Nothing here has been read by a mathematician.",
+      "registry": [
+        "D-TENFOLD-CONE-POINTS-TWO-DET",
+        "D-TENFOLD-ORDER4-MODEL-CONE",
+        "C-TENFOLD-ORDER4-RANK2",
+        "D-TENFOLD-TWO-DET-CLASS",
+        "D-TENFOLD-TWO-DET-HODGE-LOCUS",
+        "D-TENFOLD-TWO-DETERMINANT-FAMILY",
+        "D-W-MINUS1-IS-TWO-DET-CLOSURE",
+        "D-LAMBDA2-CONE-TYPE",
+        "D-EIGHTFOLD-FAMILY-TD",
+        "O-TENFOLD-CONE-LEAD"
+      ],
+      "links": [
+        [
+          "Write-up, section 7",
+          "https://github.com/timseifer/HodgeLociCI/blob/main/leads/TENFOLD_TWODET_LEAD.md"
+        ]
+      ]
+    },
+    {
+      "date": "26 Nov 2026",
       "title": "Why the special coefficients are +1 and \u22121: K3 and abelian surfaces",
       "tag": "Explained by a short argument \u00b7 AI-written, unreviewed",
       "status": "PAPER_ARGUMENT_AI",
@@ -32,7 +59,7 @@
       "status": "MOD_P",
       "summary": "For Movasati's pair of 5-planes on cubic tenfolds, the class with coefficient \u22121 seemed to stay a Hodge class on a region W one dimension larger than anything known could explain, a question Movasati left open in 2019. The agents find an explicit family that matches W: tenfolds whose P^8-section is a Coble cubic, the cubic sevenfold singular along an abelian surface (Coble, 1917). Its boundary, where the abelian surface breaks into an elliptic scroll, is the known family F_T, and each member carries an algebraic 5-fold swept by 4-planes over a theta curve that would carry the class. The same mechanism, run on the known coefficient +1, finds a Pfaffian cubic singular along a K3 surface: the two special coefficients match the two kinds of surface with trivial canonical class.",
       "numbers": "Codimension 54 against 55, three moduli against two, leaving F_T in exactly the extra direction: mod p at two primes, exact over QQ at two points, blind-checked mod p. Evening: a hyperplane section through the P^8 has exactly 72 nodes with one relation among them; self-intersection \u2212144 against 48 (the same ladder reproduces the known \u221236); the explicit arc passes orders 2 and 3 exactly. All mod p at two primes; the inputs and order 2 blind-checked. Late evening: on the known coefficient +1 (Pfaffian cubic, K3 surface, 56 nodes) the same ladder returns the known lattice numbers, a second test of the method. Night: one member is written down with rational coefficients; over QQ it is smooth and its hyperplane section has exactly 72 nodes with exactly one relation (exact computation plus a specialization step from three primes; blind-checked). 26 Nov: at the Fermat tenfold the family carries a three-plane class, not Movasati's own; for that class, explicit arcs of the family with no free terms satisfy all period equations to orders 10\u201312 at two primes, and every altered version of the defining relation fails at the order predicted in advance (blind-checked). Later: a 5-plane inside a tenfold of the family meets the 4-plane cycle transversally in 8 points, where a multiple of h^5 would give 4 (mod p, two primes, predicted in advance, blind-checked): the class statement no longer rests on the two paper arguments. The parallel with the coefficient +1 (a K3 surface, 56 nodes) is explained: the discriminant of the class of a smooth cycle through the nodes is 2 x (number of nodes) = 8 x (degree of the surface), 14 for a K3 surface and 18 for an abelian surface in P^8 (an AI argument, unreviewed; computations mod p).",
-      "open": "Nothing here has been read by a mathematician. The class of the cycle now rests on an intersection count (8 against 4), done mod p; the passage to characteristic 0 is an argument, not a computation. The two earlier paper arguments (local classes at the 72 nodes; a ladder of self-intersections) agree with it. Their inputs are exact at one named member and mod p elsewhere, and order 3 was not blind-checked. At the Fermat tenfold the explicit arcs test a twin class, not Movasati's own; for Movasati's class the link to this family is still a paper argument. Finite orders are evidence, not proof.",
+      "open": "Nothing here has been read by a mathematician. The class of the cycle now rests on an intersection count (8 against 4), done mod p; the passage to characteristic 0 is an argument, not a computation. The two earlier paper arguments (local classes at the 72 nodes; a ladder of self-intersections) agree with it. Their inputs are exact at one named member and mod p elsewhere, and order 3 was not blind-checked. At the Fermat tenfold the explicit arcs test a twin class, not Movasati's own; for Movasati's class the link to this family is still a paper argument. Finite orders are evidence, not proof. Added 26 Nov: the order-4 bound recorded at Movasati's point was incomplete (special directions of rank 2 also pass), and a second explicit family, of codimension 52, may pass through the same point (card above, conditional). So W is the candidate in the Segre directions, not necessarily the largest component there.",
       "figure": "coble-healing",
       "registry": [
         "D-TENFOLD-COBLE-FAMILY",

@@ -19,9 +19,9 @@ is `M2 --script examples/quickstart.m2`, run from the repository root.
 
 ## Top results so far, in brief
 
-Short versions of the headline items of the [progress page](https://timseifer.github.io/HodgeLociCI/). Both come
+Short versions of the headline items of the [progress page](https://timseifer.github.io/HodgeLociCI/). They come
 from the discovery work around the package (`leads/`, `discoveries/`), are AI-generated and unreviewed, and carry
-the status label of their registry entries. Neither is a statement for or against the Hodge conjecture.
+the status label of their registry entries. None is a statement for or against the Hodge conjecture.
 
 - **A 1917 cubic and a hidden Hodge locus on cubic tenfolds** (25 Nov 2026; MOD p at two primes, one member exact
   over QQ; a proposed explanation awaiting review). For Movasati's pair of 5-planes on cubic tenfolds the class with
@@ -36,6 +36,14 @@ the status label of their registry entries. Neither is a statement for or agains
   surface they lie on has trivial canonical class, and the discriminant of the class is then twice the number of
   nodes: 14 for a K3 surface (the +1 class), 18 for an abelian surface (the -1 class). Registry
   `D-TENFOLD-K3-ABELIAN-PAIRING`, `D-NODES-DISCRIMINANT-IDENTITY`.
+
+- **Two determinants on cubic tenfolds: a second explicit family for Movasati's class** (26 Nov 2026; a paper
+  argument by an AI, conditional on an earlier unreviewed argument; finite-order evidence MOD p). The tenfolds
+  `l1 Q1 + l2 Q2 + det A + det B` form a family of codimension 52 whose members carry an algebraic fivefold with
+  the lattice invariants of `[P1] - [P2]`. By a cone construction it reaches the two-plane locus, conditionally
+  with Movasati's class; at Movasati's point a 13-dimensional cone of directions passes order 4, which changes the
+  recorded bound from 54 to 52. Write-up: [`leads/TENFOLD_TWODET_LEAD.md`](leads/TENFOLD_TWODET_LEAD.md); registry
+  `D-TENFOLD-CONE-POINTS-TWO-DET`, `D-TENFOLD-ORDER4-MODEL-CONE`, `D-TENFOLD-TWO-DET-CLASS`.
 
 What is not established is listed in each entry (`not_established`). The package's own main output, which is at
 odds with a published conjecture and needs expert review, is described under "What is proved, what is computed".
