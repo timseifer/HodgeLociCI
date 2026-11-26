@@ -1,0 +1,14 @@
+p = 31991, seed 2, mode G ; A = Sing(Y): dim 2 degree 18
+point a of A found; checks (rank Hess 6, dim T_aA 3, T_aA in ker Hess, a in T_aA): true
+P' (mode G): rank 5 ; F vanishes on P': true ; a on P': false ; P' n A: (1, 6, 6*i-1)
+P1: {Q_a = G = 0} in P': Q_a restricted has degree 2, G restricted has degree 5 ; dim 2 degree 10
+    in a random P^3 of P': curve of dim 1 degree 10 ; components (dim, degree): {(1, 1), (1, 1), (1, 8)} ; sum of degrees of the curve components 10 (equal to 10 means all multiplicities are 1) ; cpu .366403
+P2: component of degree 1, arithmetic genus 0 ; at 3 rational points (CI smooth there, on Z_a, detail): {(true, false, tangent space of the fibre is not in Y), (true, false, tangent space of the fibre is not in Y), (true, false, tangent space of the fibre is not in Y)}
+P2: component of degree 1, arithmetic genus 0 ; at 3 rational points (CI smooth there, on Z_a, detail): {(true, false, tangent space of the fibre is not in Y), (true, false, tangent space of the fibre is not in Y), (true, false, tangent space of the fibre is not in Y)}
+P2: component of degree 8, arithmetic genus 8 ; at 3 rational points (CI smooth there, on Z_a, detail): {(true, true, on a 4-plane through a), (true, true, on a 4-plane through a), (true, true, on a 4-plane through a)}
+P3: N = sum of degrees of the components in Z_a = 8 ; tests consistent: true
+P4: pi n {Q_a = G = 0}: degree 10 ; components (degree): {1, 1, 1, 1, 2, 4}
+    rational points of pi on Z_a: 2 ; of these, pi and T Z_a meet only in the point: 2
+    tenfold X: X n {w = 0} = Y: true ; Lambda in X: true ; X smooth: true (cpu 6.51526)
+RESULT p = 31991 seed 2 mode G: N = 8 ; multiplicities one: true ; membership tests consistent: true ; X smooth: true
+EXIT 0

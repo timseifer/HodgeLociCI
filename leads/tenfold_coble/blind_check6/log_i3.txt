@@ -1,0 +1,48 @@
+== instance i3: p=32003 seed=7 lam=12459 x={-15639, -14174, -12336} a_coef=94
+A: affine dim of Jacobian ideal = 3, degree = 18
+rational points of A found: 5
+grad F(a)=0: true;  rank Hess_F(a) = 6, rank Hess_F(a2) = 6
+T_aA (kernel of Hessian) has affine dim 3; contained in Y: true
+iota preserves F: true; (-1)-eigenspace P^3 in Y: true
+explicit plane: scheme of v has (affine dim, degree) = (1,1); plane in Y: true; a on it: false
+C: tangent directions tried 112: Fano scheme (4-planes of Y through a containing the tangent line) is 0-dim of degree 2 in all but 0 cases; 2 rational planes in 55, conjugate pair in 57  [15.1906 s]
+   all sampled planes in Y, of rank 5, containing a: true
+   number of distinct sampled planes: 110
+D (trial 1): evaluation ranks of 110 points of Gamma=Z_a/a cap P^4 in degrees 1..7: {5, 14, 29, 47, 59, 71, 83}  (monomials: {5, 15, 35, 70, 126, 210, 330})
+   successive differences: {9, 15, 18, 12, 12, 12}
+   same with only 90 of the points (degrees 1..6): {5, 14, 29, 47, 59, 71}
+D (trial 2): evaluation ranks of 110 points of Gamma=Z_a/a cap P^4 in degrees 1..7: {5, 14, 29, 47, 59, 71, 83}  (monomials: {5, 15, 35, 70, 126, 210, 330})
+   successive differences: {9, 15, 18, 12, 12, 12}
+   same with only 90 of the points (degrees 1..6): {5, 14, 29, 47, 59, 71}
+E: plane P1 through a2: in Y true, contains a: false
+F (explicit plane, pi #1): incidence scheme {(y,P): y in pi, a,y in P, P 4-plane in Y}: (dim, degree) = (0,8), degree of radical = 8; eliminant in s has degree 8 with factor (degree, multiplicity) pattern {(1,1), (1,1), (1,1), (2,1), (3,1)} [.491122 s]
+     chart points with dependent spanning vectors: none;  pi cap A empty: true;  a on pi: false
+F (explicit plane, pi #2): incidence scheme {(y,P): y in pi, a,y in P, P 4-plane in Y}: (dim, degree) = (0,8), degree of radical = 8; eliminant in s has degree 8 with factor (degree, multiplicity) pattern {(1,1), (2,1), (5,1)} [.480369 s]
+     chart points with dependent spanning vectors: none;  pi cap A empty: true;  a on pi: false
+F (plane P1, pi #1): incidence scheme {(y,P): y in pi, a,y in P, P 4-plane in Y}: (dim, degree) = (0,8), degree of radical = 8; eliminant in s has degree 8 with factor (degree, multiplicity) pattern {(1,1), (1,1), (6,1)} [.364054 s]
+     chart points with dependent spanning vectors: none;  pi cap A empty: true;  a on pi: false
+F (plane P1, pi #2): incidence scheme {(y,P): y in pi, a,y in P, P 4-plane in Y}: (dim, degree) = (0,8), degree of radical = 8; eliminant in s has degree 8 with factor (degree, multiplicity) pattern {(1,1), (7,1)} [.353928 s]
+     chart points with dependent spanning vectors: none;  pi cap A empty: true;  a on pi: false
+F2 (explicit plane): affine dims of P_x cap P' over the 110 sampled planes: new Tally from {2 => 110}; hyperplane section of the union of these lines: evaluation ranks in degrees 1..9: {4, 9, 16, 25, 33, 41, 49, 57, 65}, differences {5, 7, 9, 8, 8, 8, 8, 8}
+F2 (plane P1): affine dims of P_x cap P' over the 110 sampled planes: new Tally from {2 => 110}; hyperplane section of the union of these lines: evaluation ranks in degrees 1..9: {4, 9, 16, 25, 33, 41, 49, 57, 65}, differences {5, 7, 9, 8, 8, 8, 8, 8}
+F3: scheme of 4-planes of Y containing the tangent plane T_aA (random chart): dim -1 (empty)
+F4: 4-planes of Y through a and another rational point c of A: (dim, degree) = (0,2), components {(0,1), (0,1)}
+F4: 4-planes of Y through a and another rational point c of A: (dim, degree) = (0,2), components {(0,1), (0,1)}
+F4: 4-planes of Y through a and another rational point c of A: (dim, degree) = (0,2), components {(0,1), (0,1)}
+F4: 4-planes of Y through a and another rational point c of A: (dim, degree) = (0,2), components {(0,2)}
+G: P0 cap P1: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)}
+G: P_x#0 cap P0: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)};  cap P1: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)}
+G: P_x#1 cap P0: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)};  cap P1: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)}
+G: P_x#2 cap P0: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)};  cap P1: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)}
+G: P_x#3 cap P0: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)};  cap P1: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(2,1), (0,1)}
+G: two planes through a with the same tangent direction: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,2), (0,1)}
+G: two planes through a, different tangent directions: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)}
+G: two planes through a, different tangent directions: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)}
+G: two planes through a, different tangent directions: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)}
+G: two planes through a, different tangent directions: affine dim 2 (a line); A cap line = zeros of a binary form of degree 2 with factors {(1,1), (1,1), (0,1)}
+G: affine dim of P_x cap P_x' over 40 random pairs of sampled planes through a: new Tally from {2 => 39, same => 1}
+G: affine dim of P_x cap P0 and P_x cap P1 over all sampled planes: new Tally from {2 => 220}
+G: A cap P0 (proj dim, degree, Hilbert polynomial, reduced): (1,6,6*i-1,true)
+G: A cap P1: (1,6,6*i-1,true)
+G: A cap P_x#0: (1,6,6*i-1,true)
+== done i3

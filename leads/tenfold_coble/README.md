@@ -51,4 +51,7 @@ file of its run was left out).
 the family carries there), a proof on a symmetric 3-parameter family, and explicit arcs with no symmetry in the
 repository's Fermat engine; it has its own README and a three-part pre-registration.
 `blind_check5/`: the fifth blind checker's scripts, logs and unedited report for section 13.
+`plane_test/`: the intersection count of section 14 (a 5-plane against the 4-plane cycle: 8 points, not 4): pre-registration,
+script, logs of 8 runs.
+`blind_check6/`: the sixth blind checker's scripts, logs and unedited report for section 14.
 The node mechanism of sections 10-12 is packaged as a tool with regression tests in `tooling/node_section/`.

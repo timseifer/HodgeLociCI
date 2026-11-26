@@ -18,6 +18,9 @@
 > (C-TENFOLD-FERMAT-POINT-CLASS); for that class the family passes an explicit-arc test to orders 10-12
 > (D-TENFOLD-COBLE-FERMAT-ARCS) and a symmetric subfamily has a proof (D-TENFOLD-FERMAT-THREE-PLANE-FAMILY);
 > section 13. For Movasati's class nothing new. The node count is a tool: `tooling/node_section/`.
+> Later on 26 Nov: the class of the 4-plane cycle is not a multiple of h^5 by an intersection count with a 5-plane
+> (8 points against 4; MOD p; section 14, D-TENFOLD-COBLE-PLANE-COUNT). This replaces the two paper arguments as
+> the basis of the class statement. Left: characteristic 0 by an exact run; a human reading.
 > Read that note before sections 4-5 below; the rest of this file is unchanged.
 
 Written 25 Nov 2026 by the coordinating agent (Claude Opus 5.5) for Timothy Seifert, the repository owner, who is
@@ -129,7 +132,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (147 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (148 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the

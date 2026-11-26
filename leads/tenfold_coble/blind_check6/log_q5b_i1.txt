@@ -1,0 +1,6 @@
+== Q5b instance i1: p=32003 seed=1 lam=14651 x={-3125, -9521, -2716}
+Q5b [pi_1 of data_i1]: X cap {w=0} = Y: true; Lambda in X: true; singular locus of X: affine dim 0 (0 = smooth), pure powers for 12/12 variables, degree 4096 [6.75164 s]
+Q5b [pi_2 of data_i1]: X cap {w=0} = Y: true; Lambda in X: true; singular locus of X: affine dim 0 (0 = smooth), pure powers for 12/12 variables, degree 4096 [6.25344 s]
+Q5b [pi_3 of data_i1]: X cap {w=0} = Y: true; Lambda in X: true; singular locus of X: affine dim 0 (0 = smooth), pure powers for 12/12 variables, degree 4096 [6.60796 s]
+Q5b [pi_4 of data_i1]: X cap {w=0} = Y: true; Lambda in X: true; singular locus of X: affine dim 0 (0 = smooth), pure powers for 12/12 variables, degree 4096 [6.30478 s]
+== Q5b done i1

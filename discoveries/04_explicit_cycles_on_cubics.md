@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (18)
+## Entries on this page (19)
 
 | id | status | title |
 |---|---|---|
@@ -30,6 +30,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-COBLE-CYCLE-CLASS](#d-tenfold-coble-cycle-class) | `PAPER_ARGUMENT_AI` | Tenfold lead: the 4-plane cycle on the Coble family has self-intersection -144, so its class is 4 h^5 +- 2 ([V] - 2 h^5); hyperplane sections with 72 nodes and one relation |
 | [D-TENFOLD-PFAFFIAN-K3](#d-tenfold-pfaffian-k3) | `MOD_P` | Cubic tenfolds, coefficient +1: the Pfaffian locus is 'P^8-section singular along a K3 surface of genus 8' (56 nodes, one relation); the node ladder reproduces the lattice of h^5 + P1 + P2 (a control for D-TENFOLD-COBLE-CYCLE-CLASS) |
 | [D-TENFOLD-COBLE-EXACT-MEMBER](#d-tenfold-coble-exact-member) | `PROVED_AI_UNREVIEWED` | A named smooth cubic tenfold over QQ in the Coble family: its hyperplane section has exactly 72 nodes with exactly one relation (certificate over QQ); first-order Hodge locus of codimension 54 |
+| [D-TENFOLD-COBLE-PLANE-COUNT](#d-tenfold-coble-plane-count) | `MOD_P` | Tenfold lead: the 4-plane cycle meets a 5-plane transversally in 8 points, where a multiple of h^5 would give 4; its class is not a multiple of h^5 by a count (MOD p), without the node argument or the ladder |
 
 ## Related entries on other pages
 
@@ -1431,3 +1432,110 @@ DONE 26 Nov 2026, differently: C-TENFOLD-FERMAT-POINT-CLASS (the arc carries the
 D-TENFOLD-FERMAT-THREE-PLANE-FAMILY, D-TENFOLD-COBLE-FERMAT-ARCS.
 
 **Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), fourth part.
+
+---
+
+## D-TENFOLD-COBLE-PLANE-COUNT
+
+**Tenfold lead: the 4-plane cycle meets a 5-plane transversally in 8 points, where a multiple of h^5 would give 4; its class is not a multiple of h^5 by a count (MOD p), without the node argument or the ladder**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Setting: D-TENFOLD-COBLE-FAMILY. Y a Coble cubic in P^8 (normal form, random lam and x), A = Sing(Y), a a point of
+A, Z_a the union of the 4-planes of Y through a (the cycle of D-TENFOLD-COBLE-CYCLE-CLASS; dimension 5, degree 12).
+P' another 4-plane of Y, not through a; pi a plane in P'; X = F_Y + sum_k w_k Phi_k with Phi_k in
+(ideal of pi)(linear forms), a cubic tenfold with X n {w = 0} = Y containing the 5-plane Lambda = {y in pi, w free}.
+Then Lambda n Z_a = pi n Z_a. If [Z_a] = c h^5, then c = 12/3 = 4 and Lambda . Z_a = 4.
+Pre-registered (leads/tenfold_coble/plane_test/PREREG_plane.md) with the prediction N = 8: P' n P'' is a secant line
+of the theta curve A n P', so P' n Z_a is a ruled surface of secants of degree 6 * 2 - 8/2 = 8 (ARG).
+Result (MOD 32003 and 31991, seeds 1 and 2, P' = the explicit 4-plane through the odd eigenspace of iota and P' = a
+4-plane through a second random point of A: 8 runs, the same in all):
+  - {Q_a = G = 0} in P' is a surface of degree 10; its section by a random P^3 of P' is a curve of degree 8
+    (arithmetic genus 8) and two lines, all of multiplicity 1;
+  - the curve of degree 8 lies in Z_a and the two lines do not (membership test at smooth points of Y n Q_a n G: the
+    fibre of the pencil through the point is a 4-plane of Y through a, or it is not; over GF(p^2) where the lines
+    are conjugate);
+  - for an explicit plane pi in that P^3: pi n Z_a is 8 reduced points; at all 8 (ideal computation) Y n Q_a n G is
+    smooth and the tangent space of Z_a meets pi only in the point; the 2 points of pi on the lines are not on Z_a;
+  - X is smooth and contains Lambda.
+So Lambda . Z_a = 8 and [Z_a] is not a multiple of h^5 on X. Z_a is the same subvariety in every tenfold with that
+P^8-section; the smooth ones form a connected family; so the same holds on all of them (ARG, elementary).
+Consistent with D-TENFOLD-COBLE-CYCLE-CLASS: [Z_a] = 4 h^5 + c v_0 with c = +-2 forces Lambda . Z_a - 4 to be even.
+Also recorded (ARG, not tested): for a P^(10-s)-section of a cubic tenfold singular along a smooth S of dimension s,
+the nodes of a general hyperplane through it have defect h^0(K_S + (2s - 4) h) (Cayley-Bacharach); for a surface
+this is p_g(S), and then the secant variety of S is a 5-dimensional cycle inside the tenfold. So a search for new
+classes with tooling/node_section would list loci that come with a visible cycle.
+```
+
+**Conditions.**
+
+MOD p, 8 runs. The passage to characteristic 0 is an argument (Hensel lifting of a and P'; intersection numbers
+are constant in flat families), not written out in detail and not replaced by an exact computation. The degree 12
+of Z_a is from D-TENFOLD-COBLE-CYCLE-CLASS (Chern class count; sampled at two primes) and was recomputed by the
+blind check in three ways; only "not 24" is needed. On X itself the statement is weak (Lambda is already not a
+multiple of h^5); the content is for the members of the family without a 5-plane, by the deformation step. The conclusion uses the textbook fact that a transversal intersection of subvarieties of complementary
+dimension in a smooth projective variety computes the intersection number of their classes. Not a statement
+about the Hodge conjecture: this makes the class algebraic and non-trivial, so the lead is explained, not a
+"Hodge class not known to be algebraic".
+
+**Evidence.**
+
+leads/tenfold_coble/plane_test/ (PREREG_plane.md, pl1_count.m2, run_all.sh, logs/); leads/TENFOLD_COBLE_LEAD.md
+section 14.
+
+**Independent check.**
+
+Blind check BC-PLANE (26 Nov 2026; a separate agent given the statement and the definitions only, no code and no
+repository; its own Macaulay2 and Python code and unedited report: leads/tenfold_coble/blind_check6/). MOD p at
+4 primes (32003, 30011, 20011, 10007), 6 instances, 5 different cubics.
+AGREES on every item: deg Z_a = 12 (three ways: 110 sampled 4-planes through a per instance cut by a P^5, a curve
+of degree 12 and arithmetic genus 2; a direct count of the 4-planes through a meeting a random P^3; its own class
+computation on A x A); N = 8 for all 24 planes pi tried, decided two ways (incidence scheme of dimension 0, degree
+8, reduced; and, for every root including the conjugate ones over F_(p^k), the 4-plane through a and the point
+constructed and verified to lie in Y); transversality at all 192 points; P' n P'' is a line through the two common
+points of the two sextics in every pair tested; the identities for X; X smooth for 16 random X, and for one
+explicit X over QQ (EXACT, lam = 2, x = (1,2,5), from two reductions).
+It adds: the 4-planes through a form a geometrically irreducible double cover of the line of tangent directions
+with 6 branch points (genus 2), so Z_a is irreducible; Z_a is double along the cone over A with vertex a, which pi
+misses; a class in the span of h^5 and Lambda with these two pairings would have self-intersection 189/4, so
+[Z_a] is not in that span either.
+Its caveats (accepted): (1) everything is MOD p while classes and connectedness are used over C; (2) charts are
+random, not a covering, so a point outside a chart would be missed with probability about 1/p; (3) only sampled
+a and pi: what a proof needs is one fully certified triple (a, pi, X) in characteristic 0; (4) the degree needs a
+proof, and the argument is insensitive to it (it would also "conclude" from a wrong degree other than 24); (5) on
+X itself the statement is weak, because Lambda is already not a multiple of h^5; the content is for the tenfolds of
+the family that contain no 5-plane, reached by the deformation step; (6) special parameters must be avoided.
+Its pitfall: in a fully generic Grassmannian chart the count of 4-planes through a returns 14, with two spurious
+points where the spanning vectors are dependent; saturating by the 5 x 5 minors gives 12.
+Its finding on special parameters (EXACT over QQ, a scan of 1220 parameter points): Sing(Y) has degree 18 + 3k when
+[x] lies on k flex tangents of the Hesse cubic h_lam = 0 (the rational ones: x_i + x_j = lam x_k).
+Suggested route to characteristic 0: Hensel lifting of a (the Hessian has rank 6), then specialisation: the
+characteristic-0 cycle specialises to m [Z_a mod p], so degree and intersection number become 12 m and 8 m and the
+ratio 2/3 survives; or a computation over a number field containing a point of A.
+
+**Not established.**
+
+An exact (characteristic 0) run: it needs a point of A over a number field. One attempt at a rational member
+(lam = 3, x = (4,3,5)) was dropped: that member is special (x_0 + x_2 = lam x_1; its singular locus has degree 21,
+see the blind check's scan). A human reading. Whether the secant variety of A carries the same class.
+
+**Known before.**
+
+Intersection numbers of cycles with linear subspaces are the standard way to tell a class from a multiple of the
+linear section class. Benedetti-Manivel-Tanturri (arXiv:1904.10848) for the 4-planes of the Coble cubic (abstract
+read). Not searched further.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/plane_test/ (Macaulay2 1.22):
+    M2 --script pl1_count.m2 32003 1 B        (about 15 s; also 31991, seed 2, mode G)
+    ./run_all.sh                              (all 8 runs)
+```
+
+**Next step.** An exact version over a number field at one rational Coble cubic, if a stronger label is wanted.
+
+**Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), sixth part.

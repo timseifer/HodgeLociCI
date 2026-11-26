@@ -1,0 +1,15 @@
+== fanoA instance i2: p=30011 seed=2
+chart: N7 containing t1
+scheme of 4-planes of Y through a (chart: P cap T_aA = <a, t0+tau*t1>, P cap N7 in a Grassmannian chart): dim = 1, degree (affine chart) = 14 [2.64675 s]
+  fibre degrees over 5 random tau: {(0,2), (0,2), (0,2), (0,2), (0,2)}
+   after removing chart points where the 5 spanning vectors are dependent: degree 12 (dim 0)
+Q1 direct (random P^3 #1): scheme of 4-planes of Y through a meeting the P^3: (dim, degree) = (0,12), degree of radical = 12 [50.0537 s]
+   after removing chart points where the 5 spanning vectors are dependent: degree 12 (dim 0)
+Q1 direct (random P^3 #2): scheme of 4-planes of Y through a meeting the P^3: (dim, degree) = (0,12), degree of radical = 12 [22.0684 s]
+   after removing chart points where the 5 spanning vectors are dependent: degree 12 (dim 0)
+Q1 direct (random P^3 #3): scheme of 4-planes of Y through a meeting the P^3: (dim, degree) = (0,12), degree of radical = 12 [22.6091 s]
+plane model of the curve of planes: 1 eliminant(s), degrees in (u,tau): {(2,12)} [.00694619 s]
+  factorisation over F_p: {(2,12,1)}
+  leading coefficient c2(tau): degree 12; discriminant in tau: degree 24, factors (degree, multiplicity): {(1,2), (1,1), (1,1), (1,1), (1,1), (2,1), (8,2), (0,1)}
+  number of roots of nOdd multiplicity (= finite branch points of the double cover of the tau-line): 6
+== fanoA done i2

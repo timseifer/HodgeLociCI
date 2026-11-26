@@ -1,0 +1,14 @@
+EXACT (all parameters): iota preserves F: true
+EXACT (all parameters): F vanishes on the (-1)-eigenspace {z_0=0, z_2=-z_1, q_0=-p_0, q_1=-p_2, q_2=-p_1}: true
+rational instance: lam=2, x=(1,2,5), a_coef = -194/243
+EXACT over QQ: Sing(Y): affine dim 3, degree 18 [.00794593 s]
+EXACT over QQ: scheme of points v of the (+1)-eigenspace with span(P^3_-, v) in Y: (affine dim, degree) = (1,1); equations: {5*vv_3-2*vv_4, 5*vv_2-vv_4, 5*vv_1-6*vv_4, 5*vv_0-6*vv_4}
+EXACT over QQ: explicit 4-plane contained in Y: true
+EXACT over QQ: X cap {w=0} = Y: true; Lambda in X: true
+  reduction of this X mod 32003: singular locus affine dim 0, degree 4096  (dim 0 mod p ==> the tenfold over QQ is smooth)
+  reduction of this X mod 30011: singular locus affine dim 0, degree 4096  (dim 0 mod p ==> the tenfold over QQ is smooth)
+== exact done
+
+real	0m39.050s
+user	0m20.558s
+sys	0m0.471s

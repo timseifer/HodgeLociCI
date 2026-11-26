@@ -11,6 +11,9 @@ question is algebraic on the whole family.
 > 26 Nov 2026: read section 13 with item 6. At the Fermat tenfold the explicit arcs of this family carry a
 > different class from Movasati's (the three-plane class); the family passes a finite-order test there for that
 > class. For Movasati's class the identification with the registry's W is unchanged: a paper argument.
+> 26 Nov 2026, later: section 14. The class of the 4-plane cycle is not a multiple of h^5 by an intersection count
+> with a 5-plane (8 points, where a multiple of h^5 would give 4; MOD p, predicted in advance, blind-checked). This
+> does not use the node argument or the ladder of section 10.
 
 1. There is an explicit family of cubic tenfolds of codimension 54 containing F_T in its closure: **X has a
    P^8-section that is a Coble cubic** (the cubic sevenfold singular along a principally polarized abelian surface A
@@ -723,3 +726,137 @@ The node count of sections 10-12 (singular points of a hyperplane section, ordin
 forms of the right degree) is packaged in `tooling/node_section/` with seven regression cases, among them the
 member of section 12 (72 / 71 / 1) and a Pfaffian section as in section 11 (56 / 55 / 1). It returns a labelled
 count, not a statement about Hodge classes (registry M-NODE-SECTION-TOOL).
+
+## 14. The class of the cycle by one intersection count (26 Nov 2026)
+
+Pre-registration, written before the runs and kept as written: `tenfold_coble/plane_test/PREREG_plane.md`.
+Script and logs: `tenfold_coble/plane_test/`. MOD p. Nothing here is a statement about the Hodge conjecture.
+
+### 14.0 What came out
+
+1. (MOD p; two primes, two seeds, two kinds of 4-plane: 8 runs) In a smooth cubic tenfold X of the Coble family
+   that contains a 5-plane Lambda, the 4-plane cycle Z_a and Lambda meet transversally in exactly **8** points.
+   If [Z_a] were a multiple of h^5 the number would be 4 (deg Z_a = 12). So [Z_a] is not a multiple of h^5.
+2. This does not use section 10 (no local classes at nodes, no ladder). What it uses: the count, the degree 12 of
+   Z_a, and the textbook fact that a transversal intersection computes the intersection number. The number 8 was
+   predicted in writing before the run (14.2).
+3. NOT done: characteristic 0 (a lifting argument, ARG, in 14.4; no exact run); a human reading.
+
+### 14.1 Setup
+
+Y = Coble cubic in P^8 (normal form, random lam and x), A = Sing(Y), a = a point of A, Z_a = the union of the
+4-planes of Y through a (dimension 5, degree 12: 10.5). P' = another 4-plane of Y, not through a; pi = a plane in
+P'. X = F_Y + sum_k w_k Phi_k with Phi_k in (ideal of pi)(linear forms): X n {w = 0} = Y, and X contains the 5-plane
+Lambda = {y in pi, w free}. Lambda n Z_a = pi n Z_a, because Z_a lies in the P^8.
+
+If [Z_a] = c h^5 then 12 = Z_a . h^5 = 3c, so c = 4 and Lambda . Z_a = 4 (Lambda . h^5 = 1).
+
+### 14.2 The prediction (ARG, written before computing)
+
+Two 4-planes P', P'' of Y meet in the secant line of the theta curve A n P' through its two points on A n P''.
+So P' n Z_a is the ruled surface of these secants for P'' through a. The pairs of points form a curve B in the
+symmetric square of the genus-2 sextic A n P'; B meets "pairs containing a given point" in 2 and the diagonal in 8
+(Riemann-Hurwitz on the incidence curve, of genus 7), and the secants meeting a codimension-2 plane form the class
+6 x - delta/2. Degree of the surface: 6 * 2 - 8/2 = 8.
+
+### 14.3 The computation (`pl1_count.m2`)
+
+Z_a is a component of Y n {Q_a = G = 0} (Q_a the tangent cone of Y at a, G a quintic; as in `h5c_cycle_sampling.m2`).
+A point y of that complete intersection lies on Z_a if and only if the fibre through y of the pencil of the
+construction is, near y, a 4-plane contained in Y through a (the test of `h5c`); at a smooth point of the complete
+intersection this decides which component passes through y.
+
+| what | result, the same in all 8 runs |
+|---|---|
+| {Q_a = G = 0} in P' | a surface of degree 10 |
+| its section by a random P^3 of P' | a curve of degree 8 and arithmetic genus 8, and two lines (over ZZ/p in 6 runs, conjugate over GF(p^2) in 2); all multiplicities 1 |
+| the curve of degree 8, at 3 rational points | smooth points of Y n Q_a n G, on a 4-plane of Y through a: in Z_a |
+| the two lines, at 3 points each (over GF(p^2) where needed) | smooth points of Y n Q_a n G, NOT on Z_a |
+| an explicit plane pi in that P^3: pi n Z_a | 8 points, reduced |
+| at all 8 points (ideal computation, so non-rational points included) | Y n Q_a n G is smooth; the tangent space of Z_a meets pi only in the point |
+| the 2 points of pi on the lines | not on Z_a |
+| X | contains Lambda, X n {w = 0} = Y, smooth (F4, 12 variables) |
+
+Runs: p = 32003 and 31991, seeds 1 and 2, with P' = the explicit 4-plane through the odd eigenspace of iota
+(mode B) and with P' = a 4-plane through a second random point of A (mode G). N = 8 in all.
+(A first version of the script tried to decompose the surface in P^4 and did not finish in 10 minutes; it was
+replaced by the section by a P^3 before any result was seen. The first complete version checked transversality
+only at the rational points of pi; the final one checks all 8 points. Logs of both are kept.)
+
+### 14.4 What follows, and what is still an argument
+
+- (MOD p) On X: Lambda and Z_a have complementary dimension, meet in 8 points, and at each point Z_a is smooth with
+  T Z_a n T Lambda = 0 (T Lambda n T P^8 = T pi and T Z_a lies in T P^8). So Lambda . Z_a = 8, not 4, and [Z_a] is
+  not a multiple of h^5 on X.
+- Z_a is the same subvariety in every tenfold X' with X' n {w = 0} = Y. The smooth ones form a connected family
+  (the complement of a hypersurface in an affine space), and the class of a fixed subvariety is locally constant.
+  So [Z_a] is not a multiple of h^5 on any of them, in particular on those that contain no 5-plane.
+- Consistent with section 10: there [Z_a] = 4 h^5 + c v_0 with c = +-2, so Lambda . Z_a - 4 = c (Lambda . v_0) must
+  be even; it is 4.
+- Characteristic 0 (ARG): take integer lam, x; a and P' are smooth points of A and of the Fano surface of 4-planes
+  mod p, so they lift to the p-adic integers (Hensel), and so do pi and X; Z_a and Lambda are flat over the p-adic
+  integers and intersection numbers are constant in flat families. Not written out in detail, and not replaced by
+  a computation over a number field.
+- The degree 12 of Z_a is from 10.5 (Chern class count; sampled at two primes); it was not recomputed here. The
+  conclusion needs only deg Z_a different from 24.
+- With section 5 (first order: the class functional supported on the P^8 is unique, and its Hodge locus has the
+  tangent space of the family, codimension 54) this gives outcome (a) of the handoff at the level MOD p + the
+  lifting argument: an explicit algebraic 5-cycle with class not a multiple of h^5 on the codimension-54 family
+  that contains F_T as a divisor.
+
+### 14.5 Why the node tool is not a route to the main target (ARG)
+
+Asked to "continue on the most logical path", I first looked at using `tooling/node_section` to search for new
+classes. Count by Cayley-Bacharach: if a P^(10-s)-section of a cubic tenfold is singular along a smooth S of
+dimension s, a general hyperplane through it has nodes at S n (s quadrics), and they fail to impose independent
+conditions on quartics by h^0(K_S + (2s - 4) h). For a surface (s = 2) the defect is the geometric genus p_g(S):
+1 for the K3 surface of section 11 and 1 for the abelian surface, as computed. But in that case the secant variety
+of S has dimension 5 and lies in the cubic, hence in the tenfold: a candidate algebraic cycle comes for free. For
+s = 3 the threefold must have a deficient secant variety, which forces the determinantal families already in the
+registry. So a search with the tool would list loci that come with a visible cycle; it would not produce "a Hodge
+class not known to be algebraic". Not tested: whether the secant variety carries the class in the two known cases.
+
+### 14.6 Independent check (BC-PLANE, blind check 6)
+
+A separate agent, given the statement and the definitions only (no code, no repository). Its own Macaulay2 and Python
+code and its unedited report are in `tenfold_coble/blind_check6/`. MOD p at 4 primes (32003, 30011, 20011, 10007),
+6 instances, 5 different cubics.
+
+It AGREES on every item:
+
+- deg Z_a = 12, three ways: 110 sampled 4-planes through a per instance cut by a P^5 give a curve of degree 12 and
+  arithmetic genus 2; a direct count of the 4-planes through a that meet a random P^3; its own class computation
+  on A x A.
+- N = 8 for all 24 planes pi it tried, decided two ways: the incidence scheme {(y, P)} has dimension 0, degree 8 and
+  is reduced; and for every root, including the conjugate ones over F_(p^k), it constructs the 4-plane through a and
+  the point by linear algebra and verifies that it lies in Y.
+- Transversality at all 192 points.
+- P' n P'' is a line through the two common points of the two sextics, in every pair tested (14.2).
+- The identities for X; X smooth for 16 random X and for one explicit X over QQ (EXACT, lam = 2, x = (1,2,5)).
+
+It adds: the 4-planes through a form a geometrically irreducible double cover of the line of tangent directions with
+6 branch points (genus 2), so Z_a is irreducible; Z_a is double along the cone over A with vertex a (pi misses it);
+a class in the span of h^5 and Lambda with pairings 12 and 8 would have self-intersection 189/4, so [Z_a] is not in
+that span either.
+
+Its caveats, all accepted:
+
+1. Everything is MOD p, while classes and connectedness are used over C.
+2. Charts are random, not a covering: a point outside a chart would be missed with probability about 1/p.
+3. Only sampled a and pi. A proof needs one fully certified triple (a, pi, X) in characteristic 0.
+4. The degree needs a proof; the argument is insensitive to it (it would "conclude" from any degree other than 24).
+5. On X itself the statement is weak, because Lambda is already not a multiple of h^5. The content is for the members
+   of the family that contain no 5-plane, reached by the deformation step of 14.4.
+6. Special parameters must be avoided (below).
+
+Its pitfall: in a fully generic Grassmannian chart the count of 4-planes through a returns 14; two of the points have
+dependent spanning vectors. Saturating by the 5 x 5 minors gives 12.
+
+Its finding on special parameters (EXACT over QQ, a scan of 1220 parameter points): Sing(Y) has degree 18 + 3k when
+[x] lies on k flex tangents of the Hesse cubic h_lam = 0; the rational ones are x_i + x_j = lam x_k. This explains
+an exact attempt of mine at lam = 3, x = (4,3,5) (4 + 5 = 3 * 3): the singular locus had degree 21, with Hilbert
+polynomial that of the abelian surface plus three planes. That member must not be used; the attempt was dropped.
+
+Its suggestion for characteristic 0: Hensel lifting of a, then specialisation: the characteristic-0 cycle
+specialises to m [Z_a mod p], so the degree and the intersection number become 12 m and 8 m and the ratio 2/3
+survives for any m; or a computation over a number field that contains a point of A.

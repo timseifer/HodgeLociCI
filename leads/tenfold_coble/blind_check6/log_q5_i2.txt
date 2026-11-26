@@ -1,0 +1,5 @@
+== Q5 instance i2: p=30011 seed=2 lam=-2156 x={10089, -12034, 578}
+Q5 [pi in explicit plane, random Phi #1]: X cap {w=0} = Y: true; Lambda={y in pi} contained in X: true; affine dim of singular locus (Jacobian ideal) = 0 (0 means X smooth); variables with a pure power among the leading terms: 12/12; degree of Jacobian ideal: 4096  [6.9218 s]
+Q5 [pi in plane P1, random Phi #2]: X cap {w=0} = Y: true; Lambda={y in pi} contained in X: true; affine dim of singular locus (Jacobian ideal) = 0 (0 means X smooth); variables with a pure power among the leading terms: 12/12; degree of Jacobian ideal: 4096  [6.11722 s]
+Q5 [CONTROL, linear factors without w: must be singular]: X cap {w=0} = Y: true; Lambda={y in pi} contained in X: true; affine dim of singular locus (Jacobian ideal) = 3 (0 means X smooth); variables with a pure power among the leading terms: 9/12; degree of Jacobian ideal: 1  [5.53019 s]
+== Q5 done i2

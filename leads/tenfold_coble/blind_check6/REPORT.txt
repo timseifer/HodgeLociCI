@@ -1,0 +1,155 @@
+BLIND CHECK 6 -- REPORT   (independent code; statements only; nothing here is a statement about the Hodge conjecture)
+Tools: Macaulay2 1.22 (Groebner bases, F4 over ZZ/p), Python 3 + python-flint 0.9 (linear algebra over F_p and F_{p^k}).
+All files are in /home/claude/blind_check6.  No other project directory or repository was read.
+
+INSTANCES (MOD p unless marked EXACT)
+  i1: p=32003 seed 1 | i2: p=30011 seed 2 | i3: p=32003 seed 7 | i4: p=20011 seed 11   (lam, x random)
+  r1: p=32003, r2: p=10007 : reductions of the fixed rational cubic lam=2, x=(1,2,5), a_coef=-194/243.
+  => 4 primes, 6 instances, 5 different cubics Y.  In each instance: a = random F_p-point of A (from a random
+  codim-2 linear section of A), a2 = a second such point.
+  Confirmed in every instance: Jacobian ideal of F has affine dim 3, degree 18; rank Hess_F(a)=6 (so A is smooth of
+  dim 2 at a, T_aA = ker Hess); T_aA is contained in Y; iota preserves F; P^3_- lies in Y; exactly one v (reduced)
+  gives the explicit 4-plane P0; A cap P is reduced with Hilbert polynomial 6t-1 (degree 6, p_a=2) for P0 and
+  for two other 4-planes.  EXACT (identity in lam,x,a_coef): iota preserves F and F vanishes on P^3_-.
+  EXACT over QQ for lam=2,x=(1,2,5): Sing(Y) has dimension 2 and degree 18; v is unique and rational.
+
+HOW I FOUND 4-PLANES (definition level, no outside knowledge)
+  A 4-plane P of Y through a is isotropic for the quadric Q_a=B(a,.,.) (rank 6, kernel T_aA), hence meets T_aA in
+  at least a line (EXACT consequence of rank 6).  For a tangent direction t I solve the full Fano problem
+  "P contains a and t, F|P=0" in a random Grassmannian chart (9 unknowns, Groebner basis).  Result in all 683
+  random tangent directions tried (6 instances): the scheme is finite of degree exactly 2 (2 rational planes
+  330 times; 353 times not 2 rational planes, read as a conjugate pair).  This gave 110 rational planes through a per
+  instance, all distinct, all verified to lie in Y.
+
+Q1.  deg Z_a = 12.                                                      MOD p (4 primes, 6 instances)
+  (a) Z_a is a cone with vertex a.  Cut with a random P^5 through a: each sampled plane gives one point of a curve
+      Gamma in P^4.  Evaluation ranks of the 110 points in degrees 1..7: 5,14,29,47,59,71,83 = 12d-1 for d>=4
+      (same with 90 points; 2 random P^5 per instance; identical in all 6 instances).  So Gamma has degree 12 and
+      arithmetic genus 2, i.e. deg Z_a = 12.
+  (b) Direct count (i1 p=32003, i2 p=30011; 3 random P^3 each): the complete scheme of 4-planes of Y through a
+      (13 unknowns: tangent parameter tau + chart) is a curve; adding "P meets a random P^3" gives a reduced
+      scheme of degree 12.
+  (c) Cross-check by theory (mine, not machine-checked): if the planes are the spans of the theta-translates through
+      a on a (3,3)-polarised Jacobian, deg Z_a = -(1/6)(2 th1 - th2 + lambda)^3 . th2 on A x A = 72/6 = 12.
+  CAVEAT / PITFALL: in a chart where the complement N7 is random, the same count returns 14, not 12: 2 extra chart
+      points have dependent spanning vectors (a 3-plane, not a 4-plane) and satisfy "det=0" trivially.  Saturating by
+      the 5x5 minors, or choosing N7 to contain a tangent vector, gives 12 (logs log_fanoA_i1g.txt vs _i1.txt).
+
+Q2.  Yes, P' cap Z_a is a surface, of degree 8:  N = #(pi cap Z_a) = 8.     MOD p (4 primes, 6 instances, 24 planes pi)
+  P' = the explicit plane P0 (2 random pi each) and P' = a 4-plane through a2 (2 random pi each); a not on P'.
+  How membership was decided (two independent ways, both definition level):
+  (a) M2: incidence scheme {(y,P): y in pi, P a 4-plane, a,y in P, F|P=0}; y runs over the conic pi cap {Q_a=0}
+      (rationally parametrised by s), P over a Grassmannian chart.  In all 24 cases: dimension 0, degree 8,
+      radical of degree 8, no chart point with dependent spanning vectors, pi cap A empty.
+  (b) Python: candidates = common zeros in s of 9x9 minors of the bordered matrix expressing "the pencil
+      B(a,.,.), B(y,.,.) on {B(a,y,.)=B(y,y,.)=0}/<a,y> has rank <=4" (necessary for y in Z_a); the gcd has degree
+      exactly 8 in all 24 cases.  For EVERY root (all Galois conjugates, in F_{p^k}, k up to 8) the 4-plane through a
+      and y is then constructed by linear algebra (span of kernels of pencil members) and F|P=0 is verified; the
+      construction also shows this plane is the only one.  0 candidates rejected, 0 undecided; the point s=infinity
+      and 10 random points of the conic test negative; the 8 verified roots are exactly the roots of the M2 eliminant.
+  (c) Structure: P' cap P_x is a line for all 110 sampled planes (both P'); a hyperplane section of the union of
+      these lines has evaluation ranks 4,9,16,25,33,41,49,57,65 = 8d-7 (d>=4): degree 8, p_a = 8 = 2 + 6, the 6
+      nodes coming from the double curve A cap P' (each point of A lies on 2 planes through a).
+  (d) Theory (mine): the lines are chords of the sextic C' cut by a curve of class theta in C'^(2);
+      degree = (6x - delta/2).theta = (3x + theta).theta = 8.
+  Caveat: charts and the parametrisation are random; a solution outside the chart would be missed with probability
+  about 1/p per point.  (a) and (b) use different mechanisms and agree in all 24 cases.
+
+Q3.  Yes at all 8 points, in all 24 cases (192 points, non-rational ones included).   MOD p (4 primes, 6 instances)
+  At each y (in its field F_{p^k}): y is a smooth point of Y; exactly one 4-plane P through a and y; the Zariski
+  tangent space of the scheme of 4-planes through a at P has dimension 1 (generator phi); phi(y) is not in P, so
+  the scroll is immersed at y and, the fibre being one reduced point, Z_a is smooth at y with
+  T_yZ_a = P + <phi(y)>;  rank(P + phi(y) + pi) = 8 = 6 + 3 - 1, i.e. T_yZ_a cap pi = {y}.
+  (In T_yX this is rank 11 with the w-directions: transversal.)
+
+Q4.  P' cap P'' is a line (projective dimension 1) in every pair tested.        MOD p (4 primes, 6 instances)
+  Pairs: P0 with the plane through a2; each of 110 planes through a with P0 and with P1 (220 per instance);
+  40 random pairs of planes through a per instance.  On the line, grad F vanishes on a binary quadric: the line
+  meets A in exactly 2 points (rational or conjugate), which are the 2 common points of the sextics A cap P' and
+  A cap P''; so the line is the common chord of the two sextics.  Two planes through a with the same tangent
+  direction at a meet in the tangent line there (double root).  Through a and another point c of A there are
+  exactly 2 planes (21 pairs (a,c) tested).  No pair with a larger intersection was seen; not proved for all pairs.
+
+Q5.  Confirmed.                                                 MOD p (3 primes) and one EXACT example
+  X cap {w=0} = Y, Lambda contained in X, Lambda cap {w=0} = pi: identities, checked symbolically each time.
+  Smooth: Jacobian ideal (12 quadrics) has affine dimension 0 and degree 4096 = 2^12 (F4) for 16 random X:
+  the 4 planes pi actually used in Q2/Q3 of i1, i2, i4 (12) and 4 further random ones (p=32003, 30011).
+  Control: with linear factors not involving w, X is singular (dimension 3 found), as it must be.
+  EXACT: for lam=2, x=(1,2,5), pi = fixed integer plane in P0, Phi with integer coefficients (exact.m2, seed 5),
+  X over QQ reduces to a smooth tenfold mod 32003 and mod 30011, hence is smooth over QQ.
+
+Q6.  REVIEW.  With deg Z_a = 12 and N = 8 the arithmetic is: c would be 4, but Lambda.Z_a = 8.  The local step is
+  right (T Lambda cap T P^8 = T pi; Q3 gives T_yZ_a cap T_y pi = 0; X smooth), and h^10 = 3, Lambda.h^5 = 1.
+  The deformation step is right over C (parameter space of X' is an affine space, smooth locus Zariski open and
+  non-empty, Z_a x base is a flat family of cycles, h^5 is flat).  Gaps:
+  G1. Characteristic.  Every number is MOD p.  Cohomology classes, "connected family", "locally constant" are used
+      over C.  See "MOD p to characteristic 0" below.
+  G2. Z_a is defined as the union of ALL 4-planes through a.  The argument needs (i) that the planes through a form
+      one curve (so Z_a is irreducible of dimension 5 and its class is that of the reduced variety), (ii) that through
+      a general point of Z_a there is one plane (else deg or N is off by a factor).  I find both true MOD p
+      (Q7.1, Q3) but neither is proved in the argument.
+  G3. Completeness of the list of N points: all points over the algebraic closure, with nothing lost at chart
+      boundaries; and smoothness/transversality at the non-rational ones.  I checked all 8 each time, but my charts
+      are random, not a covering.
+  G4. deg Z_a must be the true degree.  A chart artefact gives 14 (Q1).  With 14 the "argument" would also conclude
+      (14/3 is not even an integer), i.e. the conclusion is insensitive to this error; that is a warning sign, not
+      support.  A wrong value 24 would give c = 8 = N and no conclusion.  The degree needs a proof (e.g. the
+      class computation in Q1(c)) or a certified computation.
+  G5. "General a, general pi": only sampled (6 points a, 24 planes).  The argument needs one explicit (a, pi, X)
+      for which everything is certified, not genericity.
+  G6. Smoothness of X is needed for the same X whose pi is used; I checked that pairing (Q5), the text does not say.
+  G7. What is concluded is weak for X itself: X contains Lambda, whose class is already not a multiple of h^5.
+      The content is the statement for X' not containing Lambda.  Remark (theory, mine, not asked): with
+      Lambda.Lambda = c_5(N) = -21, a class alpha h^5 + beta Lambda with pairings 12 and 8 has alpha = 65/16,
+      beta = -3/16 and self-intersection 189/4, not an integer; so, if N = 8 and deg = 12, the class of Z_a is
+      not in the span of h^5 and Lambda either.  Not machine-checked.
+  G8. Y must be in general position in its family: for special (lam,x) Sing(Y) is larger (Q7.5).
+  MOD p TO CHARACTERISTIC 0.  One route: lift lam, x to ZZ (or use the rational Y of r1/r2), lift a to a Z_p-point of
+  A (Hensel: rank Hess = 6), lift pi inside the explicit plane (defined over QQ) and Phi; X stays smooth.  The
+  closure of Z_a(char 0) specialises to m.[Z_a mod p] for some m >= 1 PROVIDED Z_a mod p is irreducible
+  (limits of 4-planes through a are 4-planes through a mod p).  Specialisation preserves degree and intersection
+  numbers on the smooth proper X, so char 0 has deg = 12m and Lambda.Z_a = 8m: the ratio 2/3 (not 1/3) survives
+  whatever m is.  Needed for this: (1) in char 0 the planes through the lifted a do form a curve (a "known fact"
+  for general a; lifts of a are Zariski dense, so a general lift exists); (2) certified MOD p proofs of:
+  irreducibility of the curve of planes through a, deg 12, the complete transversal count 8, X smooth -- with a
+  covering by charts or a projective formulation instead of random charts; (3) Fulton-type conservation of number.
+  Alternative: do the whole computation over a number field containing the coordinates of a point a (degree <= 18).
+  Agreement at 4 primes is evidence, not proof.
+
+Q7.  OTHER OBSERVATIONS
+  1. Irreducibility (MOD p; i1, i2): the complete scheme of 4-planes through a is 1-dimensional; it is a double
+     cover of the line of tangent directions; a plane model (degree 2 in a random chart coordinate u, 12 in tau) is
+     irreducible and its discriminant has exactly 6 roots of odd multiplicity: a geometrically irreducible curve of
+     genus 2.  No 4-plane of Y contains T_aA (all 6 instances).  So Z_a is irreducible, and "all 4-planes through a"
+     is this one family.  (Chart exceptions as in G3.)
+  2. Multiplicities: all 24 incidence schemes are reduced; the 8 points lie off A, each on one plane through a.
+  3. Singular locus of Z_a: the vertex a, and the cone over A with vertex a (2 planes through each line a-c).  In P'
+     this is the sextic A cap P', which a general pi misses (checked: pi cap A empty in all 24 cases).
+  4. The counts for the explicit (iota-symmetric) plane and for a random plane agree; nothing special was seen.
+  5. Special positions in the family (EXACT over QQ, scan lam in {2,3}, |x_i| <= 5, 1220 parameter points; log_special.txt):
+     Sing(Y) has degree 18 in 1119 cases and 18 + 3k in 101 cases, k = number of flex tangents of the Hesse cubic
+     {h_lam = 0} through [x]: on one rational flex tangent x_i + x_j = lam x_k: 21 (91 cases); on two: 24 (3);
+     on three: 27 (1); 6 more cases of degree 24, x = (1,-lam,-lam) and permutations, lie on a conjugate pair of
+     flex tangents (checked by hand).  E.g. lam=2, x=(1,2,3) is special (degree 21, also mod p) -- do not use such
+     parameters as an example.  Random parameters MOD p were never special.
+  6. Chart artefact 14 versus 12 for the degree: see Q1.
+
+WHAT I DID NOT CHECK
+  - Anything in characteristic 0 about Z_a, N, T_yZ_a (no point of A over QQ was available).  Only Q5 has an exact
+    example; the values 12 and 8 in char 0 rest on my by-hand class computations (Q1c, Q2d).
+  - That Y is the Coble cubic of a genus-2 Jacobian and the planes are spans of theta-translates (only the numbers
+    6t-1, 2 planes per direction, genus 2, chords are consistent with it).
+  - Global smoothness of A; the full 2-parameter family of 4-planes of Y (only planes through chosen points);
+    whether Y has other 4-planes away from a.
+  - Completeness over all Grassmannian charts and at the parameter values s=infinity / tau=infinity beyond the
+    separate tests mentioned (random charts; failure probability about 1/p per object).
+  - P' cap P'' for special pairs; pairs not involving a were tested only for (P0, P1): 6 pairs.
+  - Lambda.Lambda = -21, Z_a.Z_a, and the remark in G7 (theory only).
+  - No Groebner basis was certified independently; M2's F4 and radical were trusted.  The Python linear algebra is
+    independent of M2 except that it reads the point a, the planes pi and the conic parametrisation from data_*.txt.
+  - The author's code, numbers and other blind checks were not seen, so I cannot say whether they agree.
+
+FILES
+  common.m2 fano.m2 planes.m2 inc.m2 inst.m2  (instance pipeline; run_*.m2 are the entry points; log_<tag>.txt)
+  q23.py (Q2/Q3 over F_{p^k}; log_q23_<tag>.txt)   fanoA.m2 (all planes through a, direct degree; log_fanoA_*.txt)
+  q5.m2 q5b.m2 (tenfold; log_q5*.txt)   exact.m2 (EXACT checks; log_exact.txt)   special_scan.m2 (log_special.txt)

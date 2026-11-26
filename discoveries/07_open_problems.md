@@ -972,6 +972,9 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
+UPDATE 26 Nov 2026 (later): the class of the 4-plane cycle is not a multiple of h^5 by a transversal intersection
+count with a 5-plane (8 points, where a multiple of h^5 gives 4; MOD p, blind-checked): D-TENFOLD-COBLE-PLANE-COUNT.
+This does not use the node argument or the ladder. Left: characteristic 0 by an exact run, and a human reading.
 UPDATE 26 Nov 2026: at the Fermat tenfold the explicit arcs of the Coble family carry the three-plane class, not
 delta (C-TENFOLD-FERMAT-POINT-CLASS). For that class the family passes an explicit-arc test to orders 10-12
 (D-TENFOLD-COBLE-FERMAT-ARCS). For delta nothing new: an explicit arc of the family with the marking delta is the

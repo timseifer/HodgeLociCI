@@ -1,0 +1,43 @@
+== q23.py instance i2: p=30011 lam=27855 x=[10089, 17977, 578]
+a is a singular point of Y (gradient vanishes): True
+sanity: random points of 20 sampled 4-planes through a: membership test returns the same plane in 20/20 cases
+-- case 1: pi in the explicit (iota) plane
+   pi contained in Y: True ; conic Q_a=0 on pi parametrised by s (checked B(a,y,y)=0 at 5 values): True
+   random combinations of 9x9 minors along the conic: degrees [20, 20, 20, 20] (interpolated from 70 values); gcd has degree 8, factor degrees [(1, 1), (1, 1), (6, 1)]
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 6 (mult 1): 6 conjugate roots in F_p^6: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+   point of the conic at s=infinity on Z_a: no
+   ==> N = #(pi cap Z_a) = 8  (candidates rejected: 0, undecided: 0); Z_a smooth at all of them: True; T_yZ_a cap pi = y at all of them: True; points checked: 8
+   product of the verified factors equals the M2 incidence eliminant (degree 8): True
+   control: 10 random points of the conic: 10 are not on Z_a
+-- case 2: pi in the explicit (iota) plane
+   pi contained in Y: True ; conic Q_a=0 on pi parametrised by s (checked B(a,y,y)=0 at 5 values): True
+   random combinations of 9x9 minors along the conic: degrees [20, 20, 20, 20] (interpolated from 70 values); gcd has degree 8, factor degrees [(1, 1), (1, 1), (1, 1), (5, 1)]
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 5 (mult 1): 5 conjugate roots in F_p^5: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+   point of the conic at s=infinity on Z_a: no
+   ==> N = #(pi cap Z_a) = 8  (candidates rejected: 0, undecided: 0); Z_a smooth at all of them: True; T_yZ_a cap pi = y at all of them: True; points checked: 8
+   product of the verified factors equals the M2 incidence eliminant (degree 8): True
+   control: 10 random points of the conic: 10 are not on Z_a
+-- case 3: pi in the plane P1 through a second point of A
+   pi contained in Y: True ; conic Q_a=0 on pi parametrised by s (checked B(a,y,y)=0 at 5 values): True
+   random combinations of 9x9 minors along the conic: degrees [20, 20, 20, 20] (interpolated from 70 values); gcd has degree 8, factor degrees [(4, 1), (4, 1)]
+     factor of degree 4 (mult 1): 4 conjugate roots in F_p^4: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 4 (mult 1): 4 conjugate roots in F_p^4: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+   point of the conic at s=infinity on Z_a: no
+   ==> N = #(pi cap Z_a) = 8  (candidates rejected: 0, undecided: 0); Z_a smooth at all of them: True; T_yZ_a cap pi = y at all of them: True; points checked: 8
+   product of the verified factors equals the M2 incidence eliminant (degree 8): True
+   control: 10 random points of the conic: 10 are not on Z_a
+-- case 4: pi in the plane P1 through a second point of A
+   pi contained in Y: True ; conic Q_a=0 on pi parametrised by s (checked B(a,y,y)=0 at 5 values): True
+   random combinations of 9x9 minors along the conic: degrees [20, 20, 20, 20] (interpolated from 70 values); gcd has degree 8, factor degrees [(1, 1), (2, 1), (5, 1)]
+     factor of degree 1 (mult 1): 1 conjugate roots in F_p^1: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 2 (mult 1): 2 conjugate roots in F_p^2: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+     factor of degree 5 (mult 1): 5 conjugate roots in F_p^5: ON Z_a (unique 4-plane through a,y found, in Y; y smooth on Y: True; dim T(Fano_a)=1; rank(P+phi(y))=6; rank(P+phi(y)+pi)=8)
+   point of the conic at s=infinity on Z_a: no
+   ==> N = #(pi cap Z_a) = 8  (candidates rejected: 0, undecided: 0); Z_a smooth at all of them: True; T_yZ_a cap pi = y at all of them: True; points checked: 8
+   product of the verified factors equals the M2 incidence eliminant (degree 8): True
+   control: 10 random points of the conic: 10 are not on Z_a

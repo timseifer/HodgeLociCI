@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 147 entries)
+### Discoveries registry (142 -> 148 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -19,6 +19,10 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   Fermat tenfold with no symmetry and no free terms satisfy all period equations of the three-plane class to
   orders 10-12 at two primes; every change to the Coble relation fails at the pre-registered order.
   `leads/tenfold_coble/fermat_point/`; `leads/TENFOLD_COBLE_LEAD.md`, section 13.
+- D-TENFOLD-COBLE-PLANE-COUNT (MOD p; blind-checked): in a tenfold of the Coble family that contains a 5-plane, the
+  5-plane and the 4-plane cycle meet transversally in 8 points, where a multiple of h^5 would give 4. The class of
+  the cycle is not a multiple of h^5 by a count, without the node argument or the ladder.
+  `leads/tenfold_coble/plane_test/`; `leads/TENFOLD_COBLE_LEAD.md`, section 14.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling
