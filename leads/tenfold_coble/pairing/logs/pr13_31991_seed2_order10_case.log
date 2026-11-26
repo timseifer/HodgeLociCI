@@ -1,0 +1,4 @@
+Coble cubic of this seed: singular locus of degree 18
+RESULT THE CASE: section of the Coble rung: 36 nodes ; arc to order 10, obstructions {0, 0, 0, 0, 0, 0, 0, 0, 0}, nodes persist ; cpu 1113.83
+      (a) evaluation on quadrics: rho_J = {26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^10: k-dimension 180 (free of rank 18 would be 180) ; leading parts independent: true
+      arc written to arcdata/case_31991_seed2_order10.txt

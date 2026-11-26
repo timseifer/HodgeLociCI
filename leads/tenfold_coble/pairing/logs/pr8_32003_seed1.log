@@ -1,0 +1,9 @@
+Coble cubic of this seed: singular locus of degree 18
+RESULT control: sevenfold through a P^4: 16 nodes, 15 conditions on cubics ; dim (I_Z)_3 = 150 ; H^(-1) correct: true ; form symmetric: true ; rank of h on all cubics: 28 ; coordinate changes in the kernel: true (rank 81) ; RANK OF h ON (I_Z)_3: 0 ; teeth (random functional instead of the relation): rank 40 ; cpu 23.1026
+RESULT control: det A + det B: 36 nodes, 35 conditions on cubics ; dim (I_Z)_3 = 130 ; H^(-1) correct: true ; form symmetric: true ; rank of h on all cubics: 68 ; coordinate changes in the kernel: true (rank 81) ; RANK OF h ON (I_Z)_3: 0 ; teeth (random functional instead of the relation): rank 128 ; cpu 75.3708
+RESULT control: section of the Pfaffian rung: 28 nodes, 27 conditions on cubics ; dim (I_Z)_3 = 138 ; H^(-1) correct: true ; form symmetric: true ; rank of h on all cubics: 52 ; coordinate changes in the kernel: true (rank 81) ; RANK OF h ON (I_Z)_3: 0 ; teeth (random functional instead of the relation): rank 100 ; cpu 31.8581
+Coble n P^7: singular curve of degree 18, genus 10 ; cubics through it: 75 (120 - 45 = 75)
+RESULT THE CASE: section of the Coble rung: 36 nodes, 35 conditions on cubics ; dim (I_Z)_3 = 130 ; H^(-1) correct: true ; form symmetric: true ; rank of h on all cubics: 68 ; coordinate changes in the kernel: true (rank 81) ; RANK OF h ON (I_Z)_3: 0 ; teeth (random functional instead of the relation): rank 94 ; cpu 62.2786
+      the tangent space of the family of sections of rung members: rank 128 ; vanishes on the nodes: true ; h vanishes on it: true ; rank of the pairing of it with (I_Z)_3 under h: 0 ; rank of h on (I_Z)_3 modulo its radical is the number above
+DONE p 32003 seed 1
+EXIT 0

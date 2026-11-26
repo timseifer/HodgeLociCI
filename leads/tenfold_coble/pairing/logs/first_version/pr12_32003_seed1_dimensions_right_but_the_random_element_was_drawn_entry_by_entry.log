@@ -1,0 +1,5 @@
+RESULT control: det A + det B: 36 nodes ; surviving quadrics: 18 ; dim L S_1 = 130 ; linear syzygies: 32 ; DIMENSION OF THE ALGEBRA: 2
+      a random element: characteristic polynomial factors with (degree, multiplicity): {(3,1), (7,1), (8,1)}
+RESULT THE CASE: section of the Coble rung: 36 nodes ; surviving quadrics: 18 ; dim L S_1 = 117 ; linear syzygies: 45 ; DIMENSION OF THE ALGEBRA: 1
+DONE p 32003 seed 1
+EXIT 0

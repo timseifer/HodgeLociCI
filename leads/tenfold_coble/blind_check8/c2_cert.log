@@ -1,0 +1,11 @@
+tr A1 == tr B1 : true
+(i) det(t+A) - det(t+B) == c*G : true
+P divisible by e^3 : true
+limit == c*G + t (tr(B B1) - tr(A A1)) + t^2 (trA2 - trB2) : true
+limit ==   G + t (tr(B B1) - tr(A A1)) + t^2 (trA2 - trB2)  [as literally claimed, without c] : false
+member at e0: Q(e0)*e0^3 == det(t + e0 A(e0)) + det(-(t + e0 B(e0))) : true
+dimension of domain {trA1 = trB1} : 153
+number of quadrics in (u,t): 45   rank of image: 44
+all images have zero t^2-coefficient : true   #quadrics without t^2 = 44
+rank without the trace condition: 44
+rank using only traceless A1 (B1 = 0): 44

@@ -1,0 +1,3 @@
+order of the arc 10 ; quadrics modulo e^10 ; L S_1: rho_J = {117, 129, 130, 130, 130, 130, 130, 130, 130, 130} ; syzygies 32 modulo e^8, free: true
+the algebra: rho_J(Lambda) = {305, 305, 322, 322, 322, 322, 322, 322} ; dimension over K at most 2 ; known modulo e^6 ; cpu 730.067
+EXIT 143

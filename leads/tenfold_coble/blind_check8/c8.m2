@@ -1,0 +1,20 @@
+-- connectedness of C = Sing(G) for the certificate's Coble section: h^0(O_C) = 1 + dim Ext^7(R/I_C, R)_(-8),  h^1(O_C) = dim Ext^6(R/I_C,R)_(-8)
+cert = value get "/home/claude/hodgelocici/leads/tenfold_coble/pairing/arcdata/certificate_32003_seed1.txt";
+pr = cert#"p"; kk = ZZ/pr;
+say = s -> (stdio << s << endl << flush;);
+lam0 = cert#"lam"; xs0 = cert#"x";
+hfun = (l, v) -> v#0^3 + v#1^3 + v#2^3 + 3*l*v#0*v#1*v#2;
+R = kk[u_0..u_7];
+hyp = apply(cert#"hyperplane", value);
+a0 = sub(-hfun(lam0, xs0), kk) / sub(27*(1+lam0^3), kk);
+coble = (z,pp,q) -> a0*hfun(lam0,z) + hfun(lam0,pp) + hfun(lam0,q) + sum(3, i -> sum(3, j -> xs0#((i-j)%3) * z#((i+j)%3) * pp#i * q#j));
+G = coble(hyp_{0,1,2}, hyp_{3,4,5}, hyp_{6,7,8});
+JG = ideal jacobian ideal G;
+setRandomSeed 99;
+ell = sum(8, i -> random(kk)*R_i);
+IC = saturate(JG, ell);
+t0 = cpuTime();
+C = res(R^1/IC);
+say("betti of R/I_C: " | toString betti C | "   time " | toString(cpuTime() - t0));
+E7 = Ext^7(R^1/IC, R^1); E6 = Ext^6(R^1/IC, R^1);
+say("h^0(O_C) = 1 + " | toString hilbertFunction(-8, E7) | ";   h^1(O_C) = " | toString hilbertFunction(-8, E6) | ";   h^1(O_C(1)) = " | toString hilbertFunction(-9, E6) | ";  h^0(O_C(1)) = 8 + " | toString hilbertFunction(-9, E7));

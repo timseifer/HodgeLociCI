@@ -1,0 +1,14 @@
+prime 32003 seed 11 reflections 8
+Gram matrix nondegenerate: true
+s is an isometry (S^T Q S == Q): true   det s = 1
+tr M == 0: true   tr sM == 0: true   s2(sM) == s2(M): true
+G != 0: true   #factors of G: 2  degrees of factors: {3, 0}
+det(tau+M) - det(tau+sM) == G is implied by tr, s2 equalities
+rank of span of partials (8 = not a cone): 1
+Sing(G): affine dim = 2  degree = 18  HP = 18*i-9
+saturated: HP = 18*i-9  gens degrees: new Tally from {2 => 9, 3 => 3}
+quadrics through C: 9   cubics through C: 75
+HF of R/IC, degrees 0..6: {1, 8, 27, 45, 63, 81, 99}
+#T1 = 64  #T2 = 28
+rank span{y_i dG/dy_j} = 64   rank span{variations of s} = 20   rank of both = 75
+dim (I_C)_3 = 75   rank(tangent + (I_C)_3) = 75  (equal => tangent space inside (I_C)_3)

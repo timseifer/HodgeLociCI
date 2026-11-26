@@ -1,0 +1,6 @@
+coefficient e^0 == 0 : true
+coefficient e^1 == t^2 (trA - trB) : true
+coefficient e^2 == t^2 (trA1 - trB1) + t (s2A - s2B) : true
+coefficient e^3 == detA - detB + t(trA trA1 - tr(A A1) - trB trB1 + tr(B B1)) + t^2 (trA2 - trB2) : true
+difference to claimed formula lies in ideal(trA - trB, trA1 - trB1) : true
+difference = (t)*(a_(0,0)*a1_(0,0)+a_(1,1)*a1_(0,0)+a_(2,2)*a1_(0,0)+a_(0,0)*a1_(1,1)+a_(1,1)*a1_(1,1)+a_(2,2)*a1_(1,1)+a_(0,0)*a1_(2,2)+a_(1,1)*a1_(2,2)+a_(2,2)*a1_(2,2)-b_(0,0)*b1_(0,0)-b_(1,1)*b1_(0,0)-b_(2,2)*b1_(0,0)-b_(0,0)*b1_(1,1)-b_(1,1)*b1_(1,1)-b_(2,2)*b1_(1,1)-b_(0,0)*b1_(2,2)-b_(1,1)*b1_(2,2)-b_(2,2)*b1_(2,2))

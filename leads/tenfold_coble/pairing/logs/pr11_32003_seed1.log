@@ -1,0 +1,8 @@
+Coble n P^7: curve of degree 18, genus 10
+RESULT class from the pencil member c_1: 36 nodes, pairing of rank 25 (R5: 25) ; from c_2: rank 25 ; the two kernels in degree 3 coincide: true (dimension 95 of 120)
+RESULT for five members of the pencil: dim J_c = {93, 93, 93, 93, 93} (93 = codimension 27) ; each J_c lies in the kernel: {true, true, true, true, true}
+RESULT dimension of J_(c_1) + ... + J_(c_k), k = 1..5: {93, 95, 95, 95, 95} ; codimension {27, 25, 25, 25, 25} ; the sum of all five equals the kernel (codimension 25): true
+      (I_C)_3 + Psi_1 S_1 + Psi_2 S_1 has dimension 91 ; so the nodes of the pencil members add 4 dimensions
+RESULT R11b: dimension of J_c modulo the tangent space of the rung, five members: {2, 2, 2, 2, 2} ; their Pluecker vectors span a space of dimension 3 (3 = lines of one ruling of a quadric; 5 = general)
+DONE p 32003 seed 1
+EXIT 0

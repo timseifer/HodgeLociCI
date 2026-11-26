@@ -1,0 +1,5 @@
+8 reflections: tr equal true ; s_2 equal true ; det equal false
+G = det M - det sM: singular locus of dimension 1, degree 18, genus 10 ; quadrics through it: 9 ; cubics: 75
+family: rank of gl_8.G 64 ; of the 28 variations of s 20 ; together (affine dimension) 75
+round trip (scramble the two determinants by a random change of coordinates, recover matrices with equal trace and s_2): det(t + A) - det(t + B) = c G exactly: true
+DONE p 31991 seed 4

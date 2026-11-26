@@ -1,0 +1,15 @@
+G from two constructions agree: true
+T (Coble sections): rank of 72 hyperplane/coordinate derivatives = 72;  of 4 parameter derivatives = 4;  all 76 = 75
+   rank(72 + lam-derivative) = 73;  x-scaling derivative in the span of the 72: true
+C = Sing(G): HP = 18*i-9; quadrics 9; cubics 75
+monomial bases agree: true
+T: rank(tangent | (I_C)_3) = 75   (75 => tangent space of Coble sections at G equals (I_C)_3)
+det A0 - det B0 == c G : true
+det PA != 0: true  det PB != 0: true
+s := (B0-coordinates) o (A0-coordinates)^-1 is an isometry of tr(X^2): true   det s = -1
+s == identity: false   s of finite small order? s^2==1: false
+rank(s - 1) = 7   rank(s + 1) = 7
+G_s in u-coordinates == c G : true
+S (det M - det sM): rank{u_i dG/du_j} = 64;  rank{28 variations of s} = 20;  both = 75
+monomial bases agree (K): true
+S: rank(tangent | (I_C)_3) = 75;   rank(S-tangent | T-tangent) = 75

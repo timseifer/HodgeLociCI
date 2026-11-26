@@ -1,0 +1,4 @@
+principal 6x6 minor of Hess(G) nonzero on C: true   time .385791
+three minors computed, time 1.10865
+dim A/(m1) (1 = finitely many points) : 1  degree 108   time 1.24489
+dim A/(m1,m2,m3) (0 = no common zero on C => C smooth, G has transversal A1 singularities along all of C) : 0   time 1.70188

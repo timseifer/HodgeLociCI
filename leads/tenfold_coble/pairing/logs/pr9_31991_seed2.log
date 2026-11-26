@@ -1,0 +1,8 @@
+Coble cubic of this seed: singular locus of degree 18
+RESULT control: sevenfold through a P^4: 16 nodes ; conditions on quadrics 11, dim (I_Z)_2 = 34 ; dim (I_Z)_3 = 150 ; rank of mu_g for four random g in (I_Z)_3: {0, 0, 0, 0} ; for a random coordinate change: 0
+RESULT control: det A + det B: 36 nodes ; conditions on quadrics 27, dim (I_Z)_2 = 18 ; dim (I_Z)_3 = 130 ; rank of mu_g for four random g in (I_Z)_3: {0, 0, 0, 0} ; for a random coordinate change: 0
+RESULT control: section of the Pfaffian rung: 28 nodes ; conditions on quadrics 20, dim (I_Z)_2 = 25 ; dim (I_Z)_3 = 138 ; rank of mu_g for four random g in (I_Z)_3: {0, 0, 0, 0} ; for a random coordinate change: 0
+RESULT THE CASE: section of the Coble rung: 36 nodes ; conditions on quadrics 26, dim (I_Z)_2 = 19 ; dim (I_Z)_3 = 130 ; rank of mu_g for four random g in (I_Z)_3: {1, 1, 1, 1} ; for a random coordinate change: 0
+      for three random g tangent to the family of sections of rung members: {0, 0, 0} ; six general g together: the common kernel in (I_Z)_2 has dimension 18
+DONE p 31991 seed 2
+EXIT 0

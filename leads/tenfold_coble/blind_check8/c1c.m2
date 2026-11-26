@@ -1,0 +1,28 @@
+-- smoothness of C = Sing(G) for the certificate's Coble section, via the Hessian of G (C smooth at c  <=>  rank Hess(G)(c) = 6)
+cert = value get "/home/claude/hodgelocici/leads/tenfold_coble/pairing/arcdata/certificate_32003_seed1.txt";
+pr = cert#"p"; kk = ZZ/pr;
+say = s -> (stdio << s << endl << flush;);
+lam0 = cert#"lam"; xs0 = cert#"x";
+hfun = (l, v) -> v#0^3 + v#1^3 + v#2^3 + 3*l*v#0*v#1*v#2;
+R = kk[u_0..u_7];
+hyp = apply(cert#"hyperplane", value);
+a0 = sub(-hfun(lam0, xs0), kk) / sub(27*(1+lam0^3), kk);
+coble = (z,pp,q) -> a0*hfun(lam0,z) + hfun(lam0,pp) + hfun(lam0,q) + sum(3, i -> sum(3, j -> xs0#((i-j)%3) * z#((i+j)%3) * pp#i * q#j));
+G = coble(hyp_{0,1,2}, hyp_{3,4,5}, hyp_{6,7,8});
+JG = ideal jacobian ideal G;
+setRandomSeed 99;
+ell = sum(8, i -> random(kk)*R_i);
+IC = saturate(JG, ell);
+Hs = diff(transpose vars R, diff(vars R, G));
+A = R/IC;
+HA = sub(Hs, A);
+t0 = cpuTime();
+m1 = det(submatrix(HA, {0,1,2,3,4,5}, {0,1,2,3,4,5}), Strategy => Cofactor);
+say("principal 6x6 minor of Hess(G) nonzero on C: " | toString(m1 != 0) | "   time " | toString(cpuTime() - t0));
+m2 = det(submatrix(HA, {2,3,4,5,6,7}, {2,3,4,5,6,7}), Strategy => Cofactor);
+m3 = det(submatrix(HA, {0,1,3,4,6,7}, {1,2,3,5,6,7}), Strategy => Cofactor);
+say("three minors computed, time " | toString(cpuTime() - t0));
+I1 = ideal(m1);
+say("dim A/(m1) (1 = finitely many points) : " | toString dim I1 | "  degree " | toString degree I1 | "   time " | toString(cpuTime() - t0));
+I3 = ideal(m1, m2, m3);
+say("dim A/(m1,m2,m3) (0 = no common zero on C => C smooth, G has transversal A1 singularities along all of C) : " | toString dim I3 | "   time " | toString(cpuTime() - t0));

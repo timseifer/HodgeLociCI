@@ -1,0 +1,10 @@
+C2: the cubic sum cof_ij(A) B_ij: singular scheme of dimension 0 and degree 36 ; contained in the Segre fourfold of A: true
+RESULT control C2: a cubic through a Segre fourfold, first-order limit of det A - det(A + e B): 36 nodes ; arc to order 5, obstructions {0, 0, 0, 0}, nodes persist ; cpu 175.795
+      (a) evaluation on quadrics: rho_J = {27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^6: k-dimension 108 (free of rank 18 would be 108) ; leading parts independent: true
+      arc written to arcdata/c2_32003_seed1_order5.txt
+      (b) L S_1: rho_J = {129, 130, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^5: k-dimension 160 (free would be 160) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {322, 322, 322, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {2, 2, 2, 2, 2} ; cpu 446.836
+      algebra modulo e^5: k-dimension 10 (free would be 10) ; leading terms independent: true ; the identity is among the leading terms: true
+      leading term of a random element: characteristic polynomial factors with (degree, multiplicity): {(1,18)} ; eigenvalue of multiplicity 18: rank of (phi - ev) = 9, of its square = 0
+DONE p 32003 seed 1 order 5 c2
+EXIT 0

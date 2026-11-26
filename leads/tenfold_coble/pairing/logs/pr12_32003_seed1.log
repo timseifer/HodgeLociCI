@@ -1,0 +1,7 @@
+RESULT control: det A + det B: 36 nodes ; surviving quadrics: 18 ; dim L S_1 = 130 ; linear syzygies: 32 ; DIMENSION OF THE ALGEBRA: 2
+      a random element: characteristic polynomial factors with (degree, multiplicity): {(1,9), (1,9)}
+      eigenvalue with multiplicity 9: generalised eigenspace of dimension 9 ; eigenspace 9 ; its quadrics cut a scheme of dimension 4 and degree 6 ; Hilbert polynomial (1/4)*i^4+(3/2)*i^3+(13/4)*i^2+3*i+1
+      eigenvalue with multiplicity 9: generalised eigenspace of dimension 9 ; eigenspace 9 ; its quadrics cut a scheme of dimension 4 and degree 6 ; Hilbert polynomial (1/4)*i^4+(3/2)*i^3+(13/4)*i^2+3*i+1
+RESULT THE CASE: section of the Coble rung: 36 nodes ; surviving quadrics: 18 ; dim L S_1 = 117 ; linear syzygies: 45 ; DIMENSION OF THE ALGEBRA: 1
+DONE p 32003 seed 1
+EXIT 0

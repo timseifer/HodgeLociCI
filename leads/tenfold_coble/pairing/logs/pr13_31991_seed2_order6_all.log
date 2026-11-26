@@ -1,0 +1,31 @@
+RESULT control C1: det A + det B: 36 nodes ; arc to order 6, obstructions {0, 0, 0, 0, 0}, nodes persist ; cpu 285.302
+      (a) evaluation on quadrics: rho_J = {27, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^7: k-dimension 126 (free of rank 18 would be 126) ; leading parts independent: true
+      (b) L S_1: rho_J = {130, 130, 130, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^7: k-dimension 224 (free would be 224) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {322, 322, 322, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {2, 2, 2, 2, 2} ; cpu 557.681
+      algebra modulo e^5: k-dimension 10 (free would be 10) ; leading terms independent: true ; the identity is among the leading terms: true
+      leading term of a random element: characteristic polynomial factors with (degree, multiplicity): {(1,9), (1,9)} ; eigenvalue of multiplicity 9: rank of (phi - ev) = 9, of its square = 9 ; eigenvalue of multiplicity 9: rank of (phi - ev) = 9, of its square = 9
+C2: the cubic sum cof_ij(A) B_ij: singular scheme of dimension 0 and degree 36 ; contained in the Segre fourfold of A: true
+RESULT control C2: a cubic through a Segre fourfold, first-order limit of det A - det(A + e B): 36 nodes ; arc to order 6, obstructions {0, 0, 0, 0, 0}, nodes persist ; cpu 121.272
+      (a) evaluation on quadrics: rho_J = {27, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^7: k-dimension 126 (free of rank 18 would be 126) ; leading parts independent: true
+      (b) L S_1: rho_J = {129, 130, 130, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^6: k-dimension 192 (free would be 192) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {322, 322, 322, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {2, 2, 2, 2, 2} ; cpu 397.597
+      algebra modulo e^5: k-dimension 10 (free would be 10) ; leading terms independent: true ; the identity is among the leading terms: true
+      leading term of a random element: characteristic polynomial factors with (degree, multiplicity): {(1,18)} ; eigenvalue of multiplicity 18: rank of (phi - ev) = 9, of its square = 0
+Coble cubic of this seed: singular locus of degree 18
+RESULT THE CASE: section of the Coble rung: 36 nodes ; arc to order 6, obstructions {0, 0, 0, 0, 0}, nodes persist ; cpu 129.435
+      (a) evaluation on quadrics: rho_J = {26, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^6: k-dimension 108 (free of rank 18 would be 108) ; leading parts independent: true
+      (b) L S_1: rho_J = {117, 129, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^4: k-dimension 128 (free would be 128) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {305, 305, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {19, 19, 2, 2} ; cpu 331.053
+      algebra modulo e^2: k-dimension 4 (free would be 4) ; leading terms independent: true ; the identity is among the leading terms: true
+      leading term of a random element: characteristic polynomial factors with (degree, multiplicity): {(1,18)} ; eigenvalue of multiplicity 18: rank of (phi - ev) = 1, of its square = 0
+DONE p 31991 seed 2 order 6 all
+/usr/share/Macaulay2/Core/robust.m2:131:31:(1):[7]: error: no method for prefix operator < applied to object:
+--            endl (of class Manipulator)
+pr13_arc_algebra.m2:155:1:(3):[6]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:66:17:(0):[6]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:106:22:(1):[5]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:102:10:(1):[3]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:113:22:(1):[2]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:552:63:(0):[1]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:662:6:(0): --back trace--
+EXIT 1

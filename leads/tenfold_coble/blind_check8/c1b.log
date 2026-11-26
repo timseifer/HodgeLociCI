@@ -1,0 +1,11 @@
+Coble: dim Sing (affine) = 3  degree = 18  HP = 9*i^2
+rank of the 9 hyperplane forms: 8
+G: dim Sing (affine) = 2  degree = 18  HP = 18*i-9
+G: Hilbert function of R/JG in degrees 0..6: {1, 8, 28, 56, 72, 82, 99}
+Sing(Coble) restricted to H: dim = 2 degree = 18  HP = 18*i-9
+JG contained in restricted ideal: true   converse: false
+saturation time .907483
+saturated: HP = 18*i-9  generator degrees: new Tally from {2 => 9, 3 => 3}
+number of quadrics in saturated ideal = 9   cubics = 75
+JG == its saturation : false
+Hilbert function of R/IC degrees 0..6: {1, 8, 27, 45, 63, 81, 99}

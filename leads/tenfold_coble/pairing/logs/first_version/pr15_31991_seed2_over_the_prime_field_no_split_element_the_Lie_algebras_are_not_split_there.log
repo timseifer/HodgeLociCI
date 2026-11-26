@@ -1,0 +1,5 @@
+the polynomial det(Q (S_D + mu S_G)) of degree 64: factors (degree, multiplicity) {(1,1), (1,8), (1,8), (1,1), (1,1), (2,1), (2,1), (2,1), (8,1), (31,1), (0,1)}
+two members over the prime field: mu = {13379, -13379} ; their sum: 0
+the hyperplane of the pencil file is t = 0: true ; its cubic is the Coble section: true
+determinantal representations: no split regular element found / no split regular element found
+EXIT 0

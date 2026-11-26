@@ -1,0 +1,6 @@
+RESULT control C1: det A + det B: 36 nodes ; arc to order 6, obstructions {0, 0, 0, 0, 0}, nodes persist ; cpu 300.397
+      (a) evaluation on quadrics: rho_J = {27, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^7: k-dimension 126 (free of rank 18 would be 126) ; leading parts independent: true
+      (b) L S_1: rho_J = {130, 130, 130, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^7: k-dimension 224 (free would be 224) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {322, 322, 322, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {2, 2, 2, 2, 2} ; cpu 572.096
+EXIT 143
+(stopped by hand in the last step, a slow kernel computation; the lines on the leading term for this control are in logs/pr13_31991_seed2_order6_all.log)

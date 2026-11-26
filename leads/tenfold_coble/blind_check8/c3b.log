@@ -1,0 +1,8 @@
+synthetic G_s, p = 32003, seed 11: HP 18*i-9; quadrics 9; cubics 75
+Hessian rank 6 everywhere on C (=> C smooth): true
+HF A degrees 1..4: {8, 27, 45, 63}
+dim (I_C)_3 + Psi1 S_1 + Psi2 S_1 = 91
+c = 3: dim (I_Z)_3 = 85 (=> h^0(O_C(1)) = 10);  dim J_c = 93
+c = 17: dim (I_Z)_3 = 85 (=> h^0(O_C(1)) = 10);  dim J_c = 93
+c = 101: dim (I_Z)_3 = 85 (=> h^0(O_C(1)) = 10);  dim J_c = 93
+dim(J_c + J_c') : {95, 95, 95}

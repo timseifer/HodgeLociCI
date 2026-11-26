@@ -1,0 +1,23 @@
+p = 32003  isPrime true
+minpoly string: aa^2-8*aa+2
+minpoly factors: (aa^2-8*aa+2)
+K order check: aa^(p^2-1) == 1 : true
+lam = 14651 x = {-3125, -9521, -2716}
+c = -14573*aa-14375   c != 0: true
+1+lam^3 mod p = 29136   a = 15264
+G != 0: true  #terms G = 120
+IDENTITY det(tau+A)-det(tau+B) == c*G : true
+tr A == tr B : true
+s2 A == s2 B : true
+det A - det B == c*G : true
+tr A = (9884*aa-7504)*u_0+(5419*aa-1485)*u_1+(4144*aa-14388)*u_2+(-3167*aa-10288)*u_3+(6538*aa-14483)*u_4+(13248*aa+8618)*u_5+(-4113*aa+7021)*u_6+(3776*aa+4930)*u_7
+tr A == 0 : false
+rank entries tau+A : 9   rank entries tau+B : 9
+rank span entries A : 8  B : 8  A and B together : 8
+det A != 0 : true   det B != 0 : true
+rank span{det A, det B, G} : 2  rank span{detA,detB} : 2
+rank of the 8 partials of G (8 = not a cone) : 8
+B == transpose A : false
+tr(A0^2) == tr(B0^2) : true
+det A0 - det B0 == c*G : true
+rank 8 entries of A0 : 8   of B0 : 8

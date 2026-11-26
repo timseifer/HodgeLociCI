@@ -1,0 +1,6 @@
+Coble cubic of this seed: singular locus of degree 18 ; order 6
+RESULT control: sevenfold through a P^4, general direction 1: obstructions at orders 2..6: {0, 0, 0, 0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 6 (value and gradient zero): true ; cpu 41.519
+RESULT control: det A + det B, general direction 1: obstructions at orders 2..6: {0, 0, 0, 0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 6 (value and gradient zero): true ; cpu 279.12
+RESULT control: section of the Pfaffian rung, general direction 1: obstructions at orders 2..6: {0, 0, 0, 0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 6 (value and gradient zero): true ; cpu 150.62
+RESULT THE CASE: section of the Coble rung, general direction 1: obstructions at orders 2..6: {0, 0, 0, 0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 6 (value and gradient zero): true ; cpu 352.334
+EXIT 124

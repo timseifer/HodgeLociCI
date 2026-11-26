@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 153 entries)
+### Discoveries registry (142 -> 157 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -37,6 +37,17 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 - D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD (MOD p): node counts 14 / 28 (+1) and 18 / 36 (-1) on sixfolds and eightfolds; the
   class as a functional built from the relation among the nodes (five controls); tangent codimension 25 at the
   eightfold Coble rung, against 26 for l Q + det A + det B.
+- D-COBLE-SECTION-TWO-DETERMINANTS (MOD p: an exact identity over a finite field at two random instances (two primes);
+  the general statement is an argument): a hyperplane section G of a Coble cubic satisfies
+  det(tau + A) - det(tau + B) = c G with tr A = tr B and equal second coefficient; equivalently G = det M - det sM on
+  P(sl_3) for an isometry s of the trace form. Certificates and a checker in `leads/tenfold_coble/pairing/`.
+- D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE (paper argument by an AI, unreviewed, on those identities; MOD p tests
+  before it): the eightfold Coble rung lies in the closure of l Q + det A + det B, by the explicit degeneration
+  [det(t + eA) - det(t + eB)] / e^3. `leads/TENFOLD_COBLE_LEAD.md`, section 16.
+- D-EIGHTFOLD-RUNG-TANGENT-CONE (MOD p): at a rung member the first-order Hodge locus (codimension 25) is spanned by
+  the node-keeping deformations of two members of the pencil; tangent cone = rung x cone over P^1 x P^1.
+- D-TENFOLD-TWO-DETERMINANT-FAMILY (MOD p; a new lead): cubic tenfolds l_1 Q_1 + l_2 Q_2 + det A + det B have
+  codimension 52 and a hyperplane section with 72 nodes and one relation; not the Coble family; class not computed.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

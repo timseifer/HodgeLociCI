@@ -1,0 +1,68 @@
+BLIND CHECK 8 -- Coble sections as differences of two determinants            (2026-11-26)
+Own Macaulay2 code only, in /home/claude/blind_check8; the only foreign file read is the certificate.
+All results are exact arithmetic over F_p or F_(p^2), p = 32003 (C3 also p = 31991): evidence MOD p, not over C.
+
+C1  CONFIRMED (exact, K = F_p[aa]/(aa^2-8aa+2), polynomial irreducible)              [c1, c1b, c1c, c8, c_extra]
+ - det(tau+A) - det(tau+B) = c*G identically in (u,tau); c != 0; tr A = tr B (not 0); s_2(A) = s_2(B);
+   the nine entries of tau+A, and of tau+B, have rank 9.
+ - Coble cubic: Sing = surface of degree 18, Hilbert polynomial 9t^2 (control: with a+1 in place of a the cubic is
+   smooth, so D1 is the right normal form). The nine hyperplane forms have rank 8. Sing(G): degree 18, HP 18t-9;
+   its saturated ideal I_C has 9 quadrics (= restricted partials of F#) and 75 cubics; C is smooth and connected,
+   h^1(O_C) = 10, h^0(O_C(1)) = 10 (so O_C(1) = K_C); Hess(G) has rank 6 at every point of C.
+ - No trivialising degeneracy: G irreducible, not a cone; det A, det B, G span a 2-dim space (det A not prop. to
+   det B); s: A_0 -> B_0 (traceless parts) is an isometry of tr(X^2) with s != +-1 and s^2 != 1.
+   Remark: det s = -1, whereas C3 uses det +1. Harmless: B -> B^T keeps all identities and flips det s.
+
+C2  (i) CONFIRMED.  (ii) CONFIRMED WITH A CORRECTION: the value at e = 0 is
+       (det A - det B) + t(tr(B B_1) - tr(A A_1)) + t^2(tr A_2 - tr B_2) = c*G + ...,  NOT G + ...
+    (symbolic over ZZ with 54 indeterminate entries; also certificate + random A_1,B_1,A_2,B_2; the literal formula
+    with G fails because c != 1). Harmless: rescale Psi by c, sigma is a cone.
+    (iii) CONFIRMED: domain 153, rank 44 = all quadrics without t^2. (Already 44 with B_1 = 0, A_1 traceless: it
+    only uses that the entries of A span all linear forms in u, so this step carries no information.)
+    (iv) SOUND for THIS G over the algebraic closure of F_32003 (polynomial arc, members for e != 0 are
+    det A' + det B'; the closure step is characteristic-free). It is NOT a statement in characteristic 0: that needs
+    an identity in characteristic 0 (exact instance over a number field, or the lifting under C4).        [c2_*]
+
+C3  CONFIRMED MOD p at p = 32003 (seed 11) and p = 31991 (seed 5)                                     [c3, c3b]
+    s isometry (8 reflections, det 1); tr sM = 0; s_2(sM) = s_2(M); G_s irreducible, not a cone; Sing(G_s): degree 18,
+    HP 18t-9 (genus 10), exactly 9 quadrics, 75 cubics; smooth and h^0(O_C(1)) = 10 (seed 11); one reflection gives
+    G_s = (linear)*(quadric). Ranks 64 (y_i dG/dy_j), 20 (variations of s), 75 together; the span EQUALS (I_C)_3.
+    Wording: a rank at one point proves dimension >= 75; "= 75" is MOD p evidence (it also follows from C4, step 2).
+
+C4  Dimension count 3+8+63 = 74: CONFIRMED at the certificate point (derivatives of G in the 72 substitution
+    coefficients have rank 72, so the stabiliser is finite; with lam, x the rank is 75; x-scaling is in the 72-span).
+    Irreducibility of {det M - det sM}: correct (transposition has det -1 on sl_3 and fixes G_s). No circularity. [c4]
+    LOGIC AS STATED: GAP, in three places.
+    (a) "irreducible + equal dimension + one common point" does not make two families equal.
+    (b) One random F_p-instance cannot certify that a GENERAL Coble section is in the family; it is a heuristic
+        (failure probability about deg/p, if the parameters were drawn before solving). So "ALL Coble sections" is
+        overstated: what is established is ONE section, mod p, over F_(p^2).
+    (c) Nothing is established in characteristic 0.
+    WHAT WOULD CLOSE IT (my computations plus a sketch of mine; unreviewed, not a proof):
+    1. Lemma, char not 2,3: if tr A = tr B and s_2(A) = s_2(B), the rank<=1 loci Sigma_A, Sigma_B of tau+A, tau+B in
+       P^8 both lie on the smooth 7-dim quadric s_2(tau+A) = 0, so they meet in a curve (class 3h^3.3h^3, degree
+       18) and the cone over G is singular there. So EVERY such det A - det B has non-isolated singularities.
+       Verified: Sigma_A cap Sigma_B has HP 18t-9 and projects exactly onto Sing(G), for a synthetic s and for the
+       certificate.                                                                               [c7, c7cert]
+    2. At the certificate point sat(Jacobian ideal) = I_C, so the locus E of cubics singular along a curve with HP
+       18t-9 has tangent space inside (I_C)_3 (dim 75); both parametrisations have differential of rank 75 with
+       image exactly (I_C)_3 (computed). Hence E is smooth of dim 75 at G; Coble sections lie in E; by 1. and
+       integrality of C so does the det family near G; both closures equal the component of E through G.
+    3. Characteristic 0: the same argument over the Witt vectors (E regular of dim 76 at G), with 1. in char 0 and
+       the classical fact that Coble cubics are singular along an abelian surface. No char-0 computation is
+       needed, but the scheme-theoretic details (incidence scheme over Hilb, flatness) must be written and reviewed.
+    Consequences ("G + t*Psi in closure of sigma", "eightfolds in closure of l*Q + det A' + det B'"): SOUND for the
+    one instance; for all Coble sections conditional on the gap. Not vacuous: the target family has dimension
+    at most 194 of 220.  NOT CHECKED: a second, independently solved Coble section (no solver within the budget).
+
+C5  CONFIRMED MOD p (p = 32003; G = Coble section with the certificate's parameters, my own random Psi_1, Psi_2;
+    c = 3, 17, 101, 2026, 31000)                                                                  [c5, c_extra]
+    Z_c: Hilbert function 36 in degrees 4..6, 36 distinct points (c = 17); dim (I_Z)_3 = 85; dim J_c = 93;
+    dim((I_C)_3 + Psi_1 S_1 + Psi_2 S_1) = 91; dim(J_c + J_c') = 95 for all 10 pairs; sum of the five J_c = 95;
+    Pluecker vectors: rank 3, pairwise skew. Same 85/93/91/95 at a synthetic G_s.
+    Remark: forced by h^0(O_C(1)) = 10 = 8+2: J_c/(91-space) = (Psi_1 + c Psi_2) (x) (H^0(K_C)/S_1) inside
+    <Psi_1,Psi_2> (x) k^2, one ruling of a Segre quadric by construction. It tests O_C(1) = K_C and nothing more.
+
+Files: c1, c1b, c1c, c2_symbolic, c2_cert, c3, c3b, c4, c5, c6, c7, c7cert, c8, c_extra (.m2, each with .log).
+c1b.m2's last block (40 Hessian-type minors) did not finish and was replaced by c1c.m2. Smoothness of C for the
+p = 31991 instance not run. No git, no network; only my own processes were stopped.

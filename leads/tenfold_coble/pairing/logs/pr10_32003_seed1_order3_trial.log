@@ -1,0 +1,10 @@
+Coble cubic of this seed: singular locus of degree 18 ; order 3
+RESULT control: sevenfold through a P^4, general direction 1: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 13.1496
+RESULT control: det A + det B, general direction 1: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 64.3151
+RESULT control: section of the Pfaffian rung, general direction 1: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 40.8959
+RESULT THE CASE: section of the Coble rung, general direction 1: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 85.0165
+RESULT THE CASE: section of the Coble rung, general direction 2: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 129.277
+RESULT THE CASE: section of the Coble rung, general direction 3: obstructions at orders 2..3: {0, 0} ; order-2 term equals -1/2 grad g^T H^(-1) grad g: true ; lower orders vanish: true ; at the end all nodes persist to order 3 (value and gradient zero): true ; cpu 170.56
+RESULT THE CASE: section of the Coble rung, a direction tangent to the family of sections of rung members: obstructions {0, 0} ; nodes persist: true
+DONE p 32003 seed 1
+EXIT 0

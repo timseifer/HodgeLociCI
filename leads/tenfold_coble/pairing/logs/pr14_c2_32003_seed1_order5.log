@@ -1,0 +1,7 @@
+order of the arc 5 ; quadrics modulo e^6 ; L S_1: rho_J = {129, 130, 130, 130, 130, 130} ; syzygies 32 modulo e^5, free: true
+the algebra: rho_J(Lambda) = {322, 322, 322, 322, 322} ; dimension over K at most 2 ; known modulo e^5 ; cpu 211.781
+(i) N modulo e^5: rank of N_0 = 9 ; N^2 is a scalar at each order: {true, true, true, true, true} ; delta = N^2: coefficients zero? {true, false, false, false, false}
+(ii) N(grad F) is a gradient at each order: {true, true, true, true, true} ; teeth (a random endomorphism instead of N_0): false ; sanity (the identity instead of N): true
+(iii') rank of N_0 = 9 ; the leading cubic G_(N,0): Lie algebra of dimension 16 (16 for a determinant) ; singular locus of dimension 4 and degree 6
+DONE arcdata/c2_32003_seed1_order5.txt cpu 215.538
+EXIT 0

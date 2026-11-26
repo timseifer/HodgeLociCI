@@ -1,0 +1,15 @@
+order of the arc 10 ; quadrics modulo e^10 ; L S_1: rho_J = {117, 129, 130, 130, 130, 130, 130, 130, 130, 130} ; syzygies 32 modulo e^8, free: true
+the algebra: rho_J(Lambda) = {305, 305, 322, 322, 322, 322, 322, 322} ; dimension over K at most 2 ; known modulo e^6 ; cpu 391.437
+(i) N modulo e^6: rank of N_0 = 1 ; N^2 is a scalar at each order: {true, true, true, true, true, true} ; delta = N^2: coefficients zero? {true, true, true, true, true, true}
+(ii) N(grad F) is a gradient at each order: {true, true, true, true, true, true} ; teeth (a random endomorphism instead of N_0): false ; sanity (the identity instead of N): true
+(iii) q_* (the image of N_0): factors (degree, multiplicity) {(1,2), (0,1)}
+      l_* S_1 lies in the limit net L_0: true ; l_* vanishes on the nodes (l_* S_2 in the span of L_0 S_1): true
+      G_(N,j) divisible by l_*^3, l_*^2, l_*: {(true,true,true), (false,true,true), (false,false,true), (false,false,false), (false,false,false)}
+      the cubic restricted to l_* = 0 (the Coble section): singular locus of dimension 1 and degree 18
+(iv) D_s = G_(N,3) on l_* = 0: zero? false ; proportional to the Coble section? false ; rank of the vector-field matrix: Coble section 64, D_s 64, random member 64
+      members D_s + mu G with a Lie algebra of dimension >= 4: mu = {13379, 18612} ; sum of these mu modulo p: 0
+      mu = 13379: Lie algebra of dimension 8 ; singular locus of dimension 3, degree 6, Hilbert polynomial i^3+3*i^2+3*i+1 ; quadrics in its ideal: 9
+      mu = 18612: Lie algebra of dimension 8 ; singular locus of dimension 3, degree 6, Hilbert polynomial i^3+3*i^2+3*i+1 ; quadrics in its ideal: 9
+      pencil written to arcdata/case_31991_seed2_order10.txt.pencil
+DONE arcdata/case_31991_seed2_order10.txt cpu 433.123
+EXIT 0

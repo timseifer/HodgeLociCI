@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (23)
+## Entries on this page (27)
 
 | id | status | title |
 |---|---|---|
@@ -35,6 +35,10 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-K3-ABELIAN-PAIRING](#d-tenfold-k3-abelian-pairing) | `PAPER_ARGUMENT_AI` | Why coefficient +1 goes with a K3 surface and -1 with an abelian surface: one relation among the nodes iff K_S = 0 (residue theorem); discriminant of the class = -8 deg(S) = -8 (18 - 2 chi(O_S)); 14 and 18 are the discriminants of P1 + P2 and P1 - P2. Explained, not a coincidence |
 | [D-CUBIC-SEVENFOLD-ENRIQUES](#d-cubic-sevenfold-enriques) | `MOD_P` | Cubic sevenfolds in P^8 singular along an Enriques surface of degree 16: the pencil det X + c det Y of two symmetric determinants; 64 nodes on tenfold sections, no relation |
 | [D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD](#d-coble-rungs-sixfold-eightfold) | `MOD_P` | Sixfolds and eightfolds: +1 is K3-type on every rung (sections of G(2,6): 14 and 28 nodes); for -1 the sections of the abelian surface give 18 and 36 nodes, with tangent codimensions 7 and 25 (25 < 26 = codim of l Q + det A + det B) |
+| [D-COBLE-SECTION-TWO-DETERMINANTS](#d-coble-section-two-determinants) | `MOD_P` | A hyperplane section of a Coble cubic is a difference of two 3 x 3 determinants with equal trace and equal second coefficient: det(tau + A) - det(tau + B) = c G |
+| [D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE](#d-eightfold-coble-rung-in-two-det-closure) | `PAPER_ARGUMENT_AI` | The eightfold Coble rung lies in the closure of l*Q + det A + det B: an explicit degeneration det(t + eA) - det(t + eB), after tests at the point and at a nearby point |
+| [D-EIGHTFOLD-RUNG-TANGENT-CONE](#d-eightfold-rung-tangent-cone) | `MOD_P` | At an eightfold of the Coble rung the first-order Hodge locus (codimension 25) is spanned by the node-keeping deformations of two members of the pencil; tangent cone = rung x cone over P^1 x P^1 |
+| [D-TENFOLD-TWO-DETERMINANT-FAMILY](#d-tenfold-two-determinant-family) | `MOD_P` | Cubic tenfolds l_1*Q_1 + l_2*Q_2 + det A + det B: codimension 52, a hyperplane section with 72 nodes and one relation; not the Coble family (a new lead) |
 
 ## Related entries on other pages
 
@@ -1903,7 +1907,410 @@ From leads/tenfold_coble/pairing/ (Macaulay2 1.22):
 
 **Next step.**
 
+UPDATE 26 Nov 2026 (later): the closure question is answered (yes) in D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE; the
+tangent cone at the rung is in D-EIGHTFOLD-RUNG-TANGENT-CONE. Earlier text:
 If wanted: decide whether an eightfold of the Coble rung is a limit of l Q + det A + det B (for example by a
 second-order computation at a rung member with the package's secondOrderObstruction).
 
 **Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), seventh part (owner's question on the K3 / abelian pairing).
+
+---
+
+## D-COBLE-SECTION-TWO-DETERMINANTS
+
+**A hyperplane section of a Coble cubic is a difference of two 3 x 3 determinants with equal trace and equal second coefficient: det(tau + A) - det(tau + B) = c G**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+G = (Coble cubic) n P^7, a cubic sixfold singular along the curve C = A n P^7 (degree 18, genus 10; A the abelian
+surface). s_2(M) = sum of the principal 2 x 2 minors of a 3 x 3 matrix.
+(1) (Exact identity over a finite field, at the instances under conditions.) There are 3 x 3 matrices A, B of linear
+forms on P^7 and a constant c != 0 with
+        det(tau + A) - det(tau + B) = c G,      tr A = tr B,      s_2(A) = s_2(B),
+i.e. the characteristic polynomials of A and B differ only in the constant term. The nine entries of tau + A are
+independent linear forms in (u, tau), and so are those of tau + B. The Coble cubic is given by the normal form of
+D-TENFOLD-COBLE-FAMILY with random parameters, the hyperplane is random; the matrices are in
+leads/tenfold_coble/pairing/arcdata/certificate_*.txt and check_certificate.m2 verifies the identity from them alone.
+(2) (ARG, elementary.) Equivalent form: with M = the trace-free part of A (an isomorphism P^7 -> P(sl_3)) there is an
+isometry s of the form tr(XY) on sl_3 with B_0 = s(M), and G = det(M) - det(sM); the trace drops out. The curve C is
+the set of M such that M and sM both have a double eigenvalue with a two-dimensional eigenspace, the same one.
+(3) (MOD p, synthetic, independent of (1).) For s a product of 7 or 8 random reflections, G_s = det M - det sM is
+singular along a curve of degree 18 and genus 10 lying on 9 quadrics and 75 cubics. The differential of
+(g, s) -> G_s o g has rank 75 = 64 + 11 at a random point (the 28 directions of so(8) give rank 20, of which 11 are
+new) and its image is (I_C)_3, which has dimension 75 as for a Coble section (3 + 8 + 63 + 1). One reflection gives
+(linear form) x (quadric); two give a cubic singular along a threefold.
+(4) (ARG; in the form given by the blind checker, which replaces a weaker argument of mine.) Lemma, in any
+characteristic other than 2 and 3: if tr A = tr B and s_2(A) = s_2(B), the rank <= 1 loci of tau + A and tau + B in
+P^8 lie on the quadric s_2(tau + A) = 0, so they meet in a curve of degree 18, along which the cone over
+det A - det B is singular (checked on a synthetic pair and on the first certificate). At the certificate point the
+saturated Jacobian ideal of G is I_C, so the locus E of cubics singular along a curve with Hilbert polynomial
+18 n - 9 has tangent space inside (I_C)_3; the Coble sections and the cubics det M - det sM both lie in E and both
+parametrisations have differential of rank 75 there. So E is smooth of dimension 75 at G and both families are
+dense in its component through G: in characteristic p a general Coble section is of the form det M - det sM, and
+conversely. Each such cubic then has a one-parameter family of representations (the kernel of the differential is
+16 + 1; the 1 is not explained).
+(5) On P^8 the same construction gives only cones (the trace-free part of a matrix of 9 linear forms has a kernel),
+so the Coble cubic itself is not of this form; its hyperplane sections are.
+How it was found: D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE (the splitting of the 18 quadrics at the generic point of
+a formal arc; both determinantal cubics tend to the triple hyperplane).
+```
+
+**Conditions.**
+
+```text
+(1): exact over F_(p^2) at two instances: p = 32003 (seed 1) and p = 31991 (seed 2), each a Coble cubic with random
+parameters and a random hyperplane. At 32003 the two determinantal cubics are conjugate over F_(p^2); at 31991 they
+are defined over F_p but their Lie algebras are not split there; in both cases the matrices have entries in F_(p^2).
+Nothing in characteristic 0. (3): MOD p, 32003 (7 and 8 reflections) and 31991 (8 reflections); exploratory, not
+pre-registered. (2), (4), (5) are arguments by an AI, unreviewed. The routine that recovers a matrix from a
+determinantal cubic was tested on synthetic pairs only.
+```
+
+**Evidence.**
+
+leads/tenfold_coble/pairing/: pr13_arc_algebra.m2 (the arc), pr14_arc_split.m2 (the pencil), pr15_certificate.m2
+(matrices; uses detrep_lib.m2: a matrix from a determinantal cubic sixfold through its Lie algebra sl_3, and the
+constant matrices that equalise trace and s_2), check_certificate.m2, arcdata/, logs/pr14_*, logs/pr15_*.
+Synthetic family: pr17_synthetic_family.m2, logs/pr17_*. Write-up: leads/TENFOLD_COBLE_LEAD.md, sections 16.5-16.7;
+pre-registration: leads/tenfold_coble/pairing/PREREG_pairing.md, sections 14, 15 (the mechanism was predicted from
+"N_0 has rank 1" before the run that confirmed it).
+
+**Independent check.**
+
+Blind check 8 (26 Nov 2026; a separate agent with the definitions and the claims, own Macaulay2 code; of my files it
+read only arcdata/certificate_32003_seed1.txt). CONFIRMED, exact over F_(p^2), p = 32003: the identity (1) with
+tr A = tr B (not zero), s_2 equal, entries of rank 9; G irreducible and not a cone; det A not proportional to det B;
+the map between the trace-free parts is an isometry with s != +-1, s^2 != 1 (det s = -1; harmless, transpose B);
+the Coble surface has Hilbert polynomial 9 n^2; C is smooth and connected, h^0(O_C(1)) = 10; I_C has 9 quadrics and
+75 cubics. CONFIRMED MOD 32003 and 31991 with its own seeds: (3) (degree 18, genus 10, 9 quadrics, 75 cubics; ranks
+64 / 20 / 75 and the span equals (I_C)_3; one reflection reducible); the count 3 + 8 + 63 (rank 72 in the
+coefficients of the substitution, 75 with the Coble parameters); irreducibility of the family.
+OBJECTION, accepted: my first form of (4) (two irreducible families of the same dimension with a common random
+point) has a gap, and one random instance modulo p does not certify a general point. The form of (4) recorded
+above is the checker's; it calls it its own unreviewed sketch. It also notes that a rank at one point gives
+"dimension >= 75" only.
+NOT blind-checked: the second certificate (31991; only check_certificate.m2 has verified it) and the way the
+certificates were found (arcs, pencil, matrix recovery).
+Report: leads/tenfold_coble/blind_check8/REPORT.txt.
+
+**Not established.**
+
+Characteristic 0 (the checker sketches a route over the Witt vectors; not written out). More instances than those
+listed. That a GENERAL Coble section is of this form, and conversely: the argument (4), unreviewed, with its
+scheme-theoretic details not written; no direct check of the converse (for instance an abelian surface through
+the curve of a synthetic G_s). The one-parameter family of representations
+and its interpretation by the g^2_9's of C (ARG, not checked). A formula for s in terms of the Coble parameters.
+Not a statement about the Hodge conjecture.
+
+**Known before.**
+
+N-TWO-TRACE-DESCRIPTION-OF-D (team T2, sixfolds): the family x_H Q + det M_A - det M_B "with equal trace and equal
+second coefficient on H" was written down from the degeneration of D-DEGENERATION-ALONG-ARC and ruled out as their
+divisor D (codimension 11, an 18-nodal hyperplane section). That it consists of sections of Coble cubics is new
+here, as far as this registry goes. Coble cubics: Coble (1917); Beauville, C. R. Acad. Sci. Paris 337 (2003);
+Gruson, Sam, Weyman arXiv:1203.2575; Benedetti, Manivel, Tanturri (Coble type hypersurfaces). We did not find the
+identity in these (abstracts and introductions machine-read on 25-26 Nov; search not exhaustive): a specialist
+should be asked before it is called new.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/pairing/ (Macaulay2 1.22):
+    M2 --script check_certificate.m2 arcdata/certificate_32003_seed1.txt        (seconds; the identity alone)
+    M2 --script pr13_arc_algebra.m2 32003 1 10 case arcdata/case_32003_seed1_order10.txt      (about 30 minutes)
+    M2 --script pr14_arc_split.m2 arcdata/case_32003_seed1_order10.txt                        (about 10 minutes)
+    M2 --script pr15_certificate.m2 32003 1 arcdata/case_32003_seed1_order10.txt.pencil arcdata/certificate_32003_seed1.txt
+    M2 --script pr17_synthetic_family.m2 32003 3 8
+```
+
+**Next step.**
+
+```text
+(1) An exact member over QQ or a number field (the pipeline works over any field once the arc is replaced by a direct
+solve: unknowns M and s, or the g^2_9 of C). (2) Find s as a function of (lam, x) and the hyperplane; the Heisenberg
+normal form suggests looking at the four classes of lines of the affine plane over F_3. (3) Show directly that the
+curve of a general G_s lies on an abelian surface. (4) Ask a specialist whether the identity is known.
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eighth part (owner: 'go ahead' on the open point of 15.5; 'continue on this line').
+
+---
+
+## D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE
+
+**The eightfold Coble rung lies in the closure of l*Q + det A + det B: an explicit degeneration det(t + eA) - det(t + eB), after tests at the point and at a nearby point**
+
+kind: `result` | area: `explicit_cycles` | status: **`PAPER_ARGUMENT_AI`**
+
+**Statement.**
+
+```text
+Question (left open in D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD): do the cubic eightfolds X with X n P^7 = (Coble cubic) n P^7
+lie in the closure of the family l*Q + det A + det B of D-EIGHTFOLD-FAMILY-TD? Answer: yes (ARG on exact finite-field
+inputs; details and limits below).
+V_0 = G(u) + t Psi(u, t): a hyperplane section of such an X through the P^7 (G the Coble section; 36 nodes
+C n {Psi = 0}; one relation on cubics). sigma = closure of {det A + det B} in the cubics of P^8.
+(A) Degeneration (ARG; inputs exact over F_(p^2), D-COBLE-SECTION-TWO-DETERMINANTS). With det(tau + A) - det(tau + B)
+= c G, tr A = tr B, s_2(A) = s_2(B): for A(e) = A + e A_1 + e^2 A_2, B(e) likewise, tr A_1 = tr B_1,
+    [det(t + eA(e)) - det(t + eB(e))] / e^3  ->  c G + t (tr(B B_1) - tr(A A_1)) + t^2 (tr A_2 - tr B_2)      (e -> 0).
+The map (A_1, B_1) -> tr(B B_1) - tr(A A_1) has rank 44 = all quadrics in (u, t) without t^2 (computed), so every
+G + t Psi is a limit of sums of two determinants: V_0 is in sigma, and X = V_0 + t_2 Q is in the closure of
+l*Q + det A + det B. In particular the cone over G is det(t + A) - det(t + B), a sum of two determinants.
+(B) Tests made before (A) was found, each able to give "no" (MOD p, two primes unless said; pre-registered):
+ - second order: the form h(g) = sum_i c_i grad g(p_i)^T H_i^(-1) grad g(p_i) (c the relation, H_i the Hessians)
+   vanishes identically on (I_Z)_3 (dimension 130); with a random functional instead of the relation its rank is 94;
+ - quadrics: the nodes of V_0 lie on 19 quadrics, of sigma on 18; the map mu_g: q -> [grad q . x] (x the velocity of
+   the nodes) has rank 1 for general g in (I_Z)_3 and the same 18 quadrics survive in every direction;
+ - formal arcs keeping the 36 nodes: no obstruction to order 6 (two directions per prime) and to order 10 (one
+   direction per prime);
+ - at the generic point of such an arc (over k((e)), truncations give rigorous lower bounds for ranks): the nodes
+   lie on 18 quadrics L, dim L S_1 = 130 (elementary divisors: 117 units, 12 of exponent 1, 1 of exponent 2), and
+   the algebra of endomorphisms of L preserving the 32 linear syzygies has dimension 2 (bound 19, 19, 2, stable to
+   8 orders). At V_0 itself: dim L S_1 = 117, 45 syzygies, algebra of dimension 1 (no conclusion from that).
+   Controls: det A + det B at a general point (two idempotents of rank 9) and the boundary point
+   sum cof_ij(A) B_ij, a cubic containing one Segre fourfold (L S_1: 129 then 130; a nilpotent of rank 9 with
+   square 0), both as predicted.
+(C) Mechanism (MOD 32003 and 31991, order 10; predicted from "the leading term N_0 of the trace-free non-scalar
+element has rank 1" before the run): N^2 is a scalar, zero modulo e^6; N(grad F) is the gradient of a cubic G_N at
+every order (a random endomorphism fails); the image of N_0 is t^2, t the hyperplane of the nodes; G_(N,0), G_(N,1),
+G_(N,2) are divisible by t^3, t^2, t and G_(N,3) by nothing. So both determinantal cubics tend to the triple
+hyperplane, as in D-DEGENERATION-ALONG-ARC on sixfolds, and the two members of the pencil <G, G_(N,3)|_(t=0)> with an
+8-dimensional Lie algebra are the two determinants of (A).
+```
+
+**Conditions.**
+
+```text
+(A): an argument on identities that are exact over F_(p^2) at two instances (p = 32003 seed 1, p = 31991 seed 2); the
+limit is taken over an algebraically closed field of characteristic p; nothing in characteristic 0. (B): MOD p at
+the same two instances; finite order where arcs are used (evidence, not proof); order 10 once per prime. (C): MOD
+32003 and 31991. The reasoning that makes the tests of (B) necessary conditions is an argument by an AI (written
+out in leads/tenfold_coble/pairing/PREREG_pairing.md, sections 8, 9, 12), unreviewed.
+```
+
+**Evidence.**
+
+leads/tenfold_coble/pairing/: pr8_equisingular.m2, pr9_quadrics.m2, pr10_arcs.m2, pr12_split.m2, pr13_arc_algebra.m2,
+pr14_arc_split.m2, pr15_certificate.m2 and their logs; first versions and stopped runs in logs/first_version/ with
+the reason in the file name. Pre-registration with the meaning of each outcome: PREREG_pairing.md, sections 8-15.
+Write-up: leads/TENFOLD_COBLE_LEAD.md, section 16.
+
+**Independent check.**
+
+Blind check 8 (as in D-COBLE-SECTION-TWO-DETERMINANTS). On (A): the cone over G is det(t + A) - det(t + B): CONFIRMED;
+the limit formula: CONFIRMED symbolically with indeterminate entries, WITH THE CORRECTION that the limit is
+c G + ... and not G + ... (my brief had G; fixed above); rank 44: CONFIRMED, with the remark that it uses only that
+the entries of A span the linear forms; the conclusion "every G + t Psi lies in the closure of the sums of two
+determinants": SOUND for this G over the algebraic closure of F_32003, not a statement in characteristic 0, and for
+all Coble sections only as far as (4) of D-COBLE-SECTION-TWO-DETERMINANTS goes. It notes the statement is not
+vacuous (the target family has dimension at most 194 of 220).
+NOT blind-checked: all of (B) and (C) (the tests at the point, the arcs, the algebra along the arc, the pencil).
+Those numbers are from my runs alone, at two primes with controls.
+
+**Not established.**
+
+Characteristic 0. The identity of (A) at more instances; "every rung member" rests on the dimension argument of
+D-COBLE-SECTION-TWO-DETERMINANTS (4). That the class of l*Q + det A + det B specialises to the class of the rung
+(the functional of D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD): not checked directly (kernel codimensions 26 and 25 are
+compatible). The arcs of (B) are of finite order (evidence); R10 was run in fewer directions than registered (time
+limit). The sixfold statement (the Coble rung in the closure of det A + det B on sixfolds) follows by the same
+formula restricted to a hyperplane but was not run.
+Not a statement about the Hodge conjecture: all classes here are classes of algebraic cycles.
+
+**Known before.**
+
+D-EIGHTFOLD-FAMILY-TD (the family, codimension 26). D-DEGENERATION-ALONG-ARC (team T2, cubic sixfolds): the algebra
+of endomorphisms respecting the linear syzygies, the two nets over the Laurent series field, both cubics with a pole
+and leading term a triple hyperplane: the method and the phenomenon of (B), (C) are theirs one dimension down; I
+found the entry after the runs. N-TWO-TRACE-DESCRIPTION-OF-D: the equal-trace family as a negative for their D.
+The formula h for the second-order term of a branch of the discriminant is classical.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/pairing/ (Macaulay2 1.22; p = 32003 seed 1, or 31991 seed 2):
+    M2 --script pr8_equisingular.m2 32003 1
+    M2 --script pr9_quadrics.m2 32003 1
+    M2 --script pr10_arcs.m2 32003 1 6
+    M2 --script pr12_split.m2 32003 1
+    M2 --script pr13_arc_algebra.m2 32003 1 6 all
+    M2 --script pr15_certificate.m2 32003 1 arcdata/case_32003_seed1_order10.txt.pencil arcdata/certificate_32003_seed1.txt
+```
+
+**Next step.**
+
+```text
+(1) The same on sixfolds (one run of pr15 on a P^6-section) and the relation to T2's divisor D, which is a different
+boundary component (anisotropic normal form). (2) Check directly that the class continues (limit of T4 or of the
+functional). (3) The tenfold analogue: D-TENFOLD-TWO-DETERMINANT-FAMILY.
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eighth part (owner: 'go ahead' on the open point of 15.5; 'continue on this line').
+
+---
+
+## D-EIGHTFOLD-RUNG-TANGENT-CONE
+
+**At an eightfold of the Coble rung the first-order Hodge locus (codimension 25) is spanned by the node-keeping deformations of two members of the pencil; tangent cone = rung x cone over P^1 x P^1**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+X: F = G(u) + t_1 Psi_1 + t_2 Psi_2 + ... in P^9, G a Coble section with singular curve C; hyperplanes H_c: t_2 = c t_1;
+Z_c = C n {Psi_1 + c Psi_2 = 0} (36 nodes of X n H_c). Inside the 120 cubics in u (everything divisible by t_1 or t_2
+keeps the nodes), MOD 32003 and 31991:
+(1) J_c = (I_(Z_c))_3 + Psi_2 S_1, the first-order deformations keeping the nodes of X n H_c with H_c allowed to move,
+has dimension 93 (codimension 27) for five members of the pencil;
+(2) the kernel of the pairing of the class (the functional of D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD) has dimension 95
+(codimension 25), is the same for the classes built from two different members, and contains every J_c;
+(3) J_c + J_c' is that kernel for c != c'; (I_C)_3 + Psi_1 S_1 + Psi_2 S_1, the tangent space of the rung, has
+dimension 91 (codimension 29);
+(4) the five 2-planes J_c / (tangent space of the rung) in the 4-dimensional quotient have Pluecker vectors spanning
+a space of dimension 3: they are lines of one ruling of a quadric surface.
+Reason (ARG, written before (4) was run): (I_(Z_c))_3 / (I_C)_3 = (Psi_1 + c Psi_2) H^0(O_C(1)), and H^0(O_C(1)) =
+H^0(K_C) is two dimensions larger than the linear forms of P^7 (C is not linearly normal; the quotient N is
+H^1(I_C(1)), which comes from H^1(O_A)). So kernel / rung = (pencil) x N and J_c / rung = (1, c) x N.
+Consequence (ARG): near a rung member the eightfolds with a 36-nodal hyperplane section look, to first order, like
+(rung) x (cone over P^1 x P^1): the image of the pairs (X, H), which contracts the pencil over each rung member.
+With D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE that family is the closure of l*Q + det A + det B, which is then
+singular along the rung with this tangent cone (codimension 26 inside a tangent space of codimension 25).
+```
+
+**Conditions.**
+
+MOD p, two primes, one random rung member each (seed 1 at 32003, seed 2 at 31991), five members of the pencil. First
+order only. The shape is an argument checked by one number (the Pluecker rank), and that number is forced by
+h^0(O_C(1)) = 10 = 8 + 2 (blind checker): it tests O_C(1) = K_C and nothing more. "The class" is the functional of
+D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD (built from the relation among the nodes; its identification with the Hodge class
+is the argument of that entry).
+
+**Evidence.**
+
+leads/tenfold_coble/pairing/pr11_cone.m2, logs/pr11_32003_seed1.log, logs/pr11_31991_seed2.log (three earlier runs
+were stopped by the time limit; kept in logs/first_version/). PREREG_pairing.md, sections 10 and 13.
+leads/TENFOLD_COBLE_LEAD.md, section 16.3.
+
+**Independent check.**
+
+Blind check 8: CONFIRMED MOD 32003 with its own quadrics and five members of the pencil: 36 distinct points,
+dim (I_Z)_3 = 85, dim J_c = 93, 91 for the rung, 95 for every pair and for all five, Pluecker rank 3 with pairwise
+skew lines; the same 85 / 93 / 91 / 95 at a synthetic cubic det M - det sM. Its remark, accepted: (4) is forced by
+h^0(O_C(1)) = 10 and tests O_C(1) = K_C, nothing more. It did not recompute the kernel of the class (item (2)).
+
+**Not established.**
+
+Anything beyond first order; that the tangent cone of the actual family is the cone of decomposable tensors (the
+computation shows the union of the tangent spaces T_c, which is contained in the tangent cone).
+
+**Known before.**
+
+D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD (codimension 25 at the rung against 26 for the family; the blind checker of that
+batch pointed out that 25 < 26 decides nothing). The picture "small contraction of a P^1" is standard.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/pairing/ (Macaulay2 1.22; about 3 minutes):
+    M2 --script pr11_cone.m2 32003 1
+```
+
+**Next step.**
+
+```text
+The same count on sixfolds and tenfolds (on tenfolds the hyperplanes through the P^8 form a net, so the quotient is
+(net) x H^1-type space and the cone should be the rank <= 1 locus of 3 x 2 matrices: a prediction, not computed).
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eighth part (owner: 'go ahead' on the open point of 15.5; 'continue on this line').
+
+---
+
+## D-TENFOLD-TWO-DETERMINANT-FAMILY
+
+**Cubic tenfolds l_1*Q_1 + l_2*Q_2 + det A + det B: codimension 52, a hyperplane section with 72 nodes and one relation; not the Coble family (a new lead)**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+F = l_1 Q_1 + l_2 Q_2 + det A + det B in P^11 (l_i linear, Q_i quadrics, A, B 3 x 3 matrices of linear forms): the
+P^9-section l_1 = l_2 = 0 is a sum of two determinants. The tenfold analogue of D-TWO-DET-FAMILY-NUMBERS (sixfolds,
+codimension 8) and D-EIGHTFOLD-FAMILY-TD (eightfolds, codimension 26). Predicted, then computed MOD 32003 and 31991
+at a random member:
+(a) in the P^9 the two rank <= 1 loci (cones over P^2 x P^2) meet in a curve D of degree 36 and genus 37
+    (K_D = (-4 - 4 + 10) H = 2H);
+(b) the hyperplane section l_2 = 0 has exactly 72 singular points, all ordinary double points, D n {Q_1 = 0}; they
+    impose 71 conditions on quartics (Hilbert function 1, 10, 36, 62, 71, 72): defect 1, as h^0(K_D - 2H) = 1
+    predicts;
+(c) the tangent space l_1 S_2 + l_2 S_2 + Q_1 S_1 + Q_2 S_1 + I_2(A)_3 + I_2(B)_3 has codimension 52 in the 364 cubics
+    (the parameter count (220 - 148) - 20) and contains the Jacobian ideal in degree 3;
+    S / (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)) has Hilbert function 1, 10, 35, 52, 35, 10, 1 (compare 1, 9, 26, 26, 9, 1 on
+    eightfolds).
+Reading (ARG): by Dimca's formula the section has one extra class, so the tenfold carries a Hodge class beyond h^5;
+if the symmetric quotient in (c) is the annihilator of that class, as on eightfolds, the family is a component of
+its Hodge locus of codimension 52. By the count of D-NODES-DISCRIMINANT-IDENTITY the discriminant would be 2 x 72 =
+144, that of P1 - P2 and of the Coble family. A member of the Coble family (codimension 54) cannot be a limit of
+these with the class continuing: its first-order Hodge locus has codimension 54 (EXACT,
+D-TENFOLD-COBLE-EXACT-MEMBER), and a component of codimension 52 through it would give at most 52. So on tenfolds
+the two-determinant family and the Coble family are different, unlike on eightfolds
+(D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE).
+```
+
+**Conditions.**
+
+MOD p, two primes, one random member each; smoothness of the tenfold was not checked (the tool reports the singular
+scheme of the section only). (a)-(c) are computed; the reading is an argument: the class itself, its discriminant
+and its annihilator were NOT computed. Not a statement about the Hodge conjecture: if the class is that of the
+5-fold {rows 1, 2 of A proportional} n {rows 1, 2 of B proportional} in the P^9, as on eightfolds, it is algebraic.
+
+**Evidence.**
+
+leads/tenfold_coble/pairing/pr16_tenfold_twodet.m2 (uses tooling/node_section/NodeSection.m2), logs/pr16_*.
+PREREG_pairing.md, section 15 (R16). leads/TENFOLD_COBLE_LEAD.md, section 16.8.
+
+**Independent check.**
+
+None. This entry was not in the blind checker's brief. The numbers are from one script at two primes; the node
+count uses tooling/node_section (its own self-test passes), the Hilbert function and the tangent space are direct
+Macaulay2 computations.
+
+**Not established.**
+
+The class: a cycle, its self-intersection, whether it lies in the monodromy orbit of P1 - P2 (same discriminant is
+necessary, not sufficient as stated here), and the Hodge-theoretic tangent space. How this family meets V_Z, F_T and
+the Fermat point, and therefore what it means for O-TENFOLD-CONE-LEAD: the registry's W (codimension 54) was found
+by local computations at points of F_T and at the Fermat point and is matched by the Coble family; nothing here
+changes that. Whether the registry's earlier searches met this family: a search of the registry and the hand-off
+for it found nothing (the Segre cone family of the hand-off, codimension 55, is a different one).
+
+**Known before.**
+
+The sixfold and eightfold families: D-TWO-DET-FAMILY-NUMBERS, D-EIGHTFOLD-FAMILY-TD (teams T2, T3).
+Kloosterman arXiv:2312.12363 and Movasati's work concern the planes; rStation papers #5 and #11 (u/lelong_ridge,
+Oct 2026) pose the question of components of the Hodge locus of the two-plane classes on tenfolds larger than V_Z:
+this family is not shown here to contain two-plane tenfolds, so it is not an answer to that question.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/pairing/ (Macaulay2 1.22; about 2 minutes):
+    M2 --script pr16_tenfold_twodet.m2 32003 1
+```
+
+**Next step.**
+
+```text
+(1) The class: the 5-fold of rows, its self-intersection (51-type count on the Fermat tenfold as in
+D-EIGHTFOLD-FAMILY-TD), the pairing kernel by the functional of the nodes. (2) Does the family contain tenfolds with
+two 5-planes meeting in a plane, and with which class (the plane lemma of D-GENERAL-CUBIC-OF-D-IS-LIMIT suggests
+only in the closure)? (3) Its first-order Hodge locus at points of V_Z, F_T. Tell the owner before spending compute:
+this may bear on the main lead.
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eighth part (owner: 'go ahead' on the open point of 15.5; 'continue on this line').

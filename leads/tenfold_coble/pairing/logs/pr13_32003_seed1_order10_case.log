@@ -1,0 +1,7 @@
+Coble cubic of this seed: singular locus of degree 18
+RESULT THE CASE: section of the Coble rung: 36 nodes ; arc to order 10, obstructions {0, 0, 0, 0, 0, 0, 0, 0, 0}, nodes persist ; cpu 1074.9
+      (a) evaluation on quadrics: rho_J = {26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27} ; quadrics over K: at most 18 ; saturated kernel modulo e^10: k-dimension 180 (free of rank 18 would be 180) ; leading parts independent: true
+      arc written to arcdata/case_32003_seed1_order10.txt
+      (b) L S_1: rho_J = {117, 129, 130, 130, 130, 130, 130, 130, 130, 130} ; linear syzygies over K: at most 32 ; saturated syzygies modulo e^8: k-dimension 256 (free would be 256) ; leading parts independent: true
+      (c) the algebra: rho_J(Lambda) = {305, 305, 322, 322, 322} ; DIMENSION OF THE ALGEBRA OVER K AT MOST: {19, 19, 2, 2, 2} ; cpu 1624.73
+EXIT 143

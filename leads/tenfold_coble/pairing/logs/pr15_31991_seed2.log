@@ -1,0 +1,9 @@
+the polynomial det(Q (S_D + mu S_G)) of degree 64: factors (degree, multiplicity) {(1,1), (1,8), (1,8), (1,1), (1,1), (2,1), (2,1), (2,1), (8,1), (31,1), (0,1)}
+two members over the prime field: mu = {13379, -13379} ; their sum: 0
+the hyperplane of the pencil file is t = 0: true ; its cubic is the Coble section: true
+determinantal representations: found / found
+RESULT (exact): det(tau + A) - det(tau + B) = c G with G the Coble section, c = 5291*aa+9637 : true ; tr A = tr B: true ; s_2(A) = s_2(B): true
+      the nine entries of tau + A are independent linear forms: true ; of tau + B: true
+      rank of (A_1, B_1) -> tr(B B_1) - tr(A A_1) on {tr A_1 = tr B_1}: 44 of 45 quadrics in (u, tau) ; together with tau^2: 45
+certificate written to arcdata/certificate_31991_seed2.txt
+EXIT 0

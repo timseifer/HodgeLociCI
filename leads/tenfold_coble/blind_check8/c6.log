@@ -1,0 +1,7 @@
+delta == Q^-1 grad G : true
+<delta, beta> == 0 identically : true
+D_beta(J_G) inside J_G (all 8 partials) : true
+C: HP 18*i-9
+D_beta(I_C) inside I_C (beta tangent to the cone over C) : true
+beta radial (parallel to X) at every point of C : true;   locus on C where beta is radial: dim (0 = empty) 2
+beta == 0 somewhere on C: dim of C cap {beta = 0} (0 = empty): 1

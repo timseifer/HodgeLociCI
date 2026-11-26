@@ -1,0 +1,7 @@
+(1) Coble a: dim Sing (affine) 3, degree 18;   with a+1 instead: dim Sing (affine) 0, degree 512
+    9 partials of F# linearly independent (not a cone): true
+(2) quadrics of I_C = restrictions of the 9 partials of F#: true;   sat(restricted Jacobian ideal) == I_C: true
+(3) HF of R/(I_C + Q_c) in degrees 4,5,6: {36, 36, 36}
+    mult by ell: (R/I)_4 -> (R/I)_5 invertible: true
+    Krylov vectors v, Tv, ..., T^35 v independent (T cyclic): true
+    minimal polynomial of mult by m/ell has degree 36, squarefree (=> Z_c = 36 distinct geometric points): true

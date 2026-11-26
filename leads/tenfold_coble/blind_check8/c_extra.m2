@@ -1,0 +1,46 @@
+-- extra sanity checks
+cert = value get "/home/claude/hodgelocici/leads/tenfold_coble/pairing/arcdata/certificate_32003_seed1.txt";
+pr = cert#"p"; kk = ZZ/pr;
+say = s -> (stdio << s << endl << flush;);
+lam0 = cert#"lam"; xs0 = cert#"x";
+hfun = (l, v) -> v#0^3 + v#1^3 + v#2^3 + 3*l*v#0*v#1*v#2;
+S9 = kk[w_0..w_8];
+a0 = sub(-hfun(lam0, xs0), kk) / sub(27*(1+lam0^3), kk);
+cobleA = (aval, z,pp,q) -> aval*hfun(lam0,z) + hfun(lam0,pp) + hfun(lam0,q) + sum(3, i -> sum(3, j -> xs0#((i-j)%3) * z#((i+j)%3) * pp#i * q#j));
+W = {w_0,w_1,w_2,w_3,w_4,w_5,w_6,w_7,w_8};
+F = cobleA(a0, W_{0,1,2}, W_{3,4,5}, W_{6,7,8});
+Fbad = cobleA(a0+1, W_{0,1,2}, W_{3,4,5}, W_{6,7,8});
+J9 = ideal jacobian ideal F; J9bad = ideal jacobian ideal Fbad;
+say("(1) Coble a: dim Sing (affine) " | toString dim J9 | ", degree " | toString degree J9 | ";   with a+1 instead: dim Sing (affine) " | toString dim J9bad | ", degree " | toString degree J9bad);
+say("    9 partials of F# linearly independent (not a cone): " | toString(rank (coefficients(transpose jacobian ideal F))#1 == 9));
+R = kk[u_0..u_7];
+hyp = apply(cert#"hyperplane", value);
+phi = map(R, S9, hyp);
+G = phi F;
+JG = ideal jacobian ideal G;
+setRandomSeed 5;
+ell = sum(8, i -> random(kk)*R_i);
+IC = saturate(JG, ell);
+IC0 = phi J9;
+say("(2) quadrics of I_C = restrictions of the 9 partials of F#: " | toString(ideal super basis(2, IC) == IC0) | ";   sat(restricted Jacobian ideal) == I_C: " | toString(saturate(IC0, ell) == IC));
+-- (3) Z_c: degree and reducedness for one c
+Psi1 = random(2, R); Psi2 = random(2, R);
+c = 17;
+IZ0 = IC + ideal(Psi1 + c*Psi2);
+B = R/IZ0;
+b4 = basis(4, B); b5 = basis(5, B); b6 = basis(6, B);
+say("(3) HF of R/(I_C + Q_c) in degrees 4,5,6: " | toString {numcols b4, numcols b5, numcols b6});
+ellB = sub(ell, B); m = sum(8, i -> random(kk)*B_i);
+L1 = sub((coefficients(ellB * b4, Monomials => b5))#1, kk);
+L2 = sub((coefficients(m * b4, Monomials => b5))#1, kk);
+say("    mult by ell: (R/I)_4 -> (R/I)_5 invertible: " | toString(det L1 != 0));
+Tm = inverse(L1) * L2;
+n = numrows Tm;
+v0 = random(kk^n, kk^1);
+kry = {v0}; scan(n, i -> kry = append(kry, Tm * last kry));
+Kmat = fold((x,y) -> x | y, take(kry, n));
+say("    Krylov vectors v, Tv, ..., T^35 v independent (T cyclic): " | toString(rank Kmat == n));
+cc = solve(Kmat, kry#n);      -- T^n v = sum cc_i T^i v
+P1 = kk[xx];
+mp = xx^n - sum(n, i -> cc_(i,0) * xx^i);
+say("    minimal polynomial of mult by m/ell has degree " | toString first degree mp | ", squarefree (=> Z_c = 36 distinct geometric points): " | toString(gcd(mp, diff(xx, mp)) == 1));

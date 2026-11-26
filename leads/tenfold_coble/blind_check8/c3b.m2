@@ -1,0 +1,48 @@
+-- extra structural comparison: singular curve of a synthetic G_s versus the Coble-section curve.
+-- smoothness, h^0(O_C(1)) (via cubics through a quadric section), C5-type numbers for G_s.
+pr = value scriptCommandLine#1; sd = value scriptCommandLine#2; nrefl = 8;
+say = s -> (stdio << s << endl << flush;);
+kk = ZZ/pr; setRandomSeed sd;
+R = kk[y_1..y_8];
+yv = transpose vars R;
+Mof = v -> matrix{{v_(0,0),v_(1,0),v_(2,0)},{v_(3,0),v_(4,0),v_(5,0)},{v_(6,0),v_(7,0),-v_(0,0)-v_(4,0)}};
+M = Mof yv; qf = trace(M*M);
+Qm = sub((1/2)_kk * diff(vars R, diff(transpose vars R, qf)), kk);
+refl = k -> (n := (transpose k * Qm * k)_(0,0); id_(kk^8) - (2/n) * k * transpose k * Qm);
+Smat = id_(kk^8);
+scan(nrefl, i -> (k := random(kk^8, kk^1); Smat = Smat * refl k));
+sy = sub(Smat, R) * yv;
+G = det M - det Mof sy;
+JG = ideal jacobian ideal G;
+ell = sum(8, i -> random(kk)*R_i);
+IC = saturate(JG, ell);
+say("synthetic G_s, p = " | toString pr | ", seed " | toString sd | ": HP " | toString hilbertPolynomial(IC, Projective => false) | "; quadrics " | toString numcols basis(2, IC) | "; cubics " | toString numcols basis(3, IC));
+A = R/IC;
+Hs = sub(diff(transpose vars R, diff(vars R, G)), A);
+m1 = det(submatrix(Hs, {0,1,2,3,4,5}, {0,1,2,3,4,5}), Strategy => Cofactor);
+m2 = det(submatrix(Hs, {2,3,4,5,6,7}, {2,3,4,5,6,7}), Strategy => Cofactor);
+m3 = det(submatrix(Hs, {0,1,3,4,6,7}, {1,2,3,5,6,7}), Strategy => Cofactor);
+say("Hessian rank 6 everywhere on C (=> C smooth): " | toString(dim ideal(m1,m2,m3) == 0));
+ellA = sub(ell, A);
+b1 = basis(1, A); b2 = basis(2, A); b3 = basis(3, A); b4 = basis(4, A);
+say("HF A degrees 1..4: " | toString {numcols b1, numcols b2, numcols b3, numcols b4});
+Psi1 = random(2, R); Psi2 = random(2, R);
+mons3 = basis(3, R);
+cf = L -> sub((coefficients(L, Monomials => mons3))#1, kk);
+cIC3 = cf super basis(3, IC);
+cP1 = cf (Psi1 * vars R); cP2 = cf (Psi2 * vars R);
+N = cIC3 | cP1 | cP2;
+say("dim (I_C)_3 + Psi1 S_1 + Psi2 S_1 = " | toString rank N);
+liftR = map(R, A, gens R);
+cs = {3, 17, 101};
+Js = apply(cs, c -> (
+   Qc := sub(Psi1 + c*Psi2, A);
+   M1 := sub((coefficients(ellA * b3, Monomials => b4))#1, kk);
+   M2 := sub((coefficients(Qc * b2, Monomials => b4))#1, kk);
+   ker := matrix nullSpace mutableMatrix (M1 | -M2);
+   kv := ker^(toList(0..numcols b3 - 1));
+   cZ := cIC3 | cf liftR(b3 * sub(kv, A));
+   J := cZ | cP2;
+   say("c = " | toString c | ": dim (I_Z)_3 = " | toString rank cZ | " (=> h^0(O_C(1)) = " | toString(rank cZ - 75) | ");  dim J_c = " | toString rank J);
+   J));
+say("dim(J_c + J_c') : " | toString apply(subsets(3,2), pq -> rank(Js#(pq#0) | Js#(pq#1))));

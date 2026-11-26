@@ -1,0 +1,4 @@
+Sigma_A cap Sigma_B: dim(affine) 2  degree 18  HP 18*i-9   time 1.08311
+all partials of G vanish on Sigma_A cap Sigma_B (radical membership via saturation in tau-free direction): 
+   partials of G in sat(I_AB): true   time 4.74886
+projection of Sigma_A cap Sigma_B equals C = Sing(G): true   time 12.7767

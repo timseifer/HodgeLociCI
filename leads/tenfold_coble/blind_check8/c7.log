@@ -1,0 +1,6 @@
+s2(tau+M) == s2(tau+sM): true;  this quadric lies in both ideals: true
+Sigma_A: dim(affine) 5 degree 6
+Sigma_A cap Sigma_B: dim(affine) 2  degree 18  HP 18*i-9
+projection to P^7 (eliminate tau) contained in I_C: true;  saturated projection == I_C: true
+Sigma_A cap {rank(tau - sM) <= 1}: dim(affine) 2  degree 18
+Sing(det M + det sM): HP 18*i-9;  equals projection of the second curve: true

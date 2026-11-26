@@ -1,0 +1,6 @@
+(a) the two rank <= 1 loci in the P^9: dimension 1, degree 36, genus 37
+(c) Hilbert function of S / (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)), degrees 0..7: {1, 10, 35, 52, 35, 10, 1, 0}
+    tangent space of the family: dimension 312 of 364, codimension 52 ; it contains the Jacobian ideal in degree 3: true
+(b) hyperplane section x_11 = 0: new HashTable from {formDegree => 4, singularLocusDim => 0, defect => 1, note => A computed count. By Dimca (1990; LIT, not re-read in full) the defect of a nodal hypersurface is b_n - 1. That it gives Hodge classes on a smooth hypersurface containing it as a hyperplane section is an unreviewed AI argument. Not a statement about algebraic cycles or about the Hodge conjecture., hilbertFunctionOfNodes => {1, 10, 36, 62, 71, 72, 72}, label => MOD p (p = 31991), this instance, allOrdinaryDoublePoints => true, conditions => 71, singularPoints => 72}
+DONE p 31991 seed 2
+EXIT 0

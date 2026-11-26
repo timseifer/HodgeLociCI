@@ -357,7 +357,11 @@ and 3/2, D-DEGENERATION-ALONG-ARC).
 
 **Independent check.** none (C20 checked the splitting, not this family)
 
-**Not established.** A correct description of D as a family (O-RECOVER-MATRICES-AND-LIMIT-OF-T).
+**Not established.**
+
+UPDATE 26 Nov 2026: the hyperplane sections of this family are sections of Coble cubics
+(D-COBLE-SECTION-TWO-DETERMINANTS, found from the eightfold side); the negative result about D is unchanged.
+A correct description of D as a family (O-RECOVER-MATRICES-AND-LIMIT-OF-T).
 
 **Known before.** n/a
 

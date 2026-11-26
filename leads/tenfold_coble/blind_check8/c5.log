@@ -1,0 +1,24 @@
+C: HP 18*i-9  (I_C)_3 = 75
+dim (I_C)_3 + Psi1 S_1 + Psi2 S_1 = 91
+HF of A = R/I_C in degrees 1..5: {8, 27, 45, 63, 81}
+c = 3:  rank(mult by ell) 45, rank(mult by Q_c on A_2) 27;  dim (I_Z)_3 = 85 (k=2: 85, same space: true);  dim J_c = 93;  dim(J_c + N) = 93   time .130224
+c = 17:  rank(mult by ell) 45, rank(mult by Q_c on A_2) 27;  dim (I_Z)_3 = 85 (k=2: 85, same space: true);  dim J_c = 93;  dim(J_c + N) = 93   time .146826
+c = 101:  rank(mult by ell) 45, rank(mult by Q_c on A_2) 27;  dim (I_Z)_3 = 85 (k=2: 85, same space: true);  dim J_c = 93;  dim(J_c + N) = 93   time .135906
+c = 2026:  rank(mult by ell) 45, rank(mult by Q_c on A_2) 27;  dim (I_Z)_3 = 85 (k=2: 85, same space: true);  dim J_c = 93;  dim(J_c + N) = 93   time .119194
+c = 31000:  rank(mult by ell) 45, rank(mult by Q_c on A_2) 27;  dim (I_Z)_3 = 85 (k=2: 85, same space: true);  dim J_c = 93;  dim(J_c + N) = 93   time .125904
+dim(J_c + J_c') for c = 3, 17 : 95
+dim(J_c + J_c') for c = 3, 101 : 95
+dim(J_c + J_c') for c = 17, 101 : 95
+dim(J_c + J_c') for c = 3, 2026 : 95
+dim(J_c + J_c') for c = 17, 2026 : 95
+dim(J_c + J_c') for c = 101, 2026 : 95
+dim(J_c + J_c') for c = 3, 31000 : 95
+dim(J_c + J_c') for c = 17, 31000 : 95
+dim(J_c + J_c') for c = 101, 31000 : 95
+dim(J_c + J_c') for c = 2026, 31000 : 95
+dim of the sum of all five J_c : 95
+functionals killing N: 29
+rank of the 4 chosen functionals on U: 4
+Pluecker vectors (rows): rank = 3
+each vector satisfies the Pluecker relation: true
+pairwise skew (Klein pairing nonzero for all pairs): true

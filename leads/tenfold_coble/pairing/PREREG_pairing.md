@@ -165,3 +165,272 @@ relation among the 64 nodes), the anti-invariant octics rank 63 (one relation, i
 Meaning. As predicted: for this Enriques surface "no relation against quartics, one relation against K_S + 4h" is
 the classical Cayley-Bacharach theorem plus a parity count, i.e. T2/T3 hold here by a standard argument and the
 missing class is explained. Ranks 63 / 64 the other way round, or 64 / 64: the parity argument is wrong; look.
+
+## 8. Added 26 Nov (owner: "go ahead" on the open point of 15.5), before the first run of pr8_equisingular.m2
+
+Question. Do the eightfolds of the Coble rung (R1 (d)) lie in the closure of the family l Q + det A + det B (R1 (e))?
+
+Why not the Hodge-theoretic second-order obstruction: for a class given only as a functional on the Jacobian ring,
+the second-order term is a period of a form of higher pole order, <delta, Res(P G^2 Omega / F^6)>, and for P G^2 not
+in the Jacobian ideal this is not determined algebraically by delta. So I use the classical obstruction to keeping
+the nodes instead, which is algebraic.
+
+Setting (eightfolds only: here the relation among the nodes is on cubics, the degree of the deformations).
+V = {f = 0} a cubic sevenfold in P^8 with N reduced nodes p_i and exactly one relation sum c_i g(p_i) = 0 on cubics.
+ES = the germ at f of the cubics with N nodes near the p_i (the intersection of the N smooth branches B_i of the
+discriminant). T ES = (I_Z)_3, of dimension 165 - (N - 1); dim ES >= 165 - N.
+In one affine chart, the branch B_i is {critical value near p_i = 0}:
+     b_i(f + eps g) = eps g(p_i) - (eps^2 / 2) grad g(p_i)^T H_i^(-1) grad g(p_i) + O(eps^3),   H_i = Hessian of f at p_i.
+Since sum c_i g(p_i) = 0 for every cubic g, the function sum c_i b_i has no linear term, and its quadratic term is
+     h(g) = sum_i c_i grad g(p_i)^T H_i^(-1) grad g(p_i)                                   (T8; ARG, classical)
+on (I_Z)_3; ES lies in {sum c_i b_i = 0}. So:
+   h not identically zero on (I_Z)_3  =>  dim ES = 165 - N exactly (one less than its tangent space);
+   h identically zero on (I_Z)_3     =>  no obstruction at second order (dim ES could be 165 - N + 1).
+Built-in check: for g = (linear vector field) . grad f, an infinitesimal coordinate change, grad g = H . xi at the
+nodes and h(g, g') = rho(xi . grad g') = 0 for all g' in (I_Z)_3. The computation must reproduce this.
+
+Controls (known dimensions): the sections of l Q + det A + det B form a family of dimension 130 = dim (I_Z)_3, and
+those of the Pfaffian rung one of dimension 138 = 165 - 27 = dim (I_Z)_3; in both ES is smooth with that tangent
+space, so h must vanish identically on (I_Z)_3. Teeth: with a random functional in place of the relation the form
+must not vanish.
+
+The case in question, V_0 a section through the P^7 of a Coble-rung eightfold (36 nodes, 35 conditions): the
+sections of rung members form a family of dimension 128 inside ES, on whose tangent space h must vanish; (I_Z)_3
+has dimension 130. So h has rank at most 4. No prediction for whether it is zero. (A reason to expect it nonzero:
+the two extra tangent directions come from H^1(O_A), i.e. from re-embedding the curve A n P^7 by a different
+projection of its canonical model, and a count gives no cubic sixfold singular along a general such curve.)
+What each outcome means:
+   h != 0: dim ES(V_0) = 129 < 130. The 36-nodal sections of rung members are then not limits of the 36-nodal
+           sections of l Q + det A + det B (those form a family of dimension 130 inside the 36-nodal cubics).
+           Consequence for the eightfolds, under two assumptions that will be stated as such (the functional of R5
+           is the class, so that a limiting hyperplane must contain the P^7; a general rung member has no further
+           Hodge classes): the Coble rung is NOT in the closure of that family.
+   h == 0: nothing is obstructed at second order; compatible with the rung lying in the closure; not a proof.
+           Next would be third order or an explicit degeneration.
+If a control fails, T8 or the code is wrong and nothing is concluded.
+
+## 9. Added 26 Nov, after the first run of pr8_equisingular.m2 (h == 0 in the case in question) and before the first run of pr9_quadrics.m2
+
+Outcome of section 8 at the first prime: h vanishes identically on (I_Z)_3 for the section of the Coble rung, as
+for the three controls (teeth: a random functional gives a form of rank 94). So there is no second-order
+obstruction, and by section 8 nothing is concluded yet. A first-order test that can still decide "no":
+
+R9. Let sigma = the closure of {det A + det B} in the cubics of P^8 (dimension 130). If V_0 lies in sigma, then
+the germ ES of 36-nodal cubics at V_0 contains a germ of dimension 130 = dim of its tangent space (I_Z)_3, hence ES
+is smooth and equal to sigma there, and EVERY g in (I_Z)_3 is tangent to a curve in sigma. On sigma the 36 nodes
+lie on at least 18 quadrics (the 2 x 2 minors of A and of B; upper semicontinuity). The nodes move with velocity
+x = -H^(-1) grad g, and a quadric q through the nodes survives to first order iff the function grad q . x on the
+nodes is the restriction of a quadric. So:
+     mu_g : (I_Z)_2 -> (functions on the nodes)/(quadrics),   q -> [grad q . x]
+must have kernel of dimension >= 18 for every g in (I_Z)_3 (NECESSARY for V_0 in sigma; ARG, elementary).
+For the section of the Coble rung dim (I_Z)_2 = 19 (nine multiples of the hyperplane, nine quadrics through the
+curve, and Psi), so the condition is: rank mu_g <= 1 for every g in (I_Z)_3.
+Controls: for det A + det B, for the Pfaffian rung and for a sevenfold through a P^4 the type of the node scheme is
+constant on ES, so mu_g = 0 for all g in (I_Z)_3. In the case in question mu_g must vanish for g tangent to the
+family of sections of rung members (the 128-dimensional subspace).
+Outcomes for a general g in (I_Z)_3 in the case in question:
+   rank mu_g >= 2: V_0 is not in sigma. With the two assumptions of section 8 for the passage to eightfolds, the
+                   Coble rung is not in the closure of l Q + det A + det B. A "no".
+   rank mu_g = 1:  exactly what membership requires (19 quadrics at V_0, 18 on sigma); compatible, not a proof.
+   rank mu_g = 0:  all 19 quadrics survive in every direction; then the nearby 36-nodal cubics have their nodes on
+                   19 quadrics and are not general members of sigma; V_0 could then lie only in a proper closed
+                   part of sigma, which contradicts "every g is tangent to a curve in sigma" unless sigma itself
+                   has 19 quadrics there. A "no" as well (same argument).
+
+## 10. Added 26 Nov, after the first run of pr9_quadrics.m2 and before the first runs of pr10_arcs.m2 and pr11_cone.m2
+
+Outcome of section 9 at the first prime: rank mu_g = 1 for general g, 0 on the rung directions, and the same 18
+quadrics survive in every direction. With section 8 (h == 0) both necessary conditions for membership hold; nothing
+is decided. (An exploratory attempt to find a closed condition separating det A + det B from general cubics by
+Koszul flattenings gave nothing: the ranks for det A + det B are the generic ones. Not recorded as a result.)
+
+R10 (formal arcs; finite order, so evidence and not proof). For a general g_1 in (I_Z)_3 extend
+f + e g_1 + e^2 g_2 + ... order by order so that all 36 nodes persist. At order m the nodes impose the values of g_m
+on Z, and such a cubic g_m exists iff the relation rho kills those values: one number per order, the obstruction.
+If all lower obstruction forms vanish identically this number does not depend on the earlier choices.
+   Controls: det A + det B, the Pfaffian rung, a sevenfold through a P^4: every direction of (I_Z)_3 integrates
+   (ES is smooth with that tangent space), so the obstruction must be 0 at every order. Cross-check of the code:
+   the order-2 value must equal -1/2 grad g_1^T H^(-1) grad g_1 computed with the matrices of pr8.
+   The case in question, general g_1 (three directions), to order 6:
+     a nonzero obstruction at some order m: dim ES = 129, and by section 8 the answer is "no" (with its assumptions);
+     zero to order 6: the 36-nodal cubics near V_0 form, as far as order 6 can tell, a family of dimension 130 with
+     a relation; compatible with "yes". It would still not show that this family is the family det A + det B.
+R11 (first order, eightfolds). For each hyperplane H_c of the pencil through the P^7, the first-order deformations
+of the eightfold keeping the 36 nodes of X n H_c (H_c allowed to move) form a space T_c of codimension 27.
+Prediction: the sum of the T_c over the pencil is exactly the tangent space of the Hodge locus found in R5
+(codimension 25). Meaning: the whole first-order Hodge locus at a rung member is accounted for by keeping the nodes
+of some member of the pencil; then the picture "the Hodge locus there is the family of eightfolds with a 36-nodal
+section, of codimension 26, singular along the rung with tangent cone the union of the T_c" is consistent. If the
+sum is smaller than codimension 25, there are first-order Hodge directions that no nodal section explains.
+
+## 11. Added 26 Nov, while pr10 and pr11 were running, before the first run of pr12_split.m2
+
+R12 (can the 18 surviving quadrics be the limit of "minors of A plus minors of B"?). For det A + det B the 18
+quadrics through the nodes are L = L_A + L_B, the quadrics of the two Segre fourfolds; L S_1 = (I_Z)_3 has
+dimension 130, so L has exactly 32 linear syzygies, 16 for each summand. Hence the algebra
+     Alg(L) = { phi in End(L) : (phi x 1) maps the linear syzygies of L to linear syzygies }
+contains the two projections: dim Alg(L) >= 2. A two-dimensional subspace of End has a limit, and the condition is
+closed. So if V_0 lies in sigma (then, by section 9, the common kernel L_0 of the maps mu_g is the limit of the
+spaces L along every general arc, and if L_0 S_1 still has dimension 130 its syzygies are the limits of the
+syzygies), then dim Alg(L_0) >= 2 (NECESSARY; ARG).
+Control: det A + det B itself: dim Alg = 2 expected (the two projections; ranks 9 and 9; each summand cuts a
+fourfold of degree 6).
+The case in question, L_0 = the 18 surviving quadrics of section 9:
+   dim L_0 S_1 different from 130: the argument does not apply as stated; report the number, conclude nothing.
+   dim Alg(L_0) = 1 (scalars only): V_0 is not in sigma: a "no" (with the assumptions of section 8 for eightfolds).
+   dim Alg(L_0) >= 2: compatible. Then the structure of a non-scalar element says how the two Segre fourfolds
+       would degenerate: two idempotents of rank 9 (two limit fourfolds, to be looked at), or a nilpotent element
+       (the two fourfolds come together in the limit).
+
+## 12. Added 26 Nov, about 05:50 UTC, after the rerun of pr12_split.m2 at the first prime and before the first run of pr13_arc_algebra.m2
+
+State. R8 (h == 0), R9 (rank mu_g = 1), R10 (no obstruction to order 6, one general direction at each prime; the
+runs were stopped by the time limit before the other two directions), R12 (dim L_0 S_1 = 117, not 130: the argument
+of section 11 does not apply, nothing concluded; control: dim Alg = 2, two Segre fourfolds). Every test that could
+have said "no" is compatible with "yes"; none shows "yes". The tests so far look only at V_0. The next one looks
+at a nearby point.
+
+R13, R14 (the 18 quadrics at the generic point of a formal arc). Notation: sigma = closure of {det A + det B}
+(dimension 130), ES = the scheme of 36-nodal cubics near V_0, K = k((e)), R = k[[e]].
+Argument (ARG). Suppose V_0 lies in sigma. Then ES contains a germ of dimension 130 = dim of its tangent space, so
+ES is smooth at V_0 and equals sigma there. In a smooth germ every jet lifts to an arc, and the arcs with a given
+jet are not all contained in a proper closed subset. So the jet computed by the method of R10 (order M) is the
+jet of an arc gamma in sigma whose generic point is a general point of sigma. At that point, over K:
+   (a) the nodes lie on exactly 18 quadrics L (rank of the evaluation map on quadrics = 27);
+   (b) L S_1 has dimension 130 (32 linear syzygies);
+   (c) Alg(L) has dimension exactly 2 (R12 control; the two projections).
+All objects are determined modulo e^(M+1) by the jet, and a LOWER bound for a rank over K read off from a
+truncation is rigorous: for a matrix over R, (rank over k of its block truncation modulo e^J) - (the same modulo
+e^(J-1)) = the number of elementary divisors e^d with d < J =: rho_J, and rank over K >= rho_J. Saturated kernels
+are computed modulo e^(J - D), D = the largest exponent seen; this is exact once the rank over K is known to be
+reached (it is bounded above: by 27 for (a) under the hypothesis, by 130 for (b) because the nodes impose at least
+35 conditions on cubics over K).
+The algebra: phi in End(L) with Mult . (phi x 1) . Syz = 0, a linear system Lambda over R with 324 unknowns;
+dim Alg over K <= 324 - rho_J(Lambda).  (Rows of Lambda are replaced by 400 random combinations over k.)
+
+Controls.
+   C1  det A + det B at a general point, general direction: (a), (b) at order 0 and rho_1(Lambda) = 322.
+   C2  a point of sigma outside {det A + det B}: G = sum_ij cofactor_ij(A) B_ij = the first-order term of
+       det(A + e B), A the generic matrix. It contains the Segre fourfold of A; expected: 36 nodes on it (the zeros
+       of a normal vector field; 6 x 6 = 36), one relation, and by the argument above ES = sigma there. So the
+       method MUST find (b) and 324 - rho(Lambda) >= 2 at every order, and = 2 if the order suffices. If it finds
+       <= 1, the argument or the code is wrong and nothing is concluded from THE CASE. (No prediction for the
+       numbers at e = 0 there.)
+THE CASE (section of the Coble rung, general direction, order 6, both primes). No prediction. Outcomes:
+   324 - rho_J(Lambda) <= 1 for some J, with (b) reached:  V_0 is not in sigma (MOD p; a finite-order
+        certificate together with the ARG above). With the two assumptions of section 8 for the passage to
+        eightfolds: the Coble rung is not in the closure of l Q + det A + det B. Then the 36-nodal cubics near
+        V_0, if they form a 130-dimensional family as R10 suggests, are a different family, to be described.
+   (b) reached and 324 - rho_J(Lambda) >= 2 up to the order available:  compatible with "yes"; then the leading
+        term of a non-scalar element says how the two Segre fourfolds would come together (two idempotents, or a
+        nilpotent element as in C2). Evidence at finite order, not a proof.
+   (a) fails (rho(E) reaches 28) or (b) is not reached within the order:  no conclusion; raise the order once.
+Not tested by this: that the arc of R10 extends (finite order); whether the functional of R5 is the class.
+
+## 13. Added 26 Nov, about 06:12 UTC, after pr11_cone.m2 finished at the first prime and before the run of its added last block
+
+Outcome of R11 at the first prime: dim J_c = 93 (codimension 27) for five members; each lies in the kernel of the
+class (codimension 25); already two members span it; (I_C)_3 + Psi_1 S_1 + Psi_2 S_1 has dimension 91 (codimension
+29, the tangent space of the rung), so each member adds 2 dimensions and the pencil adds 4.
+
+R11b (shape of the tangent cone; ARG first, then a check). From 0 -> I_C(3) -> I_Z(3) -> O_C(3H - Z) = O_C(H) -> 0
+and Z_c = C n {Psi_1 + c Psi_2 = 0}: (I_(Z_c))_3 / (I_C)_3 = (Psi_1 + c Psi_2) H^0(O_C(1)), and H^0(O_C(1)) = H^0(K_C)
+has dimension 10, two more than the linear forms of P^7 (C is not linearly normal; the quotient is H^1(I_C(1)),
+which comes from H^1(O_A)). So with N = H^0(K_C) / S_1 (dimension 2):
+     kernel / tangent space of the rung  =  (pencil) x N  (dimension 4),      J_c / (...) = (1, c) x N.
+Prediction: the union over c of the J_c is the cone of decomposable tensors, a quadric cone of rank 4. Check: in
+the 4-dimensional quotient the five 2-planes are lines of one ruling of a quadric surface in P^3, so their Pluecker
+vectors lie on a conic: they span a space of dimension 3 (five general lines: 5).
+Meaning if it holds: to first order, the eightfolds with a 36-nodal hyperplane section near a rung member X_0 form
+(rung) x (cone over P^1 x P^1), the image of the pairs (X, H) under forgetting H, which contracts the pencil over
+each rung member. That is what one expects if the pairs (X, H) form a smooth family of codimension 26; it says
+nothing about which family that is. If it fails, the description of J_c above is wrong.
+
+## 14. Added 26 Nov, about 06:32 UTC, after the first run of pr13_arc_algebra.m2 on THE CASE (order 6, first prime) and before the first run of pr14_arc_split.m2
+
+Outcome of section 12 so far (first prime). C1: 27 / 130 / algebra of dimension 2, two idempotents of rank 9.
+C2 (order 3): 27; L S_1 = 129 at e = 0 and 130 over K; algebra of dimension 2 over K; the leading term of a non-scalar
+element is nilpotent of rank 9 with square 0 (the two Segre fourfolds come together), as predicted.
+THE CASE (order 6): quadrics rho = 26, 27; L S_1: rho = 117, 129, 130; algebra: bound 19, 19, 2, 2. So the
+necessary condition holds: outcome "compatible with yes". The leading term of a non-scalar element (trace removed)
+is N_0 of RANK 1 with square 0. This was not predicted. What it suggests (ARG, written before any further run):
+
+T14. Let N = phi - (tr phi / 18) in the algebra over K; if the cubic at the generic point is G_+ + G_- with the two
+nets L_+, L_- (as for det A + det B), then N^2 = delta is a scalar, N = sqrt(delta) (pi_+ - pi_-), and N(grad F) is
+the gradient of the cubic G_N = sqrt(delta) (G_+ - G_-).  At e = 0: N_0(grad F_0) = grad G_(N,0) with all partial
+derivatives proportional to one quadric q_* (N_0 has rank 1). A cubic whose partial derivatives are all proportional
+to one quadric is the cube of a linear form, and then q_* is its square. So:
+   P1  q_* = l_*^2 for a linear form l_*, and G_(N,0) is a multiple of l_*^3.   Expected l_* = t, the hyperplane of
+       the nodes.
+A matrix of linear forms whose determinant is t^3 and whose net of minors is nondegenerate enough is t.1 after a
+change of bases, so the natural normal form of the degeneration is
+       F_e = [ det(t + e A(e)) - det(t + e B(e)) ] / e^3,
+and since det(t + e A) = t^3 + e t^2 tr A + e^2 t s_2(A) + e^3 det A (s_2 = sum of the principal 2 x 2 minors), the
+limit is finite iff tr A_0 = tr B_0 and s_2(A_0) = s_2(B_0) modulo the obvious terms; then
+       F_0 = det A_0 - det B_0 + t Psi + t^2 l + c t^3,       with Psi, l, c free (from A_1, B_1, A_2, B_2).
+   P2  (if this is the mechanism) the Coble section G = F_0 restricted to t = 0 is a difference of two determinants
+       of 3 x 3 matrices of linear forms on P^7 whose characteristic polynomials differ only in the constant term.
+       Then det(t + A_0) - det(t + B_0) = G identically, so the cone over G is itself a sum of two determinants on
+       P^8, and the passage to V_0 is the explicit family above.
+   P3  with this normal form G_N = c (det(t + eA) + det(t + eB)) / e^3 . sqrt(delta): so G_(N,0) in (t^3),
+       G_(N,1) in (t^2), G_(N,2) in (t), and G_(N,3) restricted to t = 0 is a multiple of det A_0 + det B_0. Hence in
+       the pencil spanned by G and D_s := G_(N,3) restricted to t = 0 there are two members D_s + mu G, D_s - mu G
+       (opposite values of mu) that are determinantal cubic sixfolds: singular along a threefold of degree 6 with
+       Hilbert polynomial (n+1)^3 (a hyperplane section of P^2 x P^2), with an 8-dimensional Lie algebra of linear
+       vector fields (a general member of the pencil: none).
+What is computed (pr14_arc_split.m2, from the arc written by pr13 at order 10):
+   (i)   N^2 is a scalar to the order available (NECESSARY for "yes": two idempotents of rank 9 at the generic
+         point; if it fails: "no");
+   (ii)  N(grad F) is a gradient to the order available (NECESSARY for "yes"; if it fails: "no"). Teeth: a random
+         endomorphism in place of N_0 must fail;
+   (iii) P1 and the divisibility statements of P3;
+   (iv)  the scan of the pencil for members with a Lie algebra of dimension 8, and their singular loci.
+Outcomes of (iii), (iv): if P1 or the divisibility fails, the normal form above is not the mechanism (no conclusion
+about "yes"/"no" from that alone; describe what is found instead). If the scan finds two opposite values of mu with
+determinantal members: G = (D_1 - D_2)/(2 mu) with D_1, D_2 determinantal: explicit cubics modulo p, checkable
+without the arc. That would still not be "yes": it needs the matrices with equal trace and s_2 (next step, exact).
+If the scan finds nothing at this prime, the two members may be conjugate over the quadratic extension (then mu^2 is
+not a square); try the other prime before concluding anything.
+Order: G_(N,3) needs N modulo e^4, hence the arc to order 8 at least; the run uses order 10.
+
+## 15. Added 26 Nov, about 07:33 UTC, after pr14 / pr15 at the first prime and before the first run of pr16_tenfold_twodet.m2
+
+Outcome of section 14 at the first prime (order 10): (i) N^2 is a scalar and vanishes modulo e^6; (ii) N(grad F) is
+a gradient at each order (teeth fail); (iii) P1 holds: q_* = l_*^2, l_* S_1 in L_0, l_* vanishes on the nodes; the
+divisibility pattern of P3 holds exactly (l^3, l^2, l, none); (iv) no special member over F_p, but the polynomial
+det(Q (S_D + mu S_G)) has the factor (mu^2 + 8615)^8: two opposite, conjugate values over F_(p^2). pr15 (added after
+that; it uses a routine that recovers a matrix from a determinantal cubic through its Lie algebra, tested on
+synthetic pairs built from isometries of the trace form) then found matrices A, B over F_(p^2) with
+     det(tau + A) - det(tau + B) = c G,   tr A = tr B,   s_2(A) = s_2(B),         G = the Coble section,
+an exact identity that check_certificate.m2 verifies from the matrices alone. P2 holds at this instance.
+Found only after these runs, in the registry: the same mechanism on sixfolds (D-DEGENERATION-ALONG-ARC) and the
+family with equal trace and second coefficient as a negative result for their divisor D
+(N-TWO-TRACE-DESCRIPTION-OF-D). Credit in the write-up.
+
+R16 (the tenfold analogue of the two-determinant family; a side question raised by the count, ARG first).
+T2S_10 = cubic tenfolds F = l_1 Q_1 + l_2 Q_2 + det A + det B in P^11 (the P^9-section is a sum of two
+determinants). Predictions:
+   (a) in the P^9 the two rank <= 1 loci (cones over P^2 x P^2, fivefolds with K = -4H) meet in a curve D of degree
+       36 with K_D = (-4 - 4 + 10) H = 2H, genus 37;
+   (b) a hyperplane section through the P^9 has exactly 72 nodes, D n {Q = 0}, with exactly one relation on quartics
+       (h^0(K_D - 2H) = 1): 71 conditions;
+   (c) parameter count (220 - 148) - 20 = 52: the tangent space l_1 S_2 + l_2 S_2 + Q_1 S_1 + Q_2 S_1 + I_2(A)_3 +
+       I_2(B)_3 has codimension 52 in the 364 cubics, and S / (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)) has a symmetric
+       Hilbert function 1, 10, ., 52, ., 10, 1 (as 1, 9, 26, 26, 9, 1 on eightfolds).
+Meaning. If (b) and (c) hold: a family of cubic tenfolds of codimension 52 with a class on 72 nodes, discriminant
+144 by D-NODES-DISCRIMINANT-IDENTITY's count (2 x 72), the same as the Coble family (codimension 54). Because the
+first-order Hodge locus at the exact Coble member has codimension 54 (EXACT), a Coble member cannot be a limit of
+T2S_10 members with the class continuing: on tenfolds the two families would be different, unlike on eightfolds
+(where the Coble rung has tangent codimension 25 < 26). A new lead, to be recorded as open; nothing about which of
+them is the registry's W near the Fermat point follows from this alone. If (c) gives 54 or more, or (b) fails, the
+count is wrong and nothing follows.
+Not computed in this run: whether the class is in the orbit of P1 - P2; the Hodge-theoretic tangent space.
+
+## 16. Closing record (26 Nov, about 08:25 UTC; not a pre-registration)
+
+Section 14 at the second prime (31991, order 10): the same (i)-(iii); in (iv) the two special members are defined
+over F_p (mu = +-13379, sum 0 as predicted), each with a Lie algebra of dimension 8 and a singular threefold of
+degree 6 with Hilbert polynomial (n+1)^3; no matrix over F_p (not split), matrices over F_(p^2). R16: all three
+predictions held at both primes. pr14 on the control C2: the leading cubic is the determinant (Lie algebra 16).
+Blind check 8: see README.md. Deviations from what was registered: R10 in fewer directions (time limit); pr13 at
+order 10 stopped after the arc was written (32003: after part (c); 31991: after the arc); pr17 was exploratory.

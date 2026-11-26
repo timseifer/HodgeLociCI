@@ -1,0 +1,8 @@
+prime 32003 seed 3 reflections 2
+Gram matrix nondegenerate: true
+s is an isometry (S^T Q S == Q): true   det s = 1
+tr M == 0: true   tr sM == 0: true   s2(sM) == s2(M): true
+G != 0: true   #factors of G: 2  degrees of factors: {3, 0}
+det(tau+M) - det(tau+sM) == G is implied by tr, s2 equalities
+rank of span of partials (8 = not a cone): 8
+Sing(G): affine dim = 4  degree = 4  HP = (2/3)*i^3+2*i^2+(25/3)*i-2
