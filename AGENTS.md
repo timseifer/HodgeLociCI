@@ -58,7 +58,7 @@ Run from the repository root.
 
 How to tell success:
 
-- Install and check: exit status 0, AND 40 lines containing `check(` in the output (one per test: 39 read
+- Install and check: exit status 0, AND 41 lines containing `check(` in the output (one per test: 40 read
   `capturing check`, one reads `running check`), AND no line containing `error`. `--stop` makes Macaulay2 exit with
   a non-zero status at the first error; without it Macaulay2 enters its debugger and the exit status says nothing.
   `installPackage` writes to `~/.Macaulay2/local/`; `uninstallPackage "HodgeLociCI"` removes it.
@@ -144,6 +144,8 @@ Full list with signatures: `docs/API.md`. Worked sessions with real output: `doc
     examples/                         quickstart script with expected output
     discoveries/                      registry of what has been found, ruled out or left open (read before new work)
     lean/                             Lean certificates (independent of the Macaulay2 code)
+    papers/                           the three AI-written, unreviewed notes cited as paper 1-3 (frozen; see papers/README.md)
+    leads/                            open research leads (dossiers, handoff, session scripts)
     Dockerfile, docker/               Docker image and its README
     mcp/                              MCP server (Python) and its tests
 
@@ -158,9 +160,10 @@ Full list with signatures: `docs/API.md`. Worked sessions with real output: `doc
   the statement was read in the source. Do not fill in "published" numbers from memory.
 - Keep the status notice in `README.md` and the labels. Do not strengthen a label (for example MOD p to EXACT, or
   COMPUTED ONLY to PROVED) without the computation or the proof that justifies it.
-- The mathematical notes cited as "paper 3" are AI-written, unreviewed, not public and not in this repository
-  (their statements are paraphrased in the help nodes and in `tests/SOURCES.md`, part E). Do not describe their
-  theorems as established results.
+- The mathematical notes cited as "paper 1", "paper 2", "paper 3" are AI-written and unreviewed. They are in
+  `papers/` (frozen; read `papers/README.md`, which records prior work and where later corrections are) and
+  paraphrased in the help nodes and in `tests/SOURCES.md`, part E. Do not describe their theorems as established
+  results, and do not edit the frozen files: record changes in `discoveries/registry.yaml`.
 - New findings, negative results and dead ends go into `discoveries/registry.yaml` (see the section above), with
   the same care about status as the labels.
 - Author and copyright holder: Timothy Seifert (see `CITATION.cff`, `LICENSE`). Keep that attribution.

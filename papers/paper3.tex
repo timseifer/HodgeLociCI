@@ -1,0 +1,1889 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{thm1}{Theorem 1}
+\newtheorem*{thm2}{Theorem 2}
+\newtheorem*{thm3}{Theorem 3}
+\newtheorem*{cor4}{Corollary 4}
+\newcommand{\allr}{\ref{thm:FA3}$'$}
+\newtheorem*{propallr}{Proposition \ref{thm:FA3}$'$}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NL}{\mathrm{NL}}
+\newcommand{\VZ}{V_Z}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\T}{\mathsf{T}}
+\newcommand{\lz}{\lambda_0}
+\newcommand{\et}{\varepsilon_\tau}
+\newcommand{\run}[1]{\medskip\noindent\textbf{#1}}
+\setlist{nosep,leftmargin=2em}
+\emergencystretch=1.5em
+
+\title{\vspace{-2.5em}The special coefficient for Hodge loci of sums of two\\ complete intersections sharing equations:\\
+a liaison identity and a second-order law}
+\author{[author names to be added]}
+\date{22 November 2026 (version 21)}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\textwidth}{\small\textbf{Notice.} This manuscript was produced by an AI system (Claude)
+during one working session, at the direction of a human user; \textbf{no human mathematician has verified
+anything in it.} The working notes behind it were read by independent AI referee agents: Theorem~3 and the cases
+$c=2,3$ of Corollary~4 by one (``referee~10'': no fatal error, one gap, closed in Lemma~\ref{lem:mu}); the
+flat-family argument of \S\ref{sec:W} by one (``referee~11'': no fatal error, one false sentence of ours corrected).
+The proof of Theorem~1 in \S\ref{sec:R} was found by referee~11 while refereeing; it and a first form of
+Theorem~2 were read by one further AI referee (``referee~12'': no fatal error; one gap, closed here; it also
+supplied the proof of Lemma~\ref{lem:NW}). Version~1 of this manuscript was read cold by a fourth (``referee~13'':
+no fatal error; eighteen required corrections, applied here). The range-free parts of Theorem~2 and the
+extension of Corollary~4 from $\tau=0$ to $\et=1$ were proposed by referee~13, checked by the coordinating AI
+thread, and then read by one further AI referee in version~3 (``referee~14'': no fatal error; ten required
+corrections, applied here); Theorem~2(5) was proposed by referee~14; \S\ref{sec:conj} (the formula for $A$) was found numerically by one agent, proved by the coordinating thread and
+read by one AI referee (``referee~15'': no fatal error; seven repairs, applied; it also tested the intermediate
+identity numerically). Version~4 was read cold by a further AI referee (``referee~16'': no fatal error; ten
+required corrections, applied here; it re-derived Theorem~\ref{thm:FA}, Corollary~\ref{cor:Anz} and
+Theorem~2(5)). Three statements of prior work were re-read by a second scout agent (machine digests).
+Theorem~\ref{thm:FA2} was written by the coordinating thread and read by one AI referee (``referee~17'': no fatal
+error; three gaps, closed by it and incorporated; it found the criterion in Corollary~\ref{cor:six});
+The new parts of version~6 (\S\ref{sec:FA2} and the rewrites of version~5) were read cold by a further AI
+referee (``referee~18'': no fatal error; one constant in Corollary~\ref{cor:surf} corrected; eleven corrections,
+applied here; it tested the closed form of Corollary~\ref{cor:surf} numerically and proposed its second
+sentence). Theorem~\ref{thm:FA3} was written by the coordinating thread and read by one AI referee
+(``referee~19'': no fatal error; one gap, closed by it; it checked that the inputs do not use the range,
+reproduced the exact computations behind Corollary~\ref{cor:eight}(1), (2) with its own code, and supplied
+Proposition~\ref{prop:k5}). Lemma~\ref{lem:PF} (which replaces the machine-read period formula as an input) was
+written by the coordinating thread and read, together with \S\ref{sec:FA3}, by one AI referee (``referee~20'': no
+fatal error; it verified the analogue of the lemma for $k=0$ by hand, reproduced the computation behind
+Corollary~\ref{cor:eight}(3), and asked for fifteen corrections, applied here); the cup-product formula it
+rests on was looked up by a scout agent in later papers that transcribe it (machine digests; the original was
+not opened). Remark~(vii) of \S\ref{sec:FA3} rests on a scout agent's digest of \cite{Kl2} and on a computation
+of the coordinating thread. Theorem~\ref{thm:lin}, which collects the results for two linear subspaces, was
+assembled by the coordinating thread and read, with versions~9 to~11 as a whole, by one AI referee
+(``referee~21'': no fatal error; it reproduced the first-order list by exact enumeration for $d\le7$, $k\le6$ and
+the second-order computations for six rows of Table~\ref{tab:lin}, gave instances that can be checked by hand,
+and asked for fifteen corrections, applied here). Versions~12 to~14 (those corrections; Remark~(xi) and the
+second Lean file; one further numerical run) were then read end to end by an AI referee that had no access to
+the working notes or to earlier reports (``referee~22'': no false statement and no circular proof found; it
+re-derived the proofs of all numbered statements except Proposition~\ref{prop:W}, ran eight independent
+checks, and asked for twenty-two corrections, mostly of wording, applied here). Version~16 differs from it only in
+the paragraph on Theorem~1.4 of \cite{Kl} in \S\ref{sec:intro}, rewritten after a third scout agent's digest.
+Versions~17 to~21 are described in the paragraph after this notice; of them, only the changed passages of
+versions~20 and~21 were read by AI referees (23, 24 and 25). Otherwise versions~15 to~21 have not been re-read. Computations are modulo primes at random instances
+unless marked exact. The Lean~4 kernel certifies only the ring identities, and a few implications between polynomial equations,
+named in Remark~\ref{rem:lean}, in the Checks of \S\ref{sec:FA2} and in Remark~(xi) of \S\ref{sec:lin}, and the
+deduction steps of Remark~\ref{rem:lean2}, in which every geometric input is a hypothesis. On
+prior work see \S\ref{sec:lit}: for linear subspaces, the consequence of Theorem~1 in the two equality cases
+(the pencil $F\pm t\det M$ lies in the Hodge locus of $[\Pi_1]\mp[\Pi_2]$) is due to Kloosterman, with other
+witness cycles; beyond that a finite search by an AI agent found nothing. References marked ``not opened'' were
+not read by us; the others were read through machine extraction only.}}
+\end{center}
+
+{\small\noindent\textbf{Versions 17 to 21.} Version~17 adds only Remark~\ref{rem:lean2} and the mention of it in the notice. Version~18 adds only
+Remarks~\ref{rem:r2} (checks by other methods, among them an implementation by an agent that had only this
+paper: no discrepancy found) and~\ref{rem:pw} (a pointwise formula for the second-order term which, if correct,
+removes the dependence on (CG)).
+Version~19 has the final counts of that agent and the rewording of (G), (R), (PF) in \S\ref{sec:facts} which its
+reading notes asked for. Version~20 moves the pointwise formula into Lemma~\ref{lem:PF} (parts (3), (4)), after an AI referee
+(``referee~23'') had checked Remark~\ref{rem:pw} of version~19, and removes the hypothesis (CG) from the statements;
+it also adds Proposition~\allr, which removes the hypothesis $r\ge0$ from Theorem~\ref{thm:FA3}(2), (3).
+The changed passages of version~20 were then read by one more AI referee (``referee~24''): no error and no circularity found in Lemma~\ref{lem:PF}(3), (4); one gap in the first proof of
+Proposition~\allr (entries of $\dot M$ of negative formal degree), closed by step (ii) of the present proof,
+which is that referee's argument; nine corrections of wording, applied; and an assessment of what the numerical
+checks of \eqref{eq:pw} test, now in Remark~\ref{rem:pw}. The repaired proof, the final text of Lemma~\ref{lem:PF}(3), (4) and the rewritten checks were then read by a
+third AI referee (``referee~25'', who saw only version~20): no mathematical error found; one overstatement in the
+checks of \eqref{eq:pw} (the test of Remark~\ref{rem:pw}(i) is blind to the shared pairs), one one-line gap in the
+remark on $r<0$ and six points of wording, all corrected in version~21. Version~21 also adds the Lean files (e),
+(f) of Remark~\ref{rem:lean2} and the computation of $E'$ for $r<0$ in the remark after Proposition~\allr; these
+additions, and the corrections, were not re-read.\par}
+\medskip
+
+\begin{abstract}
+Let $Y_1=V(f,p)$ and $Y_2=V(h,p)$ be $k$-dimensional complete intersections on a smooth hypersurface
+$X=\{F=0\}\subset\PP^{2k+1}$ of degree $d$, sharing the equations $p$ and with $c$ equations each of their own, so
+that $F=f^\T Mh+\sum p_ls_l$ for a $c\times c$ matrix $M$ of forms. Put $\lz=(-1)^{c-1}$ and
+$\tau=\sum_{i<c}(\deg f_i+\deg h_i)-(c-1)d=d-\deg\det M$. (1) On $X$ one has
+$[Y_1]+\lz[Y_2]=m''\eta^k-[R]$ ($m''$ an explicit integer), with $\eta$ the hyperplane class and $R=V(p,M^\T f,\det M)$ the Northcott residual
+of $Y_1$ in the complete intersection $V(p,M^\T f)$; if $\tau\ge0$, every hypersurface $F-N\det M$,
+$\deg N=\tau$, contains $R$. (2) Let $\VZ$ be the locus of hypersurfaces containing deformations of both cycles
+and $\et=\dim(S/(f,h,p,s))_\tau$. For every $\lambda\ne0$ the Hodge locus of $[Y_1]+\lambda[Y_2]$ has at most
+$\et$ excess tangent directions over $\VZ$ (exactly $\et$ if $(k-1)d+\tau<2k+2$; in general, for
+$\lambda\ne\lz$, as many as the annihilator of $\det M$ in $S/(f,h,p,s)$ has in degree $\tau$); it equals $\VZ$ if
+$\tau<0$; and for $\lambda=\lz$, $\tau\ge0$, it is smooth of codimension $\codim\VZ-\et$. (3) When $\et=1$ (for instance
+$\tau=0$) and $(k-1)d+\tau<2k+2$, the second-order term of the Hodge locus of $[Y_1]+\lambda[Y_2]$ is
+$\frac{\lambda-\lz}{\lambda}A$ with $A$ independent of $\lambda$; so where $A\ne0$ the locus is $\VZ$ with a double
+structure for every $\lambda\notin\{0,\lz\}$. Statement (3) follows from a general principle for sums of two
+classes with smooth, transversal Hodge loci and one excess direction. According to machine digests of the sources (no person has compared them): for two linear subspaces in the
+two equality cases $(d,c)=(4,2),(3,3)$ the pencil $F\pm t\det M$ and the special coefficients are due to
+Kloosterman, the excess count to Villaflor Loyola (at the Fermat point) and Kloosterman, and (3) is in our
+note \cite{P1}; for two coplanar lines the alternative in (3) is, in the cases they treat, due to Maclean and
+Dan; for disjoint curves on surfaces (2) and (3) are in our note \cite{P2}, with a different witness
+curve at $\lz$. A finite literature search found, outside our own notes, neither the identity (1) in general
+nor a statement of the type (3) for $c\ge2$. Finally, for $\tau=0$ in the range we prove a formula for $A$ (it uses that the constant in the period
+formula for complete intersections does not depend on $X$; since version~20 this is proved in
+Lemma~\ref{lem:PF} without the cup-product formula of Carlson and Griffiths): it is a nonzero constant times the derivative of the residue symbol
+$\Res_S[\det M/(f,p;h,s)]$ along degree-lowering deformations of the data. It specialises, up to normalisation,
+to the formulas claimed in \cite{P1} (the factor $\det C$) and \cite{P2} (where it would remove a hypothesis),
+agrees modulo primes with the computed second-order term at $25$ random instances of twelve types, and shows
+that $A\ne0$ for general data of every degree type with $\tau=0$ in the range that admits a smooth $X$ and
+for which the second-order question is not empty. The law and the formula extend to any number $\et$ of excess directions, with $A$ replaced by a
+system of quadrics on $\cA_\tau$ (Theorem~\ref{thm:FA2}); for instance, on every smooth cubic sixfold containing
+two $3$-planes that meet in a line, the Hodge locus of $[\Pi_1]+\lambda[\Pi_2]$ is smooth for $\lambda=-1$ and
+non-reduced for every other $\lambda\ne0$. Outside the range the law and the formula survive on the excess
+directions of $\lambda\ne\lz$ (Theorem~\ref{thm:FA3}); this gives the same dichotomy for cubic eightfolds
+containing two $4$-planes that meet in a plane, while for cubics of dimension $\ge10$ containing two linear
+subspaces that meet in codimension two the locus is smooth for every $\lambda\ne0$ at a general point.
+For two linear subspaces on a hypersurface of degree $d\ge3$ that is not a cubic surface, a cubic fourfold or a
+quartic surface, the outcome is a complete list (Theorem~\ref{thm:lin}): at a general point the Hodge locus of
+$[\Pi_1]+\lambda[\Pi_2]$, $\lambda\ne0,\lz$, is the locus where both subspaces deform, except in nine sporadic
+cases and for coplanar lines, where it is that locus with a non-reduced
+structure.
+\end{abstract}
+
+\section{Statements}\label{sec:intro}
+
+\run{Setting.} $S=\CC[x_0,\dots,x_{2k+1}]$; $X=\{F=0\}\subset\PP^{2k+1}$ is a smooth hypersurface of degree $d$;
+$\eta\in H^2(X,\ZZ)$ is the hyperplane class. Fix $c\ge1$, $k\ge c-1$, and forms
+$f_0,\dots,f_{c-1}$, $h_0,\dots,h_{c-1}$, $p_c,\dots,p_k$ of degrees $d_i$, $e_j$, $\deg p_l$, all $\ge1$ and $<d$,
+such that
+\[
+Y_1=V(f,p),\qquad Y_2=V(h,p)
+\]
+are complete intersections of dimension $k$ contained in $X$ and $V(f,h,p)$ has dimension $k-c$ (it is empty if
+$c=k+1$). We write $I(Y_1)=(f,p)$, $I(Y_2)=(h,p)$. Then $(f,h,p)$ is a regular sequence,
+$I(Y_1)\cap I(Y_2)=(p)+(f)(h)$ (Lemma~\ref{lem:alg}) and
+\begin{equation}\label{eq:F}
+F=f^\T Mh+\sum_l p_ls_l,\qquad g:=Mh,\quad q:=M^\T f,\qquad F=\sum_i f_ig_i+\sum_l p_ls_l=\sum_j h_jq_j+\sum_l p_ls_l,
+\end{equation}
+with $M$ a $c\times c$ matrix of forms, $\deg M_{ij}=d-d_i-e_j$ (and $M_{ij}=0$ if this is negative). Put
+\begin{gather*}
+\tau:=\sum_{i<c}(d_i+e_i)-(c-1)d=d-\deg\det M,\qquad \lz:=(-1)^{c-1},\\
+\cA:=S/(f,h,p,s),\qquad \et:=\dim \cA_\tau\ \ (:=0\text{ if }\tau<0).
+\end{gather*}
+$\cA$ is an Artinian complete intersection (Lemma~\ref{lem:alg}) with socle degree
+$\sigma=kd-2k-2+\tau$. For a rational class $\delta$ of type $(k,k)$ on $X$, $\NL(\delta)$ denotes the Hodge
+locus of $\delta$: the germ at $X$, in the space of hypersurfaces of degree $d$, of the analytic space where the
+flat transport of $\delta$ stays of type $(k,k)$; it is the zero scheme of the period functions $\Phi^\delta_Q$
+of \S\ref{sec:facts}. We write $\delta_\lambda:=[Y_1]+\lambda[Y_2]$ for $\lambda\in\CC$ (for $\lambda\notin\QQ$, $\NL(\delta_\lambda)$ means
+the zero scheme of the period functions $\Phi^{\delta_\lambda}_Q$), $V_i:=\NL([Y_i])$, $\VZ:=V_1\cap V_2$, and
+identify tangent spaces with subspaces of $S_d$. Since $\VZ\subset\NL(\delta_\lambda)$ (as analytic spaces:
+$\Phi^{\delta_\lambda}_Q=\Phi^{\delta_1}_Q+\lambda\Phi^{\delta_2}_Q$), the number
+$\dim T\,\NL(\delta_\lambda)/T\VZ$ is called the \emph{excess} of $\lambda$. \emph{The range} is the inequality
+$(k-1)d+\tau<2k+2$.
+
+\begin{thm1}[liaison identity]
+In the setting above (any $\tau$), let $R:=V(p,q_0,\dots,q_{c-1},\det M)$. Then $\tau\le d$; $R\subset X$ is
+Cohen--Macaulay of pure dimension $k$ (empty iff $\tau=d$); it is linked to $Y_1$ by the complete intersection
+$V(p,q)\subset X$; and
+\[
+[Y_1]+(-1)^{c-1}[Y_2]=m''\,\eta^k-[R]\qquad\text{in }H^{2k}(X,\ZZ)
+\]
+for an explicit integer $m''$ \eqref{eq:mpp}. If $\tau\ge0$, every hypersurface $\{F-N\det M=0\}$, $N\in S_\tau$,
+contains $R$; hence for $N$ small it lies in $\NL(\delta_{\lz})$. Moreover $N\det M\in T V_1$ iff
+$N\det M\in TV_2$ iff $N\in(f,h,p,s)_\tau$. ($R$ depends on the choice of $M$ and $s$ in \eqref{eq:F}; its class
+does not.)
+\end{thm1}
+
+\begin{thm2}[first order; the coefficient $\lz$]
+In the setting above:
+\begin{enumerate}
+\item $V_1$, $V_2$ are smooth at $X$, of codimensions $\dim(S/(f,p,g,s))_d$ and $\dim(S/(h,p,q,s))_d$. $\VZ$ is
+smooth with $T\VZ=TV_1\cap TV_2$, and it is the image under $\mu(f,h,p,M,s)=f^\T Mh+\sum p_ls_l$ of a
+neighbourhood of the given data. $V_1$ and $V_2$ are transversal at $X$ iff the range holds.
+\item For every $\lambda\ne0$ the excess of $\lambda$ is at most $\et$; in the range it equals $\et$ for every
+$\lambda\ne0$.
+\item If $\tau<0$, then $\NL(\delta_\lambda)=\VZ$ for every $\lambda\ne0$.
+\item If $\tau\ge0$, then $\NL(\delta_{\lz})$ is smooth of codimension $\codim\VZ-\et$, with tangent space
+$T\VZ+\det M\cdot S_\tau$; near $X$ it is the set of hypersurfaces $F'-N\det M'$ with $\{F'=0\}\in\VZ$ (written as
+in \eqref{eq:F} with data near the given data) and $N\in S_\tau$ small.
+\item If $\tau\ge0$, then for every $\lambda\notin\{0,\lz\}$ the excess of $\lambda$ is
+$\dim(0:_{\cA}\det M)_\tau=\et-\operatorname{rank}\bigl(\cdot\det M:\cA_\tau\to\cA_d\bigr)$. In particular it does
+not depend on $\lambda$, and for $\tau=0$ outside the range it is $1$ if $\det M\in(f,h,p,s)$ and $0$ otherwise.
+\end{enumerate}
+\end{thm2}
+
+Parts (2)--(5) need no range hypothesis; this was pointed out by referee~13, and (5) is due to referee~14.
+
+\run{Part (3) and the literature} (machine digests; a person should confirm). Kloosterman's Theorem~1.5
+(= 3.16) \cite{Kl} has, as digested, exactly our set-up and the inequality $\tau<0$ (with the standing
+assumptions that $d\ge2+2/k$ and that the two primitive classes are independent), and concludes that the tangent
+spaces of $\NL(\delta_\lambda)$ and of $\VZ$ have the same codimension for all but finitely many $\lambda$,
+together with an equality of the loci whose quantifier we could not determine. (3) asserts the equality for
+every $\lambda\ne0$, because $I_1\cap I_2=0$ in the notation of \S\ref{sec:thm2}; as digested, his own Lemma~2.11
+may already give this at the level of tangent spaces. For linear subspaces and every $\lambda\ne0$ the equality
+is Villaflor Loyola's theorem at the Fermat point (\cite{VL}, Theorem~3 of the arXiv version), and at a general
+point he proves, as digested, the variational Hodge conjecture for these combinations of linear cycles; at
+every smooth $X$ we have not found it stated. No published
+example with $\tau<0$ and a larger locus for some $\lambda\ne0$ was found.
+
+\run{Two consequences of Theorem 2(4) for cubics} (machine digests; a person should confirm before either is
+called a proof of a published conjecture). For two $k$-planes on a cubic meeting in codimension one ($c=1$,
+$\tau=2$): $\NL([\Pi_1]+[\Pi_2])$ is the locus of cubics containing a complete intersection of type
+$(1,\dots,1,2)$ (known: \cite[Thm~5]{Mo}, \cite{Kl2}). For two $k$-planes meeting in codimension two ($c=2$,
+$\tau=1$, every $k\ge2$): $\NL([\Pi_1]-[\Pi_2])$ is smooth and equal, near every smooth $X$ containing the two
+planes, to the locus of cubics containing a scheme $V(p'',\text{$2\times2$ minors of a $2\times3$ matrix of linear
+forms})$ with data near $(p,f,M)$: a cubic scroll for $k=2$, $\PP^1\times\PP^2\subset\PP^5$ for $k=3$, a cone over
+$\PP^1\times\PP^2$ for $k\ge4$; its codimension is $\codim\VZ-\et=2\binom{k+1}3-\binom{k-1}3-(k-1)$, i.e.
+$1,6,16,32,55$ for $k=2,\dots,6$. As digested, this is the object and these are the codimensions of Movasati's
+conjecture on ``cubic ruled cycles'' (\cite{Mo19}, \S5, equation (12) and Table~1; \cite[Conj.~7]{Mo}), which is
+stated at the Fermat point and supported there by computations to finite order; for $k=2$ the locus is the
+classical divisor of cubic fourfolds containing a cubic scroll; the other coefficients are treated in
+Corollary~\ref{cor:six} ($k=3$), Corollary~\ref{cor:eight} ($k=4$) and Proposition~\ref{prop:k5} ($k\ge5$). One caution, as digested by two scout agents: the introduction of \cite{Kl} states (Theorem~1.4) for
+$(c,d)\in\{(2,3),(3,3),(2,4)\}$, every $\lambda\in\QQ^*$ and split $X$ that the reduced locus contains
+$\NL([\Pi_1],[\Pi_2])$ properly, and for $d=3$, $k\ge5$ that the locus is reducible at $X$; read literally for
+$(c,d)=(2,3)$ and $\lambda=-1$ this contradicts the smoothness asserted here. But the corresponding statement
+in the body (Theorem~5.3) and its proof treat only $(d,c)=(3,3)$ and $(4,2)$, i.e. $\tau=0$ (the proof uses a
+period-map argument on a K3 surface or a cubic fourfold, which is not available for $(3,2)$), and in those two
+cases the special coefficient is treated separately in \S6 of \cite{Kl}. So no statement proved there, as
+digested, contradicts Theorem~2(4); a person should confirm this reading. (Where we assert that the reduced
+locus is $\VZ$, it is at a general $X$, not at split $X$.)
+
+\begin{thm3}[second order, abstract]
+Let $\delta_1,\delta_2$ be rational $(k,k)$-classes on a smooth hypersurface $X$ of degree $d$ in $\PP^{2k+1}$,
+$\delta_\lambda=\delta_1+\lambda\delta_2$, $V_i=\NL(\delta_i)$, $\VZ=V_1\cap V_2$. Assume
+\begin{enumerate}
+\item[(a)] $V_1$ and $V_2$ are smooth at $X$;
+\item[(b)] $T V_1+TV_2=S_d$;
+\item[(c)] for every $X'\in\VZ$ near $X$ and one (equivalently every) $\lambda\ne0$,
+$T_{X'}\NL(\delta_\lambda)$ contains $T_{X'}\VZ$ as a hyperplane;
+\item[(d)] for one $\lz\ne0$ there is a holomorphic arc $X_t\in\NL(\delta_{\lz})$, $X_0=X$, with tangent
+vector not in $T\VZ$.
+\end{enumerate}
+Then the space $K$ of $Q\in S_{kd-2k-2}$ whose period function $\Phi^{\delta_\lambda}_Q$ has zero differential at
+$X$ is the same for all $\lambda\neq0$; $\NL(\delta_\lambda)$ lies in a smooth germ $\cM_\lambda$ of dimension
+$\dim\VZ+1$ in which $\VZ=\{y=0\}$, and $\NL(\delta_\lambda)=\{y^2\upsilon_Q=0,\ Q\in K\}$; and there are a vector
+$G_\lambda\in T\NL(\delta_\lambda)\smallsetminus T\VZ$ and a linear form $A$ on $K$, independent of $\lambda$,
+with
+\begin{equation}\label{eq:law}
+\upsilon_Q(X)\,dy(G_\lambda)^2=\tfrac12\Hess\bigl(\Phi^{\delta_\lambda}_Q|_{\cM_\lambda}\bigr)(G_\lambda)
+=\frac{\lambda-\lz}{\lambda}\,A(Q)\qquad(Q\in K,\ \lambda\ne0).
+\end{equation}
+If $A\neq0$ at $X$, then $\NL(\delta_\lambda)=\{y^2=0\}$ for every $\lambda\notin\{0,\lz\}$, and (d) can hold
+for at most one coefficient. If the arcs of (d) exist through every $X'\in\VZ$ near $X$ and depend
+holomorphically on $X'$, then $\NL(\delta_{\lz})=\cM_{\lz}$ is smooth of dimension $\dim\VZ+1$.
+\end{thm3}
+
+\begin{cor4}[one excess direction]
+Assume $\et=1$ and the range. Then (a)--(d) hold for $\delta_i=[Y_i]$ with $\lz=(-1)^{c-1}$ and the arc
+$\{F-tN\det M=0\}$, $N$ a generator of $\cA_\tau$, at every smooth $X$ of the setting. So: one excess direction
+for every $\lambda\ne0$; the law \eqref{eq:law}; and $\NL(\delta_\lambda)=\VZ$ with a double structure for
+$\lambda\notin\{0,\lz\}$ wherever $A\ne0$. This applies in particular in the \emph{equality case} $\tau=0$ (where
+$N=1$ and necessarily $c\ge2$) when $(k-1)d<2k+2$.
+\end{cor4}
+
+With $\tau>0$, $\et=1$ holds either because $\tau=\sigma$ (exactly for $(k,d)\in\{(1,4),(2,3)\}$, where $K=0$), or
+because $0<\tau<\sigma$, which forces all but one of the forms $f,h,p,s$ to be linear. With the range and $K\ne0$
+only surfaces remain (referee~18: by unimodality $\cA=\CC[y]/(y^a)$ with $a\le d-1$, so
+$kd-2k-2+\tau=a-1\le d-2$, which is impossible for $k\ge2$ unless $\tau=\sigma$; for $k=1$ it gives $a=d-3+\tau$
+and $\tau\le2$, and $c\in\{1,2\}$ leaves the following four types): two coplanar lines ($d\ge5$); two
+plane curves of degree $d-1$ in different planes, on a common surface $p=0$ of degree $d-1$ ($c=1$, $d\ge5$; the
+residual lines are coplanar); a line and a disjoint plane curve of degree $d-1$ ($d\ge5$; residually, coplanar
+lines again); and a line and a disjoint plane curve of degree $d-2$ ($\tau=1$, $d\ge6$; the locus at $\lz$
+consists of the surfaces containing a twisted cubic, of codimension $3d-11$).
+
+\run{Where $A\neq0$.} Theorem~\ref{thm:FA} gives a formula for $A$ when $\tau=0$, and
+Corollary~\ref{cor:Anz} shows that $A\ne0$ for general data of every type with $K\ne0$; so for
+$\tau=0$ the double structure in Corollary~4 is the general behaviour, not an extra hypothesis. For $\tau>0$,
+$\et=1$ (the surface cases above) Corollary~\ref{cor:surf} gives $A$ explicitly: $A\ne0$ at every smooth $X$ if $d\ge6$, and for
+general data if $d=5$
+(for coplanar lines this is, in the cases they treat, due to Maclean and Dan). For $\et\ge2$ the number $A$ is
+replaced by a system of quadrics (Theorem~\ref{thm:FA2}). Independently, modulo primes at
+random instances, $A\ne0$ in every type of Table~\ref{tab:types} for which the second-order computation was run
+(all rows except those with $k=4$). $A$ does vanish at special points: at the ``split'' hypersurfaces
+of \cite[Def.~5.1]{Kl} (which include the Fermat hypersurface) Kloosterman's Theorem~5.3 shows, as digested,
+that the reduced locus is strictly larger than $\VZ$ for every $\lambda$ in the two linear equality cases, which
+by Corollary~4 would force $A=0$ there for the $k$ of the range ($d=3$: $k\le4$; $d=4$: $k\le2$); this agrees with the vanishing found in \cite{P1,P2} and would explain
+why computations at the Fermat point \cite{Mo,Mo26} see no obstruction. And $K=0$, so that Corollary~4 says only
+that $\NL(\delta_\lambda)$ is a smooth hypersurface in the parameter space for every $\lambda$, for skew lines on
+quartic surfaces and for disjoint planes on cubic fourfolds. (The programs of \S\ref{sec:comp} compute $K$ and
+$A$ in the Jacobian ring, i.e. modulo the Jacobian ideal of $F$.)
+
+\run{The types in the range with $\tau=0$.} $(k-1)d<2k+2$ and $\tau=0$ means: $k=1$ ($c=2$, all $d\ge4$:
+disjoint curves on surfaces, \cite{P2}); $k=2$ ($d=3$: two disjoint planes on a cubic fourfold, where $K=0$;
+$d=4,5$: $c\le3$); $k=3$, $d=3$ ($c=3$: $f,h$ linear and one shared $p$ of degree $1$ or $2$ --- for $p$ linear,
+two $3$-planes meeting in a point; $c=4$: a $3$-plane and a disjoint quadric threefold); $k=4$, $d=3$ ($c=3$;
+$c=4$ with one quadric; $c=5$: two types); none for $k\ge5$. The shared equations may have any degrees in
+$[1,d-1]$. For linear subspaces $\PP^k,\PP^k$ meeting in $\PP^m$ one has $c=k-m$ and $\lz=(-1)^{k-1-m}$: the cases
+$(d,c)=(3,3)$ and $(4,2)$ are in \cite{P1}, where the constant in \eqref{eq:law} is computed. With $\tau>0$ and
+$\et=1$: for example two coplanar lines on a surface of degree $d\ge5$ ($k=c=1$, $\tau=2$).
+
+\run{Beyond one excess direction; two linear subspaces.} \S\ref{sec:FA2} extends the law and the formula to any
+number of excess directions (Theorem~\ref{thm:FA2}) and, outside the range, to the excess directions of
+$\lambda\ne\lz$ (Theorem~\ref{thm:FA3}); $A$ becomes a system of quadrics. For two $k$-dimensional linear
+subspaces the outcome is Theorem~\ref{thm:lin}: when $kd-2k-2\ge1$ and $X$ is general, $\NL(\delta_\lambda)=\VZ$ as
+schemes for every $\lambda\notin\{0,\lz\}$, except for the ten families of Table~\ref{tab:lin} (cubic sixfolds and
+eightfolds with $c\le3$, quartic fourfolds with $c\le2$, quintic fourfolds with $c=1$, coplanar lines), where
+it is $\VZ$ with a non-reduced structure; at $\lz$ (for $\tau\ge0$) the locus is smooth and larger.
+
+\subsection{Relation to known work}\label{sec:lit}
+What follows rests on machine extraction of the cited papers by AI agents (statement numbers as extracted) and
+on a finite search; a person should confirm it.
+
+\emph{Linear subspaces.} For two $k$-planes meeting in a $\PP^m$, $c=k-m$ and $\tau=2c-(c-1)d$; so $\tau<0$ iff
+$c(d-2)>d$, the range of Villaflor Loyola's theorem \cite{VL} (no excess; as digested, at the Fermat point), and
+$\tau=0$ iff
+$(d,c)\in\{(4,2),(3,3)\}$. In these two cases Kloosterman \cite[\S6]{Kl} already considers the pencils
+$F+t\det M$ (his Prop.~6.1, Cor.~6.2) and $F-t\det M$ (Prop.~6.4, Cor.~6.5) and shows that $\VZ$ has positive
+codimension in the Hodge locus of $[\Pi_1]-[\Pi_2]$, resp. $[\Pi_1]+[\Pi_2]$; his witness cycles are a complete
+intersection of type $(2,2,1,\dots,1)$ and a linear section of a cone over $G(2,5)$ (apparently our $W_t$ of
+\S\ref{sec:W} for $c=2,3$), not $R$. That there is exactly one excess tangent direction in these two cases is
+due to Villaflor Loyola at the Fermat point (appendix to \cite{Mo}, Prop.~21 and Remark~1) and, at every smooth
+$X$ and for the $k$ of our range, to Kloosterman (\cite{Kl}, Example~3.17 and Theorem~1.3, as digested; Prop.~4.1
+at the Fermat point); this is Theorem~2(2) for linear data. His
+Theorem~1.2 gives the exceptional sets $\{0,-1\}$, $\{0,1\}$ of coefficients for large $k$, and his Theorem~1.3
+leaves open, for $d=c=3$ and $k\le4$, whether the locus is larger or non-reduced; that alternative is addressed
+in \cite{P1}, an AI-produced manuscript not verified by a human, and in Theorem~\ref{thm:lin} (non-reduced for
+$\lambda\ne1$ at a general point). The cases $c=1$ ($\lz=1$; Dan \cite{Dan2}, Movasati \cite{Mo}, Kloosterman \cite{Kl2}) and $(d,c)=(3,2)$
+($\lz=-1$, hypersurfaces containing cubic scrolls; \cite[Conj.~6, 7]{Mo}, which are conjectures) have $\tau>0$;
+their special coefficients agree with $\lz=(-1)^{c-1}$ of Theorem~1. Movasati's Conjecture~1 of \cite{Mo}
+(cubics, $c=3$, all coefficients) and his proposal for octic surfaces \cite{Mo26} ($k=1$, $c=2$) are the cases
+analysed in \cite{P1,P2}.
+
+\emph{Complete intersections.} Kloosterman's Theorem~1.5 \cite{Kl} treats two complete intersections sharing
+equations under the strict inequality $\tau<0$. We found no treatment of $\tau\ge0$ for complete intersections,
+no statement of the sign rule $\lz=(-1)^{c-1}$ in terms of $c$, and no use of liaison or of the Northcott
+residual in this context. The identity $[C']=m\,\eta-[C]$ for curves linked in a surface is elementary, and
+Theorem~1 is of that nature; what it adds is the identification of the right residual.
+
+\emph{Second order.} Second-order invariants of Hodge and Noether--Lefschetz loci go back to Maclean
+\cite{Mac} and are used by Duque Franco and Villaflor Loyola \cite{DFV1}. For two coplanar lines ($c=1$,
+$\et=1$) the alternative ``reduced only at $\lambda=1$'' is, in the cases they treat, due to Maclean and Dan
+\cite{Dan1,Dan2} (as digested); Theorem~2 reproduces Dan's codimensions $d-3$, $2d-6$, $2d-7$, and Corollary~4 applies to that case
+as well. Outside our own notes we found no statement of this type in the equality case $\tau=0$ ($c\ge2$), and no
+statement of the law \eqref{eq:law}.
+
+\section{Standard facts used}\label{sec:facts}
+
+These are cited, not re-proved, except (PF) and (NW), which are proved below; \S\ref{sec:open} lists which of
+them a specialist should re-check. Up to version~19 the later statements said ``assume (PF)'', meaning the
+constancy of $\kappa$, which was then derived from (CG). Since version~20 the constancy is
+Lemma~\ref{lem:PF}(4), proved from (G), (A), (R) alone, and (CG) is used only for Lemma~\ref{lem:PF}(5) and for
+comparisons, on which no result depends.
+\begin{itemize}
+\item[(G)] (Griffiths \cite{Gr}; Carlson--Griffiths \cite{CG}) With
+$\Phi^\delta_Q(F')=\int_\delta\Res(Q\Omega/F'^k)$, $Q\in S_{kd-2k-2}$, the Hodge locus $\NL(\delta)$ is the zero
+scheme of the $\Phi^\delta_Q$, and for $G\in S_d$:
+$\Phi_Q(F+G)=\Phi_Q(F)-k\,\pi_\delta(QG)+\tfrac{k(k+1)}2\varphi_\delta(QG^2)-\dots$,
+$\pi_\delta(N)=\int_\delta\Res(N\Omega/F^{k+1})$, $\varphi_\delta(N')=\int_\delta\Res(N'\Omega/F^{k+2})$. Until
+\S\ref{sec:conj} only the shape (linear term $\pi_\delta(QG)$, quadratic term a nonzero multiple of
+$\varphi_\delta(QG^2)$) is used; the formulas of \S\S\ref{sec:conj}, \ref{sec:FA2} and Lemma~\ref{lem:PF}(3), (4) use the
+coefficients $-k$ and $\frac{k(k+1)}2$ (binomial expansion of $(F+G)^{-k}$), and the analogous expansion one pole
+order higher: for a fixed $P\in S_{(k+1)d-2k-2}$ and the flat transport of $\delta$,
+$\pi^{F+G}_\delta(P)=\pi_\delta(P)-(k+1)\varphi_\delta(PG)+\dots$. (Both come from differentiating under the integral
+sign: near $F$ the tube of the flat transport of $\delta$ is represented by one fixed cycle in the complement of
+all the hypersurfaces.) How to evaluate $\varphi_\delta$ at one
+point is stated in Lemma~\ref{lem:PF}(3).
+\item[(A)] The classes of the fundamental cycles of the fibres of a flat family of $k$-dimensional subschemes
+of the members of a smooth family of hypersurfaces form a flat section (\cite{Fu}, \S10.1, \S19.2; not opened).
+\item[(R)] Grothendieck residues for a regular sequence $\Psi$ of $2k+2$ forms: $\Res_S[\,\cdot\,/\Psi]$ is the
+linear form on the socle degree of $S/(\Psi)$ which vanishes on $(\Psi)$ and takes the value $\prod_i\deg\Psi_i$ on
+$\det\mathrm{Jac}(\Psi)$ (rows in the order of the sequence; so the symbol is alternating in $\Psi$); perfect
+pairing; transformation law: $\Res_S[m\det A/(A\Psi)]=\Res_S[m/\Psi]$ for a square matrix $A$ of forms with
+$A\Psi$ regular. Sequences written $(\phi;\psi)$ are in the order $\phi_0,\dots,\phi_k,\psi_0,\dots,\psi_k$; in
+particular $\Phi^1=(f,p;g,s)$, $\Phi^2=(h,p;q,s)$ and $(f,p;h,s)$ are taken in this block order, and each symbol is
+normalised on its own sequence.
+\item[(SI)] The self-intersection formula for a regular embedding $Y\subset X$: $Y\cdot Y=\int_Yc_k(N_{Y/X})$
+(\cite{Fu}, Cor.~6.3; not opened).
+\item[(CG)] (Not used for any result since version~20; kept for Lemma~\ref{lem:PF}(5) and for the checks.
+Carlson--Griffiths \cite{CG}, Theorem~3; not opened: read through two later papers that transcribe
+its constant, arXiv:2402.14546 (eq.~(2.15)) and arXiv:2205.05791 (Prop.~2.1), and through Villaflor Loyola's
+cup-product proposition \cite[\S6]{VL}; all machine-read by one agent) There is a constant
+$c(k,d)\ne0$, depending only on $k$ and $d$, such that
+$\int_X\omega_P\cup\omega_Q=c(k,d)\Res_S[PQ/(\partial_0F,\dots,\partial_{2k+1}F)]$ for all
+$P,Q\in S_{(k+1)(d-2)}$, where $\omega_P:=\Res(P\Omega/F^{k+1})$.
+\item[(PF)] For a complete intersection $Y=V(\phi_0,\dots,\phi_k)\subset X$ with $F=\sum_\nu\phi_\nu\psi_\nu$, all
+$\phi_\nu,\psi_\nu$ of positive degree: on $S_{(k+1)d-2k-2}$,
+$\pi_{[Y]}=\kappa\cdot\Res_S[\,\cdot\,/(\phi;\psi)]$ with a constant $\kappa\ne0$ which is the same for all such
+data of given degrees. This is Lemma~\ref{lem:PF}(1), (2), (4) below, proved from (G), (A), (R), (SI).
+Villaflor Loyola's theorem \cite[Theorem~1.2]{VL} gives, as extracted by referee~15,
+$\int_Y\Res(P\Omega/F^{k+1})=\frac{(2\pi i)^k}{k!}\Res_S[P\det\mathrm{Jac}(\phi_0,\psi_0,\dots,\phi_k,\psi_k)/(\partial_0F,\dots,\partial_{2k+1}F)]$,
+i.e.\ $\kappa=(-1)^{(k+1)(k+2)/2}(2\pi i)^k/k!$; this is consistent with Lemma~\ref{lem:PF} and with his value
+$c(k,d)=-d(2\pi i)^{2k}/(k!)^2$, but no result of this note uses the value or the sign of $\kappa$ (the value
+enters only the comparisons in the Checks of \S\ref{sec:conj}; it was verified by hand for $k=0$).
+Until \S\ref{sec:conj} only $\kappa\ne0$ is used; Theorems~\ref{thm:FA}, \ref{thm:FA2}(3), \ref{thm:FA3}(2) and
+Proposition~\allr use that $\kappa$ does not depend on $X$ (Lemma~\ref{lem:PF}(4)).
+\item[(NW)] The Northcott--Wiebe colon formulas: Lemma~\ref{lem:NW} below, with a proof.
+\item[(L)] (Peskine--Szpiro \cite{PS}) If $I$ is unmixed with Cohen--Macaulay quotient in a Gorenstein ring
+(here a polynomial ring) and $J=(y):I$ for a regular sequence $(y)\subset I$ of length the height of $I$, then
+the quotient by $J$ is Cohen--Macaulay of the same dimension, $I=(y):J$, and $[V(y)]=[V(I)]+[V(J)]$ as cycles (at
+the generic points of $V(y)$: $\mathrm{length}(B/(0:I))=\mathrm{length}(B)-\mathrm{length}(B/I)$ in an Artinian
+Gorenstein ring $B$).
+\end{itemize}
+
+\begin{lemma}[the period formula; parts (1), (2), (5) read by referee 20; parts (3), (4) added in version 20,
+found by the independent implementer of Remark~\ref{rem:r2}(e); read by referee 23 in the form of Remark 10.3 of
+version 19 and by referee 24 in the present form]\label{lem:PF}
+Let $Y=V(\phi_0,\dots,\phi_k)\subset X$, $F=\sum_\nu\phi_\nu\psi_\nu$, $a_\nu:=\deg\phi_\nu\ge1$,
+$b_\nu:=d-a_\nu\ge1$, and assume $kd-2k-2\ge0$. Put $t:=(k+1)(d-2)$ and $\varrho_Y:=\Res_S[\,\cdot\,/(\phi;\psi)]$ on $S_t$.
+\begin{enumerate}
+\item $\pi_{[Y]}=\kappa(X,Y)\,\varrho_Y$ on $S_t$ for a scalar $\kappa(X,Y)$, holomorphic in the data $(\phi,\psi)$.
+\item $[Y]_{\mathrm{prim}}\cdot[Y]_{\mathrm{prim}}=(-1)^k\prod_\nu a_\nu b_\nu/d$. In particular
+$[Y]_{\mathrm{prim}}\ne0$ and $\kappa(X,Y)\ne0$.
+\item \emph{Second order at one point.} For all $P\in S_{t+d}$, with $\varphi_{[Y]}$ as in \textup{(G)}:
+\begin{equation}\label{eq:pw}
+(k+1)\,\varphi_{[Y]}(P)=\kappa(X,Y)\sum_{\nu=0}^{k}
+\Res_S\Bigl[\frac{P}{(\phi_0,\dots,\phi_\nu^2,\dots,\phi_k;\ \psi_0,\dots,\psi_\nu^2,\dots,\psi_k)}\Bigr].
+\end{equation}
+\item $\kappa(X,Y)$ is the same for all data $(\phi,\psi)$ of the given degrees with $X$ smooth.
+\item Assume \textup{(CG)}. Then $\kappa(X,Y)^2=-c(k,d)/d$. (Not used.)
+\end{enumerate}
+Parts \textup{(1)--(4)} use only \textup{(G)}, \textup{(A)}, \textup{(R)}, \textup{(SI)}.
+\end{lemma}
+\begin{proof}
+$(\phi,\psi)$ is a regular sequence because $X$ is smooth (as in Lemma~\ref{lem:alg}), $S/(\phi,\psi)$ is Gorenstein
+with socle degree $t$, and $Y\subset X$ is a regular embedding. Here $\pi_{[Y]}(P)=\int_X[Y]\cup\omega_P$ with $[Y]$
+the class of the fundamental cycle, and $\omega_P\in F^kH^{2k}_{\mathrm{prim}}(X)$ (Griffiths).
+
+(1) Every $G\in(\phi,\psi)_d$ is $\sum(\phi_\nu\dot\psi_\nu+\dot\phi_\nu\psi_\nu)$, and the hypersurfaces
+$F_\epsilon=\sum(\phi_\nu+\epsilon\dot\phi_\nu)(\psi_\nu+\epsilon\dot\psi_\nu)$ contain the complete intersections
+$Y_\epsilon=V(\phi+\epsilon\dot\phi)$, a flat family for small $\epsilon$. By (A), $\Phi^{[Y]}_Q(F_\epsilon)=0$ for
+all $Q\in S_{kd-2k-2}$; as $F_\epsilon=F+\epsilon G+O(\epsilon^2)$, (G) gives $\pi_{[Y]}(QG)=0$. Since
+$a_\nu,b_\nu<d$, $(\phi,\psi)_t=(\phi,\psi)_d\cdot S_{kd-2k-2}$, so $\pi_{[Y]}$ annihilates $(\phi,\psi)_t$; the
+annihilator of $(\phi,\psi)_t$ in $S_t^*$ is the line spanned by $\varrho_Y$. The scalar $\kappa$ is holomorphic
+in the data: $\pi_{[Y]}(P)$ is the integral of a holomorphic integrand over a fixed tube cycle, and $\varrho_Y(P)$
+is a rational function of the coefficients of $(\phi,\psi)$ without poles where the sequence is regular, and not
+identically zero in $P$. It depends only on $(X,Y)$: two presentations differ by
+$\phi'=B\phi$, $\psi'=(B^{-1})^\T\psi+AB\phi$ with $A$ skew-symmetric, a transformation of determinant $1$.
+
+(2) From $0\to N_{Y/X}\to\bigoplus\mathcal O(a_\nu)|_Y\to\mathcal O(d)|_Y\to0$,
+$c_k(N_{Y/X})=\sum_{j\le k}e_j(a)(-d)^{k-j}h^k$; with (SI) and $\deg Y=\prod a_\nu=e_{k+1}(a)$:
+$[Y]_{\mathrm{prim}}^2=Y\cdot Y-(\deg Y)^2/d=-\frac{\deg Y}d\sum_{j\le k+1}e_j(a)(-d)^{k+1-j}=-\frac{\deg Y}d\prod(a_\nu-d)$.
+(For a line on a cubic surface: $-1-\frac13=-\frac43$; for a $k$-plane: $Y\cdot Y=(1-(1-d)^{k+1})/d$.) As it is
+nonzero, $[Y]_{\mathrm{prim}}\ne0$, so $\pi_{[Y]}\ne0$ by Poincar\'e duality on primitive cohomology.
+
+(3) For forms $\alpha_\nu,\beta_\nu$ of the degrees of $\phi_\nu,\psi_\nu$ let
+$F_\epsilon=\sum_\nu(\phi_\nu+\epsilon \alpha_\nu)(\psi_\nu+\epsilon \beta_\nu)=F+\epsilon G+\epsilon^2H$, with
+$G=\sum_\nu(\alpha_\nu\psi_\nu+\phi_\nu \beta_\nu)$ and $H=\sum_\nu \alpha_\nu \beta_\nu$. As in (1), $X_\epsilon=\{F_\epsilon=0\}$ is
+smooth and contains the flat family $Y_\epsilon=V(\phi+\epsilon\alpha)$ for small $\epsilon$, so by (A)
+$\Phi^{[Y]}_Q(F_\epsilon)=0$ for all $Q\in S_{kd-2k-2}$. By the cited fact (G), applied to the perturbation $\epsilon G+\epsilon^2H$ of $F$, the
+coefficient of $\epsilon^2$ is $-k\,\pi_{[Y]}(QH)+\frac{k(k+1)}2\varphi_{[Y]}(QG^2)$; hence by (1)
+\[
+(k+1)\,\varphi_{[Y]}(QG^2)=2\,\pi_{[Y]}(QH)=2\kappa\,\Res_S[QH/(\phi;\psi)].
+\]
+(The right side depends on $(\alpha,\beta)$ only through $G$: two choices with the same $G$ differ by a Koszul
+syzygy of $(\phi,\psi)$, which changes $H$ by an element of $(\phi,\psi)$.)
+Let $\Phi_{(\nu)}$ be the sequence $(\phi;\psi)$ with $\phi_\nu$, $\psi_\nu$ replaced by their squares; it is
+regular, with socle degree $t+d$, and it is obtained from $(\phi;\psi)$ by a diagonal matrix of determinant
+$\phi_\nu\psi_\nu$. Modulo $\Phi_{(\nu)}$ we have $G\equiv \alpha_\nu\psi_\nu+\phi_\nu \beta_\nu$, hence
+$G^2\equiv2\alpha_\nu \beta_\nu\phi_\nu\psi_\nu$, and by (R)
+$\Res_S[QG^2/\Phi_{(\nu)}]=2\Res_S[Q\alpha_\nu \beta_\nu/(\phi;\psi)]$. Summing over $\nu$: \eqref{eq:pw} holds for
+$P=QG^2$. Both sides are then quadratic forms in $G\in(\phi,\psi)_d$ which agree, so their polarisations agree:
+\eqref{eq:pw} holds for $P=QGG'$ with $G,G'\in(\phi,\psi)_d$, $Q\in S_{kd-2k-2}$. These products span
+$[(\phi,\psi)^2]_{t+d}$ (a generator $\xi\xi'm$, with $\xi,\xi'$ members of $(\phi;\psi)$ and $m$ a monomial, is of
+this form, since $m$ factors into monomials of degrees $d-\deg\xi$, $d-\deg\xi'$, $kd-2k-2$), and
+$[(\phi,\psi)^2]_{t+d}=S_{t+d}$: with $I=(\phi,\psi)$, $S/I$ vanishes above degree $t$, so $I_{t+d}=S_{t+d}$; and
+$I/I^2\cong\bigoplus_\xi(S/I)(-\deg\xi)$ ($I$ is generated by a regular sequence), which vanishes in degrees
+above $t+\max_\xi\deg\xi\le t+d-1$, so $(I^2)_{t+d}=I_{t+d}$.
+
+(4) Along the same family differentiate $\pi^{X_\epsilon}_{[Y_\epsilon]}(P)=\kappa(\epsilon)\Res_S[P/(\phi+\epsilon\alpha;\psi+\epsilon\beta)]$,
+$P\in S_t$, at $\epsilon=0$ ($\kappa(\epsilon):=\kappa(X_\epsilon,Y_\epsilon)$ is holomorphic by (1)). On the left,
+by (G) one order higher (the derivative of the period of a fixed form over a flat class in the direction $G$), we
+get $-(k+1)\varphi_{[Y]}(PG)$. On the right, by the rule
+$\frac{d}{d\epsilon}\Res_S[P/(\dots,u+\epsilon\dot u,\dots)]=-\Res_S[P\dot u/(\dots,u^2,\dots)]$ for a member $u$ of a
+regular sequence (which follows from (R) and $(u+\epsilon\dot u)(u-\epsilon\dot u)=u^2-\epsilon^2\dot u^2$; the
+argument is written out in the proof of Theorem~\ref{thm:FA}(1)) and (R) again,
+\[
+\dot\kappa\,\Res_S\Bigl[\frac{P}{(\phi;\psi)}\Bigr]-\kappa\sum_\nu\Res_S\Bigl[\frac{PG}{\Phi_{(\nu)}}\Bigr]
+\]
+(for the pair $\nu$: $PG\equiv P(\alpha_\nu\psi_\nu+\phi_\nu \beta_\nu)$ modulo the other members, and
+$\Res_S[P\alpha_\nu\psi_\nu/\Phi_{(\nu)}]=\Res_S[P\alpha_\nu/(\dots,\phi_\nu^2,\dots;\psi)]$, likewise for $\beta_\nu$). By
+\eqref{eq:pw} for $PG\in S_{t+d}$ the two expressions differ by $\dot\kappa\Res_S[P/(\phi;\psi)]$, so
+$\dot\kappa=0$. As $(\alpha,\beta)$ is an arbitrary tangent vector at an arbitrary point of the space of data, which is
+Zariski-open in an affine space, hence connected, $\kappa$ is constant on it.
+
+(5) $(\partial_iF)_i=\mathrm{Jac}(\phi_0,\psi_0,\dots,\phi_k,\psi_k)^\T(\psi_0,\phi_0,\dots,\psi_k,\phi_k)^\T$, so by (R),
+with $J_Y:=\det\mathrm{Jac}(\phi_0,\psi_0,\dots)$, $\rho_J:=\Res_S[\,\cdot\,/(\partial F)]$ and
+$\varsigma:=(-1)^{(k+1)(k+2)/2}$: $\rho_J(PJ_Y)=\varsigma\,\varrho_Y(P)$, and $\rho_J(J_Y^2)=(-1)^{k+1}\prod a_\nu b_\nu$ (only the
+$k+1$ transpositions $\phi_\nu\leftrightarrow\psi_\nu$ matter; $\Res_S[\det\mathrm{Jac}(g)/(g)]=\prod\deg g_i$). Write
+$[Y]_{\mathrm{prim}}\equiv\omega_b$ modulo $F^{k+1}$ with $b\in S_t$; then
+$\pi_{[Y]}(P)=\int_X\omega_b\cup\omega_P=c(k,d)\,\rho_J(bP)$ by (CG) (note $F^k\cup F^{k+1}=0$), and
+$\pi_{[Y]}(P)=\kappa\varsigma\,\rho_J(J_YP)$ by (1); so $c(k,d)\,b\equiv\kappa\varsigma J_Y$ modulo the Jacobian
+ideal, and
+$[Y]_{\mathrm{prim}}^2=c(k,d)\,\rho_J(b^2)=\frac{\kappa^2}{c(k,d)}\rho_J(J_Y^2)=\frac{\kappa^2}{c(k,d)}(-1)^{k+1}\prod a_\nu b_\nu$.
+Compare with (2).
+\end{proof}
+
+For the two cycles $Y_1,Y_2$ of the setting the constants are \emph{equal} if $\tau\ge0$: see Lemma~\ref{lem:det}. Referee~20
+verified the analogue of the lemma for $k=0$ (excluded by its hypothesis) by hand ($d$ points on a line; $\kappa=-1$, $c(0,d)=-d$; part (1) holds
+there by inspection), part (2) against nine classical self-intersection numbers, and the residue identities
+of (5) exactly for curves on quartic surfaces. Parts (3), (4) were read by referees~23 and~24 (Remark~\ref{rem:pw}).
+
+\section{Algebra and first order}\label{sec:first}
+
+\begin{lemma}\label{lem:alg}
+In the setting: (i) $I(Y_1)\cap I(Y_2)=(p)+(f)(h)$, whence \eqref{eq:F}. (ii) The sequences
+$\Phi^1:=(f,p;g,s)$, $\Phi^2:=(h,p;q,s)$ and $(f,h,p,s)$ consist of $2k+2$ forms of positive degree and are
+regular. (iii) $\deg\det M=cd-\sum_{i<c}(d_i+e_i)=d-\tau$. (iv) The socle degree of
+$S/\Phi^i$ is $(k+1)d-2k-2$ and that of $\cA=S/(f,h,p,s)$ is $\sigma=kd-2k-2+\tau$.
+\end{lemma}
+\begin{proof}
+(i) Modulo $(p)$, $f$ and $h$ are regular sequences with $(f,h)$ regular, so
+$\mathrm{Tor}_1(S/(p,f),S/(p,h))=0$ over $S/(p)$, i.e. $(f)\cap(h)=(f)(h)$ there. (ii) At a common zero of one
+of these sequences $\nabla F=0$, because $F$ is a sum of products of two members of the sequence (resp.
+$F\in(f)(h)+(p)(s)$); $X$ is smooth, so there is none. So none of the $2k+2$ forms is zero (otherwise the
+remaining $2k+1$ would have a common zero), all have positive degree ($1\le d_i,e_j,\deg p_l<d$), and $2k+2$
+forms of positive degree in $2k+2$ variables without common zero form a regular sequence. (iii) Each term of
+$\det M$ has degree $\sum_i(d-d_i-e_{\pi(i)})$. (iv) Sum of the degrees minus $2k+2$.
+\end{proof}
+
+\begin{lemma}\label{lem:T}
+(i) $TV_1=(\Phi^1)_d$, $TV_2=(\Phi^2)_d$, and $V_1,V_2$ are smooth at $X$: $V_1$ is the image of a neighbourhood
+of $(f,p,g,s)$ under $\mu_1(f,p,g,s)=\sum f_ig_i+\sum p_ls_l$. (ii) $TV_1+TV_2=(f,h,p,s)_d$; this is $S_d$ iff
+$d>\sigma$, i.e. iff the range holds.
+\end{lemma}
+\begin{proof}
+(i) If $kd-2k-2<0$ there are no period functions and $(\Phi^1)_d=S_d$. Otherwise, by Lemma~\ref{lem:PF}(1),
+(2), $\pi_1:=\pi_{[Y_1]}=\kappa_1\Res_S[\,\cdot\,/\Phi^1]$ with $\kappa_1\ne0$, so by (G) and (R) the Zariski tangent space of
+$V_1$ is $\{G:\pi_1(QG)=0\ \forall Q\}=(\Phi^1)_d$ (perfect pairing of $S/\Phi^1$ between the degrees $d$ and
+$kd-2k-2$). The differential of $\mu_1$ has image
+$(f)_d+(g)_d+(p)_d+(s)_d=(\Phi^1)_d$, of codimension $\dim(S/\Phi^1)_d$, a number depending only on the degrees
+as long as $X$ is smooth; so $\mu_1$ has constant rank and the image of a small neighbourhood is a smooth germ
+with tangent space $(\Phi^1)_d$. It lies in $V_1$ by (A) (the hypersurface $\mu_1(f',p',g',s')$ contains the
+deformation $V(f',p')$ of $Y_1$), and a germ of analytic space containing a smooth germ of dimension equal to
+its embedding dimension coincides with it. (ii) $g\in(h)$, $q\in(f)$, and (iv) of Lemma~\ref{lem:alg}.
+\end{proof}
+
+\begin{lemma}[referee 10; range-free form after referee 13]\label{lem:mu}
+$(\Phi^1)\cap(\Phi^2)=(p,s)+(g)+(q)+(f)(h)$. Consequently $\VZ=V_1\cap V_2$ is smooth with
+$T\VZ=TV_1\cap TV_2$, and the map $\mu(f,h,p,M,s)=f^\T Mh+\sum p_ls_l$ is a submersion onto $\VZ$ near
+$(f,h,p,M,s)$: every $X'\in\VZ$ near $X$ is of the form \eqref{eq:F} with data depending holomorphically on
+$X'$, and the setting holds at $X'$.
+\end{lemma}
+\begin{proof}
+$\supseteq$ is clear. Let $G=\sum a_if_i+\sum b_ig_i\in(f,g)\cap(h,q)$ in $S/(p,s)$. Then
+$G-\sum b_ig_i\in(f)\cap((h)+(q))=(q)+((f)\cap(h))$ by the modular law ($(q)\subset(f)$), and
+$(f)\cap(h)=(f)(h)$ modulo $(p,s)$ because $(p,s,f,h)$ is regular. The image of $d\mu$ is
+$[(g)+(q)+(s)+(p)+(f)(h)]_d=TV_1\cap TV_2$, of dimension depending only on the degrees; so $\mu$ has constant
+rank and its local image is a smooth germ of dimension $\dim(TV_1\cap TV_2)$. It lies in the analytic space
+$V_1\cap V_2$ (the $V_i$ are smooth, hence reduced, and contain the image), whose Zariski tangent space is
+$TV_1\cap TV_2$; and a germ of analytic space containing a smooth germ of dimension equal to its embedding
+dimension coincides with it.
+Smoothness of $X'$ and $\dim V(f',h',p')=k-c$ are open conditions.
+\end{proof}
+
+\begin{lemma}[Northcott \cite{No}, Wiebe \cite{Wi}; proof by referee 12]\label{lem:NW}
+Let $x=(x_1,\dots,x_c)$ and $y=(y_1,\dots,y_c)$ be regular sequences in a commutative ring $B$, $(x)\ne B$,
+$y=x\cdot M$ for a $c\times c$ matrix $M$ over $B$, $\Delta=\det M$. Then multiplication by $\Delta$ is an
+injective map $B/(x)\to B/(y)$ with image $((y):(x))/(y)$. Equivalently $(y):(x)=(y)+(\Delta)$ and
+$(y):\Delta=(x)$; hence $(y):((y)+(\Delta))=(x)$ and $\Delta\notin(y)$.
+\end{lemma}
+\begin{proof}
+$\Lambda^\bullet M$ is a morphism of Koszul complexes $K(y)\to K(x)$ lifting the surjection
+$\pi:B/(y)\to B/(x)$, and both complexes are free resolutions. Applying $\mathrm{Hom}(-,B)$ and taking $H^c$,
+the map $\pi^*:\mathrm{Ext}^c(B/(x),B)\to\mathrm{Ext}^c(B/(y),B)$ is, in the Koszul bases, $B/(x)\to B/(y)$,
+$1\mapsto\Delta$. On the other hand $\mathrm{Ext}^c_B(N,B)\cong\mathrm{Hom}_B(N,B/(y))$ naturally in the
+$B/(y)$-module $N$ (\cite[Lemma~1.2.4]{BH}), and under this isomorphism $\pi^*$ is
+$\mathrm{Hom}(B/(x),B/(y))\to B/(y)$, $\phi\mapsto\phi(1)$: injective with image $((y):(x))/(y)$. The two
+descriptions differ by units.
+\end{proof}
+The classical statement is \cite[Theorem~2.5]{CPV}, \cite[Prop.~1.2]{SS} (as extracted).
+
+\begin{lemma}\label{lem:det}
+For $m\in S_\sigma$: $\Res_S[m\det M/\Phi^1]=\Res_S[m/(f,p;h,s)]=:\varrho(m)$ and
+$\Res_S[m\det M/\Phi^2]=(-1)^c\varrho(m)$. If $\tau\ge0$ and $kd-2k-2\ge0$, the constants $\kappa(X,Y_1)$,
+$\kappa(X,Y_2)$ of Lemma~\ref{lem:PF} are equal; call them $\kappa$. Hence for $N\in S_\tau$ and
+$Q\in S_{kd-2k-2}$: $\pi_1(QN\det M)=\kappa\,\varrho(QN)$ and $\pi_2(QN\det M)=(-1)^c\kappa\,\varrho(QN)=-\lz\kappa\,\varrho(QN)$;
+and $N\det M\in TV_i$ iff $N\in(f,h,p,s)_\tau$ $(i=1,2)$. In particular $\det M\not\equiv0$, and
+$\det M\notin TV_i$ when $\tau=0$.
+\end{lemma}
+\begin{proof}
+$\Phi^1=(f,p;Mh,s)$ is obtained from $(f,p;h,s)$ by the matrix $\mathrm{diag}(1,1,M,1)$ of determinant
+$\det M$; transformation law (R). $\Phi^2=(h,p;M^\T f,s)$ is obtained in the same way from $(h,p;f,s)$, which
+differs from $(f,p;h,s)$ by $c$ transpositions. The pairing $\cA_\tau\times\cA_{\sigma-\tau}\to\CC$ induced by
+$\varrho$ is perfect and $\sigma-\tau=kd-2k-2$. Equality of the constants $\kappa_i:=\kappa(X,Y_i)$: the first
+assertions of Theorem~1 (proved in \S\ref{sec:R} without this lemma) and (G) give
+$(u_1+\lz u_2)(N\det M)=0$, i.e. $(\kappa_1+\lz(-1)^c\kappa_2)\varrho(QN)=(\kappa_1-\kappa_2)\varrho(QN)=0$ for all
+$Q\in S_{kd-2k-2}$, $N\in S_\tau$, and $\varrho\ne0$ on $S_{kd-2k-2}S_\tau=S_\sigma$ (for $\tau<0$ the equality is
+neither proved nor used).
+\end{proof}
+
+\section{The residual \texorpdfstring{$R$}{R}: proof of Theorem 1}\label{sec:R}
+
+\emph{Step 1.} $F=\sum_jh_jq_j+\sum_lp_ls_l\in(p,q)$, so $V(p,q)\subset X$ and $R\subset X$; and
+$F-N\det M\in I(R)$ for every $N\in S_\tau$ when $\tau\ge0$.
+
+\emph{Step 2.} In the graded ring $S/(p)$, $f$ and $q=M^\T f$ are regular sequences ($(p,f)$ cuts out $Y_1$;
+$(p,q)$ is part of $\Phi^2$: this is where the smoothness of $X$ enters). By Lemma~\ref{lem:NW},
+$(p,q):(p,f)=(p,q,\det M)=I(R)$ and $(p,q):\det M=(p,f)$; in particular $\det M\notin(p,q)$, so $\det M\not\equiv0$
+and $\tau\le d$. If $\deg\det M=0$ (i.e. $\tau=d$), then $R=\emptyset$ and $V(p,q)=Y_1$. Otherwise $I(R)$ is
+unmixed of height $k+1$, $R$ is Cohen--Macaulay of pure dimension $k$ by (L), and at every minimal prime of
+$(p,q)$ the lengths of the local rings of $Y_1$ and $R$ add up to that of $V(p,q)$. So
+\begin{equation}\label{eq:link}
+[V(p,q)]=[Y_1]+[R]
+\end{equation}
+as cycles with multiplicities ($Y_1$ and $R$ may be non-reduced and may share components).
+
+\emph{Step 3.} For $i=0,\dots,c$ let $\Theta_i:=V(p,h_0,\dots,h_{i-1},q_i,\dots,q_{c-1})$: a complete intersection of
+dimension $k$ ($k+1$ distinct members of $\Phi^2$), $\Theta_0=V(p,q)$, $\Theta_c=Y_2$. For $i<c$ the $k$ forms
+$(p,h_0,\dots,h_{i-1},q_{i+1},\dots,q_{c-1})$ cut $X$ in a complete intersection $C_i$ of dimension $k$, on which
+$F\equiv h_iq_i$; so $C_i=V(\dots,h_iq_i)$ has cycle $[\Theta_{i+1}]+[\Theta_i]$ (additivity of length for a product
+of two non-zero-divisors), and $[C_i]=m_i\eta^k$ with
+$m_i=\prod_l\deg p_l\cdot\prod_{j<i}e_j\cdot\prod_{j>i}(d-e_j)$. Hence
+\begin{equation}\label{eq:mpp}
+[V(p,q)]=(-1)^c[Y_2]+m''\eta^k,\qquad m''=\sum_{i<c}(-1)^im_i .
+\end{equation}
+
+\emph{Step 4.} \eqref{eq:link} and \eqref{eq:mpp} give $[Y_1]+(-1)^{c-1}[Y_2]=m''\eta^k-[R]$.
+
+\emph{Step 5.} The hypersurfaces $X_N=\{F-N\det M=0\}$ ($N\in S_\tau$) all contain $R$. Let $U$ be a convex
+neighbourhood of $F$ in $S_d$ consisting of smooth hypersurfaces. For $X_N\in U$ the segment from $X$ to $X_N$
+is a family $\cX\to[0,1]$ of smooth hypersurfaces $X_t$ containing the fixed scheme $R$; for each component
+$R_i$ of $R$ the inclusions $R_i\hookrightarrow X_t\hookrightarrow\cX$ for different $t$ are homotopic and
+$X_t\hookrightarrow\cX$ is a homotopy equivalence, so the homology class of $R_i$, and with the fixed
+multiplicities that of $R$, is a flat section. Hence the transport of $\delta_{\lz}=m''\eta^k-[R]$ to $X_N$ is
+$m''\eta^k-[R]$, a Hodge class, and $X_N\in\NL(\delta_{\lz})$. The last assertion of Theorem~1 is
+Lemma~\ref{lem:det}. \qed
+
+\begin{remark}\label{rem:lean}
+For a generic $4\times4$ matrix ($c=4$, no $p$) the inclusion $\det M\cdot(f)\subset(q)$ (Cramer), the identity
+$f^\T Mh=\sum h_jq_j$, and the identities of Proposition~\ref{prop:W}(i) are checked by the Lean~4 kernel as
+ring identities (file \texttt{GenFamilyCert.lean}, 25 theorems). For $c=2,3$ the analogous identities are in
+\texttt{OcticDetCert.lean} and \texttt{PfaffianCert.lean}, in the notation of \cite{P2}, \cite{P1}. The converse
+inclusion in Lemma~\ref{lem:NW} is not machine-checked.
+\end{remark}
+
+\begin{remark}
+For $c=1$: $M=(M_{00})$, $R=V(p,M_{00})$, and the identity reads $[Y_1]+[Y_2]+[R]=m''\eta^k$, the decomposition
+of $X\cap V(p)=V(p,f_0M_{00}h_0)$. For two skew lines on a quartic surface ($c=2$) $R$ is a curve of degree $8$
+and genus $7$; for two disjoint planes on a cubic fourfold ($c=3$) a surface of degree $7$.
+\end{remark}
+
+\section{Proof of Theorem 2}\label{sec:thm2}
+
+(1) is Lemmas~\ref{lem:T} and~\ref{lem:mu}.
+
+(2) Let $u_i(G):=\pi_i(\,\cdot\,G)\in S_{kd-2k-2}^*$ and $I_i:=u_i(S_d)=((\Phi^i)_{kd-2k-2})^\perp$; then
+$TV_i=\ker u_i$ and $T\NL(\delta_\lambda)=\ker(u_1+\lambda u_2)$. If $G\in\ker(u_1+\lambda u_2)$, then
+$u_1(G)=-\lambda u_2(G)\in I_1\cap I_2$, and $u_1(G)=0$ forces $u_2(G)=0$; so $G\mapsto u_1(G)$ embeds
+$T\NL(\delta_\lambda)/T\VZ$ into $I_1\cap I_2=((f,h,p,s)_{kd-2k-2})^\perp\cong(\cA_{\sigma-\tau})^*$, of dimension
+$\et$ by the symmetry of the Hilbert function of the Gorenstein ring $\cA$ (and $0$ if $\tau<0$, since then
+$kd-2k-2>\sigma$). In the range, $(u_1,u_2):S_d\to I_1\oplus I_2$ is onto (Lemma~\ref{lem:T}(ii)), so the
+embedding is onto $I_1\cap I_2$.
+
+(3) If $\tau<0$, then by (2) $T\NL(\delta_\lambda)=T\VZ$; as $\NL(\delta_\lambda)$ contains the smooth germ
+$\VZ$, the two coincide.
+
+(4) By Theorem~1 the vectors $N\det M$ are tangent to arcs inside $\NL(\delta_{\lz})$, so they lie in its Zariski
+tangent space, and modulo $T\VZ$ they span a space of dimension $\et$ (Lemma~\ref{lem:det}); with (2),
+$T\NL(\delta_{\lz})=T\VZ+\det M\cdot S_\tau$. Choose a complement $S'$ of $(f,h,p,s)_\tau$ in $S_\tau$. By
+Lemma~\ref{lem:mu} the map $\Psi(X',N)=F'-N\det M'$ ($X'\in\VZ$ near $X$, $N\in S'$ small) is holomorphic with
+injective differential at $(X,0)$. Its image lies in $\NL(\delta_{\lz})$: $Y'_1=V(f',p')$ and $Y'_2=V(h',p')$ are
+flat deformations of $Y_1,Y_2$, so by (A) the transport of $\delta_{\lz}$ from $X$ to $X'$ is
+$[Y'_1]+\lz[Y'_2]$, which by Theorem~1 at $X'$ equals $m''\eta^k-[R']$, $R'=V(p',M'^\T f',\det M')$ ($m''$ depends
+only on the degrees); and the segment $F'-tN\det M'$, $0\le t\le1$, stays in the convex neighbourhood $U$ of
+Step~5 of \S\ref{sec:R} and all its members contain $R'$. No flatness of the family of the $R'$ is used. So
+$\NL(\delta_{\lz})$ contains a smooth germ of dimension equal to its embedding dimension, and equals it. \qed
+
+(5) (Referee~14.) Let $\lambda\notin\{0,\lz\}$ and $\gamma:=1/\lz-1/\lambda\ne0$. By Lemma~\ref{lem:det},
+$N\mapsto u_1(N\det M)$ maps $S_\tau$ onto $I_1\cap I_2$ with kernel $(f,h,p,s)_\tau$, and by Theorem~1,
+$u_2(N\det M)=-u_1(N\det M)/\lz$. Let $G\in\ker(u_1+\lambda u_2)$ and choose $N$ with $u_1(N\det M)=u_1(G)$. Then
+$G':=G-N\det M$ has $u_1(G')=0$ and $u_2(G')=\gamma u_1(G)$, so $G'\in TV_1$ and $G'+\gamma\lz N\det M\in TV_2$; hence
+$N\det M\in TV_1+TV_2=(f,h,p,s)_d$. Conversely, if $N\det M=H_1+H_2$ with $H_i\in TV_i$, then
+$G:=N\det M-\gamma\lz H_1$ lies in $\ker(u_1+\lambda u_2)$ and $u_1(G)=u_1(N\det M)$. So the embedding of (2)
+identifies $T\NL(\delta_\lambda)/T\VZ$ with $((f,h,p,s):\det M)_\tau/(f,h,p,s)_\tau=(0:_\cA\det M)_\tau$. \qed
+
+\begin{remark}
+(i) Lemma~\ref{lem:NW} applied in $S$ to $x=(f,p,h,s)$, $y=\Phi^i$ gives $(\Phi^i):\det M=(f,h,p,s)$, a
+residue-free proof of the last assertion of Theorem~1. (ii) By Theorem~1, $\NL(\delta_{\lz})=\NL([R])$ near $X$,
+and for $\tau\ge0$ Theorem~2(4) says that this is the locus of hypersurfaces containing a scheme
+$V(p'',M''^\T f'',\det M'')$ of the same determinantal form as $R$, with data near $(p,f,M)$ (conversely, a form
+of $I(R'')_d$ near $F$ is $\sum p''s''+\sum a_jq''_j-N\det M''$ with $(a,s'',N)$ near $(h,s,0)$, since $\dim I(R'')_d$
+is constant by linkage): the Hodge locus of the residual is as small as it can be. (iii) Theorem~2(5) agrees with the instances outside the range that we
+computed (\S\ref{sec:comp} and the Checks of \S\ref{sec:FA3}: excess $\et$ at $\lz$ and $\et-1$ at the other tested values) and, as far as the
+digests allow a comparison, with the thresholds in Kloosterman's theorems: for $(d,c)=(3,2)$ multiplication by
+$\det M$ from $\cA_1$ to $\cA_3$ is injective for general data if and only if $k\ge5$ (if: Proposition~\ref{prop:k5}; only if:
+$\dim\cA_1=k-1>\binom{k-1}3=\dim\cA_3$ for $2\le k\le4$); for $(d,c)=(3,3)$, $\cA_3\ne0$ iff $k\ge5$; and at
+hypersurfaces with all entries of $M$ in $(f,h,p,s)$ the excess is $\et$ for every $\lambda$ and every $k$.
+\end{remark}
+
+\section{The second-order principle: proofs of Theorem 3 and Corollary 4}\label{sec:G}
+
+Notation as in Theorem~3: $\pi_i,\varphi_i$ for $\delta_i$; $u_i(G)=\pi_i(\,\cdot\,G)$; $I_i=u_i(S_d)$;
+$T_i=TV_i=\ker u_i$.
+
+\emph{Step 1.} By (b), $(u_1,u_2):S_d\to I_1\oplus I_2$ is onto with kernel $T\VZ$, and
+$T\NL(\delta_\lambda)/T\VZ\cong I_1\cap I_2$ for every $\lambda\ne0$. (a) and (b) are open conditions, so the same
+holds at every $X'\in\VZ$ near $X$: $\dim T_{X'}\NL(\delta_\lambda)/T_{X'}\VZ=\dim(I_1\cap I_2)(X')$ for every
+$\lambda\ne0$; this is the equivalence asserted in (c). By (c), $I_1\cap I_2$ is a line $\CC\omega$. Since
+$(u_1,u_2)$ is onto, the image of $u_1+\lambda u_2$ is $I_1+I_2$; hence $K=(I_1+I_2)^\perp$ is independent of
+$\lambda$: for $Q\in K$ the functions $\Phi^{\delta_1}_Q$ and $\Phi^{\delta_2}_Q$ both have zero differential at
+$X$.
+
+\emph{Step 2.} Choose functions among the $\Phi^{\delta_\lambda}_Q$ with independent differentials cutting out a
+smooth germ $\cM_\lambda\supset\NL(\delta_\lambda)$ of dimension $\dim\VZ+1$. For $Q\in K$,
+$\phi_Q:=\Phi^{\delta_\lambda}_Q|_{\cM_\lambda}$ vanishes on $\VZ=\{y=0\}$ and, by (c) at the points of $\VZ$
+(where $T\NL(\delta_\lambda)=T\cM_\lambda$), has zero differential along $\VZ$: $\phi_Q=y^2\upsilon_Q$. As
+$d\Phi^{\delta_\lambda}_Q(X)=0$, $\tfrac12\Hess\phi_Q(G)=c_0\,\varphi_{\delta_\lambda}(QG^2)$ for
+$G\in T\NL(\delta_\lambda)$, $c_0=k(k+1)/2$.
+
+\emph{Step 3 (key lemma).} For $Q\in K$ and $G\in T_1$: $\varphi_1(QG^2)=0$; likewise for $T_2$, $\varphi_2$.
+Indeed $\Phi^{\delta_1}_Q$ vanishes on the smooth germ $V_1$ and has zero differential at $X$ on all of $S_d$
+(Step~1); take an arc $\gamma$ in $V_1$ with $\gamma'(0)=G$: $0=(\Phi^{\delta_1}_Q\circ\gamma)''(0)=
+\Hess\Phi^{\delta_1}_Q(G,G)+d\Phi^{\delta_1}_Q(\gamma''(0))=2c_0\varphi_1(QG^2)$.
+
+\emph{Step 4.} Choose $G_1\in T_2$ with $u_1(G_1)=\omega$ and $G_2\in T_1$ with $u_2(G_2)=\omega$ (possible by
+(b)). Then $G_\lambda:=G_1-G_2/\lambda\in T\NL(\delta_\lambda)\smallsetminus T\VZ$, and for $Q\in K$, by Step~3,
+\[
+\varphi_{\delta_\lambda}(QG_\lambda^2)=\bigl[\varphi_1(QG_1^2)-2\varphi_2(QG_1G_2)\bigr]
++\frac1\lambda\bigl[\varphi_2(QG_2^2)-2\varphi_1(QG_1G_2)\bigr]=:A_0(Q)+\frac{B_0(Q)}{\lambda}.
+\]
+
+\emph{Step 5.} Along the arc of (d), $\phi_Q=y^2\upsilon_Q$ vanishes and $y$ has a simple zero; so $\upsilon_Q(X)=0$ at
+$\lambda=\lz$ for all $Q\in K$, i.e. $A_0+B_0/\lz=0$, and
+$\varphi_{\delta_\lambda}(QG_\lambda^2)=\frac{\lambda-\lz}{\lambda}A_0(Q)$. Put $A:=c_0A_0$. The remaining
+assertions: if $A\ne0$, some $\upsilon_Q$ is a unit for $\lambda\notin\{0,\lz\}$; two coefficients satisfying (d) would
+force $A_0=B_0=0$; and if the arcs exist through all $X'\in\VZ$, the map $(X',t)\mapsto X'_t$ has injective
+differential and image in $\NL(\delta_{\lz})\subset\cM_{\lz}$, of the same dimension. \qed
+
+\begin{proof}[Proof of Corollary 4]
+(a), (b): Lemma~\ref{lem:T}, in the range. (c): Theorem~2(2) with $\et=1$, at every $X'\in\VZ$ near $X$ by
+Lemma~\ref{lem:mu} ($\et$ depends only on the degrees). (d): Theorem~1 with $N$ a generator of $\cA_\tau$, so
+that $N\det M\notin T V_1\supset T\VZ$ (Lemma~\ref{lem:det}); through every $X'$ by Lemma~\ref{lem:mu}. If
+$\tau=0$ then $c\ge2$, since for $c=1$ one has $\tau=d_0+e_0\ge2$.
+\end{proof}
+
+\section{A second description at \texorpdfstring{$\lz$}{lambda0}: the family \texorpdfstring{$W_t$}{Wt}}\label{sec:W}
+
+Assume $\tau=0$, $c\ge2$, $n:=c-1$. Let $a_j$ be the cofactor of $M_{jn}$ in $M$,
+$w_j(t):=f_jh_n-t\,a_j$ (homogeneous of degree $d_j+e_n$), $I(t):=(p,w_0,\dots,w_n,q_0,\dots,q_{n-1})$,
+$\Sigma:=V(p,f,h_n)$ (of dimension $k-1$), $\Theta:=V(p,h_n,q_0,\dots,q_{n-1})$.
+
+\begin{proposition}[sketch; details in the working notes, read by referee 11]\label{prop:W}
+(i) $F-t\det M=\sum_{l<n}h_lq_l+\sum_jM_{jn}w_j+\sum_l p_ls_l\in I(t)$; $h_nq_l=\sum_jM_{jl}w_j$ for $l<n$; and
+$a_if_j-a_jf_i\in(q_0,\dots,q_{n-1})$. (ii) $I(0)=I(Y_1)\cap I(\Theta)$, without embedded components, with cycle
+$[Y_1]+[\Theta]$, and $[\Theta]=(-1)^{c-1}[Y_2]+m'\eta^k$ for an integer $m'$. (iii) Let $I\subset S[t]$ be the ideal
+generated by $I(t)$ and $\cW\subset\PP^{2k+1}\times\mathbb{A}^1$ the
+scheme-theoretic closure of $V(I)\smallsetminus(\Sigma\times\mathbb{A}^1)$ over $t\neq0$. Then $\cW$ is flat over a
+neighbourhood of $t=0$, $\cW_0=Y_1\cup\Theta$ as schemes, and the fibres $W_t$ for small $t$ are of pure dimension
+$k$, contained in $\{F-t\det M=0\}$, of class the transport of $[Y_1]+(-1)^{c-1}[Y_2]+m'\eta^k$.
+\end{proposition}
+\begin{proof}[Sketch]
+(i) Cofactor expansions; the last is Cramer's rule applied to the $n\times c$ matrix of the first $n$ columns of
+$M$. (ii) As in Steps~2--3 of \S\ref{sec:R}, with the chain $V(p,h_n,h_0,..,h_{i-1},q_i,..,q_{n-1})$. (iii)
+Outside $\Sigma$, $V(I)$ is locally cut out by $k+1$ equations: $(p,w)$ where $h_n\ne0$, and $(p,q_{<n},w_i)$ where
+$f_i\neq0$ (by (i)); at $t=0$ these are the equations of $Y_1$, resp. $\Theta$, so $t$ is a non-zero-divisor there.
+$\cW_0\subset V(I(0))$ agrees with it outside $\Sigma$, and $V(I(0))$ has no associated point in $\Sigma$. Purity follows
+from a depth argument, and the class from (A).
+\end{proof}
+
+Once the sketch is completed this gives a proof of Corollary~4(d) for $\tau=0$ that does not use
+Lemma~\ref{lem:NW}. For $c=2$, $W_t$ is a complete intersection in $V(p)$ (Hilbert--Burch; the determinantal
+family of \cite{P2}); for $c=3$, a Pfaffian subscheme of codimension $3$ in $V(p)$ (Buchsbaum--Eisenbud; for
+linear data, the Pfaffian cubics of \cite{P1} and, apparently, of Kloosterman \cite{Kl}). $W_t$ need not be the
+closure of $\{p=0,\ f_jh_n=t\,a_j\}\smallsetminus\{h_n=0\}$: at special $X$ it has fixed components inside
+$\{h_n=0\}$ (referee~11: skew lines on a quartic surface for which $M_{00},M_{10}$ have a common linear factor
+modulo $h_1$). For $\tau>0$ the analogous statement with $a_j$ replaced by $Na_j$ is asserted in the working
+notes and not proved here.
+
+\section{A formula for \texorpdfstring{$A$}{A}}\label{sec:conj}
+
+Assume $\tau=0$ and the range, and put $r:=d-\sigma=2k+2-(k-1)d>0$ (if $\sigma\le0$ then $K=0$). By Step~1 of
+\S\ref{sec:G} and Lemma~\ref{lem:mu}, $K=I_1^\perp\cap I_2^\perp=(\Phi^1\cap\Phi^2)_\sigma=[(f)(h)+(g)+(q)+(p)+(s)]_\sigma$:
+the degree-$\sigma$ part of the ideal whose degree-$d$ part is $T\VZ$. So every $Q\in K$ is the value of $d\mu$ on
+a \emph{virtual deformation of weight $-r$} of the data, a tuple
+$\dot v=(\dot f,\dot h,\dot p,\dot s,\dot M)$ of forms of the degrees of $f,h,p,s,M$ lowered by $r$ (zero where
+this is negative):
+\[
+Q(\dot v)=f^\T\dot M\,h+\sum_i\dot f_ig_i+\sum_j\dot h_jq_j+\sum_l\dot p_ls_l+\sum_l\dot s_lp_l ,\qquad
+Q(\dot v)\cdot N=d\mu(\dot vN)\in T\VZ\quad(N\in S_r).
+\]
+For $P\in S_d$ let
+\begin{align*}
+\mathfrak D_{\dot v}(P):={}&\sum_i\Res_S\Bigl[\frac{P\dot f_i}{(\dots,f_i^2,\dots)}\Bigr]+\sum_j\Res_S\Bigl[\frac{P\dot h_j}{(\dots,h_j^2,\dots)}\Bigr]\\
+&+\sum_l\Res_S\Bigl[\frac{P\dot p_l}{(\dots,p_l^2,\dots)}\Bigr]+\sum_l\Res_S\Bigl[\frac{P\dot s_l}{(\dots,s_l^2,\dots)}\Bigr],
+\end{align*}
+where $(\dots,\phi^2,\dots)$ is the sequence $(f,p;h,s)$ with $\phi$ replaced by $\phi^2$ (all symbols are evaluated
+in the socle degree), and
+\[
+D_{\dot v}:=\varrho\bigl(\operatorname{tr}(\dot M\cdot\operatorname{adj}M)\bigr)-\mathfrak D_{\dot v}(\det M).
+\]
+$D_{\dot v}$ is the formal derivative along $\dot v$ of the residue symbol $\Res_S[\det M/(f,p;h,s)]$ as a function
+of the data. (The symbol itself is zero for degree reasons; its derivative along $\dot v$ has the right degree.)
+
+\begin{theorem}[formula for $A$; read by referee 15]\label{thm:FA}
+Assume $\tau=0$ and the range, and let $\kappa$ be the constant of Lemma~\ref{lem:PF}\textup{(4)}, so
+that $\pi_1(Q'\det M)=\kappa\,\varrho(Q')$ for $Q'\in S_\sigma$; and
+normalise the excess direction in \S\ref{sec:G} by $\omega:=u_1(\det M)$, i.e. $G_{\lz}=\det M$. Then for every
+virtual deformation $\dot v$ of weight $-r$:
+\begin{enumerate}
+\item for all $P\in S_d$:\quad
+$(k+1)\,\varphi_1\bigl(Q(\dot v)P\det M\bigr)=\pi_1\bigl(P\operatorname{tr}(\dot M\operatorname{adj}M)\bigr)+\kappa\,\mathfrak D_{\dot v}(P)$,\\
+\phantom{for all $P\in S_d$:\quad}
+$(k+1)\,\varphi_2\bigl(Q(\dot v)P\det M\bigr)=\pi_2\bigl(P\operatorname{tr}(\dot M\operatorname{adj}M)\bigr)-\lz\kappa\,\mathfrak D_{\dot v}(P)$;
+\item $A(Q(\dot v))=\dfrac{k\kappa}{2}\,D_{\dot v}$.
+\end{enumerate}
+In particular $D_{\dot v}$ depends only on $Q(\dot v)$, and $A=0$ at $X$ if and only if $D_{\dot v}=0$ for all $\dot v$.
+\end{theorem}
+\begin{proof}
+(1) Fix $\dot v$, $N\in S_r$, $Q'\in S_\sigma$, and move the data along the line
+$(f,h,p,M,s)+\epsilon\,\dot vN$. By Lemma~\ref{lem:mu} the hypersurfaces $X_\epsilon$ lie in $\VZ$,
+$F_\epsilon=F+\epsilon\,Q(\dot v)N+O(\epsilon^2)$, $\det M_\epsilon=\det M+\epsilon N\operatorname{tr}(\dot M\operatorname{adj}M)+O(\epsilon^2)$,
+and $[Y_1(\epsilon)]$ is the transport of $[Y_1]$. By Lemma~\ref{lem:det} and Lemma~\ref{lem:PF}(1), (4) at $X_\epsilon$, with the
+\emph{same} constant $\kappa$,
+\begin{equation}\label{eq:first}
+\pi_1^{X_\epsilon}(Q'\det M_\epsilon)=\kappa\,\Res_S\bigl[Q'/(f_\epsilon,p_\epsilon;h_\epsilon,s_\epsilon)\bigr].
+\end{equation}
+Differentiate at $\epsilon=0$. On the left, by (G), the derivative of a period of a fixed form over a flat class
+in the direction $\dot F$ is $-(k+1)\varphi_1(\,\cdot\,\dot F)$, so we get
+$-(k+1)\varphi_1(Q'\det M\cdot Q(\dot v)N)+\pi_1(Q'N\operatorname{tr}(\dot M\operatorname{adj}M))$. On the right we use
+\[
+\frac{d}{d\epsilon}\Big|_0\Res_S\Bigl[\frac{P'}{(\dots,\phi+\epsilon\psi,\dots)}\Bigr]=-\Res_S\Bigl[\frac{P'\psi}{(\dots,\phi^2,\dots)}\Bigr],
+\]
+which follows from the transformation law: $(\phi+\epsilon\psi)(\phi-\epsilon\psi)=\phi^2-\epsilon^2\psi^2$ gives
+$\Res_S[P'/(\dots,\phi+\epsilon\psi,\dots)]=\Res_S[P'(\phi-\epsilon\psi)/(\dots,\phi^2-\epsilon^2\psi^2,\dots)]$, an
+even function of $\epsilon$ minus $\epsilon$ times an even function with value $\Res_S[P'\psi/(\dots,\phi^2,\dots)]$ at
+$0$. So the right side has derivative $-\kappa\,\mathfrak D_{\dot v}(Q'N)$. This is the first identity for $P=Q'N$;
+both sides are linear in $P$ and the products $Q'N$ span $S_\sigma S_r=S_d$. For the second identity repeat with
+$\pi_2$: by Lemma~\ref{lem:det} and Lemma~\ref{lem:PF}, $\pi_2(Q'\det M)=(-1)^c\kappa\,\varrho(Q')=-\lz\kappa\,\varrho(Q')$ (the
+exchange of the blocks $f$ and $h$ is $c$ transpositions; this also follows from Theorem~1, which puts $\det M$
+in $\ker(u_1+\lz u_2)$).
+
+(2) Put $\omega:=u_1(\det M)=\kappa\varrho$; then $u_2(\det M)=-\lz\omega$. Choose $G_2\in T_1$ with $u_2(G_2)=\omega$
+and put $G_1:=\det M+\lz G_2$. Then $u_1(G_1)=\omega$ and $u_2(G_1)=0$: an admissible choice in Step~4 of
+\S\ref{sec:G}, with $G_{\lz}=G_1-G_2/\lz=\det M$. Let $Q=Q(\dot v)\in K$. By Theorem~1, $\Phi^{\delta_{\lz}}_Q$ vanishes
+on the arc $F-t\det M$, so $\varphi_{\delta_{\lz}}(Q\det M^2)=0$, i.e. $A_0+B_0/\lz=0$; hence
+$A_0(Q)=-\lz\varphi_2(QG_2^2)+2\lz\varphi_1(QG_1G_2)$. By the key lemma (Step~3: $\varphi_1(QG_2^2)=0$,
+$\varphi_2(QG_1^2)=0$),
+$\varphi_1(QG_1G_2)=\varphi_1(Q\det M\,G_2)$, and, writing $G_2=\lz(G_1-\det M)$,
+$\varphi_2(QG_2^2)=-\varphi_2(Q\det M^2)-2\lz\varphi_2(Q\det M\,G_2)$. Therefore
+\[
+A_0(Q)=\lz\bigl[\varphi_2(Q\det M^2)+2\,\varphi_{\delta_{\lz}}(Q\det M\,G_2)\bigr],\qquad
+\varphi_{\delta_{\lz}}=\varphi_1+\lz\varphi_2 .
+\]
+Now apply (1), with $\theta:=\operatorname{tr}(\dot M\operatorname{adj}M)\in S_\sigma$. For $P=G_2$ the terms with
+$\mathfrak D$ cancel and $(k+1)\varphi_{\delta_{\lz}}(Q\det M\,G_2)=u_1(G_2)(\theta)+\lz u_2(G_2)(\theta)=\lz\kappa\varrho(\theta)$.
+For $P=\det M$: $(k+1)\varphi_2(Q\det M^2)=-\lz\kappa[\varrho(\theta)+\mathfrak D_{\dot v}(\det M)]$. So
+$(k+1)A_0(Q)=\kappa[\varrho(\theta)-\mathfrak D_{\dot v}(\det M)]=\kappa D_{\dot v}$, and $A=c_0A_0$ with
+$c_0=k(k+1)/2$. Only Steps~1, 3 and~4 of \S\ref{sec:G} were used.
+\end{proof}
+
+The proof uses no pole-order reduction: every second-order quantity that occurs is of the form
+$\varphi_i(Q\,P\det M)$ with $Q\in K$, and is obtained by differentiating the first-order identity
+\eqref{eq:first} along $\VZ$ in the direction $Q N\in T\VZ$. It uses that $\kappa$ does not depend on $X$
+(Lemma~\ref{lem:PF}(4)); alternatively, \eqref{eq:A2} follows from \eqref{eq:pw} and the same differentiation of the
+algebraic identity of Lemma~\ref{lem:det}, at the single point $X$.
+
+\begin{corollary}\label{cor:Anz}
+Assume $\tau=0$ and the range, and consider a degree type $(k,d,c;\deg f;\deg h;\deg p)$ for which a
+smooth $X$ exists and $K\ne0$. Then $A\ne0$ for general data $(f,h,p,M,s)$ of that type. Hence for general data,
+and therefore at the general point $X'$ of $\VZ$ near any $X$ of the setting, $\NL(\delta_\lambda)$ is $\VZ$ with a
+double structure for every $\lambda\notin\{0,\lz\}$.
+\end{corollary}
+\begin{proof}
+The last sentence follows from the first because $\mu$ is a submersion onto $\VZ$ (Lemma~\ref{lem:mu}) and the
+set of good data is Zariski-open and dense. Suppose first that $d_i+e_j\le\sigma$ for some $(i,j)$. It suffices
+that $\operatorname{adj}(M)_{ji}\notin(f,h,p,s)$: then, the pairing on $\cA$ being perfect,
+$\varrho(x^\alpha\operatorname{adj}(M)_{ji})\ne0$ for some monomial $x^\alpha$ of degree $\sigma-d_i-e_j$, and for
+$\dot M=x^\alpha E_{ij}$ one has $Q(\dot v)=f_ih_jx^\alpha$ and $D_{\dot v}=\varrho(x^\alpha\operatorname{adj}(M)_{ji})$.
+This is an open condition on the irreducible space of data, restricted to the open set where $(f,h,p,s)$ is a
+regular sequence; so one instance in that set suffices (with $X$ possibly singular). Take $f,h,p,s$ general,
+$\ell$ a general linear form, the complementary $(c-1)\times(c-1)$ submatrix of $M$ a monomial matrix whose
+nonzero entries are powers of $\ell$ along a matching, and row $i$ and column $j$ of $M$ arbitrary. The cofactor
+is then $\pm\ell^{d_i+e_j}$ (its degree is $d_i+e_j$ because $\tau=0$), which is not in $(f,h,p,s)$ for general
+$\ell$, because powers of linear forms span $S_{d_i+e_j}$ and $\cA_{d_i+e_j}\ne0$. This needs a matching of the
+submatrix along which all entry degrees are $\ge0$; that is automatic for $c=2$ and was checked by enumeration
+(referees~15 and~16) for all degree types in the range with $k=2,3,4$, which are all types with $k\ge2$. For
+$k=1$ and for $k=2,4$, $K\ne0$ implies that such $(i,j)$ exists ($k=1$: if $((f)(h))_\sigma=0$ then
+$(g)_\sigma=(q)_\sigma=0$ as well; $k=2,4$: enumeration). For $k=3$ ($d=3$, $\sigma=1$) $K$ is spanned by one linear
+form: $p$, or $s$ (if $p$ is a quadric), or, for $c=4$, the partner $q_j$ or $g_i$ of the quadric among $f,h$. The
+seven linear forms among $f,h,p,s$ cut out a point $o$, and in coordinates in which they are coordinate
+functions $D_{\dot v}=\mp\det M(o)/\phi(o)^2$, where $\phi$ is the quadric among $f,h,p,s$ ($\phi=s$, $p$, or the
+quadric among $f,h$). Finally $\det M(o)\ne0$ for general $M$.
+\end{proof}
+
+\run{Checks and special cases.} (i) \emph{Numerical} (modulo primes; the second agent's tests of part (1) are
+its own identities, built on the first agent's program module; files
+\texttt{formula\_g/REPORT\_FG.md}, \texttt{referee15\_report.md}). Before the proof existed, the formula was found
+by comparison with the second-order term computed by the program of \S\ref{sec:comp}: that quantity equals
+$(-1)^{k+1}D_{\dot v}$ exactly, on every generator $f_ih_jx^\alpha$, $g_ix^\alpha$, $q_jx^\alpha$, $s_lx^\alpha$,
+$p_lx^\alpha$ of $K$, in $25$ runs covering $12$ types ($k=1$: $(1,2)+(1,2)$ ($d=6$), $(1,1)+(3,3)$ ($d=8$), $(1,4)+(2,2)$ ($d=9$, not in Table~\ref{tab:types}); $k=2$,
+$d=4$: all six types of Table~\ref{tab:types}; $k=2$, $d=5$: $(1,1)+(1,2)$ with $p$ a quadric, one instance;
+$k=3$, $d=3$: the two types of Table~\ref{tab:types}, where $K$ is one-dimensional; the type with $p$ a quadric
+and the mirror of the $c=4$ type were not run); in all, $247$ generator test vectors and no failure. According
+to referee~15's translation of the program's quantity into $A$ (which is in its report, not in this manuscript),
+the constant $(-1)^{k+1}$ is the ratio of $\kappa$ to the program's normalisation, as Theorem~\ref{thm:FA}
+predicts. This formula was the first one tried; no alternative was tested. The right-hand side vanishes on all linear relations among the generators in the three types
+where there are any. Part (1) of the theorem was tested separately, in translation to the Jacobian ring, in $7$
+runs covering $6$ types ($k=1,2,3$, both signs of $\lz$; three random $P$ per test, one prime; not for $d=5$ or
+$c\ge4$): no failure. (ii) For $k=1$, $c=2$ and $\omega=\varrho$
+the theorem gives $A(f^\T\dot Mh)=\frac1{2\kappa}\varrho(\operatorname{tr}(\dot M\operatorname{adj}M))$: the formula
+claimed in \cite{P2} under a hypothesis on one of the curves, here without that hypothesis and on
+all of $K$.
+(iii) For two $3$-planes meeting in a point $o$ on a cubic sixfold, $K=\langle p\rangle$ and
+$D_{\dot v}=-\Res_S[\det M/(f,p;h,s^2)]$, which in coordinates where $f,h,p$ are coordinate functions is
+$\pm\det M(o)/s(o)^2$: the factor $\det C$, $C=M(o)$, of Theorem~A of \cite{P1}. (iv) \emph{Where $A$ vanishes.}
+$A=0$ iff $\operatorname{adj}(M)_{ji}\in(f,h,p,s)$ whenever $d_i+e_j\le\sigma$ and
+$\Res_S[x^\alpha\det M/(\dots,\phi^2,\dots)]=0$ for every $\phi$ among the $f_i,h_j,p_l,s_l$ of degree $\ge r$ and every
+monomial $x^\alpha$ of degree $\deg\phi-r$. Both hold when all entries of $M$ lie in $(f,h,p,s)$. Numerically: at
+eight smooth instances satisfying both conditions (six types; in five of the eight instances, of four types,
+all entries of $M$ were chosen in $(f,h,p,s)$) the computed second-order term is zero on all of $K$; at a smooth instance of type
+$(1,1,1)+(1,2,2)$, $d=4$, satisfying only the first, it vanishes on $((f)(h))_\sigma$ and not on $(q)_\sigma$.
+
+\section{Several excess directions}\label{sec:FA2}
+
+Assume $\tau\ge0$ and the range. Put $\sigma':=kd-2k-2=\sigma-\tau$ (the degree of the forms $Q$ of
+\S\ref{sec:G}), $r:=d-\sigma'$ (the range says $r>\tau$), $E:=\cA_\tau$, and for $N\in S_\tau$ let
+$\omega_N:=u_1(N\det M)\in I_1\cap I_2$; by Lemma~\ref{lem:det}, $N\mapsto\omega_N$ induces an isomorphism
+$E\cong I_1\cap I_2$. As in \S\ref{sec:conj}, $K=(I_1+I_2)^\perp=[(f)(h)+(g)+(q)+(p)+(s)]_{\sigma'}$ consists of the
+values $Q(\dot v)$ of $d\mu$ on the virtual deformations $\dot v$ of weight $-r$, and $\mathfrak D_{\dot v}(P)$ is
+defined as there, now for $P\in S_{d+\tau}$. Let $c_0:=k(k+1)/2$.
+
+\begin{theorem}[read by referee 17]\label{thm:FA2}
+Assume $\tau\ge0$ and the range.
+\begin{enumerate}
+\item \emph{Structure.} For every $\lambda\ne0$, $\NL(\delta_\lambda)$ lies in a smooth germ $\cM_\lambda$ of
+dimension $\dim\VZ+\et$, in which $\VZ=\{y_1=\dots=y_{\et}=0\}$; for $Q\in K$ the function
+$\phi_Q:=\Phi^{\delta_\lambda}_Q|_{\cM_\lambda}$ lies in the square $(y)^2$ of the ideal of $\VZ$; and
+$\NL(\delta_\lambda)=\{\phi_Q=0,\ Q\in K\}\subset\cM_\lambda$.
+\item \emph{Law.} Let $G_\lambda\colon E\to T\NL(\delta_\lambda)/T\VZ$ be the isomorphism with
+$u_1(G_\lambda(N))=\omega_N$ (so $G_{\lz}(N)=N\det M$). There is a symmetric bilinear map
+$\mathcal Q_0\colon E\times E\to K^*$, independent of $\lambda$, such that for $Q\in K$, $N,N'\in E$ and
+$\lambda\ne0$
+\[
+\tfrac12\Hess\phi_Q\bigl(G_\lambda(N),G_\lambda(N')\bigr)=c_0\,\frac{\lambda-\lz}{\lambda}\,\mathcal Q_0(N,N')(Q).
+\]
+\item \emph{Formula.} For every virtual deformation $\dot v$
+of weight $-r$ and $N,N'\in S_\tau$:
+\[
+\mathcal Q_0(N,N')\bigl(Q(\dot v)\bigr)=\frac{\kappa}{k+1}\Bigl[\varrho\bigl(NN'\operatorname{tr}(\dot M\operatorname{adj}M)\bigr)
+-\mathfrak D_{\dot v}\bigl(NN'\det M\bigr)\Bigr],
+\]
+the formal derivative along $\dot v$ of $\Res_S[NN'\det M/(f,p;h,s)]$ with $N,N'$ held fixed.
+\item \emph{Consequence.} If the quadrics $N\mapsto\mathcal Q_0(N,N)(Q)$, $Q\in K$, have no common zero in
+$\PP(E)$ at $X$, then for every $\lambda\notin\{0,\lz\}$: $\NL(\delta_\lambda)_{\mathrm{red}}=\VZ$ as germs at $X$, and
+$\NL(\delta_\lambda)$ is non-reduced at every point of $\VZ$ near $X$.
+\end{enumerate}
+For $\et=1$, parts (1), (2), (4) are Corollary~4 with $A=c_0\mathcal Q_0(N,N)$, $N$ a generator of $E$; for
+$\et=1$ and $\tau=0$, part (3) is Theorem~\ref{thm:FA}.
+\end{theorem}
+\begin{proof}
+(1) Choose $Q_1,\dots,Q_m$ spanning a complement of $K$ in $S_{\sigma'}$. The $\Phi^{\delta_\lambda}_{Q_a}$ have
+independent differentials at $X$, and $m=\codim T\NL(\delta_\lambda)$; let $\cM_\lambda$ be their common zero germ,
+smooth of dimension $\dim\VZ+\et$ (Theorem~2(2)). As $\Phi_Q$ is linear in $Q$,
+$\NL(\delta_\lambda)=\{\phi_Q=0,\ Q\in K\}$ in $\cM_\lambda$, and $\phi_Q$ vanishes on $\VZ$. Let $X'\in\VZ$ be near
+$X$. The Zariski tangent space of $\NL(\delta_\lambda)$ at $X'$ is $\{v\in T_{X'}\cM_\lambda:\ d\phi_Q(X')(v)=0,\ Q\in K\}$;
+by (G), (A) and Theorem~2(2) at $X'$ (the setting holds there by Lemma~\ref{lem:mu}, and the range and $\et$
+depend only on the degrees) it has dimension $\dim\VZ+\et=\dim T_{X'}\cM_\lambda$. So $d\phi_Q(X')=0$ for all
+$Q\in K$ (the space $K$ is that of $X$; that $K$ varies with $X'$ plays no role). A function on a smooth germ
+vanishing with its differential along the smooth subgerm $\{y=0\}$ lies in $(y)^2$.
+
+(2) Choose a linear map $N\mapsto G_2(N)\in T_1$ with $u_2(G_2(N))=\omega_N$ (possible since $u_2(T_1)=I_2$ in
+the range) on a complement of $(f,h,p,s)_\tau$ in $S_\tau$, extended by $0$ on $(f,h,p,s)_\tau$, and put $G_1(N):=N\det M+\lz G_2(N)$,
+$G_\lambda(N):=G_1(N)-G_2(N)/\lambda$. By Lemma~\ref{lem:det}, $u_1(G_1(N))=\omega_N$ and $u_2(G_1(N))=0$, so
+$G_1(N)\in T_2$, $(u_1+\lambda u_2)(G_\lambda(N))=0$, $u_1(G_\lambda(N))=\omega_N$, and $G_{\lz}(N)=N\det M$. By (1)
+the form $\tfrac12\Hess\phi_Q$ on $T\NL(\delta_\lambda)$ has $T\VZ$ in its kernel, and the class of $G_\lambda(N)$
+modulo $T\VZ$ is determined by $u_1(G_\lambda(N))=\omega_N$; so the left side of the law does not depend on the
+choices. By (G) it equals $c_0\varphi_{\delta_\lambda}(QG_\lambda(N)G_\lambda(N'))$ (the differential of
+$\Phi_Q$ vanishes at $X$ for $Q\in K$). Expand $\varphi_{\delta_\lambda}=\varphi_1+\lambda\varphi_2$ and use the key
+lemma of \S\ref{sec:G} (its Step~3 uses only hypotheses (a) and (b), which hold in the range) in polarised form ($\varphi_1(QGG')=0$ for $G,G'\in T_1$, $\varphi_2(QGG')=0$ for
+$G,G'\in T_2$): with $G_i=G_i(N)$, $G_i'=G_i(N')$,
+\begin{align*}
+\varphi_{\delta_\lambda}\bigl(QG_\lambda(N)G_\lambda(N')\bigr)&=A_0+B_0/\lambda,\\
+A_0&:=\varphi_1(QG_1G_1')-\varphi_2(QG_1G_2')-\varphi_2(QG_2G_1'),\\
+B_0&:=\varphi_2(QG_2G_2')-\varphi_1(QG_1G_2')-\varphi_1(QG_2G_1').
+\end{align*}
+By Theorem~1, $\Phi^{\delta_{\lz}}_Q$ vanishes on the affine space $F+\det M\cdot S_\tau$ near $F$; its second-order
+part there is $c_0\varphi_{\delta_{\lz}}(QN\det M\,N'\det M)$, so $A_0+B_0/\lz=0$ and
+$\mathcal Q_0:=A_0$ satisfies the law.
+
+(3) \emph{Step A.} Fix $\dot v$, $N\in S_\tau$, $N_r\in S_r$, $Q'\in S_{\sigma'}$ and move the data along
+$(f,h,p,M,s)+\epsilon\,\dot vN_r$, as in the proof of Theorem~\ref{thm:FA}. By Lemma~\ref{lem:det} and Lemma~\ref{lem:PF},
+$\pi_1^{X_\epsilon}(Q'N\det M_\epsilon)=\kappa\Res_S[Q'N/(f_\epsilon,p_\epsilon;h_\epsilon,s_\epsilon)]$; differentiating
+at $\epsilon=0$ exactly as there, and using $S_{\sigma'}S_r=S_d$, we get for all $P\in S_d$, $N\in S_\tau$, with
+$\theta:=\operatorname{tr}(\dot M\operatorname{adj}M)$:
+\begin{equation}\label{eq:A2}
+\begin{aligned}
+(k+1)\varphi_1\bigl(Q(\dot v)PN\det M\bigr)&=\pi_1(PN\theta)+\kappa\,\mathfrak D_{\dot v}(PN),\\
+(k+1)\varphi_2\bigl(Q(\dot v)PN\det M\bigr)&=\pi_2(PN\theta)-\lz\kappa\,\mathfrak D_{\dot v}(PN).
+\end{aligned}
+\end{equation}
+\emph{Step B.} Let $Q=Q(\dot v)$. From $A_0=-\lz B_0$, the key lemma (which gives
+$\varphi_1(QG_1G_2')=\varphi_1(QN\det M\,G_2')$ and $\varphi_2(QG_1G_1')=0$) and $G_2=\lz(G_1-N\det M)$:
+\[
+A_0=\lz\Bigl[\varphi_2\bigl(QNN'\det M^2\bigr)+\varphi_{\delta_{\lz}}\bigl(QN\det M\,G_2'\bigr)
++\varphi_{\delta_{\lz}}\bigl(QN'\det M\,G_2\bigr)\Bigr].
+\]
+\emph{Step C.} By \eqref{eq:A2} with $P=G_2'$ (the $\mathfrak D$-terms cancel, $\kappa-\lz\cdot\lz\kappa=0$):
+$(k+1)\varphi_{\delta_{\lz}}(QN\det M\,G_2')=u_1(G_2')(N\theta)+\lz u_2(G_2')(N\theta)=\lz\omega_{N'}(N\theta)
+=\lz\kappa\varrho(NN'\theta)$, and the same for the third term. By \eqref{eq:A2} with $P=N'\det M$:
+$(k+1)\varphi_2(QNN'\det M^2)=\pi_2(N'\det M\,N\theta)-\lz\kappa\mathfrak D_{\dot v}(NN'\det M)
+=-\lz\kappa[\varrho(NN'\theta)+\mathfrak D_{\dot v}(NN'\det M)]$. Hence
+$(k+1)A_0=\kappa[\varrho(NN'\theta)-\mathfrak D_{\dot v}(NN'\det M)]$. Both sides of the formula vanish for
+$N\in(f,h,p,s)_\tau$: the right side because a generator $\phi$ of degree $\le\tau$ has $\dot\phi=0$ ($r>\tau$).
+
+(4) In coordinates $(x',y)$ on $\cM_\lambda$, $\phi_Q=\sum_{a\le b}y_ay_b\upsilon_{Q,ab}(x',y)$ by (1), and by (2)
+the quadratic form $\sum\upsilon_{Q,ab}(X,0)y_ay_b$ is $c_0\frac{\lambda-\lz}{\lambda}\mathcal Q_0(N,N)(Q)$ in the
+coordinates of $E$ given by $dy\circ G_\lambda$. Let $Q_1,\dots,Q_t$ be a basis of $K$. If the quadrics have no
+common zero, then by compactness of the unit sphere and continuity there are $c>0$ and a neighbourhood of $X$ in
+$\VZ$ on which $\max_a|\sum\upsilon_{Q_a,\cdot}(x',0)yy|\ge c|y|^2$, while $\phi_{Q_a}$ differs from its quadratic
+part by $O(|y|^3)$ uniformly. So the common zero set of the $\phi_Q$ is $\{y=0\}$ near $X$. The Zariski tangent
+space of $\NL(\delta_\lambda)$ at points of $\VZ$ has dimension $\dim\VZ+\et>\dim\VZ$.
+\end{proof}
+
+\begin{corollary}[one excess direction on surfaces, $\tau>0$; read by referee 18]\label{cor:surf}
+Consider one of the four surface types listed after Corollary~4 ($k=1$, $\tau>0$,
+$\et=1$, the range, $K\ne0$). Exactly one of the forms $f,h,p,s$ is not linear; call it $\phi$, let $\phi^*$ be
+its partner in \eqref{eq:F} (so $F\equiv\phi\phi^*$ modulo the other products), and let $o$ be the point where the
+three linear forms vanish. Work in coordinates of $\PP^3$ in which the three linear forms and a fourth linear
+form $y$ are the coordinate functions (so $y(o)=1$; in other coordinates the right side below is multiplied by
+$J^{-1}$, $J$ the determinant of these four linear forms), and let $N=y^\tau$ generate $E$. Then, with $A$
+normalised by $G_{\lz}=N\det M$ and $r=4$, for every virtual deformation $\dot v$ of weight $-4$:
+\[
+A\bigl(Q(\dot v)\bigr)=\pm\frac{\kappa}{2}\Bigl[\frac{\operatorname{tr}(\dot M\operatorname{adj}M)(o)}{\phi(o)}
+-\frac{\det M(o)\,\dot\phi(o)}{\phi(o)^2}\Bigr],
+\]
+the sign depending only on the type. Consequently:
+\begin{enumerate}
+\item if $d\ge6$, then $A\ne0$ at every smooth $X$ of the type;
+\item if $d=5$ (the first three types), then $K=\langle\phi^*\rangle$ and $A\ne0$ if and only if $\det M(o)\ne0$,
+which holds for general data. For two coplanar lines on a quintic this says: the residual plane cubic
+$\{M_{00}=0\}$ does not pass through the point where the lines meet.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+In these coordinates $\cA=\CC[y]/(y^a)$ with $a=\deg\phi$, and by the transformation law every symbol
+$\Res_S[P/(\dots)]$ occurring is, up to one common sign (the position of $\phi$ in the sequence), the
+one-variable residue of the restriction to the line $x_0=x_1=x_2=0$: $\varrho(P)=\pm P_{a-1}/\phi(o)$
+and $\Res_S[P/(\dots,\phi^2,\dots)]=\pm P_{2a-1}/\phi(o)^2$, where $P_j$ is the coefficient of $y^j$ in the
+restriction ($\phi(o)\ne0$ by Lemma~\ref{lem:alg}). A linear form $\ell$ among $f,h,p,s$ has $\dot\ell=0$, since
+$r\ge2$. Here $\sigma'=d-4$, $r=4$, and $\deg\phi\ge4$ in all four types ($d-1$ with $d\ge5$, or $d-2$ with
+$d\ge6$). Insert in Theorem~\ref{thm:FA2}(3) with $N=N'=y^\tau$, $k=1$, $c_0=1$; the degrees are such that
+$y^{2\tau}\operatorname{tr}(\dot M\operatorname{adj}M)$ has degree $a-1$ and $y^{2\tau}\det M\,\dot\phi$ degree $2a-1$.
+
+(1) (Referee~18.) For $d\ge6$ one entry $\dot M_{i0}$ of $\dot M$ may be taken to be $y^{d-6}$, with the other
+entries of $\dot M$, and $\dot\phi$, zero. For $c=1$ (two coplanar lines; two plane curves of degree $d-1$)
+$\operatorname{adj}M=(1)$ and $A(f_0h_0y^{d-6})=\pm\frac\kappa2/\phi(o)\ne0$. For $c=2$,
+$\operatorname{tr}(\dot M\operatorname{adj}M)=\dot M_{00}M_{11}-\dot M_{10}M_{01}$, so it suffices that
+$(M_{01}(o),M_{11}(o))\ne0$: for the line and the curve of degree $d-1$ these are constants, not both zero
+because $\det M\not\equiv0$; for the curve of degree $d-2$, $\nabla F(o)=h_1(o)\bigl(M_{01}(o)\nabla f_0+M_{11}(o)\nabla f_1\bigr)$,
+which is nonzero as $X$ is smooth at $o$. (2) For $d=5$ only $\dot\phi\in\CC$ is nonzero, $K=\langle\phi^*\rangle$,
+and $A(\phi^*)=\mp\frac\kappa2\det M(o)/\phi(o)^2$; the condition $\det M(o)\ne0$ is open and non-empty on the
+irreducible space of data, hence compatible with smoothness of $X$. For coplanar lines $\det M=M_{00}$, and the
+plane section of $X$ is $\{f_0M_{00}h_0=0\}$.
+\end{proof}
+
+\begin{corollary}[cubic sixfolds, two $3$-planes meeting in a line]\label{cor:six}
+Let $X\subset\PP^7$ be a smooth cubic containing two $3$-planes $\Pi_1=V(f_0,f_1,p_1,p_2)$,
+$\Pi_2=V(h_0,h_1,p_1,p_2)$ with $L=\Pi_1\cap\Pi_2$ a line ($k=d=3$, $c=2$, $\tau=1$, $\lz=-1$, $\et=2$,
+$K=\langle p_1,p_2\rangle$), and let $\bar m$, $\bar s_1$, $\bar s_2$ be the restrictions of $\det M$, $s_1$, $s_2$ to
+$L$ (binary quadrics).
+\begin{enumerate}
+\item The two quadrics of Theorem~\ref{thm:FA2}(4) are nonzero multiples of
+$N\mapsto\Res_{\CC[y_1,y_2]}[\bar N^2\bar m/(\bar s_l^2,\bar s_{l'})]$, $l=1,2$, and they have no common zero if
+and only if $\bar m$ has two distinct zeros on $L$ and $\bar m\notin\langle\bar s_1,\bar s_2\rangle$. In that case,
+for every $\lambda\notin\{0,-1\}$, $\NL([\Pi_1]+\lambda[\Pi_2])_{\mathrm{red}}=\VZ$ near $X$, with a non-reduced
+structure.
+\item At every such $X$ and for every $\lambda\notin\{0,-1\}$ the germ of $\NL([\Pi_1]+\lambda[\Pi_2])$ at $X$ is
+non-reduced, hence not smooth; for $\lambda=-1$ it is smooth (Theorem~2(4)).
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(1) $g_i,q_j,s_l,f_ih_j$ have degree $2>\sigma'=1$, so $K=\langle p_1,p_2\rangle$ and the only virtual deformations
+are $\dot s_l\in\CC$; Theorem~\ref{thm:FA2}(3) gives $\mathcal Q_0(N,N)(p_l)=-\frac\kappa4\Res_S[N^2\det M/(f,p;h,\dots,s_l^2,\dots)]$,
+and the transformation law reduces the symbol to $L$. As $X$ is smooth along $L$, the pencil
+$\langle\bar s_1,\bar s_2\rangle$ has no base point; it contains exactly two squares (a pencil tangent to the conic of squares at $\ell^2$ consists
+of multiples of $\ell$ and has a base point), so we may assume
+$\bar s=(y_1^2,y_2^2)$. For $\bar m=\alpha y_1^2+\beta y_1y_2+\gamma y_2^2$ and $\bar N=ay_1+by_2$ the two quadrics
+are $a(a\beta+2b\alpha)$ and $b(2a\gamma+b\beta)$ up to constants, with a common zero iff $\beta=0$ or
+$\beta^2=4\alpha\gamma$ (referee~17). (2) The condition in (1) holds for general data (for instance on the Fermat
+cubic with the planes $x_0+x_1=x_2+x_3=x_4+x_5=x_6+x_7=0$ and $x_0+x_2=x_1+x_3=x_4+x_6=x_5+x_7=0$: referee~17), and
+$\mu$ is a submersion onto $\VZ$ (Lemma~\ref{lem:mu}); so $\NL$ is non-reduced at a dense set of points of $\VZ$
+near $X$, and the non-reduced locus of an analytic space is closed.
+\end{proof}
+
+\run{Remarks.} (i) At special $X$ the quadrics can vanish identically: on the Fermat cubic with two planes of the
+\emph{same} matching ($f=(x_0+x_1,x_2+x_3)$, $h=(x_0+\omega x_1,x_2+\omega x_3)$) one has $M|_L=0$; there (2) holds
+but nothing is said about the support. This is the vanishing at the Fermat point met in \cite{P1,P2}.
+(ii) As digested, \cite[Conj.~6, 7]{Mo} assert for $n=6$ that the locus is smooth exactly for the coefficients
+$(1,-1)$, at the Fermat point, and report a computer proof of the non-smooth half for $n=6,8$;
+Corollary~\ref{cor:six}(2) with Theorem~2(4) gives that dichotomy at every smooth $X$ for $n=6$. The comparison
+with the wording of the conjectures has not been made by a person. The case was treated by direct computation
+in \cite{P1}. (iii) Theorem~\ref{thm:FA2}(4) needs $\dim K\ge\et$; when $\dim K<\et$ the quadrics always have
+common zeros and the structure of $\NL(\delta_\lambda)$ is not determined here. (iv) On the Fermat surface of
+degree $d$ the $d$ lines in a plane $x_0=\zeta x_1$ are concurrent, so for two of them $M_{00}(o)=0$: by
+Corollary~\ref{cor:surf}, $A=0$ on the Fermat quintic and $A\ne0$ for $d\ge6$ (both confirmed modulo a prime by
+referee~18).
+
+\run{Checks} (modulo primes; file \texttt{formula\_g2/REPORT\_FG2.md}; the program module is the one used for
+\S\ref{sec:conj}, so these tests are not independent of the earlier ones). The law (2) and the formula (3) were
+tested at $41$ instances of $17$ degree types in the range with $\tau\in\{1,2\}$, $\et\in\{1,2,3,6\}$,
+$k\le3$, $c\le4$ and both signs of $\lz$ (three of the instances were special, the others random): the computed bilinear form
+vanishes at $\lz$, the rescaled form is the same for five values of $\lambda\ne\lz$, and (3) holds exactly, with
+the same normalisation constant as in \S\ref{sec:conj}, on $1222$ test triples $(N,N',Q(\dot v))$ ($1219$ of them
+nonzero), including pairs $N\ne N'$ and all five kinds of generators of $K$. This includes coplanar lines for
+$d=5,6,7$, i.e.\ the input of Corollary~\ref{cor:surf}; its closed form was tested afterwards by referee~18, modulo one
+prime, in $30$ runs covering the four types (proportionality on up to $30$ generators per run, not the absolute
+constant), including instances with $\det M(o)=0$ and the Fermat surfaces of degree $5,6,7$ (files
+\texttt{referee18/}).
+For the type of Corollary~\ref{cor:six} the two quadrics had nonzero resultant in $5$ of $5$ generic instances
+(three primes) and a common zero in three instances built to violate the criterion ($\bar m$ a square;
+$\det M\in(f,h,p,s)$). Exact over $\QQ$: the two-variable computation of Corollary~\ref{cor:six}(1) at six random
+instances and at the Fermat instance of its proof (files \texttt{fa2\_check/}, \texttt{referee17/}). The
+algebra of the normal form in the proof of Corollary~\ref{cor:six} is certified by the Lean~4 kernel (file
+\texttt{SixfoldCriterionCert.lean}, ten theorems, nine over an arbitrary commutative ring and one over $\ZZ$: the two coefficients of
+$\bar N^2\bar m$; identities exhibiting $\beta(\beta^2-4\alpha\gamma)a^3$ and $\beta(\beta^2-4\alpha\gamma)b^3$ as
+combinations of the two quadrics; the common zeros $(1,0)$ if $\beta=0$ and $(2\alpha,-\beta)$ if
+$\beta^2=4\alpha\gamma$; and, for one four-variable block of the Fermat cubic, the identity $x_0^3+\dots+x_3^3=f_0M_{00}h_0+p_1s_1$ with
+$M_{00}|_L=6x_0$, $s_1|_L=3x_0^2$, whence $\bar m=36y_1y_2$, $\bar s=(3y_1^2,3y_2^2)$); it certifies nothing about
+residues or Hodge loci. Parts (1)
+and (4) of Theorem~\ref{thm:FA2} were not tested beyond first-order dimensions.
+
+
+\subsection{Outside the range}\label{sec:FA3}
+
+Without the range, $S_d/(T_1+T_2)=\cA_d$ need not vanish. Put
+\[
+E':=(0:_\cA\det M)_\tau=\ker\bigl(\cdot\det M\colon\cA_\tau\to\cA_d\bigr)\subset E,\qquad
+\text{(S):}\quad \cdot\det M\colon\cA_\tau\to\cA_d\ \text{is surjective}.
+\]
+By Theorem~2(5), $T\NL(\delta_\lambda)/T\VZ\cong E'$ for $\lambda\notin\{0,\lz\}$; in the range $E'=E$ and (S) holds
+trivially. Let $K:=(I_1+I_2)^\perp=[(f)(h)+(g)+(q)+(p)+(s)]_{\sigma'}$ as before (Lemma~\ref{lem:mu}) and
+$K_\lambda:=(\operatorname{im}(u_1+\lambda u_2))^\perp\supseteq K$, the space of forms $Q$ with
+$d\Phi^{\delta_\lambda}_Q(X)=0$; $r=d-\sigma'$ may now have any sign.
+
+\begin{theorem}[read by referee 19]\label{thm:FA3}
+In the setting, with $\tau\ge0$ and no range hypothesis, let $\lambda\notin\{0,\lz\}$.
+\begin{enumerate}
+\item[\textup{(0)}] $\dim K_\lambda-\dim K=\dim\operatorname{coker}(\cdot\det M\colon\cA_\tau\to\cA_d)$; so
+$K_\lambda=K$ if and only if \textup{(S)} holds.
+\item \emph{Law.} For $N\in E'$ let $G_\lambda(N)\in\ker(u_1+\lambda u_2)$ be the class modulo $T\VZ$ with
+$u_1(G_\lambda(N))=\omega_N$. There is a symmetric bilinear map $\mathcal Q_0\colon E'\times E'\to K^*$,
+independent of $\lambda$, such that for $Q\in K$ and $N,N'\in E'$
+\[
+\tfrac12\Hess\Phi^{\delta_\lambda}_Q\bigl(G_\lambda(N),G_\lambda(N')\bigr)=c_0\,\frac{\lambda-\lz}{\lambda}\,\mathcal Q_0(N,N')(Q),
+\]
+and $T\VZ$ lies in the kernel of this Hessian on $\ker(u_1+\lambda u_2)$.
+\item \emph{Formula.} Assume $r\ge0$. Then the formula of Theorem~\ref{thm:FA2}(3) holds for
+$N,N'\in S_\tau$ with classes in $E'$.
+\item \emph{Not smooth.} If $\mathcal Q_0\ne0$ at $X$, then $\NL(\delta_\lambda)$ is not smooth at $X$ (as an
+analytic space). If $\mathcal Q_0\ne0$ at one smooth $X$ of a degree type at which $\dim E'$ is minimal (or if,
+for $r\ge0$, the right side of (2) is nonzero at one point of the space of data at which
+$(f,h,p,s)$ is regular and $\dim E'$ is minimal, $X$ possibly singular, and the type admits a smooth $X$), then
+$\NL(\delta_\lambda)$ is singular at every smooth $X$ of that type.
+\item \emph{Structure.} Assume \textup{(S)} at $X$. Then the statements of Theorem~\ref{thm:FA2}(1) and (4) hold
+near $X$ with $E$ replaced by $E'$: $\NL(\delta_\lambda)=\{\phi_Q=0,\ Q\in K\}$ in a smooth germ of dimension
+$\dim\VZ+\dim E'$, $\phi_Q\in(y)^2$, and if the quadrics $N\mapsto\mathcal Q_0(N,N)(Q)$, $Q\in K$, have no common
+zero in $\PP(E')$, then $\NL(\delta_\lambda)_{\mathrm{red}}=\VZ$ and $\NL(\delta_\lambda)$ is non-reduced along $\VZ$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The inputs are range-free: Lemmas~\ref{lem:T}, \ref{lem:mu}, \ref{lem:det}, Theorem~1, and Theorem~2(1), (4),
+(5) and the embedding in (2) (referee~19 checked this in the proofs above). (0) $I_i\cong S_d/T_i$,
+$\dim(I_1\cap I_2)=\et$ and $\dim(T_1\cap T_2)=\dim T_1+\dim T_2-\dim S_d+\dim\cA_d$ give
+$\dim(I_1+I_2)-\operatorname{rank}(u_1+\lambda u_2)=\dim\cA_d-(\et-\dim E')$, by Theorem~2(5).
+
+(1) The key lemma holds for $Q\in K=I_1^\perp\cap I_2^\perp$: $V_i$ is smooth with tangent space $T_i$,
+$\Phi^{\delta_i}_Q$ vanishes on it and has zero differential at $X$. For $N\in S_\tau$ with
+$N\det M=H_1+H_2$, $H_i\in T_i$, put $G_2(N):=-\lz H_1\in T_1$ and $G_1(N):=H_2=N\det M+\lz G_2(N)\in T_2$; then
+$u_2(G_2(N))=\omega_N=u_1(G_1(N))$ by Lemma~\ref{lem:det}, and $G_\lambda(N):=G_1(N)-G_2(N)/\lambda$ has the
+required properties. For $z\in T_1\cap T_2$ the key lemma gives
+$\varphi_{\delta_\lambda}(QzG_\lambda(N))=\varphi_1(QzG_1)-\varphi_2(QzG_2)=\varphi_{\delta_{\lz}}(Qz\,N\det M)$, which
+vanishes because $\NL(\delta_{\lz})$ is smooth with tangent space $T\VZ+\det M\cdot S_\tau$ (Theorem~2(4)),
+$\Phi^{\delta_{\lz}}_Q$ vanishes on it, and $Q\in K\subset K_{\lz}$. Also $\varphi_i(Qzz')=0$ for
+$z,z'\in T_1\cap T_2$ by the key lemma, and every element of $\ker(u_1+\lambda u_2)$ is $G_\lambda(N)+z'$ with
+$N\in E'$ (Theorem~2(5)). So $T\VZ$ is in the kernel, and the form
+depends only on the classes; another decomposition, or another representative of $N$ modulo $(f,h,p,s)_\tau$,
+changes $G_\lambda(N)$ by an element of $T_1\cap T_2$. The expansion into $A_0+B_0/\lambda$ and the identity
+$A_0+B_0/\lz=0$ are as in the proof of Theorem~\ref{thm:FA2}(2).
+
+(2) Steps A--C of the proof of Theorem~\ref{thm:FA2}(3) use the range only through the existence of $G_2(N)$,
+which is the condition $N\in E'$, and through $S_{\sigma'}S_r=S_d$, which needs $r\ge0$. (Both sides vanish for
+$N\in(f,h,p,s)_\tau$ and $N'\in E'$: on the right, the term of $\mathfrak D_{\dot v}$ with $\phi$ squared is
+$\varrho(a\,\dot\phi\,N'\det M)=0$ for $N=a\phi$.)
+
+(3) Let $\cM_\lambda$ be the zero germ of the $\Phi_{Q_a}$, $Q_a$ spanning a complement of $K_\lambda$: smooth,
+with tangent space $T\NL(\delta_\lambda)$. If $\NL(\delta_\lambda)$ were smooth it would equal $\cM_\lambda$, so
+every $\Phi_Q|_{\cM_\lambda}$ would vanish and so would its Hessian, which for $Q\in K$ is the left side of the
+law. For the second statement (referee~19): where $\dim E'$ is minimal, $K$ and $E'$ are vector bundles on the
+connected space of data and $\mathcal Q_0$ is a holomorphic section, so it is nonzero off a proper analytic
+subset; $\mu$ is open onto $\VZ$ (Lemma~\ref{lem:mu}), and the singular locus of an analytic space is closed.
+For $r\ge0$ the right side of (2) is a regular function on the irreducible bundle of triples (data, $N$, $N'$)
+with $N,N'\in E'$ over the open set where $(f,h,p,s)$ is regular and $\dim E'$ is minimal; so ``nonzero'', (S)
+and ``no common zero'' at one point of it, even one with $X$ singular, hold on a dense open set, which meets
+the open set where $X$ is smooth.
+
+(4) (S) is open, so near $X$ on $\VZ$ the dimension of $E'$ is constant and $K_\lambda=K$ by (0); now argue as
+for Theorem~\ref{thm:FA2}(1), (4).
+\end{proof}
+
+\begin{propallr}[the formula for every $r$; added in version 20; first proof read by referee 24, who found a
+gap and supplied step (ii) below; present proof read by referee 25]
+Assume $\tau\ge0$; the integer $r=d-\sigma'$ may have any sign. For $r<0$ call a \emph{virtual deformation of weight
+$-r$} a tuple $\dot v=(\dot f,\dot h,\dot p,\dot s,\dot M)$ of forms of degrees $\deg f_i-r$, $\deg h_j-r$,
+$\deg p_l-r$, $\deg s_l-r$ and $d-\deg f_i-\deg h_j-r$ for $\dot M_{ij}$ (zero if this number is negative; $\dot M_{ij}$
+may be nonzero also where $M_{ij}=0$ for degree reasons), and define $Q(\dot v)$,
+$\theta=\operatorname{tr}(\dot M\operatorname{adj}M)$ and $\mathfrak D_{\dot v}$ by the formulas of \S\ref{sec:conj}. Then
+$K=\{Q(\dot v)\}$; the two identities \eqref{eq:A2} hold for all $P\in S_d$, $N\in S_\tau$; and the formula of
+Theorem~\ref{thm:FA2}\textup{(3)} holds for all $N,N'\in S_\tau$ with classes in $E'$. So the hypothesis $r\ge0$ in
+Theorem~\ref{thm:FA3}\textup{(2)} and \textup{(3)} is not needed.
+\end{propallr}
+\begin{proof}
+Let $r<0$. By Lemma~\ref{lem:mu}, $K=(I_1+I_2)^\perp$ is the degree-$\sigma'$ part of $(f)(h)+(g)+(q)+(p)+(s)$
+(\S\ref{sec:FA3}), and the multipliers of $f_ih_j$, $g_i$, $q_j$, $s_l$, $p_l$ in degree $\sigma'=d-r$ have the
+degrees prescribed for $\dot M_{ij}$, $\dot f_i$, $\dot h_j$, $\dot p_l$, $\dot s_l$; so $K=\{Q(\dot v)\}$. Both sides of
+\eqref{eq:A2} are linear in $\dot v$, so it suffices to treat (i) tuples with $\dot M=0$ and (ii) tuples whose only
+nonzero entry is one $\dot M_{ij}=m$.
+
+(i) The members $f_i,h_j,p_l,s_l$ have positive degree, and a form of degree $b-r$, $b\ge0$, is a sum
+$\sum_aL_aw_a$ with $L_a$ running over the monomials of degree $-r$ and $w_a\in S_b$. Doing this for every entry,
+$\dot v=\sum_aL_a\,w^{(a)}$, where each $w^{(a)}$ is a tuple of forms of the degrees of the data themselves, with zero
+matrix part. The first part of Step~A of the proof of Theorem~\ref{thm:FA2}(3), for the family
+$(f,h,p,M,s)+\epsilon\,w^{(a)}$ (a family of data, so no factor $N_r$ is needed) and for $Q'\in S_{\sigma'}$,
+$N\in S_\tau$, gives
+\[
+(k+1)\varphi_1\bigl(Q(w^{(a)})\,Q'N\det M\bigr)=\kappa\,\mathfrak D_{w^{(a)}}(Q'N),
+\]
+and the same with $\varphi_2$ and $-\lz\kappa$ ($\theta=0$ here). $\mathfrak D_w(P')$ is defined for such a tuple $w$
+and $P'\in S_{\sigma'+\tau}$ by the formula of \S\ref{sec:conj}, the symbols being again in their socle degrees.
+This uses Lemma~\ref{lem:mu} (the family stays in $\VZ$ and the setting holds along it), (A), Lemma~\ref{lem:det},
+Lemma~\ref{lem:PF}(1), (4), (G) and the derivative rule from (R), and no hypothesis on $r$. Now let $P\in S_d$, put
+$Q':=PL_a\in S_{\sigma'}$ and sum over $a$: since $Q(Lw)=LQ(w)$ and $\mathfrak D_{w}(LP')=\mathfrak D_{Lw}(P')$, the sum
+is \eqref{eq:A2} for $\dot v$.
+
+(ii) Here $Q(\dot v)=m\,f_ih_j$, $\theta=m\operatorname{adj}(M)_{ji}$ and $\mathfrak D_{\dot v}=0$. From
+$g=Mh$, $h_j\det M=\sum_{i'}\operatorname{adj}(M)_{ji'}g_{i'}$. Let $\Phi^1_{(\nu)}$ be $\Phi^1=(f,p;g,s)$ with the members
+of its $\nu$-th pair squared. Modulo $\Phi^1_{(\nu)}$ the product $f_ig_{i'}$ vanishes unless $i=i'$ and $\nu$ is
+the pair $(f_i,g_i)$, so $f_ih_j\det M\equiv\operatorname{adj}(M)_{ji}f_ig_i$ for that $\nu$ and $\equiv0$ for the
+others; by (R), for $B\in S_{d+\tau}$,
+$\sum_\nu\Res_S[m f_ih_jB\det M/\Phi^1_{(\nu)}]=\Res_S[mB\operatorname{adj}(M)_{ji}/\Phi^1]$. By Lemma~\ref{lem:PF}(3) and
+(1) for $Y_1$ this says $(k+1)\varphi_1(Q(\dot v)B\det M)=\pi_1(B\theta)$, the first identity \eqref{eq:A2} for $B=PN$.
+The second follows in the same way from $q=M^\T f$, $f_i\det M=\sum_{j'}\operatorname{adj}(M)_{j'i}q_{j'}$ and
+$\Phi^2=(h,p;q,s)$. (This step is valid for every entry of $\dot M$ and every $r$.)
+
+Steps~B and~C of the proof of Theorem~\ref{thm:FA2}(3) use only \eqref{eq:A2}, the key lemma, Lemma~\ref{lem:det},
+the relation $A_0=-\lz B_0$ (Theorem~1, through Theorem~\ref{thm:FA3}(1)) and the decomposition $N\det M=H_1+H_2$
+of the proof of Theorem~\ref{thm:FA3}(1); they give the formula for each pair $N,N'$ with classes in $E'$. (The
+last sentence of Step~C, on representatives, uses the range; outside the range it is replaced by the
+parenthesis in the proof of Theorem~\ref{thm:FA3}(2), which does not involve the sign of $r$.) In Theorem~\ref{thm:FA3}(3) the sign of $r$ entered only through the formula.
+\end{proof}
+
+\run{Remark on $r<0$.} For $r<0$ one has $\tau\le d<\sigma'=\sigma-\tau$, where $\sigma$ is the socle degree of $\cA$; the Hilbert function
+of the complete intersection $\cA$ is symmetric about $\sigma/2$ and unimodal, so $\dim\cA_\tau\le\dim\cA_d$, and
+$E'=0$ whenever multiplication by $\det M$ is injective on $\cA_\tau$. Referee~24 expected this for general data. It holds at random data modulo $32003$
+and $30011$ in all $19$ degree types with $r<0$ that were tried ($k\le5$, $c\le2$; coordinating thread, after
+version~20), hence for general data of these types. So, at least in these types, for $r<0$ the
+formula has content only at special $X$, such as the Fermat point of the Checks below (two planes with different pairings of the coordinates:
+$\dim E'=2$; for two planes with the same pairing referee~25 finds $\dim E'=3$). No
+corollary of this paper uses $r<0$: all rows of Table~\ref{tab:lin} and Corollary~\ref{cor:eight} have $r\ge1$.
+
+
+\run{Checks of Proposition~\allr.} (a) At a Fermat point of type $(d,k,c)=(7,2,1)$ (two planes in $\PP^5$ meeting in a line, with the pairings
+$(01)(23)(45)$ and $(01)(24)(35)$ of the coordinates: $r=-1$, $\tau=2$), by
+the pole-order reduction of Remark~\ref{rem:r2}(d), modulo $30059$: the law holds, and the formula agrees with
+the reduction for $40$ random virtual deformations of weight $1$ ($1440$ comparisons, $288$ non-zero); likewise
+for $(6,2,1)$, where $r=0$ ($1440$ comparisons, $324$ non-zero). As in Remark~\ref{rem:pw}(iii), at such points
+this tests the algebra that leads from Lemma~\ref{lem:PF} to the formula, and the conventions, not
+Lemma~\ref{lem:PF}(3) itself. (b) Given Lemma~\ref{lem:PF}(1), (3) and Lemma~\ref{lem:det}, the identities \eqref{eq:A2} amount to two
+identities between residue symbols of forms,
+\[
+\sum_\nu\Res_S\Bigl[\frac{Q(\dot v)PN\det M}{\Phi^i_{(\nu)}}\Bigr]=\Res_S\Bigl[\frac{PN\theta}{\Phi^i}\Bigr]\pm_i\,\mathfrak D_{\dot v}(PN),
+\qquad \pm_1=+1,\ \pm_2=-\lz,
+\]
+where $\Phi^i_{(\nu)}$ is $\Phi^i$ with the members of its $\nu$-th pair squared. These are pure algebra and hold whether or not Lemma~\ref{lem:PF}(3) does (for tuples with $\dot M=0$, and for
+$r\ge0$, they are the derivative of the identity of Lemma~\ref{lem:det}; for the matrix part with $r<0$ they are
+the Cramer identity of step (ii)). So testing them checks the bookkeeping of the proposition only: degrees,
+signs, and the entries $\dot M_{ij}$ at positions where $M_{ij}$ has negative formal degree. At random data (all sequences regular; $X$ not tested for smoothness, which these identities do
+not need): modulo $32003$ and $30011$, with four random pairs $(P,N)$ per run, for
+$r<0$ in $43$ runs of $22$ degree types ($k=2,3,4$; $c=1,2$; $-4\le r\le-1$; in five of the types an entry of $M$ has
+negative formal degree) and for $r\ge0$ in $22$ runs of $11$ types: both identities hold in all $260$ instances,
+with non-zero values, and fail if the $\mathfrak D$-term is dropped. Six further types with $r<0$, among them the
+three with $c=3$, did not finish within the time limit.
+Referee~24 tested the same identities with its own program in $31$ instances of $8$ types, $5$ of them with
+$r<0$. (c) Not tested: the law itself at a random point with $r<0$ (one attempt with the implementation of
+Remark~\ref{rem:r2}(e) did not finish).
+
+\begin{corollary}[cubics outside the range]\label{cor:eight}
+\begin{enumerate}
+\item Let $X\subset\PP^9$ be a smooth cubic containing two $4$-planes $\Pi_1,\Pi_2$ meeting in a plane
+($k=4$, $c=2$, $\tau=1=r$, $\lz=-1$). Then $\NL([\Pi_1]+\lambda[\Pi_2])$ is non-reduced, hence not smooth, at $X$
+for every $\lambda\notin\{0,-1\}$, and smooth for $\lambda=-1$. For general such $X$,
+$\NL([\Pi_1]+\lambda[\Pi_2])_{\mathrm{red}}=\VZ$ for $\lambda\notin\{0,-1\}$.
+\item The same holds for a smooth cubic $X\subset\PP^7$ containing two $3$-planes meeting in a plane
+($k=3$, $c=1$, $\tau=2=r$), with $\lz=+1$ in place of $-1$.
+\item The same holds for a smooth cubic $X\subset\PP^9$ containing two $4$-planes meeting in a $3$-plane
+($k=4$, $c=1$, $\tau=2$, $r=1$), with $\lz=+1$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+In (1) and (2), $\cA=\CC[y_1,y_2,y_3]/(\bar s_1,\bar s_2,\bar s_3)$ (restriction to $\Pi_1\cap\Pi_2$), with Hilbert
+function $1,3,3,1$, $\dim\cA_d=1$, and (S) holds if and only if $\det M\notin(f,h,p,s)$; then $\dim E'=2$.
+(1) $\et=3$, $\sigma'=2$; the virtual deformations of weight $-1$ include $\dot M=E_{ij}$, with $Q=f_ih_j$ and
+$\mathcal Q_0(N,N')(f_ih_j)=\frac\kappa5\varrho(NN'\operatorname{adj}(M)_{ji})$, and $\dot s_l$ a linear form.
+(2) $\et=\dim\cA_2=3$, $\sigma'=1$, $K=\langle p_1,p_2,p_3\rangle$ and
+$\mathcal Q_0(N,N')(p_l)=-\frac\kappa4\Res_S[NN'M_{00}/(f,p;h,\dots,s_l^2,\dots)]$. Exact computations over $\QQ$ on
+restricted data (files \texttt{fa3\_check/}; reproduced with independent code by referee~19, files
+\texttt{referee19/}): in six, respectively five, random instances the quadrics span all binary quadrics on
+$E'$, so they have no common zero. Smooth instances with (S) and $\mathcal Q_0\ne0$ exist (Fermat cubics with
+planes from two different matchings: referee~19). (3) $\cA=\CC[y_1,\dots,y_4]/(\bar s_1,\dots,\bar s_4)$, with Hilbert
+function $1,4,6,4,1$; $\et=6$, $\dim\cA_3=4$, $\det M=M_{00}$ is linear, and (S) says $\bar M_{00}\cA_2=\cA_3$; then
+$\dim E'=2$. Here $\dot M_{00}\in\CC$ gives $\mathcal Q_0(N,N')(f_0h_0)=\frac\kappa5\varrho(NN')$ and $\dot s_l$ a linear
+form $\ell$ gives $-\frac\kappa5\Res_S[NN'M_{00}\ell/(\dots,s_l^2,\dots)]$; in three random instances (file
+\texttt{fa3\_check/eightfold\_3plane.py}) (S) holds and these quadrics span all
+binary quadrics on $E'$ (reproduced by referee~20 with its own exact code, at these and two further
+instances, with all $17$ quadrics of the two kinds); smooth $X$ of this kind exist (the Fermat cubic; (S) fails
+at the natural pairs of planes there, which does not matter for the closure argument). Apply Theorem~\ref{thm:FA3}(3), (4), the closedness of the
+non-reduced locus, and Theorem~2(4) at $\lz$.
+\end{proof}
+
+\begin{proposition}[referee 19]\label{prop:k5}
+For cubics containing two $k$-planes that meet in codimension two ($c=2$, $\tau=1$) with $k\ge5$, the map
+$\cdot\det M\colon\cA_1\to\cA_3$ is injective for general data. Hence at a general smooth such $X$ there is no
+excess for $\lambda\notin\{0,-1\}$: $\NL([\Pi_1]+\lambda[\Pi_2])=\VZ$ is smooth for every $\lambda\ne0,-1$, and for
+$\lambda=-1$ it is the larger smooth locus of Theorem~2(4).
+\end{proposition}
+\begin{proof}
+$\cA=\CC[y_1,\dots,y_{k-1}]/(\bar s)$ with $k-1$ quadrics, and $\bar m=\det M|_{\Pi_1\cap\Pi_2}$ is a quadric of
+rank $\le4$. Injectivity is an open condition on the irreducible space of data; it holds for
+$\bar s=(y_i^2)$, $\bar m=e_2(y_1,\dots,y_4)$ (a quadric of rank $4$, hence a $2\times2$ determinant): on
+$y_1,\dots,y_4$ the map is the incidence matrix of points and triples of $\{1,2,3,4\}$, of determinant $-3$,
+and $y_a\mapsto y_ae_2$ for $a>4$. Now apply Theorem~2(1), (4), (5).
+\end{proof}
+
+\run{Remarks.} (v) Theorem~\ref{thm:FA3} does not control the forms $Q\in K_\lambda\smallsetminus K$, which exist
+exactly when (S) fails. (vi) As digested, \cite[Conj.~6, 7]{Mo} assert, for cubics of dimension $n$ containing
+two linear subspaces meeting in codimension two, that the Hodge locus is smooth exactly for the coefficients
+$(1,-1)$; they are stated at the Fermat point. At every smooth $X$ this dichotomy holds for $n=6$
+(Corollary~\ref{cor:six}) and $n=8$ (Corollary~\ref{cor:eight}); by Proposition~\ref{prop:k5} it
+fails at a general point for $n\ge10$, where the locus is smooth for every $\lambda\ne0$ (as digested, this
+agrees with \cite[Thm.~1.2, 4.9]{Kl}). At the Fermat point itself, with planes of the same matching, the
+quadrics vanish and nothing is decided here. No person has compared these statements with the sources.
+(vii) \emph{Planes meeting in codimension one} ($c=1$, $\lz=1$). As digested by a scout agent, \cite{Kl2} proves
+that for $d=3$, $k>4$, for $d=4,5$, $k>2$, and for $d\ge6$, $k\ge2$ there is an $X$ at which the two loci coincide
+as schemes for all but finitely many $\lambda$ (for all $\lambda\ne0,1$ if $d\ge6$), and remarks
+\cite[Remark~4.9]{Kl2} that for $(d,k)\in\{(3,3),(3,4),(4,2),(5,2)\}$ there is always excess tangent dimension,
+leaving open whether the locus is then non-reduced or of larger dimension. (Its abstract states the coincidence
+for all $k>1$, without these bounds.) These four pairs, with the divisor case $(3,2)$, are exactly the pairs
+with $k\ge2$ and $\dim\cA_2>\dim\cA_d$, in agreement with Theorem~2(5). If the digest is accurate, Theorem~\ref{thm:FA3} answers that question:
+in all four cases the locus is non-reduced at every smooth $X$, for every $\lambda\notin\{0,1\}$, and for
+general $X$ its reduction is $\VZ$. For $(3,3)$ and $(3,4)$ this is Corollary~\ref{cor:eight}(2), (3). For
+$(4,2)$ and $(5,2)$ (two planes meeting in a line on a quartic or quintic fourfold; $r=2$, resp. $1$):
+$\cA=\CC[y_1,y_2]/(\bar s_1,\bar s_2)$ with $\deg\bar s_l=d-1$, (S) holds for general data, $\dim E'=2$, resp. $1$,
+and the quadrics $N\mapsto\varrho(N^2\dot M_{00})$ and $N\mapsto\Res_S[N^2M_{00}\dot s_l/(\dots,s_l^2,\dots)]$ span all
+binary quadrics, resp. are nonzero (exact, three random instances each, restricted data: file
+\texttt{fa3\_check/fourfold\_line.py}; reproduced by referee~21 with independent exact code, files
+\texttt{referee21/}, and by hand at $\bar s=(y_1^3,y_2^3)$, $\bar m=y_1y_2$, resp. $\bar s=(y_1^4,y_2^4)$,
+$\bar m=y_1^3+y_2^3$, $N=y_1y_2$, $\dot M_{00}=y_1y_2$; for both also modulo primes with unrestricted data, see
+the Checks). These two cases were treated by direct computation in \cite{P1}.
+
+\run{Checks} (modulo primes; file \texttt{formula\_g3/REPORT\_FG3.md}; same program module as before). Outside
+the range, parts (0), (1), (2) of Theorem~\ref{thm:FA3} were tested at $63$ instances with $X$ smooth modulo $p$,
+of $39$ degree types with $k\le3$, $c\le4$, $\tau\le6$, $r\in\{2,4\}$, $\dim E'\le10$, $\dim\cA_d\le8$ (nine of the
+instances were built so that (S) fails): in all of them the excess of $\lambda\ne\lz$ is $\dim E'$ and
+$\dim K_\lambda-\dim K$ is as in (0) (five values of $\lambda$); in the $61$ with $E'\ne0$ the law holds and the
+formula is exact, with the same normalisation constant as in the range, on $2284$ test triples ($1687$ nonzero).
+For generic data (S) held in every type tried, and the quadrics had no common zero in $46$ of $52$ runs (in the
+other six, $\dim K=1<\dim E'$); for the type of Corollary~\ref{cor:eight}(2) they span all binary quadrics, as
+in the exact computation. For $Q\in K_\lambda\smallsetminus K$ (instances where (S) fails) the second-order term
+does \emph{not} have $T\VZ$ in its kernel, so Remark~(v) is a real restriction. One further run (coordinating
+thread; type $(d,k,c)=(5,2,1)$, the only one with $r=1$; $X$ smooth modulo $p$): (S) holds, $\dim E'=1$, the law
+holds and the formula is exact on $139$ test triples, all nonzero. Not tested: $r=0$, $k=4$
+(so Corollary~\ref{cor:eight}(1) and (3) rest on the proof and on the exact computations with restricted data), and
+parts (3), (4) beyond the first-order dimensions.
+
+
+\subsection{Two linear subspaces: the complete list at a general point}\label{sec:lin}
+
+Let $\Pi_1,\Pi_2\subset X$ be $k$-planes meeting in dimension $k-c$ ($1\le c\le k+1$) on a hypersurface of degree
+$d\ge3$. Here all $f_i,h_j,p_l$ are linear, $\tau=2c-(c-1)d$, $\lz=(-1)^{c-1}$, and
+$\cA=\CC[y_1,\dots,y_{k+1-c}]/(\bar s)$ with $k+1-c$ forms of degree $d-1$ (the restrictions of the $s_l$ to
+$\Pi_1\cap\Pi_2$). We assume $kd-2k-2\ge1$. In the remaining cases part (3) below fails: for cubic surfaces every $\NL(\delta)$ is
+the whole space; for cubic fourfolds and quartic surfaces $V_1,V_2$ are transversal smooth divisors, $K=0$, and
+$\NL(\delta_\lambda)$ is a smooth divisor strictly containing $\VZ$ for every $\lambda\ne0$. Smooth $X$ exist for all $(d,k,c)$ (Fermat).
+
+\begin{theorem}[written by the coordinating thread; read by referee 21]\label{thm:lin}
+Let $d\ge3$, $k\ge1$, $1\le c\le k+1$ with $kd-2k-2\ge1$.
+\begin{enumerate}
+\item If $\tau<0$ (that is: $c\ge4$; or $c=3$, $d\ge4$; or $c=2$, $d\ge5$), then
+$\NL([\Pi_1]+\lambda[\Pi_2])=\VZ$ for every $\lambda\ne0$, at every smooth $X$.
+\item If $\tau\ge0$, then $\NL([\Pi_1]+\lz[\Pi_2])$ is smooth and strictly larger than $\VZ$, at every smooth $X$.
+\item Let $\tau\ge0$ and $\lambda\notin\{0,\lz\}$, and let $X$ be general among the smooth hypersurfaces
+containing two such planes. If $(d,k,c)$ is not in the list
+\[
+\mathcal L=\{(3,3,1),(3,3,2),(3,3,3),(3,4,1),(3,4,2),(3,4,3),(4,2,1),(4,2,2),(5,2,1)\}\cup\{(d,1,1):d\ge5\},
+\]
+then $\NL([\Pi_1]+\lambda[\Pi_2])=\VZ$ as schemes (smooth). If $(d,k,c)\in\mathcal L$, then
+$\NL([\Pi_1]+\lambda[\Pi_2])$ is $\VZ$ with a non-reduced structure: its reduction is $\VZ$, and its Zariski tangent
+space has dimension $\dim\VZ+e$ with $e$ as in Table~\ref{tab:lin}. For $(d,k,c)\in\mathcal L$ the locus is
+non-reduced at \emph{every} smooth $X$ containing two such planes.
+\end{enumerate}
+\end{theorem}
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}llrrrl@{}}
+\toprule
+$(d,k,c)$ & the two planes & $\tau$ & $\lz$ & $e$ & source of the second-order statement\\
+\midrule
+$(3,3,1)$ & $3$-planes in $\PP^7$ meeting in a plane & $2$ & $1$ & $2$ & Cor.~\ref{cor:eight}(2)\\
+$(3,3,2)$ & $3$-planes meeting in a line & $1$ & $-1$ & $2$ & Cor.~\ref{cor:six}; \cite{P1}\\
+$(3,3,3)$ & $3$-planes meeting in a point & $0$ & $1$ & $1$ & Cor.~\ref{cor:Anz}; \cite{P1}\\
+$(3,4,1)$ & $4$-planes in $\PP^9$ meeting in a $3$-plane & $2$ & $1$ & $2$ & Cor.~\ref{cor:eight}(3)\\
+$(3,4,2)$ & $4$-planes meeting in a plane & $1$ & $-1$ & $2$ & Cor.~\ref{cor:eight}(1)\\
+$(3,4,3)$ & $4$-planes meeting in a line & $0$ & $1$ & $1$ & Cor.~\ref{cor:Anz}; \cite{P1}\\
+$(4,2,1)$ & planes in $\PP^5$ meeting in a line & $2$ & $1$ & $2$ & Remark~(vii); \cite{P1}\\
+$(4,2,2)$ & planes meeting in a point & $0$ & $-1$ & $1$ & Cor.~\ref{cor:Anz}; \cite{P1}\\
+$(5,2,1)$ & planes in $\PP^5$ meeting in a line & $2$ & $1$ & $1$ & Remark~(vii); \cite{P1}\\
+$(d,1,1)$, $d\ge5$ & two coplanar lines & $2$ & $1$ & $1$ & Cor.~\ref{cor:surf}; cf.\ Maclean, Dan\\
+\bottomrule
+\end{tabular}
+\caption{The triples $(d,k,c)$ for which the Hodge locus of $[\Pi_1]+\lambda[\Pi_2]$, $\lambda\notin\{0,\lz\}$, differs
+from $\VZ$ at a general point: there it is $\VZ$ with a non-reduced structure and $e$ extra tangent
+directions.}\label{tab:lin}
+\end{table}
+
+\begin{proof}
+(1), (2) are Theorem~2(3), (4); in (2) the locus is strictly larger because $0\le\tau\le\sigma=\tau+(kd-2k-2)$,
+so $\et=\dim\cA_\tau\ge1$. (3) By Theorem~2(5) the excess of $\lambda$ is
+$\dim E'=\dim\ker(\cdot\bar m\colon\cA_\tau\to\cA_d)$, $\bar m:=\det M|_{\Pi_1\cap\Pi_2}$, and if $E'=0$ then
+$T\NL(\delta_\lambda)=T\VZ$, so $\NL(\delta_\lambda)=\VZ$. Injectivity of $\cdot\bar m$ is an open condition on the
+irreducible space of data, so one instance suffices, and $\tau\ge0$ leaves three families.
+
+$c=1$ ($\tau=2$, $\bar m$ an arbitrary form of degree $d-2$, $\cA$ in $k$ variables, socle degree $k(d-2)$): take
+$\bar s=(y_i^{d-1})$ and $\bar m=L^{d-2}$, $L:=\sum y_i$. By the strong Lefschetz property of monomial complete
+intersections in characteristic $0$ (\cite{St,Wa}; not opened), $L^{\sigma-2i}\colon\cA_i\to\cA_{\sigma-i}$ is
+bijective for $i\le\sigma/2$; hence $L^j\colon\cA_i\to\cA_{i+j}$ has maximal rank for all $i,j$ (if
+$i+j\le\sigma-i$ it is a factor of an injective map; otherwise it is dual to
+$L^j\colon\cA_{\sigma-i-j}\to\cA_{\sigma-i}$, which is injective by the first case). So $\cdot\bar m\colon\cA_2\to\cA_d$
+is injective if and only if $\dim\cA_2\le\dim\cA_d$. If $d\le k(d-2)-2$ this holds by symmetry and unimodality of
+the Hilbert function. Otherwise $(k-1)(d-2)\le3$, i.e. $k=1$ or
+$(d,k)\in\{(3,2),(3,3),(3,4),(4,2),(5,2)\}$, and $\dim\cA_2>\dim\cA_d$ by inspection ($k=1$: $\cA_d=0\ne\cA_2$; the
+Hilbert functions are $1,2,1$; $1,3,3,1$; $1,4,6,4,1$; $1,2,3,2,1$; $1,2,3,4,3,2,1$); $(3,2)$ is excluded by
+$kd-2k-2\ge1$.
+
+$c=2$, $d=3$ ($\tau=1$): injective for general data if and only if $k\ge5$ (Proposition~\ref{prop:k5} and the
+dimension count); $k=2$ is excluded.
+$c=2$, $d=4$ ($\tau=0$, $\cA$ in $k-1$ variables with cubic relations, $\bar m$ the determinant of a $2\times2$ matrix
+of quadrics): $E'=0$ if and only if $\bar m\ne0$ in $\cA_4$, which holds for general data if and only if
+$\cA_4\ne0$ (products of two quadrics span the quartics), i.e. $2(k-1)\ge4$; so only $k=2$ remains ($k=1$ is
+excluded).
+$c=3$, $d=3$ ($\tau=0$, $\cA$ in $k-2$ variables with quadratic relations, $\bar m$ the determinant of a $3\times3$
+matrix of linear forms): $E'=0$ for general data if and only if $\cA_3\ne0$, i.e. $k-2\ge3$; so $k=3,4$ remain
+($k=2$ is excluded).
+
+For the triples of $\mathcal L$ the values of $e=\dim E'$ at a general point follow from the Hilbert functions
+(and from (S), which holds for general data: trivially in the range; for $c=1$ by the Lefschetz instance above,
+since maximal rank is surjective when $\dim\cA_2\ge\dim\cA_d$; for $(3,4,2)$ because (S) there says
+$\bar m\notin(\bar s)_2$), and the second-order statement is proved in the
+places listed in Table~\ref{tab:lin}: for $\tau=0$ the type is in the range, $\et=1$ and $A\ne0$ for general data
+(Corollary~\ref{cor:Anz}); for coplanar lines Corollary~\ref{cor:surf}; for $(3,3,2)$ Corollary~\ref{cor:six}; for
+the others Theorem~\ref{thm:FA3}(3), (4) with the exact computations of Corollary~\ref{cor:eight} and
+Remark~(vii) or, without a computer, with the monomial instances of Remark~(xi), at which $(f,h,p,s)$ is
+regular, (S) holds and the quadrics have no common zero.
+Non-reducedness at every smooth $X$ follows because the non-reduced locus is closed and $\mu$ is open onto
+$\VZ$.
+\end{proof}
+
+\run{Remarks.} (viii) Parts (1), (2) and the first half of (3) use the period formula only through
+Lemma~\ref{lem:PF}(1), (2) ($\kappa\ne0$), not the constancy of $\kappa$; the non-reduced half of
+(3) uses Lemma~\ref{lem:PF}(4). Neither uses (CG). The first half of (3) also uses the Lefschetz property quoted in the
+proof (checked directly for $d\le10$, $k\le9$: Remark~\ref{rem:r2}(b)). (ix) As digested, the first-order thresholds
+agree with \cite{Kl} (Theorems~1.2, 1.3, 4.9) and \cite{Kl2} (Theorem~1.1, Remark~4.9), where equality of the two
+loci is proved at some $X$ for all but finitely many $\lambda$, and with Villaflor Loyola's theorem for
+$\tau<0$ at the Fermat point; for coplanar lines the non-reduced statement is, in the cases they treat and as
+digested, due to Maclean and Dan; the cases $(3,3,3)$, $(3,4,3)$ are those of \cite[Conj.~1]{Mo} and of the
+alternative left open in \cite[Thm.~1.3]{Kl} (as digested), and were treated in \cite{P1}; the four cases with
+$c=1$, $k\ge2$ are those of \cite[Remark~4.9]{Kl2} (Remark~(vii)). We have not found the
+non-reduced statements for the other triples of $\mathcal L$, nor the list $\mathcal L$ as a whole, in the
+sources read (machine digests). (x) At special points the picture changes: $E'$ can be larger, and the
+quadrics can vanish (the Fermat hypersurface with planes of the same matching). (xi) \emph{Instances that can
+be checked by hand} (referee~21), for the five rows of Table~\ref{tab:lin} outside the range; in each,
+$\bar s$ is monomial, so the residues are coefficients:
+$(4,2,1)$: $\bar s=(y_1^3,y_2^3)$, $\bar m=y_1y_2$, $E'=\langle y_1^2,y_2^2\rangle$, quadrics $2n_1n_3,n_1^2,n_3^2$;
+$(5,2,1)$: $\bar s=(y_1^4,y_2^4)$, $\bar m=y_1^3+y_2^3$, $E'=\langle y_1y_2\rangle$, value $1$ at $\dot M_{00}=y_1y_2$;
+$(3,3,1)$: $\bar s=(y_i^2)$, $\bar m=\sum a_iy_i$, $E'=\{a_3n_{12}+a_2n_{13}+a_1n_{23}=0\}$, quadrics
+$a_1n_{12}n_{13}$, $a_2n_{12}n_{23}$, $a_3n_{13}n_{23}$ (no common zero iff $a_1a_2a_3\ne0$);
+$(3,4,1)$: $\bar s=(y_i^2)$, $\bar m=\sum y_i$, $E'=\{n_{12}=n_{34}=\alpha,\ n_{13}=n_{24}=\beta,\ n_{14}=n_{23}=\gamma,\
+\alpha+\beta+\gamma=0\}$, quadrics $\alpha\beta,\alpha\gamma,\beta\gamma,\alpha^2+\beta^2+\gamma^2$;
+$(3,4,2)$: $\bar s=(y_i^2)$, $\bar M=\bigl(\begin{smallmatrix}y_1&y_2\\y_3&y_1+y_2+y_3\end{smallmatrix}\bigr)$,
+$E'=\{n_1=n_2+n_3\}$, quadrics $n_1n_2,n_1n_3,n_2n_3$. The polynomial algebra of these five instances (the
+equations of $E'$, the quadrics as coefficients of the stated products, and identities showing that the
+squares of the coordinates on $E'$ lie in the ideal of the quadrics) is certified by the Lean~4 kernel (file
+\texttt{LinearListCert.lean}, $63$ theorems, generated by an agent and re-run by the coordinating thread); it
+certifies nothing about residues, Hodge loci or the passage from these instances to general data.
+
+
+\section{Computations}\label{sec:comp}
+
+All computations in this section are modulo primes at random instances; they are evidence, not proofs. The main
+program (primes $2^{31}-1$, $2147483629$, $10^9+7$; $X$ certified smooth modulo the prime) computes the period
+polynomials of $Y_1,Y_2$, the tangent spaces, the space $K$ and the quadratic term, in the Jacobian ring.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{llll>{\raggedright\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.2\textwidth}}
+\toprule
+$(k,d,c)$; $\deg f$; $\deg h$; $\deg p$ & $\tau$ & range & $\et$ & excess found & quadratic map on the excess
+directions vanishes at\\
+\midrule
+$(1,6,1)$; $(1)$; $(1)$; $(2)$ & $2$ & yes & $2$ & $2$ & $+1$ only\\
+$(1,6,1)$; $(1)$; $(1)$; $(3)$ & $2$ & yes & $3$ & $3$ & $+1$ only\\
+$(1,5,1)$; $(1)$; $(1)$; $(2)$ & $2$ & yes & $2$ & $2$ & ($K=0$)\\
+$(1,5,1)$; $(1)$; $(1)$; $(3)$ & $2$ & yes & $2$ & $2$ & ($K=0$)\\
+$(1,5,1)$; $(1)$; $(1)$; $(1)$ & $2$ & yes & $1$ & $1$ & $+1$ only\\
+$(2,3,2)$; $(1,1)$; $(1,1)$; $(1)$ & $1$ & yes & $1$ & $1$ & ($K=0$)\\
+$(2,3,1)$; $(1)$; $(1)$; $(1,1)$ & $2$ & yes & $1$ & $1$ & ($K=0$)\\
+$(2,4,3)$; $(1,1,1)$; $(1,2,3)$; -- & $1$ & yes & $2$ & $2$ & $+1$ only\\
+$(2,4,3)$; $(1,1,2)$; $(1,2,2)$; -- & $1$ & yes & $3$ & $3$ & $+1$ only\\
+$(2,4,2)$; $(1,1)$; $(1,2)$; $(1)$ & $1$ & yes & $2$ & $2$ & $-1$ only\\
+$(2,4,1)$; $(1)$; $(1)$; $(1,1)$ & $2$ & no & $3$ & $3$ at $\lambda=+1$, $2$ at the six others & $+1$\\
+$(2,4,3)$; $(1,1,1)$; $(1,1,2)$; -- & $-1$ & -- & $0$ & $0$ & --\\
+\bottomrule
+\end{tabular}
+\caption{Theorem 2 against runs made before it was formulated ($\tau\ne0$). Last column: among the tested
+$\lambda\in\{1,-1,2,3,\frac12,-2,\frac53\}$, the values at which the quadratic map on the excess directions
+vanishes. In the range the excess is predicted to be $\et$; outside it, $\et$ at $\lz$ and
+$\dim(0:_\cA\det M)_\tau$ elsewhere (in row 11: $3-1=2$).}\label{tab:tau}
+\end{table}
+
+\begin{table}[h]\centering\small
+\begin{tabular}{l>{\raggedright\arraybackslash}p{0.55\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}}
+\toprule
+$(k,d)$ & types with $\tau=0$, $K\ne0$ ($\deg f+\deg h$; shared $p$) & found\\
+\midrule
+$(1,6),(1,7),(1,8)$ & $(1,2)+(1,2)$; $(1,2)+(2,2)$; $(1,1)+(3,3)$ \quad($c=2$) & $\lz=-1$, $A\ne0$\\
+$(2,4)$ & $(1,1)+(1,1)$ with $p$ of degree $1$, $2$, $3$ \quad($c=2$) & $\lz=-1$, $A\ne0$\\
+$(2,4)$ & $(1,1,1)+(1,1,3)$; $(1,1,1)+(1,2,2)$; $(1,1,2)+(1,1,2)$ \quad($c=3$) & $\lz=+1$, $A\ne0$\\
+$(2,5)$ & $(1,1)+(1,2)$ with $p$ of degree $1$, $2$ \quad($c=2$) & $\lz=-1$, $A\ne0$\\
+$(2,5)$ & $(1,2,2)+(1,2,2)$; $(1,1,1)+(1,3,3)$; $(1,1,3)+(1,1,3)$; $(1,1,1)+(2,2,3)$;
+$(1,1,2)+(2,2,2)$; $(1,1,2)+(1,1,4)$ \quad($c=3$) & $\lz=+1$, $A\ne0$\\
+$(3,3)$ & $(1,1,1)+(1,1,1)$, $p$ linear \quad($c=3$) & $\lz=+1$, $A\ne0$\\
+$(3,3)$ & $(1,1,1,1)+(1,1,1,2)$ \quad($c=4$) & $\lz=-1$, $A\ne0$\\
+$(4,3)$ & $(1,1,1,1)+(1,1,1,2)$, $p$ linear \quad($c=4$) & first order only: $\lz=-1$\\
+$(4,3)$ & $(1,1,1,1,1)+(1,1,1,2,2)$; $(1,1,1,1,2)+(1,1,1,1,2)$ \quad($c=5$) & first order only: $\lz=+1$\\
+\bottomrule
+\end{tabular}
+\caption{The equality case: in every run the excess is $1$ and $K$ is independent of $\lambda$; except in the
+last two rows the quadratic term vanishes exactly at $\lz=(-1)^{c-1}$ among the tested values, and the law
+\eqref{eq:law} holds exactly modulo the prime with $A\neq0$. ``First order only'': $\det M\in T\NL(\delta_\lambda)$
+exactly at $\lz$. Not exhaustive: e.g. for $(k,d,c)=(2,5,3)$ the types $(1,1,1)+(1,2,4)$, $(1,1,2)+(1,2,3)$,
+$(1,1,3)+(1,2,2)$, and for $(2,5,2)$ $p$ of degree $3$, $4$, were not run. For $d=5$: one run per type, five
+values of $\lambda$, and a column subset of the linear system.}\label{tab:types}
+\end{table}
+
+\run{Checks for $c=4,5$ and of $R$} (one verifier agent and three referees, each with its own code).
+(i) \emph{The family $W_t$} (modulo $2^{31}-1$). For $(k,d,c)=(3,3,4)$, $(4,3,4)$ with $p$ linear, and the two
+types with $(k,d,c)=(4,3,5)$, and for both choices of $h_n$ when the degrees differ: $F-t\det M\in I(t)_d$ (and,
+as a control on the sign convention, $F+t\det M\notin I(t)_d$); the Hilbert function of $S/I(t)$ for $t=1,2$
+and a random $t$ (for $k=4$ with $h_n$ linear: $t=1$ only) equals that of $S/I(0)=S/(I(Y_1)\cap I(\Theta))$ in
+all degrees computed ($\le8$, $7$, $6$ for $8$, $9$, $10$ variables), with leading differences
+$\deg Y_1+\deg\Theta=17$ and $5$ (resp. $34$ and $10$); $X$ is smooth, the tangent spaces have the codimensions
+of Theorem~2, and $\det M\in T\NL(\delta_\lambda)$ exactly for $\lambda=(-1)^{c-1}$ among seven tested values. The
+second-order law was run only for $(3,3,4)$ (two instances: it holds with $\lz=-1$, $A\ne0$); for $k=4$ it was
+too large, so for $c=5$ the value $\lz=+1$ is supported at first order and by the Hilbert functions only.
+(ii) \emph{Outside the range} (modulo $2^{31}-1$): $(k,d,c)=(3,4,4)$, $f$ linear, $h$ quadrics, $\tau=0$: $X$
+smooth, $TV_1+TV_2$ of codimension $1$ in $S_d$, $T\NL(\delta_\lambda)=TV_1\cap TV_2$ for the six tested
+$\lambda\neq-1$ and one dimension more at $\lambda=-1$, with $\det M$ in it: as Theorems~1 and~2(4), (5) predict
+(for general $M$, $\det M\notin(f,h,p,s)_d$).
+(iii) \emph{The residual $R$:} in five types including $c=4$ (modulo $2^{31}-1$), $\dim R=k$, $\deg R$ is as
+predicted by Theorem~1, and $(p,q):\det M$ has the Hilbert function of $Y_1$; the two colon formulas of
+Lemma~\ref{lem:NW} hold in all degrees tested ($\le3$, $4$ or $5$) in eight types, among them one with $c=1$,
+one with $\tau=1$, one with $\tau=-1$ and one with a constant column in $M$ (modulo $10^9+7$; smoothness of $X$ not tested there). By hand
+(referee~12, re-computed by referee~13): for skew lines on a quartic surface $\deg R=8$, $R^2=12$, $p_a(R)=7$;
+for a line and a disjoint conic on a quintic surface $11$, $17$, $15$; for two disjoint planes on a cubic
+fourfold $\deg R=7$, $R^2=21$. (iv) \emph{A caution on $W_t$} (referee~11): for skew lines on a quartic with
+$M_{00},M_{10}$ sharing a linear factor modulo $h_1$, $S/I(t)$ has Hilbert polynomial $4m$ and its saturation
+with respect to $h_n$ has $3m+1$: $W_t$ is a cubic plus a fixed line. (v) The hypothesis ``all degrees $<d$''
+cannot be dropped: $(1,1,1,1,1)+(1,1,1,1,3)$, $d=3$, and $(1,1,1)+(1,1,5)$, $d=5$, have $\tau=0$ but admit no
+smooth $X$. Inside the setting a smooth $X$ requires $\det M\not\equiv0$, hence a permutation $\pi$ with
+$d_i+e_{\pi(i)}\le d$ for all $i$.
+
+\begin{remark}[deduction steps checked by Lean; added in version 17, not refereed]\label{rem:lean2}
+Six further Lean files ((a)--(c) added with version~17, (d) with version~20, (e), (f) with version~21) contain theorems
+with hypotheses, for arbitrary data, rather than identities between explicit polynomials.
+
+(a) \texttt{SecondOrderLaw.lean} (Lean core, no library). Let $R$ be a commutative ring, $\varphi_1,\varphi_2$
+symmetric bilinear forms with values in $R$, $T_1,T_2$ subsets, $\lz^2=1$, and $D,D',G_2,G_2'$ elements with
+$G_2,G_2'\in T_1$ and $G_1:=D+\lz G_2\in T_2$, $G_1':=D'+\lz G_2'\in T_2$. If $\varphi_i$ vanishes on $T_i\times T_i$
+$(i=1,2)$ and $\varphi_1(D,D')+\lz\varphi_2(D,D')=0$, then for $\lambda\mu=1$, with $G_\lambda:=G_1-\mu G_2$:
+\[
+(\varphi_1+\lambda\varphi_2)(G_\lambda,G_\lambda')=(1-\lz\mu)\bigl[\varphi_1(G_1,G_1')-\varphi_2(G_1,G_2')-\varphi_2(G_2,G_1')\bigr].
+\]
+With $\varphi_i(G,G')=\varphi_i(QGG')$, $D=N\det M$ and $\mu=1/\lambda$ this is the algebra in the proofs of
+Theorem~3, Theorem~\ref{thm:FA2}(2) and Theorem~\ref{thm:FA3}(1); its hypotheses are the key lemma and the
+consequence $A_0+B_0/\lz=0$ of Theorem~1. The file also contains Steps~B and~C of the proof of
+Theorem~\ref{thm:FA2}(3) (hypotheses: the three evaluations of Step~C; conclusion:
+$(k+1)A_0=\kappa[\varrho-\mathfrak D]$), the displayed identity for $z\in T_1\cap T_2$ in the proof of
+Theorem~\ref{thm:FA3}(1), and a model over $\mathbb{Z}$ in which all hypotheses hold and $A_0=1$.
+
+(b) \texttt{SecondOrderLawModule.lean} (with Mathlib): the same statements for modules, bilinear maps (symmetry is
+not needed) and submodules; that $G_\lambda\in\ker(u_1+\lambda u_2)$ if $u_1(G_2)=0$, $u_2(G_1)=0$ and
+$u_1(G_1)=u_2(G_2)$; and, over a field: if $A_0(N,N)\ne0$ and $\lambda\notin\{0,\lz\}$, the second-order term at
+$\lambda$ is non-zero on $G_\lambda(N)$.
+
+(c) \texttt{SpecialCoefficient.lean} (with Mathlib). For a square matrix $M$ of any size $c$ over any commutative
+ring, and $g=Mh$, $q=M^\T f$: $f^\T Mh=\sum_jq_jh_j$; $\det M\cdot h_j\in(g)$ and $\det M\cdot f_i\in(q)$ with
+explicit coefficients (Cramer); the two transition matrices from $(f,h,w)$ to $(f,Mh,w)$ and to $(h,M^\T f,w)$
+have determinants $\det M$ and $(-1)^c\det M$; and for every additive symbol that satisfies the transformation
+law (R) (a hypothesis): the first sentence of Lemma~\ref{lem:det}, and
+$\Res[m\det M/\Phi^1]+(-1)^{c+1}\Res[m\det M/\Phi^2]=0$. Here the sequences are ordered $(f,h,p,s)$ instead of $(f,p;h,s)$; that this common
+reordering does not affect the signs is not formalised.
+
+(d) \texttt{PointwiseFormula.lean} (with Mathlib; added with version~20): the algebra of
+Lemma~\ref{lem:PF}(3), (4); see Remark~\ref{rem:pw}(iv).
+
+(e) \texttt{EveryR.lean} (with Mathlib; added with version~21): step (ii) of the proof of Proposition~\allr, for a
+matrix of any size over any commutative ring. Hypotheses: for the sequences $\Phi^1$ and $\Phi^2$, the symbol with
+the $\nu$-th pair squared vanishes on multiples of the members of the other pairs, and
+$\Res_S[x\,u_iv_i/\Phi_{(i)}]=\Res_S[x/\Phi]$ for an own pair $(u_i,v_i)$. Conclusions:
+$\sum_\nu\Res_S[m f_ih_jB\det M/\Phi^\iota_{(\nu)}]=\Res_S[mB\operatorname{adj}(M)_{ji}/\Phi^\iota]$ for $\iota=1,2$; and, with
+Lemma~\ref{lem:PF}(1), (3) as further hypotheses, the two identities \eqref{eq:A2} for a virtual deformation with a
+single matrix entry.
+
+(f) \texttt{SecondProof.lean} (with Mathlib; added with version~21): the second proof in Remark~\ref{rem:pw}. From
+the derivative relation $(k+1)\varphi(PG)-\kappa\sum_\nu\Res_S[PG/\Phi_{(\nu)}]=-\dot\kappa\,\varrho(P)$ and the vanishing
+of $\varrho$ on the ideal (hypotheses), the pointwise formula holds on the additive span of the products $PG$ with
+$P$ in the ideal, and $\dot\kappa\,\varrho(P)=0$ for every $P$ with $PG$ in that span.
+
+In all these files the geometric inputs (the key lemma, Theorem~1, the period formula, the transformation law,
+regularity of the sequences) are hypotheses. The kernel certifies the deductions from them and nothing else; it
+does not certify any statement about Hodge loci. Variants of the statements with a wrong sign or a missing
+hypothesis are rejected. Mathlib (tag \texttt{v4.36.0}) was compiled from source for (b)--(f).
+\end{remark}
+
+\begin{remark}[checks made after version 17 by other methods; not refereed]\label{rem:r2}
+Files: \texttt{CHECKS\_R2.md} and the reports of the independent implementer. All computations are modulo primes
+at the instances named, with $X$ smooth where a random $X$ is used.
+
+(a) \emph{Intersection numbers.} Under Lemma~\ref{lem:PF} and the multiplicative form of (CG), the equality
+$\kappa(X,Y_1)=\kappa(X,Y_2)$ is equivalent to
+\[
+\rho_J(J_1J_2)=\deg Y_1\deg Y_2-d\,(Y_1\cdot Y_2),\qquad
+Y_1\cdot Y_2=\deg V(f,h,p)\cdot\bigl[\eta^{k-c}\bigr]\frac{\prod_l(1+\deg p_l\,\eta)}{1+d\eta}
+\]
+($J_i$ the Jacobian determinants of $(f_1,g_1,\dots,p_1,s_1,\dots)$ and $(h_1,q_1,\dots,p_1,s_1,\dots)$; the
+intersection number by the excess intersection formula, $0$ if there is no shared equation). This identity and
+the two for the self-intersections hold at a random $X$ in each of $190$ degree types ($k\le4$, $0\le c\le k+1$,
+every sign of $\tau$; Singular, modulo $32003$), and again modulo $2147483629$ in $60$ of them; with the opposite
+sign the first would fail in all. So the rule $\lz=(-1)^{c-1}$ is confirmed without Theorem~1, also for $\tau<0$.
+Five types with $(k,d)=(3,4)$ were too slow. The identity is insensitive to a dependence of $c(k,d)$ on $X$.
+
+(b) \emph{The Lefschetz statement} used for $c=1$ in the proof of Theorem~\ref{thm:lin}: for
+$\cA=\QQ[y_1,\dots,y_k]/(y_i^{d-1})$ the map $L^{d-2}\colon\cA_2\to\cA_d$ has maximal rank for all $3\le d\le10$,
+$1\le k\le9$, by a rank computation modulo a prime (maximal rank modulo a prime implies it over $\QQ$, so these $72$
+instances are proved without \cite{St,Wa}); the kernel is nonzero exactly for the pairs $(d,k)$ of the $c=1$ rows of
+Table~\ref{tab:lin} and the two excluded pairs $(3,2)$, $(4,1)$, with dimension $e$.
+
+(c) \emph{Table~\ref{tab:lin}, first order at a random point}, from
+$T\NL(\delta_\lambda)=(J_F:(J_1+\lambda J_2))_d$ alone (Singular; Theorem~2 not used): the excess is the $e$ of the
+table in all rows ($d=5,6,7$ in the last), and $0$ for the eight triples
+$(3,3,4)$, $(3,4,4)$, $(3,4,5)$, $(4,2,3)$, $(5,2,2)$, $(5,2,3)$, $(5,1,2)$, $(6,1,2)$ outside it.
+
+(d) \emph{Second order at Fermat points by pole-order reduction.} For $F=\sum x_i^d$ one has
+$\Res(x^\beta\Omega/F^{m+1})=\frac{\beta_i-d+1}{dm}\Res(x^{\beta-de_i}\Omega/F^m)$ if $\beta_i\ge d-1$, and a
+monomial form with all exponents $\le d-2$ is an eigenvector of the diagonal automorphisms, hence of pure Hodge
+type. So at a Fermat point $\varphi_{[Y]}$ is determined by $\pi_{[Y]}$, i.e.\ by Lemma~\ref{lem:PF}(1), and the
+second-order term of (G) can be computed without Theorems~1, \ref{thm:FA}, \ref{thm:FA2}, \ref{thm:FA3}, the key
+lemma, or the constancy of $\kappa$. For two linear subspaces of the Fermat hypersurface given by equations
+$x_a=\zeta x_b$ with different pairings of the coordinates ($39$ configurations, $67$ runs; all nine sporadic rows
+of Table~\ref{tab:lin} and coplanar lines for $d=5,6$; primes $32003$, $50023$, $30011$, $30089$, $30013$): $T\VZ$ is in
+the kernel of the second-order form; the form vanishes at $\lz$; the law of Theorems~\ref{thm:FA2}(2),
+\ref{thm:FA3}(1) holds at six values of $\lambda$ in all $61$ runs with excess; and the formula of
+Theorem~\ref{thm:FA2}(3) holds with its constant (in these units $\kappa=(-1)^{(k+1)(k+2)/2}$, no fitted constant)
+in $25344$ comparisons, $8532$ of them with nonzero value. This includes the cubic eightfold rows $(3,4,1)$,
+$(3,4,2)$, which had not been run before. The instance of Corollary~\ref{cor:six}, Remarks~(i) and~(iv) of
+\S\ref{sec:FA2}, and the vanishing for two planes of the same pairing meeting in a point are reproduced. At some
+Fermat configurations of $(3,4,1)$ and $(5,2,1)$ the excess is $e+1$ and $\dim K_\lambda=\dim K+1$, as
+Theorem~\ref{thm:FA3}(0) requires when the rank of $\cdot\det M$ drops; at some Fermat configurations of $(3,3,1)$,
+$(3,3,2)$, $(3,4,1)$, $(4,2,1)$ the quadrics have a common zero. These are special points. A Fermat point cannot show a dependence of $\kappa$ on $X$, and the comparison of
+the formula there tests its algebra and its constant only: at these configurations the pointwise formula
+\eqref{eq:pw} holds for formal reasons (Remark~\ref{rem:pw}(iii)).
+
+(e) \emph{An independent implementation.} An AI agent that was given only this paper (no program, note or report)
+re-implemented the definitions in Macaulay2 and tested random instances. It reported no failure in any check (raw logs kept and tallied by the coordinating thread: no failed flag; one of
+its runs was repeated with identical output). First order: Theorem~2 and Lemma~\ref{lem:det} in $42$ types
+($k\le4$, $1\le c\le5$, $-2\le\tau\le6$, twelve outside the range) at two primes each; the algebra of Theorem~1
+(both colon formulas; dimension, degree and Cohen--Macaulayness of $R$) in $12$ types at two primes. Second
+order at random points, $123$ instances of $62$ types, primes $32003$ and $30011$: the key lemma, the description
+of $K$, Theorem~\ref{thm:FA3}(0), vanishing at $\lz$, the law at five or six values of $\lambda$, $T\VZ$ in the
+kernel, and the formula of Theorems~\ref{thm:FA2}(3), \ref{thm:FA3}(2) as an equality (with $\kappa=1$) on $2464$
+test triples, $2196$ of them nonzero, together with the two identities \eqref{eq:A2}; $35$ types are in the range
+($10$ with more than one excess direction) and $19$ are outside it with $E'\ne0$ ($6$ with (S) failing). It ran the
+cases that had not been run before: the cubic eightfold rows $(3,4,1)$, $(3,4,2)$ at random points ($\dim E'=2$,
+(S) holds, the quadrics span all binary quadrics) and one cubic eightfold with (S) failing; the second-order term
+for the $k=4$ equality types with $c=3,4,5$ ($A\ne0$; $\lz=+1$ for $c=5$); and three special types with $r=0$ and
+$E'\ne0$. All ten rows of Table~\ref{tab:lin} are reproduced at second order at a random point and two primes
+($e$, and no common zero), and $13$ triples outside the list, among them $(4,3,1)$, $(4,3,2)$, $(6,2,1)$,
+$(6,2,2)$ and the cubic tenfolds $(3,5,c)$, $c=1,2,3$, show no excess. Special instances reproduce
+Corollary~\ref{cor:surf} ($M_{00}(o)=0$: $A=0$ on a quintic, $A\ne0$ on a sextic), Corollary~\ref{cor:six}(1)
+($\det M|_L$ a square: a common zero), Remark~(v) of \S\ref{sec:FA3}, all rows of Table~\ref{tab:tau} and the
+codimensions quoted in the introduction. Not run: second order for $k=5$, for $r<0$, and for $r=0$ with non-linear
+degrees; seven types with $(k,d)=(2,5)$ of the last table. Its evaluation of $\varphi_\delta$ rests on
+\eqref{eq:pw} (now Lemma~\ref{lem:PF}(3)), which it derived itself; so these runs test the algebra of the paper given (G), (A) and
+Lemma~\ref{lem:PF}(1), not those inputs. Its reading notes led to the rewording of (G), (R) and (PF) in
+\S\ref{sec:facts} in version~19: how to evaluate $\varphi_\delta$; the exact coefficients in (G); the order inside
+the sequences and the normalisation and direction of (R); and the remark that the sign $(-1)^{k+1}$ in the Checks of
+\S\ref{sec:conj} depends on conventions (in its normalisation the ratio is $+1$ for $k\le4$).
+
+(f) With the formula, at a random point of each row of Table~\ref{tab:lin} (two seeds): $\dim E'=e$ and the
+quadrics have no common zero.
+\end{remark}
+
+\begin{remark}[history and checks of Lemma~\ref{lem:PF}(3), (4)]\label{rem:pw}
+The pointwise formula \eqref{eq:pw} was found by the implementer of Remark~\ref{rem:r2}(e), who observed that
+(G) defines the second-order term through $\varphi_\delta$ while the paper did not say how to evaluate
+$\varphi_\delta$ outside the Jacobian ideal. Versions~18 and~19 stated it in this remark, with the theorems still
+conditional on (CG). An AI referee (``referee~23'', who saw only version~19) then checked the remark line by line and with its own
+computations and found no error; its corrections are applied here (the pole-order-$(k+1)$ form of (G), the
+holomorphy of $\kappa$, two justifications in the proof, a clash of notation, and an overstatement in the checks,
+corrected below). Since version~20 it is Lemma~\ref{lem:PF}(3), the constancy of $\kappa$ is
+Lemma~\ref{lem:PF}(4), and the statements of \S\S\ref{sec:conj}--\ref{sec:lin} no longer assume (CG).
+What Lemma~\ref{lem:PF}(4) does \emph{not} give: the value or the sign of $\kappa$; that $\kappa$ is the same for
+different degree types; and $\kappa(X,Y_1)=\kappa(X,Y_2)$, which is still Lemma~\ref{lem:det} (Theorem~1,
+$\tau\ge0$). No result needs the first two. The other cited inputs (G), (A), (SI), (R) are textbook material, but
+like (CG) they were not opened by anyone here.
+
+\emph{A second proof} (referee~23). Differentiating $\pi=\kappa\varrho_Y$ along the family of the proof gives, for
+$P\in S_t$ and $G=\sum(\alpha_\nu\psi_\nu+\phi_\nu\beta_\nu)$,
+$(k+1)\varphi_{[Y]}(PG)-\kappa\sum_\nu\Res_S[PG/\Phi_{(\nu)}]=-\dot\kappa\,\varrho_Y(P)$. For $P\in(\phi,\psi)_t$ the right
+side vanishes, and $(\phi,\psi)_t\cdot(\phi,\psi)_d$ spans $S_{t+d}$; this is \eqref{eq:pw}, and then $\dot\kappa=0$.
+It uses the pole-order-$(k+1)$ expansion of (G) only.
+
+\emph{Checks of \eqref{eq:pw}} (modulo primes unless said otherwise; none is a proof). No test of ours compares
+\eqref{eq:pw} outside the Jacobian ideal with an independently computed period: there its support is the two
+proofs. What the tests do check (the assessment is that of referees~23, 24 and~25, confirmed by the coordinating
+thread):
+(i) \emph{Equal weights of the own-pair terms.} With \eqref{eq:pw}, the second-order term of $\delta_{\lz}$ along the
+pencil $F-N\det M$, which must vanish by Theorem~1, does vanish: at all $123$ random instances of the implementer,
+and for \emph{all} $Q\in S_{kd-2k-2}$ (not only $Q\in K$) in eleven runs of ten degree types with $k\le2$ (program of
+referee~23, re-run by the coordinating thread; every test form lay outside the Jacobian ideal, every value was
+non-zero, and the opposite sign fails). For $c=1$ the vanishing holds term by term in $\nu$, by (R), and says
+nothing about \eqref{eq:pw}. For every $c$ the terms of the shared pairs $(p_l,s_l)$ cancel one by one, by (R)
+(referee~25). For $c\ge2$ (eight of the eleven runs; in seven of them $c=k+1$) the $c$ terms of the own pairs
+$(f_i,g_i)$, $(h_i,q_i)$ do not cancel one by one, and with unequal weights their sum is non-zero. So these runs
+test, outside the Jacobian ideal, that the own-pair terms enter with equal weights (all terms if and only if
+$c=k+1$), and nothing more.
+(ii) \emph{Additivity.} For a generator $\phi_0=uv$ one has $[Y]=[V(u,\phi_1,\dots)]+[V(v,\phi_1,\dots)]$, and both
+sides of \eqref{eq:pw} are additive (eight instances, $k\le2$; same program, re-run). This holds term by term in
+$\nu$, so it is blind to weights and constants.
+(iii) \emph{Constants and conventions, on the Jacobian ideal.} Agreement with Griffiths--Dwork reduction on the
+Jacobian ideal is a formal identity of residue symbols; it fixes the factor $k+1$ and the equal weights there.
+Exactly, by hand (referee~23; recomputed by the coordinating thread and by referee~24): for the line
+$V(x_0-x_1,x_2-x_3)$ on $x_0^4-x_1^4+x_2^4-x_3^4=0$, $\Res_S[x_0^2x_2^2/(\phi;\psi)]=-\frac1{16}$ and
+$\sum_\nu\Res_S[x_0^6x_2^2/\Phi_{(\nu)}]=-\frac3{64}$; the ratio $\frac34$ is $k+1$ times the factor $\frac38$ of
+pole-order reduction. The agreement with the pole-order reduction of Remark~\ref{rem:r2}(d) at Fermat
+points ($780$ random forms in $39$ configurations) has no content beyond this, because for a linear subspace
+aligned with a pairing of the coordinates both sides vanish, by symmetry, on the monomials outside the Jacobian
+ideal (referee~23; versions~18 and~19 overstated this check). Independence of the presentation
+($\psi\mapsto\psi+A\phi$ with $A$ skew, $\phi\mapsto B\phi$, $\psi\mapsto(B^{-1})^\T\psi$; $21$ degree types) follows
+from the algebra and tests the programs. (iv) The algebra of the proofs of (3) and (4), with the
+$\epsilon^2$-coefficient, $\pi=\kappa\varrho$, the properties of the symbols $\Res_S[\,\cdot\,/\Phi_{(\nu)}]$ and the
+derivative relation as hypotheses, is checked by the Lean kernel (\texttt{PointwiseFormula.lean}, with Mathlib;
+eleven theorems; the spanning statement is a hypothesis there). Referee~24 checked the spanning statement by
+computer in $21$ degree types (re-run by the coordinating thread), and the derivative rule with a transcendental
+parameter.
+\end{remark}
+
+\section{Open points, and what a specialist should check first}\label{sec:open}
+
+\begin{enumerate}
+\item \emph{Nothing here has been read by a human.} The order in which a specialist should check: (i) the cited
+analytic input, on which everything rests: (G) with the scheme structure of the Hodge locus of a non-primitive
+class and with its exact second-order coefficient, (A) and (SI) for complete intersections $Y_i$ that may be
+singular, non-reduced or reducible; then Lemma~\ref{lem:PF}, in particular its new parts (3), (4), which replace
+the cup-product formula (CG),
+and hence Lemma~\ref{lem:T}(i) ($TV_i=(\Phi^i)_d$ and smoothness of $V_i$); (ii) Lemma~\ref{lem:mu} (found
+necessary by referee~10); (iii) the key lemma, Step~3 of \S\ref{sec:G}; (iv) Lemma~\ref{lem:NW} and the
+additivity \eqref{eq:link} of cycles under linkage, which were written by referees (they were part of the
+versions read cold by later referees, and were re-derived by referee~22);
+(v) Theorem~\ref{thm:FA}, whose proof is one page and would remove a hypothesis from \cite{P2}; (vi) the
+range-free parts of Theorem~2, in particular (3) (which, as digested, is stronger than the published
+statements) and (4) for cubics (which, as digested, is a published conjecture of Movasati, and which a literal
+reading of one published theorem would contradict for $k\ge5$ at split hypersurfaces): each rests on ten lines
+and on $TV_i=(\Phi^i)_d$, and should be tested against the literature first.
+\item \emph{Novelty.} \S\ref{sec:lit} is a finite, machine-read search. In particular someone should read
+\cite[\S6]{Kl} and say whether the liaison identity of Theorem~1 is implicit there beyond the linear case,
+whether his cycles are the $W_t$ of \S\ref{sec:W}, and whether ``the Hodge locus of a linked determinantal
+scheme is its deformation locus'' is recorded elsewhere.
+\item \emph{The formula for $A$} (Theorem~\ref{thm:FA}, Corollary~\ref{cor:Anz}) rests on the period formula with a
+constant independent of $X$, i.e. on Lemma~\ref{lem:PF}(4) (up to version~19: on (CG); alternatively on Villaflor
+Loyola's theorem as extracted by a machine), and on the key lemma; Theorem~\ref{thm:FA} was read by AI referee~15 and re-derived by AI referees~16 and~22; its extension
+Theorem~\ref{thm:FA2} was read by AI referees~17, 18 and~22, and Corollary~\ref{cor:surf} by referees~18 and~22.
+\item \emph{Existence.} For some degree types no smooth $X$ exists; for the types of
+Tables~\ref{tab:tau}--\ref{tab:types} existence is by random instances modulo primes.
+\item \emph{$\et\ge2$, $\lambda\ne\lz$.} Theorem~\ref{thm:FA2} determines $\NL(\delta_\lambda)$ when the quadrics
+have no common zero, which needs $\dim K\ge\et$. When they have common zeros (always if $\dim K<\et$, and at
+special points such as the Fermat cubic with planes of the same matching) the structure is not determined here.
+\item \emph{Outside the range} Theorems~1 and~2 hold, and Theorem~\ref{thm:FA3} gives the second-order law on
+$E'$ against the forms of $K$. Not determined here: the second-order terms against $K_\lambda\smallsetminus K$
+when (S) fails; and the structure when the quadrics on $\PP(E')$ have common zeros. The
+formula of Theorem~\ref{thm:FA3}(2) rests on the same period formula as Theorem~\ref{thm:FA}.
+\item \emph{Theorem~\ref{thm:lin}} rests, for its first-order half, on \S\S\ref{sec:facts}--\ref{sec:thm2} and on
+the Lefschetz property of monomial complete intersections (\cite{St,Wa}, not opened; checked directly for
+$d\le10$, $k\le9$); for its non-reduced half,
+on Theorem~\ref{thm:FA3}, on Lemma~\ref{lem:PF}(4), and on exact computations with restricted data (reproduced by two referees,
+with instances checkable by hand).
+\item \emph{The Hodge conjecture.} Nothing in this note bears on it: all classes involved are algebraic.
+\end{enumerate}
+
+\begin{thebibliography}{99}\small
+\bibitem{BH} W. Bruns, J. Herzog, \emph{Cohen--Macaulay rings}, Cambridge Univ. Press (not opened; Lemma~1.2.4 and
+Prop.~1.2.13 are cited on the word of referees~11 and~12).
+\bibitem{CG} J. Carlson, P. Griffiths, \emph{Infinitesimal variations of Hodge structure and the global Torelli
+problem}, in: Journ\'ees de g\'eom\'etrie alg\'ebrique d'Angers 1979, 51--76 (not opened).
+\bibitem{CPV} A. Corso, C. Polini, W. Vasconcelos, \emph{Links of prime ideals}, arXiv:math/0210034 (Theorem~2.5
+as extracted by one agent; title as on the arXiv listing).
+\bibitem{Dan1} A. Dan, \emph{Non-reduced components of the Noether--Lefschetz locus}, arXiv:1407.8491 (abstract
+opened; partly machine-read).
+\bibitem{Dan2} A. Dan, \emph{On a conjecture of Harris}, arXiv:2204.08079; Commun. Contemp. Math. (abstract
+opened; machine-read).
+\bibitem{DFV1} J. Duque Franco, R. Villaflor Loyola, \emph{On fake linear cycles inside Fermat varieties},
+arXiv:2112.14818; Algebra Number Theory 17 (2023) (abstract only).
+\bibitem{Fu} W. Fulton, \emph{Intersection theory}, Springer (not opened).
+\bibitem{Gr} P. Griffiths, \emph{On the periods of certain rational integrals I, II}, Ann. of Math. 90 (1969)
+(not opened).
+\bibitem{Kl} R. Kloosterman, \emph{On a conjecture on Hodge loci of linear combinations of linear subvarieties},
+arXiv:2312.12363v2; Rend. Circ. Mat. Palermo (2) 74 (2025), art.~187; Theorems~1.2, 1.3, 1.5, 4.9, 5.3,
+Example~3.17, Prop.~4.1, 6.1, 6.4, Cor.~6.2, 6.5 (machine-read by three agents); Theorem~1.4, Definition~5.1 and
+Lemma~2.11 (machine-read by one or two agents).
+\bibitem{Kl2} R. Kloosterman, \emph{Hodge loci associated with linear subspaces intersecting in codimension
+one}, arXiv:2401.10775; Math. Nachr. 298 (2025), 1220--1229; Theorem~1.1, Lemma~2.12, Theorem~2.13,
+Propositions~3.1, 4.2, Theorem~4.8, Remark~4.9 (arXiv version machine-read by one agent; the journal version
+was not read).
+\bibitem{Mac} C. Maclean, \emph{A second-order invariant of the Noether--Lefschetz locus and two applications},
+Asian J. Math. 9(3) (2005), 373--399 (not opened; her thesis was partly machine-read by one agent).
+\bibitem{Mo} H. Movasati, \emph{On a Hodge locus}, with an appendix by R. Villaflor Loyola, arXiv:2211.11405
+(machine-read).
+\bibitem{Mo19} H. Movasati, \emph{Hodge cycles for cubic hypersurfaces}, arXiv:1902.00831 (machine-read).
+\bibitem{Mo26} H. Movasati, \emph{On a counterexample to a conjecture of J. Harris for octic surfaces},
+arXiv:2606.26944 (25 June 2026) (abstract opened; body machine-read).
+\bibitem{No} D. G. Northcott, \emph{A homological investigation of a certain residual ideal}, Math. Ann. 150
+(1963), 99--110 (not opened; data from \cite{CPV} as extracted).
+\bibitem{P1} \emph{Hodge loci of sums of two linear cycles: Movasati's conjecture for cubic sixfolds and
+eightfolds}, AI-produced manuscript, version 6, 21 November 2026.
+\bibitem{P2} \emph{Noether--Lefschetz loci of sums of two disjoint complete-intersection curves}, AI-produced
+manuscript, version 4, 21 November 2026.
+\bibitem{PS} C. Peskine, L. Szpiro, \emph{Liaison des vari\'et\'es alg\'ebriques I}, Invent. Math. 26 (1974)
+(not opened).
+\bibitem{SS} A.-M. Simon, J. R. Strooker, \emph{Complete intersections of dimension zero: variations on a theme
+of Wiebe}, arXiv:math/0703880 (Prop.~1.2 as extracted).
+\bibitem{St} R. P. Stanley, \emph{Weyl groups, the hard Lefschetz theorem, and the Sperner property}, SIAM J.
+Algebraic Discrete Methods 1 (1980), 168--184 (cited from memory by referee~21; not opened).
+\bibitem{VL} R. Villaflor Loyola, \emph{Periods of complete intersection algebraic cycles}, Manuscripta Math.
+167 (2022), 765--792; arXiv:1812.03964 (abstract and machine extraction; the period formula is Theorem~2 in the
+arXiv version~5 and Theorem~1.2 in another rendering; volume and pages not confirmed by us).
+\bibitem{Wa} J. Watanabe, \emph{The Dilworth number of Artinian rings and finite posets with rank function},
+Adv. Stud. Pure Math. 11 (1987), 303--312 (cited from memory by referee~21; not opened).
+\bibitem{Wi} H. Wiebe, \emph{\"Uber homologische Invarianten lokaler Ringe}, Math. Ann. 179 (1969), 257--274
+(not opened; data from \cite{SS} as extracted).
+\end{thebibliography}
+\end{document}

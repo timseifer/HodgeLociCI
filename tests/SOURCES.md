@@ -333,6 +333,9 @@ for every such quintic, the test is one instance.
 "PROVED" below always means "proved in an AI-written, unreviewed paper"; "COMPUTED" means computed modulo primes at
 random instances unless marked exact.
 
+Paper 3 (version 21, the session file night/paper3/paper3.tex) is now in the repository as `papers/paper3.tex`
+(frozen, unreviewed; see `papers/README.md`).
+
 ### E1. Paper 3 (night/paper3/paper3.tex), Theorem 2 (first order; the coefficient lambda_0)
 Setting: Y1 = V(f,p), Y2 = V(h,p) complete intersections of dimension k in X = {F = 0}, F = f^T M h + sum p_l s_l,
 tau = sum_(i<c)(d_i + e_i) - (c-1)d = d - deg det M, lambda_0 = (-1)^(c-1), A = S/(f,h,p,s), e_tau = dim A_tau;

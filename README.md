@@ -78,13 +78,15 @@ no label; their status is stated in their help node.
 | --- | --- |
 | EXACT | Computed in exact arithmetic over `QQ` or a cyclotomic field. Exact for the given input; says nothing about other inputs. |
 | MOD p | Computed over `ZZ/p` at one (often random) instance. Evidence, not a proof, for the corresponding statement in characteristic 0. |
-| PROVED (AI-written, unreviewed) | The formula being evaluated is a theorem of the project's third note ("paper 3"), which was written by AI agents and has not been reviewed by a human. The note is not part of this package. |
+| PROVED (AI-written, unreviewed) | The formula being evaluated is a theorem of the project's third note ("paper 3"), which was written by AI agents and has not been reviewed by a human. The note is in `papers/` (not part of the Macaulay2 package itself). |
 | COMPUTED ONLY | No proof is claimed, in the notes or elsewhere; the function reports what a computation gives. |
 
-**Where to read "paper 3".** The note cited as "paper 3" is not public and has no URL. Its statements are
-paraphrased inside this repository: in the help nodes "the setting of paper 3", `excessFromDegrees`,
-`linearSubspaceCase` and `secondOrderObstruction`, and in `tests/SOURCES.md`, part E (and the folder `discoveries/`
-when present). Theorem numbers in the labels refer to that note and cannot be looked up elsewhere.
+**Where to read "paper 3".** The three AI-written notes cited as "paper 1", "paper 2" and "paper 3" are in
+`papers/` (PDF and LaTeX source, unchanged as frozen on 21-22 November 2026; read `papers/README.md` first: they are
+unreviewed, and later corrections and prior work are recorded there and in `discoveries/`). Their statements are also
+paraphrased inside the package: in the help nodes "the setting of paper 3", `excessFromDegrees`,
+`linearSubspaceCase` and `secondOrderObstruction`, and in `tests/SOURCES.md`, part E. Theorem numbers in the labels
+refer to `papers/paper3.tex` (version 21).
 
 In particular: the degree-level calculator is integer arithmetic on the degrees, and its *interpretation* as the
 excess of a Hodge locus rests on Theorem 2 of that note. `tangentExcess` and `hodgeLocusTangentCodim` do not use

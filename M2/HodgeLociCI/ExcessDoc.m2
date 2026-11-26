@@ -1,7 +1,8 @@
 -- HodgeLociCI/ExcessDoc.m2  (owner: agent PA)
 -- Documentation nodes of item 1; loaded after beginDocumentation().
--- "Paper 3" = the third manuscript of the research session (AI-written, not refereed by a human). It is not public
--- and not part of this repository; its statements are paraphrased in the nodes below and in tests/SOURCES.md, part E.
+-- "Paper 3" = the third manuscript of the research session (AI-written, not refereed by a human). It is in the
+-- repository folder papers/ (papers/paper3.tex, version 21, frozen); its statements are paraphrased in the nodes below
+-- and in tests/SOURCES.md, part E.
 
 doc ///
   Key
@@ -13,7 +14,8 @@ doc ///
       {\bf Source.} All statements quoted in this package under the name "paper 3" come from an AI-written
       manuscript of the research session (its third note, version 21) that no human has refereed.
       "PROVED" in this documentation always means "proved in that unreviewed manuscript".
-      The manuscript is not public, has no URL and is not part of this package. What it states is paraphrased in
+      The manuscript is not part of this package; the repository has it in the folder papers/ (papers/paper3.tex,
+      frozen, unreviewed: read papers/README.md). What it states is paraphrased in
       this node, in @TO excessFromDegrees@, @TO linearSubspaceCase@ and @TO secondOrderObstruction@, and in part E
       of the file tests/SOURCES.md of the repository.
     Text

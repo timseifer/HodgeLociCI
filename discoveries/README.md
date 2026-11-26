@@ -5,7 +5,7 @@ work. It organises existing results only. It contains no new mathematics.
 
 > **Read this first.** Everything in this folder was produced by AI agents (Anthropic's Claude) and checked only by
 > other AI agents. No human has reviewed it. Published papers were read by machine only (see `tests/SOURCES.md`).
-> The three notes cited as "unreviewed note 1, 2, 3" are AI-written, not public and not in this repository.
+> The three notes cited as "unreviewed note 1, 2, 3" are AI-written and unreviewed; they are in `papers/` (frozen).
 > Nothing here is, or bears on, a proof or disproof of the Hodge conjecture. **This is not a list of established
 > theorems.** Where an entry is at odds with a published conjecture, it is a conditional, AI-computed statement
 > and must not be presented as a refutation.

@@ -100,7 +100,7 @@ of the two-determinant family. `w` is a vector of `T V`, or the linear form `x0 
 
 | name | meaning |
 |---|---|
-| unreviewed note 1, 2, 3 | Three AI-written manuscripts of the project ("papers 1 to 3"; note 3 in version 21). Not public, not in this repository, not reviewed by a human. Theorem numbers refer to them and cannot be looked up elsewhere. |
+| unreviewed note 1, 2, 3 | Three AI-written manuscripts of the project ("papers 1 to 3"; note 3 in version 21). Not reviewed by a human. Now in `papers/` (frozen as of 21-22 Nov 2026; see `papers/README.md`); theorem numbers refer to those files. |
 | night run | The first phase of the project (21 to 22 November 2026): the three notes, AI referees numbered 1 to 25, a "blind agent", checks T1 to T11. |
 | discovery round | The second phase (22 November 2026): teams T1 (fake linear cycles), T2 (explicit cycles), T3 (germ at Fermat points) and blind checks C1 to C21. |
 | C-number | One of the independent checks C1 to C21: an AI agent that saw only the exported data or the statement and wrote its own code. |

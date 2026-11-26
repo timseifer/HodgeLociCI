@@ -113,7 +113,7 @@ PAGE_AREAS = {"01_first_order.md": ["first_order"], "02_second_order.md": ["seco
               "04_explicit_cycles_on_cubics.md": ["explicit_cycles"], "05_fake_linear_cycles.md": ["fake_linear_cycles"]}
 BANNER = ("> **Status of everything on this page:** produced by AI agents, checked only by other AI agents, reviewed "
           "by no human. Sources of published results were read by machine (see `tests/SOURCES.md`). The notes cited "
-          "as \"unreviewed note 1, 2, 3\" are AI-written and not public. Nothing here is, or bears on, a proof or "
+          "as \"unreviewed note 1, 2, 3\" are AI-written and unreviewed (in papers/). Nothing here is, or bears on, a proof or "
           "disproof of the Hodge conjecture. This is a registry of what was found, ruled out or left open, not a "
           "list of established theorems.")
 LABELS = [("statement", "Statement"), ("data", "Data"), ("conditions", "Conditions"), ("evidence", "Evidence"),
