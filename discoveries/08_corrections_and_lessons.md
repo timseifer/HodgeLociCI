@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (25)
+## Entries on this page (26)
 
 | id | status | title |
 |---|---|---|
@@ -36,6 +36,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-STRATA-INSTEAD-OF-DIRECTIONS](#m-strata-instead-of-directions) | `PAPER_ARGUMENT_AI` | To exclude extra components, study general points of the degeneracy strata, not more directions at the special point |
 | [M-BLIND-CHECKS-WITH-CONTROLS](#m-blind-checks-with-controls) | `COMPUTED_ONLY` | One blind check per claim, with negative controls and 'what a wrong claim would have looked like' |
 | [M-LEAN-CERTIFICATES](#m-lean-certificates) | `EXACT` | Lean certificates: kernel-checked finite computations and deductions from stated hypotheses |
+| [M-NODE-SECTION-TOOL](#m-node-section-tool) | `COMPUTED_ONLY` | Tool tooling/node_section: nodes of a hyperplane section and the relations among them (a count; seven regression cases) |
 | [M-FERMAT-SERIES-KERNEL](#m-fermat-series-kernel) | `COMPUTED_ONLY` | Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines |
 
 ---
@@ -1003,6 +1004,61 @@ lean/core plus one negative test; about 5 minutes on 2 cores). The Mathlib files
 a built checkout (not re-run for this registry).
 
 **Session references (files not public).** lean/README.md; LEDGER.md "18:44Z Regression", "LATE ADDITION", "five-hour block".
+
+---
+
+## M-NODE-SECTION-TOOL
+
+**Tool tooling/node_section: nodes of a hyperplane section and the relations among them (a count; seven regression cases)**
+
+kind: `result` | area: `methods` | status: **`COMPUTED_ONLY`**
+
+**Statement.**
+
+[TOOLING] Two Macaulay2 functions (tooling/node_section/NodeSection.m2, not part of the package): nodalDefect G for a
+hypersurface of odd dimension in P^n, nodalSectionReport(F, L) for a hyperplane section of an even-dimensional
+hypersurface. Output: dimension of the singular locus; length of the Jacobian scheme; whether all singular points
+are ordinary double points; the number of conditions they impose on forms of degree n d/2 - n - 1; the defect
+(points minus conditions); a label (MOD p or EXACT) and a note on what the count does not mean.
+Regression cases (all pass, 15 s): Segre cubic threefold: 10 nodes, defect 5 (MOD 32003 and EXACT over QQ); a
+general section of a random cubic tenfold: smooth; a cubic threefold with one A_2 point: length 2, not all ordinary;
+the named Coble member of D-TENFOLD-COBLE-EXACT-MEMBER: 72 nodes, 71 conditions on quartics, defect 1; a tenfold with
+Pfaffian P^8-section (D-TENFOLD-PFAFFIAN-K3): 56 nodes, 55 conditions, defect 1; the same without the higher terms:
+a singular line, reported as not finite.
+
+**Conditions.**
+
+A computed count. That the defect of a nodal hypersurface equals b_n - 1 is Dimca's theorem (LIT, not re-read in
+full); that it gives Hodge classes on the smooth hypersurface is the unreviewed argument of
+D-TENFOLD-COBLE-CYCLE-CLASS. The tool makes no specialization argument: MOD p output is about the reduction mod p.
+n even only. The fast Groebner engine works for primes below 32768; over QQ the default engine is slow beyond about
+9 variables.
+
+**Evidence.** tooling/node_section/ (NodeSection.m2, test_node_section.m2, test_node_section.expected, README.md).
+
+**Independent check.**
+
+The regression cases only: two against registry values that were blind-checked (72 / 71 and 56 / 55), one against
+a classical value (Segre cubic, defect 5; recalled, not re-read). The tool itself was not given to a blind
+checker. Not in CI.
+
+**Not established.**
+
+Behaviour on non-isolated or non-nodal singularities beyond the two cases tested; odd n; large numbers of nodes
+(the reducedness test computes a determinant of that size).
+
+**Known before.**
+
+The method is standard (Jacobian scheme, Hilbert function of points; Bayer-Stillman for saturation in generic
+coordinates). Suggested as a tool by another agent of this project; built at the owner's request.
+
+**Reproduce.**
+
+```
+cd tooling/node_section && M2 --script test_node_section.m2 | diff - test_node_section.expected
+```
+
+**Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), fifth part.
 
 ---
 

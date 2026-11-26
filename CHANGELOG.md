@@ -4,12 +4,18 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 143 entries)
+### Discoveries registry (142 -> 144 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
   items computed directly over QQ, two modulo three primes with a specialization step. Equation and scripts in
   `leads/tenfold_coble/exact_member/`; `leads/TENFOLD_COBLE_LEAD.md`, section 12.
+- M-NODE-SECTION-TOOL: see "Tooling" below.
+
+### Tooling
+- `tooling/node_section/` (new, AI-written, unreviewed, not in CI): two Macaulay2 functions that count the nodes of a
+  hyperplane section and the relations among them (the "defect"), with seven regression cases (Segre cubic, Coble
+  member, Pfaffian / K3, controls). A computed count with a label; not exported from the package.
 
 ## [0.1.3] - 2026-11-25
 

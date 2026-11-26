@@ -1,0 +1,8 @@
+RESULT segre-cubic-mod-p: dim Sing 0, points 10, all ODP true, form degree 1, conditions 5, defect 5  [MOD p (p = 32003), this instance]
+RESULT segre-cubic-QQ: dim Sing 0, points 10, all ODP true, form degree 1, conditions 5, defect 5  [EXACT (over QQ)]
+RESULT general-section: dim Sing -1, points 0, all ODP true, form degree 4, conditions 0, defect 0  [MOD p (p = 32003), this instance]
+RESULT one-A2-point: dim Sing 0, points 2, all ODP false, form degree 1, conditions 2, defect 0  [MOD p (p = 32003), this instance]
+RESULT coble-exact-member: dim Sing 0, points 72, all ODP true, form degree 4, conditions 71, defect 1  [MOD p (p = 32003), this instance]
+RESULT pfaffian-k3: dim Sing 0, points 56, all ODP true, form degree 4, conditions 55, defect 1  [MOD p (p = 32003), this instance]
+RESULT singular-line: dim Sing 1, points not finite, all ODP false, form degree 4, conditions not determined, defect not determined  [MOD p (p = 32003), this instance]
+ALL PASS
