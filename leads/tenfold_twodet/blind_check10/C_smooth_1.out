@@ -1,0 +1,10 @@
+seed 1; F has 264 terms; checksum of F at (1,2,..,12): 10050
+F4 Groebner basis: 1553 elements, max degree 13   [cpu 7.62152 s, wall 8 s]
+dim of the initial ideal (affine) = 0 => S/J Artinian (F smooth): true
+pure powers among the lead terms: {2, 2, 2, 2, 3, 3, 4, 5, 6, 11, 7, 13}
+Hilbert function of S/in(J): {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0}; equals binomial(12,d): true
+generators of J reduce to zero modulo the computed basis: true
+
+real	9m20.057s
+user	9m33.867s
+sys	0m2.145s

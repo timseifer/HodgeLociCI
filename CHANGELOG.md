@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 160 entries)
+### Discoveries registry (142 -> 163 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -56,6 +56,14 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   meets V_Z with that class. `leads/TENFOLD_TWODET_LEAD.md`.
 - N-M2-TOFIELD-IDEAL-QUOTIENT (a caution): Macaulay2 1.22 returned a wrong ideal quotient over
   toField(QQ[w]/(w^2+w+1)); found by the blind checker, reproduced. Do not use such output as exact evidence.
+- D-TENFOLD-CONE-POINTS-TWO-DET (paper argument by an AI, conditional on D-W-MINUS1-IS-TWO-DET-CLOSURE): the closure of
+  l_1 Q_1 + l_2 Q_2 + det A + det B meets V_Z with the class +-([P1] - [P2]) at cone points over the sixfold divisor D
+  (T3's cone map applied twice). Exact: the cone arc on the Fermat tenfold to order 9. `leads/TENFOLD_TWODET_LEAD.md`,
+  section 7.
+- D-TENFOLD-ORDER4-MODEL-CONE (MOD p): at the tenfold Movasati point a 13-dimensional family of nets of rank 2 passes
+  order 4, and order 5 after a change of T_2 (lambda = -1 and 2); a model cone of 27 quadrics.
+- C-TENFOLD-ORDER4-RANK2 (correction to O-TENFOLD-CONE-LEAD): "rank 2 and 3 obstructed at order 4, so
+  dim W <= dim Cone_T + 11" holds for generic nets only; with the model the bound is codimension 52, not 54.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

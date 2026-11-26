@@ -1,0 +1,11 @@
+QQ: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/32003: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/101: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/7: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/5: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/3: dim 13, degree 540, numerator 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+ZZ/2: dim 13, degree 540, numerator 1+14*T+78*T^2+206*T^3+205*T^4-90*T^5+315*T^6-684*T^7+1287*T^8-1716*T^9+1716*T^10-1287*T^11+715*T^12-286*T^13+78*T^14-13*T^15+T^16
+
+real	0m2.411s
+user	0m2.642s
+sys	0m0.054s

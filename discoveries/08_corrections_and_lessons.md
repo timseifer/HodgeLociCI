@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (27)
+## Entries on this page (28)
 
 | id | status | title |
 |---|---|---|
@@ -38,6 +38,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-LEAN-CERTIFICATES](#m-lean-certificates) | `EXACT` | Lean certificates: kernel-checked finite computations and deductions from stated hypotheses |
 | [M-NODE-SECTION-TOOL](#m-node-section-tool) | `COMPUTED_ONLY` | Tool tooling/node_section: nodes of a hyperplane section and the relations among them (a count; seven regression cases) |
 | [C-TENFOLD-FERMAT-POINT-CLASS](#c-tenfold-fermat-point-class) | `EXACT` | Tenfold lead: at the Fermat tenfold the explicit arc of the Coble family carries the three-plane class, not Movasati's class; the planned check and one earlier remark are withdrawn |
+| [C-TENFOLD-ORDER4-RANK2](#c-tenfold-order4-rank2) | `MOD_P` | Tenfold lead: 'rank 2 and 3 obstructed at order 4, so dim W <= dim Cone_T + 11' holds for generic nets only; special nets of rank 2 and 3 pass order 4 |
 | [M-FERMAT-SERIES-KERNEL](#m-fermat-series-kernel) | `COMPUTED_ONLY` | Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines |
 
 ---
@@ -1152,6 +1153,64 @@ From leads/tenfold_coble/fermat_point/ (Python 3 with numpy):
 ```
 
 **Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), fifth part.
+
+---
+
+## C-TENFOLD-ORDER4-RANK2
+
+**Tenfold lead: 'rank 2 and 3 obstructed at order 4, so dim W <= dim Cone_T + 11' holds for generic nets only; special nets of rank 2 and 3 pass order 4**
+
+kind: `correction` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+O-TENFOLD-CONE-LEAD records, at the Fermat tenfold with Movasati's pair: "Normal directions to Cone_T are the
+27-dim space of 3x3 matrices M|Pi of linear forms on the P^2 (ARG): rank 2 and 3 obstructed at order 4; rank 1
+(two Segre cones of dimension 11) survive order 4, so dim W <= dim Cone_T + 11."
+Corrected reading (MOD p, D-TENFOLD-ORDER4-MODEL-CONE): generic nets of rank 2 and 3 are obstructed at order 4,
+but not all of them. Nets with a common kernel vector, a common cokernel vector and pairwise orthogonal 2 x 2
+blocks (rank 2; a 13-dimensional family) pass order 4, and so do the nets z_0 C' with C' invertible (rank 3).
+So the order-4 computation bounds a component other than V_Z by dim Cone_T + 13 (codimension >= 52), not
+dim Cone_T + 11 (codimension >= 54), if the order-4 forms are the 27 model quadrics.
+Unchanged: everything T6 recorded about the Segre directions and about the lead W of codimension 54. The Segre
+cones are not in the closure of the 13-dimensional family (a net a x l has no common kernel vector), so the two
+are different candidates.
+
+**Conditions.**
+
+As D-TENFOLD-ORDER4-MODEL-CONE: two primes and seeds for lambda = -1, one for lambda = 2; order 4 only for the
+correction itself. The new bound depends on the model.
+
+**Evidence.** leads/tenfold_twodet/vz4_order4_movasati.m2 and logs/vz/vz4_*.log (cases d, D, e against a, b).
+
+**Independent check.**
+
+None for the runs themselves (two primes and seeds by the same script). The model cone they were predicted from
+was confirmed by blind check 10 (see D-TENFOLD-ORDER4-MODEL-CONE).
+
+**Not established.**
+
+Whether T6's sampling contained any net of these special kinds (its scripts are not in this repository); the
+statement corrected is the general sentence, not a particular run.
+
+**Known before.**
+
+O-TENFOLD-CONE-LEAD (team T6). The correction was found by predicting the cone from T3's eightfold model before
+running anything (PREREG_vz.md, T6 and P5).
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22; about 2.5 min):
+    M2 --script leads/tenfold_twodet/vz4_order4_movasati.m2 32029 1 -1 4
+```
+
+**Do not repeat.**
+
+Do not sample directions at this point by the rank of the net alone: the surviving nets of rank 2 and 3 have
+measure zero among nets of their rank. Sample the pieces of the model cone.
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), tenth part (owner: 'Yes begin' on whether the tenfold two-determinant family meets V_Z with the class [P1] - [P2]).
 
 ---
 

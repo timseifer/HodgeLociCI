@@ -1,0 +1,7 @@
+checksum 10050
+new HashTable from {label => codimension of ((I + J) : m^e)_d in S_d, MOD p (computed over ZZ/32003 at one instance: evidence, not a proof); it is the tangent codimension of the Hodge locus of the class PROVIDED the primitive class is nonzero (then the period functional spans the annihilator of (I+J)_t), k => 5, hypothesis => true, upperBound => 52, degree => 3, codim => 52, codimIJ => 1, smooth => true, socleHalfDegree => 6, exponent => 3}
+time 62.147
+
+real	1m3.922s
+user	1m8.011s
+sys	0m0.611s

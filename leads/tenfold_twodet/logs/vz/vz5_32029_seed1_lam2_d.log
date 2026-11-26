@@ -1,0 +1,10 @@
+p = 32029, seed 1, lambda = 2, case d ; base run: reached order 4 ; obstructed at order 5 ; cpu 47.2018
+  9 of 27 net directions done ; rank so far 7 ; cpu 394.792
+  18 of 27 net directions done ; rank so far 13 ; cpu 734.259
+  27 of 27 net directions done ; rank so far 14 ; cpu 1080.3
+RESULT obstruction space: 183 ; rank of the image of the 27 net directions: 14 ; rank with o_0 adjoined: 14 ; removable at order 5: true
+control, random element of ker L: its column lies in the span of the 27: true
+control, random element of ker L: its column lies in the span of the 27: true
+control, random element of ker L: its column lies in the span of the 27: true
+RESULT with the corrected T_2: reached order 5 ; obstructed at order 6
+DONE cpu 1410.2

@@ -1,0 +1,24 @@
+seed 1; F has 264 terms; variables in A,B: {0, 1, 2, 3, 4, 5, 6, 7}
+J contained in I: true
+Hilbert function of S/I, degrees 0..8: {1, 10, 35, 52, 35, 10, 1, 0, 0}; equals 1,10,35,52,35,10,1,0,0: true
+dimension of socle ((I:m)/I) in degrees 0..7: {0, 0, 0, 0, 0, 0, 1, 0}   [t=20.7161]
+scheme V(x10,x11,I_2(A),I_2(B)): projective dim 1, degree 36
+    V(K1) lies in the line x0=..=x7=x10=x11=0 because x10, x11 and all x_i^5 (i<8) are in K1: true
+    k[x0..x7]/(I_2(A)+I_2(B)): Hilbert function {1, 8, 18, 8, 1, 0}, length 36
+    Q1,Q2 restricted to the line (x8,x9): resultant-type check, dim of (lineIdeal + (Q1,Q2)) = 0 (0 means no common zero on the line)
+codim I_2(A), I_2(B) in k[x0..x7]: {4, 4}
+T5: projective dim 5, degree 9, F in I(T5): true
+Hilbert function of S/(I(T5)+J), degrees 0..8: {1, 10, 39, 65, 49, 15, 1, 0, 0}   [t=21.6352]
+I_2(A) is the sum of the row-pair ideals: true; (x10,x11,I_2(A),I_2(B)) + J == I: true
+smoothness (a): dim of V(J + (x10,x11)) (affine cone) = 0 (0 means empty in P^11)   [28.8225 s]
+smoothness (b): F4 basis of J: 1553 elements   [9.11947 s]
+               dim of the initial ideal (affine) = 0 => F smooth: true
+               Hilbert function of S/J: {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0}; equals binomial(12,d): true
+               generators of J reduce to 0 modulo the F4 basis: true
+               (independent engine: Singular, Hilbert-driven std, see C_singular_<seed>.out; M2's MGB and M2's standard gb did not finish in 4 and 9 minutes)
+rank of the pairing (S/I)_3 x (S/I)_3 -> (S/I)_6 = k: 52 of 52
+total time 64.2356
+
+real	1m4.931s
+user	1m10.731s
+sys	0m1.048s

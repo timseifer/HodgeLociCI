@@ -1,0 +1,11 @@
+p = 31981, seed 2, lambda = -1 ; rank L = 38 ; rank [L_P1; L_P2] = 39
+squarefree cubics in x_0..x_5: 20 ; of them in ker L: 19 ; in ker L_P1 and ker L_P2: 18
+RESULT case a [generic net (rank 3)]: net on V_4: false ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 3 ; obstructed at order 4 ; cpu 17.4228
+RESULT case b [generic net with a common cokernel vector (rank 2)]: net on V_4: false ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 3 ; obstructed at order 4 ; cpu 17.4301
+RESULT case c [Segre cone, common column vector (rank 1)]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 16.3475
+RESULT case C [Segre cone, common row vector (rank 1)]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 14.9056
+RESULT case d [13-dimensional piece: common kernel and cokernel, orthogonal blocks (rank 2)]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 16.189
+RESULT case D [13-dimensional piece, second sample]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 15.8901
+RESULT case e [z_0 C', C' invertible (rank 3)]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 3.17243
+RESULT case E [z_0 C', rank C' = 2 (cone-type direction)]: net on V_4: true ; t in T V_Z: true ; T_1 in ker L: true ; arc reached order 4 ; obstructed at order null ; cpu 3.20789
+DONE

@@ -1,0 +1,24 @@
+(1) saturate(I, det A) == (B,C entries): true   [t=1.07297]
+(2) saturate(I, minor of A): dim 13 degree 540   [t=1.36816]
+    IW = saturate(that, b11): dim 13 degree 540 numgens 50 generator degrees new Tally from {2 => 27, 3 => 23}
+    S2 == intersect(IW, LA): true
+    same construction starting from a minor of B gives the same ideal: true
+    same construction from another minor of A gives the same ideal: true   [t=2.72611]
+    IW contains the 3x3 minors of [A|B|C] and of [A;B;C]: true
+(3) Segre cones: dims {11, 11} degrees {45, 45}; contained in V4: true
+    dim, degree of I3 = I + all 2x2 minors of A,B,C: {11, 90}
+    saturate(saturate(I3, Scol), Srow) == 1 (so the rank<=1 locus of V4 is the union of the two Segre cones): true   [t=174.134]
+    I3 == intersect(Scol, Srow): false
+    Scol contains IW? false; Srow contains IW? false; LA contains IW? false
+    dim (IW + Scol) = 10, dim (Scol + Srow) = 7, dim (IW + LA) = 8
+(4) I == intersection of the six candidate component ideals: true   [t=175.751]
+    I contained in the intersection: true
+    Hilbert numerators: I: 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7 ; intersection: 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+(5) hilbert numerator of IW: 1+14*T+78*T^2+177*T^3+177*T^4+78*T^5+14*T^6+T^7
+    codim of singular locus computation skipped; trying isPrime IW ...
+    isPrime IW: true   [8.93484 s]
+done t=184.735
+
+real	4m50.941s
+user	3m10.489s
+sys	0m0.215s

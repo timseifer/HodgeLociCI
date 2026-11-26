@@ -3,7 +3,8 @@
 AI-written, not reviewed by a mathematician. Labels: EXACT / MOD p / ARG / LIT / OPEN. Finite-field runs are
 evidence, not proofs. Nothing here is a statement about the Hodge conjecture: every class below is the class of an
 algebraic cycle. Pre-registration, scripts and logs: `leads/tenfold_twodet/`. Registry:
-D-TENFOLD-TWO-DETERMINANT-FAMILY, D-TENFOLD-TWO-DET-CLASS, D-TENFOLD-TWO-DET-HODGE-LOCUS.
+D-TENFOLD-TWO-DETERMINANT-FAMILY, D-TENFOLD-TWO-DET-CLASS, D-TENFOLD-TWO-DET-HODGE-LOCUS. Section 7 (evening):
+D-TENFOLD-CONE-POINTS-TWO-DET, D-TENFOLD-ORDER4-MODEL-CONE, C-TENFOLD-ORDER4-RANK2.
 
 Earlier work this continues: the families det A + det B on sixfolds and l Q + det A + det B on eightfolds of the
 teams T2 and T3 (D-TWO-DET-FAMILY-NUMBERS, D-EIGHTFOLD-FAMILY-TD: the fourfold T4, its Hodge locus, and the exact
@@ -26,6 +27,7 @@ count T4.T4 = 51 on the Fermat eightfold, which is the method of section 2 here)
 - **OPEN:** whether the closure of the family meets V_Z (two 5-planes meeting in a P^2) at a point where the class
   is [P1] - [P2], as the sixfold family does along the divisor D of D-CUBIC-SIXFOLD-DETC. If it does at a point
   whose Hodge lattice has rank 3, the class there is automatically +-([P1] - [P2]).
+  **Update, same evening: a conditional yes, at cone points; see section 7.**
 
 So on tenfolds there are now three different families for the same orbit of classes: V_Z (codimension 39), this
 one (52) and the Coble family (54). At the Fermat point the class of the Coble family is the three-plane class
@@ -102,8 +104,8 @@ two hyperbolic planes", as quoted from Gritsenko-Hulek-Sankaran, Prop. 3.3, in l
 
 - Characteristic 0 for section 1; the orbit statement is an argument on recalled theorems; the component
   statement is first-order plus an argument.
-- OPEN, and the one that bears on the main lead: does the closure of the family meet V_Z with the class
-  [P1] - [P2]? Route used on sixfolds by T2: degenerate the pair (A, B) until the cubic acquires the two planes
+- (Answered conditionally in section 7.) OPEN, and the one that bears on the main lead: does the closure of the
+  family meet V_Z with the class [P1] - [P2]? Route used on sixfolds by T2: degenerate the pair (A, B) until the cubic acquires the two planes
   (D-GENERAL-CUBIC-OF-D-IS-LIMIT, D-DEGENERATION-ALONG-ARC). A first-order shortcut: at a point X of V_Z the family
   can only pass if the kernel of the pairing of [P1] - [P2] there is larger than T V_Z, so look where its rank
   drops below 39 for lambda = -1.
@@ -130,3 +132,179 @@ Report: `leads/tenfold_twodet/blind_check9/REPORT.txt`. Nothing refuted.
   toField(QQ[w]/(w^2+w+1)) (`leads/tenfold_twodet/tooling_tofield_colon.m2`; registry N-M2-TOFIELD-IDEAL-QUOTIENT).
 - Not checked by it: the annihilator at a random member directly (too heavy); section 1's node statements; the
   count for kappa.
+
+## 7. Does the family meet V_Z with the class [P1] - [P2]? (26 Nov, evening; owner: "Yes begin")
+
+Pre-registration, written before the runs: `leads/tenfold_twodet/PREREG_vz.md` (theory T1-T6, predictions P1-P6
+with what each outcome would mean). Scripts vz1-vz5 and logs: `leads/tenfold_twodet/`, `logs/vz/`. Registry:
+D-TENFOLD-CONE-POINTS-TWO-DET, D-TENFOLD-ORDER4-MODEL-CONE, C-TENFOLD-ORDER4-RANK2.
+
+### 7.0 Answer
+
+- **Conditionally yes (ARG on registry inputs).** The closure of the family contains every tenfold
+  X_c = c(y0..y7) + l_1 Q_1 + l_2 Q_2 with c in the closure of the sixfold family det A + det B. If the sixfold
+  statement D-W-MINUS1-IS-TWO-DET-CLOSURE holds (a paper chain of team T2, supported MOD p along one arc), then
+  for c on the sixfold divisor D the tenfold X_c lies in V_Z and the class of the family there is
+  +-([P1] - [P2]): the family is a second component of the Hodge locus of [P1] - [P2] at these "cone points"
+  (a locus of codimension 73), exactly as on sixfolds along D and on eightfolds at X1. Nothing in this step is
+  specific to tenfolds: it is T3's cone map (D-LAMBDA2-CONE-TYPE) applied twice.
+- **What is checked, not argued.** (EXACT) On the Fermat tenfold with the pair of type [6T 2T 2F 2T], T3's
+  exported cone arc keeps [P1] - [P2] a Hodge class to order 9 (all 221 period functions) and leaves V_Z at first
+  order; rank L = 38 against 39. (MOD p, two instances) Honest cone members have tangent codimension 52, the
+  Hilbert function 1,10,35,52,35,10,1, and a singular line of multiplicity 36 in the P^9-section.
+- **Never at an honest member (ARG).** At a smooth member l_1 Q_1 + l_2 Q_2 + det A + det B the class has tangent
+  codimension 52; a two-plane class has at most 40. So the meeting points are limits. The same argument on
+  sixfolds sharpens the plane lemma of T2.
+- **New at Movasati's point (MOD p).** The order-4 cone there is larger than recorded: nets of rank 2 with a
+  common kernel and cokernel and pairwise orthogonal 2 x 2 blocks (a 13-dimensional piece of the model cone) pass
+  order 4, as do the special rank-3 nets z_0 C'. T6's "rank 2 and 3 obstructed, so dim W <= dim Cone_T + 11" holds
+  for generic nets only. If the order-4 forms are the 27 model quadrics (supported at eight directions, two
+  primes, and by a rank 14 = 27 - 13), the order-4 bound for a component other than V_Z is codimension >= 52,
+  not 54; 52 is the codimension of this family. At order 5 the obstruction along a direction of the
+  13-dimensional piece is removable, for lambda = -1 and for lambda = 2 alike; order 6 is not decided.
+- **Not shown:** that a component of codimension 52 exists at Movasati's point (order 5 only, and lambda = 2
+  behaves the same to that order); the sixfold statement itself; anything in characteristic 0 beyond the exact
+  arc. All classes here are classes of algebraic cycles.
+
+### 7.1 What this uses
+
+T3: the cone map and the Thom-Sebastiani formula for the Jacobian ring (D-LAMBDA2-CONE-TYPE), the cone pairing
+(cone a, cone b) = -2 (a, b) + deg a deg b, the cone-type arcs six_lam-1_arc.txt, the eightfold order-4 model
+(D-EIGHTFOLD-BOUNDS-AT-MOVASATI-POINT), D-X1-COMPONENT-IS-TD-CLOSURE. T2: D-W-MINUS1-IS-TWO-DET-CLOSURE,
+D-GENERAL-CUBIC-OF-D-IS-LIMIT, D-DEGENERATION-ALONG-ARC, D-RANK-INVARIANT, D-SIXFOLD-GERM-AT-MOVASATI-POINT.
+T6: O-TENFOLD-CONE-LEAD. The first-order rule of paper 3. rStation papers #5 and #11 (cone families,
+Thom-Sebastiani points). The package's Fermat engine for every period computation.
+
+### 7.2 The argument (ARG; details in PREREG_vz.md, section 1)
+
+Write a tenfold with two 5-planes meeting in Pi = P^2 as F = f^T M h + sum p_l s_l; Mbar = M|Pi is a net of
+3 x 3 matrices, sbar_l = s_l|Pi.
+
+1. Cone map. For a smooth sixfold Z = {c = 0} and X = {c + l_1 Q_1 + l_2 Q_2 = 0} smooth, the section
+   l_1 = l_2 = 0 is the cone over Z with vertex a line; blowing up the vertex gives a P^2-bundle over Z mapping
+   to X, and pull-back followed by push-forward is a morphism of Hodge structures H^6(Z) -> H^10(X) sending the
+   class of V to the class of the cone over V. So Hodge loci go to Hodge loci (one direction only: the Hodge
+   locus of the cone class can be larger). Pairing: one step is (cone a, cone b) = -2 (a, b) + deg a deg b (T3;
+   proved for all classes by the blind check), two steps give 4 (a, b) - deg a deg b: norms -12 -> 24 -> -48 and
+   T.T = 15 -> 51 -> -21; the last value is the one counted on the Fermat tenfold earlier today (section 2), by a
+   method that does not use cones. A general c + l_1 Q_1 + l_2 Q_2 is not an iterated one-step cone (Q_1 involves
+   both vertex coordinates); the two-step formula holds at the members that are, e.g. Fermat, and extends to all
+   by flatness of the cone map over the connected parameter space (the checker's caveat).
+2. Cone members. If A and B do not involve two of the ten variables of the P^9, the member is the double cone
+   of a sixfold det A + det B, T5 is the cone over T, and the ideal (l, Q, I_2(A), I_2(B)) has Hilbert function
+   (1,8,18,8,1) x (1,2,1). These members form a family of codimension 72 inside the closure of the family.
+3. Honest members. At a smooth member the ideal I = (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)) is Gorenstein with
+   Hilbert function 1,10,35,52,35,10,1 (smoothness forces the two rank <= 1 loci to meet the P^9 in a curve on
+   which Q_1, Q_2 have no common zero). It is the annihilator of the class: I lies in the annihilator (a limit
+   of the general member, or directly, since I(T) + J annihilates [T] for each row / column variant of T5 and
+   these ideals sum to I), the class is not zero, and a proper quotient of an Artinian Gorenstein algebra kills
+   the socle. (My first version said "same Hilbert function and continuity"; the checker pointed out that the
+   Gorenstein property is what carries the step.) So the tangent codimension is 52; for two planes it is at most
+   40. Shorter: two linear forms annihilate delta_2, three annihilate a two-plane class. This holds for cubics
+   literally of the form l_1 Q_1 + l_2 Q_2 + det A + det B, not for limits of them. On sixfolds: an honest sum
+   has no linear form annihilating its class, while the hyperplane spanned by two 3-planes meeting in a point
+   annihilates [P1] - [P2] (Hilbert functions 1,8,18,8,1 against 1,7,12,7,1).
+4. First order. A second branch through a point of V_Z needs det Mbar in (sbar_1, sbar_2, sbar_3): a divisor
+   D_10 of V_Z (paper 3). Cone points over any sixfold of V_Z^(6) satisfy it: Mbar = z_0 C, sbar_3 = z_0^2.
+5. Conclusion, given the sixfold statement (S): for c on D (D is closed, so including the points with C = 0),
+   X_c is in V_Z, in the closure of the family, and the class is the double cone of +-([P1'] - [P2']). Examples
+   on the Fermat tenfold: the pair [6T 2T 2F 2T] (double cone of T2's pair) and Movasati's pair (double cone of
+   the sixfold Movasati pair). The tangent codimension along the cone-type family is 8 + 2 x 18 + 8 = 52
+   (Thom-Sebastiani and D-RANK-INVARIANT).
+
+### 7.3 The checks of the conditional statement
+
+| | prediction (written first) | result | label |
+|---|---|---|---|
+| P1 | Fermat tenfold, pair [6T 2T 2F 2T], class P1 - P2: Hodge codimension 38, joint persistence 39 | 38, 39, excess 1 (P1 + P2: also 38) | EXACT |
+| P2 | T3's cone arc, read on the tenfold: 221 period functions vanish to order 9; T_1 not tangent to V_Z | pass to order 9; T_1 in ker L, not in ker L_P1; control P1 + P2 fails at order 1 | EXACT |
+| P3 | honest cone member: Hilbert function 1,10,35,52,35,10,1; tangent codimension 52; smooth | as predicted at 32003 (seed 1) and 31991 (seed 2); rank <= 1 loci meet the P^9 in the vertex line with multiplicity 36 | MOD p |
+
+P2 is not independent of the eightfold statement: along such an arc the tenfold period functions are the
+eightfold ones times constants (Thom-Sebastiani). It checks that the cone map does what step 1 says, with the
+tenfold's own 221 equations.
+
+### 7.4 Movasati's point: the order-4 cone (model: ARG by analogy with T3; tests: MOD p)
+
+At Movasati's pair on the Fermat tenfold, Mbar = 0, sbar_l = z_l^2, and T V_Z maps onto the 27-dimensional space
+of nets N = z_0 A + z_1 B + z_2 C. T3 found on eightfolds that the order-4 forms are y^2 times the y_1 y_2-
+coefficients of the 2 x 2 minors of A y_1 + B y_2. The same model with one more variable: 27 quadrics, the
+coefficients of z_i z_j (i < j) in the 2 x 2 minors of N. Its zero set V_4, by hand:
+- one of A, B, C invertible: the other two vanish (three linear pieces of dimension 9);
+- all of rank <= 1: the two Segre cones of dimension 11 (T6's "rank 1");
+- one of rank 2: all three have its kernel and its cokernel, and the three 2 x 2 blocks are pairwise orthogonal
+  for the polar form of det: dimension 2 + 2 + 9 = 13.
+The blind check computed the decomposition: the 27 quadrics generate a radical ideal with exactly these six
+components, of dimensions 13, 11, 11, 9, 9, 9 and degrees 540, 45, 45, 1, 1, 1 (ZZ/32003; the same Hilbert series
+over QQ).
+So dim V_4 = 13, not 11, and the cylinder over it with the excess line has codimension 39 + 14 - 1 = 52. The
+same count on sixfolds (the cubic det C: 8 + 1 - 1 = 8) and on eightfolds (T3's cone of codimension 7:
+20 + 7 - 1 = 26) gives the codimensions of det A + det B and of l Q + det A + det B.
+
+| | what | result | label |
+|---|---|---|---|
+| P4 | Jacobian rank of the 27 quadrics at random points of each piece | 14 (13-dimensional piece), 16 (Segre), 18 (A,0,0) | MOD p, model only |
+| P5 a, b | generic nets of rank 3 and of rank 2: obstructed at order 4 | obstructed at order 4 | MOD p |
+| P5 c, C | Segre cones: pass order 4 | pass | MOD p |
+| P5 d, D | 13-dimensional piece (rank 2): pass order 4 | pass (two samples per run) | MOD p |
+| P5 e, E | z_0 C' with C' invertible, and of rank 2 (cone-type): pass order 4 | pass | MOD p |
+| P6a | direction d, lambda = -1: the order-5 obstruction is removable by a change of T_2; image of rank 14 | removable; rank 14; random elements of ker L add nothing | MOD p |
+| P6b | the same for lambda = 2 (no prediction) | removable as well; rank 14 | MOD p |
+
+P5 was run at (32029, seed 1) and (31981, seed 2) for lambda = -1 and at (32029, seed 1) for lambda = 2, with
+the same outcome; P6a at both, P6b at the first. Order 4 is the first non-zero order at this point, so P5 does not depend on the choice of
+lower terms. With the corrected T_2 the next obstruction of the package's default continuation is at order 6
+(both lambda); whether it is removable was not tested. The cone-type direction E passes order 5 without any
+correction (lambda = -1), as the cone map predicts.
+
+What this changes: the sentence "rank 2 and 3 obstructed at order 4 ... so dim W <= dim Cone_T + 11" of
+O-TENFOLD-CONE-LEAD is true of generic nets of rank 2 and 3 and not of all of them (C-TENFOLD-ORDER4-RANK2). The
+lead W of T6 (Segre directions, codimension 54) is not touched: the Segre cones are not in the closure of the
+13-dimensional piece (their nets have no common kernel vector).
+
+### 7.5 How the pieces fit, and what would decide it
+
+- If (S) holds, the closure of the family passes through Movasati's point with Movasati's class, with
+  codimension 52, i.e. slice dimension 168, and the class is algebraic on it (it is [T5] - 3h^5). The order-4
+  cone found here has exactly the room for it, and no more. rStation paper #5 leaves open whether a component of
+  slice dimension above 155 exists at that point; this would be one, with an algebraic class. It is a
+  conditional statement and a finite-order consistency check, not a result.
+- For lambda = 2 the directions of the 13-dimensional piece also pass order 5. On eightfolds the two values
+  separate at order 5 by the factor (lambda + 1)^2 (D-X1-ORDER5-FORMULA); T6 saw a rank-1 direction at
+  lambda = 2 fail at order 6. So the test that would separate them here is order 6 on direction d: the order-6
+  vector modulo the image of rank 14 and modulo the first-order changes of T_2 along the 13 tangent directions
+  of the piece (about 15 runs of 4 minutes per lambda and prime). Not run.
+- The step that would replace (S) by a computation is the one T2 left as STUCK
+  (O-RECOVER-MATRICES-AND-LIMIT-OF-T): the matrices A(eps), B(eps) along the sixfold arc. By the cone map the
+  same matrices give explicit degenerations onto the eightfold point X1 and onto the tenfold cone points.
+
+### 7.6 Not established
+
+- (S), and with it every "yes" above. That the nets of quadrics along T2's arc are nets of minors is known by
+  numbers only (D-DEGENERATION-ALONG-ARC).
+- That the order-4 forms at Movasati's point are exactly the 27 model quadrics (tested on eight directions and
+  one differential, not proved), hence the bound 52.
+- Existence of a component of codimension 52 at Movasati's point: order 5 only; order 6 open; lambda = 2 not
+  separated.
+- Whether the family meets V_Z elsewhere (cone points over the eightfold locus, or points that are not cones).
+- Characteristic 0 for P3-P6.
+
+### 7.7 Blind check 10 (a separate agent; own Macaulay2, Singular and Python code; it read nothing under leads/ or discoveries/)
+
+Report and scripts: `leads/tenfold_twodet/blind_check10/`. It was given five claims (the model cone, the exact
+arc, the honest cone member, the argument of step 3, the cone map), not the runs at Movasati's point.
+
+- Model cone: CONFIRMED and sharpened (six components exactly, degrees as above, radical; point counts over
+  F_3, F_5, F_7; the rank <= 1 part is exactly the two Segre cones; characteristic 3 need not be excluded).
+- Exact arc: CONFIRMED by the package and by its own exact implementation of the period formula (221 forms,
+  orders 1..9; P1 + P2, P1, P2 fail at order 1; ranks 38, 39; sign convention checked against intersection
+  numbers). Its judgement, which I share: the tenfold arc is a formal consequence of the eightfold one (it
+  checked the constant-factor identity value by value), so it tests the implementation; only the ranks are new
+  at the tenfold level. The Hilbert function of S/Ann([P1] - [P2]) there is 1,9,27,38,27,9,1.
+- Honest cone member: CONFIRMED at two seeds, with the socle, the perfect pairing and smoothness by three
+  Groebner routes; one member with A, B in all twelve variables as well.
+- Step 3: sound in substance; the proof of "the ideal is the annihilator at every smooth member" was rewritten
+  as above; the statement is about cubics literally of this form.
+- Cone map: sound; the pairing formula proved in general; the caveat on "applied twice" is in step 1.
+- Not checked by it: the period formula itself by another method; the order-4 and order-5 runs (these rest on
+  repetition at a second prime and seed by the same scripts).

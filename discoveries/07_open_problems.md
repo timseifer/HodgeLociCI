@@ -975,6 +975,10 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
+UPDATE 26 Nov 2026 (evening): the order-4 sentence of this entry is corrected by C-TENFOLD-ORDER4-RANK2 (special
+nets of rank 2 and 3 pass order 4; D-TENFOLD-ORDER4-MODEL-CONE), and the closure of the two-determinant family
+(codimension 52, an algebraic class) passes through this point CONDITIONALLY on the sixfold identification
+(D-TENFOLD-CONE-POINTS-TWO-DET). The lead W in the Segre directions is not touched. Earlier updates:
 UPDATE 26 Nov 2026 (later): the class of the 4-plane cycle is not a multiple of h^5 by a transversal intersection
 count with a 5-plane (8 points, where a multiple of h^5 gives 4; MOD p, blind-checked): D-TENFOLD-COBLE-PLANE-COUNT.
 This does not use the node argument or the ladder. Left: characteristic 0 by an exact run, and a human reading.

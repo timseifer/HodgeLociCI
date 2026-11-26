@@ -1,0 +1,13 @@
+seed 1; variables in A,B: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+J in I: true; Hilbert function of S/I: {1, 10, 35, 52, 35, 10, 1, 0, 0}
+socle dimensions of S/I in degrees 0..7: {0, 0, 0, 0, 0, 0, 1, 0}
+curve V(x10,x11,I_2(A),I_2(B)): projective dim 1, degree 36, genus 37
+T5: projective dim 5, degree 9, F in I(T5): true
+Hilbert function of S/(I(T5)+J): {1, 10, 37, 52, 35, 10, 1, 0, 0}  (value 1 in degree 6 means: the functional of [T5]_prim, if nonzero, is the socle functional of S/I)
+(x10,x11,I_2(A),I_2(B)) + J == I: true
+smoothness (F4): dim of initial ideal of J = 0; Hilbert function {1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0}   [7.01288 s]
+locus {l=0, rows 1,2 of A zero, rows 1,2 of B dependent} inside T5: projective dim 1, degree 3
+
+real	0m35.381s
+user	0m39.941s
+sys	0m0.390s

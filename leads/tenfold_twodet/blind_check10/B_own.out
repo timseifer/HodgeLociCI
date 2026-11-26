@@ -1,0 +1,23 @@
+(i) number of T_j: 9 ; variables used: [0, 1, 2, 3, 4, 8, 9] ; subset of {0..5,8,9}: True
+sign check: <P1,P1> = (34012224)+(0)z  <P2,P2> = (34012224)+(0)z  <P1,P2> = (-4251528)+(0)z  ratio <P1,P2>/<P1,P1> = (-1/8)+(0)z  (intersection theory predicts (-2)^(2-5) = -1/8)
+   P1 vs P1 with 1 exponents changed (m=4): ratio = (-1/2)+(0)z  predicted -1/2
+   P1 vs P1 with 2 exponents changed (m=3): ratio = (1/4)+(0)z  predicted 1/4
+   P1 vs P1 with 3 exponents changed (m=2): ratio = (-1/8)+(0)z  predicted -1/8
+   P1 vs P1 with 4 exponents changed (m=1): ratio = (1/16)+(0)z  predicted 1/16
+   P1 vs P1 with 5 exponents changed (m=0): ratio = (-1/32)+(0)z  predicted -1/32
+   P1 vs P1 with 6 exponents changed (m=-1): ratio = (1/64)+(0)z  predicted 1/64
+number of forms: 221
+number of terms of E_n, n=0..9: [1, 6, 22, 63, 158, 350, 709, 1343, 2401, 4098]
+(ii) class P1-P2: number of forms with nonzero coefficient at orders 1..9: [0, 0, 0, 0, 0, 0, 0, 0, 0] ; first failing order: None
+(ii) class P1+P2: number of forms with nonzero coefficient at orders 1..9: [24, 0, 8, 24, 0, 8, 24, 0, 8] ; first failing order: 1
+(ii) class P1: number of forms with nonzero coefficient at orders 1..9: [24, 0, 8, 24, 0, 8, 24, 0, 8] ; first failing order: 1
+(ii) class P2: number of forms with nonzero coefficient at orders 1..9: [24, 0, 8, 24, 0, 8, 24, 0, 8] ; first failing order: 1
+eightfold, class P1-P2, 45 quadric forms: nonzero coefficients at orders 1..9: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+eightfold, class P1+P2, 45 quadric forms: nonzero coefficients at orders 1..9: [12, 0, 4, 12, 0, 4, 12, 0, 4]
+Thom-Sebastiani check (class P1 alone, orders 1..9): tenfold value = const * eightfold value for all forms Q' x10, Q' x11: True ; nonzero values compared: 96 ; nonzero values at forms not of this shape: 0
+(iii) exact ranks over Q(z): rank L(P1-P2) = 38 ; rank [L_P1; L_P2] = 39 ; rank L_P1 = 20 ; rank L_P2 = 20 ; rank L(P1+P2) = 38
+    T_1 in ker L(P1-P2): True ; in ker L_P1: False ; in ker L_P2: False ; in ker L(P1+P2): False
+
+real	0m57.588s
+user	0m57.087s
+sys	0m0.024s

@@ -25,3 +25,28 @@ sixfold and eightfold at the Fermat point; my reading of the registry was wrong)
 Independent check: `blind_check9/REPORT.txt` (nothing refuted; three caveats and a stronger form of two statements,
 worked into section 6 of the lead note). `tooling_tofield_colon.m2`: the checker's example of a wrong ideal
 quotient of Macaulay2 1.22 over toField(QQ[w]/(w^2+w+1)), reproduced (registry N-M2-TOFIELD-IDEAL-QUOTIENT).
+
+## Second batch (26 Nov, evening): does the family meet V_Z with the class [P1] - [P2]?
+
+Write-up: section 7 of `leads/TENFOLD_TWODET_LEAD.md`. Pre-registration, written before the runs (theory T1-T6,
+predictions P1-P6 with what each outcome would mean): `PREREG_vz.md`. Logs: `logs/vz/`.
+All scripts are run from the repository root (they load the package from `M2/HodgeLociCI.m2`).
+
+| script | what it does | result |
+|---|---|---|
+| `vz1_fermat_cone_arc.m2 first` | EXACT: T3's cone arc read as a tenfold arc at the pair [6T 2T 2F 2T]; first-order ranks | all 221 period functions of P1 - P2 vanish to order 9; rank L = 38, joint 39 |
+| `vz2_honest_cone_member.m2 p seed` | MOD p: a member with A, B in x_0..x_7 only | Hilbert function 1,10,35,52,35,10,1; tangent codimension 52; smooth; vertex line of multiplicity 36 |
+| `vz3_order4_model_cone.m2 p seed` | MOD p, polynomials only: the 27 model quadrics on nets z_0 A + z_1 B + z_2 C | Jacobian rank 14 / 16 / 18 on the pieces of dimension 13 / 11 / 9 |
+| `vz4_order4_movasati.m2 p seed lambda order [cases]` | MOD p: order 4 at Movasati's point along eight kinds of direction | generic rank 3 and rank 2: obstructed at 4; Segre, the 13-dimensional piece, z_0 C': pass |
+| `vz5_order5_removability.m2 p seed lambda [case]` | MOD p: is the order-5 obstruction removable by a change of T_2? | yes for lambda = -1 and 2 on the 13-dimensional piece; image of rank 14 |
+
+Reproduce:
+
+    M2 --script leads/tenfold_twodet/vz1_fermat_cone_arc.m2 first                 (about 25 s)
+    M2 --script leads/tenfold_twodet/vz2_honest_cone_member.m2 32003 1            (about 75 s)
+    M2 --script leads/tenfold_twodet/vz3_order4_model_cone.m2 32003 1             (2 s)
+    M2 --script leads/tenfold_twodet/vz4_order4_movasati.m2 32029 1 -1 4          (about 2.5 min; primes must be 1 mod 6)
+    M2 --script leads/tenfold_twodet/vz5_order5_removability.m2 32029 1 -1 d      (about 25 min)
+
+The answer is conditional on the sixfold statement D-W-MINUS1-IS-TWO-DET-CLOSURE (a paper chain); see section 7.0.
+Independent check: `blind_check10/REPORT.txt`.

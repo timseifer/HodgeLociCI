@@ -540,6 +540,8 @@ consequence follows for the general smooth cubic of D from the lemma and a dimen
 
 **Not established.**
 
+UPDATE 26 Nov 2026: by an annihilator argument no smooth honest sum carries +-(P1 - P2) on the branch of that
+representation (D-TENFOLD-CONE-POINTS-TWO-DET, item (3); an argument, unreviewed). Earlier text:
 No proof that |g.P| = 6 never occurs for (block,block), (skew,block), (skew,skew) planes: samples only. The
 eightfold analogue of the lemma. Which degeneration of (A, B) produces D (see D-DEGENERATION-ALONG-ARC and
 O-RECOVER-MATRICES-AND-LIMIT-OF-T).
@@ -2488,6 +2490,8 @@ point), which is what (3) and (4) say. NOT CHECKED by it: the annihilator at a r
 **Not established.**
 
 ```text
+UPDATE 26 Nov 2026 (evening): item (4) has a conditional answer, D-TENFOLD-CONE-POINTS-TWO-DET (yes at cone points
+over the sixfold divisor D, if the sixfold identification holds). Earlier text:
 (4). Characteristic 0 for the numbers. Higher order is not needed for (1) as stated, but "component" is in the
 sense of the scheme defined by the class near a general member. The literature statements were read in secondary
 sources only.

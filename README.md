@@ -17,6 +17,29 @@ is `M2 --script examples/quickstart.m2`, run from the repository root.
 > computation to be verified, and read the section "What is proved, what is computed" before relying on a result.
 > Nothing here is, or bears on, a proof or disproof of the Hodge conjecture.
 
+## Top results so far, in brief
+
+Short versions of the headline items of the [progress page](https://timseifer.github.io/HodgeLociCI/). Both come
+from the discovery work around the package (`leads/`, `discoveries/`), are AI-generated and unreviewed, and carry
+the status label of their registry entries. Neither is a statement for or against the Hodge conjecture.
+
+- **A 1917 cubic and a hidden Hodge locus on cubic tenfolds** (25 Nov 2026; MOD p at two primes, one member exact
+  over QQ; a proposed explanation awaiting review). For Movasati's pair of 5-planes on cubic tenfolds the class with
+  coefficient -1 appears to stay a Hodge class on a locus one dimension larger than the known families explain. The
+  proposed explanation is an explicit family of codimension 54: tenfolds whose `P^8`-section is a Coble cubic, the
+  cubic sevenfold singular along an abelian surface (Coble, 1917). Each member carries an algebraic fivefold that is
+  expected to carry the class. Write-up: [`leads/TENFOLD_COBLE_LEAD.md`](leads/TENFOLD_COBLE_LEAD.md); registry
+  `D-TENFOLD-COBLE-FAMILY`, `D-TENFOLD-COBLE-EXACT-MEMBER`, `D-TENFOLD-COBLE-PLANE-COUNT`.
+- **Why the special coefficients are +1 and -1: K3 and abelian surfaces** (26 Nov 2026; a short argument by an AI,
+  most numbers MOD p). For two planes meeting in codimension 3 on cubic hypersurfaces only the coefficients +1 and
+  -1 gain extra room. Proposed reason: the nodes of a hyperplane section carry one relation exactly when the
+  surface they lie on has trivial canonical class, and the discriminant of the class is then twice the number of
+  nodes: 14 for a K3 surface (the +1 class), 18 for an abelian surface (the -1 class). Registry
+  `D-TENFOLD-K3-ABELIAN-PAIRING`, `D-NODES-DISCRIMINANT-IDENTITY`.
+
+What is not established is listed in each entry (`not_established`). The package's own main output, which is at
+odds with a published conjecture and needs expert review, is described under "What is proved, what is computed".
+
 ## Run it in one command
 
 With Docker (the image contains Macaulay2 1.22, the package and the MCP server; see
@@ -293,7 +316,7 @@ A readable live view of the registry and of current work is published at
 
 
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
-nobody (person or agent) repeats the work: 160 entries in `discoveries/registry.yaml`, with readable pages by area
+nobody (person or agent) repeats the work: 163 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
 on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
 and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are

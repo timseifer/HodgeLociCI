@@ -1,0 +1,2 @@
+p = 32029, seed 1, lambda = -1, case E ; base run: reached order 5 ; obstructed at order null ; cpu 7.91783
+RESULT order 5 passes with the package's own lower terms

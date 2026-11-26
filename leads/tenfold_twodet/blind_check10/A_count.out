@@ -1,0 +1,3 @@
+q=3 orbit-reduced count=3729051 predicted=3729051 (S1=33696 S2=3188016 S3=507339; Tall=24273 Tiso=5409) agree=True  count/q^13=2.3390
+q=3 full brute force over all A (no group theory): 3729051 agree_with_orbit=True
+q=5 orbit-reduced count=2014380125 predicted=2014380125 (S1=4464000 S2=1888941600 S3=120974525; Tall=2148625 Tiso=183025) agree=True  count/q^13=1.6502

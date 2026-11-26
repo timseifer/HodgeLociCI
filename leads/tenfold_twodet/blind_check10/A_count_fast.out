@@ -1,0 +1,7 @@
+q=3 orbit-reduced count=3729051 predicted=3729051 (S1=33696 S2=3188016 S3=507339; Tall=24273 Tiso=5409) agree=True count/q^13=2.3390
+q=5 orbit-reduced count=2014380125 predicted=2014380125 (S1=4464000 S2=1888941600 S3=120974525; Tall=2148625 Tiso=183025) agree=True count/q^13=1.6502
+q=7 orbit-reduced count=136885779415 predicted=136885779415 (S1=101352384 S2=132185227104 S3=4599199927; Tall=42545377 Tiso=1860481) agree=True count/q^13=1.4128
+
+real	0m2.547s
+user	0m2.485s
+sys	0m0.004s

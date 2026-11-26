@@ -1,0 +1,207 @@
+BLIND CHECK 10 -- independent check of claims A-E
+Folder: /home/claude/blind_check10 (all scripts and outputs named below are here).
+Read from the repository: M2/HodgeLociCI.m2, parts of M2/HodgeLociCI/Fermat.m2 and Excess.m2, the data file
+six_lam-1_arc.txt and its README. Nothing under leads/, discoveries/ or /home/claude/work/ was read. (The repository's
+AGENTS.md asks agents to consult discoveries/ first; I did not, as instructed.) No git, no agents, nothing written outside
+this folder. One Macaulay2 (or Singular) process at a time.
+
+VERDICTS
+  A  CONFIRMED (hand argument correct and complete; exact component list computed)
+  B  CONFIRMED (i), (ii), (iii); (ii) is a formal consequence of the eightfold statement, so it is not new evidence
+  C  CONFIRMED on two random instances (seeds 1 and 2), including smoothness
+  D  SOUND in substance; the "continuity" step needs a different justification than the one written, and the conclusion
+     holds only for cubics literally of the form (not for limits of such). Details below.
+  E  SOUND; the one-step formula is proved below for all cohomology classes; two steps give 4(a,b) - deg(a)deg(b).
+
+=====================================================================================================================
+CLAIM A   (V4: no mixed monomials in the 2x2 minors of z0 A + z1 B + z2 C)
+=====================================================================================================================
+Notation: for 3x3 matrices X, Y let X^Y be the coefficient of st in Lambda^2(sX + tY). V4 = {A^B = A^C = B^C = 0}.
+The conditions are invariant under (A,B,C) -> (PAQ, PBQ, PCQ) and under permuting A, B, C.
+
+Hand argument, checked step by step.
+ (1) A invertible: reduce to A = 1. adj(1 + tB) = 1 + t(tr(B) 1 - B) + t^2 adj(B), so B = tr(B) 1, hence tr B = 3 tr B,
+     2 tr B = 0, B = 0. CORRECT. It needs only characteristic not 2; characteristic 3 is fine (the computations below
+     agree for p = 3). In characteristic 2 it fails (B = c*1 is allowed).
+ (2) A of rank 2: reduce to A = diag(1,1,0). (A^B)(e1^e3) = e1^Be3 and (A^B)(e2^e3) = e2^Be3 give B e3 = 0; the transpose
+     gives e3^T B = 0; (A^B)(e1^e2) = tr(block of B) e1^e2 = polar(det)(a,b). Then B^C reduces to polar(det)(b,c). CORRECT.
+     Dimension: (k, c) in P^2 x P^2 (4) plus pairwise orthogonal triples (a,b,c) in a nondegenerate quadratic 4-space with
+     a anisotropic: 4 + 3 + 2 = 9. Total 13. The set of such triples is irreducible (vector bundle over a vector bundle
+     minus its zero section; the locus b = 0 has dimension 7 and lies in the closure), so this is ONE irreducible piece W,
+     symmetric in A, B, C (generic b, c are anisotropic too).
+ (3) All of rank <= 1: then Lambda^2 of every member of the net vanishes, so span(A,B,C) is a linear space of matrices of
+     rank <= 1; such spaces have a common column space or a common row space (classical). So the rank <= 1 part of V4 is
+     EXACTLY the union of the two Segre cones (the author's "at least" can be replaced by "exactly"); there are no mixed
+     rank-1 configurations (e.g. A = u a^T, B = u b^T, C = v c^T forces v || u or a || b || c).
+ Components: W (13), two Segre cones (11 each, degree 45), three linear spaces (9 each). The Segre cones are not in the
+ closure of W (a generic point of a Segre cone has no common kernel vector, every point of the closure of W has one), and
+ the linear pieces are not (rank 3). No missed component.
+
+Computations (own code).
+ A_dim.m2 / A_dim.out (ZZ/32003): 27 linearly independent quadrics; dim V4 = 13, codim 14, degree 540;
+     Jacobian rank at random points: 14 on W (4 points), 16 on each Segre cone (3 + 3 points), 18 on (A,0,0) (3 points);
+     also 12 at points (alpha M, beta M, gamma M) of the intersection of the two Segre cones.
+ A_comp.m2 / A_comp.out (ZZ/32003), components by saturation:
+     saturate(I, det A) = (entries of B, C);
+     saturate(saturate(I, 2x2 minor of A), b11) =: IW has dim 13, degree 540, 27 quadrics + 23 cubics, isPrime = true,
+        contains the 3x3 minors of [A|B|C] and [A;B;C]; the same ideal is obtained from a minor of B or another minor of A;
+        Hilbert numerator of IW is 1,14,78,177,177,78,14,1 (symmetric);
+     I + (all 2x2 minors of A, B, C) has radical = intersection of the two Segre ideals (double saturation = (1));
+     I == intersect(IW, Segre_col, Segre_row, (B,C), (A,C), (A,B)) : TRUE. So the 27 quadrics generate a RADICAL ideal with
+        exactly six components: dimensions 13, 11, 11, 9, 9, 9 and degrees 540, 45, 45, 1, 1, 1.
+     dim(W n Segre cone) = 10, dim(Segre n Segre) = 7, dim(W n (A,0,0)) = 8.
+ A_chars.m2 / A_chars.out: over QQ and ZZ/p for p = 3, 5, 7, 101, 32003: dim 13, degree 540, the same Hilbert series
+     (so the six-component decomposition holds over QQ as well: the intersection contains I and cannot have a smaller
+     Hilbert function than its reduction mod p). Over ZZ/2 the Hilbert series is different.
+ A_count.py, A_count_fast.py / *.out: #V4(F_q) counted with A reduced to rank normal forms and B enumerated in the kernel
+     of B -> A^B (for q = 3 also with NO reduction, all 3^9 matrices A): 3729051 (q=3), 2014380125 (q=5),
+     136885779415 (q=7). Each equals the count predicted by the classification
+     3|GL3| + (q^2+q+1)^2 (T_all - T_iso) + #(two Segre cones), and #V4/q^13 = 2.34, 1.65, 1.41 (one top component).
+     (My first q = 7 run used a slow loop and was killed at the background time limit; the rerun in A_count_fast.py
+     finished in seconds.)
+
+Remarks: exclusion of characteristic 3 is unnecessary; everything else in the claim is right as stated.
+
+=====================================================================================================================
+CLAIM B   (Fermat cubic tenfold, exact)
+=====================================================================================================================
+Scripts: B_pkg.m2 / B_pkg.out (package functions; the arc is parsed by my own lines), B_own.py / B_own.out (independent
+Python implementation of the closed formula Psi_P(Q exp T) in exact Q(z) arithmetic; shares only the formula).
+
+ (i)  CONFIRMED. The arc uses only x0, x1, x2, x3, x4, x8, x9 (x5 does not occur either); 9 distinct monomials.
+ (ii) CONFIRMED. P1, P2 lie on the Fermat cubic, are 5-planes, meet in a P^2.
+      P1 - P2: all 221 forms (1 of degree 0, 220 of degree 3) vanish at orders 1..9 (package: pass; Python: 0 nonzero
+      coefficients at every order). P1 + P2: fails at order 1 (24 nonzero coefficients). P1 alone, P2 alone: fail at order 1.
+      Sign convention checked independently: the socle pairing of the two period polynomials in S/(x_i^2) gives
+      <P1,P2>/<P1,P1> = -1/8 = (-2)^(2-5), the value forced by the intersection numbers of 5-planes meeting in a P^2;
+      six further pairs (m = 4,...,-1) give (-2)^(m-5). So "P1 - P2" really is the class [P1] - [P2].
+ (iii) CONFIRMED, exactly over Q(z), by both codes: rank L(P1-P2) = 38, rank [L_P1; L_P2] = 39 (L is 221 x 220),
+      rank L_P1 = rank L_P2 = 20; T_1 in ker L(P1-P2), not in ker L_P1 (nor ker L_P2, nor ker L(P1+P2)).
+      Side observation: rank L(P1+P2) is also 38. Hilbert function of S/Ann([P1]-[P2]) at Fermat: 1,9,27,38,27,9,1
+      (D_extra.py).
+
+ Is (ii) a trivial consequence of the eightfold statement?  YES.
+   Formal reason: the tenfold period polynomial of each plane is (eightfold one) * 3z(x10 + z x11); for an arc not
+   involving x10, x11 the functional gives Psi10(Q' x10 E) = 3z^2 Psi8(Q' E), Psi10(Q' x11 E) = 3z Psi8(Q' E) for the 45
+   eightfold forms Q', and 0 on the other 131 forms. B_own.py checks this identity value by value for the class P1 alone
+   (orders 1..9, 96 nonzero values compared, none at forms of another shape), and re-verifies the eightfold statement of
+   the file (45 forms, orders 1..9; package gives the same, with eightfold ranks 19 and 20).
+   Geometric reason: x10^3 + x11^3 = (x10 - z x11)(x10^2 + z x10 x11 + z^2 x11^2), so the tenfold contains the cone over the
+   eightfold with vertex (0:...:0:z:1), both 5-planes are the cones over the 4-planes, and the one-step cone map of
+   claim E is a morphism of variations of Hodge structure. The argument is sound.
+   Consequence: the tenfold run (ii) is not independent evidence; it tests the implementation only. The same applies one
+   level down (x6, x7 do not occur: the eightfold statement is the cone of a sixfold statement). Only (iii) is new
+   information at the tenfold level.
+ Standing caveat: every statement here assumes the period formula for linear spaces and the pole-order reduction (the
+ package says so in its label). I re-derived the Pochhammer reduction by hand and checked the sign convention; I did not
+ verify the period formula by an independent method.
+
+=====================================================================================================================
+CLAIM C   (random instances over ZZ/32003)
+=====================================================================================================================
+Scripts: C_check.m2 (seed as argument) -> C_check_1.out, C_check_2.out; C_export.m2 -> C_singular_{1,2}.sing ->
+C_singular_{1,2}.out; C_smooth.m2 -> C_smooth_1.out; C_pkg_cross.m2 -> C_pkg_cross.out (cross-check only).
+Both seeds give the same answers:
+  J contained in I: true.   Hilbert function of S/I: 1,10,35,52,35,10,1,0,0.
+  Socle (I:m)/I: dimension 1, in degree 6. The pairing (S/I)_3 x (S/I)_3 -> (S/I)_6 has rank 52 (perfect). Gorenstein.
+  V(x10, x11, I_2(A), I_2(B)): dimension 1, degree 36; x10, x11 and all x_i^5 (i < 8) lie in the ideal, so the support is
+  the line x0 = ... = x7 = x10 = x11 = 0. k[x0..x7]/(I_2(A)+I_2(B)) has Hilbert function 1,8,18,8,1 = (1+4t+t^2)^2.
+  Q1, Q2 have no common zero on the line.
+  Smoothness: (a) standard engine: no singular point with x10 = x11 = 0; (b) M2 F4 Groebner basis of J: 1553 elements,
+  initial ideal of dimension 0, Hilbert function binomial(12,d); (c) Singular, Hilbert-driven std (every output element
+  lies in J whatever the hint): 1553 elements, dim 0, vdim 4096, Hilbert series 1,12,66,...,12,1. Since 12 quadrics always
+  have Hilbert function >= binomial(12,d), (c) alone proves S/J Artinian. F is smooth.
+  (M2's standard gb, also Hilbert-driven, and M2's MGB did not finish in 9 and 4 minutes; not used.)
+  Extra: S/(I(T5)+J) has Hilbert function 1,10,39,65,49,15,1, so (I(T5)+J)_6 has codimension 1 and equals I_6; the
+  package function hodgeLocusTangentCodim(F, I(T5)) returns 52 (seed 1).
+The Hilbert function and the Gorenstein property are also what theory predicts: (1+4t+t^2)^2 (1+t)^2.
+Status: two instances modulo one prime; evidence for the generic statement, exact for these instances.
+
+=====================================================================================================================
+CLAIM D   (the argument)
+=====================================================================================================================
+(a) Does smoothness force the dimension and regular-sequence statements?  YES.
+    On Z0 := {l1 = l2 = 0, rank A <= 1, rank B <= 1} the cofactors of A and B vanish, so dF = Q1 dl1 + Q2 dl2 there and
+    Sing(X) contains Z0 n {Q1 = Q2 = 0}. Every component of Z0 has dimension >= 9 - 4 - 4 = 1 and Z0 is nonempty; if a
+    component had dimension >= 2 it would meet {Q1 = Q2 = 0}. (If l1, l2 were dependent, Z0 would have dimension >= 2: so
+    smoothness also forces independence.) Hence Z0 is a curve and Q1, Q2 have no common zero on it. Then
+    codim I_2(A) = codim I_2(B) = 4 modulo (l1, l2) (their sum has codim 8 and codimensions are subadditive), both
+    quotients are Gorenstein determinantal rings with h-vector 1,4,1, they meet properly so the tensor product is
+    Cohen-Macaulay and Gorenstein of dimension 2 with h-vector (1+4t+t^2)^2, and Q1, Q2 is a system of parameters, hence
+    a regular sequence. S/I is Artinian Gorenstein with Hilbert function 1,10,35,52,35,10,1 at EVERY smooth member.
+    (The same count shows T5 has the expected dimension at every smooth member.)
+
+(b) Does "same Hilbert function + continuity" give Ann(delta) = I at special members?  The conclusion is right, the
+    stated reason is not sufficient. A correct argument:
+      1. I_0 is contained in Ann(delta_0): elements of (I_0)_6 extend to elements of (I_t)_6, on which the period functional
+         of the flat class delta_t vanishes for general t; pass to the limit. (This needs no Hilbert function.)
+      2. delta_0 is not 0, because delta is a flat section over the connected set of smooth members and is nonzero
+         somewhere. (Independent confirmation: D_extra.py computes T3.T3 = 15 on the sixfold by Chern classes, so
+         delta6^2 = -12 and, by the cone formula of claim E, delta^2 = -48.)
+      3. S/I_0 is Gorenstein with socle in degree 6 and S/Ann(delta_0) is a quotient of it that is nonzero in degree 6;
+         a proper quotient of an Artinian Gorenstein algebra kills the socle; so the two are equal.
+    What carries the step is the Gorenstein property at the special member (from (a)), not the Hilbert function.
+    "General member" must mean a general point of the SAME irreducible parameter space that contains the special member.
+    Claim C tests only the sub-family with A, B in x0..x7. I therefore also ran a member of the big family (A, B in all 12
+    variables): C_general.m2 / C_general_1.out: S/I has 1,10,35,52,35,10,1, socle 1 in degree 6, Z0 is a curve of degree 36
+    and arithmetic genus 37, S/(I(T5)+J) has 1,10,37,52,35,10,1 (value 1 in degree 6), F smooth (F4). Modulo p, one instance.
+    The input can in fact be proved without computation: I(T) + J is contained in Ann([T]_prim) for any 5-fold T in X; the 36
+    variants T(alpha,beta) (a pair of rows or of columns of A, the same for B) all have primitive class +-delta (two row
+    pairs give rationally equivalent divisors on {det A = 0} n {M_B = 0}; rows + columns = a quadric section = 6h^5); and
+    the sum of their ideals with J is I (checked: (l1,l2) + I_2(A) + I_2(B) + J == I in C_check and C_general). So I is
+    contained in Ann(delta) at every smooth member, and step 3 finishes.
+
+(c) Does the conclusion need a hypothesis on the representation (l, Q, A, B)?
+    No hypothesis on WHICH representation: the argument runs on the space of tuples, and delta is the class built from the
+    given tuple (other row/column choices give +-delta). But F must literally have a representation. The image of
+    (l,Q,A,B) -> F need not be closed: for example (det(A + tC) - det(A))/t tends to tr(adj(A) C), which is in the closure
+    of the sums of two determinants and need not be one. At a smooth cubic that is only a LIMIT of members, the limiting
+    class has Ann containing the flat limit of I, and its tangent codimension may drop below 52 (rank is only lower
+    semicontinuous). I did not determine whether such smooth limit cubics exist; the argument does not exclude them. So
+    the statement should not be used at limit points, nor to separate the CLOSURE of the family from a component of the
+    Hodge locus of [P1] - [P2]. As worded ("at a smooth member of this form") it is correct.
+
+(d) The second half. Each 5-plane on a smooth cubic tenfold is isolated and reduced (H^0 of the normal bundle is 0), so its
+    persistence locus is smooth of codimension 20 and the joint locus has codimension <= 40 (39 expected for planes meeting
+    in a P^2; rank [L_P1; L_P2] = 39 at Fermat). The Hodge locus of [P1] - [P2] contains it. 52 > 40. SOUND.
+    Remarks: the P^2 hypothesis is not used (any two 5-planes, and any combination a[P1] + b[P2] + c h^5, are excluded);
+    self-intersection cannot separate the classes (delta^2 = -48 = ([P1]-[P2])^2), so an argument of this kind is needed;
+    there is a shorter route: Ann(delta)_1 = <l1, l2> has dimension 2, while Ann([P1]-[P2]) contains the 3 linear forms
+    vanishing on the P^8 spanned by P1 and P2. At Fermat the Hilbert functions are 1,9,27,38,27,9,1 against
+    1,10,35,52,35,10,1; on the sixfold 1,7,12,7,1 against 1,8,18,8,1 (D_extra.py), so the sixfold classes are already
+    separated in degree 1 without going to the tenfold.
+
+=====================================================================================================================
+CLAIM E   (the cone map)
+=====================================================================================================================
+Construction: SOUND. E_Z = blow-up of the cone along the vertex line is a P^2-bundle p: E_Z -> Z, smooth of dimension 8,
+with q: E_Z -> X. cone := q_* p^* : H^6(Z,Z) -> H^10(X,Z) is a morphism of Hodge structures of type (2,2), maps [V] to
+[cone V] (q is birational on p^-1(V)), h^3 to h^5 (cone over a linear section is a linear section), preserves degree, and
+is defined in families over the connected set of (c, l, Q) with X smooth (X smooth forces Z smooth and Q1, Q2 without
+common zero on the vertex line). Hence {c + l1 Q1 + l2 Q2 : c in the Hodge locus of gamma} lies in the Hodge locus of
+cone(gamma). One direction only: the Hodge locus of cone(gamma) can be larger.
+
+One-step formula, proved for all classes (degree d, vertex a point v, Z of dimension 2k, X of dimension 2k+2):
+   (cone a, cone b)_X = (1 - d)(a, b)_Z + deg(a) deg(b);   for d = 3:  -2(a,b) + deg(a)deg(b).
+Proof sketch: blow up X at v; the strict transform of the cone is E (a P^1-bundle over Z) meeting the exceptional
+P^(2k+1) transversally along the section sigma = Z; with xi = q^*h = eta + sigma and N_E = xi - d sigma (multiplicity d
+at v), q^* q_* p^*b = p^*b eta + p^*((1-d) b + deg(b) h^k) sigma; pair with p^*a.
+Checks: d = 2, 3 with k = 0 (two or three lines through a point of a quadric or cubic surface); lines and conics on a
+cubic surface going to planes and quadric cones in a cubic fourfold (-1 -> 3, 0 -> 4); linear spaces: with
+(1 - (-2)^(m+1))/3 the identity -2 * value(k,m) + 1 = value(k+1,m+1) holds for all k <= 7, m = -1..k (D_extra.py).
+Two steps: (cone a, cone b) = 4(a,b) - deg(a) deg(b); the "correction" is -deg(a)deg(b), zero on primitive classes.
+Checked on linear spaces: 4 * value(k,m) - 1 = value(k+2,m+2). Signs agree with Hodge-Riemann (6-fold and 10-fold negative
+on primitive (k,k) classes, 8-fold positive).
+Caveat on "applied twice": a general X = c + l1 Q1 + l2 Q2 is NOT an iterated one-step cone (Q1 involves both vertex
+coordinates; X n {l2 = 0} is then not a cone over an eightfold). The factorisation holds at members where Q1 does not
+involve the second vertex coordinate and the intermediate eightfold is smooth (e.g. Fermat); the formula then extends to
+all members because the cone map is flat and the parameter space is connected. This sentence should be in the write-up.
+
+=====================================================================================================================
+NOT DONE / LIMITS
+=====================================================================================================================
+- The period formula behind claim B was not verified by an independent method (only its implementation and its signs).
+- Claim C and the big-family instance: one prime (32003), two seeds and one seed.
+- Primality of the 13-dimensional component: isPrime over ZZ/32003 plus the hand irreducibility argument; not rerun over QQ.
+- The direct proof sketched in D(b) uses the standard inclusion I(T) + J in Ann([T]) and a rational-equivalence
+  argument that I did not write out in full.

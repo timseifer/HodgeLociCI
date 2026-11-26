@@ -1,0 +1,15 @@
+checksum (M2 says 9371):
+9371
+Hilbert-driven std: size, dim, vdim, time:
+1553
+0
+4096
+116
+second Hilbert series of S/J:
+1,12,66,220,495,792,924,792,495,220,66,12,1,0
+all elements of G reduce to 0 mod G (trivial) and J reduces to 0 mod G:
+0
+
+real	1m56.576s
+user	1m55.793s
+sys	0m0.084s

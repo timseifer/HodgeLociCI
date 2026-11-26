@@ -1,0 +1,26 @@
+number of equations: 27, all quadrics: true, numgens trimmed: 27
+rank of the 27 quadrics as vectors (linear independence): 27
+piece (A,0,0): in V4 true, Jacobian rank 18
+piece (A,0,0): in V4 true, Jacobian rank 18
+piece (A,0,0): in V4 true, Jacobian rank 18
+Segre cone (common column): in V4 true, Jacobian rank 16
+Segre cone (common row):    in V4 true, Jacobian rank 16
+Segre cone (common column): in V4 true, Jacobian rank 16
+Segre cone (common row):    in V4 true, Jacobian rank 16
+Segre cone (common column): in V4 true, Jacobian rank 16
+Segre cone (common row):    in V4 true, Jacobian rank 16
+13-dim piece: det P*det Q != 0 true, block dets {-1342, 15084, 641}, pol {0, 0, 0}, in V4 true, Jacobian rank 14
+13-dim piece: det P*det Q != 0 true, block dets {9592, -6438, -14187}, pol {0, 0, 0}, in V4 true, Jacobian rank 14
+13-dim piece: det P*det Q != 0 true, block dets {2726, 10986, -10744}, pol {0, 0, 0}, in V4 true, Jacobian rank 14
+13-dim piece: det P*det Q != 0 true, block dets {12345, 13196, -15444}, pol {0, 0, 0}, in V4 true, Jacobian rank 14
+Segre cone intersection (alpha M, beta M, gamma M): in V4 true, Jacobian rank 12
+Segre cone intersection (alpha M, beta M, gamma M): in V4 true, Jacobian rank 12
+gb time .0959123
+dim V4 (affine) = 13, codim = 14, degree of top-dimensional part (with multiplicity) = 540
+reduced Hilbert series numerator: 1+14*T+78*T^2+200*T^3+175*T^4+36*T^5+12*T^6+24*T^7
+denominator: (1-T)^13
+total time 1.07914
+
+real	0m1.768s
+user	0m1.133s
+sys	0m0.041s

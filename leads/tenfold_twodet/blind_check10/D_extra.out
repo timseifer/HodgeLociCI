@@ -1,0 +1,15 @@
+(1) sixfold: dim T3 = 3, deg T3 = 9, T3.T3 = 15, delta6^2 = T3.T3 - 27 = -12
+    => by the cone formula (cone a, cone b) = 4 (a,b) - deg a deg b:  T5.T5 = -21, delta^2 = T5.T5 - 27 = -48 = 4 * delta6^2
+(2) linear spaces: one-step formula (cone a, cone b) = -2 (a,b) + deg a deg b holds for all k<=7, m=-1..k: True ; two-step formula 4 (a,b) - deg a deg b: True
+    sample values (k,m,(a,b)): [(1, 1, '-1'), (1, 0, '1'), (1, -1, '0'), (2, 2, '3'), (2, 1, '-1'), (2, 0, '1'), (3, 3, '-5'), (3, 0, '1'), (5, 5, '-21'), (5, 2, '3')]
+(3) Fermat tenfold, class P1-P2: Hilbert function of S/Ann in degrees 0..6 (degrees 4..6 by symmetry): [1, 9, 27, 38, 27, 9, 1]
+(3) Fermat tenfold, class P1+P2: Hilbert function of S/Ann in degrees 0..6 (degrees 4..6 by symmetry): [1, 9, 27, 38, 27, 9, 1]
+(3) Fermat tenfold, class P1: Hilbert function of S/Ann in degrees 0..6 (degrees 4..6 by symmetry): [1, 6, 15, 20, 15, 6, 1]
+    compare: S/I for delta = [T5] - 3h^5 has 1,10,35,52,35,10,1
+(4) Fermat sixfold, class P1'-P2' (3-planes meeting in a point): Hilbert function of S/Ann: [1, 7, 12, 7, 1] ; compare S/(I_2(A)+I_2(B)): 1,8,18,8,1
+    class P1'+P2': [1, 7, 12, 7, 1]
+(5) big family: int over the resolution of T5 of c_5(f^*T_X - T): -49 (deg 9, dim 5); T5.T5 from the cone formula is -21
+
+real	0m0.455s
+user	0m0.451s
+sys	0m0.000s

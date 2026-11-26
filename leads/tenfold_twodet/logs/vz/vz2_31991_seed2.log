@@ -1,0 +1,6 @@
+T5 (cone over T): dimension 5, degree 9 ; contained in X: true
+RESULT Hilbert function of S / (l_1, l_2, Q_1, Q_2, I_2(A), I_2(B)), degrees 0..7: {1, 10, 35, 52, 35, 10, 1, 0} ; J inside it: true
+RESULT Hilbert function of S / (I(T5) + J), degrees 0..7: {1, 10, 39, 65, 49, 15, 1, 0}
+singular scheme of the P^9-section inside the two rank <= 1 loci: dimension 1, degree 36 ; its radical is the vertex line: true ; cpu 1.71224
+RESULT package, hodgeLocusTangentCodim(F, I(T5)): codim 52 ; smooth: true ; codimension of ((I + J) : m^e)_d in S_d, MOD p (computed over ZZ/31991 at one instance: evidence, not a proof); it is the tangent codimension of the Hodge locus of the class PROVIDED the primitive class is nonzero (then the period functional spans the annihilator of (I+J)_t) ; cpu 73.8978
+DONE p 31991 seed 2

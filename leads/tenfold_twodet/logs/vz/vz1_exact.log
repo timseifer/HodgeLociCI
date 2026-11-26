@@ -1,0 +1,11 @@
+pair on the Fermat tenfold: P1 = {{0, 1, 1}, {2, 3, 1}, {4, 5, 1}, {6, 7, 1}, {8, 9, 1}, {10, 11, 1}} ; P2 = {{1, 2, 3}, {3, 4, 3}, {0, 5, 3}, {6, 7, 1}, {8, 9, 3}, {10, 11, 1}}
+dim of P1 n P2 (projective): 2
+RESULT P2 arc: pass true ; first failing order null ; order 9 ; forms 221 ; EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces and Griffiths' pole-order description of the Hodge locus)
+cpu 9.23452
+RESULT control P1 + P2: pass false ; first failing order 1
+RESULT T_1 in ker L: true ; T_1 in ker L_P1: false
+RESULT rank L (first-order codimension of the Hodge locus of P1 - P2): 38 of 220 monomials
+RESULT rank L for P1 + P2: 38
+RESULT rank [L_P1; L_P2]: 39
+RESULT P1 first order: Hodge codimension 38 ; joint persistence codimension 39 ; excess 1 ; EXACT over QQ(zeta_6); COMPUTED ONLY (no proof claimed: assumes the period formula for linear spaces and Griffiths' pole-order description of the Hodge locus)
+cpu 8.44529
