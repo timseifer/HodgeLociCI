@@ -1,0 +1,10 @@
+Coble cubic of this seed: singular locus of dim 2, degree 18
+RESULT sixfold +1, l*Q + Pf: 14 nodes, Hilbert function of the Gorenstein algebra of the class {1, 7, 12, 7, 1} (sum 28), in degree 3: 7 ; predicted 7 (registry: 1,7,12,7,1)
+RESULT sixfold -1, hyperplane section Coble n P^6: 18 nodes, Hilbert function of the Gorenstein algebra of the class {1, 7, 16, 7, 1} (sum 32), in degree 3: 7 ; predicted at most 7; 7 means tangent codimension 7
+RESULT eightfold +1, P^7-section Pfaffian: 28 nodes, Hilbert function of the Gorenstein algebra of the class {1, 8, 19, 19, 8, 1} (sum 56), in degree 3: 19 ; predicted 19 (registry: codim NL(1) = 19)
+RESULT eightfold -1, P^7-section Coble n P^7: 36 nodes, Hilbert function of the Gorenstein algebra of the class {1, 8, 25, 25, 8, 1} (sum 68), in degree 3: 25 ; predicted at most 25; compare with 26 (codim of l*Q + det A + det B)
+RESULT eightfold -1, l*Q + det A + det B: 36 nodes, Hilbert function of the Gorenstein algebra of the class {1, 9, 26, 26, 9, 1} (sum 72), in degree 3: 26 ; predicted 26 (registry: D-EIGHTFOLD-FAMILY-TD)
+RESULT tenfold +1, P^8-section Pfaffian (K3): 56 nodes, Hilbert function of the Gorenstein algebra of the class {1, 9, 27, 38, 27, 9, 1} (sum 112), in degree 3: 38 ; predicted 38 (registry: 1,9,27,38,27,9,1)
+RESULT tenfold -1, P^8-section Coble (abelian): 72 nodes, Hilbert function of the Gorenstein algebra of the class {1, 9, 33, 54, 33, 9, 1} (sum 140), in degree 3: 54 ; predicted 54 (registry: codim 54)
+DONE p 32003 seed 1
+EXIT 0

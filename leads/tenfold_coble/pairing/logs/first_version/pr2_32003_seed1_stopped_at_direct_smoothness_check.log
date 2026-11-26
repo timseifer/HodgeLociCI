@@ -1,0 +1,2 @@
+E1: S: dim 2, degree 16, Hilbert polynomial 8*i^2+1 ; Hilbert function in degrees 0..5: {1, 9, 33, 73, 129, 201} (8 n^2 + 1: {1, 9, 33, 73, 129, 201}) ; saturated: true
+E1: K3 cover {q_i(x) + q'_i(y) = 0}: dim 2, degree 8, smooth: true ; no point with y = 0: true ; no point with x = 0: true

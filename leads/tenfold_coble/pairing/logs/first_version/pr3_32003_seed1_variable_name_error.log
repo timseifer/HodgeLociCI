@@ -1,0 +1,20 @@
+control K3 (genus 8): cubics containing S: 100 ; singular along S: 1 ; it is the Pfaffian: true
+control abelian (3,3): degree 18 ; cubics containing S: 84 ; singular along S: 1 ; it is the Coble cubic: true
+bielliptic: E and F smooth (discriminants nonzero): true ; be != 0 (tau has no fixed point): true
+bielliptic: quadrics through 200 / 420 points: 9 / 9 (45 - 36 = 9) ; cubics through 300 / 420 points: 84 / 84 (165 - 81 = 84)
+/usr/share/Macaulay2/Core/monoids.m2:491:96:(1):[17]: error: expected strings, integers, or symbols
+/usr/share/Macaulay2/Core/monoids.m2:487:46:(1):[15]: --back trace--
+/usr/share/Macaulay2/Core/monoids.m2:498:47:(1):[13]: --back trace--
+/usr/share/Macaulay2/Core/monoids.m2:529:22:(1):[12]: --back trace--
+/usr/share/Macaulay2/Core/monoids.m2:293:15:(1):[11]: --back trace--
+/usr/share/Macaulay2/Core/methods.m2:130:40:(1):[10]: --back trace--
+/usr/share/Macaulay2/Core/methods.m2:146:9:(1):[9]: --back trace--
+/usr/share/Macaulay2/Core/polyrings.m2:140:50:(1):[7]: --back trace--
+pr3_bielliptic.m2:50:5:(3):[6]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:66:17:(0):[6]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:106:22:(1):[5]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:102:10:(1):[3]: --back trace--
+/usr/share/Macaulay2/Core/Core.m2:113:22:(1):[2]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:552:63:(0):[1]: --back trace--
+/usr/share/Macaulay2/Core/startup.m2:662:6:(0): --back trace--
+EXIT 1

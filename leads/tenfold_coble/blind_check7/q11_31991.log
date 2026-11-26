@@ -1,0 +1,11 @@
+===== Q11: K3 cover of the 64 Enriques nodes MOD 31991 =====
+degrees of the five equations: {2, 2, 2, 4, 4}; codim 5, length 128, HF(0..10) = {1, 6, 18, 38, 64, 90, 110, 122, 127, 128, 128}
+reduced (ICI + 5x5 minors of the Jacobian matrix has empty zero set): true
+the five equations are invariant under (x,y)->(x,-y): true; Jacobian determinant J (bordered by du_0) anti-invariant: true, degree 9
+number of invariant / anti-invariant octic monomials: 651 / 636
+rank on the 128 points of: all octics 127; invariant octics 64; anti-invariant octics 63; pull-backs of the quartics of P^8 64
+downstairs: S n {Psi_1=Psi_2=0}: length 64, HF(4) = 64
+
+real	0m3.945s
+user	0m4.555s
+sys	0m0.075s

@@ -1,0 +1,7 @@
+===== Q10 on a tenfold hyperplane section (P^10, Pfaffian, 56 nodes) MOD 32003 =====
+Q10 Pfaffian tenfold section, 56 nodes: n=10, nodes N=56 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 4 = 55
+
+real	7m0.013s
+user	7m22.578s
+sys	0m0.484s
+[q10ten: Hessian determinant step did not finish within the 420 s cap; killed]

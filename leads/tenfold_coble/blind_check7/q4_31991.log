@@ -1,0 +1,30 @@
+===== ENRIQUES (Q4, Q2(iii))  MOD 31991 =====
+                                              2
+dim S = 2, degree = 16, Hilbert polynomial: 8i  + 1
+HF(0..6) = {1, 9, 33, 73, 129, 201, 289}  ; 8n^2+1 = {1, 9, 33, 73, 129, 201, 289}
+pdim R/I_S = 6 (codim 6; equal => arithmetically Cohen-Macaulay, hence saturated and projectively normal if S smooth)
+betti: 
+       0  1  2   3   4  5 6
+total: 1 12 52 102 100 48 9
+    0: 1  .  .   .   .  . .
+    1: . 12 16   6   .  . .
+    2: .  . 36  96 100 48 9
+number of quadric generators: 12
+K3 cover: codim 3 degree 8; singular locus codim (7 = empty): 6
+fixed points of (x,y)->(x,-y) on the K3: {y=0}: codim 6, {x=0}: codim 6 (7 = none)
+dimension of the space of cubics of P^8 singular along S: 2
+  det X_s, det Y_s in that space and independent: true
+                                                                                             2
+Jacobian ideal of det X + c det Y (c = -15309): contained in I_S: true; Hilbert polynomial 8i  + 1
+  member (1, 0): sing locus dim 5 degree 4
+  member (0, 1): sing locus dim 5 degree 4
+S n two random quadrics: codim 8 degree 64; HF(4) of ideal = 64; HF(0..7) = {1, 9, 31, 55, 64, 64, 64, 64}
+  saturated? true
+  => nodes 64, conditions on quartics 64, defect 0
+R/(I_S,3 quadrics): HF = {1, 9, 30, 46, 33, 9, 0, 0, 0}
+kernel of R -> T/I_K3 equals I_S ? true
+  saturation (w.r.t. a random linear form) equals I_S: true
+
+real	0m9.848s
+user	0m13.284s
+sys	0m0.116s

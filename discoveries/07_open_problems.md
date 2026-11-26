@@ -309,6 +309,9 @@ literature').
 
 **Next step.**
 
+UPDATE 26 Nov 2026: for the tenfold K3 / abelian parallel the literature was searched (machine-read):
+arXiv:2606.10884 lists the K3 surface of genus 8 and the abelian surfaces as the K-trivial surfaces with a Coble type
+cubic in P^8; see known_before of D-TENFOLD-K3-ABELIAN-PAIRING. The items below are still open.
 A person (or an agent with full-text access) reads Kloosterman arXiv:2312.12363 Section 6, Movasati's book
 (Conjecture 19.1 and the sections cited in tests/SOURCES.md A5, never opened) and the literature on secant
 varieties of determinantal cubics and on special cubic fourfolds (C_14, C_18), and records what is already there.

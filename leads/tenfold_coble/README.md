@@ -54,4 +54,7 @@ repository's Fermat engine; it has its own README and a three-part pre-registrat
 `plane_test/`: the intersection count of section 14 (a 5-plane against the 4-plane cycle: 8 points, not 4): pre-registration,
 script, logs of 8 runs.
 `blind_check6/`: the sixth blind checker's scripts, logs and unedited report for section 14.
+`pairing/`: why the coefficient +1 goes with a K3 surface and -1 with an abelian surface (section 15): pre-registration,
+seven scripts (rungs, Enriques, bielliptic, the node identity, the class as a functional, the sign test, the K3 cover), logs.
+`blind_check7/`: the seventh blind checker's scripts, logs and unedited report for section 15.
 The node mechanism of sections 10-12 is packaged as a tool with regression tests in `tooling/node_section/`.

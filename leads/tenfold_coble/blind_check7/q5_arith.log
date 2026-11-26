@@ -1,0 +1,18 @@
+disc<h^5, a h^5 + r P1 + s P2> = -64*r**2 + 16*r*s - 64*s**2  ; equals -8(8r^2-2rs+8s^2): True
+det Gram = 1344
+8r^2-2rs+8s^2 = 14: solutions with |r|,|s|<=40: [(-1, -1), (1, 1)] (form >= 7(r^2+s^2), so the search box is exhaustive)
+8r^2-2rs+8s^2 = 16: solutions with |r|,|s|<=40: [] (form >= 7(r^2+s^2), so the search box is exhaustive)
+8r^2-2rs+8s^2 = 18: solutions with |r|,|s|<=40: [(-1, 1), (1, -1)] (form >= 7(r^2+s^2), so the search box is exhaustive)
+small values represented: [0, 8, 14, 18, 32, 36, 44, 56]
+3*SS - m^2 mod 3 over all residues: [0, 2] ; -8*16 mod 3 = 1 ; -8*14 mod 3 = 2 ; -8*18 mod 3 = 0
+class 1P1+1P2: degree m = 2, self-intersection = -36, disc = -112
+class 1P1+-1P2: degree m = 0, self-intersection = -48, disc = -144
+K3 degree 14  -8*deg = -112  4*deg (nodes) = 56
+Enriques degree 16  -8*deg = -128  4*deg (nodes) = 64
+abelian degree 18  -8*deg = -144  4*deg (nodes) = 72
+bielliptic degree 18  -8*deg = -144  4*deg (nodes) = 72
+two P^5 meeting along a P^0: P1.P2 =  1
+two P^5 meeting along a P^1: P1.P2 =  -1
+two P^5 meeting along a P^2: P1.P2 =  3
+two P^5 meeting along a P^3: P1.P2 =  -5
+two P^5 meeting along a P^4: P1.P2 =  11

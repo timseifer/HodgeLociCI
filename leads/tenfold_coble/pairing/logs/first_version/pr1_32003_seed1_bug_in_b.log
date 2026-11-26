@@ -1,0 +1,14 @@
+Coble cubic of this seed: singular locus of dim 2, degree 18, Hilbert polynomial 9*i^2
+RESULT (a) sixfold +1, l*Q + Pf, section l=0: dim Sing 0, points 14, all ODP true, form degree 2, conditions 13, defect 1, Hilbert function of the nodes {1, 7, 13, 14, 14}  [MOD p (p = 32003), this instance]
+(b) singular locus of X n P^7: (1, 14, 8) (dim, degree, genus)
+RESULT (b) eightfold +1, P^7-section Pfaffian, hyperplane through it: dim Sing 0, points 29, all ODP true, form degree 3, conditions 28, defect 1, Hilbert function of the nodes {1, 9, 21, 28, 29, 29}  [MOD p (p = 32003), this instance]
+RESULT (c) sixfold -1, hyperplane section = Coble n P^6: dim Sing 0, points 18, all ODP true, form degree 2, conditions 17, defect 1, Hilbert function of the nodes {1, 7, 17, 18, 18}  [MOD p (p = 32003), this instance]
+warning: clearing value of symbol t to allow access to subscripted variables based on it
+       : debug with expression   debug 5504   or with command line option   --debug 5504
+(d) singular locus of Coble n P^7: (1, 18, 10) (dim, degree, genus)
+RESULT (d) eightfold -1, P^7-section = Coble n P^7, hyperplane through it: dim Sing 0, points 36, all ODP true, form degree 3, conditions 35, defect 1, Hilbert function of the nodes {1, 8, 26, 35, 36, 36}  [MOD p (p = 32003), this instance]
+(e) the two Segre fourfolds in l = 0 meet in a scheme of dim 0, degree 36
+RESULT (e) eightfold -1, l*Q + det A + det B, section l=0: dim Sing 0, points 36, all ODP true, form degree 3, conditions 35, defect 1, Hilbert function of the nodes {1, 9, 27, 35, 36, 36}  [MOD p (p = 32003), this instance]
+(e) singular scheme of the section equals the intersection of the two Segre fourfolds: true
+DONE p 32003 seed 1
+EXIT 0

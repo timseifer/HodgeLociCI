@@ -1,0 +1,10 @@
+Coble cubic of this seed: singular locus of dim 2, degree 18
+RESULT (a) sixfold +1, Pfaffian section: 14 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT (c) sixfold -1, Coble n P^6: 18 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT (b) eightfold +1, Pfaffian rung: 28 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT (d) eightfold -1, Coble rung: 36 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT (e) eightfold -1, det A + det B: 36 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT tenfold +1, Pfaffian (K3): 56 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+RESULT tenfold -1, Coble (abelian): 72 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0)
+DONE p 32003 seed 1
+EXIT 0

@@ -1,0 +1,26 @@
+===== COBLE (Q2(ii), Q7(c),(d)) MOD 31991 =====
+lam = 13684, x = {-14516, -8863, -11564}, a = -2622
+Jacobian ideal: dim 2, degree 18, HP 9*i^2, HF(0..5) = {1, 9, 36, 84, 144, 225}
+saturation I_S: HP 9*i^2, HF(0..6) = {1, 9, 36, 81, 144, 225, 324} (9n^2: {0, 9, 36, 81, 144, 225, 324}), generators in degrees new Tally from {2 => 9, 3 => 3}, pdim 7
+control (a replaced by a+1): singular locus dim -1
+cubics singular along S: 1
+S n two random quadrics: codim 8, length 72; HF(0..7) of I_S+(q1,q2): {1, 9, 34, 63, 73, 72, 72, 72}; of its saturation: {1, 9, 34, 63, 71, 72, 72, 72}
+  => nodes 72, conditions on quartics 71, defect 1
+R5 tenfold Coble: HF of R/(I_Z + Q) = {1, 9, 33, 54, 37, 9, 1, 0, 0} ; HF of R/(I_S + 3 quadrics) = {1, 9, 33, 54, 39, 9, 1, 0, 0}
+   Gorenstein quotient S/I: {1, 9, 33, 54, 33, 9, 1}
+Coble tenfold, hyperplane section in P^10: Jacobian scheme dim 0, length 72; contained in (S n q1 n q2)^sat n P^8: true (length 72) => equal after saturation; conditions on quartics 71
+(c) Coble n P^6: Jacobian scheme dim 0 length 18; saturated HF(0..4) = {1, 7, 17, 18, 18} => nodes 18, conditions on quadrics 17; equals (I_S restricted)^sat: true
+   R5 (c): HF of R/(I_Z+Q) = {1, 7, 16, 11, 1, 0, 0}; Gorenstein quotient: {1, 7, 16, 7, 1}
+Q10 Coble-type (c), 18 nodes: n=6, nodes N=18 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 2 = 17
+   g a unit on Z (all coefficients of the relation nonzero): true;  g^2 * D = 10732  CONSTANT
+   control 1 (principal (n-1)x(n-1) minor instead of D): non-constant (18 terms)
+   control 2 (wrong exponents g*D, g^3*D, g^2*D^2): {non-constant, non-constant, non-constant}
+   control 3 (a random relation on forms of degree 1 instead of the relation on degree 2): non-constant
+(d) Coble n P^7: singular locus dim 1, degree 18, genus 10, HP 18*i-9
+   general hyperplane section (in P^8) of the eightfold: Jacobian scheme dim 0, length 36; saturated HF(0..5) = {1, 8, 26, 35, 36, 36} => nodes 36, conditions on cubics 35; equals (C n Psi_0, w=0): true
+   Q=Psi_1 nonvanishing at nodes: true
+   R5 (d): HF of R/(I_Z+Q) on P^7 = {1, 8, 25, 27, 10, 1, 0, 0}; Gorenstein quotient: {1, 8, 25, 25, 8, 1}
+
+real	0m39.302s
+user	0m46.214s
+sys	0m0.273s

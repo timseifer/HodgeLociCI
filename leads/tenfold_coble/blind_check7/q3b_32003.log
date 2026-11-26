@@ -1,0 +1,13 @@
+===== Q3 / Q10(iii), second version with GENERAL minors  MOD 32003 =====
+generalised 6x6 minors m(U,U') = det(U^T Hess U'), U,U' random 9x6 constant matrices; on S: m(U,U') = kappa * tau_U * tau_U', tau = sections of K_S(3)
+solutions (c,c') in H^0(O_S(3))^2 of m(U,U') c = m(U,U) c' on S  <->  H^0(K_S^{-1}) (if tau_U, tau_U' have no common curve)
+minors computed; m(U,U) nonzero on S: true
+Enriques (downstairs): h^0(O_S(3)) = 73; dimension of solution space = 0
+Enriques, on the K3 cover, unknowns among the anti-invariant sextics (73 of them mod I_K3): dimension of solution space = 1
+Enriques, on the K3 cover, unknowns among the invariant sextics (73 of them mod I_K3): dimension of solution space = 0
+Pfaffian K3: h^0(O_S(3)) = 65; dimension of solution space = 1
+bonus: Pf^2 in the ideal of 3x3 minors of three rows (Z_W inside Y set-theoretically): true
+
+real	2m22.139s
+user	3m10.527s
+sys	0m0.963s

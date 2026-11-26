@@ -1,0 +1,34 @@
+CONTROL Segre P2xP2 (expect HF 9,36,100,... ; 1 singular cubic = det) MOD 32003: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 100, 65, 100)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 1 / 1
+bielliptic [L] al=29959 be=24046 g=[6110, 9554, 5726] MOD 32003: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=29959 be=24046 g=[6110, 9554, 5726] MOD 32003: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L] al=13176 be=19792 g=[19139, 20963, 21111] MOD 32003: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=13176 be=19792 g=[19139, 20963, 21111] MOD 32003: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+CONTROL Segre P2xP2 (expect HF 9,36,100,... ; 1 singular cubic = det) MOD 31991: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 100, 65, 100)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 1 / 1
+bielliptic [L] al=21324 be=15350 g=[383, 399, 29066] MOD 31991: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=21324 be=15350 g=[383, 399, 29066] MOD 31991: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L] al=31815 be=31426 g=[26248, 16486, 28732] MOD 31991: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=31815 be=31426 g=[26248, 16486, 28732] MOD 31991: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+CONTROL Segre P2xP2 (expect HF 9,36,100,... ; 1 singular cubic = det) MOD 30011: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 100, 65, 100)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 1 / 1
+bielliptic [L] al=9653 be=6834 g=[1984, 2995, 8818] MOD 30011: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=9653 be=6834 g=[1984, 2995, 8818] MOD 30011: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81), (4, 144, 351, 144), (5, 225, 1062, 225)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L] al=22271 be=13648 g=[14117, 16121, 5972] MOD 30011: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+bielliptic [L+K] al=22271 be=13648 g=[14117, 16121, 5972] MOD 30011: (degree, HF = rank of evaluation, dim of ideal, rank with fewer points): [(1, 9, 0, 9), (2, 36, 9, 36), (3, 81, 84, 81)]
+   cubics singular along the surface (all 9 partials vanish at 260 points / at 130 points): 0 / 0
+
+real	0m23.732s
+user	0m21.436s
+sys	0m0.036s

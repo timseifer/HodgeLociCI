@@ -1,0 +1,10 @@
+E1: S: dim 2, degree 16, Hilbert polynomial 8*i^2+1 ; Hilbert function in degrees 0..5: {1, 9, 33, 73, 129, 201} (8 n^2 + 1: {1, 9, 33, 73, 129, 201}) ; saturated: true
+E1: K3 cover {q_i(x) + q'_i(y) = 0}: dim 2, degree 8, smooth: true ; no point with y = 0: true ; no point with x = 0: true
+E2: cubics containing S: 92 (165 - 73 = 92) ; cubics singular along S: 2
+E2: det X and det Y are singular along S: true ; they span the space of such cubics: true
+E3: Y_c = {det X + c det Y = 0}, c = -8176: saturation of the Jacobian ideal equals I_S: true ; cpu .33384
+E4: the tenfold is smooth: true ; X n {w = 0} = Y_c: true
+RESULT Enriques, hyperplane section through the P^8: dim Sing 0, points 64, all ODP true, form degree 4, conditions 64, defect 0, Hilbert function of the nodes {1, 9, 31, 55, 64, 64, 64}  [MOD p (p = 31991), this instance]
+E4: on S, two random quadrics cut 64 points with Hilbert function {1, 9, 31, 55, 64, 64, 64}
+DONE p 31991 seed 2
+EXIT 0

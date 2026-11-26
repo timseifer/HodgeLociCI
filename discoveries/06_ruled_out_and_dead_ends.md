@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (30)
+## Entries on this page (31)
 
 | id | status | title |
 |---|---|---|
@@ -42,6 +42,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-DIRECT-METHODS](#n-tenfold-direct-methods) | `RULED_OUT` | Tenfold lead: direct methods (periods to equations along the arc; search by invariants) find no explaining cycle |
 | [N-TENFOLD-SINGULAR-SECTIONS](#n-tenfold-singular-sections) | `RULED_OUT` | Tenfold lead: loci where a P^8-section is singular along a plane do not explain the extra direction |
 | [N-TENFOLD-THIRD-DETERMINANT](#n-tenfold-third-determinant) | `RULED_OUT` | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
+| [N-BIELLIPTIC-NOT-SINGULAR-LOCUS](#n-bielliptic-not-singular-locus) | `RULED_OUT` | A bielliptic surface of degree 18 in P^8 (K of order 2, type (3,3)) is not the singular locus of any cubic |
 
 ---
 
@@ -1384,3 +1385,62 @@ From leads/tenfold_coble/:
 **Do not repeat.** Adding the determinant cubic of the tensor in the vertex variables with a free coefficient.
 
 **Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat).
+
+---
+
+## N-BIELLIPTIC-NOT-SINGULAR-LOCUS
+
+**A bielliptic surface of degree 18 in P^8 (K of order 2, type (3,3)) is not the singular locus of any cubic**
+
+kind: `negative` | area: `explicit_cycles` | status: **`RULED_OUT`**
+
+**Statement.**
+
+E: v^2 = u^4 + al u^2 + be with tau(u,v) = (-u,-v); F: w^2 = g(s) with sigma(s,w) = (s,-w); S = (E x F)/<(tau, sigma)>,
+a bielliptic surface with K_S of order 2, embedded in P^8 by the nine invariant sections 1, u^2, uv, s, u^2 s, uvs,
+uw, u^3 w, vw of O_E(6 points) x O_F(3 points). MOD 32003 and 31991: degree 18, Hilbert function 9 n^2 for n >= 1,
+9 quadrics and 84 cubics through S (interpolated through 420 points, then checked to vanish identically on E x F);
+the space of cubics singular along S is 0. Controls of the same routine: the K3 surface of genus 8 gives 1 (the
+Pfaffian), the abelian surface gives 1 (the Coble cubic), the Enriques surface gives 2.
+
+**Conditions.**
+
+"Ruled out" covers this family of embeddings only (random al, be, g; this linearisation), MOD p. Very ampleness of
+type (3,3) is from the literature (Mella-Palleschi, as quoted in arXiv:2607.18918, Prop. 1.9); the Hilbert
+function agrees with an embedding.
+
+**Evidence.** leads/tenfold_coble/pairing/pr3_bielliptic.m2, logs/pr3_*.log; leads/TENFOLD_COBLE_LEAD.md 15.4.
+
+**Independent check.**
+
+Blind check BC-PAIRING (26 Nov 2026; a separate agent given the statements and constructions only, no code and no
+repository; its own Macaulay2 and Python code and unedited report: leads/tenfold_coble/blind_check7/). MOD 32003
+and 31991, some items also 30011.
+PASS for this surface: evaluation ranks 9, 36, 81, 144, 225 in degrees 1 to 5, 9 quadrics, 84 cubics, no cubic
+singular along it, at three primes with two random pairs of curves each; the same for the embedding by L + K_S
+(the nine anti-invariant sections). Its caveats: its Hilbert polynomial rests on five values (ours is a Groebner
+computation); it used a point-based routine here and an ideal-based one for the K3 and abelian controls; the type
+with group Z/2 x Z/2 was not checked, and nothing general excludes a bielliptic singular locus.
+
+**Not established.**
+
+The bielliptic type with group Z/2 x Z/2 (also 2 K = 0). For the type tested, the blind checker also ran the
+embedding by L + K_S (same result) and argues that L and L + K_S are all cases up to automorphisms and
+translations; that argument was not machine-checked.
+
+**Known before.**
+
+The Riemann-Roch count 165 - 81 - 81 = 3 is the same as for the abelian surface (where the true number is 1), so
+it did not decide. Not searched in the literature beyond arXiv:2606.10884, which does not mention bielliptic
+surfaces in the parts machine-read.
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/pairing/ (Macaulay2 1.22):
+    M2 --script pr3_bielliptic.m2 32003 1      (1 min; p must be 3 mod 4)
+```
+
+**Do not repeat.** Do not redo this embedding or the one by L + K_S. The bielliptic type with group Z/2 x Z/2 would be new.
+
+**Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), seventh part (owner's question on the K3 / abelian pairing).

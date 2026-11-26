@@ -14,6 +14,9 @@ question is algebraic on the whole family.
 > 26 Nov 2026, later: section 14. The class of the 4-plane cycle is not a multiple of h^5 by an intersection count
 > with a 5-plane (8 points, where a multiple of h^5 would give 4; MOD p, predicted in advance, blind-checked). This
 > does not use the node argument or the ladder of section 10.
+> 26 Nov 2026, owner's question: section 15. Why +1 goes with a K3 surface and -1 with an abelian surface: one
+> relation among the nodes exactly when K_S = 0, discriminant = 2 x (number of nodes) = 8 deg(S), and deg(S) =
+> 18 - 2 chi(O_S). Arguments by an AI with MOD p support; the blind checker's limits are in 15.8.
 
 1. There is an explicit family of cubic tenfolds of codimension 54 containing F_T in its closure: **X has a
    P^8-section that is a Coble cubic** (the cubic sevenfold singular along a principally polarized abelian surface A
@@ -860,3 +863,317 @@ polynomial that of the abelian surface plus three planes. That member must not b
 Its suggestion for characteristic 0: Hensel lifting of a, then specialisation: the characteristic-0 cycle
 specialises to m [Z_a mod p], so the degree and the intersection number become 12 m and 8 m and the ratio 2/3
 survives for any m; or a computation over a number field that contains a point of A.
+
+## 15. The K3 / abelian pairing (coefficient +1 / coefficient -1): explained, not a coincidence (26 Nov 2026)
+
+Question of the owner (after an observation of another agent, registry D-TENFOLD-PFAFFIAN-K3 (c)): on tenfolds the
+coefficient +1 goes with a K3 surface (Pfaffian section) and -1 with an abelian surface (Coble section). Is that a
+coincidence, a conjecture worth stating, or provable? Pre-registration, written before the runs and kept as written:
+`tenfold_coble/pairing/PREREG_pairing.md`. Scripts and logs: `tenfold_coble/pairing/`. Computations are MOD p (two
+primes). Nothing here is a statement about the Hodge conjecture: every class in this section is algebraic.
+
+### 15.0 What came out
+
+1. **Not a coincidence: the discriminant of the class is forced by the Euler characteristic of the surface.**
+   Three steps:
+   - one relation among the nodes exists exactly when K_S = 0: it is the residue theorem for the holomorphic 2-form
+     of S (15.2; ARG, tested on K3, abelian, Enriques);
+   - the discriminant of the class of a smooth 5-fold through S is -8 deg(S) (15.1; a Chern class identity, PROVED
+     by an AI, unreviewed);
+   - in P^8, deg(S) = 18 - 2 chi(O_S) (Riemann-Roch): K3 14, abelian 18; and in the two-plane lattice 14 is the
+     discriminant of P1 + P2 only and 18 that of P1 - P2 only (15.3; EXACT arithmetic).
+   What this gives, precisely (the blind checker insisted on this, rightly): the DISCRIMINANT is forced. That the
+   Pfaffian and Coble families carry classes of the two-plane lattice at all is from earlier entries
+   (D-TENFOLD-PFAFFIAN-K3, D-TENFOLD-COBLE-FAMILY), not from this section. For the K3 surface a smooth 5-fold through
+   S exists (a hyperplane section of G(2,5)), so the identity applies as proved. For the abelian surface we know no
+   smooth one: -144 is the value already in the registry and the identity explains it only through its extension
+   to cycles with local classes (ARG). No new conjecture is needed for the pairing.
+2. **Torsion canonical class.** By a 2026 paper (15.6) a surface that is the singular scheme of a cubic in P^8 has
+   2 K_S = 0. Enriques surfaces do occur: degree 16, the pencil det X + c det Y of two symmetric determinants
+   (MOD p; 15.4). They give 64 nodes and NO relation, so this construction gives no class (it says nothing about
+   other Hodge classes of those tenfolds); 16 could not be a discriminant anyway. The bielliptic surface we could
+   write down (degree 18, K of order 2, both line bundles of its numerical type) is not the singular locus of any
+   cubic (MOD p).
+3. **Sixfolds and eightfolds.** +1 is "K3-type" on every rung: linear sections of G(2,6) (K3 surface, canonical curve
+   of genus 8, 14 points), nodes 56 / 28 / 14. For -1 the nodes are 72 / 36 / 18; on eightfolds the registry's family
+   l Q + det A + det B has its 36 nodes at the intersection of two Segre fourfolds, and the sections of the abelian
+   surface give 36 nodes as well, with a tangent codimension (25) that is compatible with lying in the closure of
+   that family (codimension 26) but does not show it (15.5).
+4. A by-product that replaces the ladder of section 10 and the cone dictionary in one line: **discriminant = (+-) 2 x
+   (number of nodes on the cycle)** (15.1).
+
+### 15.1 The identity (T1; PROVED by an AI, unreviewed)
+
+X in P^(2k+1) a smooth cubic 2k-fold, H a hyperplane, V = X n H with equation f in H = P^(2k), Sigma in V a smooth
+k-fold of degree m. Then df|_Sigma is a section of N^v_(Sigma/H)(3) whose zeros are the singular points of V on Sigma.
+If there are finitely many, of total length N:
+
+        3 (Sigma.Sigma)_X - m^2 = (-1)^k 2 N.
+
+Proof. Put n_i = c_i(N_(Sigma/H)). From 0 -> N_(Sigma/H) -> N_(Sigma/P) -> O(1) -> 0 and
+0 -> N_(Sigma/X) -> N_(Sigma/P) -> O(3) -> 0 (X is smooth along Sigma): c(N_(Sigma/X)) = c(N_(Sigma/H)) (1+h)/(1+3h),
+and (1+h)/(1+3h) = 1 - 2 sum_(j>=1) (-3)^(j-1) h^j. So
+(Sigma.Sigma)_X = c_k(N_(Sigma/X)) = n_k - 2 sum_(j>=1) (-3)^(j-1) n_(k-j) h^j.
+The number of zeros is N = c_k(N^v(3h)) = sum_i (-1)^i n_i (3h)^(k-i), so (-1)^k N = n_k + sum_(j>=1) (-3)^j n_(k-j) h^j.
+Eliminating the sum: 3 (Sigma.Sigma)_X = n_k + 2 (-1)^k N, and n_k = c_k(N_(Sigma/H)) = (Sigma.Sigma) in P^(2k) = m^2. QED
+
+Known lattices it reproduces (by hand): plane in a fourfold, 4 nodes, disc 8; cubic scroll, 6 nodes, 12; P^3 in a
+sixfold, 8 nodes, -16; P^5 in a tenfold, 32 nodes, -64; quintic del Pezzo 5-fold in the Pfaffian tenfold, 56
+nodes, -112.
+
+Direct counts (`pr4_identity.m2`, MOD 32003 and 31991; the singular points of a random cubic through Sigma, on Sigma;
+the self-intersections come from known lattices, not from Chern classes):
+
+| Sigma | k | nodes counted | predicted from the lattice |
+|---|---|---|---|
+| P^2 x P^2 in P^8 | 4 | 36, reduced | 36 (Sigma.Sigma = 36, D-SEGRE-FOURFOLD) |
+| G(2,5) n P^6 | 3 | 14, reduced | 14 (class h^3 + P1 + P2, square -1) |
+| P^1 x P^2 in a hyperplane of P^6 | 3 | 12, reduced | 12 (cone over a cubic scroll, disc -24) |
+| projected Veronese surface in P^4 | 2 | 10, reduced | 10 (square 12, degree 4; the Segre cubic) |
+| P^3 in P^6 | 3 | 8, reduced | 8 |
+
+Consequences.
+- Tenfolds, X n P^8 singular along a surface S, Sigma a smooth 5-fold in Y through S: every node of a hyperplane
+  section through the P^8 lies on S, N = 4 deg(S), so disc = -8 deg(S).
+- With the cone dictionary (disc = (-2)^(k-2) d): on a cubic 2k-fold the nodal hyperplane section carrying a class of
+  "fourfold discriminant" d has 2^(k-3) d nodes on the cycle: d/2 on fourfolds (C_8: 4, C_12: 6), d on sixfolds,
+  2d on eightfolds, 4d on tenfolds.
+- (ARG) For a cycle that is singular at the nodes the same holds with N replaced by the sum of the squares of its
+  local classes (the ladder step of section 10 plus the cone degeneration V(y, t s) -> cone over V n {s = 0}); the
+  cycle Z_a of section 14 has local class 2 and disc -576 = -2 * 4 * 72.
+- The ladder of section 10 is this identity applied on each rung; its alternating signs are the (-1)^k.
+
+### 15.2 One relation exactly when K_S = 0 (T2, T3; ARG)
+
+Y in P^8 a cubic sevenfold whose singular scheme is a smooth surface S; X a smooth tenfold with X n P^8 = Y.
+
+T2 (Cayley-Bacharach). The nodes are Z = S n {two quadrics}. From the Koszul complex on S,
+0 -> O_S -> O_S(2h)^2 -> I_Z(4h) -> 0, and Kodaira vanishing for 2h (K_S numerically trivial):
+h^1(I_(Z/S)(4h)) = h^2(O_S) = p_g(S). If S is 4-normal this is the number of relations among the nodes on quartics.
+
+T3. LIT (15.6): the normal bundle N of S carries a nowhere degenerate quadratic form with values in O(3); so
+(det N)^2 = O(18) and, since det N = O(9) + K_S, 2 K_S = 0. ARG: the two families of isotropic 3-spaces of the form
+are exchanged along loops by the double cover of S attached to the 2-torsion bundle det N (-9h) = K_S. A 5-fold Z in
+Y through S, smooth at the general point of S, has T Z / T S isotropic, so it selects one family everywhere; it can
+exist only if K_S = 0. Both statements say the same thing from two sides: K3 and abelian (p_g = 1, K = 0) give one
+relation and a cycle; Enriques and bielliptic (p_g = 0, K of order 2) give none.
+
+Tested: K3 56 nodes / 55 conditions; abelian 72 / 71; Enriques 64 / 64 (15.4).
+
+The relation itself (ARG from a classical theorem; LIT: the global residue theorem, Griffiths-Harris, chapter 5).
+Let Psi_1, Psi_2 be the two quadrics cutting the nodes on S and omega a holomorphic 2-form on S. For a quartic P the
+meromorphic form P omega / (Psi_1 Psi_2) has poles on the two curves {Psi_i = 0} only, so the sum of its residues
+vanishes:
+
+        sum over the nodes p of  P(p) omega(p) / Jac(Psi_1, Psi_2)(p)  =  0     for every quartic P.
+
+If K_S = 0, omega has no zeros and this is the one relation. If K_S is of order 2 there is no omega; the residue
+theorem then gives a relation only against sections of K_S + 4h, which are not cut by quartics of P^8. That is the
+whole difference between K3 / abelian and Enriques / bielliptic.
+
+A second form of the same theorem, due to the blind checker (ARG, classical): if the nodes of V lie on a smooth
+k-fold Sigma in V as in 15.1, then K_Sigma + det(N^v(3)) = O(k - 1), and the residue theorem for the section df of
+N^v(3) gives sum of R(p) / Jac(df)(p) = 0 for every form R of degree k - 1. So every smooth cycle through the nodes
+produces a relation among them, with no surface S needed (this covers l Q + Pf, det A + det B and linear spaces).
+
+"Sign pattern" (R6, `pr6_signs.m2`; pre-registered in section 6 of the pre-registration; MOD p, two primes).
+At a node the determinant D of the affine Hessian of the hyperplane section is
+(discriminant of the normal quadratic form) x Jac(Psi)^2, and the two square roots of the first factor are the two
+families of isotropic 3-spaces. Prediction: the relation is sum of +- P(p) / sqrt(D(p)), that is, writing the
+relation as Tr(g .) on the coordinate ring of the node scheme, g^2 D is constant. Computed in all seven cases with
+one relation (sixfolds: Pfaffian 14 nodes, Coble rung 18; eightfolds: Pfaffian rung 28, Coble rung 36,
+det A + det B 36; tenfolds: Pfaffian 56, Coble 72): g^2 D is a nonzero constant, at both primes. Control: with a
+principal minor in place of D it is not constant (degree N - 1 in the generator). So the relation selects one
+square root of the Hessian at every node, i.e. one family of isotropic spaces along S; for a surface with
+K_S of order 2 no such selection exists globally (T3). This is a consistency check of the mechanism, not the proof
+that the Enriques surface has no relation: that is T2 or 15.4.
+
+### 15.3 The sign (T4, T5)
+
+T4 (Riemann-Roch). S linearly normal, spanning P^8, K_S numerically trivial: 9 = chi(O_S) + deg(S)/2, so
+deg(S) = 18 - 2 chi(O_S): K3 14, Enriques 16, abelian 18, bielliptic 18.
+
+T5 (EXACT). In <h^5, P1, P2> (P.P = -21, P1.P2 = 3): disc <h^5, a h^5 + r P1 + s P2> = -8 (8 r^2 - 2 r s + 8 s^2).
+8 r^2 - 2 r s + 8 s^2 = 14 only for (r, s) = +-(1, 1); = 18 only for +-(1, -1). And 3 Sigma.Sigma - m^2 is 0 or 2
+mod 3, while -8 * 16 is 1 mod 3: no class has "discriminant 16".
+
+Together with 15.1: chi(O_S) = 2 gives -112, the discriminant of P1 + P2; chi(O_S) = 0 gives -144, that of
+P1 - P2.
+
+What this does and does not say.
+- It identifies the discriminant of <h^5, class>, for the class of a 5-fold through S to which 15.1 applies
+  (regularly embedded, smooth at the nodes). K3: the five 4 x 4 Pfaffians of a 5 x 5 principal block cut a hyperplane
+  section of G(2,5), smooth for general data, containing S and lying in Y; so -112 follows from 15.1. Abelian: no
+  such smooth 5-fold is known to us (Z_a is double along a cone); -144 is the registry's value
+  (D-TENFOLD-COBLE-CYCLE-CLASS) and 15.1 accounts for it only through the ARG extension with local classes.
+- It does not show that the families meet the two-plane locus, nor which class of that discriminant occurs; inside
+  <h^5, P1, P2> the discriminant fixes the class only up to sign and multiples of h^5 (for that: sections 5, 11, 13).
+  "The Euler characteristic chooses the sign" is a statement about deg(S) = 18 - 2 chi(O_S), no more.
+- For the Enriques surface the congruence and T3 say the same thing twice; the reason there is no relation is T2
+  (p_g = 0), or the classical argument of 15.4.
+
+### 15.4 Enriques and bielliptic surfaces (MOD p)
+
+Enriques (`pr2_enriques.m2`, p = 32003 and 31991). X, Y symmetric 3 x 3 matrices of coordinates on P^11, a general
+P^8, S = {rank X <= 1, rank Y <= 1} n P^8: the quotient of the K3 surface {q_i(x) + q'_i(y) = 0, i = 1, 2, 3} in
+P^5 by (x, y) -> (x, -y), embedded by the nine invariant quadrics.
+- S has degree 16, Hilbert function 8 n^2 + 1 from n = 0 on (projectively normal); the K3 cover is smooth and the
+  involution has no fixed point, so S is smooth (ARG: the map to the join of the two Veronese surfaces is etale).
+- The cubics containing S: 92. The cubics singular along S: exactly 2, det X and det Y. (The count
+  165 - chi(O_S(3)) - chi(N^v(3)) = 165 - 73 - 90 = 2 predicted this.)
+- For random c the saturation of the Jacobian ideal of det X + c det Y is the ideal of S: the singular scheme is S.
+- A smooth tenfold through it: 64 ordinary double points on a hyperplane section through the P^8, Hilbert function
+  1, 9, 31, 55, 64: they impose 64 conditions on quartics. Defect 0.
+So cubic sevenfolds singular along an Enriques surface exist, with 2 K_S = 0 as the literature requires, and carry
+no relation. All four predictions of the pre-registration held.
+
+Why there is no relation here, by a classical theorem (R7, `pr7_enriques_twisted.m2`; section 7 of the
+pre-registration). On the K3 cover in P^5 the preimage of the 64 nodes is a complete intersection of type
+(2,2,2,4,4), 128 points. Cayley-Bacharach: exactly one relation on forms of degree 2+2+2+4+4-6 = 8,
+sum of P(p) / J(p) = 0 with J the Jacobian determinant. The equations are invariant under (x, y) -> (x, -y) and that
+involution has determinant -1, so J is anti-invariant: the relation is identically zero on invariant octics (which
+contain the pull-backs of the quartics of P^8) and is a genuine relation on the anti-invariant ones (the sections of
+K_S + 4h). Computed, both primes: the 128 points have Hilbert function 127 in degree 8; invariant octics have rank 64
+on them, anti-invariant octics rank 63, pull-backs of quartics rank 64. As predicted. So for this surface the missing
+relation is not an accident of a count: it lives in the twisted system, exactly as 15.2 says.
+
+Bielliptic (`pr3_bielliptic.m2`, same primes). E: v^2 = u^4 + al u^2 + be with tau(u,v) = (-u,-v); F: w^2 = g(s) with
+sigma(s,w) = (s,-w); S = (E x F)/<(tau, sigma)>, K_S of order 2; embedding by the nine invariant sections of
+O_E(6 points) x O_F(3 points) (type (3,3); very ample by Mella-Palleschi, as quoted in arXiv:2607.18918, Prop. 1.9).
+- Degree 18, Hilbert function 9 n^2 for n >= 1, 9 quadrics, 84 cubics (interpolated through 420 points and checked
+  to vanish identically on E x F).
+- Cubics singular along S: 0. Controls of the same routine: K3 surface 1 (the Pfaffian), abelian surface 1 (the
+  Coble cubic).
+So this bielliptic surface is not the singular locus of a cubic. Not examined: the other components of the Picard
+scheme with the same numerical type, the bielliptic type with group Z/2 x Z/2, abelian surfaces of type (1,9).
+
+### 15.5 Sixfolds and eightfolds (MOD p)
+
+Node counts with `tooling/node_section` (`pr1_rungs.m2`, p = 32003 and 31991; every X checked smooth):
+
+| rung | coefficient | description | nodes | conditions | defect |
+|---|---|---|---|---|---|
+| sixfold | +1 | l Q + Pf(M), section l = 0 | 14 | 13 on quadrics | 1 |
+| eightfold | +1 | X n P^7 Pfaffian, singular along a canonical curve of genus 8; hyperplane through the P^7 | 28 | 27 on cubics | 1 |
+| sixfold | -1 | hyperplane section = Coble n P^6 | 18 | 17 on quadrics | 1 |
+| eightfold | -1 | X n P^7 = Coble n P^7, singular along a curve of degree 18, genus 10 | 36 | 35 on cubics | 1 |
+| eightfold | -1 | l Q + det A + det B (D-EIGHTFOLD-FAMILY-TD), section l = 0 | 36 | 35 on cubics | 1 |
+
+All as predicted (nodes = 2^(k-3) d). In the last row the 36 nodes are exactly the scheme where the two Segre
+fourfolds {rank A <= 1}, {rank B <= 1} meet (6 x 6 points).
+
+The class as a functional (`pr5_tangent.m2`; added after the first runs, pre-registered in section 5 of the
+pre-registration). ARG: for F = f + s Q, nodes Z of {f = 0}, one relation rho on forms of degree e = k - 1, the
+class is the functional delta(P) = rho(P / Q) on forms of degree e + 2. Corrected after the blind check: "delta
+kills s and the Jacobian ideal", which is what I first wrote as the justification, is true but far from enough
+(in the first row below such functionals form a space of dimension 14). What characterises delta is that it kills
+the saturated ideal I_Z of the nodes and Q: its kernel is (I_Z + (Q)) in degree k + 1, of codimension 1. That the
+Hodge class kills I_Z (deformations keeping the nodes keep the class) is an argument, not a proof, in the cases
+where the nodes fail to impose independent conditions on cubics. The checker's code reproduces the known
+annihilator of a P^3 in a sixfold this way. The Hilbert function of the Gorenstein algebra S/I of delta, and
+dim (S/I)_3 = tangent codimension of the Hodge locus:
+
+| case | Hilbert function | degree 3 | known value |
+|---|---|---|---|
+| sixfold +1, l Q + Pf | 1, 7, 12, 7, 1 | 7 | 7 (registry) |
+| eightfold +1, Pfaffian rung | 1, 8, 19, 19, 8, 1 | 19 | 19 (codim NL(1)) |
+| eightfold -1, l Q + det A + det B | 1, 9, 26, 26, 9, 1 | 26 | 26 (registry) |
+| tenfold +1, Pfaffian | 1, 9, 27, 38, 27, 9, 1 | 38 | 38 (registry) |
+| tenfold -1, Coble | 1, 9, 33, 54, 33, 9, 1 | 54 | 54 (registry) |
+| sixfold -1, Coble rung | 1, 7, 16, 7, 1 | 7 | new |
+| eightfold -1, Coble rung | 1, 8, 25, 25, 8, 1 | 25 | new |
+
+The five controls reproduce the known values, at both primes. Reading of the two new rows:
+- Eightfolds: at a member of the Coble rung the Hodge locus of the class has tangent codimension 25, less than 26,
+  the codimension of {l Q + det A + det B}. The rung family itself has codimension 29 by a parameter count, so it
+  is not a component: the locus through it is larger (or non-reduced). 25 < 26 does NOT put the rung outside the
+  closure of {l Q + det A + det B}: tangent spaces can only grow under specialisation, and the whole Hilbert
+  function of the rung is termwise at most that of the family (1,8,25,25,8,1 against 1,9,26,26,9,1), with the same
+  36 nodes and discriminant 72, which is what a specialisation requires. Either the rung lies in that closure and
+  the Hodge locus is singular or non-reduced along it, or there is a component of codimension 25 through it.
+  Deciding needs the dimension of the locus, not a tangent space. Open.
+- Sixfolds: tangent codimension 7 at the Coble rung, as for every coefficient in D-CUBIC-SIXFOLD-DETC; the rung
+  family has codimension 11 by a parameter count (more than h^(4,2) = 8, the largest codimension a Hodge locus of
+  sixfolds can have), so the Hodge locus there is larger than the rung family.
+- These two rows are also the only ones without a dimension cross-check of the functional.
+- Observation (computed, no explanation offered): the length of the Gorenstein algebra is the absolute value of the
+  discriminant, 2 x (number of nodes), for the Pfaffian rungs and for l Q + det A + det B (28, 56, 112; 72), and 4
+  less for the Coble rungs (32, 68, 140 against 36, 72, 144).
+
+Answer to "is -1 a degenerate-Coble (Segre) picture and +1 K3-type": +1 is K3-type on all three rungs, and there
+the family is the whole Hodge locus to first order. For -1 the generic eightfold member is a two-Segre picture (36 =
+6 x 6); the sections of the abelian surface give the same count and may be a special case of it. On sixfolds the
+generic member of {det A + det B} has no nodal hyperplane section to look at; only the Coble rung does.
+
+### 15.6 Literature (machine-read 26 Nov 2026; finite search)
+
+- Piroddi, Rios Ortiz, Rojas, Song, "Coble type hypersurfaces and hyperkaehler fourfolds", arXiv:2606.10884.
+  Definition 2.1 (a hypersurface whose singular scheme is X); Prop. 2.2 (nondegenerate quadratic form on the normal
+  bundle); Cor. 2.3 (2 K_X = (d(N-n) - 2(N+1)) H; K-trivial X can only have Coble cubics in P^(3n+2)); Table 1 lists,
+  for surfaces and cubics in P^8, exactly G(2,6) n P^8 (K3) and the abelian surfaces of Coble; Example 2.9: for
+  A = E1 x E2 the Coble cubic degenerates to the determinantal cubic along the Segre P^2 x P^2. So the pairing
+  "K3 of genus 8 and abelian (3,3) are the K-trivial surfaces with a Coble type cubic in P^8" is in the literature.
+  Not found there (first 100 000 characters and the last part read by machine): Enriques or bielliptic surfaces, the
+  double cover of the two families of isotropic spaces, nodes of linear sections, Hodge classes, discriminants of
+  cubic fourfolds.
+- Benedetti, Bolognesi, Faenzi, Manivel: "The Coble quadric" (Forum Math. Sigma 12 (2024) e63, arXiv:2307.05993) and
+  "Goepel varieties" (arXiv:2506.22030): Coble type hypersurfaces in homogeneous spaces from graded Lie algebras
+  (Jordan-Vinberg theory); the cubic case is the three-forms in nine variables. Abstracts and contents read; nothing
+  found there on K3 surfaces, Pfaffian cubics, cubic fourfolds, linear sections or Hodge classes.
+- Benedetti, Manivel, Tanturri, arXiv:1904.10848; Gruson, Sam, arXiv:1301.5276 (Remark 3.16: the Jacobian ideal of
+  the Coble cubic is not radical in their normal form; degenerations of (3,3) abelian surfaces).
+- Addington, Hassett, Tschinkel, Varilly-Alvarado, arXiv:1606.05321: the general cubic fourfold of discriminant 18
+  contains an elliptic ruled surface.
+- Not found: the identity of 15.1 in this generality (for cubic fourfolds, "six nodes on a hyperplane section means
+  C_12 or C_8" is in the literature, e.g. as recalled in Marquand-Viktorova, arXiv:2601.20778); the Enriques pencil
+  det X + c det Y as a family of cubic sevenfolds. Neither is claimed as new.
+
+### 15.7 What is not shown
+
+- A human reading of 15.1-15.3. T2 and T3 are arguments; T1 is a short proof by an AI.
+- A smooth (or regularly embedded) 5-fold through the abelian surface inside the Coble cubic, so that 15.1 applies
+  there without the extension.
+- That this construction is the only source of Hodge classes on the tenfolds with an Enriques section.
+- Characteristic 0 for any computation of this section.
+- The classification: that the Pfaffian, Coble and det X + c det Y cubics are the only cubic sevenfolds in P^8 whose
+  singular scheme is a smooth surface. Open cases named in 15.4.
+- That the Coble rungs lie in the closure of the registry's -1 families on sixfolds and eightfolds.
+- That the functional of 15.5 is the Hodge class (it passes five controls).
+
+### 15.8 Independent check (BC-PAIRING, blind check 7)
+
+A separate agent, given the statements and constructions only (no code, no repository). Its own Macaulay2 and Python
+code and its unedited report are in `tenfold_coble/blind_check7/`. MOD 32003 and 31991, some items also 30011.
+
+Every number it recomputed came out as stated:
+
+- T1: derivation redone, sign right; node counts for a plane (4), a cubic scroll (6), P^3 (8), P^1 x P^2 (12),
+  G(2,5) n P^6 (14), P^2 x P^2 (36), P^4 in P^8 (16), all reduced. It notes that for three of them the
+  self-intersection comes from the same normal-bundle calculus, so only the plane, the scroll and the linear
+  spaces test the identity independently.
+- T2: K3 56 / 55, Coble 72 / 71, Enriques 64 / 64, each also on an actual tenfold section.
+- T3: the theory is right (det N = O(9) + K_S; the cover of the two families; isotropy). Its own test, one prime:
+  a square root of the discriminant of the normal form exists as a cubic on the Pfaffian K3; for the Enriques
+  surface it exists only on the K3 cover and is anti-invariant. (It discloses a first version with special
+  coordinate minors that gave a different answer, which it attributes to the special choice without verifying.)
+- Enriques: all of 15.4, at two primes; the surface is arithmetically Cohen-Macaulay.
+- Bielliptic: no cubic singular along it, at three primes, also for the embedding by L + K_S; by its argument
+  these two are all the cases for this type. The type with group Z/2 x Z/2: not checked.
+- Rungs: 14/13, 28/27, 18/17, 36/35, 36/35.
+- Functional: all seven Hilbert functions of 15.5.
+- R6: g^2 D constant for P^3 in a sixfold and for four of our cases, with three kinds of failing controls; the
+  two tenfold cases and the eightfold Coble rung were NOT checked by it (its determinant step did not finish).
+- R7: ranks 127 / 64 / 63 / 64; the parity argument is correct (it uses that the K3 is projectively normal).
+
+Its objections, all accepted and worked into the text above:
+
+1. The justification first given for the functional of 15.5 was insufficient (see the corrected paragraph there).
+2. The Coble rungs are not components of their Hodge loci (parameter counts 11 and 29 against 7 and 25).
+3. "25 < 26" does not put the rung outside the closure of l Q + det A + det B (15.5).
+4. 15.3 identifies a discriminant, not a class, and only for a suitable cycle; "the coefficient is forced" was
+   too strong as first written (15.0, 15.3 now say what is forced).
+5. "Enriques and bielliptic give no class" must read "this construction gives no class".
+
+Not verified by it: smoothness of the Coble surface and reducedness of its 72 nodes (our tool reports 72 ordinary
+double points); the bielliptic Hilbert polynomial beyond five values (our Groebner computation gives 9 n^2).
+Not covered by anyone: abelian surfaces of type (1,9), surfaces that are not linearly normal.

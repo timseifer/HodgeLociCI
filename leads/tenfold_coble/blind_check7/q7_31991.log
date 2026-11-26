@@ -1,0 +1,37 @@
+===== LOWER RUNGS (Q7 a,b,e; Q8; Q10) MOD 31991 =====
+sanity (P^3 in sixfold): nodes 8, HF {1, 4, 7, 8, 8}; I_Z + (Q) == (x_1,x_2,x_3,Q_0,..,Q_3) [known annihilator of the class of P^3]: true; Gorenstein HF {1, 4, 6, 4, 1}
+Q10 sanity (P^3, 8 nodes): n=6, nodes N=8 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 2 = 7
+   g a unit on Z (all coefficients of the relation nonzero): true;  g^2 * D = -9280  CONSTANT
+   control 1 (principal (n-1)x(n-1) minor instead of D): non-constant (8 terms)
+   control 2 (wrong exponents g*D, g^3*D, g^2*D^2): {non-constant, non-constant, non-constant}
+   control 3 (a random relation on forms of degree 1 instead of the relation on degree 2): non-constant
+(a) sixfold smooth (Jacobian ideal m-primary): true
+(a) section l=0: Jacobian scheme dim 0 length 14, saturated HF(0..4) = {1, 7, 13, 14, 14} => nodes 14, conditions on quadrics 13; equals 4x4 Pfaffians: true
+   R5 (a): HF of R/(I_Z+Q) = {1, 7, 12, 7, 1, 0, 0}; Gorenstein quotient: {1, 7, 12, 7, 1}
+   non-uniqueness test: dim of (C[x]/(J(f),Q))_4 = number of independent functionals on degree-4 forms killing J(F) and s: 14
+Q10 Pfaffian-type (a), 14 nodes: n=6, nodes N=14 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 2 = 13
+   g a unit on Z (all coefficients of the relation nonzero): true;  g^2 * D = -13409  CONSTANT
+   control 1 (principal (n-1)x(n-1) minor instead of D): non-constant (14 terms)
+   control 2 (wrong exponents g*D, g^3*D, g^2*D^2): {non-constant, non-constant, non-constant}
+   control 3 (a random relation on forms of degree 1 instead of the relation on degree 2): non-constant
+(b) Pfaffian cubic in P^7: singular curve degree 14, genus 8; Jacobian ideal saturation == 4x4 Pfaffians: true
+   eightfold smooth: true
+   general hyperplane through the P^7: Jacobian scheme dim 0 length 28, saturated HF(0..5) = {1, 8, 20, 27, 28, 28} => nodes 28, conditions on cubics 27
+   R5 (b): HF of R/(I_C, Psi, Psi') = {1, 8, 19, 19, 8, 1, 0, 0}; Gorenstein quotient: {1, 8, 19, 19, 8, 1}
+Q10 Pfaffian-type (b), 28 nodes: n=8, nodes N=28 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 3 = 27
+   g a unit on Z (all coefficients of the relation nonzero): true;  g^2 * D = -8880  CONSTANT
+   control 1 (principal (n-1)x(n-1) minor instead of D): non-constant (28 terms)
+   control 2 (wrong exponents g*D, g^3*D, g^2*D^2): {non-constant, non-constant, non-constant}
+   control 3 (a random relation on forms of degree 2 instead of the relation on degree 3): non-constant
+(e) eightfold smooth: true
+(e) section l=0: Jacobian scheme dim 0 length 36, saturated HF(0..5) = {1, 9, 27, 35, 36, 36} => nodes 36, conditions on cubics 35; equals {rk A<=1} n {rk B<=1} (after saturation): true
+   R5 (e): HF of R/(I_Z+Q) = {1, 9, 26, 26, 9, 1, 0, 0}; Gorenstein quotient: {1, 9, 26, 26, 9, 1}
+Q10 detA+detB (e), 36 nodes: n=8, nodes N=36 (trace form nondegenerate, i.e. node scheme reduced: true), rank of evaluation of forms of degree 3 = 35
+   g a unit on Z (all coefficients of the relation nonzero): true;  g^2 * D = 4630  CONSTANT
+   control 1 (principal (n-1)x(n-1) minor instead of D): non-constant (36 terms)
+   control 2 (wrong exponents g*D, g^3*D, g^2*D^2): {non-constant, non-constant, non-constant}
+   control 3 (a random relation on forms of degree 2 instead of the relation on degree 3): non-constant
+
+real	1m57.181s
+user	2m7.931s
+sys	0m0.351s

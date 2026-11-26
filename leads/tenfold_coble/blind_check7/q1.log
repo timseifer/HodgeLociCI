@@ -1,0 +1,18 @@
+plane in P4 (k=2) MOD 32003: dim Sigma=2 deg Sigma=1; codim(Sigma n SingV)=4 (n=4), N=length=4, reduced length=4, expected 4; Sing V: codim 4 degree 4
+cubic scroll in P4 (k=2) MOD 32003: dim Sigma=2 deg Sigma=3; codim(Sigma n SingV)=4 (n=4), N=length=6, reduced length=6, expected 6; Sing V: codim 4 degree 6
+P3 in P6 (k=3) MOD 32003: dim Sigma=3 deg Sigma=1; codim(Sigma n SingV)=6 (n=6), N=length=8, reduced length=8, expected 8; Sing V: codim 6 degree 8
+P1xP2 in P5 in P6 (k=3) MOD 32003: dim Sigma=3 deg Sigma=3; codim(Sigma n SingV)=6 (n=6), N=length=12, reduced length=12, expected 12; Sing V: codim 6 degree 12
+V5=G(2,5)nP6 (k=3) MOD 32003: dim Sigma=3 deg Sigma=5; codim(Sigma n SingV)=6 (n=6), N=length=14, reduced length=14, expected 14; Sing V: codim 6 degree 14
+P2xP2 in P8 (k=4) MOD 32003: dim Sigma=4 deg Sigma=6; codim(Sigma n SingV)=8 (n=8), N=length=36, reduced length=36, expected 36; Sing V: codim 8 degree 36
+P4 in P8 (k=4) MOD 32003: dim Sigma=4 deg Sigma=1; codim(Sigma n SingV)=8 (n=8), N=length=16, reduced length=16, expected 16; Sing V: codim 8 degree 16
+plane in P4 (k=2) MOD 31991: dim Sigma=2 deg Sigma=1; codim(Sigma n SingV)=4 (n=4), N=length=4, reduced length=4, expected 4; Sing V: codim 4 degree 4
+cubic scroll in P4 (k=2) MOD 31991: dim Sigma=2 deg Sigma=3; codim(Sigma n SingV)=4 (n=4), N=length=6, reduced length=6, expected 6; Sing V: codim 4 degree 6
+P3 in P6 (k=3) MOD 31991: dim Sigma=3 deg Sigma=1; codim(Sigma n SingV)=6 (n=6), N=length=8, reduced length=8, expected 8; Sing V: codim 6 degree 8
+P1xP2 in P5 in P6 (k=3) MOD 31991: dim Sigma=3 deg Sigma=3; codim(Sigma n SingV)=6 (n=6), N=length=12, reduced length=12, expected 12; Sing V: codim 6 degree 12
+V5=G(2,5)nP6 (k=3) MOD 31991: dim Sigma=3 deg Sigma=5; codim(Sigma n SingV)=6 (n=6), N=length=14, reduced length=14, expected 14; Sing V: codim 6 degree 14
+P2xP2 in P8 (k=4) MOD 31991: dim Sigma=4 deg Sigma=6; codim(Sigma n SingV)=8 (n=8), N=length=36, reduced length=36, expected 36; Sing V: codim 8 degree 36
+P4 in P8 (k=4) MOD 31991: dim Sigma=4 deg Sigma=1; codim(Sigma n SingV)=8 (n=8), N=length=16, reduced length=16, expected 16; Sing V: codim 8 degree 16
+
+real	0m35.734s
+user	0m31.963s
+sys	0m3.146s

@@ -1,0 +1,7 @@
+RESULT P^2 x P^2 in P^8 (k = 4): dim Sigma 4, degree 6 ; cubics through it 65 ; singular points of the cubic on Sigma: dim 0, length 36, reduced true ; predicted 36
+RESULT G(2,5) n P^6 (k = 3): dim Sigma 3, degree 5 ; cubics through it 30 ; singular points of the cubic on Sigma: dim 0, length 14, reduced true ; predicted 14
+RESULT P^1 x P^2 in a hyperplane of P^6 (k = 3): dim Sigma 3, degree 3 ; cubics through it 44 ; singular points of the cubic on Sigma: dim 0, length 12, reduced true ; predicted 12
+RESULT projected Veronese surface in P^4 (k = 2): dim Sigma 2, degree 4 ; cubics through it 7 ; singular points of the cubic on Sigma: dim 0, length 10, reduced true ; predicted 10
+RESULT P^3 in P^6 (k = 3): dim Sigma 3, degree 1 ; cubics through it 64 ; singular points of the cubic on Sigma: dim 0, length 8, reduced true ; predicted 8
+DONE p 32003 seed 1
+EXIT 0

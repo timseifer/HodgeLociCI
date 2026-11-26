@@ -1,0 +1,22 @@
+===== PFAFFIAN K3 (Q2(i)) MOD 30011 =====
+dim S = 2, degree 14, HP 7*i^2+2, HF(0..5) = {1, 9, 30, 65, 114, 177}, pdim 6
+Jacobian ideal of Pf (9 quadrics): contained in I_S true, equal to I_S false; its Hilbert polynomial 7*i^2+2 (same as I_S => saturation of Jacobian ideal = I_S)
+cubics singular along S: 1
+S n two random quadrics: codim 8 degree 56; HF(0..7) = {1, 9, 28, 47, 55, 56, 56, 56} (ideal saturated since S is ACM)
+  => nodes 56, conditions on quartics 55, defect 1
+Pfaffian tenfold, hyperplane section in P^10 MOD 30011: Jacobian scheme dim 0, length 56; contained in S n {Psi_0=Psi_1=0} n P^8: true (which has length 56, HF(0..6) = {1, 9, 28, 47, 55, 56, 56})
+   => Jacobian scheme = S n two quadrics (same length, the latter saturated); nodes 56, conditions on quartics 55, defect 1
+   Q (= Psi_2 on P^8) non-vanishing at the nodes, i.e. X smooth along them: true
+   R/(I_S, three quadrics): HF = {1, 9, 27, 38, 27, 9, 1, 0, 0}
+   R5 Hilbert function of S/I (Gorenstein quotient, socle degree 6): {1, 9, 27, 38, 27, 9, 1}
+===== ENRIQUES tenfold MOD 30011 =====
+Enriques tenfold, hyperplane section in P^10 MOD 30011: Jacobian scheme dim 0, length 64; contained in S n {Psi_0=Psi_1=0} n P^8: true (which has length 64, HF(0..6) = {1, 9, 31, 55, 64, 64, 64})
+   => Jacobian scheme = S n two quadrics (same length, the latter saturated); nodes 64, conditions on quartics 64, defect 0
+   Q (= Psi_2 on P^8) non-vanishing at the nodes, i.e. X smooth along them: true
+   R/(I_S, three quadrics): HF = {1, 9, 30, 46, 33, 9, 0, 0, 0}
+  gorHF: dim (R/K)_6 = 0 (not 1)
+   R5 Hilbert function of S/I (Gorenstein quotient, socle degree 6): null
+
+real	0m22.476s
+user	0m23.794s
+sys	0m0.198s

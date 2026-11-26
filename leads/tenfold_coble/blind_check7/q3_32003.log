@@ -1,0 +1,12 @@
+===== Q3 / Q10(iii): is the discriminant of the normal quadratic form a square?  MOD 32003 =====
+test: 6x6 minors of the 9x9 Hessian restricted to S are  m_{I,I'} = kappa * tau_I * tau_I'  with tau_I sections of K_S(3) (Pluecker coordinates of the kernel);
+      solutions (c,c') in H^0(O_S(3))^2 of  m_{I0,I1} c = m_{I0,I0} c'  on S  <->  sections of K_S^{-1};  expect 1 if K_S = 0 and 0 for an Enriques surface
+Pfaffian K3: m_{I0,I0} nonzero on S: true; h^0(O_S(3)) = 65; dimension of solution space = 1
+Enriques (downstairs): m_{I0,I0} nonzero on S: true; h^0(O_S(3)) = 73; dimension of solution space = 3
+Enriques, on the K3 cover, unknowns among the invariant sextics (73 of them mod I_K3): dimension of solution space = 3
+Enriques, on the K3 cover, unknowns among the anti-invariant sextics (73 of them mod I_K3): dimension of solution space = 3
+bonus (Pfaffian case): Z_W = {rank of 3 rows of M <= 2}: dim 5, degree 7, contained in Y: false, contains S: true; smooth of codim 3 at the general point of S (some 3x3 minor of the Jacobian of 3 random generators does not vanish on S): true
+
+real	5m13.774s
+user	7m37.576s
+sys	0m2.480s

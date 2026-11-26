@@ -1,0 +1,5 @@
+K3 cover: dim 2, degree 8 ; preimage of the nodes: dim 0, degree 128 ; reduced: true ; Hilbert function in degrees 6..10: {110, 122, 127, 128, 128}
+RESULT octics on the 128 points: invariant monomials 651, rank 64 ; anti-invariant monomials 636, rank 63 ; all octics: rank 127 ; predicted 64, 63, 127
+RESULT pull-backs of the quartics of P^8: rank 64 (predicted 64: no relation among the 64 nodes)
+DONE p 32003 seed 1
+EXIT 0

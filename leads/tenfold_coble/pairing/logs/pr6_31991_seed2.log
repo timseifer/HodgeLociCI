@@ -1,0 +1,10 @@
+Coble cubic of this seed: singular locus of dim 2, degree 18
+RESULT (a) sixfold +1, Pfaffian section: 14 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 13)
+RESULT (c) sixfold -1, Coble n P^6: 18 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 17)
+RESULT (b) eightfold +1, Pfaffian rung: 28 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 27)
+RESULT (d) eightfold -1, Coble rung: 36 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 35)
+RESULT (e) eightfold -1, det A + det B: 36 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 35)
+RESULT tenfold +1, Pfaffian (K3): 56 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 55)
+RESULT tenfold -1, Coble (abelian): 72 nodes ; f and its gradient vanish on them: true ; D invertible on Z: true ; g^2 D is a nonzero constant: true  (degree of g^2 D mod chi as a polynomial in T: 0) ; control with a principal (n-1) x (n-1) minor in place of D: constant false (degree 71)
+DONE p 31991 seed 2
+EXIT 0

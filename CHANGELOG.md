@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 148 entries)
+### Discoveries registry (142 -> 153 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -23,6 +23,20 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   5-plane and the 4-plane cycle meet transversally in 8 points, where a multiple of h^5 would give 4. The class of
   the cycle is not a multiple of h^5 by a count, without the node argument or the ladder.
   `leads/tenfold_coble/plane_test/`; `leads/TENFOLD_COBLE_LEAD.md`, section 14.
+- D-TENFOLD-K3-ABELIAN-PAIRING (paper argument by an AI, unreviewed; MOD p support; blind-checked): why the
+  coefficient +1 goes with a K3 surface and -1 with an abelian surface. One relation among the nodes iff K_S = 0
+  (residue theorem); discriminant = -8 deg(S) = -8 (18 - 2 chi(O_S)); 14 only for P1 + P2, 18 only for P1 - P2.
+  What is forced is the discriminant, for a suitable cycle (known for the K3; an argument for the abelian surface).
+  `leads/TENFOLD_COBLE_LEAD.md`, section 15; `leads/tenfold_coble/pairing/`.
+- D-NODES-DISCRIMINANT-IDENTITY (proved by an AI, unreviewed): for a smooth k-fold Sigma in a hyperplane section of
+  a cubic 2k-fold, disc <h^k, [Sigma]> = (-1)^k 2 (number of nodes of the section on Sigma). Five direct counts MOD p.
+- D-CUBIC-SEVENFOLD-ENRIQUES (MOD p): the pencil det X + c det Y of symmetric determinants is singular along an
+  Enriques surface of degree 16 in P^8; 64 nodes on tenfold sections, no relation.
+- N-BIELLIPTIC-NOT-SINGULAR-LOCUS (MOD p; one family of embeddings): a bielliptic surface of degree 18 in P^8 with K
+  of order 2 is not the singular locus of a cubic.
+- D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD (MOD p): node counts 14 / 28 (+1) and 18 / 36 (-1) on sixfolds and eightfolds; the
+  class as a functional built from the relation among the nodes (five controls); tangent codimension 25 at the
+  eightfold Coble rung, against 26 for l Q + det A + det B.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

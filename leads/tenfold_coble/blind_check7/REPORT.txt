@@ -1,0 +1,353 @@
+BLIND CHECK 7 -- REPORT
+=======================
+Checker worked only in /home/claude/blind_check7, from the statements alone. No project folder was read.
+All computer results are MOD p (primes 32003, 31991, sometimes 30011), with random coefficients; nothing
+was computed over Q. Wall time used: about 50 min (03:19-04:10 UTC), i.e. ~5 min over budget because of the
+two added questions and one wasted 10-minute run (see "Process notes" at the end).
+
+VERDICTS AT A GLANCE
+  Q1  T1 formula                         PASS  (derivation re-done; 7 examples, 2 primes)
+  Q2  T2 defect = p_g                    PASS  (argument re-done; K3 56/55, Coble 72/71, Enriques 64/64)
+  Q3  T3 rulings / K_S cover             PASS  (theory) + one algebraic test MOD 32003; path-following NOT done
+  Q4  Enriques                           PASS  (one sub-item, direct Hessian-rank test, replaced by an argument)
+  Q5  T4/T5 arithmetic                   PASS for (i)-(iii); (iv) PARTIAL (identifies a discriminant only,
+                                         and only under hypotheses on Z that are not established here)
+  Q6  bielliptic                         PASS for the stated surface (and for the L+K_S twin); type 2 NOT CHECKED
+  Q7  lower rungs (a)-(e)                PASS  (all five, 2 primes)
+  Q8  R5                                 PARTIAL: all Hilbert functions reproduced; the stated justification
+                                         ("delta kills J(F) and s") is correct but far from sufficient
+  Q9  remarks                            see below (two things you should look at: 8.3 and 9.1)
+  Q10 g^2 D = const                      PASS in 5 cases x 2 primes, with failing controls; tenfold NOT CHECKED
+  Q11 K3 cover of the 64 nodes           PASS  (ranks 127 / 64 / 63 / 64 at two primes)
+
+------------------------------------------------------------------------------------------------------
+Q1.  CLAIM T1:  3 (Sigma.Sigma)_X - m^2 = (-1)^k 2 N                                             PASS
+------------------------------------------------------------------------------------------------------
+(a) Derivation, redone.
+  N_{Sigma/X} -> N_{Sigma/P^(2k+1)} -> O(3) and N_{Sigma/H} -> N_{Sigma/P^(2k+1)} -> O(1) give
+  c(N_{Sigma/X}) = c(N_{Sigma/H}) (1+h)/(1+3h), and (1+h)/(1+3h) = 1 - 2h + 6h^2 - ... has h^j-coefficient
+  -2(-3)^(j-1) for j >= 1. With c_i = c_i(N_{Sigma/H}):
+     3 Sigma.Sigma   = 3 c_k + 2 sum_{i<k} c_i (-3h)^(k-i)
+     (-1)^k 2 N      = 2 c_k + 2 sum_{i<k} c_i (-3h)^(k-i)       (N = c_k(N^v(3h)) = sum (-1)^i c_i (3h)^(k-i))
+  The difference is c_k(N_{Sigma/H}) = (Sigma.Sigma)_{P^(2k)} = m^2.  The sign (-1)^k is right.
+  Hypotheses really used:
+   * Sigma regularly embedded (lci is enough; smooth is not needed except where you want a node count);
+   * X smooth along Sigma (needed for (Sigma.Sigma)_X = c_k(N_{Sigma/X}) and the first sequence);
+     for F = f + sQ this means Q != 0 at the zeros;
+   * isolated zeros are needed only to read N as a length. Then (Sigma is CM) the zero scheme is
+     Sigma n Sing(V) with its scheme structure I_Sigma + (partials of f), and N is its length. Without
+     isolated zeros the identity still holds with N := deg c_k(N^v(3)).
+   * At a point that is a node of V the multiplicity is automatically 1: T_p Sigma is isotropic of
+     dimension k for a nondegenerate form in dimension 2k, so the derivative T_p Sigma -> N^v_p is an
+     isomorphism. So N = number of nodes on Sigma when all singular points of V on Sigma are nodes.
+  Mod 3 by-product: N = (-1)^k m^2 mod 3.
+
+(b) Examples. Self-intersections (script q1_chern.py; top Chern class of N_{Sigma/X} from
+  c(T_X|Sigma)/c(T_Sigma), plus the independent facts named):
+     plane, k=2:            Sigma.Sigma = 3     (classical; also (1-(-2)^(k+1))/3)            disc   8
+     cubic scroll, k=2:     7   (6h^2+3hK+K^2-chi_top = 18-15+8-4, F_1, h=e+2f)               disc  12
+     P^3 in P^6, k=3:       -5  ((1-(-2)^4)/3)                                                disc -16
+     P^1xP^2 (in a P^5), k=3: -5  (c(T) = (1+a)^2(1+b)^3)                                     disc -24
+     V5 = G(2,5) n P^6, k=3: -1  (c_1=2h, c_2.h=12 from chi(O)=1, c_3=chi_top=4, h^3=5)       disc -28
+     P^2xP^2 in P^8, k=4:   36  (c(T) = (1+a)^3(1+b)^3)                                       disc  72
+     P^4 in P^8, k=4:       11                                                                disc  32
+  Computer count of N = length of (I_Sigma + Jacobian ideal of a random cubic through Sigma), q1.m2,
+  MOD 32003 and MOD 31991, identical at both primes:
+     plane 4, scroll 6, P^3 8, P^1xP^2 12, V5 14, P^2xP^2 36, P^4 16;
+  in every case the zero scheme is reduced (degree of radical = length) and Sing(V) is exactly this set.
+  All agree with 3 Sigma.Sigma - m^2 = (-1)^k 2N.
+  Caveat: for P^1xP^2, V5, P^2xP^2 the self-intersection comes from the same normal-bundle calculus as the
+  formula, so those three test "N = c_k(N^v(3)) is what the computer counts", not the Chern identity itself.
+  The plane, the scroll and the linear spaces are independent of it.
+
+------------------------------------------------------------------------------------------------------
+Q2.  CLAIM T2: defect = p_g(S)                                                                    PASS
+------------------------------------------------------------------------------------------------------
+Argument, redone. Z = S n {Psi_1 = Psi_2 = 0}; Koszul 0 -> O_S -> O_S(2)^2 -> I_{Z/S}(4) -> 0;
+H^1(O_S(2)) = H^2(O_S(2)) = 0 and H^1(O_S(4)) = 0 by Kodaira (K_S numerically trivial), so
+coker(H^0(O_S(4)) -> H^0(O_Z)) = H^1(I_{Z/S}(4)) = H^2(O_S). With 4-normality this is the defect on quartics
+of P^8, and quartics of P^10 restrict onto those of P^8. Correct.
+Also checked by hand: nodes of X n H lie only on S (H cannot be tangent to X at a smooth point of Y),
+they are S n two quadrics of the net <Psi_0,Psi_1,Psi_2>, and X is smooth along S iff the Psi_i have no
+common zero on S. The same Koszul argument with a 2-torsion twist eta gives defect h^0(K_S - eta) against
+H^0(O_S(4)+eta), i.e. 1 against K_S+4h when K_S has order 2 (confirmed in Q11).
+
+Computed (q2.m2, qc.m2, q4.m2):
+ (i) Pfaffian K3, MOD 32003, 31991, 30011: S of degree 14, HP 7n^2+2, ACM; S n 2 quadrics: 56 points,
+     HF = 1,9,28,47,55,56 -> 55 conditions on quartics, defect 1.
+     On an actual tenfold section in P^10 (general cubic with that P^8-section, all terms of degree >= 2 in
+     w included): Jacobian scheme has dimension 0 and length 56, is contained in S n {Psi_0=Psi_1=0} n P^8
+     of the same length (saturated), hence equals it: 56 nodes, 55 conditions. Reducedness of the 56
+     points confirmed separately (nondegenerate trace form, q10ten log). Q != 0 at the nodes.
+     Remark: the Jacobian ideal of Pf|P^8 (9 quadrics) is NOT equal to I_S (15 quadrics); it has the same
+     Hilbert polynomial, so its saturation is I_S. "Singular scheme" must be read after saturation.
+ (ii) Coble, MOD 32003 and 31991 (random lam, x): Jacobian ideal has dim 2, degree 18, HP 9n^2; its
+     saturation has HF 9n^2 for n = 1..6 (so S is 4-normal: 144), generators 9 quadrics + 3 cubics, not ACM.
+     S n 2 quadrics: 72 points; HF of the saturation 1,9,34,63,71,72 -> 71 conditions, defect 1.
+     (I_S + (q1,q2) itself is not saturated: its HF in degree 4 is 73.)
+     Tenfold section in P^10: Jacobian scheme of dimension 0, length 72, equal after saturation to the above.
+     Control: replacing a by a+1 gives a smooth cubic.
+     NOT checked: that S is smooth / an abelian surface (only HP 9n^2 and degree 18), and reducedness of
+     the 72 points (only their length).
+ (iii) Enriques, MOD 32003 and 31991: 64 points, HF 1,9,31,55,64 -> 64 conditions, defect 0; same on an
+     actual tenfold section (Jacobian scheme of length 64 = S n two quadrics; reduced by Q11).
+
+------------------------------------------------------------------------------------------------------
+Q3.  CLAIM T3                                                       PASS (theory); one computation
+------------------------------------------------------------------------------------------------------
+ * det N = det T_P8|S (x) K_S = O(9) + K_S: yes.  N = N^v(3) gives (det N)^2 = O(18), so 2K_S = 0: yes.
+ * For a nondegenerate L-valued form on a bundle of rank 2r the discriminant trivialises
+   (det N (x) L^(-r))^2, and the double cover of square roots of the discriminant is the cover of the two
+   families of maximal isotropic subspaces. Here det N - 9h = K_S. On a projective variety the cover depends
+   only on the 2-torsion bundle. Correct.
+ * "T_s Z / T_s S is isotropic of dimension 3": yes. G vanishes to order 2 along S, the tangent cone of Y
+   at s is the rank-6 quadric cone with vertex T_s S, and a linear tangent space of Z lies in it; 5-2 = 3 is
+   maximal. A Z smooth at the general point of S gives a section of the ruling cover over a dense open set,
+   which forces the cover to split, i.e. K_S = 0. Correct. Note the hypothesis is only about Z near general
+   points of S; nothing is said about cycles that are singular along S (e.g. Sec(S), which is a 5-fold in Y).
+ * Explicit description in the Enriques case (my own): at the image of (x,y), N = Sym^2(C^3/x) + Sym^2(C^3/y)
+   with form det + c det. A square root of the discriminant needs an isomorphism between the lines
+   Lambda^2(C^3/x) and Lambda^2(C^3/y) whose square is given; it enters to the third power and changes sign
+   under y -> -y. So the two families are exchanged by the covering involution of the K3.
+ * Computation (q3b.m2, MOD 32003 only). For random constant 9x6 matrices U,U' the generalised minors
+   m(U,U') = det(U^T Hess(G) U') restricted to S equal kappa tau_U tau_U' with tau sections of K_S(3).
+   Solutions (c,c') of m(U,U') c = m(U,U) c' in H^0(O_S(3))^2 correspond to sections of K_S^(-1). Found:
+        Pfaffian K3:                                  1
+        Enriques, cubics of P^8:                      0
+        Enriques on the K3 cover, invariant sextics:  0
+        Enriques on the K3 cover, anti-invariant:     1
+   i.e. the square root exists as a cubic on the K3, and for the Enriques surface only upstairs and it is
+   anti-invariant. This is exactly the statement of T3 for this example.
+   DISCLOSURE: my first version (q3.m2) used coordinate minors with I0 = the six X_s-coordinates and gave
+   3 / 3 / 3 for the three Enriques variants (and 1 for the K3). I attribute that to the special index sets
+   (tau_I0 and tau_I1 sharing a curve, which breaks the correspondence); I did not verify that explanation,
+   only that general minors give 0 / 0 / 1. One prime only.
+ * NOT done: following isotropic 3-spaces along a loop numerically.
+ * Bonus (Pfaffian case): Z_W = {rank of three rows of M <= 2} n P^8 has dimension 5, contains S, lies in Y
+   set-theoretically (Pf^2 is in the minor ideal; Pf itself is not) and has codimension-3 tangent space at
+   the general point of S. So a Z as in T3 does exist for the K3. I did not compute its degree-7 class or
+   check where it is singular. No such check was made for the abelian surface.
+
+------------------------------------------------------------------------------------------------------
+Q4.  ENRIQUES                                                                                    PASS
+------------------------------------------------------------------------------------------------------
+q4.m2, MOD 32003 and 31991 (identical results):
+ * dim 2, degree 16, Hilbert polynomial 8n^2+1, HF = 8n^2+1 for n = 0..6; 12 quadrics;
+   pdim 6 = codim, so ACM (Betti numbers 1,12,52,102,100,48,9), hence saturated and projectively normal.
+ * K3 cover {q_i(x)+q'_i(y) = 0} in P^5: complete intersection of degree 8, smooth, no fixed points of
+   (x,y) -> (x,-y). (The log line says "7 = empty"; that is a slip of mine, the ring has 6 variables and
+   codimension 6 is the empty set.) Kernel of the ring map to the K3 equals I_S, so S is the free quotient.
+ * Cubics singular along S: exactly 2, spanned by det X_s and det Y_s.
+ * Jacobian ideal of det X_s + c det Y_s (random c): contained in I_S, HP 8n^2+1, saturation equal to I_S.
+   The two special members are singular in dimension 5.
+ * 64 nodes, 64 conditions on quartics, both on S and on an actual tenfold section (q2.m2).
+ * Hessian of rank exactly 6 along S: my direct test (random 6x6 minors, Groebner basis) was too slow and
+   was stopped. It follows from "S smooth" and "saturated Jacobian ideal = I_S" (kernel of the Hessian =
+   Zariski tangent space of the singular scheme), both verified.
+
+------------------------------------------------------------------------------------------------------
+Q5.  T4/T5 ARITHMETIC                                       (i)-(iii) PASS, (iv) PARTIAL
+------------------------------------------------------------------------------------------------------
+ (i) Riemann-Roch with h.K = 0 and Kodaira: 9 = h^0(O_S(1)) = d/2 + chi. Degrees 14, 16, 18, 18. Correct.
+     Linear normality is essential (see 9.3).
+ (ii) q5_arith.py: disc = -64r^2 + 16rs - 64s^2 = -8(8r^2-2rs+8s^2), independent of a. The form is
+     >= 7(r^2+s^2); value 14 only at +-(1,1), 18 only at +-(1,-1), 16 not represented (values 0,8,14,18,
+     32,36,...). The Gram matrix is that of two P^5 meeting along a plane (excess computation gives 3;
+     P^5.P^5 = -21). P1+P2 has degree 2 and square -36; P1-P2 has degree 0 and square -48.
+ (iii) 3 Sigma.Sigma - m^2 is 0 or 2 mod 3; -128 = 1 mod 3. Correct, and it holds in any lattice.
+ (iv) What follows: IF a 5-fold Z in Y contains S, is smooth at the 4 deg S nodes and is regularly embedded
+     everywhere (so T1 applies), THEN disc<h^5,[Z]> = -8 deg S: -112 for the K3, -144 for the abelian surface.
+     What does not follow:
+      - existence of such a Z. For the K3 I found a candidate (Q3 bonus) but did not check it globally;
+        for the abelian surface nothing was exhibited. A Z singular away from the nodes can have a
+        different self-intersection.
+      - the class. Only the discriminant of the rank-2 lattice is identified. The tenfolds of T2 are not
+        known (from what I was given) to contain P1, P2, and even inside <h^5,P1,P2> "disc = -112" pins the
+        class down only up to sign and multiples of h^5, because that binary form happens to represent 14
+        and 18 once. "The sign of the coefficient is decided by chi(O_S)" is a statement about deg S
+        = 18 - 2 chi, nothing more.
+      - for Enriques, (iii) and T3 say the same thing twice; the actual reason there is no class is T2.
+
+------------------------------------------------------------------------------------------------------
+Q6.  BIELLIPTIC                                              PASS for this surface; type 2 NOT CHECKED
+------------------------------------------------------------------------------------------------------
+q6_bielliptic.py (pure Python, points over F_p, p = 32003, 31991, 30011, two random (E,F) per prime):
+ * The nine functions are exactly the invariant sections (3 x 2 even-even plus 3 x 1 odd-odd).
+ * Rank of evaluation in degrees 1..5: 9, 36, 81, 144, 225 (stable when the number of points is halved):
+   9 quadrics, 84 cubics, HF = 9n^2 for n <= 5, so degree 18. "Hilbert polynomial 9n^2" is supported by
+   five consecutive values, not established by a Groebner computation.
+ * Cubics whose nine partials vanish on 260 (and on 130) random points: 0, in all six runs.
+   Control with the same routine: Segre P^2 x P^2 returns 1 (the determinant).
+   The K3 and the Coble surface return 1 with my other, ideal-based routine (singCubics in common.m2;
+   Enriques returns 2). I did not run one and the same routine on all four surfaces.
+ * Other bundles: the anti-invariant sections u, u^3, v, us, u^3 s, vs, w, u^2 w, uvw embed S by L + K_S.
+   Same results: 9, 36, 81, 144, 225 and 0 singular cubics, at all three primes.
+   My argument (not machine-checked): on this type (Z/2) the very ample numerical class of degree 18 is
+   unique (degree 3 on both fibre classes); numerically equivalent bundles differ by Pic^0 (translations
+   of E) or by the 2x2 torsion of NS, and the classes other than K_S are realised by 2-torsion translations
+   of F. So L and L + K_S are all cases up to automorphisms.
+ * The other bielliptic type with 2K = 0 (group Z/2 x Z/2): NOT CHECKED. I see no general reason: T2 and
+   T3 do not exclude a bielliptic singular locus (defect would be 0, 2K = 0 holds). The exclusion is purely
+   computational, so it should be stated only for the type tested.
+ * Embedding: leading coefficient 9 means the image has degree 18 = L^2, so the system is base point free
+   and birational onto its image; equality of the Hilbert polynomial with chi(L^n) = 9n^2 then forces the
+   finite birational map to be an isomorphism. This is conditional on HP = 9n^2 (previous caveat);
+   injectivity and smoothness of the image were not tested directly.
+
+------------------------------------------------------------------------------------------------------
+Q7.  LOWER RUNGS                                                                                  PASS
+------------------------------------------------------------------------------------------------------
+q7.m2 and qc.m2, MOD 32003 and 31991, on actual hypersurfaces (Jacobian scheme of the hyperplane section,
+saturated, Hilbert function):
+ (a) F = lQ + Pf(M) in P^7, smooth. Section: 14 nodes = the 4x4 Pfaffians, HF 1,7,13,14: 13 conditions.
+ (b) general cubic in P^9 with Pfaffian P^7-section, including all terms of degree 2 and 3 in the two extra
+     variables; smooth (Jacobian ideal of codimension 10). Curve of degree 14, genus 8. Section: 28 nodes,
+     HF 1,8,20,27,28: 27 conditions on cubics.
+ (c) Coble n general P^6: 18 nodes, HF 1,7,17,18: 17 conditions on quadrics.
+ (d) Coble n general P^7: curve of degree 18, genus 10 (HP 18n-9). Section in P^8 of the eightfold: 36 nodes
+     = C n Psi_0, HF 1,8,26,35,36: 35 conditions on cubics. Q != 0 at the nodes.
+     (Here I used a hyperplane section of the form G7 + w Psi + w^2 L + c w^3 and did not build the full
+     eightfold or test its smoothness away from the nodes.)
+ (e) F = lQ + det A + det B in P^9, smooth. Section: 36 nodes, equal after saturation to
+     {rk A <= 1} n {rk B <= 1}; HF 1,9,27,35,36: 35 conditions on cubics.
+Reducedness of the node scheme confirmed for (a), (b), (c), (e) (trace form); for (d) only the length.
+
+------------------------------------------------------------------------------------------------------
+Q8.  CLAIM R5                                                                                  PARTIAL
+------------------------------------------------------------------------------------------------------
+8.1 The argument. delta(sum A_i dF/dx_i + B dF/ds) restricted to s = 0 is sum a_i df/dx_i + bQ; the first
+    terms vanish at the nodes and delta(bQ) = rho(b) = 0 because deg b = k-1. So delta kills J(F) and s.
+    Correct. Also s is in the annihilator of the true class (deformations f + s(Q+tQ') keep V).
+8.2 But this does NOT characterise delta. The functionals on forms of degree k+1 killing J(F) and s form
+    a space of dimension dim (C[x]/(J(f),Q))_(k+1). In case (a) this is 14 (computed at both primes; it is
+    at least 70 - 56 for any cubic sixfold). So "kills J(F) and s" leaves 14 candidates, not 1.
+    What is missing is the statement that the class is annihilated by the SATURATED ideal I_Z of the nodes.
+    Facts I can add:
+     * ker delta = (I_Z + (Q)) in degree k+1 (short argument: P/Q restricted to Z is a form of degree k-1
+       iff P - QR is in I_Z), and this has codimension exactly 1 when the defect is 1. So
+       I = Gorenstein ideal of the socle-degree-(k+1) part of C[x]/(I_Z + (Q)), and a functional killing
+       I_Z, Q is unique up to scalar.
+     * Why the class should kill I_Z: a cubic g vanishing on the nodes is a first-order equisingular
+       deformation of V, and the defect class survives those. This is an argument when the equisingular
+       stratum is smooth with tangent space (I_Z)_3 and I_Z is generated in degree <= 3. In the eightfold and
+       tenfold cases the nodes do not impose independent conditions on cubics (27 of 28; 47 of 56), so the
+       stratum is not of expected dimension and this step needs an actual proof.
+     * Known case: for P^3 in a sixfold, F = sum x_i Q_i, my code gives I_Z + (Q) equal, as ideals, to
+       (x_1,x_2,x_3,Q_0,...,Q_3), which is the known annihilator of the class of a linear space; HF 1,4,6,4,1.
+     * Cross-check by parameter counts (mine, by hand, not machine-verified): the families have codimension
+       7 for (a), 19 for (b), 26 for (e), 38 for the Pfaffian tenfold, 54 for the Coble tenfold. These equal
+       the degree-3 values below, as they should for reduced components.
+    So the identification is plausible and consistent with everything I can test, but it is argued, not
+    proved, and the written justification should be replaced.
+8.3 Recomputed Hilbert functions of S/I (gorHF in common.m2: catalecticant ranks of the functional
+    on degree k+1), MOD 32003 and 31991 (Pfaffian tenfold also MOD 30011):
+       (a) 1,7,12,7,1          (b) 1,8,19,19,8,1        (c) 1,7,16,7,1
+       (d) 1,8,25,25,8,1       (e) 1,9,26,26,9,1
+       tenfold Pfaffian 1,9,27,38,27,9,1          tenfold Coble 1,9,33,54,33,9,1
+    All as claimed. For the non-ACM cases the quotient C[y]/(I_Z+Q) is not itself Gorenstein
+    ((c) 1,7,16,11,1; (d) 1,8,25,27,10,1; Coble tenfold 1,9,33,54,37,9,1) and the saturation of I_S + quadrics
+    matters. Enriques tenfold: the degree-6 part of C[y]/(I_S, 3 quadrics) is 0 (HF 1,9,30,46,33,9), no class.
+    THING TO LOOK AT: for (c) and (d) the family itself is much smaller than the tangent space. By my count
+    sixfolds with a section "Coble n P^6" have codimension >= 11 (7 + 66 + 36 = 109 of 120), against 7 from
+    R5, and 11 exceeds h^(4,2) = 8, the maximal codimension of any Hodge locus of sixfolds; eightfolds of
+    type (d) have codimension >= 29 (16 + 75 + 100 = 191 of 220) against 25. So the families (c), (d) are
+    not components of their Hodge loci; the locus through them is larger by about 4 dimensions (or
+    non-reduced). These are also the two cases where R5 has no dimension cross-check.
+8.4 On 25 < 26. The value 25 is the codimension of the Zariski tangent space at a point of (d), so the
+    Hodge locus there has codimension >= 25. This does NOT show that (d) is outside the closure of (e):
+    tangent spaces can only grow under specialisation, so 25 at a special point is compatible with 26 at the
+    general point. In fact the whole Hilbert function of (d) is termwise <= that of (e)
+    (1,8,25,25,8,1 against 1,9,26,26,9,1), which is what semicontinuity of the ranks requires of a
+    specialisation, and both have 36 nodes, hence the same discriminant 72. What 25 < 26 does imply: if (d)
+    lies in the closure of (e) with the same class, the Hodge locus is singular (or non-reduced) along (d);
+    alternatively there is a component of codimension 25 through (d), which could not lie in the closure of
+    (e). Deciding needs the actual dimension of the locus through (d), not a tangent space.
+
+------------------------------------------------------------------------------------------------------
+Q10. g^2 D = constant                                         PASS (5 cases), tenfold NOT CHECKED
+------------------------------------------------------------------------------------------------------
+ (i) The residue argument is right: P omega/(Psi_1 Psi_2) is a meromorphic 2-form with poles on two curves
+     meeting transversally at Z, the sum of its point residues P(p) omega(p)/Jac(p) vanishes, all coefficients
+     are nonzero, and by T2 this is the only relation. With K_S of order 2 the same theorem applies to
+     s/(Psi_1 Psi_2), s in H^0(K_S+4h), and says nothing about quartics.
+     Bookkeeping: under a change of chart the coefficients of the relation scale with weight e = n/2 - 1 and
+     the affine Hessian determinant with weight -(n-2) (adj Hess = c(z) z z^T, c homogeneous of degree n-2),
+     so g^2 D has weight 0 and the statement is chart-independent. A principal (n-1)-minor has no such
+     meaning. Local reason in the T2 setting: in a splitting N + T_S + (w-directions) the Hessian is block
+     triangular and D = det(q_N) Jac_S(Psi_1,Psi_2)^2, with det(q_N) a nowhere-zero section of K_S^(-2),
+     i.e. const/omega^2. Same for curves ((b),(d): K_C = O_C(1), D = -det(q_N)(dPsi|C)^2).
+     A second, general reason (mine): if the nodes lie on a smooth k-fold Sigma in V as in T1, the residue
+     theorem for the section df of N^v(3) gives the relation sum R(p)/Jac(p) = 0 for forms of degree k-1
+     (K_Sigma + det N^v(3) = O(k-1)), and the Hessian has the block form [[0,A],[A^T,C]], D = +-det(A)^2.
+     That covers (a) (V5), (e) (P^2 x P^2) and linear spaces without any surface S.
+ (ii) q10test in common.m2 (random affine chart, trace form of the coordinate ring of Z, g from rho = Tr(g.),
+     Hessian determinant computed in the coordinate ring), MOD 32003 and 31991:
+        P^3 in a sixfold (8 nodes), (a) 14 nodes, (b) 28 nodes, (c) Coble-type 18 nodes, (e) det A + det B
+        36 nodes:  g is a unit and g^2 D is a nonzero constant in all five, at both primes.
+     Negative controls, all non-constant in every case: a principal (n-1)x(n-1) minor in place of D;
+     wrong exponents g D, g^3 D, g^2 D^2; a random relation on forms of degree e-1 in place of rho.
+     Tenfold (56 nodes, n = 10): the set-up ran (56 reduced nodes, rank 55 on quartics) but my cofactor
+     determinant in the coordinate ring did not finish in 7 minutes. NOT CHECKED. (d) not run.
+ (iii) Yes, with a caveat about what is evidence and what is proof. The candidate coefficients are
+     omega/Jac = +-1/sqrt(D), and sqrt(det q_N) is a section of K_S; on an Enriques surface it exists only
+     on the K3 cover and is anti-invariant (computed, Q3), so no choice of signs on the 64 nodes is induced.
+     That is the same double cover as in T3. But "g^2 D = const in the cases with a relation" does not by
+     itself show that a relation must have this shape. The statement "no relation for Enriques" is proved
+     by T2 (p_g = 0) or by Q11, not by the sign heuristic.
+
+------------------------------------------------------------------------------------------------------
+Q11. K3 cover of the 64 Enriques nodes                                                           PASS
+------------------------------------------------------------------------------------------------------
+Parity argument: for invariant equations and an invariant bordering linear form, grad F_i(iota p) =
+iota grad F_i(p), so J(iota p) = det(iota) J(p) = -J(p). The unique Cayley-Bacharach relation is therefore
+an anti-invariant functional on the 128-dimensional space of functions; it vanishes on the 64 invariant
+functions and cuts a hyperplane in the 64 anti-invariant ones. Restriction of octics is equivariant, so
+invariant octics have rank 64 and anti-invariant ones 63. Invariant octics are the quartics in x_i x_j,
+y_i y_j; anti-invariant octics give all of H^0(K_S+4h) because the K3 is projectively normal. Correct.
+q11.m2, MOD 32003 and 31991: equations of degrees 2,2,2,4,4; length 128; reduced; HF
+1,6,18,38,64,90,110,122,127,128; J anti-invariant (checked symbolically, degree 9);
+ranks: all octics 127, invariant 64, anti-invariant 63, pull-backs of quartics of P^8 64.
+Downstairs: length 64, HF(4) = 64.
+
+------------------------------------------------------------------------------------------------------
+Q9.  OTHER REMARKS
+------------------------------------------------------------------------------------------------------
+9.1 Is the overall conclusion supported?
+    Supported by what I verified: K3 -> 56 nodes, defect 1; abelian (Coble) -> 72 nodes, defect 1;
+    Enriques -> 64 nodes, defect 0, and no 5-fold smooth along S can exist; bielliptic (this type, both
+    linearisations) -> not a singular locus of any cubic.
+    NOT supported as stated: "K3 <-> coefficient +1 and abelian <-> coefficient -1 is forced". What is
+    forced is a discriminant (-112, -144), conditionally on a suitable Z. Nothing I was given places these
+    classes in the lattice <h^5,P1,P2>. "Enriques and bielliptic give no class" should read "this
+    construction gives no class": defect 0 says the nodal section carries no extra class, not that the
+    tenfold has none.
+9.2 Abelian surfaces of type (1,9) in P^8 (degree 18, linearly normal) are not covered. N = N^v(3) imposes
+    no numerical condition on a surface beyond 2K = 0, so I cannot exclude them. If one were a singular locus
+    it would give the same -144. Not checked.
+9.3 Non-linearly-normal surfaces are not covered by T4(i): a projected K3 has degree >= 16. 2K = 0 still
+    holds, T2 needs 4-normality, and the mod 3 argument only removes degrees = 1 mod 3. Not checked.
+9.4 Minor points: the Pfaffian Jacobian ideal needs saturating (Q2); I_S + (two quadrics) is not saturated
+    in the Coble case, so "conditions" must be read on the saturation (73 against 71 in degree 4); the
+    reducedness of the 72 Coble nodes and the smoothness of the Coble surface were not verified by me.
+
+------------------------------------------------------------------------------------------------------
+PROCESS NOTES
+------------------------------------------------------------------------------------------------------
+ * First Enriques run was lost (10 min): M2 buffers output and I had included a radical and a Groebner basis
+   of degree-6 Hessian minors. Rerun with flushing and without those steps took 10 s.
+ * Another M2 job (not mine) was running on the machine part of the time; I never ran two of my own at once.
+ * Nothing in this report comes from stored memory or from the project folders.
+
+FILES (all in /home/claude/blind_check7)
+  common.m2                    shared routines: singCubics, gorHF, q10test
+  q1_chern.py, q1.m2           Q1                    logs q1_chern.log, q1.log
+  q2.m2                        Pfaffian K3, tenfolds logs q2_32003.log, q2_31991.log, q2_30011.log
+  q4.m2                        Enriques              logs q4_32003.log, q4_31991.log
+  qc.m2                        Coble, (c), (d)       logs qc_32003.log, qc_31991.log
+  q7.m2                        (a), (b), (e), R5, Q10 logs q7_32003.log, q7_31991.log
+  q6_bielliptic.py             bielliptic            log  q6_bielliptic.log
+  q5_arith.py                  lattice arithmetic    log  q5_arith.log
+  q3.m2, q3b.m2                discriminant test     logs q3_32003.log (special minors, see disclosure),
+                                                          q3b_32003.log (general minors)
+  q10ten.m2                    tenfold Q10, unfinished  log q10ten_32003.log
+  q11.m2                       Q11                   logs q11_32003.log, q11_31991.log
