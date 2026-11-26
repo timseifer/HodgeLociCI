@@ -153,8 +153,12 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .ladder .ar{align-self:center;font-size:.72rem;color:var(--faint);text-align:center;line-height:1.1}
 .orders{width:100%;border-collapse:separate;border-spacing:4px;font-size:.78rem}
 .orders th{color:var(--muted);font-weight:500;text-align:left;padding:2px 4px}
-.orders td.c{width:34px;height:26px;text-align:center;border-radius:6px;font-weight:600}
+.orders td.c{width:30px;height:26px;text-align:center;border-radius:6px;font-weight:600}
 .orders td.ok{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)}
+.orders td.ok1{border:1.5px solid var(--ok);color:var(--ok);background:transparent}
+.orders td.c.six{box-shadow:0 0 0 2px var(--accent)}
+.orders td.c{min-width:22px}
+@media (max-width:560px){.orders{border-spacing:2px}.orders td.c{width:22px;height:22px;font-size:.7rem}.orders th{font-size:.7rem}}
 .orders td.no{background:color-mix(in srgb,var(--no) 22%,transparent);color:var(--no)}
 .orders td.q{border:1.5px dashed var(--pend);color:var(--pend);animation:qpulse 2s ease-in-out infinite}
 .orders td.na{color:var(--faint)}
@@ -517,15 +521,21 @@ const FIGURES = {
     const at=sv("text",{x:(X(52)+X(39))/2,y:AY+52,"text-anchor":"middle","font-size":10,fill:"var(--accent)"}); at.textContent="meets V_Z if the sixfold chain holds"; svg.append(at);
     if(!RM&&arc.animate) arc.animate([{strokeDashoffset:18},{strokeDashoffset:0}],{duration:1400,iterations:Infinity});
     // ---- order meter ----
-    const rows=[["Generic directions",["ok","ok","ok","no","na","na"]],["Special directions, coefficient −1",["ok","ok","ok","ok","ok","q"]],["Same directions, coefficient 2",["ok","ok","ok","ok","ok","q"]]];
-    const sym={ok:"✓",no:"✗",na:"·",q:"?"};
-    const tb=el("table",{class:"orders"},el("tr",{},el("th",{},"At Movasati's point, order:"),...[1,2,3,4,5,6].map(n=>el("th",{style:"text-align:center"},String(n)))),
-      ...rows.map(([lab,cs])=>el("tr",{},el("th",{},lab),...cs.map((c,j)=>el("td",{class:"c "+c,title:c==="q"?"not run yet: this is the order that would separate −1 from 2":(c==="ok"?"passes (MOD p, two primes)":c==="no"?"obstructed":"")},sym[c])))));
+    const rows=[
+      ["Generic",["ok","ok","ok","no","na","na","na","na","na"]],
+      ["−1 · eightfold-cone directions",["ok","ok","ok","ok","ok","ok","ok","ok1","ok1"]],
+      ["−1 · all three pairs",["ok","ok","ok","ok","ok","ok1","q","q","q"]],
+      ["2 · same direction",["ok","ok","ok","ok","ok","no","na","na","na"]]];
+    const sym={ok:"✓",ok1:"✓",no:"✗",na:"·",q:"?"};
+    const tip={ok:"passes (MOD p, two primes)",ok1:"passes (MOD p, one prime)",no:"obstructed",na:"",q:"not run yet"};
+    const tb=el("table",{class:"orders"},el("tr",{},el("th",{},"Order"),...[1,2,3,4,5,6,7,8,9].map(n=>el("th",{style:"text-align:center"+(n===6?";color:var(--accent);font-weight:700":"")},String(n)))),
+      ...rows.map(([lab,cs])=>el("tr",{},el("th",{},lab),...cs.map((c,j)=>el("td",{class:"c "+c+(j===5?" six":""),title:tip[c]},sym[c])))));
+    const legend=el("p",{class:"cap"},"✓ solid: two primes · ✓ outlined: one prime · ✗ obstructed (for 2 at order 6: whatever the higher terms, by an independent check) · ? not run.");
     box.append(
       el("div",{},el("div",{class:"tdlabel"},"The family"),mat,el("div",{class:"ctrls",style:"margin-top:22px"},cycBtn),cycTxt),
       el("div",{},el("div",{class:"tdlabel"},"One construction, three dimensions"),lad,lnote),
       el("div",{},el("div",{class:"tdlabel"},"Three families on cubic tenfolds for the same orbit of classes"),svg),
-      el("div",{},el("div",{class:"tdlabel"},"What decides it"),tb,el("p",{class:"cap"},"Up to order 5 the coefficients −1 and 2 behave alike, so nothing yet singles out −1 at Movasati's point. Order 6 (a few hours of computing) is the test. MOD p at two primes; conditional on an unreviewed AI paper chain.")));
+      el("div",{},el("div",{class:"tdlabel"},"At Movasati's point: order 6 separates −1 from 2"),tb,legend,el("p",{class:"cap"},"Up to order 5 the coefficients −1 and 2 behave alike; at order 6 the coefficient 2 is obstructed and −1 is not, and −1 continues to order 9. MOD p and finite order: evidence, not a proof that a component exists. Nothing at this point is exact yet, the primes carry different directions, and everything is conditional on an unreviewed AI paper chain.")));
     pickR(2);
     if(!RM){ let i=0; pickR(0); tmr=setInterval(()=>{ i++; if(i>2){ stopPlay(); return; } pickR(i); },1600); }
     return box;
