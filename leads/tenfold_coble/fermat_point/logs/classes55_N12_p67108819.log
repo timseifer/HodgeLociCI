@@ -1,0 +1,40 @@
+supports (number of eigenclasses with nonzero coefficient):
+   kappa = P1+P2+P3 (mod h^5)           16
+   P1 - P2 (Movasati)                   48
+   P1 - P3                              48
+   P2 - P3                              48
+   P1 alone                             64
+   P1 + P2                              64
+   K2: kappa, one eigen-sign flipped    16
+span of the 27 classes kappa_theta: dimension 8
+MOD 67108819 n =  0: condition rows      0, rank so far   0, solution space dim 924, all 27 kappa_theta inside: True  [0.0s]
+MOD 67108819 n =  1: condition rows    579, rank so far 408, solution space dim 516, all 27 kappa_theta inside: True  [0.1s]
+MOD 67108819 n =  2: condition rows    951, rank so far 676, solution space dim 248, all 27 kappa_theta inside: True  [0.1s]
+MOD 67108819 n =  3: condition rows    271, rank so far 676, solution space dim 248, all 27 kappa_theta inside: True  [0.1s]
+MOD 67108819 n =  4: condition rows   2748, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [0.3s]
+MOD 67108819 n =  5: condition rows   4230, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [0.4s]
+MOD 67108819 n =  6: condition rows   2396, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [0.4s]
+MOD 67108819 n =  7: condition rows   6516, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [1.0s]
+MOD 67108819 n =  8: condition rows   8730, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [1.3s]
+MOD 67108819 n =  9: condition rows   4986, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [1.5s]
+MOD 67108819 n = 10: condition rows  11868, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [2.9s]
+MOD 67108819 n = 11: condition rows  14820, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [4.2s]
+MOD 67108819 n = 12: condition rows   8504, rank so far 704, solution space dim 220, all 27 kappa_theta inside: True  [6.0s]
+first order at which each named class violates a condition (None = none up to 12):
+   kappa = P1+P2+P3 (mod h^5)           None
+   P1 - P2 (Movasati)                   1
+   P1 - P3                              1
+   P2 - P3                              1
+   P1 alone                             1
+   P1 + P2                              1
+   K2: kappa, one eigen-sign flipped    2
+solution space by r-part s of the pattern (patterns, free columns):
+   s = (0, 0, 0) [84, 2]
+   s = (0, 0, 1) [126, 36]
+   s = (0, 1, 0) [126, 36]
+   s = (0, 1, 1) [126, 36]
+   s = (1, 0, 0) [126, 36]
+   s = (1, 0, 1) [126, 36]
+   s = (1, 1, 0) [126, 36]
+   s = (1, 1, 1) [84, 2]
+RESULT classes55 N=12 p=67108819: solution space dim 220; kappa first failure None; Movasati class first failure 1

@@ -1,0 +1,11 @@
+QQ, x=(3,15,18), a=-342: dim Sing = 2, degree = 18, Hilbert polynomial = 9*i^2
+QQ, x=(3,15,18), a=-341 (control): dim Sing = -1, degree = 0
+QQ, x=(3,15,19), a=-342 (control): dim Sing = -1, degree = 0
+QQ, x=(3,15,18), a=1, i.e. G_x itself (control): dim Sing = -1, degree = 0
+saturation: generators in degrees {2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3}
+Hilbert function of T/Jsat, degrees 0..6: {1, 9, 36, 81, 144, 225, 324}
+Jsat radical-ness / smoothness is tested below mod p
+ZZ/32003, x=(3,15,18), a=-342: dim Sing = 2, degree = 18, Hilbert polynomial = 9*i^2
+number of 6x6 minors generators: 7056  (123.185 s)
+MOD 32003: dim of {rank Hessian <= 5} inside Sing (affine cone dim; 0 means empty projectively) = 0
+MOD 32003: h^0(O), h^1(O), h^2(O) of the singular locus = 1, 2, 1

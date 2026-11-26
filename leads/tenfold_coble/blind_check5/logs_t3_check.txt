@@ -1,0 +1,7 @@
+order of the matrix group generated mod p: 162
+determinants of sh, c, b, iota mod p (p-1 means -1): [1, 1, 1, 2147483628]
+degree 0: dim of the common fixed space = 0
+degree 3: dim of the common fixed space = 1
+degree 6: dim of the common fixed space = 10
+degree 9: dim of the common fixed space = 1
+degree 12: dim of the common fixed space = 0

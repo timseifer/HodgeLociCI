@@ -1,0 +1,10 @@
+generator sh   preserves M_x for every x: True;  sign of its permutation +1, sum of phases 0 mod 3
+generator c    preserves M_x for every x: True;  sign of its permutation +1, sum of phases 0 mod 3
+generator b    preserves M_x for every x: True;  sign of its permutation +1, sum of phases 0 mod 3
+generator iota preserves M_x for every x: True;  sign of its permutation -1, sum of phases 0 mod 3
+order of the group generated (as matrices): 162
+invariant part, Hodge type (7,3) (Q of degree  0): dimension 0
+invariant part, Hodge type (6,4) (Q of degree  3): dimension 1;  orbits: {p0 p1 p2} (orbit of 2)
+invariant part, Hodge type (5,5) (Q of degree  6): dimension 10
+invariant part, Hodge type (4,6) (Q of degree  9): dimension 1
+invariant part, Hodge type (3,7) (Q of degree 12): dimension 0

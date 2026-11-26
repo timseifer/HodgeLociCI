@@ -1,0 +1,4 @@
+x = {1, 2, 3}: G_x smooth: false ; (P - Q) m_d in J: {true, true, true} ; (P + Q) m_d in J: {false, false, false} ; P - Q in J: false
+x = {2, -1, 5}: G_x smooth: true ; (P - Q) m_d in J: {true, true, true} ; (P + Q) m_d in J: {false, false, false} ; P - Q in J: false
+x = {3, 15, 18}: G_x smooth: true ; (P - Q) m_d in J: {true, true, true} ; (P + Q) m_d in J: {false, false, false} ; P - Q in J: false
+EXIT 0

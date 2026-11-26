@@ -1,0 +1,4 @@
+EXACT engine, seed 1, F0(g x): kappa: first nonzero order: none up to 6
+EXACT engine, seed 1, sign flipped: kappa: first nonzero order: 2
+EXACT engine, seed 2, F0(g x): kappa: first nonzero order: none up to 6
+EXACT engine, seed 2, sign flipped: kappa: first nonzero order: 3

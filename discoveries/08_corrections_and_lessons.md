@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (26)
+## Entries on this page (27)
 
 | id | status | title |
 |---|---|---|
@@ -37,6 +37,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-BLIND-CHECKS-WITH-CONTROLS](#m-blind-checks-with-controls) | `COMPUTED_ONLY` | One blind check per claim, with negative controls and 'what a wrong claim would have looked like' |
 | [M-LEAN-CERTIFICATES](#m-lean-certificates) | `EXACT` | Lean certificates: kernel-checked finite computations and deductions from stated hypotheses |
 | [M-NODE-SECTION-TOOL](#m-node-section-tool) | `COMPUTED_ONLY` | Tool tooling/node_section: nodes of a hyperplane section and the relations among them (a count; seven regression cases) |
+| [C-TENFOLD-FERMAT-POINT-CLASS](#c-tenfold-fermat-point-class) | `EXACT` | Tenfold lead: at the Fermat tenfold the explicit arc of the Coble family carries the three-plane class, not Movasati's class; the planned check and one earlier remark are withdrawn |
 | [M-FERMAT-SERIES-KERNEL](#m-fermat-series-kernel) | `COMPUTED_ONLY` | Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines |
 
 ---
@@ -1056,6 +1057,98 @@ coordinates). Suggested as a tool by another agent of this project; built at the
 
 ```
 cd tooling/node_section && M2 --script test_node_section.m2 | diff - test_node_section.expected
+```
+
+**Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), fifth part.
+
+---
+
+## C-TENFOLD-FERMAT-POINT-CLASS
+
+**Tenfold lead: at the Fermat tenfold the explicit arc of the Coble family carries the three-plane class, not Movasati's class; the planned check and one earlier remark are withdrawn**
+
+kind: `correction` | area: `movasati_conjecture` | status: **`EXACT`**
+
+**Statement.**
+
+Coordinates of the Fermat cubic tenfold X_0: r_k = x_(2k), y_k = x_(2k+1), p_i = x_(6+2i), q_i = x_(7+2i) (indices
+mod 3). The three 5-planes P_zeta = {r_k + y_k = 0, p_i = zeta q_i}, zeta^3 = -1, pairwise meet in the same P^2.
+delta = [P_zeta] - [P_zeta'] (Movasati's class), kappa = h^5 - [P_z1] - [P_z2] - [P_z3] (the three-plane class).
+M_x = sum_{i,j} x_(i-j) y_(i+j) p_i q_j;  X_x: F_0 + M_x = 0.
+
+```text
+What was planned (next_step of D-TENFOLD-COBLE-EXACT-MEMBER, and earlier messages): to run "the explicit cubic arc
+of the Coble family through Movasati's point" in the order-12 Fermat engine for Movasati's class. Worked out before
+any run:
+(1) (EXACT) After a rescaling of three coordinates that arc is the line F_0 + tau M_xi. Its direction M_x is tangent
+at X_0 to the Hodge locus of kappa and NOT to that of delta (nor of P1 - P3, P2 - P3, P1, P1 + P2).
+(2) (EXACT) kappa is supported on 16 torus eigenclasses of X_0 and delta on 48, so no automorphism of X_0 carries one
+to the other.
+(3) (EXACT by hand for x a flex; ARG for the continuation) The class that the Coble family carries along that arc is
+kappa: on the cone h_0(x) = 0 the tenfold contains J(P^2, T_x), and T_x is the residual of three disjoint planes in
+a Segre threefold section of the Fermat fourfold, [T] = 3 h^2 - Pa - Pb - Pc.
+So the planned run would have tested the wrong class. It was replaced by D-TENFOLD-FERMAT-THREE-PLANE-FAMILY and
+D-TENFOLD-COBLE-FERMAT-ARCS, which are about kappa.
+(4) Withdrawn: the remark in leads/TENFOLD_COBLE_LEAD.md, section 5, that the determinantal cubic "is Movasati's
+configuration" and so links the Fermat-point lead with the F_T lead. On a tenfold with a determinantal P^8-section
+the two 5-planes belong to one connected family of 5-planes, so their difference is zero in homology there.
+Unchanged: that the registry's W for delta (O-TENFOLD-CONE-LEAD) is a branch of the closure of the Coble family is
+a paper argument (irreducibility of the marked family of C_18 fourfolds); no explicit arc for delta is known.
+```
+
+**Conditions.**
+
+```text
+(1), (2): computed with the closed formula for the Fermat periods; "not tangent" is a non-zero value modulo
+67108837 and 67108819 (hence non-zero), "tangent" for kappa is an empty sum. (3) is a hand computation plus a
+continuity argument (ARG). Nothing here tests Movasati's class beyond first order.
+```
+
+**Evidence.**
+
+leads/tenfold_coble/fermat_point/ (PREREG_fermat.md section 0, fp_main.py, logs/classes_N10_p67108837.log);
+leads/TENFOLD_COBLE_LEAD.md section 13.1.
+
+**Independent check.**
+
+Blind check 5 (26 Nov 2026; a separate agent given the statements only, not the code or the numbers; its own two
+period engines, numpy MOD p and python-flint EXACT over QQ, and its unedited report:
+leads/tenfold_coble/blind_check5/). Its answers agree with every item:
+first order: kappa yes, identically in x; delta no for general x (EXACT, x symbolic; it adds: tangent for delta
+exactly when x_1 + x_2 = 0). Membership at x = (3,15,18): yes, a = -342, surface of degree 18, 9 n^2 (EXACT).
+The group: order 162, invariants 0, 1, 10, 1, 0, degree 3 spanned by P - Q (EXACT, two methods). The identity
+(P - Q) dM/dx_d in the Jacobian ideal: EXACT over QQ(x) by its own determinant-grid proof (36 x 36 block, 37^3
+points), at 7 rational points and over QQ(s) on a line; (P + Q) dM/dx_d not; P - Q not in the ideal for any x.
+The proof on the symmetric family: judged sound, with eight points that each need a sentence (all taken into
+section 13.3); it notes the argument gives the same for every invariant rational Hodge class (a 10-dimensional
+space). Symmetric family: zero identically in x to order 18 (EXACT). The arc with no symmetry, with its own random
+data: all period equations of kappa vanish to order 10 (2 data sets), 9 (2), 8 (4), each at two primes
+(2147483629, 2147483587), and EXACTLY over QQ to order 7 (1 data set) and 6 (1). Variants, without being told the
+orders: no term 3 a lam Y: fails at 4; h_0 in place of h_lam: 5; no factor 1 + lam^3: 7; theta = 1: 4; delta in
+place of kappa: 1. Found by it and then replicated here: among all 924 eigenclasses the combinations that survive
+along the arc to order n have dimension 704, 484, 264, 44, 1 for n = 1..5, and the last is the line of kappa.
+Its caveats: a coordinate-change arc passes for ANY class, so that gate validates the reduction and the signs, not
+the period polynomial of a plane (it pinned that separately, exactly); on the plane x_1 + x_2 = 0 each single plane
+class persists, so tests there are uninformative; orders n = 1 mod 3 of the symmetric test are empty sums. Not
+checked by it: the closed period formula and Griffiths' description (taken from the literature); orders above 10;
+algebraicity of the transported class. Disclosure by it: it saw file names under leads/ in a directory listing and
+opened none.
+
+**Not established.**
+
+An explicit arc of the Coble family ending at the Fermat cone with the marking delta. That the branch of the Hodge
+locus of delta found by finite-order arcs in O-TENFOLD-CONE-LEAD is the Coble family (ARG).
+
+**Known before.**
+
+Own error of planning, found before the run. The irreducibility of the families of special cubic fourfolds is
+Hassett's (not re-read).
+
+**Reproduce.**
+
+```text
+From leads/tenfold_coble/fermat_point/ (Python 3 with numpy):
+    python3 fp_main.py classes 3 67108837       (seconds)
 ```
 
 **Session references (files not public).** Session of 25-26 Nov 2026 (Claude Fable 5.2, chat), fifth part.

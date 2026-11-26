@@ -47,3 +47,8 @@ unedited report for section 11 (the Pfaffian / K3 control).
 `exact_member/`: a named member over QQ with its certificate (section 12 of the lead note); it has its own README.
 `blind_check4/`: the fourth blind checker's scripts, logs and unedited report for that certificate (one 2.6 MB data
 file of its run was left out).
+`fermat_point/`: the Coble family at the Fermat cubic tenfold (section 13 of the lead note): a correction (which class
+the family carries there), a proof on a symmetric 3-parameter family, and explicit arcs with no symmetry in the
+repository's Fermat engine; it has its own README and a three-part pre-registration.
+`blind_check5/`: the fifth blind checker's scripts, logs and unedited report for section 13.
+The node mechanism of sections 10-12 is packaged as a tool with regression tests in `tooling/node_section/`.

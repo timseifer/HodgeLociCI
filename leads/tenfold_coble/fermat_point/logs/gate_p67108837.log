@@ -1,0 +1,13 @@
+GATE MOD 67108837 seed 1, coordinate change       , class P1 - P2           : first failing order None (orders 1..5; terms of E_n: [5, 24, 85, 264, 723])
+GATE MOD 67108837 seed 1, coordinate change       , class three-plane class : first failing order None (orders 1..5; terms of E_n: [5, 24, 85, 264, 723])
+GATE MOD 67108837 seed 1, signs flipped (control), class P1 - P2           : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 85, 264, 723])
+GATE MOD 67108837 seed 1, signs flipped (control), class three-plane class : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 85, 264, 723])
+GATE MOD 67108837 seed 2, coordinate change       , class P1 - P2           : first failing order None (orders 1..5; terms of E_n: [5, 24, 85, 266, 741])
+GATE MOD 67108837 seed 2, coordinate change       , class three-plane class : first failing order None (orders 1..5; terms of E_n: [5, 24, 85, 266, 741])
+GATE MOD 67108837 seed 2, signs flipped (control), class P1 - P2           : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 85, 266, 741])
+GATE MOD 67108837 seed 2, signs flipped (control), class three-plane class : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 85, 266, 741])
+GATE MOD 67108837 seed 3, coordinate change       , class P1 - P2           : first failing order None (orders 1..5; terms of E_n: [5, 24, 84, 261, 717])
+GATE MOD 67108837 seed 3, coordinate change       , class three-plane class : first failing order None (orders 1..5; terms of E_n: [5, 24, 84, 261, 717])
+GATE MOD 67108837 seed 3, signs flipped (control), class P1 - P2           : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 84, 261, 717])
+GATE MOD 67108837 seed 3, signs flipped (control), class three-plane class : first failing order 3 (orders 1..5; terms of E_n: [5, 24, 84, 261, 717])
+EXIT 0

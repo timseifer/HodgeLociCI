@@ -1,0 +1,17 @@
+weight-0 sextics: 339
+weight-0 vector fields of degree 4: 495
+distinct symmetrised vector fields: 75
+dim V_std = 37
+   (P-Q)*m_0 in V_std: True
+   (P-Q)*m_1 in V_std: True
+   (P-Q)*m_2 in V_std: True
+   (P+Q)*m_0 in V_std: False
+   (P+Q)*m_1 in V_std: False
+   (P+Q)*m_2 in V_std: False
+a* = (20, -41, 67): rank of the symmetrised block = 36; det B(a*) != 0: True; rows left to test: 1
+grid {0..36}^3 = 50653 points, 151959 exact integer determinants of size 37, 49 s
+   (P-Q)*m_0: ALL bordered determinants vanish on the grid  ==> in Jac(G_x) over Q(a0,a1,a2) (EXACT, generic x)
+   (P-Q)*m_1: ALL bordered determinants vanish on the grid  ==> in Jac(G_x) over Q(a0,a1,a2) (EXACT, generic x)
+   (P-Q)*m_2: ALL bordered determinants vanish on the grid  ==> in Jac(G_x) over Q(a0,a1,a2) (EXACT, generic x)
+   sanity at a = (42/13, 11/5, -13): f = L[:,C] B^-1 f[Rw] on all 339 rows: [True, True, True]
+   sanity at a = (-48/13, 2, 47/2): f = L[:,C] B^-1 f[Rw] on all 339 rows: [True, True, True]

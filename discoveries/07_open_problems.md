@@ -972,6 +972,10 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
+UPDATE 26 Nov 2026: at the Fermat tenfold the explicit arcs of the Coble family carry the three-plane class, not
+delta (C-TENFOLD-FERMAT-POINT-CLASS). For that class the family passes an explicit-arc test to orders 10-12
+(D-TENFOLD-COBLE-FERMAT-ARCS). For delta nothing new: an explicit arc of the family with the marking delta is the
+open step.
 UPDATE 25 Nov 2026 (evening): the class argument was replaced (D-TENFOLD-COBLE-CYCLE-CLASS: the 4-plane cycle has
 self-intersection -144, so it is 4 h^5 +- 2 ([V] - 2 h^5); two paper arguments with MOD p inputs) and the explicit
 arc passes orders 2 and 3 exactly (D-TENFOLD-COBLE-ARC-ORDERS, MOD p). If those arguments hold, W exists, is the

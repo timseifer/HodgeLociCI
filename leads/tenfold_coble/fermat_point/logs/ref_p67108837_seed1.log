@@ -1,0 +1,3 @@
+REF MOD 67108837 seed 1 class three-plane class : engine and dictionary implementation agree on all 221 period equations, orders 1..5: True (nonzero entries per order: [8, 13, 28, 117, 177])
+REF MOD 67108837 seed 1 class P1 - P2           : engine and dictionary implementation agree on all 221 period equations, orders 1..5: True (nonzero entries per order: [40, 60, 113, 211, 221])
+EXIT 0

@@ -1,0 +1,22 @@
+MOD 67108819 seed 1: xi = [9017032, 38198626, 56870316]; first-order test of w * phi for the three roots on the pairs (r_k, y_k): {1: False, 3: True, 5: False}
+   L(T_4) has 8 nonzero entries (H1 can fail at order 4 only if this is > 0)
+   terms of T_1: 21
+   H three-plane class n =  1: terms of E_n        21, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  2: terms of E_n       228, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  3: terms of E_n      1706, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  4: terms of E_n      9889, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  5: terms of E_n     47292, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  6: terms of E_n    193990, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  7: terms of E_n    700781, nonzero period equations   0 of 221   [0.1s]
+   H three-plane class n =  8: terms of E_n   2272735, nonzero period equations   0 of 221   [0.4s]
+   H three-plane class n =  9: terms of E_n   6716327, nonzero period equations   0 of 221   [1.2s]
+   H three-plane class n = 10: terms of E_n  18303551, nonzero period equations   0 of 221   [3.8s]
+   H three-plane class n = 11: terms of E_n  46459614, nonzero period equations   0 of 221   [11.3s]
+   H three-plane class n = 12: terms of E_n 110762513, nonzero period equations   0 of 221   [25.0s]
+RESULT H MOD 67108819 seed 1: three-plane class along the Coble arc, orders 1..12: first failing order None
+CONTROL H1 theta = 1                : first failing order 4 (orders 1..7)
+CONTROL H2 sign of h_0(xi) flipped  : first failing order 4 (orders 1..7)
+CONTROL H4 wrong P^8                : first failing order 1 (orders 1..7)
+CONTROL H3 P1 - P2                  : first failing order 1 (orders 1..7)
+CONTROL H3 P1 - P3                  : first failing order 1 (orders 1..7)
+CONTROL H3 one eigen-sign flipped   : first failing order 2 (orders 1..7)

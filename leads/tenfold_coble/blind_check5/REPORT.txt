@@ -1,0 +1,187 @@
+BLIND CHECK 5 -- REPORT  (26 Nov 2026, AI-generated, unreviewed)
+All code in /home/claude/blind_check5 is my own (Python/numpy/python-flint/sympy, Macaulay2). I read only README.md,
+docs/, discoveries/NOTATION.md and M2/HodgeLociCI/FermatDoc.m2 of the cloned repository (for the closed period
+formula). I did not read tooling/fermat_series, leads/, the author's working copies, and I did not run the M2 package.
+Disclosure: a directory listing of the clone showed me file NAMES under leads/ (one contains the word "coble"),
+and environment notices showed path names of the author's working copy; I opened none of them.
+Nothing below is a statement about the Hodge conjecture. Labels: EXACT / MOD p / NUMERIC as asked.
+Primes used: p1 = 2147483629, p2 = 2147483587 (both = 1 mod 3); 32003 and 1000003 in a few M2 runs.
+
+0. PERIOD CODE AND ITS VALIDATION
+ Formula used: Psi_P(x^g) = prod_j ((1+r_j)/3)_(m_j) * [coeff of x^((1..1)-r) in P] (g = 3m+r, zero if some r_j = 2);
+ period of Q Omega/(F0+G)^k = const * Psi_P(Q exp(-G)); P_L = prod 3c(x_a + c x_b).
+ Two independent engines of mine: (A) numpy, MOD p, sparse polynomials with packed exponents (pcore.py);
+ (B) python-flint + Fractions, EXACT over QQ (exact_eval.py).
+ Period polynomial of kappa: -(P_z1+P_z2+P_z3) = -2187 * prod_k(r_k-y_k) * (P-Q)  (EXACT; rational).
+ Validation arc F_0(g_tau x), g_tau = 1 + tau*A + tau^2*B, A (10 entries), B (4 entries) random sparse integer
+ matrices; G has 52-61 terms, almost all non-squarefree, tau-degrees 1..6.
+   engine A, MOD p1 and p2, 2 seeds, N = 8: all 221 equations x 8 orders vanish for P_z1, P_z2, P_z3 separately,
+     for kappa, for delta(z1,z2), delta(z2,z3).  Sign flipped (F_0 - (F_0(gx)-F_0)): first nonzero order 2 (seed 1)
+     and 3 (seed 2), for every class.
+   engine B, EXACT, 2 seeds, N = 6, kappa: vanish; sign flipped: first nonzero order 2 resp. 3.
+   Mutation tests (engine A, N = 5): Pochhammer bases swapped -> fails at order 2; (a)_m replaced by a^m -> fails at
+     order 4; geometric series instead of exp -> fails at order 2.  The two paths of engine A (full E_n / filtered
+     last order) agree on a nonzero vector.  Engines A and B agree on all 221 nonzero values (factor -2187) in 7 cases.
+ CAVEAT (important): this validation arc passes for ANY squarefree sextic used as "period polynomial" (I ran a
+   random one: it passes too), because every (5,5)-class of the Fermat cubic stays (5,5) under a coordinate change.
+   So it validates the reduction/exponential/sign machinery, NOT the period polynomial of a plane. That polynomial I
+   pinned separately, EXACT: (x_a - c x_b)*P_L = 0 in the Jacobian ring of F_0 for the 6 equations of each of the 3
+   planes (this fixes P_L up to a scalar), and the three planes of a pencil have P_L summing to 0 (fixes the relative
+   scalars). That the functional so defined IS the period is taken from the literature (not re-derived).
+
+T1. FIRST ORDER.  EXACT over Q(zeta_6)[x_0,x_1,x_2] (x symbolic), all 220 cubic forms.
+ kappa: YES. All first-order equations vanish identically in x (every x, not only general x).
+ delta: NO for general x. For each of the three pairs of roots exactly 24 of the 220 equations are nonzero, and each
+   is a nonzero constant times (x_1 + x_2) (e.g. 729*(x_1+x_2)*(z-2)); the linear map x -> equations has rank 1.
+   So M_x is tangent to the Hodge locus of delta exactly when x_1 + x_2 = 0.
+
+T2. x = (3,15,18).  EXACT over QQ (Macaulay2).
+ (a) YES: restriction to {r_k = -7 y_k} equals -342*h_0(y) + h_0(p) + h_0(q) + M_x  (h_0(3,15,18)/27 = 342).
+ (b) Singular locus = scheme of the 9 partials: dimension 2, degree 18, Hilbert polynomial 9 t^2.
+     Hilbert function of the Jacobian quotient 1,9,36,84,144,225,324,...; the Jacobian ideal is not saturated (the
+     saturation has 9 quadric + 3 cubic generators, Hilbert function 1,9,36,81,144,225).
+     Extra, MOD 32003 only: the locus {rank Hessian <= 5} inside it is empty, so the scheme is a smooth surface;
+     h^0,h^1,h^2 of its structure sheaf = 1,2,1 (what an abelian surface of degree 18 would give). Irreducibility over
+     the algebraic closure not tested.
+     Controls (EXACT over QQ): a = -341, or x = (3,15,19), or a = 1 (G_x itself): the cubic is smooth.
+
+T3. THE GROUP Gamma'.  EXACT (monomial matrices with entries in mu_3; two implementations, one with explicit 12x12
+ matrices mod p1, which is faithful here).
+ (a) YES for sh, c, b, iota: F_x o g = F_x identically in x (sympy, w^2+w+1 = 0).
+ (b) YES: sh and c fix each P_z; b permutes the three planes cyclically; iota fixes P_(-1) and swaps the other two.
+ (c) |Gamma'| = 162 as a group of linear maps. It contains the 3 scalar matrices mu_3 (centre of order 3), so its
+     image in PGL_12 has order 54. 27 diagonal elements. det(sh) = det(c) = det(b) = 1, det(iota) = -1.
+ (d) dimension of invariants of Q -> det(g) * Q(g x) on squarefree Q:
+       degree 0: 0;  degree 3: 1;  degree 6: 10;  degree 9: 1;  degree 12: 0.
+     Degree 3 is spanned by P - Q = p0p1p2 - q0q1q2.  (Orbit sums and the character formula agree; second method:
+     common fixed space by linear algebra mod p1: same numbers.)
+
+T4. IDENTITY IN THE JACOBIAN RING OF G_x (9 variables).
+ (P-Q)*m_d in Jac(G_x), d = 0,1,2: YES.  What I proved:
+   (i) EXACT, GENERIC x OVER THE FUNCTION FIELD Q(x_0,x_1,x_2), deterministic (t4_proof.py): explicit vector fields
+       (75 symmetrised ones; the symmetrisation uses the variable permutations sh, iota and t: y_k->p_(-k), p_i->q_i,
+       q_j->y_(-j), all of which fix G_x) give columns in the Jacobian ideal, affine-linear in x, inside a
+       37-dimensional piece of the degree-6 forms. A 36x36 block B has det B(x*) != 0 at x* = (20,-41,67); the
+       bordered 37x37 determinant (degree <= 36 in x) vanishes at all 37^3 = 50653 points of the grid {0..36}^3, for
+       each d (151959 exact integer determinants), hence identically; so (P-Q)*m_d = sum of Q(x)-multiples of the 36
+       columns. Negative control with the same machinery: (P-Q)*(Y+P+Q) is detected as NOT such a combination.
+       Since Jac(G_x)_6 has constant dimension on the smooth locus U, membership extends to every x in U.
+  (ii) EXACT at 7 rational points over QQ (M2), incl. (3,15,18), (1,2,3) [where G_x is singular], (2,0,0), (0,1,-1).
+ (iii) EXACT over the one-parameter function field Q(s), x = (s,5,11) (M2, degree-limited Groebner basis).
+  (iv) MOD p at 12 random x (p = 32003, 1000003, p1).
+   By hand I also found (and M2 confirms at all 19 points):
+       (P-Q)*m_d = -(x_d/3) * sum_{i-j=d} y_(i+j)^2 * (p_(i+1)p_(i+2)q_j^2 - p_i^2 q_(j+1)q_(j+2))   mod Jac(G_x).
+ (P+Q)*m_d in Jac(G_x): NO for generic x. EXACT: not in the ideal at 6 of the 7 rational points for all d, and over
+   Q(s) on the line (s,5,11); MOD p at 12 random x. (Non-membership at one smooth point implies it generically.)
+   Exception seen: at x = (2,0,0), (P+Q)*m_0 IS in the ideal (m_1, m_2 are not).
+ P - Q itself: NO, for EVERY x (proof: the 9 variables have distinct weights under the diagonal symmetries of G_x, so
+   a weight-0 element of Jac(G_x)_3 is sum c_v x_v dG/dx_v, whose x_v^3-coefficients 3c_v must vanish). M2 agrees
+   at all 19 points. Same for the Jacobian ideal of F_x.  Also (P-Y)*m_d is in the ideal (M2, same 19 points).
+
+T5. REVIEW OF THE ARGUMENT.  My verdict: sound, given T3 and T4 as established above; I found no step that fails.
+ Gaps / points that need a sentence each (all fillable, as far as I can see):
+  1. T4 is needed for the Jacobian ideal of F_x = (r_k^2) + Jac(G_x) (fine) and for ALL x in U, not only generic x.
+     Either extend by closedness (F^6 is a holomorphic subbundle; a section lying in it on a dense set lies in it
+     everywhere) or run the ODE on the dense open set and extend f = 0 by continuity. A check of T4 at random points
+     or mod p would NOT suffice for this step; the function-field statement (i) above does.
+  2. "where P-Q is not in the Jacobian ideal": this is everywhere (T4, last item), so omega_x != 0 on all of U and
+     the hedge can be removed. Note the kernel of A -> Res(A Omega/F^5) on cubics is smaller than J_3 (F itself is in
+     J_3 and gives the generator of H^{7,3}); harmless here.
+  3. F^6 is a filtered Gamma'-module with graded pieces S_0*Omega and (S_3/J_3)*Omega; equality "as a representation"
+     uses complete reducibility of a finite group. The action must be the det-twisted one (as in T3(d)): the
+     generator Omega/F^4 of H^{7,3} is anti-invariant under iota, so H^{7,3} contributes 0 to the invariants.
+  4. Constancy of the dimension of invariants on U: characters of a finite group on a holomorphic bundle are locally
+     constant; U is connected (complement of a hypersurface; see T8 for what the hypersurface seems to be).
+  5. Used silently: Gamma' fixes every F_x, so it acts on the family over U trivially on the base and commutes with
+     Gauss-Manin; this gives (a) invariance of the transported class along every path, (b) invariance of the
+     derivative of omega_x (also directly: m_d is invariant). Also the cup product is Gamma'-invariant, which is what
+     makes an invariant class orthogonal to the non-trivial isotypic parts of F^6.
+  6. "df = a f": a is a single-valued holomorphic 1-form on U because omega_x is a nowhere-zero section of the
+     invariant line bundle; f is path-dependent but satisfies the linear ODE along every path, so f(0) = 0 gives f = 0.
+  7. "orthogonal to F^6 => (5,5)" uses that the class is real and that H^{p,q} pairs only with H^{10-p,10-q}; also
+     H^{10,0} = H^{9,1} = H^{8,2} = 0. "Not a multiple of h^5" needs that kappa on X_0 is not (true: its period
+     polynomial is nonzero) and that transport is injective and fixes h^5.
+  8. Scope: the argument uses nothing about kappa except Gamma'-invariance, so it gives the same conclusion for every
+     Gamma'-invariant rational Hodge class of X_0 (the invariant part of the primitive H^{5,5} is 10-dimensional by
+     T3(d)). It proves "Hodge", not "algebraic", and says nothing outside U. It depends on Griffiths' residue theory
+     (assumed, not checked by me).
+
+T6. SYMMETRIC FAMILY F_0 + tau*M_x, class kappa.
+ EXACT, x SYMBOLIC (engine B, coefficients in QQ[x_0,x_1,x_2]): the tau^n coefficient of all 221 period equations is
+   the zero polynomial in x for n = 1..18 (E_18 has 1,562,275 terms).
+ MOD p1 and p2, random x in F_p^3 (2 choices each), engine A: vanish for n = 1..12.
+ Caveats: for n = 1 mod 3 there is not a single contributing term (vacuous at those orders); for the other orders
+   the zero is a genuine cancellation (e.g. 141,102 nonzero contributions at n = 18). Controls, EXACT at
+   x = (-1/3, 7, 5/2): F_0 + tau*(M_x + 2P), (M_x + 2Y), (M_x + 2(P-Q)) fail at order 1; (M_x + 2(P+Q)) fails at 4.
+
+T7. THE ARC WITH NO SYMMETRY.
+ (a) YES. EXACT, symbolic (sympy), with theta, lam, x and the phi_k free symbols and a := 1 - theta^3:
+     F_tau restricted to {r_k = -theta y_k} = a*h_lam(y) + h_lam(p) + h_lam(q) + M_x. (True for any a; the specific
+     formula for a is not used in (a).)
+ (b) kappa, true arc: ALL period equations vanish for n = 1..N in every run:
+       N = 10: seeds 11, 12 (phi with 2+2+2 monomials, data random residues), MOD p1 and MOD p2
+       N =  9: seed 13 (3+2+3 monomials), seed 14 (3+3+3 monomials, small integers), MOD p1 and MOD p2
+       N =  8: seeds 21,22,23,24 (2+3+2 monomials), MOD p1 and MOD p2
+       N =  7: seed 15 (2+2+2, small integers), EXACT over QQ (engine B)
+       N =  6: seed 14, EXACT over QQ (engine B)
+     The phi_k were drawn from all 78 quadratic monomials (they contain r, y, p, q variables and squares; listed in
+     the logs). For one seed the same integers are used for both primes. The zeros are cancellations (e.g. 64,647
+     nonzero contributions at order 7 in the exact run). Largest runs: N = 10 with E_9 of 10.7 million terms
+     (2.5 GB, 41 s); N = 9 with E_8 of 10.8 million terms (2.8 GB, 48 s).
+ (c) first order with a nonzero period equation (identical in all 9 data sets, both primes, and in the exact runs
+     where they reach):
+       (i)   without 3 a lam Y:           4   (2 forms nonzero)
+       (ii)  h_0(x) instead of h_lam(x):  5   (6-12 forms)
+       (iii) without the factor 1+lam^3:  7   (6-12 forms)   [needs N >= 7 to be seen at all: this variant differs
+                                                              from the true arc only from tau^7 on]
+       (iv)  theta = 1:                   4   (6-10 forms)
+       (v)   delta instead of kappa:      1   (24 forms; all three pairs of roots)
+     Each variant was run only up to its first nonzero order; lower orders are zero there.
+
+T8. OTHER OBSERVATIONS
+  1. kappa is singled out by the T7 arc but NOT by the symmetric family. MOD p (seed 11 at p1 and p2, seed 12 at p2):
+     in the 924-dimensional space of period polynomials (all primitive (5,5)-classes of X_0) those whose period
+     equations vanish to order n along the T7 arc form a space of dimension 704, 484, 264, 44, 1 for n = 1..5, and
+     the 1-dimensional space at n = 5 is the line of kappa. Along the symmetric arc F_0 + tau*M_xi the corresponding
+     dimensions are 707, 625, 571, 489, 462, ..., 325 at n = 14 (still decreasing). So T6 is a weak test of kappa
+     (consistent with T5 item 8, and F_x has many more symmetries than Gamma'); T7 is the discriminating one.
+  2. Special plane x_1 + x_2 = 0: there the first-order equations of delta vanish (T1), and MOD p1, p2 (2 random
+     choices each, also with x_0 = 0 or x = (a,0,0)) ALL period equations of all three delta's vanish to order 12
+     along F_0 + tau*M_x. On that plane each single plane class seems to persist, so tests of kappa with such x are
+     uninformative. (For x_0 = 0, x_1 + x_2 = 0 the three planes lie in X_x: M_x restricted to P_z is
+     z*(x_0*sum y_(2i) q_i^2 + (x_1+x_2)*sum_{i<j} y_(i+j) q_i q_j).)
+  3. Choices that make parts of T7 vacuous: lam_1 = 0 makes (i),(ii),(iii) equal to the true arc; xi_0 xi_1 xi_2 = 0
+     kills (ii); h_0(xi) = 0 removes the leading term of a; phi_k = 0 kills (iv); xi_1 + xi_2 = 0 weakens (v);
+     N <= 6 cannot see (iii). My random data avoid all of these (checked by the variants failing as listed).
+  4. Small integer x are often NOT in U. EXACT (M2) at the 729 integer points of [-4,4]^3: G_x (hence X_x) is
+     singular at 272 of them, exactly those on one of the 36 hyperplanes  w^e0 x_0 + w^e1 x_1 + w^e2 x_2 = -3
+     (e in (Z/3)^3) or x_i = -3 w^k (w a primitive cube root of 1). E.g. x = (1,2,3) is singular; x = (3,15,18) is
+     smooth. I did not prove that these 36 hyperplanes are the whole discriminant.
+  5. The formula for a in T7 is exactly what makes the P^8-section special: EXACT over QQ at 4 rational (lam, x), the
+     cubic a*h_lam(y)+h_lam(p)+h_lam(q)+M_x is singular along a surface of degree 18 with Hilbert polynomial 9t^2
+     for a = -h_lam(x)/(27(1+lam^3)), and smooth for the a of variants (ii) and (iii). The condition reads
+     27a(1+lam^3) + h_lam(x) = 0 (after rescaling y it has the shape of the Burkhardt quartic, my remark from memory,
+     unchecked). Every member of the T7 arc therefore contains this special sevenfold; a 5-dimensional subvariety
+     of it (for instance the secant variety of the singular surface) would be an algebraic 5-cycle on X_tau. I did
+     NOT compute any such class or compare it with kappa.
+  6. G_x has one more symmetry than those in Gamma': the block rotation t (y_k -> p_(-k), p_i -> q_i, q_j -> y_(-j))
+     fixes G_x and F_x for all x but does not preserve the set of the three planes. I used it in the proof of T4.
+  7. The Fermat-point computations are formal power series statements to finite order in tau, MOD p in the long
+     runs (a zero mod p is evidence only; rank statements in item 1 are lower bounds for the rank over QQ).
+
+WHAT I DID NOT CHECK
+  - The closed period formula for linear cycles and the Griffiths-Dwork reduction (taken from the repository
+    documentation / literature); Griffiths' description of the Hodge locus by these 221 forms.
+  - Anything about T7 beyond order 10, exact arithmetic beyond order 7, convergence, or a proof for the arc.
+  - Whether the transported kappa is algebraic, and its relation to cycles on the special P^8-section.
+  - T2: irreducibility of the singular surface; smoothness and cohomology only MOD 32003.
+  - T3(d): no explicit basis of the 10-dimensional degree-6 invariants was examined.
+  - T4: no description of the exceptional x for (P+Q)*m_d; the 3-parameter Groebner basis over the function field in
+    M2 did not finish in 10 minutes (replaced by the determinant-grid proof).
+  - T5: the general theorems it quotes; the exact shape of U.
+  - I did not use or read the author's code, numbers, or the HodgeLociCI M2 package code.
+
+FILES (all in /home/claude/blind_check5)
+  pcore.py, arcs.py (engine A), exact_eval.py (engine B), validate.py, validate_exact.py, mutation_test.py,
+  filter_test.py, t1.py, t2.m2, t2b.m2, t3.py, t3_check.py, t4_points.m2, t4_ff2.m2, t4_proof.py, t6.py, t7.py,
+  t7_exact.py, t8_delta.py, t8_kernel.py, t8_coble.m2, disc_probe.m2, disc_guess.py, run_t7_batch.sh; logs_*.txt.

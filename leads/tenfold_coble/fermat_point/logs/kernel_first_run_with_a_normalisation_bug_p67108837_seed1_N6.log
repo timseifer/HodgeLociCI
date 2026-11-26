@@ -1,0 +1,7 @@
+KERNEL MOD 67108837 seed 1, n = 1: forms with a non-zero row 220, rank so far 220, classes that survive: dimension 704; the three-plane class among them: True
+KERNEL MOD 67108837 seed 1, n = 2: forms with a non-zero row 221, rank so far 440, classes that survive: dimension 484; the three-plane class among them: True
+KERNEL MOD 67108837 seed 1, n = 3: forms with a non-zero row 221, rank so far 660, classes that survive: dimension 264; the three-plane class among them: True
+KERNEL MOD 67108837 seed 1, n = 4: forms with a non-zero row 221, rank so far 880, classes that survive: dimension  44; the three-plane class among them: False
+KERNEL MOD 67108837 seed 1, n = 5: forms with a non-zero row 221, rank so far 924, classes that survive: dimension   0; the three-plane class among them: False
+KERNEL MOD 67108837 seed 1, n = 6: forms with a non-zero row 221, rank so far 924, classes that survive: dimension   0; the three-plane class among them: False
+EXIT 0

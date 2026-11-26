@@ -1,0 +1,16 @@
+n =  0: no terms
+n =  1: no terms
+n =  2: cells   18; with Q fixed by a reflection:  18; other:    0, each with positive part = negative part > 0: True
+n =  3: cells    1; with Q fixed by a reflection:   1; other:    0, each with positive part = negative part > 0: True
+n =  4: no terms
+n =  5: cells   54; with Q fixed by a reflection:  54; other:    0, each with positive part = negative part > 0: True
+n =  6: cells   13; with Q fixed by a reflection:  11; other:    2, each with positive part = negative part > 0: True
+        example cell: Q = x_[6, 8, 10], x-exponents (2,2,2), 18 terms, positive part = 12960, negative part = 12960
+n =  7: no terms
+n =  8: cells  108; with Q fixed by a reflection: 108; other:    0, each with positive part = negative part > 0: True
+n =  9: cells   36; with Q fixed by a reflection:  30; other:    6, each with positive part = negative part > 0: True
+        example cell: Q = x_[6, 8, 10], x-exponents (5,2,2), 60 terms, positive part = 45722880, negative part = 45722880
+n = 10: no terms
+n = 11: cells  180; with Q fixed by a reflection: 180; other:    0, each with positive part = negative part > 0: True
+n = 12: cells   70; with Q fixed by a reflection:  58; other:   12, each with positive part = negative part > 0: True
+        example cell: Q = x_[6, 8, 10], x-exponents (5,5,2), 204 terms, positive part = 1013088384000, negative part = 1013088384000

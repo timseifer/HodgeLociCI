@@ -8,6 +8,10 @@ question is algebraic on the whole family.
 
 ## 0. Verdict in six lines (items 4-6 rewritten the evening of 25 Nov 2026; see section 10)
 
+> 26 Nov 2026: read section 13 with item 6. At the Fermat tenfold the explicit arcs of this family carry a
+> different class from Movasati's (the three-plane class); the family passes a finite-order test there for that
+> class. For Movasati's class the identification with the registry's W is unchanged: a paper argument.
+
 1. There is an explicit family of cubic tenfolds of codimension 54 containing F_T in its closure: **X has a
    P^8-section that is a Coble cubic** (the cubic sevenfold singular along a principally polarized abelian surface A
    embedded by |3 Theta|). F_T is the boundary where A degenerates to a scroll of twisted cubics over an elliptic curve.
@@ -100,6 +104,8 @@ Reading: against the class, h(p) + h(q) + M_x(z,p,q) behaves like h(p) + h(q) + 
 - The determinant of a 3x3 matrix (two families of 5-planes meeting pairwise in a P^2, Movasati's configuration) is
   the member lam -> infinity, x a coordinate point, abc = -1 (EXACT, by hand): the Fermat-point lead and the F_T lead
   are two boundary strata of one family (ARG).
+  [WITHDRAWN 26 Nov 2026, section 13.1: on a tenfold with a determinantal section the two 5-planes are homologous,
+  so this is not evidence about Movasati's class.]
 
 Tests (`n1_candidate_family.m2`, pre-registered; MOD 32003 and 31991, 3 members and 3 points of F_T;
 `n1_candidate_family_exact.m2`, EXACT over QQ, at the member x = (4,3,3), lam = 3, a = -221/378 and at the point of
@@ -152,6 +158,7 @@ NOT blind-checked: sections 1, 3 (by hand), the 4-plane runs and all of section 
   MOD p, few instances), and the Burkhardt identity; no characteristic-0 proof for the general member.
 - Nothing beyond first order was computed at a general member (only the two period components behind K1, K3).
 - That the family is the registry's W at the Fermat point (Movasati's class) is ARG (same closure, determinant limit).
+  [26 Nov 2026: the "determinant limit" part is withdrawn; what remains is the irreducibility argument of 13.5.]
 - LIT items were recalled or machine-read as stated; none was checked against a full source by a person.
 
 ## 8. Plan (none of it needs large compute)
@@ -497,3 +504,222 @@ engine did not finish for it either. It accepted both specialization arguments. 
    "On the connectivity of complex affine hypersurfaces II" (arXiv:math/9906064), which by its account gives that
    X - X' is 9-connected directly. LIT: I confirmed the paper and its abstract by search; I did not read the theorem.
 4. The exact statement number of Dimca's formula in the 1990 paper is still to be supplied (its copy was garbled).
+
+## 13. The Fermat tenfold (26 Nov 2026): a correction, a small theorem, and explicit arcs with no free terms
+
+Pre-registration, written before the runs and kept as written (three parts, each before its runs):
+`tenfold_coble/fermat_point/PREREG_fermat.md`. Scripts and logs: `tenfold_coble/fermat_point/`. Labels as in the
+rest of this note. Nothing here is a statement about the Hodge conjecture.
+
+Coordinates of the Fermat cubic tenfold X_0 = {F_0 = 0}: r_k = x_(2k), y_k = x_(2k+1), p_i = x_(6+2i),
+q_i = x_(7+2i) (k, i mod 3). The three 5-planes P_zeta = {r_k + y_k = 0, p_i = zeta q_i} (zeta^3 = -1) pairwise meet
+in the same P^2. Movasati's class is delta = [P_zeta] - [P_zeta']. The **three-plane class** is
+kappa = h^5 - [P_z1] - [P_z2] - [P_z3]. M_x = sum_{i,j} x_(i-j) y_(i+j) p_i q_j.
+
+### 13.0 What came out
+
+1. CORRECTION. The explicit arc of the Coble family through the Fermat tenfold carries the three-plane class kappa,
+   not Movasati's class delta. Its direction is not tangent to the Hodge locus of delta (EXACT). Everything below
+   is about kappa. For Movasati's class nothing new is shown: that the registry's W for delta is the Coble family
+   stays ARG, and no explicit arc for delta is known (13.5).
+2. (EXACT, by hand; checked EXACT at one rational point) The tenfolds X_x: F_0 + M_x(y,p,q) = 0, x in C^3, lie in
+   the Coble family: each has 27 P^8-sections that are Coble cubics.
+3. (PROVED, AI, unreviewed; two EXACT computations) On every smooth X_x the class kappa stays a Hodge class. The
+   reason is special to this symmetric family and does not use section 10. It is NOT a test of section 10.
+4. (MOD p, two primes, finite order) A test of section 10 that can fail: explicit arcs of the Coble family through
+   X_0 with no symmetry and no free terms, moving all three moduli of the Coble cubic and generic quadrics off the
+   P^8. All 221 period equations of kappa vanish to order 12 (one arc), 11 (three arcs) and 10 (two arcs) at two primes, and to orders 8 and 6 on
+   two denser arcs.
+   Changing any one ingredient of the relation that defines the Coble cubics makes the arc fail, at the order
+   predicted in advance (4, 5 and 7). Finite order: evidence, not proof.
+5. NOT established: anything about delta; that kappa is Hodge on the whole Coble family (finite order only, outside
+   the symmetric family); algebraicity beyond section 10.
+
+### 13.1 The correction (EXACT, by hand and by computation)
+
+The planned check was "the cubic arc F_0 + t M_xi - t^3 (sum xi^3 / 27) h_0(z) of the family, in the order-12 Fermat
+engine, for Movasati's class".
+- Rescaling the vertex coordinates turns that arc into the line F_0 + tau M_xi; the sections of X_x by
+  {r_k = -theta_k y_k}, theta_k^3 = 1 + h_0(x)/27, are the normal form of section 5 with lam = 0 and
+  a = 1 - theta^3 = -h_0(x)/27. `b_membership.m2`: EXACT over QQ at x = (3,15,18), theta = 7 (a = -342), and
+  MOD 32003 at three random x: the section equals the normal form, and its singular locus is a surface of degree 18
+  with Hilbert polynomial 9 n^2, cut out by 9 quadrics.
+- Which class. On the cone h_0(x) = 0 the tenfold contains V = J(Pi, T_x), and for x a flex the scroll T_x is the
+  residual of the three disjoint planes {q = c p} in a Segre threefold section of the Fermat fourfold, so
+  [T] = 3 h^2 - Pa - Pb - Pc and [V] - 2 h^5 = kappa (EXACT, by hand; ARG for the continuation to all x).
+- kappa and delta are different markings of the same cone: on X_0 kappa is supported on 16 torus eigenclasses and
+  delta on 48 (`fp_main.py classes`; automorphisms of X_0 permute eigenclasses), so no automorphism carries one to
+  the other. First order: M_x is tangent to the Hodge locus of kappa (no term at all at order 1) and not to that of
+  P1 - P2, P1 - P3, P2 - P3, P1, P1 + P2 (non-zero modulo p, hence non-zero). (Blind check 5, EXACT with x symbolic: M_x is
+  tangent to the Hodge locus of delta exactly on the plane x_1 + x_2 = 0.)
+- Correction to section 5 (the line on the determinant): on a tenfold with a determinantal P^8-section the two
+  5-planes of Movasati's configuration belong to one connected family, so their difference is zero in homology
+  there. That line is not evidence that the family is the registry's W at Movasati's point, and is withdrawn.
+
+### 13.2 The symmetric family: the first test had no teeth
+
+Step C of the pre-registration: S(Q, n) = Psi_kappa(Q M_x^n), the order-n period equations along F_0 + tau M_x.
+`fp_main.py exact 15`: zero for all n <= 15 and all 221 forms Q, identically in x (EXACT, integers; at n = 15:
+44118 terms in 115 cells). Controls: one coefficient of M_x changed: fails at order 2; one eigen-sign of kappa
+flipped: fails at order 2.
+Control K4 (`fp_diag.py`): the family has three reflection symmetries that change the sign of the class
+functional; every cell is forced to vanish by one of them, except those with Q = p_0 p_1 p_2 or q_0 q_1 q_2
+(n = 6: 2 cells, n = 9: 6, n = 12: 12; there positive part = negative part > 0, e.g. 1013088384000 at n = 12).
+And those vanish for the reason in 13.3. So this test could not have failed for a reason related to section 10.
+Recorded as it happened: it is the reason for 13.5.
+
+### 13.3 A theorem on the symmetric family (PROVED, AI, unreviewed)
+
+**Statement.** For every x such that X_x is smooth, and every path from 0, the flat transport of kappa to X_x is a
+Hodge class, not a multiple of h^5.
+
+Inputs (EXACT):
+- (I1) `t_invariants.py`. Gamma' = the group generated by sh (shift of indices), c, b (diagonal, cube roots of
+  unity), iota ((index -> -index) and p <-> q); it has order 162, preserves F_x for every x and permutes the
+  three planes. Its invariants on the Jacobian ring of F_0 twisted by the determinant (the action on Q Omega) have
+  dimensions 0, 1, 10, 1, 0 in degrees 0, 3, 6, 9, 12: the invariant part of H^10 has Hodge numbers
+  (0, 1, 10, 1, 0), and its (6,4) part is spanned by (P - Q) Omega / F^5, P = p_0 p_1 p_2, Q = q_0 q_1 q_2.
+- (I2) `t_ks_grid.py`. (P - Q) m_d lies in the Jacobian ideal of G_x = h_0(y) + h_0(p) + h_0(q) + M_x for generic x,
+  d = 0, 1, 2 (m_d = dM_x/dx_d). Proof without Groebner bases: 30 explicit elements of the Jacobian ideal, linear in
+  x; at all 5456 integer points x >= 0, |x| <= 30 the integer matrix [30 columns | target] has rank <= 30, and the
+  30 columns have rank 30 at (1,1,1); a minor is a polynomial of degree <= 30 in x, so it vanishes identically.
+  Controls: (P + Q) m_d is not in the ideal; P - Q is not. (A Groebner basis over QQ(x) did not finish in 25
+  minutes; `t_ks.m2` is kept for the record.)
+
+Proof. U = {x : X_x smooth} is connected. By Griffiths, F^6 H^10(X_x) = (S_0 + S_3/J_3) Omega as a representation of
+Gamma'; the dimension of its invariant part is constant on U and equals 1 at x = 0 (I1). Where P - Q is not in the
+Jacobian ideal (an open dense connected set containing 0) the invariant part is the line L_x spanned by
+omega_x = Res((P - Q) Omega / F_x^5). The derivative of omega_x in the direction x_d is
+Res(-5 (P - Q) m_d Omega / F_x^6); by (I2) (which extends from generic x to all of U, since membership in a
+subbundle of constant rank is a closed condition) it lies in F^6, and it is Gamma'-invariant, so it lies in L_x.
+So L is a flat line bundle, and f(x) = <kappa(x), omega_x> satisfies df = a f. f(0) = 0 because kappa is a Hodge
+class on X_0. Hence f = 0, first on the dense set and then on U. Since kappa(x) is Gamma'-invariant and the pairing
+is invariant, kappa(x) is orthogonal to all of F^6. A rational class orthogonal to F^6 lies in F^5 and in its
+conjugate, so it is of type (5,5). qed.
+
+Remarks. (a) The invariant part is a Hodge structure of K3 type, (1, 10, 1) up to a shift, with constant period on
+this family. (b) All classes: `fp_main.py classes55`: the combinations of the 924 eigenclasses of type (5,5) on X_0
+that stay of type (5,5) along F_0 + tau M_x, identically in x, form a space of dimension 220, stable from order 4 to
+order 12 (MOD p, two primes; finite order); it contains the 8-dimensional span of the 27 classes kappa_theta.
+What the other classes are is OPEN and was not looked at. (c) The theorem says nothing about tenfolds outside the
+3-parameter family, and it does not use the Coble cubic.
+(d) From the blind review of this proof (all eight of its points are fillable; the ones that change the text):
+P - Q is not in the Jacobian ideal for ANY x (the nine variables have distinct weights under the diagonal
+symmetries), so omega_x is nowhere zero and the restriction to a dense set is not needed; (I2) must be a
+function-field identity, which it is; the action is the determinant-twisted one and F^6 is filtered, so "as a
+representation" uses complete reducibility; and the argument uses nothing about kappa except invariance, so it
+gives the same conclusion for every Gamma'-invariant rational Hodge class of X_0 (a 10-dimensional space).
+The checker also found a closed form: (P - Q) m_d = -(x_d/3) sum_{i-j=d} y_(i+j)^2 (p_(i+1) p_(i+2) q_j^2 -
+p_i^2 q_(j+1) q_(j+2)) modulo the Jacobian ideal (confirmed by it at 19 points; not used here).
+
+### 13.4 Arcs of the Coble family with no symmetry (MOD p, finite order)
+
+Every cubic F = (a tenfold whose section by the P^8 {r_k = -theta y_k} is a Coble cubic in normal form)
++ sum_k (r_k + theta y_k) phi_k, phi_k any quadrics, is in the Coble family. With lam = lam_1 tau, x = tau xi,
+a = -h_lam(x) / (27 (1 + lam^3)), theta^3 = 1 - a, theta(0) = 1:
+
+    F_tau = F_0 + 3 lam (P + Q) + 3 a lam Y + M_x + sum_k (r_k + theta y_k) tau phi_k,       Y = y_0 y_1 y_2.
+
+Its section by {r_k = -theta y_k} is a h_lam(y) + h_lam(p) + h_lam(q) + M_x (EXACT, by hand; checked numerically in
+the script). Random xi, lam_1 and sparse random quadrics phi_k; the arc has no symmetry and no free term. H is the
+case lam_1 = 0, H' the general case. Engine: `tooling/fermat_series` (previous agent), changed only in its table of
+plane coefficients (`fp_engine.py`).
+
+Gate (must pass before anything is read; it did). The engine was written for arcs in the squarefree slice.
+(i) On arcs F_0(g_tau x), g_tau explicit polynomial coordinate changes (not in the slice), all period equations
+vanish to order 5 for delta and for kappa (3 seeds); with the signs flipped they fail at order 3. (ii) On the arc
+of H the engine agrees with a separate dictionary implementation on all 221 equations, orders 1..5, non-zero values
+included.
+
+| arc | terms of T_1 | seeds | primes | orders with all 221 equations zero |
+|---|---|---|---|---|
+| H (lam = 0) | 21 | 1 | 67108837, 67108819 | 1..12 |
+| H (lam = 0) | 21 | 2, 3 | both | 1..11 |
+| H, denser quadrics | 33 | 4 | both | 1..8 |
+| H' (lam moving) | 23 | 1 | both | 1..11 |
+| H' (lam moving) | 22-23 | 2, 3 | both | 1..10 |
+| H', denser quadrics | 47 | 5 | 67108837 | 1..6 |
+
+(The largest run: 110,762,513 terms at order 12.) Controls, same at every seed and prime:
+
+| change to the arc | predicted | first failing order |
+|---|---|---|
+| theta = 1 (H) | 4 | 4 |
+| sign of h_0(xi) flipped in theta (H) | 4 | 4 |
+| quadrics multiplied into r_k + 2 y_k (wrong P^8) | 1 | 1 |
+| term 3 a lam Y left out (H') | 4 | 4 |
+| h_0(x) in place of h_lam(x) in a (H') | 5 | 5 |
+| factor (1 + lam^3) left out of a (H') | 7 | 7 |
+| class P1 - P2 or P1 - P3 in place of kappa | - | 1 |
+| one eigen-sign of kappa flipped | - | 2 |
+
+So the vanishing depends on each part of the relation 27 (1 + lam^3) a + h_lam(x) = 0 (the Burkhardt quartic of
+section 5), on the right P^8 and on the right class.
+
+Which classes survive (`fp_engine.py kernel`; found by the blind checker, then replicated here). Take all 924
+eigenclasses of type (5,5) of X_0 at once. The combinations whose period equations vanish along the arc H' to
+order n form a space of dimension 704, 484, 264, 44, 1 for n = 1..5 (MOD p; seeds 1 and 2; two primes at seed 1),
+and the 1-dimensional space is the line of kappa. So the arc determines its class: up to a factor, kappa is the
+only class of the Fermat tenfold that survives to order 5. (My first run of this replication dropped a factor
+3^(-m) that is common on the symmetric family but not on these arcs; it gave 0 at order 5 and was corrected; the
+log is kept.)
+
+Caveats. (i) The gate with coordinate changes passes for ANY class (blind checker's remark), so it validates the
+series, the reduction and the signs outside the squarefree slice, not the table of the class. The table is fixed
+by the first-order test (only one of the three roots on the pairs (r_k, y_k) passes for the P^8 {r_k = -y_k}) and,
+independently, by the checker, who pinned the period polynomial of each plane exactly. (ii) On the plane
+x_1 + x_2 = 0 each single plane class persists along the symmetric family (checker, to order 12), so a test with
+such xi would say little; the random xi used here are not on it (the controls with delta fail at order 1).
+
+What this is: finite-order evidence, MOD p, that near X_0 the Coble family lies in the Hodge locus of kappa, on arcs
+that explore the moduli of the Coble cubic and the quadrics phi_k. It is the same kind of evidence as the
+registry's arcs for Movasati's class (order 12, O-TENFOLD-CONE-LEAD), with two differences: these arcs are explicit
+members of a named family, and nothing is solved for (no correction terms).
+What it is not: a proof; a test of the whole family (the arcs end at the cone point lam = 0, x = 0 and the
+sections have a fixed form up to the quadrics phi_k, which were sparse); a statement about delta.
+
+### 13.5 Where this leaves Movasati's class and the lead
+
+- Both delta and kappa mark the cone over the Fermat fourfold as a point of the C_18 cone locus (the lattices
+  <h^2, P1' - P2'> and <h^2, h^2 - Pa - Pb - Pc> have discriminant 18). ARG: the marked family of C_18 fourfolds is
+  irreducible (LIT: Hassett; not re-read), so both are limits of the same family and the closure of the Coble
+  family has a branch at each. For kappa the branch is explicit (this section). For delta it is not: the limit
+  there is degenerate (the tangent directions found by the previous agent, the two Segre cones, are nets of
+  reducible quadrics), and I did not find the arc.
+- So the registry's lead (O-TENFOLD-CONE-LEAD, the component W for delta at lambda = -1) is in the same state as
+  after section 12: explained if section 10 holds and if the branch at delta is the Coble family (ARG). New here:
+  the twin class kappa at the same tenfold, where the same family is explicit and passes a test that can fail.
+- What would close it for delta: an explicit arc of the Coble family ending at the Fermat cone with the marking
+  delta, run through the same engine. OPEN.
+
+### 13.6 Independent check
+
+Blind check 5 (26 Nov 2026; a separate agent given the statements only, not the code or the numbers; its own two
+period engines, numpy MOD p and python-flint EXACT over QQ, and its unedited report:
+leads/tenfold_coble/blind_check5/). Its answers agree with every item:
+first order: kappa yes, identically in x; delta no for general x (EXACT, x symbolic; it adds: tangent for delta
+exactly when x_1 + x_2 = 0). Membership at x = (3,15,18): yes, a = -342, surface of degree 18, 9 n^2 (EXACT).
+The group: order 162, invariants 0, 1, 10, 1, 0, degree 3 spanned by P - Q (EXACT, two methods). The identity
+(P - Q) dM/dx_d in the Jacobian ideal: EXACT over QQ(x) by its own determinant-grid proof (36 x 36 block, 37^3
+points), at 7 rational points and over QQ(s) on a line; (P + Q) dM/dx_d not; P - Q not in the ideal for any x.
+The proof on the symmetric family: judged sound, with eight points that each need a sentence (all taken into
+section 13.3); it notes the argument gives the same for every invariant rational Hodge class (a 10-dimensional
+space). Symmetric family: zero identically in x to order 18 (EXACT). The arc with no symmetry, with its own random
+data: all period equations of kappa vanish to order 10 (2 data sets), 9 (2), 8 (4), each at two primes
+(2147483629, 2147483587), and EXACTLY over QQ to order 7 (1 data set) and 6 (1). Variants, without being told the
+orders: no term 3 a lam Y: fails at 4; h_0 in place of h_lam: 5; no factor 1 + lam^3: 7; theta = 1: 4; delta in
+place of kappa: 1. Found by it and then replicated here: among all 924 eigenclasses the combinations that survive
+along the arc to order n have dimension 704, 484, 264, 44, 1 for n = 1..5, and the last is the line of kappa.
+Its caveats: a coordinate-change arc passes for ANY class, so that gate validates the reduction and the signs, not
+the period polynomial of a plane (it pinned that separately, exactly); on the plane x_1 + x_2 = 0 each single plane
+class persists, so tests there are uninformative; orders n = 1 mod 3 of the symmetric test are empty sums. Not
+checked by it: the closed period formula and Griffiths' description (taken from the literature); orders above 10;
+algebraicity of the transported class. Disclosure by it: it saw file names under leads/ in a directory listing and
+opened none.
+
+### 13.7 Tool
+
+The node count of sections 10-12 (singular points of a hyperplane section, ordinary double points, relations on
+forms of the right degree) is packaged in `tooling/node_section/` with seven regression cases, among them the
+member of section 12 (72 / 71 / 1) and a Pfaffian section as in section 11 (56 / 55 / 1). It returns a labelled
+count, not a statement about Hodge classes (registry M-NODE-SECTION-TOOL).

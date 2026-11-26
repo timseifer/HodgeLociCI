@@ -1,0 +1,5 @@
+symmetrised columns of the right torus weight: 75 (from 4455 products mu * dG/dv)
+d = 0: control, MOD p: (P + Q) m_d in the span of all columns at random x: False
+d = 0: thinned to s = 30 columns, 198 rows   [0s]
+d = 0: EXACT: grid {x >= 0, |x| <= 30}: 5456 points; points where rank [N_S | t] > s: 0; a point where rank N_S = s: (1, 1, 1)   [4s]
+RESULT d = 0: (P - Q) m_d in the Jacobian ideal of G_x for generic x: PROVED (EXACT)

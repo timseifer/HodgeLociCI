@@ -1,0 +1,7 @@
+nparam = 1: GB up to degree 6: 54.8261 s, 127 elements
+(P-Q)*m_0 in J: true   (P+Q)*m_0 in J: false
+(P-Q)*m_1 in J: true   (P+Q)*m_1 in J: false
+(P-Q)*m_2 in J: true   (P+Q)*m_2 in J: false
+P-Q in J: false;  P+Q in J: false
+P*m_0 in J: false
+time total 56.6058

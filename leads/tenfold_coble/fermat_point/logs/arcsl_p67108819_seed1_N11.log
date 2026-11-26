@@ -1,0 +1,18 @@
+MOD 67108819 seed 1: xi = [9017032, 38198626, 56870316], lam_1 = 53839097; series relations hold to order 12: True, True; section identity at 3 values of tau: [True, True, True]
+   terms of T_1: 23; orders with nonzero T_j: [1, 4, 5, 7, 8, 9, 10, 11]
+   H' three-plane class n =  1: terms of E_n        23, nonzero period equations   0 of 221   [0.1s]
+   H' three-plane class n =  2: terms of E_n       273, nonzero period equations   0 of 221   [0.0s]
+   H' three-plane class n =  3: terms of E_n      2228, nonzero period equations   0 of 221   [0.0s]
+   H' three-plane class n =  4: terms of E_n     14031, nonzero period equations   0 of 221   [0.0s]
+   H' three-plane class n =  5: terms of E_n     72453, nonzero period equations   0 of 221   [0.0s]
+   H' three-plane class n =  6: terms of E_n    318214, nonzero period equations   0 of 221   [0.0s]
+   H' three-plane class n =  7: terms of E_n   1218727, nonzero period equations   0 of 221   [0.1s]
+   H' three-plane class n =  8: terms of E_n   4149055, nonzero period equations   0 of 221   [0.4s]
+   H' three-plane class n =  9: terms of E_n  12758099, nonzero period equations   0 of 221   [1.2s]
+   H' three-plane class n = 10: terms of E_n  35920263, nonzero period equations   0 of 221   [3.8s]
+   H' three-plane class n = 11: terms of E_n  93680363, nonzero period equations   0 of 221   [9.4s]
+RESULT H' MOD 67108819 seed 1: three-plane class along the Coble arc with lam, orders 1..11: first failing order None
+CONTROL H'1 no term 3 a lam Y       : first failing order 4 (orders 1..9)
+CONTROL H'2 h_0 in place of h_lam   : first failing order 5 (orders 1..9)
+CONTROL H'3 no factor (1 + lam^3)   : first failing order 7 (orders 1..9)
+CONTROL H'4 P1 - P2                 : first failing order 1 (orders 1..5)

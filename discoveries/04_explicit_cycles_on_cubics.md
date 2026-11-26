@@ -1425,6 +1425,9 @@ From leads/tenfold_coble/exact_member/ (Macaulay2 1.22):
     M2 --script cert_modp.m2 32003         (15 s; also 31991, 30011; a second argument gives a random change of coordinates)
 ```
 
-**Next step.** The Fermat-point check (the explicit cubic arc of the family through Movasati's point in the order-12 engine).
+**Next step.**
+
+DONE 26 Nov 2026, differently: C-TENFOLD-FERMAT-POINT-CLASS (the arc carries the three-plane class, not Movasati's),
+D-TENFOLD-FERMAT-THREE-PLANE-FAMILY, D-TENFOLD-COBLE-FERMAT-ARCS.
 
 **Session references (files not public).** Session of 25 Nov 2026 (Claude Fable 5.2, chat), fourth part.

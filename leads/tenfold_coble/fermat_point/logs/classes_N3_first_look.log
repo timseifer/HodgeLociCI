@@ -1,0 +1,31 @@
+supports (number of eigenclasses with nonzero coefficient):
+   kappa = P1+P2+P3 (mod h^5)           16
+   P1 - P2 (Movasati)                   48
+   P1 - P3                              48
+   P2 - P3                              48
+   P1 alone                             64
+   P1 + P2                              64
+   K2: kappa, one eigen-sign flipped    16
+span of the 27 classes kappa_theta: dimension 8
+MOD 67108837 n =  0: condition rows      0, rank so far   0, solution space dim 924, all 27 kappa_theta inside: True  [0.0s]
+MOD 67108837 n =  1: condition rows    579, rank so far 408, solution space dim 516, all 27 kappa_theta inside: True  [0.1s]
+MOD 67108837 n =  2: condition rows    372, rank so far 517, solution space dim 407, all 27 kappa_theta inside: True  [0.1s]
+MOD 67108837 n =  3: condition rows    271, rank so far 517, solution space dim 407, all 27 kappa_theta inside: True  [0.0s]
+first order at which each named class violates a condition (None = none up to 3):
+   kappa = P1+P2+P3 (mod h^5)           None
+   P1 - P2 (Movasati)                   1
+   P1 - P3                              1
+   P2 - P3                              1
+   P1 alone                             1
+   P1 + P2                              1
+   K2: kappa, one eigen-sign flipped    2
+solution space by r-part s of the pattern (patterns, free columns):
+   s = (0, 0, 0) [84, 2]
+   s = (0, 0, 1) [126, 36]
+   s = (0, 1, 0) [126, 36]
+   s = (0, 1, 1) [126, 72]
+   s = (1, 0, 0) [126, 36]
+   s = (1, 0, 1) [126, 72]
+   s = (1, 1, 0) [126, 72]
+   s = (1, 1, 1) [84, 81]
+RESULT classes N=3 p=67108837: solution space dim 407; kappa first failure None; Movasati class first failure 1

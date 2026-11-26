@@ -1,0 +1,8 @@
+kappa period polynomial monomials: 16  coefficients: {2187, -2187}
+kappa: number of Q with nonzero first-order equation (as polynomials in a0,a1,a2): 0
+delta(z1,z2) : number of Q with nonzero first-order equation: 24
+   rank of the linear map (a0,a1,a2) -> first-order equations: 1  sample: [((0, 2, 8), 729*(a1 + a2)*(z - 2)), ((0, 2, 9), 729*(a1 + a2)*(z + 1)), ((0, 3, 8), -729*(a1 + a2)*(z - 2))]
+delta(z2,z3) : number of Q with nonzero first-order equation: 24
+   rank of the linear map (a0,a1,a2) -> first-order equations: 1  sample: [((0, 2, 8), 729*(a1 + a2)*(z + 1)), ((0, 2, 9), 729*(a1 + a2)*(z - 2)), ((0, 3, 8), -729*(a1 + a2)*(z + 1))]
+delta(z1,z3) : number of Q with nonzero first-order equation: 24
+   rank of the linear map (a0,a1,a2) -> first-order equations: 1  sample: [((0, 2, 8), 729*(a1 + a2)*(2*z - 1)), ((0, 2, 9), 729*(a1 + a2)*(2*z - 1)), ((0, 3, 8), -729*(a1 + a2)*(2*z - 1))]

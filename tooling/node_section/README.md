@@ -44,7 +44,7 @@ r#"singularPoints", r#"allOrdinaryDoublePoints", r#"conditions", r#"defect", r#"
 
 Random linear change of coordinates; Groebner basis of the Jacobian ideal in the graded reverse lexicographic
 order, with Macaulay2's F4 engine when the characteristic is a prime below 32768 (about 5 s for a section of a
-cubic tenfold; the default engine did not finish that case in 40 minutes) and the default engine otherwise (over
+cubic tenfold, where the default engine needed about 3 minutes in an earlier run) and the default engine otherwise (over
 QQ: fine up to about 9 variables). In generic coordinates the initial ideal of the saturation by the last
 variable is the saturation of the initial ideal (Bayer-Stillman), so the Hilbert function of the points is read
 off a monomial ideal. Reducedness: on the affine chart, the multiplication matrix of a random linear form has a

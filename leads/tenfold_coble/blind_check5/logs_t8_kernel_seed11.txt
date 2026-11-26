@@ -1,0 +1,12 @@
+seed 11, p = 2147483629: T7 true arc (phi = ['-1056902798*p0*p1 + -311287108*p0*p0', '396555069*p2*p2 + -421120856*r1*y1', '-794820784*q0*q1 + -829017078*p0*q1'])
+  T7 arc: orders 1..1: nonzero equations 220, rank 220, dim of surviving period polynomials = 704, kappa among them: True  [1s]
+  T7 arc: orders 1..2: nonzero equations 441, rank 440, dim of surviving period polynomials = 484, kappa among them: True  [2s]
+  T7 arc: orders 1..3: nonzero equations 662, rank 660, dim of surviving period polynomials = 264, kappa among them: True  [2s]
+  T7 arc: orders 1..4: nonzero equations 883, rank 880, dim of surviving period polynomials = 44, kappa among them: True  [4s]
+  T7 arc: orders 1..5: nonzero equations 1104, rank 923, dim of surviving period polynomials = 1, kappa among them: True  [12s]
+symmetric arc F_0 + tau*M_xi with the same xi
+  symmetric arc: orders 1..1: nonzero equations 217, rank 217, dim of surviving period polynomials = 707, kappa among them: True  [2s]
+  symmetric arc: orders 1..2: nonzero equations 419, rank 299, dim of surviving period polynomials = 625, kappa among them: True  [1s]
+  symmetric arc: orders 1..3: nonzero equations 555, rank 353, dim of surviving period polynomials = 571, kappa among them: True  [1s]
+  symmetric arc: orders 1..4: nonzero equations 772, rank 435, dim of surviving period polynomials = 489, kappa among them: True  [1s]
+  symmetric arc: orders 1..5: nonzero equations 974, rank 462, dim of surviving period polynomials = 462, kappa among them: True  [2s]

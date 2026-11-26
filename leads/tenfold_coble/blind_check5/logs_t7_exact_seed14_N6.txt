@@ -1,0 +1,16 @@
+EXACT run. seed 14  xi = [-6, 8, -2]  lam1 = -1
+  phi = ['6*r1*q2 + 1*y1*q0 + 6*r0*q1', '-2*y2*y2 + 2*y0*r2 + 3*y1*y1', '-5*y1*y1 + -4*r2*p1 + 9*q0*p2']
+(a) F_tau restricted to r_k = -theta y_k  equals  a*h_lam(y) + h_lam(p) + h_lam(q) + M_x  (a = 1 - theta^3, arbitrary phi_k, lam, x): True
+(b) TRUE ARC, exact, kappa, orders 1..6:
+  order 1: terms(E_n) = 28, forms with nonzero equation: 0; individual nonzero contributions summed: 28 (sum of |contributions| ~ 84)  [0.0s]
+  order 2: terms(E_n) = 396, forms with nonzero equation: 0; individual nonzero contributions summed: 152 (sum of |contributions| ~ 1.11e+03)  [0.0s]
+  order 3: terms(E_n) = 3761, forms with nonzero equation: 0; individual nonzero contributions summed: 571 (sum of |contributions| ~ 7.45e+03)  [0.0s]
+  order 4: terms(E_n) = 26891, forms with nonzero equation: 0; individual nonzero contributions summed: 3012 (sum of |contributions| ~ 6.59e+04)  [0.1s]
+  order 5: terms(E_n) = 153961, forms with nonzero equation: 0; individual nonzero contributions summed: 12189 (sum of |contributions| ~ 6.71e+05)  [0.6s]
+  order 6: terms(E_n) = 734484, forms with nonzero equation: 0; individual nonzero contributions summed: 42561 (sum of |contributions| ~ 5.86e+06)  [3.0s]
+    all period equations of kappa vanish EXACTLY for n = 1..6: True   [4 s]
+(c) variant (i): exact first nonzero order 4 (2 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+(c) variant (ii): exact first nonzero order 5 (6 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+(c) variant (iii): exact: none up to 6
+(c) variant (iv): exact first nonzero order 4 (6 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+[wall 10 s, peak RSS 0.61 GB, exit 0]

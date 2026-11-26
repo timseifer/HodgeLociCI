@@ -1,0 +1,1 @@
+variant (iii), order 7 computed by the filtered path and by the full path agree (kappa, delta): True True  nonzero entries: 10 212

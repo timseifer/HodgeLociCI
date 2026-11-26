@@ -1,0 +1,26 @@
+T6 symbolic x: period equations of kappa along F_0 + tau*M_x, orders 1..18
+  order 1: terms(E_n) = 9, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [0.0s]
+  order 2: terms(E_n) = 45, forms with nonzero equation: 0; individual nonzero contributions summed: 36 (sum of |contributions| ~ 12)  [0.0s]
+  order 3: terms(E_n) = 165, forms with nonzero equation: 0; individual nonzero contributions summed: 6 (sum of |contributions| ~ 2)  [0.0s]
+  order 4: terms(E_n) = 495, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [0.0s]
+  order 5: terms(E_n) = 1287, forms with nonzero equation: 0; individual nonzero contributions summed: 396 (sum of |contributions| ~ 4.44)  [0.0s]
+  order 6: terms(E_n) = 3003, forms with nonzero equation: 0; individual nonzero contributions summed: 234 (sum of |contributions| ~ 1.41)  [0.0s]
+  order 7: terms(E_n) = 6435, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [0.0s]
+  order 8: terms(E_n) = 12870, forms with nonzero equation: 0; individual nonzero contributions summed: 2700 (sum of |contributions| ~ 2.07)  [0.1s]
+  order 9: terms(E_n) = 24310, forms with nonzero equation: 0; individual nonzero contributions summed: 2106 (sum of |contributions| ~ 0.813)  [0.1s]
+  order 10: terms(E_n) = 43758, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [0.1s]
+  order 11: terms(E_n) = 75582, forms with nonzero equation: 0; individual nonzero contributions summed: 13464 (sum of |contributions| ~ 1.37)  [0.5s]
+  order 12: terms(E_n) = 125970, forms with nonzero equation: 0; individual nonzero contributions summed: 11226 (sum of |contributions| ~ 0.539)  [0.6s]
+  order 13: terms(E_n) = 203490, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [0.7s]
+  order 14: terms(E_n) = 319770, forms with nonzero equation: 0; individual nonzero contributions summed: 52740 (sum of |contributions| ~ 1.04)  [1.9s]
+  order 15: terms(E_n) = 490314, forms with nonzero equation: 0; individual nonzero contributions summed: 44118 (sum of |contributions| ~ 0.402)  [2.5s]
+  order 16: terms(E_n) = 735471, forms with nonzero equation: 0; individual nonzero contributions summed: 0 (sum of |contributions| ~ 0)  [2.9s]
+  order 17: terms(E_n) = 1081575, forms with nonzero equation: 0; individual nonzero contributions summed: 171396 (sum of |contributions| ~ 0.83)  [6.7s]
+  order 18: terms(E_n) = 1562275, forms with nonzero equation: 0; individual nonzero contributions summed: 141102 (sum of |contributions| ~ 0.319)  [7.7s]
+ALL period equations of kappa vanish identically in x for n = 1..18: True   [24 s]
+control arcs at the rational point x = [Fraction(-1, 3), Fraction(7, 1), Fraction(5, 2)]
+   F_0 + tau*(M_x + 2*(P+Q))  [= the lam-direction without the Y, theta corrections]: first nonzero order for kappa: 4
+   F_0 + tau*(M_x + 2*P): first nonzero order for kappa: 1
+   F_0 + tau*(M_x + 2*Y): first nonzero order for kappa: 1
+   F_0 + tau*(M_x + 2*(P-Q)): first nonzero order for kappa: 1
+[wall 24 s, peak RSS 1.39 GB, exit 0]

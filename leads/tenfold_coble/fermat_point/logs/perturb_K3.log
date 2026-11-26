@@ -1,0 +1,4 @@
+K3 MOD 67108837, numeric x: unperturbed (must pass)    first failing order: None
+K3 MOD 67108837, numeric x: c_01 changed               first failing order: 2
+K3 MOD 67108837, numeric x: c_00 changed               first failing order: 2
+K3 MOD 67108837, numeric x: c_12 changed               first failing order: 2

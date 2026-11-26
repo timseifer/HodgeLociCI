@@ -1,0 +1,1 @@
+probe: singular at 272 points; guess predicts 272 ; equal sets: True

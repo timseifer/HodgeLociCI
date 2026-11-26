@@ -1,0 +1,17 @@
+EXACT run. seed 15  xi = [-3, -9, 8]  lam1 = -8
+  phi = ['-9*y0*q1 + -8*r1*q1', '-2*y0*q0 + -6*r2*q1', '3*r2*y2 + -1*p0*p1']
+(a) F_tau restricted to r_k = -theta y_k  equals  a*h_lam(y) + h_lam(p) + h_lam(q) + M_x  (a = 1 - theta^3, arbitrary phi_k, lam, x): True
+(b) TRUE ARC, exact, kappa, orders 1..7:
+  order 1: terms(E_n) = 23, forms with nonzero equation: 0; individual nonzero contributions summed: 36 (sum of |contributions| ~ 456)  [0.0s]
+  order 2: terms(E_n) = 273, forms with nonzero equation: 0; individual nonzero contributions summed: 92 (sum of |contributions| ~ 1.11e+03)  [0.0s]
+  order 3: terms(E_n) = 2225, forms with nonzero equation: 0; individual nonzero contributions summed: 271 (sum of |contributions| ~ 2.07e+04)  [0.0s]
+  order 4: terms(E_n) = 13971, forms with nonzero equation: 0; individual nonzero contributions summed: 1904 (sum of |contributions| ~ 4.68e+05)  [0.1s]
+  order 5: terms(E_n) = 71832, forms with nonzero equation: 0; individual nonzero contributions summed: 5712 (sum of |contributions| ~ 2.61e+06)  [0.4s]
+  order 6: terms(E_n) = 313831, forms with nonzero equation: 0; individual nonzero contributions summed: 17680 (sum of |contributions| ~ 4.86e+07)  [1.3s]
+  order 7: terms(E_n) = 1195162, forms with nonzero equation: 0; individual nonzero contributions summed: 64647 (sum of |contributions| ~ 7.49e+08)  [4.6s]
+    all period equations of kappa vanish EXACTLY for n = 1..7: True   [6 s]
+(c) variant (i): exact first nonzero order 4 (2 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+(c) variant (ii): exact first nonzero order 5 (12 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+(c) variant (iii): exact first nonzero order 7 (12 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+(c) variant (iv): exact first nonzero order 4 (10 of 221 forms); numpy engine mod 2147483629: lower orders zero: True; all 221 values agree with -2187 * exact: True
+[wall 17 s, peak RSS 0.89 GB, exit 0]

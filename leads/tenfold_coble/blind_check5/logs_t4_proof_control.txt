@@ -1,0 +1,10 @@
+weight-0 sextics: 339
+weight-0 vector fields of degree 4: 495
+distinct symmetrised vector fields: 75
+dim V_std = 37
+   CONTROL (P-Q)*(Y+P+Q) in V_std: True
+a* = (20, -41, 67): rank of the symmetrised block = 36; det B(a*) != 0: True; rows left to test: 1
+grid {0..36}^3 = 50653 points, 1409 exact integer determinants of size 37, 1 s
+   CONTROL (P-Q)*(Y+P+Q): a bordered determinant is nonzero at a = (1, 1, 2)
+   sanity at a = (42/13, 11/5, -13): f = L[:,C] B^-1 f[Rw] on all 339 rows: [False]
+   sanity at a = (-48/13, 2, 47/2): f = L[:,C] B^-1 f[Rw] on all 339 rows: [False]

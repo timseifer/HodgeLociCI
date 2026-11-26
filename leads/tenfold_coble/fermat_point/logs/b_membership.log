@@ -1,0 +1,8 @@
+EXACT QQ, x = (3,15,18), theta = 7: section equals the normal form with a = -h0(x)/27 = -342: true
+EXACT QQ, x = (3,15,18), theta = 7: singular locus: projective dimension 2, degree 18, Hilbert polynomial 9*i^2, quadrics 9
+MOD 32003, random x no. 1: section equals the normal form with a = -h0(x)/27 = -8590: true
+MOD 32003, random x no. 1: singular locus: projective dimension 2, degree 18, Hilbert polynomial 9*i^2, quadrics 9
+MOD 32003, random x no. 2: section equals the normal form with a = -h0(x)/27 = -1839: true
+MOD 32003, random x no. 2: singular locus: projective dimension 2, degree 18, Hilbert polynomial 9*i^2, quadrics 9
+MOD 32003, random x no. 3: section equals the normal form with a = -h0(x)/27 = -14551: true
+MOD 32003, random x no. 3: singular locus: projective dimension 2, degree 18, Hilbert polynomial 9*i^2, quadrics 9

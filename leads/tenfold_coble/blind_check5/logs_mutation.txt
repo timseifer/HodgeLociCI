@@ -1,0 +1,4 @@
+unmutated: first nonzero orders (kappa, delta): [None, None]
+mutation 1 (Pochhammer bases swapped): first nonzero orders: [2, 2]
+mutation 2 ((a)_m -> a^m): first nonzero orders: [4, 4]
+mutation 3 (geometric series instead of exponential): first nonzero orders: [2, 2]

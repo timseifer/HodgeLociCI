@@ -4,12 +4,21 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 144 entries)
+### Discoveries registry (142 -> 147 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
   items computed directly over QQ, two modulo three primes with a specialization step. Equation and scripts in
   `leads/tenfold_coble/exact_member/`; `leads/TENFOLD_COBLE_LEAD.md`, section 12.
+- C-TENFOLD-FERMAT-POINT-CLASS (correction): at the Fermat tenfold the explicit arc of the Coble family carries the
+  three-plane class h^5 - P1 - P2 - P3, not Movasati's class P1 - P2; the planned check and one remark of section 5
+  of the lead note are withdrawn. Nothing new is shown for Movasati's class.
+- D-TENFOLD-FERMAT-THREE-PLANE-FAMILY (AI proof, unreviewed): on the 3-parameter family "Fermat plus a Heisenberg
+  trilinear term", which lies in the Coble family, the three-plane class stays Hodge (two exact computations).
+- D-TENFOLD-COBLE-FERMAT-ARCS (MOD p, finite order; blind-checked): explicit arcs of the Coble family through the
+  Fermat tenfold with no symmetry and no free terms satisfy all period equations of the three-plane class to
+  orders 10-12 at two primes; every change to the Coble relation fails at the pre-registered order.
+  `leads/tenfold_coble/fermat_point/`; `leads/TENFOLD_COBLE_LEAD.md`, section 13.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

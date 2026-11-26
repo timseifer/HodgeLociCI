@@ -1,0 +1,10 @@
+(a) restriction == -342 h0(y) + h0(p) + h0(q) + M_x : true
+    h_0(3,15,18)/27 = 342
+(b) Groebner basis of the Jacobian ideal over QQ: .0021168 s
+    dim of singular locus (projective) = 2
+    degree = 18
+    Hilbert polynomial of T/J = 9*i^2
+    Hilbert function of T/J in degrees 0..8: {1, 9, 36, 84, 144, 225, 324, 441, 576}
+    betti numbers of the minimal generators of J: {2, 2, 2, 2, 2, 2, 2, 2, 2}
+    J saturated w.r.t. the irrelevant ideal equals J: false  (.139126 s)
+    codim J = 6

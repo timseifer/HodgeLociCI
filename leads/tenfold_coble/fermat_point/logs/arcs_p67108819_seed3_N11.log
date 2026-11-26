@@ -1,0 +1,21 @@
+MOD 67108819 seed 3: xi = [15969536, 39771459, 36522606]; first-order test of w * phi for the three roots on the pairs (r_k, y_k): {1: False, 3: True, 5: False}
+   L(T_4) has 16 nonzero entries (H1 can fail at order 4 only if this is > 0)
+   terms of T_1: 21
+   H three-plane class n =  1: terms of E_n        21, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  2: terms of E_n       226, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  3: terms of E_n      1664, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  4: terms of E_n      9431, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  5: terms of E_n     43880, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  6: terms of E_n    174560, nonzero period equations   0 of 221   [0.0s]
+   H three-plane class n =  7: terms of E_n    610645, nonzero period equations   0 of 221   [0.1s]
+   H three-plane class n =  8: terms of E_n   1917572, nonzero period equations   0 of 221   [0.2s]
+   H three-plane class n =  9: terms of E_n   5491871, nonzero period equations   0 of 221   [0.4s]
+   H three-plane class n = 10: terms of E_n  14527143, nonzero period equations   0 of 221   [1.3s]
+   H three-plane class n = 11: terms of E_n  35859611, nonzero period equations   0 of 221   [2.6s]
+RESULT H MOD 67108819 seed 3: three-plane class along the Coble arc, orders 1..11: first failing order None
+CONTROL H1 theta = 1                : first failing order 4 (orders 1..7)
+CONTROL H2 sign of h_0(xi) flipped  : first failing order 4 (orders 1..7)
+CONTROL H4 wrong P^8                : first failing order 1 (orders 1..7)
+CONTROL H3 P1 - P2                  : first failing order 1 (orders 1..7)
+CONTROL H3 P1 - P3                  : first failing order 1 (orders 1..7)
+CONTROL H3 one eigen-sign flipped   : first failing order 2 (orders 1..7)

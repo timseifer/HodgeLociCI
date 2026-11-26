@@ -1,0 +1,23 @@
+(a) F_x o g == F_x identically in x (w^2+w+1=0):
+    sh True
+    c True
+    b True
+    iota True
+(b) image of the planes (zeta = -w^t, t=0,1,2) under each generator (as a permutation of t):
+    sh [0, 1, 2]
+    c [0, 1, 2]
+    b [1, 2, 0]
+    iota [0, 2, 1]
+(c) order of Gamma' as a group of linear maps: 162
+    scalar matrices in it: 3  -> order of the image in PGL_12: 54
+    diagonal elements: 27
+    centre has order 3
+    element orders: {1: 1, 2: 27, 3: 80, 6: 54}
+    determinants of the generators (sign, exponent of w): {'sh': (1, 0), 'c': (1, 0), 'b': (1, 0), 'iota': (-1, 0)}
+(d) dimension of the Gamma'-invariant part of {Q*Omega : Q squarefree of degree deg}:
+    degree 0: dim = 0  (character formula: 0), total dim 1
+    degree 3: dim = 1  (character formula: 1), total dim 220
+       spanning element (up to scalar): (81+0w)*p0*p1*p2 + (-81+0w)*q0*q1*q2
+    degree 6: dim = 10  (character formula: 10), total dim 924
+    degree 9: dim = 1  (character formula: 1), total dim 220
+    degree 12: dim = 0  (character formula: 0), total dim 1

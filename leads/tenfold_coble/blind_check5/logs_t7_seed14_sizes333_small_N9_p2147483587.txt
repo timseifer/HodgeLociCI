@@ -1,0 +1,27 @@
+seed 14, p = 2147483587, N = 9, sizes (3, 3, 3), small-integer data: True
+  xi = [2147483581, 8, 2147483585]  lam1 = 2147483586
+  phi = ['6*r1*q2 + 1*y1*q0 + 6*r0*q1', '-2*y2*y2 + 2*y0*r2 + 3*y1*y1', '-5*y1*y1 + -4*r2*p1 + 9*q0*p2']
+  order 1: terms(E_n)=28, relevant=8, nonzero counts=[0], 0.0s
+  order 2: terms(E_n)=396, relevant=76, nonzero counts=[0], 0.0s
+  order 3: terms(E_n)=3761, relevant=324, nonzero counts=[0], 0.0s
+  order 4: terms(E_n)=26891, relevant=1610, nonzero counts=[0], 0.1s
+  order 5: terms(E_n)=153961, relevant=7364, nonzero counts=[0], 0.2s
+  order 6: terms(E_n)=734484, relevant=26793, nonzero counts=[0], 0.5s
+  order 7: terms(E_n)=3005058, relevant=94412, nonzero counts=[0], 1.8s
+  order 8: terms(E_n)=10784681, relevant=309662, nonzero counts=[0], 8.0s
+  order 9: terms(E_n)=-1, relevant=7083322, nonzero counts=[0], 31.4s
+  TRUE ARC: terms of G per order {1: 28, 4: 10, 5: 10, 7: 10, 8: 10, 9: 9}
+     class kappa: first order with a nonzero period equation: none up to 9
+     variant (v) class delta(z1,z2): first order with a nonzero period equation: 1  (24 of 221 forms nonzero there)
+     variant (v) class delta(z2,z3): first order with a nonzero period equation: 1  (24 of 221 forms nonzero there)
+     variant (v) class delta(z1,z3): first order with a nonzero period equation: 1  (24 of 221 forms nonzero there)
+     [42.3 s]
+  variant (i), class kappa: first order with a nonzero period equation: 4  (2 of 221 forms nonzero there)
+     [0.2 s]
+  variant (ii), class kappa: first order with a nonzero period equation: 5  (6 of 221 forms nonzero there)
+     [0.4 s]
+  variant (iii), class kappa: first order with a nonzero period equation: 7  (6 of 221 forms nonzero there)
+     [2.5 s]
+  variant (iv), class kappa: first order with a nonzero period equation: 4  (6 of 221 forms nonzero there)
+     [0.2 s]
+[wall 46 s, peak RSS 2.80 GB, exit 0]

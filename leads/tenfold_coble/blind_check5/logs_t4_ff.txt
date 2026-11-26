@@ -1,0 +1,1 @@
+(run timed out after 600 s without output; superseded by t4_ff2.m2 (1 parameter) and t4_proof.py)
