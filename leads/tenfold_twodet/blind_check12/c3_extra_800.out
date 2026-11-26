@@ -1,0 +1,10 @@
+json eps: 1/800  keys: ['A', 'B', 'F', 'GA', 'GB', 'cat_singular_values', 'dps', 'eps', 'lie_dims', 'lie_singular_values_A', 'lie_singular_values_B', 'note', 'order', 'spreads', 'tA', 'tB', 'u']
+json F vs own F_eps (arc file):  |F_json - F_own| / |F_own| = 2.866e-63
+|GA + GB - F_eps| / |F_eps| = 7.706e-42      |GA + GB - F_eps| / |GA| = 7.710e-62
+|GA| eps^6 = 1078.446666   |GB| eps^6 = 1078.446666   |F_eps| = 2.828442
+eps = 1/800
+  |det A - GA| / |GA| = 8.118e-20     |det A + GB| / |GB| = 8.246e-20     |F_eps| / |GA| = 1.000e-20
+  absolute: |det A - GA| = 2.295e+01   |det A + GB| = 2.331e+01   |F_eps| = 2.828   ratio |det A - GA| / |F_eps| = 8.114e+00
+  det A - GA : norm 2.295e+01 ; part outside the tangent space of the orbit of GA: 3.935e-20 (relative to |GA|: 1.392e-40) ; size of the 8x8 matrix X used: 2.469e-11
+  det A + GB : norm 2.331e+01 ; part outside the tangent space of the orbit of GA: 1.833e+00 (relative to |GA|: 6.485e-21) ; size of the 8x8 matrix X used: 2.081e+03
+  F_eps      : norm 2.828e+00 ; part outside the tangent space of the orbit of GA: 1.833e+00 (relative to |GA|: 6.485e-21) ; size of the 8x8 matrix X used: 2.081e+03

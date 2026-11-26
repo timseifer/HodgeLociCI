@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (22)
+## Entries on this page (23)
 
 | id | status | title |
 |---|---|---|
@@ -34,6 +34,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-CONE-POINTS-TWO-DET](#d-tenfold-cone-points-two-det) | `PAPER_ARGUMENT_AI` | Tenfold two-determinant family and V_Z: at cone points over the sixfold divisor D its class is +-([P1] - [P2]), conditional on the sixfold identification (cone map applied twice); exact cone arc to order 9; no smooth honest member carries a two-plane class |
 | [D-TENFOLD-ORDER4-MODEL-CONE](#d-tenfold-order4-model-cone) | `MOD_P` | Tenfold Movasati point: special nets of rank 2 (a 13-dimensional piece) and of rank 3 pass order 4; a model cone of 27 quadrics; the order-5 obstruction on the 13-dimensional piece is removable for lambda = -1 and 2 |
 | [D-TENFOLD-MOVASATI-ORDER6](#d-tenfold-movasati-order6) | `MOD_P` | Tenfold Movasati point, a direction of the 13-dimensional piece: order 6 passes for lambda = -1 (by a change of T_3) and is obstructed for lambda = 2 modulo the first-order corrections tested |
+| [D-SIXFOLD-ARC-ORDER19](#d-sixfold-arc-order19) | `EXACT` | The sixfold arc of T2 into the divisor D, exactly to order 19: T_8..T_19 are determined uniquely; the certificate's T_8, T_9 are not on the continuing arc |
 
 ## Related entries on other pages
 
@@ -1649,3 +1650,90 @@ A second prime and seed for both lambda. Order 7 for lambda = -1: the default co
 the test is the same scheme one order up (changes of T_4 by Im D, of T_3 and T_2 inside the kernels).
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), eleventh part (owner: 'queue this work up').
+
+---
+
+## D-SIXFOLD-ARC-ORDER19
+
+**The sixfold arc of T2 into the divisor D, exactly to order 19: T_8..T_19 are determined uniquely; the certificate's T_8, T_9 are not on the continuing arc**
+
+kind: `result` | area: `fermat_expansion` | status: **`EXACT`**
+
+**Statement.**
+
+```text
+Setting: Fermat cubic sixfold, the pair of D-RANK-CONTRAST-EXACT-ARCS (P1 = {{0,1,1},{2,3,1},{4,5,1},{6,7,1}},
+P2 = {{1,2,3},{3,4,3},{0,5,3},{6,7,3}} in the package's notation), class [P1] - [P2], the arc of
+D-DEGENERATION-ALONG-ARC read in the sixfold variables y0..y7 (x0..x5, x8, x9 of the exported eightfold file
+six_lam-1_arc.txt). F_eps = sum y_i^3 - sum eps^n T_n. EXACT over QQ(zeta_6).
+(1) Every term of the arc lies in the span of nine monomials: y0y1y6, y0y2y6, y0y3y6, y0y4y6, y1y3y6, y2y4y6 (the
+terms T_n with n = 1 mod 3), y0y6y7 (n = 2 mod 3), y0y1y3, y0y2y4 (n = 0 mod 3). None contains y5: every cubic
+of the arc is y5^3 + Phi_eps(the other seven variables).
+(2) Keep T_1..T_7 of the certificate, put unknown coefficients on these monomials from T_8 on, and normalise the
+coefficient of y2y4y6 in the arc to eps (it is 1 in T_1 and 0 afterwards). Then the Hodge-locus equations of
+order <= 19 (the 8 x 19 matrix of fermatExpansion) determine T_8..T_19 uniquely. The equations of order n alone
+do not determine T_n (the first-order map is singular on this slice; with equations to order 12 one coefficient
+of T_12 is still free): the system closes up at the orders n = 1 mod 3.
+(3) The determined T_8 and T_9 differ from those of the certificate file. The certificate is still correct as a
+certificate (its expansion to order 9 is zero); a finite-order certificate fixes its last terms only modulo
+later equations. For anything that needs the arc beyond eps^7, use the file of this entry.
+(4) The Taylor coefficients (orders 0..19) of the periods of all 330 quartic monomials along this arc were
+exported exactly: the class functional on R_4 modulo eps^20.
+```
+
+**Conditions.**
+
+The package's Fermat engine (fermatExpansion with a ring that has parameters, then linear algebra on the
+coefficients). Uniqueness is inside the nine-monomial slice with the stated normalisation and with T_1..T_7
+fixed; it says nothing about arcs with other monomials or other leading terms. Finite order: an arc to order 19
+is evidence for, not a proof of, a convergent arc.
+
+**Evidence.**
+
+leads/tenfold_twodet/matrices/mx3_extend_arc.m2 (stages 13 and 19), arc_true_order19.txt, mx3b_verify_arc.m2
+(RESULT lines: 19 terms; the first seven equal to the certificate's; T_8, T_9 not equal; the 8 x 19 expansion is
+zero; the certificate's own expansion to order 9 is zero), mx0_export_periods.m2, periods_deg4_order19.txt;
+leads/tenfold_twodet/matrices/PREREG_matrices.md (step 0); leads/TENFOLD_TWODET_LEAD.md, section 8.1.
+
+**Independent check.**
+
+Blind check 12 (a separate agent; exact Python code of its own with python-flint: the period functional derived
+from scratch, the Griffiths-Dwork reduction on the Fermat cubic written by hand; it did not read my scripts):
+all 8 x 19 Taylor coefficients are zero; negative controls (adding a small term to T_3, T_12, T_19 gives a first
+non-zero coefficient at exactly that order); T_1..T_7 equal to the certificate's, the certificate has T_8 = 0 and
+other coefficients in T_9; nine monomials, none with y5. Its code also reproduces periods_deg4_order19.txt
+completely (330 quartics, orders 0..19: 6600 entries, no mismatch, up to the one overall constant -81 z). The
+package call was repeated separately. Not checked by it: the uniqueness statement (2), which is my run only.
+Shared with the package: the period formula for linear spaces and the pole-order description of the Hodge locus.
+leads/tenfold_twodet/blind_check12/REPORT.md (C1).
+
+**Not established.**
+
+Convergence of the arc; orders beyond 19; uniqueness outside the slice. That the arc lies in the divisor D or in
+the closure of the two-determinant family is the subject of D-DEGENERATION-ALONG-ARC and
+D-ARC-SPLITTING-NUMERICAL, not of this entry.
+
+**Known before.**
+
+The arc to order 25 modulo p and its certificate to order 9: team T2 (D-DEGENERATION-ALONG-ARC,
+D-RANK-CONTRAST-EXACT-ARCS). That fermatExtendArc cannot continue this arc order by order: the probe recorded in
+leads/TENFOLD_TWODET_LEAD.md, section 7.9. New here: exact terms to order 19 in characteristic 0, the uniqueness
+statement, and the remark on the certificate's last two terms.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22):
+    M2 --script leads/tenfold_twodet/matrices/mx3b_verify_arc.m2                      (2.5 minutes)
+To regenerate (FILE must not exist at the first call):
+    M2 --script leads/tenfold_twodet/matrices/mx3_extend_arc.m2 13 FILE              (20 seconds)
+    M2 --script leads/tenfold_twodet/matrices/mx3_extend_arc.m2 19 FILE              (2 minutes)
+    M2 --script leads/tenfold_twodet/matrices/mx0_export_periods.m2 OUT FILE 19      (6 minutes)
+```
+
+**Next step.**
+
+Order about 30 if the second matrix is attacked by lowering the noise (see D-ARC-SPLITTING-NUMERICAL); the
+engine's cost grows steeply (order 13: 1 minute, order 19: 6 minutes for the 330 periods).
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), twelfth part (owner: 'queue this work up'; 'Go ahead').

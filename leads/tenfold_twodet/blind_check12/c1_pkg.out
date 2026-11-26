@@ -1,0 +1,6 @@
+number of arc terms 19
+time 138.457
+rows 8 cols 19
+matrix zero: true
+columns zero: {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true}
+perturbed T_19: columns zero: {true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false}

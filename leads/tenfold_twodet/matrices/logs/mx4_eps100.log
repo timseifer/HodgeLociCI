@@ -1,0 +1,34 @@
+eps = 1/100, series cut at order 19 (file: 19), 90 digits
+1. Cat(2,2): singular values 1..12: 5.26e+2 .. 1.14e+2 | 13..18: 7.72e-3 .. 1.39e-3 | 19..36: 2.87e-30 .. 5.13e-127
+   ratios: s13/eps^2 = 7.72e+1, s18/eps^2 = 1.39e+1 ; gap s18/s19 = 4.86e+26
+   partial derivatives of F_eps: distance from the kernel, relative: 1.72e-28
+2. cubics with partials in the kernel: singular values 114 .. 120: 7.13e-6 6.38e-6 8.31e-8 2.65e-8 1.82e-29 8.68e-33 2.23e-91   [3 s]
+   |R F|/|F| = 2.57e-28 ; |R y5^3| = 0.0 ; nullity read off (first gap of 1e4 above the level of F): 3   (3 expected: y5^3, G_A, G_B)
+   F_eps: distance from the 3-dimensional null space, relative: 3.2e-23
+   H: |R H|/|H| = 1.64e-29
+3. reduced pair: |mu| of the 8 smallest: 1.15e-90 .. 1.14e-89 (zero expected: the fields y_i d/dy5) ; 9th: 1.56e+1   [5 s]
+   finite eigenvalues: residuals sorted: 1st 2.54e-30, 8th 1.16e-29, 16th 3.3e-28 | 17th 6.97e-28, 18th 1.49e-22
+   the 16 smallest residuals split into groups of 7 and 9 ; separation of the two centres 2.6295e-15 ; residuals 15th .. 19th: 1.0e-28 3.3e-28 7.0e-28 1.5e-22 1.7e-21 ; largest jump after the 17th: 17 genuine eigenvalues, 8 and 9 at the two centres
+   group 1: 8 eigenvalues ; t = (-0.06405883701288380549938 + 0.00006263231790555442193037j), u = (-0.02579686626734784975358 + 0.00004599470046319605883473j) ; spread of the 8 best 2.91e-25 ; full residuals of the fields: 1.1e-24 1.2e-24 8.2e-25 1.2e-24 8.1e-25 1.2e-24 1.1e-24 3.1e-24
+   group 2: 9 eigenvalues ; t = (-0.06405883701288643501697 + 0.00006263231790555764718364j), u = (-0.02579686626734784975358 + 0.00004599470046319605883482j) ; spread of the 8 best 1.76e-26 ; full residuals of the fields: 4.3e-26 4.2e-26 4.2e-26 4.1e-26 4.0e-26 3.3e-26 7.7e-26 2.6e-25 9.4e-25
+   |t_B - t_A| / |t_A| = 4.10485e-14 ; |u_B - u_A| / |u_A| = 4.41e-24   (u_A = u_B is the check that F, G_A, G_B are on a line; it is not imposed above)
+   |G_A| = 1.07848e+15, |G_B| = 1.07848e+15 ; |G_A| eps^6 = 1.07848e+3, |G_B| eps^6 = 1.07848e+3 ; |G_A + G_B| eps^6 / |G_A| eps^6 = 2.62e-15
+4. G_A: vector fields killing it: singular values 50 .. 64 relative to the first: 8.6e-16 8.6e-16 8.5e-16 8.3e-16 6.3e-16 6.3e-16 8.7e-21 1.9e-26 6.5e-27 2.8e-27 4.3e-29 7.1e-33 3.2e-33 1.3e-33 1.1e-33 ; below the noise threshold 2.9e-24: 8   [35 s]
+4. G_B: vector fields killing it: singular values 50 .. 64 relative to the first: 7.6e-16 2.1e-18 1.3e-18 1.6e-21 1.3e-21 2.4e-23 7.3e-27 6.5e-27 6.4e-27 4.7e-27 3.4e-27 6.9e-28 1.0e-28 8.0e-34 2.7e-34 ; below the noise threshold 1.8e-25: 9   [60 s]
+5. G_A: regular element: |two smallest eigenvalues|/scale = 7.93e-13, 5.04e-12 ; root relations (errors) 7.94e-13, 4.03e-13, 3.91e-13
+   G_A: condition number of the eigenvector matrix: 5.61e+5
+   weight structure: largest forbidden coefficient, relative: 1.04e-10 ; diagonal part = rho l1 l2 l3 with error 9.08e-10 ; |A B rho - 1| = 2.36e-7
+   det(matrix) - G_A: relative 5.17e-11
+   G_A: the 9th smallest singular value 8.7e-21 is isolated (next 6.3e-16): trying the 9 fields as well
+5'. G_A (9 near-fields): condition number of the eigenvector matrix: 5.1e+5
+5'. G_A (9 near-fields): 8 distinct eigenvalues (smallest gap 5.96e-3) ; monomials in the eigenforms, by size relative to the largest: 457:1.0 466:5.7e-5 037:1.0e-6 125:7.1e-7 136:7.2e-9 026:5.8e-9 456:1.7e-10 467:1.7e-10 477:2.2e-11
+   the six monomials are those of the determinant ; the 7th is 1.72e-10 of the largest ; invariant c(aah) c(bef) c(cdg) / (c(aeg) c(bdh) c(acf)) + 1 = 2.41e-11
+   det(matrix) - G_A (9 near-fields): relative 4.13e-12
+   G_A: kept: relation of rank 3 (sl_3) ; |det(matrix) - G_A| / |G_A| = 5.17e-11 (comparison: relation of rank 2, approximately: 4.13e-12)
+5'. G_B: condition number of the eigenvector matrix: 3.73e+12
+5'. G_B: 8 distinct eigenvalues (smallest gap 5.74e-2) ; monomials in the eigenforms, by size relative to the largest: 113:1.0 123:8.0e-1 112:7.1e-1 111:5.9e-1 133:5.7e-1 137:4.2e-1 136:4.1e-1 117:3.7e-1 116:3.6e-1
+   NOT the pattern of a determinant with a relation of rank 2 (one monomial x^2 y expected).
+6. [as built] A: |det A - G_A| / |G_A| = 5.17e-11 ; its nine 2 x 2 minors: largest relative distance from the kernel of Cat(2,2) 2.21e-12, they span 9 dimensions (normalised singular values 2.88 .. 4.77e-6) ; the entries span 8 forms ; relation matrix C_A: singular values 1, 2.23e-3, 1.21e-3 (not gauge invariant; the rank is)
+6. [as built] B: no matrix
+   written leads/tenfold_twodet/matrices/results/mx4_eps100.json
+   total time 62 s

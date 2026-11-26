@@ -1,0 +1,70 @@
+arc terms read: 19  monomials per term: [6, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5]
+C1(c) distinct monomials in T_1..T_19: [(1, 1, 0, 1, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 1, 0), (1, 0, 1, 0, 1, 0, 0, 0), (1, 0, 1, 0, 0, 0, 1, 0), (1, 0, 0, 1, 0, 0, 1, 0), (1, 0, 0, 0, 1, 0, 1, 0), (1, 0, 0, 0, 0, 0, 1, 1), (0, 1, 0, 1, 0, 0, 1, 0), (0, 0, 1, 0, 1, 0, 1, 0)]
+C1(c) some monomial contains y5: False
+     all terms homogeneous cubics: True
+certificate terms: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+C1(b) T_1 equal to certificate: True
+C1(b) T_2 equal to certificate: True
+C1(b) T_3 equal to certificate: True
+C1(b) T_4 equal to certificate: True
+C1(b) T_5 equal to certificate: True
+C1(b) T_6 equal to certificate: True
+C1(b) T_7 equal to certificate: True
+C1(b) T_8 equal to certificate: False
+       (1, 0, 0, 0, 0, 0, 1, 1)  arc: (-4309964/19683, 7193456/59049)  cert: None
+C1(b) T_9 equal to certificate: False
+       (1, 0, 1, 0, 1, 0, 0, 0)  arc: (-20668997/59049, 73844191/177147)  cert: (-24978961/59049, 9004183/19683)
+       (1, 1, 0, 1, 0, 0, 0, 0)  arc: (67914367/177147, -68247644/177147)  cert: (29345905/59049, -23234888/59049)
+support of lambda_0 = lam_P1 - z^2 lam_P2 (unit constant): 28 squarefree quartics
+E_n built to order 19  sizes: [1, 6, 22, 63, 158, 350, 709, 1343, 2402, 4099, 6727, 10669, 16430, 24661, 36177, 52002, 73402, 101912, 139397, 188095]  time 4.1s
+residue classes per order: [1, 6, 22, 58, 103, 139, 183, 214, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243, 243]  time 9.7s
+C1(a) OWN implementation: Taylor coefficients of the 8 periods int y_i Omega/F_eps^3 over [P1]-[P2]
+   order  0: all eight zero: True 
+   order  1: all eight zero: True 
+   order  2: all eight zero: True 
+   order  3: all eight zero: True 
+   order  4: all eight zero: True 
+   order  5: all eight zero: True 
+   order  6: all eight zero: True 
+   order  7: all eight zero: True 
+   order  8: all eight zero: True 
+   order  9: all eight zero: True 
+   order 10: all eight zero: True 
+   order 11: all eight zero: True 
+   order 12: all eight zero: True 
+   order 13: all eight zero: True 
+   order 14: all eight zero: True 
+   order 15: all eight zero: True 
+   order 16: all eight zero: True 
+   order 17: all eight zero: True 
+   order 18: all eight zero: True 
+   order 19: all eight zero: True 
+C1(a) orders 1..19 all zero: True   time 10.3s
+   control: T_3 + (1/1000) x0 x1 x3 -> first order with a non-zero period: 3
+   control: T_12 + (1/1000) x0 x1 x3 -> first order with a non-zero period: 12
+   control: T_19 + (1/1000) x0 x1 x3 -> first order with a non-zero period: 19
+time 33.8s
+periods file: 330 quartics, orders 0..19
+overall constant file/own (from (1, 1, 0, 1, 0, 0, 1, 0) ): (0, -81)
+   quartic periods, order  0: mismatches 0 of 330   (non-zero in file: 28)   time 33.8s
+   quartic periods, order  1: mismatches 0 of 330   (non-zero in file: 64)   time 33.8s
+   quartic periods, order  2: mismatches 0 of 330   (non-zero in file: 38)   time 33.8s
+   quartic periods, order  3: mismatches 0 of 330   (non-zero in file: 103)   time 33.9s
+   quartic periods, order  4: mismatches 0 of 330   (non-zero in file: 128)   time 33.9s
+   quartic periods, order  5: mismatches 0 of 330   (non-zero in file: 60)   time 33.9s
+   quartic periods, order  6: mismatches 0 of 330   (non-zero in file: 104)   time 34.0s
+   quartic periods, order  7: mismatches 0 of 330   (non-zero in file: 129)   time 34.1s
+   quartic periods, order  8: mismatches 0 of 330   (non-zero in file: 60)   time 34.2s
+   quartic periods, order  9: mismatches 0 of 330   (non-zero in file: 105)   time 34.3s
+   quartic periods, order 10: mismatches 0 of 330   (non-zero in file: 129)   time 34.6s
+   quartic periods, order 11: mismatches 0 of 330   (non-zero in file: 60)   time 34.8s
+   quartic periods, order 12: mismatches 0 of 330   (non-zero in file: 105)   time 35.2s
+   quartic periods, order 13: mismatches 0 of 330   (non-zero in file: 129)   time 36.0s
+   quartic periods, order 14: mismatches 0 of 330   (non-zero in file: 60)   time 36.5s
+   quartic periods, order 15: mismatches 0 of 330   (non-zero in file: 105)   time 37.7s
+   quartic periods, order 16: mismatches 0 of 330   (non-zero in file: 129)   time 40.0s
+   quartic periods, order 17: mismatches 0 of 330   (non-zero in file: 60)   time 41.3s
+   quartic periods, order 18: mismatches 0 of 330   (non-zero in file: 105)   time 44.5s
+   quartic periods, order 19: mismatches 0 of 330   (non-zero in file: 129)   time 50.6s
+quartic periods compared: 6600 entries, mismatches 0 
+file: all series of quartics with y5-exponent >= 2 are identically zero: True  (number of such quartics: 36)

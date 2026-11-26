@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (32)
+## Entries on this page (33)
 
 | id | status | title |
 |---|---|---|
@@ -44,6 +44,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-THIRD-DETERMINANT](#n-tenfold-third-determinant) | `RULED_OUT` | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
 | [N-BIELLIPTIC-NOT-SINGULAR-LOCUS](#n-bielliptic-not-singular-locus) | `RULED_OUT` | A bielliptic surface of degree 18 in P^8 (K of order 2, type (3,3)) is not the singular locus of any cubic |
 | [N-M2-TOFIELD-IDEAL-QUOTIENT](#n-m2-tofield-ideal-quotient) | `RULED_OUT` | Macaulay2 1.22 returned a wrong ideal quotient over toField(QQ[w]/(w^2+w+1)) (reproducible): do not use colon ideals or their Hilbert functions over such a field as exact evidence |
+| [N-MATRIX-RECOVERY-FIRST-ATTEMPTS](#n-matrix-recovery-first-attempts) | `RULED_OUT` | Recovering the matrices along the sixfold arc: what did not work (random-start least squares, order-9 series, eps >= 1/25, eigenforms in the original coordinates for the nearly degenerate summand) |
 
 ---
 
@@ -1512,3 +1513,78 @@ Audit the lead scripts that claim EXACT results over Q(w) for colon ideals and s
 report the example to the Macaulay2 developers.
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), ninth part (owner: 'Yes go ahead' on the class of the tenfold two-determinant family).
+
+---
+
+## N-MATRIX-RECOVERY-FIRST-ATTEMPTS
+
+**Recovering the matrices along the sixfold arc: what did not work (random-start least squares, order-9 series, eps >= 1/25, eigenforms in the original coordinates for the nearly degenerate summand)**
+
+kind: `dead_end` | area: `methods` | status: **`RULED_OUT`**
+
+**Statement.**
+
+```text
+Tried on 26 Nov 2026 for O-RECOVER-MATRICES-AND-LIMIT-OF-T and found inadequate; each item says what failed and
+why, so that it is not repeated blindly. None of them says anything about the family itself.
+(1) Levenberg-Marquardt on the 144 complex entries of (A, B) against F_eps, random starts, double precision: no
+convergence even on a synthetic target det A0 + det B0 (rms residual 1 to 2.6 from 16 starts, up to 1500
+iterations). It converges quadratically only from within a relative perturbation of about 0.3 of a solution.
+A polisher, not a finder.
+(2) Splitting the kernel of Cat(2,2) by the commuting algebra from the order-9 series of the certificate arc: the
+generator is nearly nilpotent (eigenvalues +-c eps^6) and that series is good modulo eps^8 only
+(D-SIXFOLD-ARC-ORDER19, item 3): the two 9-dimensional eigenspaces cannot be resolved at any eps.
+(3) With the order-19 series: at eps = 1/16 and 1/25 the two special cubics are not separated (the noise is
+1e-14 to 1e-18 and all 56 finite eigenvalues lie within it of each other). eps <= 1/40 works.
+(4) The count of vector fields of the second summand at eps = 1/40, 1/64, 1/100 came out as 9. At eps = 1/800 it
+is 8: the 9th singular value is 0.99 eps^13 and had been below the noise. A count read at the noise level is a
+lower bound for what is broken, not a count.
+(5) Eigenforms of a random element of the symmetry algebra, computed in the coordinates y, for the second
+summand: the eigenvector matrix has condition number 1e11 (eps = 1/64) to 1e18 (1/800), and the algebra itself is
+known to 0.3 per cent at best; the resulting list of monomials is noise. For the first summand the same step
+works (condition number 1e5 to 1e7).
+(6) Two tools that failed as coded and were dropped: a balancing iteration over SL_8 (first version diverged, the
+safeguarded version did not move), and a Gauss-Newton polish whose linear solve in ball arithmetic fails on the
+badly scaled normal matrix.
+```
+
+**Conditions.**
+
+"Ruled out" means these attempts as coded, at these values of eps and these precisions. In particular (6) is
+about two implementations, not about balancing or Gauss-Newton as ideas.
+
+**Evidence.**
+
+leads/tenfold_twodet/matrices/PREREG_matrices.md (outcomes of the first route; the notes of 20:59, 21:06, 21:25
+UTC; outcomes of the second route), mx1_solve.py, mx2_split.py, logs/mx4_eps16.log;
+leads/TENFOLD_TWODET_LEAD.md, section 8.3.
+
+**Independent check.**
+
+Item 4 is confirmed by blind check 12 (nine values at the noise level at eps = 1/40, 1/64, 1/100, eight at 1/800;
+leads/tenfold_twodet/blind_check12/REPORT.md, C2). Items 1, 2, 3, 5, 6: none (my runs only).
+
+**Not established.** That no numerical method finds the second matrix. See D-ARC-SPLITTING-NUMERICAL, next_step.
+
+**Known before.**
+
+Team T2 already reported that order 25 modulo p was too little to recover the matrices
+(O-RECOVER-MATRICES-AND-LIMIT-OF-T).
+
+**Reproduce.**
+
+```text
+From the repository root:
+    python3 leads/tenfold_twodet/matrices/mx1_solve.py        (item 1; seconds)
+    python3 leads/tenfold_twodet/matrices/mx2_split.py 0.05    (item 2; seconds)
+    python3 leads/tenfold_twodet/matrices/mx4_pipeline.py 1/16 leads/tenfold_twodet/matrices/periods_deg4_order19.txt leads/tenfold_twodet/matrices/arc_true_order19.txt 19     (item 3; 5 minutes)
+Items 4 and 5: the logs of D-ARC-SPLITTING-NUMERICAL.
+```
+
+**Do not repeat.**
+
+Random-start least squares on (A, B). Any splitting from the certificate arc beyond eps^7. eps larger than 1/40
+with order-19 series. Reading a count of symmetries at the noise level as exact. Changing to the eigenforms of a
+symmetry in unbalanced coordinates without printing the condition number.
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), twelfth part (owner: 'queue this work up'; 'Go ahead').

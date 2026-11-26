@@ -1,0 +1,28 @@
+---- field ZZ/32003
+rank C = 1 : dim of the symmetry algebra of det B, 6 random examples: {12, 12, 12, 12, 12, 12}
+rank C = 2 : dim of the symmetry algebra of det B, 6 random examples: {9, 9, 9, 9, 9, 9}
+rank C = 3 : dim of the symmetry algebra of det B, 6 random examples: {8, 8, 8, 8, 8, 8}
+normal forms C = diag(1,1,1), diag(1,1,0), diag(1,0,0): {8, 9, 12}
+general cubic: {0, 0, 0, 0, 0}
+det A + det B, both rank C = 3: {0, 0, 0, 0, 0}
+det A + det B, ranks (3,2),(2,2),(1,1),(3,1): {0, 0, 0, 0}
+det A + (linear form)^3, rank C = 3: {2, 2}
+---- field QQ
+rank C = 1 : dim of the symmetry algebra of det B, 2 random examples: {12, 12}
+rank C = 2 : dim of the symmetry algebra of det B, 2 random examples: {9, 9}
+rank C = 3 : dim of the symmetry algebra of det B, 2 random examples: {8, 8}
+normal forms C = diag(1,1,1), diag(1,1,0), diag(1,0,0): {8, 9, 12}
+general cubic: {0, 0}
+det A + det B, both rank C = 3: {0, 0}
+det A + det B, ranks (3,2),(2,2),(1,1),(3,1): {0, 0, 0, 0}
+det A + (linear form)^3, rank C = 3: {2, 2}
+---- C5 over QQ: G0 = det(general traceless 3x3 matrix); number of fields: 8
+dim of forms killed by all 8 fields: degree 1: 0, degree 2: 1, degree 3: 1
+rank of the Killing form: 8
+random rank 3: number of fields 8, rank of Killing form 8, cubics killed by all fields: 1
+random rank 2: number of fields 9, rank of Killing form 5, cubics killed by all fields: 1
+random rank 1: number of fields 12, rank of Killing form 8, cubics killed by all fields: 1
+
+real	1m1.221s
+user	1m3.531s
+sys	0m0.167s

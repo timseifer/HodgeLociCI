@@ -328,6 +328,8 @@ superseded by this.
 
 ### 7.9 Queued by the owner, not started: the matrices along T2's sixfold arc (notes only; nothing below was run)
 
+(UPDATE, later the same night: started. What was run, and what came of these notes, is in section 8.)
+
 This is the step that would replace the sixfold paper chain (S) by a computation
 (O-RECOVER-MATRICES-AND-LIMIT-OF-T, STUCK since team T2). Starting points, all unverified (ideas, ARG at best):
 - Write a cubic of D as G = l s + C_3 with C_3 = z f^T C h + K(f, h) on the hyperplane l = 0. rank C = 2 means
@@ -355,3 +357,120 @@ This is the step that would replace the sixfold paper chain (S) by a computation
   cubic of the arc is y_5^3 + Phi_eps(y_0..y_4, y_6, y_7), a cyclic triple cover of P^6. A matrix
   y_5 * 1 + N with tr N = 0 and vanishing second coefficient has determinant y_5^3 + det N, so an ansatz
   equivariant for y_5 -> zeta_3 y_5 is natural for one of the two matrices.
+
+## 8. The matrices along T2's sixfold arc: first batch (26 Nov, 20:10 to 22:00 UTC; owner: "Go ahead")
+
+Pre-registration, with every change of method and one withdrawn statement: `leads/tenfold_twodet/matrices/PREREG_matrices.md`.
+Files and how to rerun: `leads/tenfold_twodet/matrices/README.md`. Registry: D-SIXFOLD-ARC-ORDER19,
+D-ARC-SPLITTING-NUMERICAL, N-MATRIX-RECOVERY-FIRST-ATTEMPTS; O-RECOVER-MATRICES-AND-LIMIT-OF-T stays open.
+NUMERICAL below means multiprecision floating point (60 to 170 digits) at fixed values of eps on this one arc:
+evidence of the weakest kind used in this repository, never a proof.
+
+### 8.0 Where this stands
+
+- **Not done:** the two matrices. One was found (numerically), the other was not; "det A + det B = F_eps" was not
+  tested at the truncation level; the flat limit of T was not touched. The sixfold paper chain (S) is not
+  replaced. O-RECOVER-MATRICES-AND-LIMIT-OF-T remains open.
+- **Done, EXACT:** the arc itself, to order 19 (it was known to order 7 in effect).
+- **Done, NUMERICAL:** T2's splitting (seen by them modulo p over the series field) holds in characteristic 0 at
+  eps = 1/40, 1/64, 1/100, 1/800, with the constants below; for the first summand an explicit matrix A was found:
+  det A agrees with it to 8e-20 (relative) at eps = 1/800, and to the noise level (1.4e-40) apart from a small
+  linear change of coordinates (8.5, point 2); its 2 x 2 minors lie in the kernel of the catalecticant of the
+  transported class [P1] - [P2].
+
+### 8.1 The arc to order 19 (EXACT over QQ(zeta_6))
+
+The exported certificate `six_lam-1_arc.txt` passes the period test to order 9, but its T_8, T_9 are not the
+terms of an arc that continues (no error of T2's: a finite-order certificate fixes its last terms only modulo
+later equations). With T_1..T_7 kept, unknown coefficients on the arc's nine monomials from T_8 on, and the
+coefficient of y2 y4 y6 normalised to eps, the equations of order <= 19 determine T_8..T_19 uniquely
+(`mx3_extend_arc.m2`; the equations of order n alone do not determine T_n, they close up at n = 1 mod 3). Check:
+`mx3b_verify_arc.m2`, the 8 x 19 expansion is zero. Data: `arc_true_order19.txt`; the periods of all 330 quartic
+monomials to order 19: `periods_deg4_order19.txt`.
+
+### 8.2 The splitting in characteristic 0 (NUMERICAL)
+
+F_eps = y5^3 + Phi_eps(the other seven variables), so y5^2 is in the kernel of Cat(2,2) exactly and y5^3 is a
+cubic all of whose partial derivatives lie in the kernel. With that:
+
+| quantity | eps = 1/40 | 1/64 | 1/100 | 1/800 | reading |
+| --- | --- | --- | --- | --- | --- |
+| Cat(2,2): 13th, 18th, 19th singular value | 4.9e-2, 8.7e-3, 2.6e-22 | 1.9e-2, 3.4e-3, 2.2e-26 | 7.7e-3, 1.4e-3, 2.9e-30 | 1.2e-4, 2.2e-5, 2.5e-48 | 12 units, 6 of size 77 eps^2 .. 13.9 eps^2, 18 at the truncation level (one exactly 0, the largest like eps^20) |
+| cubics with all partials in the kernel: 4 smallest singular values | 4.1e-7, 6.6e-22, 3.2e-25, 1.7e-61 | 1.0e-7, 8.7e-26, 4.2e-29, 2e-91 | 2.7e-8, 1.8e-29, 8.7e-33, 2e-91 | 5.2e-11, 1.3e-46, 6.0e-50, 3e-171 | a 3-dimensional space: y5^3, F_eps, one more; the 4th is 0.027 eps^3 |
+| \|u_B - u_A\| / \|u_A\| | 1.2e-17 | 1.6e-21 | 4.4e-24 | 2.8e-38 | F_eps = G_A + G_B (not imposed) |
+| \|t_B - t_A\| / \|t_A\| | 1.012e-11 | 5.990e-13 | 4.105e-14 | 1.563e-19 | 0.0410 eps^6 |
+| \|G_A\| eps^6 = \|G_B\| eps^6 | 1078.67 | 1078.53 | 1078.48 | 1078.45 | pole of order 6 |
+| coefficient of l^3 in G_A, times eps^6 | -34.17287 | -34.17212 | -34.17194 | -34.171875 | -2187/64 = -34.171875; G_B has the opposite sign |
+| \|G_A - c l^3\| / \|G_A\| | 1.88e-2 | 1.18e-2 | 7.53e-3 | 9.41e-4 | 0.753 eps |
+| G_A: 9th smallest singular value of the vector-field map (8 are at the noise) | 1.3e-17 | 3.1e-19 | 8.7e-21 | 5.2e-28 | 8.7e-5 eps^8 |
+| G_B: the same | below the noise | below the noise | below the noise | 1.8e-38 | 0.99 eps^13, resolved at 1/800 only (factor 459 above the noise) |
+| matrix A: \|det A - G_A\| / \|G_A\| | 4.7e-5 | 1.2e-9 | 5.2e-11 | 8.1e-20 | no polish; see 8.5, point 2 |
+| 2 x 2 minors of A: distance from the kernel | 8.3e-7 | 8.6e-11 | 2.2e-12 | 4.9e-21 | relative |
+
+Here l = y0 + z^4 y1 + z^4 y2 + z^2 y3 + z^2 y4 + y5 is the tangent hyperplane of the Fermat cubic at the point
+P1 n P2; G_A, G_B are the two members of the 3-dimensional space, other than y5^3 and the cone
+Phi_eps = F_eps - y5^3, that are killed by linear vector fields (found as H - t F_eps - u y5^3 from a
+generalized eigenvalue problem modulo the monomials y5^2 y_i).
+This is T2's picture (D-DEGENERATION-ALONG-ARC): two summands = -+c l^3 eps^-6 + ..., now with c = 2187/64
+numerically and in characteristic 0. At eps = 1/16 and 1/25 the method cannot separate the two members (all 56
+finite eigenvalues crowd together, because both are close to a cube, which has 56 vector fields).
+
+G_A has 8 linear vector fields at every eps; G_B shows 8 at eps = 1/800 and 9 at the noise level at the other
+three (8.5, point 3); a general cubic, and a general member of the 3-dimensional space, has none. For a
+determinant of a 3 x 3 matrix whose entries span the 8 linear forms (one relation tr(C B) = 0) the count is 8
+when rank C = 3 (the algebra is sl_3 acting by the adjoint representation), 9 when rank C = 2, 12 when rank
+C = 1 (my count; confirmed exactly over QQ by the blind check). Each summand is close to the rank-2 kind: its
+9th field is broken only at order eps^8 (G_A), eps^13 (G_B, one resolved point). For G_A the eigenvalues of a
+general element have the root pattern of sl_3 (errors 1e-21 at eps = 1/800), and the cubic invariant of the
+adjoint representation is unique up to a constant, so 8 fields of this kind already say "determinant". For G_B
+the fields were not shown to be of this kind.
+
+### 8.3 What did not work (so that it is not repeated)
+
+- Levenberg-Marquardt on the 144 entries of (A, B) from random starts: no convergence even on a synthetic
+  target det A0 + det B0; it converges only from within about 0.3 (relative) of a solution.
+- Splitting the kernel from the order-9 series of the certificate arc: the generator of the commuting algebra is
+  nearly nilpotent (eigenvalues +-c eps^6), the data were good modulo eps^8 only.
+- eps = 1/16, 1/25 with series of order 19: no separation (above).
+- Eigenforms of a random element of the symmetry algebra, in the coordinates y, for the summand that is closer
+  to the degenerate kind (G_B): the eigenvector matrix has condition number 1e11 (eps = 1/64) to 1e18 (1/800);
+  the list of monomials is noise. For G_A the same step works (condition number 1e5 to 1e7).
+- "G_B has 9 vector fields": what the runs at 1/40, 1/64, 1/100 showed, recorded for an hour, withdrawn at
+  1/800 (the 9th is 1.0 eps^13 and was below the noise).
+- A balancing step (descent on the norm over SL_8) as I coded it: no movement. A Gauss-Newton polish with ball
+  arithmetic: the linear solve fails on the badly scaled normal matrix. Neither tells anything about the mathematics.
+
+### 8.4 Why the second matrix is hard, and what would get it
+
+Each summand is known to relative noise nu (5.5e-41 at eps = 1/800 with order-19 series), and G_B's symmetry
+algebra is separated from its 9th near-field only by 1.0 eps^13 (1.8e-38): the algebra is known to nu / eps^13,
+that is 0.3 per cent. The noise falls like eps^16, so the ratio improves only like eps^3: eps = 1e-6 (about 400
+digits) would give 1e-10. Better routes, none tried:
+1. series of order about 30 (arc and periods; the exact engine needs about 6 minutes for order 19 and grows
+   steeply), which lowers nu at fixed eps;
+2. an analytic ansatz for B near the rank-2 kind (the leading matrix is then of the shape
+   [[a, b, c], [d, -a, e], [f, g, h]] with det = -a^2 h - a e g - b d h + b e f + c d g + a c f), solved order by
+   order, with the numerical G_B as the target;
+3. a joint Gauss-Newton on det A + det B = F_eps (F_eps is known to 1e-45, far better than either summand)
+   once any rough B exists; needs a rescaled gauge and plain multiprecision LU instead of ball arithmetic.
+
+### 8.5 Blind check 12 (a separate agent, own Python and Macaulay2 code; it read neither the pipeline nor the logs)
+
+Report, scripts, outputs: `leads/tenfold_twodet/blind_check12/`.
+- Confirmed (EXACT, own implementation of the period formula): the arc to order 19; T_1..T_7 equal to the
+  certificate's, T_8, T_9 not; no y5; and the whole file of 6600 period coefficients, up to one constant.
+- Confirmed (NUMERICAL, own code at 900 bits): every number of the table in 8.2. Confirmed (EXACT over QQ and
+  MOD 32003): the counts 8 / 9 / 12 of vector fields for relations of rank 3 / 2 / 1; none for a general cubic and
+  for a general sum of two determinants.
+- Corrections, all accepted and worked into the text above:
+  1. my constant "87 eps^8" was a slip of arithmetic: it is 8.7e-5 eps^8;
+  2. the figure 8.1e-20 for det A against G_A cannot tell G_A from -G_B = G_A - F_eps, since |F_eps| / |G_A| is
+     1.0e-20. The checker's linearised test does: det A - G_A is an infinitesimal linear change of coordinates of
+     G_A (matrix of norm 2.5e-11) up to 1.4e-40 |G_A|, the noise, while F_eps has a part 1.83 (of 2.83) outside
+     those directions. Supported statement: det A is, to first order and within the noise, G_A in slightly changed
+     coordinates. No non-linear fit was done;
+  3. "8 vector fields" holds for G_B at eps = 1/800 only; the checker showed that its 9th value 1.8e-38 is not an
+     artifact of the truncation (unchanged with the series cut at order 18 or 17), but eps^13 is one point;
+  4. nothing beyond that count supports "G_B is a determinant": its fields were not shown to form sl_3.
+- Not checked by anyone: uniqueness of the pair (G_A, G_B) in the 3-dimensional space beyond what the eigenvalue
+  problem finds; orders beyond 19; anything about a matrix B.

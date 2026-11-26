@@ -1,0 +1,51 @@
+json eps: 1/64  keys: ['A', 'B', 'F', 'GA', 'GB', 'cat_singular_values', 'dps', 'eps', 'lie_dims', 'lie_singular_values_A', 'lie_singular_values_B', 'note', 'order', 'spreads', 'tA', 'tB', 'u']
+json F vs own F_eps (arc file):  |F_json - F_own| / |F_own| = 2.235e-62
+|GA + GB - F_eps| / |F_eps| = 2.335e-47      |GA + GB - F_eps| / |GA| = 8.917e-61
+|GA| eps^6 = 1078.528450   |GB| eps^6 = 1078.528450   |F_eps| = 2.830757
+
+================ eps = 1/64, period series truncated after order 19 ================
+C2(a) catalecticant singular values (descending):
+   12 largest : 5.260e+02 5.241e+02 3.632e+02 3.625e+02 3.620e+02 3.614e+02 2.815e+02 2.809e+02 2.804e+02 2.798e+02 1.156e+02 1.136e+02
+   next 6     : 1.896e-02 1.834e-02 3.406e-03 3.405e-03 3.405e-03 3.405e-03    divided by eps^2: 77.663 75.101 13.951 13.948 13.946 13.945
+   last 18    : 2.157e-26 2.148e-26 2.568e-27 2.564e-27 7.084e-28 8.471e-29 3.680e-30 1.661e-30 1.298e-30 3.539e-31 2.459e-31 1.275e-31 8.912e-32 6.511e-32 1.264e-32 6.664e-33 3.845e-33 7.654e-135
+   last 18 divided by eps^20: 2.87e+10 2.85e+10 3.41e+09 3.41e+09 9.42e+08 1.13e+08 4.89e+06 2.21e+06 1.72e+06 4.7e+05 3.27e+05 1.7e+05 1.18e+05 8.65e+04 1.68e+04 8.86e+03 5.11e+03 1.02e-98
+C2(b) column of y5^2 in the catalecticant: max |entry| = 0.000e+00 (exact zeros in the file)
+      distance of y5^2 from the span of the 18 small singular vectors: 4.489e-262
+      144 x 120 system: smallest singular values: 1.884e-135 4.203e-29 8.735e-26 1.011e-07 3.169e-07 1.557e-05 1.741e-05 1.741e-05   largest: 2.003e+00   time 22s
+      distance from the 3-dim space W:  y5^3: 1.010e-214   F_eps: 4.215e-20
+      |M y5^3| = 1.347e-261   |M F_eps|/|F_eps| = 8.024e-25
+C2(c) random member of W: smallest relative singular values of the Lie map: 2.138e-01 2.143e-01 2.143e-01 2.143e-01
+      F_eps itself: smallest: 9.428e-01 9.433e-01 9.581e-01    y5^3: number of exactly-zero directions is 56 (trivially)
+      distance from W:  GA: 6.966e-24   GB: 6.966e-24
+      |M GA|/|GA| = 1.391e-28   |M GB|/|GB| = 1.391e-28
+C2(c,d) GA (json): 20 smallest relative singular values of the Lie map (ascending):
+       3.844e-30 5.228e-30 1.083e-29 2.693e-29 6.082e-26 9.348e-25 2.168e-24 1.749e-23
+       3.075e-19 9.153e-15 9.153e-15 1.207e-14 1.243e-14 1.245e-14 1.245e-14 1.285e-14 1.931e-12 1.931e-12 4.491e-12 4.491e-12
+       9th = 3.0745e-19 = eps^10.25   8th = 1.749e-23 = eps^12.60   ratio 9th/8th = 1.76e+04
+       (same after projecting to own W: 8th 1.747e-23, 9th 3.0745e-19)
+C2(c,d) GB (json): 20 smallest relative singular values of the Lie map (ascending):
+       1.318e-30 3.894e-30 2.250e-26 2.948e-25 1.145e-24 1.851e-24 2.168e-24 2.670e-24
+       3.083e-24 2.095e-21 7.136e-20 9.032e-20 2.847e-17 4.685e-17 1.102e-14 1.349e-14 1.931e-12 1.931e-12 4.491e-12 4.491e-12
+       9th = 3.0834e-24 = eps^13.02   8th = 2.670e-24 = eps^13.05   ratio 9th/8th = 1.15
+       (same after projecting to own W: 8th 2.681e-24, 9th 3.0967e-24)
+      json lie_singular_values_A (as stored): ['4.4908e-12', '4.4906e-12', '1.9312e-12', '1.931e-12', '1.2852e-14', '1.2448e-14', '1.2446e-14', '1.2429e-14', '1.2066e-14', '9.1533e-15', '9.1525e-15', '3.0745e-19', '1.749e-23', '2.1679e-24', '9.3476e-25', '6.0815e-26', '2.6934e-29', '1.083e-29', '5.228e-30', '3.8442e-30']
+      json lie_singular_values_B (as stored): ['4.4908e-12', '4.4906e-12', '1.9312e-12', '1.931e-12', '1.3493e-14', '1.1017e-14', '4.6849e-17', '2.8474e-17', '9.0317e-20', '7.1359e-20', '2.0948e-21', '3.0834e-24', '2.6704e-24', '2.1681e-24', '1.8511e-24', '1.1447e-24', '2.9476e-25', '2.2501e-26', '3.8944e-30', '1.3181e-30']
+C3  |det A - GA| / |GA| = 1.192e-09      (|det A| eps^6 = 1078.5284)
+    distance of det A from W: 6.813e-12
+    2x2 minors: relative distance from the kernel (span of 18 small singular vectors): max 8.581e-11  min 8.468e-15
+    nine minors (normalised): singular values ascending: 1.161e-05 2.356e-05 3.626e-03 3.971e-03 1.767e-01 2.620e-01 4.962e-01 7.097e-01 2.855e+00
+    nine entries of A: singular values of the 9 x 8 coefficient matrix (ascending): 1.470e-08 2.559e-05 2.654e-02 2.895e-01 4.684e-01 5.072e+03 3.205e+07 2.646e+15   ratio min/max 5.555e-24
+    relation sum c_ij A_ij = 0: residual 3.239e-147 ; singular values of the 3x3 matrix (c_ij), |c| = 1: 8.280e-04 2.837e-03 1.000e+00
+       ratio smallest/largest = 8.280e-04 = eps^1.71 ;  det(c)/|c|^3 = 2.349e-06
+    Lie map of det A itself: 12 smallest relative singular values: 1.296e-136 7.663e-137 2.998e-137 2.417e-137 6.038e-137 6.924e-137 9.936e-137 1.591e-136 3.075e-19 9.153e-15 9.153e-15 1.207e-14
+    json keys of interest: B is null ; lie_dims [8, 9] ; spreads ['3.6476e-22', '1.6978e-23']
+C5 GA: closure defect of brackets (relative) 1.64e-09 ; max |trace L| 4.96e-11
+      Killing form singular values (ascending, orthonormal basis of fields): 1.065e-13 2.158e-13 2.158e-13 6.475e-13 6.475e-13 8.830e-09 3.617e-05 9.999e-01   ratio 1.06e-13
+      commutant of the 8 fields on C^8: smallest singular values: 8.348e-136 3.253e-07 3.253e-07 7.108e-04
+C5 GB: closure defect of brackets (relative) 1.72e-02 ; max |trace L| 1.36e-05
+      Killing form singular values (ascending, orthonormal basis of fields): 2.210e-13 7.121e-11 4.499e-09 2.719e-08 3.314e-08 1.939e-07 2.814e-07 2.941e-04   ratio 7.51e-10
+      commutant of the 8 fields on C^8: smallest singular values: 4.452e-136 1.050e-10 6.280e-08 1.347e-06
+C5 detA (exact determinant of the json A): closure defect of brackets (relative) 2.94e+00 ; max |trace L| 1.42e-239
+      Killing form singular values (ascending, orthonormal basis of fields): 8.801e-12 2.107e-03 6.220e-03 4.254e-02 7.056e-02 2.107e-01 4.739e-01 5.822e+00   ratio 1.51e-12
+      commutant of the 8 fields on C^8: smallest singular values: 9.418e-136 3.022e-07 3.073e-07 5.549e-04
+time 48s

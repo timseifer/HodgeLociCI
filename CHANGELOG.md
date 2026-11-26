@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 165 entries)
+### Discoveries registry (142 -> 168 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -70,6 +70,14 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   one-dimensional). `leads/tenfold_coble/plane_test/exact/`, `leads/TENFOLD_COBLE_LEAD.md` section 17.
 - D-TENFOLD-MOVASATI-ORDER6 (MOD p, one prime): on the 13-dimensional piece at Movasati's point, order 6 passes for
   lambda = -1 and is obstructed for lambda = 2 modulo the first-order corrections tested.
+- D-SIXFOLD-ARC-ORDER19 (EXACT): the sixfold arc of T2 into the divisor D to order 19, unique in its nine-monomial
+  slice; the exported certificate's last two terms are not on the continuing arc. `leads/tenfold_twodet/matrices/`.
+- D-ARC-SPLITTING-NUMERICAL (floating point, four values of eps): along that arc the transported class splits F_eps
+  into two cubics -+(2187/64) l^3 eps^-6 + ...; the first has the 8 vector fields of a determinant and an explicit
+  matrix (agreement to 8e-20, its minors in the kernel of the catalecticant); no matrix for the second.
+  Blind-checked with independent code (`leads/tenfold_twodet/blind_check12/`), which corrected three statements.
+  N-MATRIX-RECOVERY-FIRST-ATTEMPTS: what failed. O-RECOVER-MATRICES-AND-LIMIT-OF-T stays open.
+  `leads/TENFOLD_TWODET_LEAD.md` section 8.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

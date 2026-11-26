@@ -69,6 +69,10 @@ tangent-space inclusion.
 
 **Next step.**
 
+UPDATE 26 Nov 2026 (night): a first batch, D-SIXFOLD-ARC-ORDER19 (the arc exactly to order 19),
+D-ARC-SPLITTING-NUMERICAL (floating point: the splitting in characteristic 0, a matrix for one of the two
+summands, none for the other) and N-MATRIX-RECOVERY-FIRST-ATTEMPTS (what failed). Still open: the second
+matrix, the series, the flat limit of T. Earlier text:
 Raise the precision: extend the arc well beyond eps^25 so that the nets are known to about eps^20 after the pole
 of order 6; then recover one matrix from the product structure of a net over the series field (its rank-4
 quadrics, or the two families of P^4's in the determinantal cubic). Alternatively solve the anisotropic ansatz

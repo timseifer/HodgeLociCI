@@ -1,0 +1,101 @@
+json eps: 1/800  keys: ['A', 'B', 'F', 'GA', 'GB', 'cat_singular_values', 'dps', 'eps', 'lie_dims', 'lie_singular_values_A', 'lie_singular_values_B', 'note', 'order', 'spreads', 'tA', 'tB', 'u']
+json F vs own F_eps (arc file):  |F_json - F_own| / |F_own| = 2.866e-63
+|GA + GB - F_eps| / |F_eps| = 7.706e-42      |GA + GB - F_eps| / |GA| = 7.710e-62
+|GA| eps^6 = 1078.446666   |GB| eps^6 = 1078.446666   |F_eps| = 2.828442
+
+================ eps = 1/800, period series truncated after order 19 ================
+C2(a) catalecticant singular values (descending):
+   12 largest : 5.250e+02 5.249e+02 3.623e+02 3.623e+02 3.622e+02 3.622e+02 2.807e+02 2.806e+02 2.806e+02 2.805e+02 1.146e+02 1.145e+02
+   next 6     : 1.195e-04 1.192e-04 2.179e-05 2.179e-05 2.179e-05 2.179e-05    divided by eps^2: 76.471 76.265 13.943 13.943 13.943 13.943
+   last 18    : 2.484e-48 2.484e-48 2.960e-49 2.959e-49 8.134e-50 9.657e-51 2.734e-54 1.232e-54 9.590e-55 2.612e-55 1.816e-55 9.412e-56 6.581e-56 4.806e-56 9.326e-57 4.918e-57 2.838e-57 2.930e-134
+   last 18 divided by eps^20: 2.86e+10 2.86e+10 3.41e+09 3.41e+09 9.38e+08 1.11e+08 3.15e+04 1.42e+04 1.11e+04 3.01e+03 2.09e+03 1.09e+03 759 554 108 56.7 32.7 3.38e-76
+C2(b) column of y5^2 in the catalecticant: max |entry| = 0.000e+00 (exact zeros in the file)
+      distance of y5^2 from the span of the 18 small singular vectors: 1.007e-257
+      144 x 120 system: smallest singular values: 1.663e-135 6.023e-50 1.261e-46 5.178e-11 1.622e-10 9.967e-08 1.115e-07 1.115e-07   largest: 2.000e+00   time 22s
+      distance from the 3-dim space W:  y5^3: 6.512e-173   F_eps: 1.070e-37
+      |M y5^3| = 3.020e-257   |M F_eps|/|F_eps| = 1.410e-44
+C2(c) random member of W: smallest relative singular values of the Lie map: 1.885e-01 1.885e-01 1.885e-01 1.885e-01
+      F_eps itself: smallest: 9.953e-01 9.953e-01 9.966e-01    y5^3: number of exactly-zero directions is 56 (trivially)
+      distance from W:  GA: 3.436e-42   GB: 3.436e-42
+      |M GA|/|GA| = 4.570e-49   |M GB|/|GB| = 4.570e-49
+C2(c,d) GA (json): 20 smallest relative singular values of the Lie map (ascending):
+       6.233e-51 1.006e-50 2.289e-50 4.583e-50 1.884e-44 1.693e-41 3.928e-41 6.765e-41
+       5.160e-28 2.399e-21 2.399e-21 3.164e-21 3.258e-21 3.262e-21 3.262e-21 3.369e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 5.1597e-28 = eps^9.40   8th = 6.765e-41 = eps^13.84   ratio 9th/8th = 7.63e+12
+       (same after projecting to own W: 8th 6.765e-41, 9th 5.1597e-28)
+C2(c,d) GB (json): 20 smallest relative singular values of the Lie map (ascending):
+       1.855e-51 5.491e-51 3.114e-42 5.549e-42 2.088e-41 2.794e-41 3.807e-41 3.928e-41
+       1.804e-38 2.251e-32 9.578e-30 1.213e-29 5.967e-25 9.826e-25 2.888e-21 3.537e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 1.8044e-38 = eps^13.00   8th = 3.928e-41 = eps^13.92   ratio 9th/8th = 459
+       (same after projecting to own W: 8th 3.928e-41, 9th 1.8044e-38)
+      json lie_singular_values_A (as stored): ['1.4718e-17', '1.4718e-17', '6.3283e-18', '6.3283e-18', '3.3689e-21', '3.2624e-21', '3.2624e-21', '3.2582e-21', '3.1638e-21', '2.3994e-21', '2.3994e-21', '5.1597e-28', '6.7647e-41', '3.9277e-41', '1.693e-41', '1.8838e-44', '4.5834e-50', '2.2887e-50', '1.0059e-50', '6.2331e-51']
+      json lie_singular_values_B (as stored): ['1.4718e-17', '1.4718e-17', '6.3283e-18', '6.3283e-18', '3.5372e-21', '2.8881e-21', '9.8256e-25', '5.9674e-25', '1.2126e-29', '9.5775e-30', '2.2508e-32', '1.8044e-38', '3.9277e-41', '3.8073e-41', '2.7938e-41', '2.0876e-41', '5.5494e-42', '3.1139e-42', '5.4907e-51', '1.855e-51']
+C3  |det A - GA| / |GA| = 8.118e-20      (|det A| eps^6 = 1078.4467)
+    distance of det A from W: 4.504e-22
+    2x2 minors: relative distance from the kernel (span of 18 small singular vectors): max 4.927e-21  min 3.722e-27
+    nine minors (normalised): singular values ascending: 7.462e-08 1.515e-07 2.901e-04 3.178e-04 2.487e-01 3.116e-01 5.143e-01 6.407e-01 2.858e+00
+    nine entries of A: singular values of the 9 x 8 coefficient matrix (ascending): 5.307e-12 1.649e-07 2.156e-03 6.316e-01 6.628e-01 4.027e+04 4.425e+10 6.561e+21   ratio min/max 8.090e-34
+    relation sum c_ij A_ij = 0: residual 4.319e-150 ; singular values of the 3x3 matrix (c_ij), |c| = 1: 2.192e-03 3.904e-03 1.000e+00
+       ratio smallest/largest = 2.193e-03 = eps^0.92 ;  det(c)/|c|^3 = 8.559e-06
+    Lie map of det A itself: 12 smallest relative singular values: 1.655e-136 9.759e-137 9.592e-137 2.201e-137 3.313e-137 7.064e-137 1.170e-136 1.235e-136 5.160e-28 2.399e-21 2.399e-21 3.164e-21
+    json keys of interest: B is null ; lie_dims [8, 8] ; spreads ['7.1913e-40', '5.4926e-41']
+C5 GA: closure defect of brackets (relative) 1.23e-18 ; max |trace L| 3.43e-21
+      Killing form singular values (ascending, orthonormal basis of fields): 2.791e-20 5.659e-20 5.659e-20 1.698e-19 1.698e-19 3.617e-13 2.315e-07 1.000e+00   ratio 2.79e-20
+      commutant of the 8 fields on C^8: smallest singular values: 1.037e-135 1.671e-10 1.671e-10 5.670e-05
+C5 GB: closure defect of brackets (relative) 1.06e-07 ; max |trace L| 2.00e-12
+      Killing form singular values (ascending, orthonormal basis of fields): 3.109e-30 3.612e-26 2.403e-17 7.688e-17 1.117e-16 6.157e-16 8.925e-16 1.097e-14   ratio 2.83e-16
+      commutant of the 8 fields on C^8: smallest singular values: 3.733e-136 3.022e-18 1.781e-14 2.164e-11
+C5 detA (exact determinant of the json A): closure defect of brackets (relative) 1.12e+00 ; max |trace L| 9.19e-222
+      Killing form singular values (ascending, orthonormal basis of fields): 9.130e-19 7.412e-04 3.524e-03 6.152e-03 4.019e-02 1.303e-01 2.653e-01 2.468e+00   ratio 3.70e-19
+      commutant of the 8 fields on C^8: smallest singular values: 8.309e-136 1.514e-10 1.550e-10 4.982e-05
+time 47s
+
+================ eps = 1/800, period series truncated after order 18 ================
+C2(a) catalecticant singular values (descending):
+   12 largest : 5.250e+02 5.249e+02 3.623e+02 3.623e+02 3.622e+02 3.622e+02 2.807e+02 2.806e+02 2.806e+02 2.805e+02 1.146e+02 1.145e+02
+   next 6     : 1.195e-04 1.192e-04 2.179e-05 2.179e-05 2.179e-05 2.179e-05    divided by eps^2: 76.471 76.265 13.943 13.943 13.943 13.943
+   last 18    : 1.131e-45 7.213e-46 1.979e-46 7.424e-47 7.419e-47 3.322e-47 2.734e-47 1.194e-47 6.565e-48 5.682e-48 5.679e-48 4.261e-48 2.961e-48 1.158e-48 3.201e-49 1.682e-49 4.586e-50 1.335e-134
+   last 18 divided by eps^19: 1.63e+10 1.04e+10 2.85e+09 1.07e+09 1.07e+09 4.79e+08 3.94e+08 1.72e+08 9.46e+07 8.19e+07 8.18e+07 6.14e+07 4.27e+07 1.67e+07 4.61e+06 2.42e+06 6.61e+05 1.92e-79
+C2(b) column of y5^2 in the catalecticant: max |entry| = 0.000e+00 (exact zeros in the file)
+      distance of y5^2 from the span of the 18 small singular vectors: 4.697e-258
+      144 x 120 system: smallest singular values: 1.448e-135 1.064e-48 8.418e-42 5.178e-11 1.622e-10 9.967e-08 1.115e-07 1.115e-07   largest: 2.000e+00   time 69s
+      distance from the 3-dim space W:  y5^3: 3.657e-175   F_eps: 1.826e-34
+      |M y5^3| = 1.409e-257   |M F_eps|/|F_eps| = 1.915e-41
+C2(c) random member of W: smallest relative singular values of the Lie map: 2.095e-01 2.095e-01 2.095e-01 2.095e-01
+      F_eps itself: smallest: 9.953e-01 9.953e-01 9.966e-01    y5^3: number of exactly-zero directions is 56 (trivially)
+      distance from W:  GA: 1.803e-39   GB: 1.803e-39
+      |M GA|/|GA| = 1.870e-44   |M GB|/|GB| = 1.870e-44
+C2(c,d) GA (json projected to W(ntr=18)): 20 smallest relative singular values of the Lie map (ascending):
+       4.132e-50 7.339e-50 1.307e-49 1.554e-49 1.895e-44 1.684e-41 3.906e-41 6.806e-41
+       5.160e-28 2.399e-21 2.399e-21 3.164e-21 3.258e-21 3.262e-21 3.262e-21 3.369e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 5.1597e-28 = eps^9.40   8th = 6.806e-41 = eps^13.84   ratio 9th/8th = 7.58e+12
+C2(c,d) GB (json projected to W(ntr=18)): 20 smallest relative singular values of the Lie map (ascending):
+       7.550e-50 1.308e-49 3.116e-42 5.555e-42 2.077e-41 2.787e-41 3.815e-41 3.906e-41
+       1.804e-38 2.251e-32 9.578e-30 1.213e-29 5.967e-25 9.826e-25 2.888e-21 3.537e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 1.8044e-38 = eps^13.00   8th = 3.906e-41 = eps^13.92   ratio 9th/8th = 462
+time 75s
+
+================ eps = 1/800, period series truncated after order 17 ================
+C2(a) catalecticant singular values (descending):
+   12 largest : 5.250e+02 5.249e+02 3.623e+02 3.623e+02 3.622e+02 3.622e+02 2.807e+02 2.806e+02 2.806e+02 2.805e+02 1.146e+02 1.145e+02
+   next 6     : 1.195e-04 1.192e-04 2.179e-05 2.179e-05 2.179e-05 2.179e-05    divided by eps^2: 76.471 76.265 13.943 13.943 13.943 13.943
+   last 18    : 5.948e-44 5.940e-44 5.196e-44 9.152e-45 8.887e-45 3.116e-45 7.881e-47 2.879e-47 1.739e-47 9.832e-48 4.507e-48 2.345e-48 1.408e-48 7.648e-49 6.145e-49 1.427e-49 1.677e-50 4.541e-134
+   last 18 divided by eps^18: 1.07e+09 1.07e+09 9.36e+08 1.65e+08 1.6e+08 5.61e+07 1.42e+06 5.19e+05 3.13e+05 1.77e+05 8.12e+04 4.23e+04 2.54e+04 1.38e+04 1.11e+04 2.57e+03 302 8.18e-82
+C2(b) column of y5^2 in the catalecticant: max |entry| = 0.000e+00 (exact zeros in the file)
+      distance of y5^2 from the span of the 18 small singular vectors: 5.270e-258
+      144 x 120 system: smallest singular values: 1.558e-135 1.036e-43 2.345e-39 5.178e-11 1.622e-10 9.967e-08 1.115e-07 1.115e-07   largest: 2.000e+00   time 95s
+      distance from the 3-dim space W:  y5^3: 2.932e-185   F_eps: 4.696e-30
+      |M y5^3| = 1.581e-257   |M F_eps|/|F_eps| = 7.154e-39
+C2(c) random member of W: smallest relative singular values of the Lie map: 2.432e-01 2.432e-01 2.432e-01 2.432e-01
+      F_eps itself: smallest: 9.953e-01 9.953e-01 9.966e-01    y5^3: number of exactly-zero directions is 56 (trivially)
+      distance from W:  GA: 2.225e-36   GB: 2.225e-36
+      |M GA|/|GA| = 4.888e-40   |M GB|/|GB| = 4.888e-40
+C2(c,d) GA (json projected to W(ntr=17)): 20 smallest relative singular values of the Lie map (ascending):
+       2.798e-45 5.112e-45 8.804e-45 1.077e-44 7.489e-42 6.698e-40 1.554e-39 4.275e-39
+       5.160e-28 2.399e-21 2.399e-21 3.164e-21 3.258e-21 3.262e-21 3.262e-21 3.369e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 5.1597e-28 = eps^9.40   8th = 4.275e-39 = eps^13.22   ratio 9th/8th = 1.21e+11
+C2(c,d) GB (json projected to W(ntr=17)): 20 smallest relative singular values of the Lie map (ascending):
+       5.333e-45 9.238e-45 2.828e-40 5.301e-40 8.662e-40 1.554e-39 2.698e-39 3.287e-39
+       1.768e-38 2.251e-32 9.578e-30 1.213e-29 5.967e-25 9.826e-25 2.888e-21 3.537e-21 6.328e-18 6.328e-18 1.472e-17 1.472e-17
+       9th = 1.7675e-38 = eps^13.00   8th = 3.287e-39 = eps^13.26   ratio 9th/8th = 5.38
+time 101s
