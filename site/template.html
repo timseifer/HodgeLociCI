@@ -84,6 +84,20 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .tower div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.78rem;color:var(--muted)}
 .tower div b{display:block;color:var(--ink);font:600 .95rem var(--serif);margin:1px 0}
 .tower div.hi{border-color:var(--accent)}
+.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:4px 0 12px;counter-reset:st}
+@media (max-width:560px){.chain{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.chain .st{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.76rem;color:var(--muted)}
+.chain .st b{display:block;color:var(--ink);font:600 .9rem var(--serif);margin-bottom:2px}
+.chain .st b::before{counter-increment:st;content:counter(st) ". ";color:var(--faint);font-weight:500}
+.surf{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 10px}
+.surf button{font:inherit;font-size:.82rem;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.surf button.on{border-color:var(--accent);background:var(--band)}
+.sres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sres .metric{background:var(--band);border-radius:8px;padding:8px 10px}
+.sres .l{font-size:.74rem;color:var(--muted)}.sres .v{font:600 1.15rem var(--serif)}
+.rungs{width:100%;border-collapse:collapse;font-size:.8rem;margin-top:12px}
+.rungs th,.rungs td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left}
+.rungs th{color:var(--muted);font-weight:500}
 .pairhead{font-size:.8rem;color:var(--muted);margin:14px 0 6px}
 .pairing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .pairing div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.78rem;color:var(--muted);position:relative}
@@ -91,7 +105,7 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .pairing div.hi{border-color:var(--accent)}
 .pairing .pk{display:table;margin-top:6px;font-size:.72rem;padding:1px 7px;border-radius:999px;border:1px solid var(--line)}
 .pairing .pk.control{color:var(--ok)}
-.pairing .pk.candidate{color:var(--pend)}
+.pairing .pk.candidate,.pairing .pk.proposed{color:var(--pend)}
 
 /* overview */
 .overview{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
@@ -399,6 +413,32 @@ function linkify(text){
 
 // ---------- Headline results ----------
 const FIGURES = {
+  "k-trivial-chain": function(h){
+    const box=el("div",{class:"hlfig"});
+    const steps=[["K_S = 0","the surface has a holomorphic 2-form"],["One node relation","the residue theorem"],["disc = 2 × nodes","= 8 × deg S (Chern classes)"],["deg S = 18 − 2χ","Riemann–Roch in P^8"]];
+    const ch=el("div",{class:"chain"});
+    steps.forEach(([a,b])=>ch.append(el("div",{class:"st"},el("b",{},a),b)));
+    const S={
+      "K3":{chi:"2",deg:"14",nodes:"56",rel:"Yes",disc:"14",coef:"+1",note:"Discriminant 14 belongs only to P1 + P2: the special coefficient +1 (Pfaffian cubic sections)."},
+      "Abelian":{chi:"0",deg:"18",nodes:"72",rel:"Yes",disc:"18",coef:"−1",note:"Discriminant 18 belongs only to P1 − P2: the special coefficient −1 (Coble cubic sections)."},
+      "Enriques":{chi:"1",deg:"16",nodes:"64",rel:"No",disc:"none",coef:"none",note:"Canonical class of order 2: the relation exists only in the twisted system K_S + 4h, so no Hodge class comes from it."}};
+    const bar=el("div",{class:"surf",role:"group","aria-label":"Choose a surface"});
+    const vals={}, mk=(k,l)=>{ vals[k]=el("div",{class:"v"}); return el("div",{class:"metric"},el("div",{class:"l"},l),vals[k]); };
+    const grid=el("div",{class:"sres"},mk("chi","χ(O_S)"),mk("deg","Degree in P^8"),mk("nodes","Nodes (tenfold)"),mk("rel","Relation?"),mk("disc","Discriminant"),mk("coef","Coefficient"));
+    const note=el("p",{class:"cap"});
+    const btns={};
+    function pick(k){ Object.keys(btns).forEach(x=>btns[x].classList.toggle("on",x===k)); const s=S[k];
+      ["chi","deg","nodes","rel","disc","coef"].forEach(f=>vals[f].textContent=s[f]);
+      vals.rel.style.color=s.rel==="Yes"?"var(--ok)":"var(--no)"; note.textContent=s.note; }
+    Object.keys(S).forEach(k=>{ const b=el("button",{type:"button"},k+" surface"); b.onclick=()=>pick(k); btns[k]=b; bar.append(b); });
+    const tbl=el("table",{class:"rungs"},
+      el("tr",{},el("th",{},"Nodes on a section"),el("th",{},"Sixfold"),el("th",{},"Eightfold"),el("th",{},"Tenfold")),
+      el("tr",{},el("td",{},"+1 (K3-type)"),el("td",{},"14"),el("td",{},"28"),el("td",{},"56")),
+      el("tr",{},el("td",{},"−1 (abelian-type)"),el("td",{},"18"),el("td",{},"36"),el("td",{},"72")));
+    box.append(ch,bar,grid,note,tbl,el("p",{class:"cap"},"MOD p node counts; the chain is an argument plus an AI proof, unreviewed."));
+    pick("K3");
+    return box;
+  },
   "coble-healing": function(h){
     const box=el("div",{class:"hlfig"});
     const s=sv("svg",{viewBox:"0 0 520 230",role:"img","aria-label":"An elliptic scroll healing into an abelian surface"});
@@ -442,10 +482,10 @@ const FIGURES = {
       el("div",{class:"tower"},
         el("div",{},"Cubic fourfolds",el("b",{},"Sextic del Pezzo"),"Hassett's C_18"),
         el("div",{},"Cubic eightfolds",el("b",{},"Segre P^2 × P^2"),"inside the TD family"),
-        el("div",{class:"hi"},"Cubic tenfolds",el("b",{},"Coble cubic"),"candidate, awaiting review")));
+        el("div",{class:"hi"},"Cubic tenfolds",el("b",{},"Coble cubic"),"proposed, awaiting review")));
     if (h && h.pairing && h.pairing.length){
       box.append(el("div",{class:"pairhead"},"Two special coefficients, two kinds of surface with trivial canonical class"),
-        el("div",{class:"pairing"},...h.pairing.map(([k,n,d,kind])=>el("div",{class:kind==="candidate"?"hi":""},k,el("b",{},n),d,el("span",{class:"pk "+kind},kind)))));
+        el("div",{class:"pairing"},...h.pairing.map(([k,n,d,kind])=>el("div",{class:(kind==="candidate"||kind==="proposed")?"hi":""},k,el("b",{},n),d,el("span",{class:"pk "+kind},kind)))));
     }
     return box;
   }

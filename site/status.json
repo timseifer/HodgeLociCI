@@ -3,9 +3,32 @@
   "headline": "Main target: a specific smooth hypersurface in a family where the Hodge conjecture is open, with a class proved Hodge and no known algebraic cycle (\"a Hodge class not known to be algebraic\"). No candidate so far. The open lead on cubic tenfolds now has an explanation by an explicit family with algebraic cycles: the cycle's self-intersection is -144 where a multiple of h^5 would have 48 (two paper arguments by an AI with mod p inputs, not yet read by a mathematician), and the family passes orders 2 and 3 exactly (mod p). If the arguments hold, the class is algebraic there; it is NOT a candidate.",
   "headlines": [
     {
+      "date": "26 Nov 2026",
+      "title": "Why the special coefficients are +1 and \u22121: K3 and abelian surfaces",
+      "tag": "Explained by a short argument \u00b7 AI-written, unreviewed",
+      "status": "PAPER_ARGUMENT_AI",
+      "summary": "For two planes meeting in codimension 3 on cubic hypersurfaces, only the coefficients +1 and \u22121 gain extra room, and nobody had a geometric reason why. The agents' explanation: a hyperplane section's nodes carry one relation exactly when the surface they lie on has trivial canonical class (the residue theorem for its holomorphic 2-form); the class's discriminant is then twice the number of nodes, and in P^8 the surface has degree 18 \u2212 2\u03c7(O_S). That gives 14 for a K3 surface, the discriminant of the +1 class only, and 18 for an abelian surface, the discriminant of the \u22121 class only.",
+      "numbers": "Node counts on sixfolds, eightfolds and tenfolds: 14 / 28 / 56 for +1 (K3-type) and 18 / 36 / 72 for \u22121 (MOD p). Enriques surfaces (canonical class of order 2) occur, with 64 nodes and no relation: the relation appears only in a twisted system. A bielliptic surface tried is not the singular locus of any cubic. Blind-checked MOD p.",
+      "open": "What is forced is the discriminant; that the Pfaffian and Coble families carry classes of the two-plane lattice comes from earlier entries. For the abelian surface no smooth 5-fold through it is known, so the identity applies there only by an extension (an argument, not a proof). The relation-iff-K=0 step is an argument; the Chern-class identity is an AI proof; most numbers are mod p. The table of K-trivial surfaces carrying such cubics is in Piroddi\u2013R\u00edos Ortiz\u2013Rojas\u2013Song, arXiv:2606.10884; the link to nodes, discriminants and Hodge classes was not found there.",
+      "figure": "k-trivial-chain",
+      "registry": [
+        "D-TENFOLD-K3-ABELIAN-PAIRING",
+        "D-NODES-DISCRIMINANT-IDENTITY",
+        "D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD",
+        "D-CUBIC-SEVENFOLD-ENRIQUES",
+        "N-BIELLIPTIC-NOT-SINGULAR-LOCUS"
+      ],
+      "links": [
+        [
+          "Write-up, section 15",
+          "https://github.com/timseifer/HodgeLociCI/blob/main/leads/TENFOLD_COBLE_LEAD.md#15-the-k3--abelian-pairing-coefficient-1--coefficient--1-explained-not-a-coincidence-26-nov-2026"
+        ]
+      ]
+    },
+    {
       "date": "25 Nov 2026",
-      "title": "A 1917 cubic may explain a 2019 mystery on cubic tenfolds",
-      "tag": "Candidate explanation \u00b7 awaiting review by a mathematician",
+      "title": "A 1917 cubic and a hidden Hodge locus on cubic tenfolds",
+      "tag": "Proposed explanation \u00b7 the class is expected to be algebraic \u00b7 awaiting review by a mathematician",
       "status": "MOD_P",
       "summary": "For Movasati's pair of 5-planes on cubic tenfolds, the class with coefficient \u22121 seemed to stay a Hodge class on a region W one dimension larger than anything known could explain, a question Movasati left open in 2019. The agents find an explicit family that matches W: tenfolds whose P^8-section is a Coble cubic, the cubic sevenfold singular along an abelian surface (Coble, 1917). Its boundary, where the abelian surface breaks into an elliptic scroll, is the known family F_T, and each member carries an algebraic 5-fold swept by 4-planes over a theta curve that would carry the class. The same mechanism, run on the known coefficient +1, finds a Pfaffian cubic singular along a K3 surface: the two special coefficients match the two kinds of surface with trivial canonical class.",
       "numbers": "Codimension 54 against 55, three moduli against two, leaving F_T in exactly the extra direction: mod p at two primes, exact over QQ at two points, blind-checked mod p. Evening: a hyperplane section through the P^8 has exactly 72 nodes with one relation among them; self-intersection \u2212144 against 48 (the same ladder reproduces the known \u221236); the explicit arc passes orders 2 and 3 exactly. All mod p at two primes; the inputs and order 2 blind-checked. Late evening: on the known coefficient +1 (Pfaffian cubic, K3 surface, 56 nodes) the same ladder returns the known lattice numbers, a second test of the method. Night: one member is written down with rational coefficients; over QQ it is smooth and its hyperplane section has exactly 72 nodes with exactly one relation (exact computation plus a specialization step from three primes; blind-checked). 26 Nov: at the Fermat tenfold the family carries a three-plane class, not Movasati's own; for that class, explicit arcs of the family with no free terms satisfy all period equations to orders 10\u201312 at two primes, and every altered version of the defining relation fails at the order predicted in advance (blind-checked). Later: a 5-plane inside a tenfold of the family meets the 4-plane cycle transversally in 8 points, where a multiple of h^5 would give 4 (mod p, two primes, predicted in advance, blind-checked): the class statement no longer rests on the two paper arguments. The parallel with the coefficient +1 (a K3 surface, 56 nodes) is explained: the discriminant of the class of a smooth cycle through the nodes is 2 x (number of nodes) = 8 x (degree of the surface), 14 for a K3 surface and 18 for an abelian surface in P^8 (an AI argument, unreviewed; computations mod p).",
@@ -39,10 +62,10 @@
           "control"
         ],
         [
-          "Coefficient \u22121 (the mystery)",
+          "Coefficient \u22121 (via the C_18 family F_T)",
           "Coble cubic",
           "singular along an abelian surface; 72 nodes, one relation",
-          "candidate"
+          "proposed"
         ]
       ]
     }
