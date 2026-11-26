@@ -1,0 +1,18 @@
+# p = 32029 seed 1 slice 1 lambda -1 case d ; line 2: free net directions ; line 3: D ; then T_1.. one per line
+terms: 9 [50, 31, 31, 32, 32, 32, 19, 19, 19]
+T_n equal to the arc8 file, n = 1..8: [True, True, True, True, True, False, False, False]
+E_n sizes: [1, 50, 694, 5232, 27777, 115744, 402920, 1220280, 3307019, 8184989]  time 7.1s
+order 1: non-zero entries among 45: 0   time 7.2s
+order 2: non-zero entries among 45: 0   time 7.2s
+order 3: non-zero entries among 45: 0   time 7.2s
+order 4: non-zero entries among 45: 0   time 7.3s
+order 5: non-zero entries among 45: 0   time 7.5s
+order 6: non-zero entries among 45: 0   time 8.2s
+order 7: non-zero entries among 45: 0   time 10.3s
+order 8: non-zero entries among 45: 0   time 16.3s
+order 9: non-zero entries among 45: 0   time 32.2s
+RESULT own arc9_32029_seed1_lam-1_d.txt first failing order up to 9 : None
+
+real	0m32.297s
+user	0m27.558s
+sys	0m4.485s

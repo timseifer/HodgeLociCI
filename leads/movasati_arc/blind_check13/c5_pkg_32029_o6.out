@@ -1,0 +1,7 @@
+RESULT pkg10 file arc8_32029_seed1_lam-1_d.txt p 32029 forms 221 terms 8
+RESULT pkg10 [P1]-[P2] tenfold, order 6: pass true firstFailingOrder null numberOfForms 221  cpu 38.9469
+RESULT pkg10 [P1]+[P2] tenfold firstFailingOrder 1
+
+real	1m21.448s
+user	0m55.786s
+sys	0m0.176s

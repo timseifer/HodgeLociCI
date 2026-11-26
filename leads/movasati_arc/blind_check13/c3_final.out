@@ -1,0 +1,38 @@
+== arc8_32029_seed1_lam2_d.txt p 32029 lambda 2
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 9]
+linear response maps coker L <- ker L (26 x 101):  rank level1 (T_(n-1)) = 0  level2 (T_(n-2)) = 0  level3 (T_(n-3)) = 7  level4 (order 6 <- T_2) = 11  ; rank [level3 | level4] = 11
+order-6 defect e6 in im(level3): False  ; in im(level3) + im(level4): True
+ker(level3) in ker L: dim 94  ; T_1 in it: True  ; level4 restricted to ker(level3): rank 7  ; rank of [level3 | level4 on ker level3 | e6] - rank without e6: 1
+functionals vanishing on im(level3): dim 19  ; of these, non-zero on the order-6 defect e6: 2
+(I1) 8 random dense points (k2,k3,k4,k5) in (ker L)^4:  ob3 = 0: 8   ob4 = 0: 8   ob5 = level3 k2: 8
+(I2) 10 random dense points, k2 in ker(level3), k3,k4,k5 in ker L:  ob6 - e6 non-zero: 10 ;  ob6 - e6 in im(level3): 10 ;  l.ob6 = l.e6 for all 19 functionals: 10
+CONCLUSION (MOD p = 32029, random identity tests): order 5 forces k2 in ker(level3); then ob6 = e6 mod im(level3), e6 not in im(level3):
+   no T_2..T_6 in the full space of squarefree cubics satisfies orders 2..6 with this T_1.
+time 11.2s (total 21.8s)
+
+real	0m22.056s
+== arc8_31981_seed2_lam2_d.txt p 31981 lambda 2
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 9]
+linear response maps coker L <- ker L (26 x 101):  rank level1 (T_(n-1)) = 0  level2 (T_(n-2)) = 0  level3 (T_(n-3)) = 7  level4 (order 6 <- T_2) = 11  ; rank [level3 | level4] = 11
+order-6 defect e6 in im(level3): False  ; in im(level3) + im(level4): True
+ker(level3) in ker L: dim 94  ; T_1 in it: True  ; level4 restricted to ker(level3): rank 7  ; rank of [level3 | level4 on ker level3 | e6] - rank without e6: 1
+functionals vanishing on im(level3): dim 19  ; of these, non-zero on the order-6 defect e6: 2
+(I1) 8 random dense points (k2,k3,k4,k5) in (ker L)^4:  ob3 = 0: 8   ob4 = 0: 8   ob5 = level3 k2: 8
+(I2) 10 random dense points, k2 in ker(level3), k3,k4,k5 in ker L:  ob6 - e6 non-zero: 10 ;  ob6 - e6 in im(level3): 10 ;  l.ob6 = l.e6 for all 19 functionals: 10
+CONCLUSION (MOD p = 31981, random identity tests): order 5 forces k2 in ker(level3); then ob6 = e6 mod im(level3), e6 not in im(level3):
+   no T_2..T_6 in the full space of squarefree cubics satisfies orders 2..6 with this T_1.
+time 10.0s (total 20.2s)
+
+real	0m20.602s
+== arc8_32029_seed1_lam-1_d.txt p 32029 lambda -1
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 0]
+linear response maps coker L <- ker L (26 x 101):  rank level1 (T_(n-1)) = 0  level2 (T_(n-2)) = 0  level3 (T_(n-3)) = 7  level4 (order 6 <- T_2) = 11  ; rank [level3 | level4] = 11
+order-6 defect e6 in im(level3): True  ; in im(level3) + im(level4): True
+ker(level3) in ker L: dim 94  ; T_1 in it: True  ; level4 restricted to ker(level3): rank 7  ; rank of [level3 | level4 on ker level3 | e6] - rank without e6: 0
+functionals vanishing on im(level3): dim 19  ; of these, non-zero on the order-6 defect e6: 0
+(I1) 8 random dense points (k2,k3,k4,k5) in (ker L)^4:  ob3 = 0: 8   ob4 = 0: 8   ob5 = level3 k2: 8
+(I2) 10 random dense points, k2 in ker(level3), k3,k4,k5 in ker L:  ob6 - e6 non-zero: 10 ;  ob6 - e6 in im(level3): 10 ;  l.ob6 = l.e6 for all 19 functionals: 10
+CONCLUSION: the order-6 defect of the base jet is zero (no obstruction at order 6 for this jet).
+time 9.2s (total 17.7s)
+
+real	0m17.996s

@@ -1,0 +1,84 @@
+== arc8_32029_seed1_lam-1_d.txt  p 32029  z 31556  lambda -1
+first-order matrix of [P1]+lam[P2]: 45 x 120, rank 19 ; [P1] alone rank 10 ; [P2] alone rank 10 ; stacked [P1],[P2] rank 20
+L T_1 = 0: True  ; L_[P1] T_1 = 0: False  ; L_[P2] T_1 = 0: False
+dim (I(P1)+J)_3/J_3 = 110  dim (I(P2)+J)_3/J_3 = 110  dim of the sum = 120
+T_V = tangent space of the locus where both planes persist: dim 100  codim 20
+   L vanishes on T_V: True  ; ker of stacked [P1],[P2] first-order maps equals T_V: True
+   T_1 in (I(P1)+J)_3: False  ; T_1 in (I(P2)+J)_3: False  ; T_1 in T_V: False
+ker L: dim 101  ; ker L = T_V + <T_1>: True
+ker L inside the 20 squarefree cubics in x_0..x_5: dim 19  ; of which in T_V: 18  => an excess direction y_0 in x_0..x_5 exists: True
+quadrics in x_0..x_5 mod squares: dim (f)_2 = 12  dim (h)_2 = 12  dim sum = 15  => intersection dim 9  ; rank of the nine f_i h_j: 9
+x_7-part and x_9-part of T_1 restricted to {f_3 = f_4 = 0} lie in span(f_i h_j): True True  ; monomials x_i x_7 x_9 in the restriction: 0  ; cubic monomials in x_0..x_5: 20
+A = [[19984, 21672, 20255], [29896, 11372, 26150], [25067, 6961, 20312]]
+B = [[2583, 21125, 20263], [27136, 23910, 1294], [20143, 14760, 11105]]
+rank A = 2  rank B = 2  rank [A;B] = 2  rank [A|B] = 2
+   common kernel (ker A = ker B): True  ; common cokernel: True
+   A, B proportional: False
+   y1*y2-coefficients of the nine 2x2 minors of A y1 + B y2: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+   y1^2-coefficients (minors of A): [20822, 25259, 14382, 30551, 3114, 23720, 9819, 13205, 17602]
+   y2^2-coefficients (minors of B): [14660, 28490, 29366, 26989, 6198, 17651, 5658, 23012, 22013]
+   det A, det B, det(A+B), det(A+2B): 0 0 0 0  ; rank(A + t B) for t = 1, 2, 3: [2, 2, 2]
+T_1: monomials 50  ; involving x_8 or x_9: 15  ; involving x_6 or x_7: 15  ; involving x_6 or x_8: 0
+== arc8_31981_seed2_lam-1_d.txt  p 31981  z 12637  lambda -1
+first-order matrix of [P1]+lam[P2]: 45 x 120, rank 19 ; [P1] alone rank 10 ; [P2] alone rank 10 ; stacked [P1],[P2] rank 20
+L T_1 = 0: True  ; L_[P1] T_1 = 0: False  ; L_[P2] T_1 = 0: False
+dim (I(P1)+J)_3/J_3 = 110  dim (I(P2)+J)_3/J_3 = 110  dim of the sum = 120
+T_V = tangent space of the locus where both planes persist: dim 100  codim 20
+   L vanishes on T_V: True  ; ker of stacked [P1],[P2] first-order maps equals T_V: True
+   T_1 in (I(P1)+J)_3: False  ; T_1 in (I(P2)+J)_3: False  ; T_1 in T_V: False
+ker L: dim 101  ; ker L = T_V + <T_1>: True
+ker L inside the 20 squarefree cubics in x_0..x_5: dim 19  ; of which in T_V: 18  => an excess direction y_0 in x_0..x_5 exists: True
+quadrics in x_0..x_5 mod squares: dim (f)_2 = 12  dim (h)_2 = 12  dim sum = 15  => intersection dim 9  ; rank of the nine f_i h_j: 9
+x_7-part and x_9-part of T_1 restricted to {f_3 = f_4 = 0} lie in span(f_i h_j): True True  ; monomials x_i x_7 x_9 in the restriction: 0  ; cubic monomials in x_0..x_5: 20
+A = [[4349, 8511, 13793], [141, 25937, 16732], [13657, 12871, 18180]]
+B = [[19051, 9912, 25123], [13184, 31420, 17955], [20702, 11118, 6303]]
+rank A = 2  rank B = 2  rank [A;B] = 2  rank [A|B] = 2
+   common kernel (ker A = ker B): True  ; common cokernel: True
+   A, B proportional: False
+   y1*y2-coefficients of the nine 2x2 minors of A y1 + B y2: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+   y1^2-coefficients (minors of A): [18253, 16721, 17065, 25437, 4877, 2730, 23822, 221, 9278]
+   y2^2-coefficients (minors of B): [20582, 29495, 18058, 22708, 455, 20983, 15508, 22867, 15620]
+   det A, det B, det(A+B), det(A+2B): 0 0 0 0  ; rank(A + t B) for t = 1, 2, 3: [2, 2, 2]
+T_1: monomials 50  ; involving x_8 or x_9: 15  ; involving x_6 or x_7: 15  ; involving x_6 or x_8: 0
+== arc8_32029_seed1_lam2_d.txt  p 32029  z 31556  lambda 2
+first-order matrix of [P1]+lam[P2]: 45 x 120, rank 19 ; [P1] alone rank 10 ; [P2] alone rank 10 ; stacked [P1],[P2] rank 20
+L T_1 = 0: True  ; L_[P1] T_1 = 0: False  ; L_[P2] T_1 = 0: False
+dim (I(P1)+J)_3/J_3 = 110  dim (I(P2)+J)_3/J_3 = 110  dim of the sum = 120
+T_V = tangent space of the locus where both planes persist: dim 100  codim 20
+   L vanishes on T_V: True  ; ker of stacked [P1],[P2] first-order maps equals T_V: True
+   T_1 in (I(P1)+J)_3: False  ; T_1 in (I(P2)+J)_3: False  ; T_1 in T_V: False
+ker L: dim 101  ; ker L = T_V + <T_1>: True
+ker L inside the 20 squarefree cubics in x_0..x_5: dim 19  ; of which in T_V: 18  => an excess direction y_0 in x_0..x_5 exists: True
+quadrics in x_0..x_5 mod squares: dim (f)_2 = 12  dim (h)_2 = 12  dim sum = 15  => intersection dim 9  ; rank of the nine f_i h_j: 9
+x_7-part and x_9-part of T_1 restricted to {f_3 = f_4 = 0} lie in span(f_i h_j): True True  ; monomials x_i x_7 x_9 in the restriction: 0  ; cubic monomials in x_0..x_5: 20
+A = [[19984, 21672, 20255], [29896, 11372, 26150], [25067, 6961, 20312]]
+B = [[2583, 21125, 20263], [27136, 23910, 1294], [20143, 14760, 11105]]
+rank A = 2  rank B = 2  rank [A;B] = 2  rank [A|B] = 2
+   common kernel (ker A = ker B): True  ; common cokernel: True
+   A, B proportional: False
+   y1*y2-coefficients of the nine 2x2 minors of A y1 + B y2: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+   y1^2-coefficients (minors of A): [20822, 25259, 14382, 30551, 3114, 23720, 9819, 13205, 17602]
+   y2^2-coefficients (minors of B): [14660, 28490, 29366, 26989, 6198, 17651, 5658, 23012, 22013]
+   det A, det B, det(A+B), det(A+2B): 0 0 0 0  ; rank(A + t B) for t = 1, 2, 3: [2, 2, 2]
+T_1: monomials 50  ; involving x_8 or x_9: 15  ; involving x_6 or x_7: 15  ; involving x_6 or x_8: 0
+== arc8_31981_seed2_lam2_d.txt  p 31981  z 12637  lambda 2
+first-order matrix of [P1]+lam[P2]: 45 x 120, rank 19 ; [P1] alone rank 10 ; [P2] alone rank 10 ; stacked [P1],[P2] rank 20
+L T_1 = 0: True  ; L_[P1] T_1 = 0: False  ; L_[P2] T_1 = 0: False
+dim (I(P1)+J)_3/J_3 = 110  dim (I(P2)+J)_3/J_3 = 110  dim of the sum = 120
+T_V = tangent space of the locus where both planes persist: dim 100  codim 20
+   L vanishes on T_V: True  ; ker of stacked [P1],[P2] first-order maps equals T_V: True
+   T_1 in (I(P1)+J)_3: False  ; T_1 in (I(P2)+J)_3: False  ; T_1 in T_V: False
+ker L: dim 101  ; ker L = T_V + <T_1>: True
+ker L inside the 20 squarefree cubics in x_0..x_5: dim 19  ; of which in T_V: 18  => an excess direction y_0 in x_0..x_5 exists: True
+quadrics in x_0..x_5 mod squares: dim (f)_2 = 12  dim (h)_2 = 12  dim sum = 15  => intersection dim 9  ; rank of the nine f_i h_j: 9
+x_7-part and x_9-part of T_1 restricted to {f_3 = f_4 = 0} lie in span(f_i h_j): True True  ; monomials x_i x_7 x_9 in the restriction: 0  ; cubic monomials in x_0..x_5: 20
+A = [[4349, 8511, 13793], [141, 25937, 16732], [13657, 12871, 18180]]
+B = [[19051, 9912, 25123], [13184, 31420, 17955], [20702, 11118, 6303]]
+rank A = 2  rank B = 2  rank [A;B] = 2  rank [A|B] = 2
+   common kernel (ker A = ker B): True  ; common cokernel: True
+   A, B proportional: False
+   y1*y2-coefficients of the nine 2x2 minors of A y1 + B y2: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+   y1^2-coefficients (minors of A): [18253, 16721, 17065, 25437, 4877, 2730, 23822, 221, 9278]
+   y2^2-coefficients (minors of B): [20582, 29495, 18058, 22708, 455, 20983, 15508, 22867, 15620]
+   det A, det B, det(A+B), det(A+2B): 0 0 0 0  ; rank(A + t B) for t = 1, 2, 3: [2, 2, 2]
+T_1: monomials 50  ; involving x_8 or x_9: 15  ; involving x_6 or x_7: 15  ; involving x_6 or x_8: 0

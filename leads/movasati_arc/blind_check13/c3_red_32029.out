@@ -1,0 +1,16 @@
+== arc8_32029_seed1_lam2_d.txt p 32029 lambda 2
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 9]
+linear response maps coker L <- ker L (26 x 101):  rank level1 (T_(n-1)) = 0  level2 (T_(n-2)) = 0  level3 (T_(n-3)) = 7  level4 (order 6 <- T_2) = 11  ; rank [level3 | level4] = 11
+order-6 defect e6 in im(level3): False  ; in im(level3) + im(level4): True
+ker(level3) in ker L: dim 94  ; T_1 in it: True  ; level4 restricted to ker(level3): rank 7  ; rank of [level3 | level4 on ker level3 | e6] - rank without e6: 1
+-- random tests (dense random points)
+   ob3 == 0: True  ob4 == 0: True  ; ob5 depends on k3,k4: False  ; ob6 depends on k4,k5: False  ; ob6 depends on k3: True
+   ob3 == 0: True  ob4 == 0: True  ; ob5 depends on k3,k4: False  ; ob6 depends on k4,k5: False  ; ob6 depends on k3: True
+   ob3 == 0: True  ob4 == 0: True  ; ob5 depends on k3,k4: False  ; ob6 depends on k4,k5: False  ; ob6 depends on k3: True
+ob5(k2) = level3 k2 + q(k2), q quadratic: linear part agrees with level3: True  ; no cubic part: True  ; dim span of q-values on ker L (40 samples): 0  ; im(level3) meets that span in dim 0
+q restricted to ker(level3) (94-dim): dim span of values (40 samples): 0
+time 57.6s
+
+real	0m57.743s
+user	0m54.252s
+sys	0m2.389s

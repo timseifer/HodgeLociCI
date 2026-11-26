@@ -508,6 +508,9 @@ version of the rank contrast at the Movasati point; no arcs outside the cone-typ
 
 **Next step.**
 
+UPDATE 26 Nov 2026 (night): at the eightfold Movasati point there is now an arc outside the cone-type family for
+lambda = -1 (order 8, MOD p), and lambda = 2 is obstructed at order 6 on such directions in transversal slices:
+D-MOVASATI-POINT-ARC-ORDER8. Earlier text:
 At X1 for lambda = 2: the quartic tangent cone inside W' (the four linear forms m_a are known at one prime;
 compute the next order on {m_a = 0}); and run the order-3 analysis of X1 at the two types [6F 2T 2T], [4F 2T 2T
 2F].
@@ -979,7 +982,9 @@ a fermatExtendArc obstruction at order > 4 here as final without testing removab
 **Next step.**
 
 ```text
-UPDATE 26 Nov 2026 (evening): the order-4 sentence of this entry is corrected by C-TENFOLD-ORDER4-RANK2 (special
+UPDATE 26 Nov 2026 (night): at Movasati's point, directions with C = 0 and A, B non-zero: lambda = -1 to order 8
+(MOD p, via the eightfold; the tenfold's own 221 equations hold), lambda = 2 obstructed at order 6:
+D-MOVASATI-POINT-ARC-ORDER8. Earlier updates follow.     UPDATE 26 Nov 2026 (evening): the order-4 sentence of this entry is corrected by C-TENFOLD-ORDER4-RANK2 (special
 nets of rank 2 and 3 pass order 4; D-TENFOLD-ORDER4-MODEL-CONE), and the closure of the two-determinant family
 (codimension 52, an algebraic class) passes through this point CONDITIONALLY on the sixfold identification
 (D-TENFOLD-CONE-POINTS-TWO-DET). The lead W in the Segre directions is not touched. Earlier updates:

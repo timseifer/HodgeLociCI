@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 168 entries)
+### Discoveries registry (142 -> 169 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -78,6 +78,10 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   Blind-checked with independent code (`leads/tenfold_twodet/blind_check12/`), which corrected three statements.
   N-MATRIX-RECOVERY-FIRST-ATTEMPTS: what failed. O-RECOVER-MATRICES-AND-LIMIT-OF-T stays open.
   `leads/TENFOLD_TWODET_LEAD.md` section 8.
+- D-MOVASATI-POINT-ARC-ORDER8 (MOD p, two primes): at Movasati's own point, in a direction that is not a cone over a
+  sixfold, [P1] - [P2] stays Hodge to order 9 along an arc that is unique in a transversal slice (eightfold; the
+  tenfold's own 221 equations hold to order 8 by the cone map); lambda = 2 is obstructed at order 6 in the same
+  slices. `leads/movasati_arc/`, `leads/TENFOLD_TWODET_LEAD.md` section 9. Blind-checked.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

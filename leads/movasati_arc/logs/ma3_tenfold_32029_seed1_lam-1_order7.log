@@ -1,0 +1,6 @@
+the same root of unity in both rings: true
+tenfold, Movasati's pair, p = 32029, lambda = -1 : equations 221 ; rank L = 38 ; rank [L_P1; L_P2] = 39
+T_1 in ker L: true ; not in ker L_P1: true ; variables x_10, x_11 absent from the arc: true
+RESULT tenfold: fermatVerifyArc on 7 terms: pass true ; first failing order null ; forms 221 ; cpu 102.65
+RESULT control, class [P1] + [P2], first 5 terms: pass false ; first failing order 1
+DONE

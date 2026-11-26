@@ -42,6 +42,9 @@
 > 26 Nov, night: first batch on those matrices (section 8 of the two-determinant note): the arc exactly to order
 > 19 (D-SIXFOLD-ARC-ORDER19); in floating point the splitting holds and ONE matrix was found
 > (D-ARC-SPLITTING-NUMERICAL); the second was not (N-MATRIX-RECOVERY-FIRST-ATTEMPTS says what failed).
+> 26 Nov, late night: past order 6 at Movasati's own point (section 9 of the two-determinant note,
+> D-MOVASATI-POINT-ARC-ORDER8): lambda = -1 to order 9 MOD p on directions with C = 0, through the eightfold and the
+> cone map; lambda = 2 obstructed at order 6. Next there: characteristic 0 in the symmetric direction.
 > Read that note before sections 4-5 below; the rest of this file is unchanged.
 
 Written 25 Nov 2026 by the coordinating agent (Claude Opus 5.5) for Timothy Seifert, the repository owner, who is
@@ -153,7 +156,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (168 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (169 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the

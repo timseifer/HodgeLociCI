@@ -474,3 +474,86 @@ Report, scripts, outputs: `leads/tenfold_twodet/blind_check12/`.
   4. nothing beyond that count supports "G_B is a determinant": its fields were not shown to form sl_3.
 - Not checked by anyone: uniqueness of the pair (G_A, G_B) in the 3-dimensional space beyond what the eigenvalue
   problem finds; orders beyond 19; anything about a matrix B.
+
+## 9. Past order 6 at Movasati's own point, in a direction that is not a cone over a sixfold (26 Nov, 22:05 to 23:55 UTC)
+
+Owner: "move forward with the next most exciting lead"; "is there anything that comes out of the work we just did
+and the big headline results ... going out to 6". Pre-registration and outcomes: `leads/movasati_arc/PREREG_arc.md`;
+files: `leads/movasati_arc/README.md`. Registry: D-MOVASATI-POINT-ARC-ORDER8. Everything here is MOD p.
+
+### 9.0 Answer
+
+Yes. The weakest number on the headline card was "at Movasati's point the evidence stops at order 6, at one prime
+and one direction". With the idea that took T2's sixfold arc from order 7 to 19 (do not let the engine choose the
+undetermined terms; solve for the arc in a slice in which it is unique), and one more observation (below), it is
+now:
+
+- **lambda = -1 goes on:** order 9 at one prime and direction, order 7 at a second prime and a second direction,
+  at the EIGHTFOLD Movasati point, in a direction that is not a cone over a sixfold; and the terms of the order-8
+  arc, read on the Fermat TENFOLD, satisfy the tenfold's own 221 equations at Movasati's pair of 5-planes.
+- **lambda = 2 stops:** obstructed at order 6 in the same slices (two primes, two directions, two slices); the blind
+  check showed more: with that first-order term no choice of the higher terms in the full space passes order 6.
+- Finite orders are evidence, not proof that a component exists. If the paper chain of the headline holds, this
+  component is the closure of the two-determinant family and carries the class of an algebraic cycle.
+
+### 9.1 The observation that makes it cheap (ARG)
+
+At the tenfold Movasati point the directions normal to V_Z are nets N = z_0 A + z_1 B + z_2 C (section 7.4). A net
+with C = 0 does not involve the block (x10, x11), so a tenfold arc in such a direction can be taken of the form
+F8_eps(x0..x9) + x10^3 + x11^3: the cone (T3's cone map, one step) over an arc at the eightfold Movasati point with
+net A y_1 + B y_2. If both A and B are non-zero the direction is not a double cone over a sixfold direction (those
+are the nets z_0 C', which exist for every lambda by D-SIXFOLD-GERM-AT-MOVASATI-POINT and decide nothing). The
+eightfold has 45 equations and 120 monomials against 221 and 220, and each order costs seconds to minutes.
+On the eightfold the order-4 model of T3 has nine quadrics; the piece that matters is: A, B of rank 2 with a common
+kernel and cokernel and 2 x 2 blocks orthogonal for the polar form of det (dimension 11 = 18 - 7). Under the cone
+it is the part C = 0 of the 13-dimensional piece of section 7.4.
+
+### 9.2 The method (ARG + MOD p checks)
+
+Slice: T_1 = y_0 + (net direction), fixed; T_n for n >= 2 in the span of 19 monomials on which the first-order map
+L is injective (the dependent part of T_n is then unique) plus 7 net directions on which the response map D is
+injective. The 26 dependent equations vanish to order 3 on the smooth germ, so their order-n coefficient is affine
+in the free part of T_(n-3), with one fixed 26 x 7 matrix D. Checked: D has rank 7 = 18 - 11 on the 18 net
+directions and kills y_0; it is linear; measured at order 6 it equals D measured at order 5. So in the slice the
+arc is unique, each order either is repaired by the free part of T_(n-3) or is obstructed, and nothing is left to
+choice. (The package's default continuation stops at order 5 for both lambda: a stop that says nothing.)
+Reading of an obstruction: no arc with this T_1, integer powers of eps and terms in the slice. If a component of
+dimension dim V - 6 passed through the point with a tangent cone reduced (as a scheme) and smooth at T_1, the
+slice would contain such an arc. So an obstruction excludes that kind of component in that direction; it does not
+exclude smaller components or arcs with fractional powers. (Corrected after the blind check, 9.5: the obstruction
+at order n depends also on the free parts of the terms before T_(n-3); in the slice those are already fixed.)
+
+### 9.3 Results (MOD p)
+
+| | p = 32029, seed 1 | p = 31981, seed 2 (another direction) |
+| --- | --- | --- |
+| rank L, joint persistence | 19, 20 | 19, 20 |
+| lambda = -1 | orders 5 to 9 repaired by T_2, ..., T_6; 9 terms pass fermatVerifyArc (45 forms) | the same to order 7 |
+| lambda = 2 | order 5 repaired, order 6 obstructed, in two slices | order 5 repaired, order 6 obstructed |
+| the lambda = -1 arc on the tenfold (221 forms) | the 8-term arc passes to order 8; [P1] + [P2] fails at order 1 | not run |
+
+This agrees with the tenfold run of section 7.8 (order 6: -1 passes, 2 is obstructed, on a direction with A, B, C
+all non-zero) and goes three orders further at one prime, one order further at a second.
+
+### 9.4 Not established
+
+That a component exists (order 9 is a finite order). Characteristic 0: nothing here is exact. A direction with
+C non-zero beyond order 6 (the tenfold run of 7.8). That the arc lies in the closure of the two-determinant
+family: that is the paper chain (D-X1-COMPONENT-IS-TD-CLOSURE with D-GLOBAL-ARGUMENT says the closure of
+l Q + det A + det B passes through the eightfold Movasati point with dimension dim V - 6; the arc is what that
+predicts, and is not a test of the identification). Smaller components for lambda = 2.
+
+### 9.5 Blind check 13 (a separate agent; its own implementation of the period formula in python-flint)
+
+Report, scripts, outputs: `leads/movasati_arc/blind_check13/`.
+- Confirmed (MOD p, own code and the package as a black box): the arcs to order 8 and 7, and the 9-term arc to
+  order 9; the nets; the tenfold's 221 equations; the lambda = 2 obstruction in my slice.
+- Strengthened: for lambda = 2, no choice of T_2..T_6 in the FULL space of cubics passes orders 2..6 with the
+  given T_1 (both primes; exact linear algebra plus identities tested at random points). So: no component of
+  dimension at least dim V - 6 of the Hodge locus of [P1] + 2 [P2] has this T_1 in its tangent cone (finite order,
+  one direction per prime, MOD p). Control: for lambda = -1 every admissible T_2 continues through order 6.
+- Corrections, all accepted: the tenfold arc is a cone over the eightfold arc, so "not a cone" means "not a cone
+  over a sixfold" and the tenfold check is automatic; my "affine with one fixed matrix" was incomplete (above);
+  the direction T_1 is special inside the 94-dimensional candidate cone (no component along 64 of its
+  directions), so for lambda = -1 the evidence is at such directions only; no direction was run at two primes.
+- An observation of the checker, open: the pencil A y_1 + B y_2 has exactly two members of rank <= 1.

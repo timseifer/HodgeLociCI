@@ -1,0 +1,5 @@
+RESULT pkg file arc8_31981_seed2_lam-1_d.txt p 31981 terms 7 expansion [P1]-[P2] to order 7: 45 x 7 zero matrix: true  cpu 71.447
+
+real	3m9.037s
+user	1m31.226s
+sys	0m0.297s

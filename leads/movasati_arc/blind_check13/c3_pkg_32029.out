@@ -1,0 +1,7 @@
+RESULT pkg3 file arc8_32029_seed1_lam2_d.txt terms 5 order 6 lowerOrdersVanish true solvable false
+RESULT pkg3 obstruction entries 26 non-zero 9
+RESULT pkg3 obstruction {-8868, 0, 0, 8354, 8078, -7046, 14380, 0, 0, -8115, 0, 0, 8057, 11408, 0, 0, 14445, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+
+real	0m42.129s
+user	0m35.063s
+sys	0m0.172s

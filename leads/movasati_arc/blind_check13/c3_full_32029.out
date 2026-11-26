@@ -1,0 +1,16 @@
+== arc8_32029_seed1_lam2_d.txt p 32029 lambda 2 mode full
+pivot monomials read from the last term: 19  ; rank of [19 monomials | 18 nets]: 37
+T_2 = (19 monomials) + nets with non-zero coefficient at net indices (9k+3i+j): [6, 9, 12, 13, 14, 15, 16]  ; file line 2: [14, 9, 15, 16, 6, 12, 13]
+orders 1..6 of the base jet: non-zero entries among 45: [0, 0, 0, 0, 0, 43]  ; order-6 projection to coker L non-zero: 9 of 26   time 3.9s
+rank of L on the 19 monomials: 19  ; L kills the 18 nets: True
+initial X: T_n - T_n^0 in a space of dimension 120 for n = 2..5 (and any T_6)  ; linearised test on X: rank 90  rank with b: 91
+    {'round': 1, 'dimX': 480, 'proj': [120, 120, 120, 120], 'samples': 120, 'rankNL': 114, 'usable': 92, 'rankConstraints': 38, 'inhom': False, 'consistent': True, 'time': 9.8}
+    {'round': 2, 'dimX': 442, 'proj': [101, 119, 120, 120], 'samples': 69, 'rankNL': 63, 'usable': 143, 'rankConstraints': 7, 'inhom': False, 'consistent': True, 'time': 15.6}
+    {'round': 3, 'dimX': 435, 'proj': [94, 119, 120, 120], 'samples': 69, 'rankNL': 63, 'usable': 143, 'rankConstraints': 0, 'inhom': False, 'consistent': True, 'time': 21.4}
+VERDICT full arc8_32029_seed1_lam2_d.txt : STABLE (no linear consequence left; inconclusive)
+   final base jet residual non-zero entries by block (orders 2,3,4,5,6proj): [0, 0, 0, 0, 9]
+total time 25.6s
+
+real	0m25.709s
+user	0m24.164s
+sys	0m1.171s

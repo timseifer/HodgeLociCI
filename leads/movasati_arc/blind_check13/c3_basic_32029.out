@@ -1,0 +1,11 @@
+== arc8_32029_seed1_lam2_d.txt p 32029  lambda 2 ; terms 5 [50, 31, 19, 19, 19]  E sizes [1, 50, 694, 5220, 27664, 115246, 401378]  time 3.9s
+orders 1..6 of the file jet (T_6 = 0): non-zero entries among 45: [0, 0, 0, 0, 0, 43]
+rank L = 19  ; order 6: c_6 in im L (i.e. solvable by T_6): False  ; non-zero entries of the projection to coker L: 9 of 26
+identity check ( sparse Y): c(T0+Y) == c(T0) + Lin Y + NL(Y): True   time formula 0.00s, direct 2.9s
+identity check ( dense Y): c(T0+Y) == c(T0) + Lin Y + NL(Y): True   time formula 0.08s, direct 4.2s
+LINEARISED full-space test: rank Lin = 90  rank [Lin | b] = 91  (206 x 480)  => order-6 defect removable by a first-order change of T_2..T_6: False
+one dense NL evaluation: 0.08s
+
+real	0m11.478s
+user	0m10.880s
+sys	0m0.433s

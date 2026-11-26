@@ -1,0 +1,21 @@
+# p = 31981 seed 2 slice 1 lambda -1 case d ; line 2: free net directions ; line 3: D ; then T_1.. one per line
+p = 31981  z = 12637  T_1..T_7 read; monomials per T_n: [50, 31, 32, 32, 19, 19, 19]
+all terms squarefree cubics: True
+patterns in the table of [P1]-[P2]: 24  forms: 45
+E_n sizes: [1, 50, 694, 5233, 27792, 115798, 403003, 1220271]  time 1.1s
+order 1: [P1]-[P2]: non-zero entries among 45: 0   [P1]+[P2]: 4 non-zero;  [P1] alone: 4;  [P2] alone: 4   time 1.1s
+order 2: [P1]-[P2]: non-zero entries among 45: 0   [P1]+[P2]: 24 non-zero;  [P1] alone: 24;  [P2] alone: 24   time 1.1s
+order 3: [P1]-[P2]: non-zero entries among 45: 0   [P1]+[P2]: 43 non-zero;  [P1] alone: 43;  [P2] alone: 43   time 1.2s
+order 4: [P1]-[P2]: non-zero entries among 45: 0   time 1.4s
+order 5: [P1]-[P2]: non-zero entries among 45: 0   time 2.0s
+order 6: [P1]-[P2]: non-zero entries among 45: 0   time 4.5s
+order 7: [P1]-[P2]: non-zero entries among 45: 0   time 12.7s
+RESULT own  arc8_31981_seed2_lam-1_d.txt  [P1]-[P2] first failing order up to 7: None ;  [P1]+[P2] first failing order: 1
+control: T_2 + x_0 x_3 x_9 -> first failing order (checked to 6): 2
+control: T_4 + x_0 x_3 x_9 -> first failing order (checked to 6): 4
+control: T_6 + x_0 x_3 x_9 -> first failing order (checked to 6): 6
+total time 17.0s
+
+real	0m17.259s
+user	0m10.991s
+sys	0m1.274s

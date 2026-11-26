@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (23)
+## Entries on this page (24)
 
 | id | status | title |
 |---|---|---|
@@ -35,6 +35,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-ORDER4-MODEL-CONE](#d-tenfold-order4-model-cone) | `MOD_P` | Tenfold Movasati point: special nets of rank 2 (a 13-dimensional piece) and of rank 3 pass order 4; a model cone of 27 quadrics; the order-5 obstruction on the 13-dimensional piece is removable for lambda = -1 and 2 |
 | [D-TENFOLD-MOVASATI-ORDER6](#d-tenfold-movasati-order6) | `MOD_P` | Tenfold Movasati point, a direction of the 13-dimensional piece: order 6 passes for lambda = -1 (by a change of T_3) and is obstructed for lambda = 2 modulo the first-order corrections tested |
 | [D-SIXFOLD-ARC-ORDER19](#d-sixfold-arc-order19) | `EXACT` | The sixfold arc of T2 into the divisor D, exactly to order 19: T_8..T_19 are determined uniquely; the certificate's T_8, T_9 are not on the continuing arc |
+| [D-MOVASATI-POINT-ARC-ORDER8](#d-movasati-point-arc-order8) | `MOD_P` | Movasati's own point, a direction that is not a cone over a sixfold: [P1] - [P2] stays Hodge to order 9 along an arc (eightfold; the tenfold by the cone map); with the same first-order term lambda = 2 is obstructed at order 6 |
 
 ## Related entries on other pages
 
@@ -1646,6 +1647,9 @@ From the repository root (Macaulay2 1.22; primes must be 1 mod 6):
 
 **Next step.**
 
+UPDATE 26 Nov 2026 (night): done further by another route, D-MOVASATI-POINT-ARC-ORDER8 (directions with C = 0,
+through the eightfold and the cone map: order 8 for lambda = -1 at one prime, 7 at a second; lambda = 2
+obstructed at order 6 at both). A direction with C non-zero is still at order 6. Earlier text:
 A second prime and seed for both lambda. Order 7 for lambda = -1: the default continuation is obstructed there;
 the test is the same scheme one order up (changes of T_4 by Im D, of T_3 and T_2 inside the kernels).
 
@@ -1717,8 +1721,10 @@ D-ARC-SPLITTING-NUMERICAL, not of this entry.
 
 The arc to order 25 modulo p and its certificate to order 9: team T2 (D-DEGENERATION-ALONG-ARC,
 D-RANK-CONTRAST-EXACT-ARCS). That fermatExtendArc cannot continue this arc order by order: the probe recorded in
-leads/TENFOLD_TWODET_LEAD.md, section 7.9. New here: exact terms to order 19 in characteristic 0, the uniqueness
-statement, and the remark on the certificate's last two terms.
+leads/TENFOLD_TWODET_LEAD.md, section 7.9. That the certificate file agrees with a true arc only modulo eps^8 and
+cannot be continued to order 10 was already recorded in the conditions of D-RANK-CONTRAST-EXACT-ARCS (check C20
+of the frozen run); item (3) repeats it and I had not credited it. New here: exact terms to order 19 in
+characteristic 0 and the uniqueness statement.
 
 **Reproduce.**
 
@@ -1737,3 +1743,130 @@ Order about 30 if the second matrix is attacked by lowering the noise (see D-ARC
 engine's cost grows steeply (order 13: 1 minute, order 19: 6 minutes for the 330 periods).
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), twelfth part (owner: 'queue this work up'; 'Go ahead').
+
+---
+
+## D-MOVASATI-POINT-ARC-ORDER8
+
+**Movasati's own point, a direction that is not a cone over a sixfold: [P1] - [P2] stays Hodge to order 9 along an arc (eightfold; the tenfold by the cone map); with the same first-order term lambda = 2 is obstructed at order 6**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Setting: Fermat cubic eightfold, Movasati's pair of 4-planes (P1: x_(2i) = z x_(2i+1) for all i; P2: the roots
+z^3 on the first three pairs), meeting in the line with coordinates x_7, x_9; first order: rank L = 19, joint
+persistence 20 (D-EIGHTFOLD-BOUNDS-AT-MOVASATI-POINT). T_1 = y_0 + sum N_ijk f_i h_j x_(7+2k): y_0 the excess
+direction, the net N = A y_1 + B y_2 with A, B both non-zero of rank 2, common kernel and cokernel, 2 x 2
+blocks orthogonal for the polar form of det (a generic point of the 11-dimensional piece of T3's order-4
+model cone). Such a direction is not a cone over a sixfold direction.
+Method: T_n (n >= 2) in a slice = 19 monomials on which L is injective + 7 net directions on which the 26 x 7
+response matrix D is injective. With the earlier terms fixed, the order-n obstruction is affine in the free part
+of T_(n-3) with the fixed matrix D (measured: rank 7 = 18 - 11 on the 18 net directions, D(y_0) = 0, linear, the
+same at orders 5 and 6). In the slice the arc is unique: an order is either repaired by the free part of T_(n-3)
+or obstructed.
+(1) (MOD 32029, seed 1.) lambda = -1: orders 5 to 9 are repaired, by the free parts of T_2, ..., T_6; the arc
+of 8 terms and the arc of 9 terms each pass fermatVerifyArc with the 45 period functions. T_6, T_7, T_8 of the
+9-term arc differ from those of the 8-term arc, as the method requires (they are fixed only by later orders).
+(2) (MOD 31981, seed 2: another direction.) lambda = -1: the same to order 7.
+(3) (MOD 32029 seed 1 in two slices; MOD 31981 seed 2.) lambda = 2 (its own y_0, the same nets): order 5 is
+repaired, the order-6 obstruction is not in Im D. Obstructed at order 6 in these slices. Stronger, by the blind
+check (both primes; exact linear algebra plus polynomial identities tested at random points): with this T_1 no
+choice of T_2, ..., T_6 in the full space of cubics satisfies orders 2 to 6.
+(4) (MOD 32029.) The 8-term arc of (1), read on the Fermat cubic TENFOLD with x_10, x_11 untouched, passes
+fermatVerifyArc to order 8 with the tenfold's own 221 period functions at Movasati's pair of 5-planes (rank
+L = 38 against 39; T_1 in ker L, not tangent to the locus where P1 persists); for [P1] + [P2] it fails at
+order 1. On the tenfold this is a direction of the 13-dimensional piece of D-TENFOLD-ORDER4-MODEL-CONE with
+C = 0 and A, B non-zero: a cone over the eightfold arc (so this item is automatic and adds no evidence), not a
+double cone over a sixfold direction.
+(5) Reading. For lambda = -1: the highest order to which [P1] - [P2] is known to stay Hodge off V at Movasati's
+own point, in a direction that is not a cone over a sixfold, goes from 6 (the tenfold run
+D-TENFOLD-MOVASATI-ORDER6: one prime, a direction with C non-zero) to 9 at one prime and 7 at a second prime
+and direction (directions with C = 0). For lambda = 2: no
+component of dimension at least dim V - 6 has such a T_1 in its tangent cone, and no component of any dimension
+has a tangent cone reduced and smooth there (ARG on (3)); smaller components with a non-reduced tangent cone at
+T_1 and arcs with fractional powers are not excluded.
+The package's default continuation stops at order 5 for both lambda; that stop is removable and says nothing.
+```
+
+**Conditions.**
+
+```text
+Two primes carrying two different directions (no direction was run at two primes); the package's Fermat engine
+and, for the checks, an independent implementation. T_1 is special inside the 94-dimensional candidate tangent
+cone: it has no component along the 64 directions tangent to V that are neither nets nor cubics in x_0..x_5, so
+for lambda = -1 the evidence is at such directions only. The reading (5) for lambda = 2 is an argument on (3).
+(4) is not independent of (1): along a cone arc the tenfold period functions are the eightfold ones times
+constants (Thom-Sebastiani). The free parts of the last three terms of each arc file are placeholders, fixed
+only by later orders. Everything is a finite-order statement: evidence, not a proof that a component exists;
+it is equally consistent with an obstruction at a later order.
+```
+
+**Evidence.**
+
+leads/movasati_arc/ma1_probe.m2, ma2_slice_arc.m2, ma3_cone_to_tenfold.m2; logs/ma1_32029_seed1_lam-1_order8.log,
+ma1_32029_seed1_lam2_order8.log, ma2_32029_seed1_lam-1_d.log, ma2_31981_seed2_lam-1_d.log,
+ma2_32029_seed1_lam2_d.log, ma2_32029_seed1_lam2_d_slice2.log, ma2_31981_seed2_lam2_d.log,
+ma2_32029_seed1_lam-1_d_order9.log, ma3_tenfold_32029_seed1_lam-1_order7.log,
+ma3_tenfold_32029_seed1_lam-1_order8.log; arcs/arc8_*.txt and arcs/arc9_32029_seed1_lam-1_d.txt (the terms);
+PREREG_arc.md (predictions Q0, Q1, M1, M2 written before the runs; one change of the slice recorded);
+leads/TENFOLD_TWODET_LEAD.md, section 9.
+
+**Independent check.**
+
+Blind check 13 (a separate agent; its own implementation of the period formula in Python with python-flint,
+adapted from the code of blind check 12, and the package only as a black box; it read none of my scripts or
+logs): (1), (2) confirmed with own code to order 8 and 7, and the 9-term arc to order 9; the nets of T_1
+confirmed (rank 2, common kernel and cokernel, no y_1 y_2-term, A and B not proportional); (4) confirmed with
+own code on 221 forms, with the remark that it is automatic; (3) confirmed in my slice and strengthened to the
+full space of cubics (see (3)); control: for lambda = -1 every admissible T_2 continues through order 6.
+Corrections it made, worked into this entry: "not a cone" must read "not a cone over a sixfold"; my statement
+that the obstruction is affine in the free part of T_(n-3) was incomplete; the reading for lambda = 2 needs
+"reduced as a scheme"; T_1 is special in the candidate cone; no direction at two primes. Shared with the
+package: the closed period formula and the assumption that the 45 periods cut out the Hodge locus. Nothing exact.
+leads/movasati_arc/blind_check13/REPORT.md.
+
+**Not established.**
+
+That a second component exists at Movasati's point (finite order). Anything exact: characteristic 0 is the
+next step. Orders beyond those stated. A direction with C non-zero beyond order 6. That the arc lies in the
+closure of the two-determinant family (the paper chain D-X1-COMPONENT-IS-TD-CLOSURE + D-GLOBAL-ARGUMENT predicts
+such arcs; the arc does not test the identification). For lambda = 2: components of smaller dimension, arcs
+with fractional powers of eps. Nothing here concerns a class that is not algebraic: on the paper chain this
+component carries the class of an algebraic cycle.
+
+**Known before.**
+
+T3: the order-4 model on eightfolds and the cone map (D-EIGHTFOLD-BOUNDS-AT-MOVASATI-POINT, D-LAMBDA2-CONE-TYPE);
+a tangent vector unobstructed through order 6 inside a 20-dimensional family at this point (same entry). T6:
+removability of obstructions modulo first-order corrections (O-TENFOLD-CONE-LEAD). The tenfold run to order 6
+(D-TENFOLD-MOVASATI-ORDER6). The paper chain that predicts the component (D-X1-COMPONENT-IS-TD-CLOSURE,
+D-GLOBAL-ARGUMENT). O-OTHER-COMPONENTS-AT-X1 recorded "no arcs outside the cone-type family" at the eightfold
+Movasati point. New here: the reduction of tenfold directions with C = 0 to the eightfold; the transversal
+slice in which the arc is unique; orders 7 and 8; the second prime and direction; lambda = 2 obstructed at
+this point on such directions.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22; primes must be 1 mod 6):
+    M2 --script leads/movasati_arc/ma2_slice_arc.m2 32029 1 -1 8 d 1 /tmp/a.txt       (18 minutes; order 9: 50)
+    M2 --script leads/movasati_arc/ma2_slice_arc.m2 32029 1 2 7 d 1 /tmp/b.txt        (5 minutes; stops at order 6)
+    M2 --script leads/movasati_arc/ma3_cone_to_tenfold.m2 32029 -1 leads/movasati_arc/arcs/arc8_32029_seed1_lam-1_d.txt 8   (5 minutes)
+```
+
+**Next step.**
+
+```text
+(0) A generic direction of the candidate cone (T_1 with a general component tangent to V), and one direction at
+two primes. (a) Characteristic 0: the same algorithm over QQ(zeta_6), in the symmetric direction A = E01 + E10,
+B = E01 - E10 (it passes order 4; a symmetry of order 3 cuts the monomials from 120 to 44). (b) Higher orders
+MOD p: each order costs about 3.5 times the last (order 9: 30 minutes); the state files in
+leads/movasati_arc/arcs/ can be continued, and the checker's python-flint expansion
+(leads/movasati_arc/blind_check13/lib13.py) is about five times faster than the package's. (c) A direction with C non-zero on the tenfold by the same
+slice method (27 net directions, rank D = 14). (d) Along the arc: the Hilbert function of the annihilator of
+the class (1, 9, 26, 26, 9, 1 would be the two-determinant numbers of D-RANK-CONTRAST-EXACT-ARCS (c)).
+```
+
+**Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), thirteenth part (owner: 'move forward with the next most exciting lead').

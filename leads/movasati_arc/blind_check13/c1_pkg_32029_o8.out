@@ -1,0 +1,5 @@
+RESULT pkg file arc8_32029_seed1_lam-1_d.txt p 32029 terms 8 expansion [P1]-[P2] to order 8: 45 x 8 zero matrix: true  cpu 197.159
+
+real	5m28.895s
+user	4m0.487s
+sys	0m0.685s

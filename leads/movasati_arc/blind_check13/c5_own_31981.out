@@ -1,0 +1,15 @@
+== arc8_31981_seed2_lam-1_d.txt p 31981 z 12637  tenfold: forms 221  patterns in the table of [P1]-[P2]: 48
+E_n sizes: [1, 50, 694, 5233, 27792, 115798, 403003, 1220271]  time 0.8s
+   [P1] alone, order 1: tenfold periods of x_10 q, x_11 q equal z * (eightfold), 1 * (eightfold): True ; non-zero among the other 130 cubic forms: 0 ; non-zero eightfold periods: 4
+   [P1] alone, order 2: tenfold periods of x_10 q, x_11 q equal z * (eightfold), 1 * (eightfold): True ; non-zero among the other 130 cubic forms: 0 ; non-zero eightfold periods: 24
+   [P1] alone, order 3: tenfold periods of x_10 q, x_11 q equal z * (eightfold), 1 * (eightfold): True ; non-zero among the other 130 cubic forms: 0 ; non-zero eightfold periods: 43
+order 1: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 8.8s
+order 2: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 8.8s
+order 3: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 8.8s
+order 4: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 8.9s
+order 5: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 9.1s
+order 6: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 10.1s
+order 7: [P1]-[P2] tenfold: non-zero entries among 221: 0   time 13.5s
+RESULT own tenfold arc8_31981_seed2_lam-1_d.txt  first failing order up to 7 : None
+control: T_3 + x_0 x_3 x_10 -> first failing order (checked to 4): 3
+total time 13.5s

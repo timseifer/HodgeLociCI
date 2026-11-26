@@ -1,0 +1,16 @@
+== arc8_31981_seed2_lam2_d.txt p 31981 lambda 2 mode slice
+pivot monomials read from the last term: 19  ; rank of [19 monomials | 18 nets]: 37
+T_2 = (19 monomials) + nets with non-zero coefficient at net indices (9k+3i+j): [6, 9, 12, 13, 14, 15, 16]  ; file line 2: [14, 9, 15, 16, 6, 12, 13]
+orders 1..6 of the base jet: non-zero entries among 45: [0, 0, 0, 0, 0, 43]  ; order-6 projection to coker L non-zero: 9 of 26   time 9.8s
+rank of L on the 19 monomials: 19  ; L kills the 18 nets: True
+initial X: T_n - T_n^0 in a space of dimension 26 for n = 2..5 (and any T_6)  ; linearised test on X: rank 90  rank with b: 91
+linear response (order-5 obstruction to the 7 free nets of T_2), own: 26 x 7, rank 7  ; file matrix D: rank 7  ; zero rows own/file: 17 17
+   file D = (one scalar) * own response, column by column: scalars {30493}
+   order-6 defect in the column space of the response matrix (own): False  ; in that of the file's D: False
+    {'round': 1, 'dimX': 104, 'proj': [26, 26, 26, 26], 'samples': 91, 'rankNL': 85, 'usable': 121, 'rankConstraints': 53, 'inhom': False, 'consistent': True, 'time': 3.1}
+    {'round': 2, 'dimX': 51, 'proj': [7, 14, 21, 26], 'samples': 11, 'rankNL': 5, 'usable': 201, 'rankConstraints': 34, 'inhom': True, 'consistent': True, 'time': 3.3}
+    {'round': 3, 'dimX': 17, 'proj': [0, 1, 9, 17], 'samples': 6, 'rankNL': 0, 'usable': 206, 'rankConstraints': 3, 'inhom': True, 'consistent': False, 'time': 5.7}
+VERDICT slice arc8_31981_seed2_lam2_d.txt : EMPTY
+   certificate: {'l_dot_b': 19694, 'l_Lin_W_zero': True, 'l_NL_at_6_fresh_dense_points': [0, 0, 0, 0, 0, 0], 'support_by_order': [0, 0, 1, 3, 0]}
+   final base jet residual non-zero entries by block (orders 2,3,4,5,6proj): [0, 0, 4, 13, 17]
+total time 15.6s

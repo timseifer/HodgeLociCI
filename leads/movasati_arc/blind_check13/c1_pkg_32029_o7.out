@@ -1,0 +1,9 @@
+RESULT pkg file arc8_32029_seed1_lam-1_d.txt p 32029 z -473
+RESULT pkg terms 8
+RESULT pkg firstOrderMatrix 45 x 120 rank 19
+RESULT pkg expansion [P1]-[P2] to order 7: 45 x 7 zero matrix: true  cpu 71.9311
+RESULT pkg [P1] alone firstFailingOrder 1 ; [P1]+[P2] firstFailingOrder 1
+
+real	2m10.778s
+user	1m32.321s
+sys	0m0.281s

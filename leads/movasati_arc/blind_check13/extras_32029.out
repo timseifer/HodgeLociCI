@@ -1,0 +1,10 @@
+== arc8_32029_seed1_lam2_d.txt p 32029 lambda 2
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 9]
+linear response maps coker L <- ker L (26 x 101):  rank level1 (T_(n-1)) = 0  level2 (T_(n-2)) = 0  level3 (T_(n-3)) = 7  level4 (order 6 <- T_2) = 11  ; rank [level3 | level4] = 11
+order-6 defect e6 in im(level3): False  ; in im(level3) + im(level4): True
+ker(level3) in ker L: dim 94  ; T_1 in it: True  ; level4 restricted to ker(level3): rank 7  ; rank of [level3 | level4 on ker level3 | e6] - rank without e6: 1
+own order-6 defect e6 (basis of coker L from the reduced row echelon form): [-3593, 0, 0, 7336, -10719, 14171, -9502, 0, 0, -10385, 0, 0, 11929, -1070, 0, 0, -7919, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+package obstruction = (scalar 12322) * own e6: True
+'the rest' = (f_3,f_4)*quadrics + f_i h_j x_m (m<=5), mod squares: dim 82  ; with the 18 nets: dim 100  ; L kills it: True
+level3 on 'the rest': rank 0  ; on the 18 nets: rank 7  ; on the 7 free nets: rank 7  ; level4 on 'the rest': rank 7
+level3 on the 19-dim kernel inside the cubics in x_0..x_5: rank 0

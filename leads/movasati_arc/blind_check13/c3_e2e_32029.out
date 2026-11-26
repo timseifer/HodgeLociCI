@@ -1,0 +1,5 @@
+== arc8_32029_seed1_lam2_d.txt p 32029 lambda 2
+ob at the base jet: non-zero entries by order 3,4,5,6: [0, 0, 0, 9]
+random admissible jet 1: non-zero coefficients of the changes of T_2..T_5: [120, 120, 120, 120] ; direct: non-zero entries of c_2..c_5: [0, 0, 0, 0] ; Kl c_6 equals ob6: True ; non-zero: 9 of 26 ; (Kl c_6 - e6) in im(level3): True ; Kl c_6 in im(level3): False
+random admissible jet 2: non-zero coefficients of the changes of T_2..T_5: [120, 120, 120, 120] ; direct: non-zero entries of c_2..c_5: [0, 0, 0, 0] ; Kl c_6 equals ob6: True ; non-zero: 9 of 26 ; (Kl c_6 - e6) in im(level3): True ; Kl c_6 in im(level3): False
+non-admissible T_2 change (k2 random in ker L): ob5 non-zero entries: 9
