@@ -39,3 +39,20 @@ direction (net directions are tangent to V_Z).
   scrolls), non-linear cycles of the Fermat (e.g. Aoki-Shioda type), and other directions.
 - S empty: the same statement, more strongly.
 None of the outcomes says anything about the Hodge conjecture.
+
+# Step 2 (pre-registered 27 Nov ~17:30 UTC, before computing; owner: "go ahead and push forward"): lattice filter
+
+Argument (ARG). Suppose that on the would-be component W the Hodge classes in degree 8 are generically exactly
+Q h^4 + Q c, c = [P1] + 2[P2]. Any algebraic 4-cycle Z on a general member of W then has [Z] = a c + b h^4, so
+disc(Z) := 3 Z.Z - deg(Z)^2 = a^2 disc(c) = 144 a^2 (EXACT: c.c = 11 + 4*11 + 4*(-1) = 51, deg c = 3, 3*51 - 9 = 144).
+Since 144 = 12^2, a cycle that makes c algebraic on W must have disc(Z) a NON-ZERO PERFECT SQUARE.
+Test L: compute disc(Z) for the smooth 4-folds of low degree that occur in cubic eightfolds, by
+Z.Z = int_Z c_4(N_{Z/X}), c(N) = (1 + H)^10 / ((1 + 3H) c(T_Z)) (Schubert2), and for the known classes:
+P^4 (Z.Z = 11), Q^4, P^1 x P^3, (2,2) complete intersection, del Pezzo 4-fold of degree 5 (= G(2,5) n P^7, Kloosterman's
+lambda = 1 cycle), P^2 x P^2, (2,2,2) complete intersection, P^1 x Q^3; and the classes P1 - P2 (planes in a line: 72,
+Movasati's lambda = -1), P1 - P2 (planes in a plane: 48, cubic scrolls). Calibration: the del Pezzo of degree 5 must
+give disc 56 (its class is P1 + P2 + h^4, D-TENFOLD... Kloosterman Prop. 6.4); a different value means the method is wrong.
+Outcomes:
+- Some family has a non-zero square disc: a candidate explanation; next would be a tangency test against that family.
+- None does: none of those families can carry c on W, for ANY direction, under the stated rank-2 assumption. Not ruled
+  out: other cycles (singular ones, higher degree), and the case where W has a larger generic Hodge lattice.
