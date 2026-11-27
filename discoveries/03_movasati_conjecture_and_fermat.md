@@ -2131,11 +2131,17 @@ Reading (pre-registered): an obstruction signal at order 9 for this jet. It cont
 loses 2 conditions per order like a smooth component of codimension 28: at order 9 the conditions have rank 4 on V8.
 ```
 
-**Conditions.** One jet; one prime; first order only; 17 sampled directions; symmetric differences exact only up to quadratic dependence.
+**Conditions.** One jet; one prime; first order only (the blind check removes the sampling caveat: all first-order moves).
 
 **Evidence.** leads/movasati_arc/pocket/run10.py, run10_31981.log, run10b.py, run10b_31981.log, REPORT.md (last section).
 
-**Independent check.** PENDING (blind check 20: complete linearised test in T-space from arcs/jet8_31981_s_lam2.txt).
+**Independent check.**
+
+Blind check 20 (separate agent, own C/Python code, about 2 minutes): the COMPLETE linearised test in T-space from
+arcs/jet8_31981_s_lam2.txt, with the exact derivative over all 220 cubic monomials (no sampling). c_1..c_8 = 0;
+c_9 (T_9 = 0) has 43 of 45 non-zero; rank of the derivative on orders 2..8 is 165, on 2..9 is 195, and 196 with
+(0, ..., 0, -c_9): no first-order correction (dT_2..dT_8, T_9) fixes order 9. Controls passed. CONFIRMED.
+leads/movasati_arc/pocket/blind_check20/.
 
 **Not established.** That order 9 is obstructed (a finite move along the non-linear V8 could reach q_9 = 0); the second prime; other jets; other first-order directions T_1. Nothing about the Hodge conjecture.
 

@@ -1,0 +1,62 @@
+[     7s] sizes E_0..E_9 [1, 26, 375, 2983, 17188, 75320, 275727, 863765, 2418277, 6127127]
+terms 26 monomials 55
+[     7s] c_1 nonzero components (C code): 0
+terms 375 monomials 55
+[     7s] c_2 nonzero components (C code): 0
+terms 2983 monomials 55
+[     7s] c_3 nonzero components (C code): 0
+terms 17188 monomials 55
+[     7s] c_4 nonzero components (C code): 0
+terms 75320 monomials 55
+[     7s] c_5 nonzero components (C code): 0
+terms 275727 monomials 55
+[     7s] c_6 nonzero components (C code): 0
+terms 863765 monomials 55
+[    10s] c_7 nonzero components (C code): 0
+terms 2418277 monomials 55
+[    15s] c_8 nonzero components (C code): 0
+terms 6127127 monomials 55
+[    31s] c_9 nonzero components (C code): 43
+[    31s] own.py periods c_1 nonzero 0, agrees with C: True
+[    31s] own.py periods c_2 nonzero 0, agrees with C: True
+[    32s] own.py periods c_3 nonzero 0, agrees with C: True
+[    32s] own.py periods c_4 nonzero 0, agrees with C: True
+[    32s] own.py periods c_5 nonzero 0, agrees with C: True
+[    34s] own.py periods c_6 nonzero 0, agrees with C: True
+[    40s] own.py periods c_7 nonzero 0, agrees with C: True
+[    61s] own.py periods c_8 nonzero 0, agrees with C: True
+[    61s] c_9 = [np.int64(15132), np.int64(11326), np.int64(31970), np.int64(8777), np.int64(6304), np.int64(16610), np.int64(4069), np.int64(28044), np.int64(20751), np.int64(1452), np.int64(21266), np.int64(6646), np.int64(31579), np.int64(27468), np.int64(14021), np.int64(424), np.int64(5268), np.int64(21936), np.int64(16288), np.int64(22032), np.int64(21108), np.int64(1529), np.int64(12883), np.int64(25006), np.int64(4596), np.int64(12256), np.int64(1485), np.int64(24709), np.int64(5400), np.int64(28713), np.int64(14615), np.int64(20844), np.int64(10732), np.int64(17793), np.int64(26063), np.int64(25720), np.int64(24983), np.int64(16516), np.int64(11830), np.int64(0), np.int64(23306), np.int64(18413), np.int64(4216), np.int64(6970), np.int64(0)]
+terms 1 monomials 2002
+[    62s] A_0 rank 19
+terms 26 monomials 2002
+[    63s] A_1 rank 25
+terms 375 monomials 2002
+[    64s] A_2 rank 43
+terms 2983 monomials 2002
+[    66s] A_3 rank 44
+terms 17188 monomials 2002
+[    67s] A_4 rank 45
+terms 75320 monomials 2002
+[    69s] A_5 rank 45
+terms 275727 monomials 2002
+[    71s] A_6 rank 45
+terms 863765 monomials 2002
+[    76s] A_7 rank 45
+[    76s] rank Dc orders 2..8 (cols dT_2..dT_8; T_9 cols zero there): 165 | orders 2..9: 195
+[    77s] rank [J | (0,..,0,-c_9)] = 196 -> NO SOLUTION
+[    77s] squarefree-only: rank 195 augmented 196
+[    77s] rank of A_0 (T_9 alone): 19
+[    94s] linearized dE sizes [0, 0, 220, 2789, 20205, 100422, 394746, 1294231, 3715772, 9567779]
+terms 220 monomials 55
+terms 2789 monomials 55
+terms 20205 monomials 55
+terms 100422 monomials 55
+terms 394746 monomials 55
+terms 1294231 monomials 55
+terms 3715772 monomials 55
+terms 9567779 monomials 55
+terms 0 monomials 55
+[   131s] order-1 derivative periods nonzero: 0
+[   131s] block-formula J v == linearized-recursion periods: True
+[   131s] control (a): rank [J | Dc(v)] = 195 vs rank J 195
+[   131s] done

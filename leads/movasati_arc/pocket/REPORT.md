@@ -146,4 +146,5 @@ is not reachable. So the pocket is WEAKER than after run9b.
 Caveats: one jet; one prime; first order only (V8 is non-linear: a finite move along V8 could still reach q_9 = 0;
 the k_2 changes are symmetric differences, exact only if q_9 is at most quadratic in k_2); the sampled directions
 may not span all first-order moves (17 samples). The earlier step "q8 does not depend on k_3" was already withdrawn.
-Blind check 20 (pending at the time of writing): a complete linearised test in T-space from the saved jet.
+Blind check 20 (blind_check20/): the complete linearised test in T-space, exact derivative over all 220 cubic
+monomials: rank 195 on orders 2..9, 196 with the order-9 right-hand side. CONFIRMED; the sampling caveat is removed.
