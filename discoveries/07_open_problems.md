@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (19)
+## Entries on this page (20)
 
 | id | status | title |
 |---|---|---|
@@ -30,6 +30,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [O-HODGE-NUMBER-3432](#o-hodge-number-3432) | `OPEN` | Recorded disagreement with a published table: middle Hodge number of the cubic 12-fold, 3432 or 3433 |
 | [O-COMMON-ZEROS-AND-SECOND-ORDER-GAPS](#o-common-zeros-and-second-order-gaps) | `OPEN` | Second order: quadrics with common zeros, condition (S) failing, and cubic eightfolds in the package tests |
 | [O-PACKAGE-FEATURES-NEEDED](#o-package-features-needed) | `OPEN` | What the package lacks for the entries marked 'not reproducible from this repository' |
+| [O-ALIGNED-POCKET-LAMBDA2-ORDER9](#o-aligned-pocket-lambda2-order9) | `OPEN` | Open: lambda = 2 on the symmetric aligned direction at the eightfold Movasati point reaches order 9 with 2 linear conditions per order -- a direction worth examining, not a finding |
 | [O-TENFOLD-CONE-LEAD](#o-tenfold-cone-lead) | `OPEN` | Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d? |
 
 ---
@@ -818,6 +819,51 @@ M2 --script "$PWD/tests/validation/02_kloosterman_prop310.m2" (expected last lin
 **Next step.** Port the two most reused tools first: periods of quadratic monomials along an arc (2) and the closed-form Phi (5).
 
 **Session references (files not public).** README.md (section Limitations); tests/README.md (section 'Not covered, and why').
+
+---
+
+## O-ALIGNED-POCKET-LAMBDA2-ORDER9
+
+**Open: lambda = 2 on the symmetric aligned direction at the eightfold Movasati point reaches order 9 with 2 linear conditions per order -- a direction worth examining, not a finding**
+
+kind: `open` | area: `movasati_conjecture` | status: **`OPEN`**
+
+**Statement.**
+
+```text
+Setting: D-ALIGNED-POCKET-LAMBDA2, D-ALIGNED-POCKET-ORDER8 (net s, lambda = 2, T_1 = y_0 + net). MOD p at p = 31981 and
+32029, full space of cubics (the blind checkers' reduction extended to order 9):
+(1) jets through order 8 exist; at a jet on V8, ob_9 has 19 non-zero components and its part q_9 outside im J3 has 12.
+(2) The 2 conditions per order beyond the linear corrections move along the jet linearly: they hit k_2 at order 7,
+k_3 at order 8 (rank 2, linear: 2v against v), k_4 at order 9 (rank 2, linear), identically at both primes.
+(3) T_1 is not tangent to the cone-type family CT_2 (D-LAMBDA2-CONE-TYPE): it couples both pairs (x6, x7) and
+(x8, x9), on which the two planes have the same root, to the other variables; families splitting off a pair with
+different roots lie in V. So the pre-registered splitting test fails at first order.
+Reading (ARG, pre-registered in leads/movasati_arc/pocket/PREREG_step3c.md): (2) is the pattern a smooth component of
+codimension 28 (dimension dim V - 8) through T_1 would produce; dim V - 8 is within the bound dim <= dim V - 7 of
+D-GLOBAL-ARGUMENT. It is equally consistent with an obstruction at a later order.
+```
+
+**Conditions.** Finite order (9); MOD p at two primes; one first-order direction; integer powers of eps; only CT_2 compared; the structure facts (linearity, ranks) tested at sample points.
+
+**Evidence.** leads/movasati_arc/pocket/ (REPORT.md, PREREG_step3c.md, PREREG_pocket_followup.md, run9_full_space_order9.py, run9b_31981.log, run9b_32029.log, and two earlier runs that died of memory); D-ALIGNED-POCKET-ORDER8.
+
+**Independent check.** none for order 9 (the search code builds on blind checks 13-15; the order-8 jets were verified with the package).
+
+**Not established.** That a component exists; that [P1] + 2[P2] on it is not the class of some other algebraic cycle; any comparison with families other than CT_2; characteristic 0; other directions.
+
+**Known before.** D-ALIGNED-POCKET-LAMBDA2, D-ALIGNED-POCKET-ORDER8, D-LAMBDA2-CONE-TYPE, D-GLOBAL-ARGUMENT, D-SIXFOLD-GERM-AT-MOVASATI-POINT.
+
+**Reproduce.**
+
+```text
+Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/blind_check14/own and blind_check15):
+    python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
+```
+
+**Next step.** (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); published after the owner had seen it ('Go ahead').
 
 ---
 

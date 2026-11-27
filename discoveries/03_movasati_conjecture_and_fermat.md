@@ -63,6 +63,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-TENFOLD-THIRD-DETERMINANT](06_ruled_out_and_dead_ends.md#n-tenfold-third-determinant) | negative | `RULED_OUT` | 06 | Tenfold lead: the extra direction is not 'add the third determinant e_0(z) of the tensor' |
 | [C-TENFOLD-FERMAT-POINT-CLASS](08_corrections_and_lessons.md#c-tenfold-fermat-point-class) | correction | `EXACT` | 08 | Tenfold lead: at the Fermat tenfold the explicit arc of the Coble family carries the three-plane class, not Movasati's class; the planned check and one earlier remark are withdrawn |
 | [C-TENFOLD-ORDER4-RANK2](08_corrections_and_lessons.md#c-tenfold-order4-rank2) | correction | `MOD_P` | 08 | Tenfold lead: 'rank 2 and 3 obstructed at order 4, so dim W <= dim Cone_T + 11' holds for generic nets only; special nets of rank 2 and 3 pass order 4 |
+| [O-ALIGNED-POCKET-LAMBDA2-ORDER9](07_open_problems.md#o-aligned-pocket-lambda2-order9) | open | `OPEN` | 07 | Open: lambda = 2 on the symmetric aligned direction at the eightfold Movasati point reaches order 9 with 2 linear conditions per order -- a direction worth examining, not a finding |
 | [O-TENFOLD-CONE-LEAD](07_open_problems.md#o-tenfold-cone-lead) | open | `OPEN` | 07 | Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d? |
 
 ---

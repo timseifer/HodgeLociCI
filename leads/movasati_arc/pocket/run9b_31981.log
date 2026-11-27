@@ -1,0 +1,49 @@
+p 31981 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 38s
+rank J3 7 #annihilators 19 61s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 84s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (19847, 13847)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+ORDER 8 begins 121s
+base jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 9 of 26 ; 144s
+response of ob_8 to k5 (10 random): rank 7 ; same image as J3: True ; 382s
+q8 = ell . ob_8 at the base jet: nonzero 2 of 19
+q7 linear part on 24 sampled A2 directions: rank 2 ; directions kept: 22 ; 421s
+k2 variations: all stay on V7: True ; 677s
+k3 in ker J3 : variations added; on V7: True ; 752s
+k4 in ker J4 : variations added; on V7: True ; 828s
+RESULT order 8: span of q8 variations (k2 in A2', k3 in ker J3, k4 in ker J4): rank 2 ; q8 at the base in that span: True
+k2 directions with a non-zero q8 change: 10 of 10 ; k3/k4 changes non-zero: [False, False, False, False, False, False]
+q8 along a k2-line: degree 2 ; 989s
+interpolant predicts an off-grid point: True ; 1098s
+independent component polys: 2 ; degrees [2, 2]
+resultant degree 3
+F_p point with q8 = 0 on the plane: (4792, 10838)
+at the point: q8 nonzero 0 ; ob_8 nonzero 7
+after the k5 step: ob_8 nonzero 0
+RESULT DIRECT verification of jet T_1..T_8: nonzero c_n among 45, n = 1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+ORDER 9 begins 1566s
+base V8 jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 0 ; ob_9 nonzero 19 ; 1716s
+q9 at the base: nonzero 12 of 19
+   q8 change with k3 (in ker J3) at the V8 point: nonzero 2 ; linear (2v against v): True
+   sample k3 in ker J3 0 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 2 ; ob_8 after jet8 2
+   sample k3 in ker J3 1 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 2 ; ob_8 after jet8 2
+   sample k3 in ker J3 2 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 2 ; ob_8 after jet8 2
+   sample k3 in ker J3 3 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 2 ; ob_8 after jet8 2
+RESULT q9 changes with k3 in ker J3 : rank 2 of 4 samples ; samples stay on V8: False ; 2389s
+   sample k4 in ker J4 0 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 0 ; ob_8 after jet8 0
+   linearity of the q9 change in k4 (2v against v): True
+   sample k4 in ker J4 1 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 0 ; ob_8 after jet8 0
+   sample k4 in ker J4 2 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 0 ; ob_8 after jet8 0
+   sample k4 in ker J4 3 : orders 2..7 nonzero [0, 0, 0, 0, 0, 0] ; q8 after the move 0 ; ob_8 after jet8 0
+RESULT q9 changes with k4 in ker J4 : rank 2 of 4 samples ; samples stay on V8: True ; 3151s
+RESULT (interpretation is tentative: the variations are first differences, not a linear model)
+total 3151s
