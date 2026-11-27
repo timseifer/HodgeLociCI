@@ -274,3 +274,13 @@ closed field unless they are inconsistent, so "survives order 8" is weak evidenc
 number is the rank of q per order: if it keeps being 2 the jets of lambda = 2 through this direction lose 2
 dimensions per order and cannot come from a component of dimension dim V - 6 (they could come from a smaller one);
 if it drops to 0 the jet space stabilises, which is what a component through this direction looks like.
+
+## Plan item A4, computational half (pre-registered 27 Nov, 07:31 UTC): for which lambda does the
+## order-6 obstruction vanish on a direction in general position?
+Net g (general position), MOD 32029, slice solver (order-6 verdicts were confirmed in the full space by blind check
+14 for this net), lambda in {3, -2, 1/2, 5/3, -1/2, 4, 1, -1/3} besides the known -1 (passes) and 2 (obstructed).
+Prediction: obstructed at order 6 for every lambda tested except -1; lambda = 1 (= lambda_0) may behave differently
+(first-order structure changes there), no prediction for it. Meaning: if the zero set of the order-6 obstruction
+among these values is {-1} (and possibly 1), the separation is a statement about the coefficient, not about 2;
+an argument tying it to the discriminant / lattice rule (the K3 / abelian headline) is the second half of A4 and is
+NOT attempted by this run. Any other lambda passing: report, and look for the lattice explanation of that value.

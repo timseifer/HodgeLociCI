@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 173 entries)
+### Discoveries registry (142 -> 174 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -88,6 +88,8 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   the full space; N-SLICE-FALSE-OBSTRUCTION-ORDER7: the slice solver's obstructions from order 7 on are not reliable.
 - D-ALIGNED-POCKET-ORDER8 (MOD p, two primes): lambda = 2 on the symmetric aligned direction reaches order 8 in the full
   space, but pays 2 conditions per order from order 7 on, where lambda = -1 pays none.
+- N-SECOND-MATRIX-THIRD-ROUTE: the second matrix as a small correction of the first fails (F_eps is 65 per cent outside the
+  tangent space of the determinantal cubics at G_A); where everything stalls: leads/tenfold_twodet/matrices/STALL_NOTE.md.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

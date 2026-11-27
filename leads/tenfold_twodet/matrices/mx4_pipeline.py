@@ -450,7 +450,7 @@ VgA, sgA, dimA = lie_algebra(GA, "G_A", thrA); VgB, sgB, dimB = lie_algebra(GB, 
 MA = build(GA, "G_A", 11, VgA, sgA, dimA); MB = build(GB, "G_B", 12, VgB, sgB, dimB)
 def dump(MA, MB, note):
     if not OUT: return
-    cx = lambda x: [mp.nstr(mp.re(x), 60), mp.nstr(mp.im(x), 60)]
+    cx = lambda x: [mp.nstr(mp.re(x), mp.mp.dps - 5), mp.nstr(mp.im(x), mp.mp.dps - 5)]
     mat = lambda M: None if M is None else [[[cx(M[i][j][k]) for k in range(8)] for j in range(3)] for i in range(3)]
     json.dump({"eps": str(EPS), "order": N, "dps": mp.mp.dps, "note": note, "A": mat(MA), "B": mat(MB),
                "GA": [cx(GA[i]) for i in range(120)], "GB": [cx(GB[i]) for i in range(120)], "F": [cx(Fv[i]) for i in range(120)],

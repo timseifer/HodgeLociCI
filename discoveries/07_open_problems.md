@@ -69,6 +69,8 @@ tangent-space inclusion.
 
 **Next step.**
 
+UPDATE 27 Nov 2026: a third route (B as a small correction of -A) fails for a geometric reason, N-SECOND-MATRIX-THIRD-ROUTE;
+where everything stalls, for an expert: leads/tenfold_twodet/matrices/STALL_NOTE.md. Earlier text:
 UPDATE 26 Nov 2026 (night): a first batch, D-SIXFOLD-ARC-ORDER19 (the arc exactly to order 19),
 D-ARC-SPLITTING-NUMERICAL (floating point: the splitting in characteristic 0, a matrix for one of the two
 summands, none for the other) and N-MATRIX-RECOVERY-FIRST-ATTEMPTS (what failed). Still open: the second

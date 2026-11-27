@@ -3802,6 +3802,8 @@
   reproduce: |-
     not reproducible from this repository: an open question; the entries it refers to say what can be re-verified.
   next_step: |-
+    UPDATE 27 Nov 2026: a third route (B as a small correction of -A) fails for a geometric reason, N-SECOND-MATRIX-THIRD-ROUTE;
+    where everything stalls, for an expert: leads/tenfold_twodet/matrices/STALL_NOTE.md. Earlier text:
     UPDATE 26 Nov 2026 (night): a first batch, D-SIXFOLD-ARC-ORDER19 (the arc exactly to order 19),
     D-ARC-SPLITTING-NUMERICAL (floating point: the splitting in characteristic 0, a matrix for one of the two
     summands, none for the other) and N-MATRIX-RECOVERY-FIRST-ATTEMPTS (what failed). Still open: the second
@@ -8100,6 +8102,38 @@
     The rank of q at orders 9 and 10 (extend the reduction by one order each; about an hour per order MOD p).
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat), sixteenth part (owner: 'Go ahead').
+
+- id: N-SECOND-MATRIX-THIRD-ROUTE
+  kind: dead_end
+  area: methods
+  title: "Second matrix along the sixfold arc as a small correction of the first: fails, because F_eps is far from the tangent space of the determinantal cubics at G_A"
+  statement: |-
+    Route (PREREG_matrices.md, third route): B = -(A - Delta), Newton for det A - det(A - Delta) = F_eps from Delta = 0,
+    after putting A into the orbit point of G_A. (NUMERICAL, eps = 1/800, 160 digits.)
+    (1) The coordinate correction works: det A = G_A to 1.39e-40 relative after two steps (as predicted).
+    (2) Newton diverges (residual 3e12 after a full step); the damped version stalls at residual 1.0.
+    (3) Diagnostic: the tangent map Delta -> tr(adj(A) Delta) has rank 56 with singular values from 1 down to 2e-31
+    (relative), and F_eps is 65 per cent outside its image. So -G_B is not a small move away from G_A on the
+    determinantal variety, which is extremely curved near the cube l^3; -G_B = G_A o g with g far from the identity.
+  status: RULED_OUT
+  conditions: |-
+    One arc, one eps, one implementation of the route; ruled out means this local route only.
+  evidence: |-
+    leads/tenfold_twodet/matrices/mx5_second_matrix.py, mx5b_tangent_diagnostic.py, PREREG_matrices.md (third route and its outcome), STALL_NOTE.md, results/mx4_eps800_fulldigits.json.
+  independent_check: |-
+    none (the coordinate-correction number agrees with blind check 12's linearised test)
+  not_established: |-
+    That B exists or does not; anything about (S).
+  known_before: |-
+    N-MATRIX-RECOVERY-FIRST-ATTEMPTS (Levenberg-Marquardt converges only from within about 0.3 of a solution).
+  reproduce: |-
+    From the repository root:
+        python3 leads/tenfold_twodet/matrices/mx5_second_matrix.py leads/tenfold_twodet/matrices/results/mx4_eps800_fulldigits.json 160     (30 seconds)
+        python3 leads/tenfold_twodet/matrices/mx5b_tangent_diagnostic.py leads/tenfold_twodet/matrices/results/mx4_eps800_fulldigits.json 160   (5 minutes)
+  do_not_repeat: |-
+    Local Newton or Levenberg-Marquardt for B started at -A (in any gauge): the target is not in the local tangent space. See STALL_NOTE.md for what might work.
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item A3.
 
 - id: O-TENFOLD-CONE-LEAD
   kind: open

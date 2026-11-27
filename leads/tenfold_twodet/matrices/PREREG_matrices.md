@@ -309,3 +309,43 @@ up to one constant); the numbers of M5, M6 and of the matrix A; the counts 8 / 9
 4. For G_B the fields were not shown to form sl_3 (the checker's Killing-form test is inconclusive), so nothing
    supports "G_B is a determinant" beyond the count 8 at one eps.
 5. Of the 18 small singular values of Cat(2,2), 6 fall like eps^20, 11 like eps^22, and one is exactly 0 (y5^2).
+
+## Third route (plan item A3; pre-registered 27 Nov 2026, 07:26 UTC, before any run): B from A by a small correction
+
+Idea (ARG). G_B = F_eps - G_A and G_A = -G_B (1 + O(eps)), with F_eps of size 1 against eps^-6. So B should be
+-(A - Delta) with Delta small: det A - det(A - Delta) = F_eps, whose linear part tr(adj(A) Delta) = F_eps gives
+Delta of relative size about eps^6. Newton's method from Delta = 0 is then in the regime where it converges
+(the first route showed Levenberg-Marquardt converging from within 0.3 relative). The Lie-algebra route for G_B,
+whose 9th near-symmetry is at eps^13, is not needed. Two preparatory steps:
+(i) det A matches G_A only to 8e-20 relative (23 in absolute terms, more than |F_eps| = 2.8); blind check 12 found
+    that det A - G_A is an infinitesimal coordinate change of G_A to 1e-40. So first replace A by A(y - X y),
+    X solved by least squares from det A - G_A = X . grad G_A, repeated until det A = G_A to the noise.
+(ii) the summands are re-exported with all digits (170 at eps = 1/800, 90 at 1/100).
+Script: mx5_second_matrix.py. Predictions and meaning:
+M9. Step (i) converges (relative mismatch det A - G_A falls to about 1e-40 at eps = 1/800) in 2 or 3 steps.
+    If not: A is not in the orbit of G_A to the precision claimed; stop and report.
+M10. Newton for Delta converges quadratically; at the end |det A + det B - F_eps| / |F_eps| is at the truncation
+    level (about 1e-45 at eps = 1/800, about 1e-27 at 1/100: it must follow the truncation, the control), and
+    |Delta| / |A| is of order eps^6.
+    - as predicted: the pre-registered M7 holds: NUMERICAL evidence that the cubics of this arc are sums of two
+      determinants; then M3 for B (its minors in the kernel of Cat(2,2)), and the leading forms (M8).
+    - Newton stalls at a floor above the truncation that does not follow it: on this arc F_eps is near, not in,
+      the family; (S) is in trouble on this arc; report.
+    - Newton diverges or the linear system is singular beyond the expected gauge (dimension of the solution set of
+      the linear part > the 8 + 8 + 1 symmetries of a pair): report, try a damped version once, then stop.
+Time box: 6-8 hours in total for A3; if it stalls, a short note for an expert (where exactly it stalls).
+
+### Outcome of the third route (27 Nov, 07:31 UTC; logs in the text below, scripts mx5, mx5b)
+- M9 AS PREDICTED: after two coordinate corrections det A = G_A to 1.39e-40 relative at eps = 1/800 (absolute
+  3.9e-20 against |F_eps| = 2.83), the value blind check 12 found for the non-orbit part. (At 1/100 with the
+  60-digit export: 3e-22, limited by the export.)
+- M10 FAILED, third outcome: Newton for Delta diverges (residual 3e12 after one full step) and the damped version
+  stalls at residual 1.0 (step lengths 3e-8, then 2e-10). Diagnostic (mx5b): the tangent space of the
+  determinantal cubics at G_A, spanned by cof_ij(A) . (linear forms), has rank 56 (= 72 - 16, as it must) but its
+  singular values spread over 31 orders of magnitude (1, 0.55, 0.25, 0.17, 4e-6, 3e-6, 2e-12, 2e-12, 1e-15, 6e-19,
+  4e-23, ..., 2e-31, then the 16 gauge directions at 1e-162); and F_eps is 65 per cent OUTSIDE it (least-squares
+  residual 0.65 |F_eps|, with a coefficient vector of size 5e8). So the chord from G_A to -G_B is far from tangent
+  to the determinantal variety: near the cube l^3 that variety is extremely curved, -G_B = G_A o g with g in GL_8
+  NOT close to the identity, and no local method started at A can reach B.
+  Stopped there, as pre-registered. What this says about (S): nothing either way; the summand G_B is still only
+  known to have 8 vector fields at one value of eps.
