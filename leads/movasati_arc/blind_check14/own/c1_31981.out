@@ -1,0 +1,3 @@
+exact_g_lam2_order5.txt p 31981 terms 5 lam 2 nonzero per order 1..6: [0, 0, 0, 0, 0, 43] | lam -2 order1: 4 | control T_last + x0x3x9 at order 5 : 4 | #E_N 418893 | 4s
+exact_g_lam-1_order7.txt p 31981 terms 7 lam -1 nonzero per order 1..7: [0, 0, 0, 0, 0, 0, 0] | lam 1 order1: 4 | control T_last + x0x3x9 at order 7 : 4 | #E_N 1305875 | 23s
+exact_s_lam-1_order9.txt p 31981 terms 9 lam -1 nonzero per order 1..9: [0, 0, 0, 0, 0, 0, 0, 0, 0] | lam 1 order1: 4 | control T_last + x0x3x9 at order 9 : 4 | #E_N 2287822 | 43s

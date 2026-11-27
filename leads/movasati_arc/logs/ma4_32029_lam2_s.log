@@ -1,0 +1,14 @@
+p = 32029, seed 0, lambda = 2, case s ; rank L = 19 ; T_1 in ker L: true ; not in ker L_P1: true
+slice seed 0 : 19 monomials with independent columns of L ; 18 net directions in ker L: true
+  order 2 solvable ; cpu .238009
+  order 3 solvable ; cpu .645303
+  order 4 solvable ; cpu 1.56309
+  order 5 : D on the 18 net directions: rank 7 (7 = 18 - 11 expected) ; D(y_0) = 0: true ; cpu 81.999
+  free directions of the slice: the net directions {(0,1,0), (0,2,0), (1,2,0), (2,0,0), (2,1,0), (2,2,0), (2,2,1)}
+  order 5 : D on the slice: 26 x 7, rank 7 ; linear on a random combination: true
+  order 5 : obstruction in Im D, removed by the free part of T_2 ; cpu 118.25
+  order 6 : obstruction in Im D, removed by the free part of T_3 ; cpu 133.42
+RESULT p = 32029, seed 0, slice 0, lambda = 2, case s : arc of 6 terms ; status: reached ; cpu 133.421
+RESULT fermatVerifyArc on the 6 terms: pass true ; first failing order null ; forms 45
+RESULT T_1 leaves V (not in ker L_P1): true ; number of free directions 7
+DONE cpu 138.773

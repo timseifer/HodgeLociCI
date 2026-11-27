@@ -43,7 +43,7 @@ the status label of their registry entries. None is a statement for or against t
   the lattice invariants of `[P1] - [P2]`. By a cone construction it reaches the two-plane locus, conditionally
   with Movasati's class; at Movasati's point a 13-dimensional cone of directions passes order 4, which changes the
   recorded bound from 54 to 52, and along one kind of direction in it the class stays Hodge to order 9 (MOD p)
-  for the coefficient -1 while the coefficient 2 is obstructed at order 6. Write-up: [`leads/TENFOLD_TWODET_LEAD.md`](leads/TENFOLD_TWODET_LEAD.md); registry
+  for the coefficient -1 while the coefficient 2 is obstructed at order 6 (exact on one direction in general position). Write-up: [`leads/TENFOLD_TWODET_LEAD.md`](leads/TENFOLD_TWODET_LEAD.md); registry
   `D-TENFOLD-CONE-POINTS-TWO-DET`, `D-TENFOLD-ORDER4-MODEL-CONE`, `D-TENFOLD-TWO-DET-CLASS`.
 
 What is not established is listed in each entry (`not_established`). The package's own main output, which is at
@@ -325,7 +325,7 @@ A readable live view of the registry and of current work is published at
 
 
 `discoveries/` records what the project behind this package has already found, ruled out or left open, so that
-nobody (person or agent) repeats the work: 169 entries in `discoveries/registry.yaml`, with readable pages by area
+nobody (person or agent) repeats the work: 170 entries in `discoveries/registry.yaml`, with readable pages by area
 (`discoveries/01_...md` to `08_...md`). Each entry gives the precise statement, its status, what it is conditional
 on, what was computed, which independent AI check confirmed it, what is *not* established, what was known before,
 and how to re-verify it inside this repository (or says that it cannot be). Negative results and dead ends are

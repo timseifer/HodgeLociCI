@@ -164,3 +164,53 @@ Corrections and caveats, all accepted:
 5. The free parts of the last three terms of each arc file are placeholders (fixed only by later orders).
 A practical note from the checker: its python-flint expansion is about five times faster than the package's at
 order 8 (`blind_check13/lib13.py`); worth using for the next orders.
+
+## Step M3: characteristic 0 (owner: "yes go ahead"; pre-registered 27 Nov 2026, 00:01 UTC, after the exact run
+## had reached order 4 and before any exact result beyond it was read)
+
+Script `ma4_exact.m2`: the algorithm of ma2 with p = 0 (EXACT over QQ(zeta_6)), every choice deterministic (y_0 a
+fixed integer combination of a kernel basis; slice by a greedy pass over the monomials in their natural order;
+free directions the first 7 net directions with independent images), linear algebra by the package's own row
+reduction. Direction s: A = E01 + E10, B = E01 - E10 (in the 11-dimensional piece; rank 2 each, common kernel and
+cokernel, polar form 0). With p > 0 the same script is the control. Control already run (MOD 32029, lambda = -1):
+passes to order 7, D of rank 7 (logs/ma4_32029_lam-1_s.log).
+Predictions. E1: exact, lambda = -1: orders 5, 6, 7 (and beyond, as far as time allows) are repaired; the arc
+passes fermatVerifyArc exactly. E2: exact, lambda = 2: obstructed at order 6 (order 5 repaired).
+- E1 and E2 as predicted: the separation of -1 from 2 at Movasati's point holds in characteristic 0 on this
+  direction, to the order reached; the headline number becomes EXACT (one direction, finite order).
+- E1 obstructed exactly at some order where MOD p passed: then the MOD p results were a coincidence of the
+  primes or the direction s is special; report as a correction.
+- E2 not obstructed exactly: the MOD p obstruction for 2 does not lift; report as a correction.
+Also a second net f = ([[1,2],[0,1]], [[1,0],[1,1]]) blocks, polar form 0, if time allows.
+
+### Note of 27 Nov, 00:52 UTC, before any exact result for lambda = 2 was read: the direction s does not separate
+
+MOD 32029 controls, not predicted: for lambda = 2 the order-6 obstruction is REMOVABLE on the symmetric net s
+(with the deterministic y_0 and with a random y_0: logs/ma4_32029_lam2_s.log, ma2_32029_seed1_lam2_s.log) and on
+the net f (ma4_32029_lam2_f.log). Both have their common kernel and cokernel along coordinate vectors (the third
+row and column vanish). On a net with the same blocks moved by fixed integer matrices G3, H3 (case g, kernel and
+cokernel not along coordinates) lambda = 2 is obstructed at order 6 again (ma4_32029_lam2_g.log), as for the
+random nets d. So the separation of -1 from 2 at order 6 holds for nets in general position, not for nets
+aligned with the coordinates; this matches the checker's caveat that the tested directions are special.
+Consequence for M3: the exact separation test is run on case g (E1, E2 for g); the exact run on s for lambda = -1
+is kept as an exact arc, but it cannot decide anything about 2. The lambda = 2 exact run on s was stopped.
+An aligned net passing order 6 for lambda = 2 is plausible because the arc then sees a product structure (no
+f_2, h_2 in the net); not analysed (OPEN).
+
+### Outcome of M3 (27 Nov, 02:10 UTC; logs/ma4_exact_*.log, ma5_exact_g_lam-1_order7.log; arcs/exact_*.txt)
+
+EXACT over QQ(zeta_6), deterministic choices:
+- net g (general position), lambda = -1: orders 5, 6, 7 repaired by the free parts of T_2, T_3, T_4; the 7-term arc
+  re-verified from scratch by ma5 (fermatVerifyArc, 45 forms: pass; [P1] + [P2] fails at order 1). The run was
+  stopped by hand during order 8 (each exact order costs about 3 times the last; order 7 took 20 minutes).
+- net g, lambda = 2: order 5 repaired, order 6 OBSTRUCTED (not in Im D) in the slice.
+- net s (aligned), lambda = -1: orders 5 to 9 repaired; the 9-term arc passes fermatVerifyArc exactly.
+E1 and E2 AS PREDICTED for net g (the separating direction; see the note above for why s does not separate).
+So on one direction in general position at Movasati's point the separation of -1 from 2 at order 6 holds in
+characteristic 0, with lambda = -1 continuing exactly to order 7. Finite order; one direction; the slice reading
+for lambda = 2 (the full-space statement is MOD p, blind check 13; the exact full-space test is in blind check 14).
+
+### Blind check 14 (27 Nov, 02:12 to 02:40 UTC): `blind_check14/REPORT.md`. Confirmed (exact to orders 8 / 6 with the
+package, MOD p to 9 / 7 with own code); lambda = 2 on g obstructed in the full space MOD p; aligned nets pass order 6
+for lambda = 2 (explicit jets). Corrections accepted: "separation in characteristic 0" holds in the slice only; the
+aligned/general reading rests on one net and may instead be about the net's position relative to y_0.

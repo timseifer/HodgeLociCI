@@ -1,0 +1,4 @@
+file exact_s_lam-1_order9.txt p=0 terms=9 ring (QQ[z]/(z^2-z+1))[]
+  lambda=-1 order 8: nonzero entries per column {0, 0, 0, 0, 0, 0, 0, 0} of 45  cpu 341.464
+  lambda=1 order 1: nonzero entries 4
+EXIT 0

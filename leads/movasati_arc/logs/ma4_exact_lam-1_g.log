@@ -1,0 +1,11 @@
+p = 0, seed 0, lambda = -1, case g ; rank L = 19 ; T_1 in ker L: true ; not in ker L_P1: true
+slice seed 0 : 19 monomials with independent columns of L ; 18 net directions in ker L: true
+  order 2 solvable ; cpu .481112
+  order 3 solvable ; cpu 3.24225
+  order 4 solvable ; cpu 16.7451
+  order 5 : D on the 18 net directions: rank 7 (7 = 18 - 11 expected) ; D(y_0) = 0: true ; cpu 931.912
+  free directions of the slice: the net directions {(0,0,0), (0,1,0), (0,2,0), (1,0,0), (1,1,0), (2,0,0), (0,0,1)}
+  order 5 : D on the slice: 26 x 7, rank 7 ; linear on a random combination: true
+  order 5 : obstruction in Im D, removed by the free part of T_2 ; cpu 1339.95
+  order 6 : obstruction in Im D, removed by the free part of T_3 ; cpu 1681.33
+  order 7 : obstruction in Im D, removed by the free part of T_4 ; cpu 2851.43

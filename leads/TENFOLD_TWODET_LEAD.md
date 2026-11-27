@@ -557,3 +557,23 @@ Report, scripts, outputs: `leads/movasati_arc/blind_check13/`.
   the direction T_1 is special inside the 94-dimensional candidate cone (no component along 64 of its
   directions), so for lambda = -1 the evidence is at such directions only; no direction was run at two primes.
 - An observation of the checker, open: the pencil A y_1 + B y_2 has exactly two members of rank <= 1.
+
+### 9.6 Characteristic 0, and which directions separate (27 Nov, 00:00 to 02:10 UTC; owner: "yes go ahead")
+
+- **EXACT** (over QQ(zeta_6), `leads/movasati_arc/ma4_exact.m2`, deterministic choices): on a net in general
+  position (case g: rank-2 blocks moved by fixed integer matrices), lambda = -1 passes orders 5, 6, 7 (the 7-term
+  arc re-verified from scratch), and lambda = 2 is obstructed at order 6 in the slice. On the symmetric net s,
+  lambda = -1 passes to order 9 exactly.
+- **New, not predicted (MOD p):** on nets whose common kernel and cokernel lie along coordinate vectors (s, and the
+  net f with the blocks of g but unmoved), lambda = 2 is NOT obstructed at order 6. Moving the same blocks into
+  general position (g) restores the obstruction. So the separation of -1 from 2 at order 6 is a property of
+  directions in general position, and the aligned directions are a sub-locus where lambda = 2 also goes on (to
+  order 6 at least). Not analysed; a natural guess (OPEN) is that aligned nets do not involve the pair (x4, x5)
+  through the net and see a product structure, as the cone-type directions do, which exist for every lambda.
+- Headline consequence: "at Movasati's point the coefficient 2 is obstructed and -1 is not" is now EXACT at order
+  6 on one direction in general position (-1 to order 7), and must be read for general directions only.
+- Blind check 14 (separate agent; `leads/movasati_arc/blind_check14/`): confirmed exactly with the package to
+  order 8 (s) and 6 (g), MOD p with its own code to 9 and 7; the lambda = 2 obstruction on g in the FULL space MOD p
+  at two primes; explicit lambda = 2 jets through order 6 on s and F1, F2. Corrections accepted: the full-space
+  obstruction is MOD p (exact only in the slice); the dividing line may be the position of the net relative to y_0
+  rather than "aligned with coordinates" (one non-aligned net tested).

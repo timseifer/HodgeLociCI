@@ -1,0 +1,12 @@
+p 32029 case F lambda 2 #T1 32 rank L 19 dim ker L 101 L T1 nonzero: 0 setup 10s
+identity Kl c_n(direct) == ob_n at a random dense point, n=2..6: [True, True, True, True, True]
+ob_2,ob_3,ob_4 nonzero counts at 4 random points: [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+ob_5 affine (2 second-difference tests): True
+Lin5 rank total 7 by block k2,k3,k4,k5: [7, 0, 0, 0] ob5(0) nonzero: 9 2s
+dim A = 397
+at u0: ob_2..ob_5 nonzero: [0, 0, 0, 0] ob_6 nonzero: 9
+samples on A: 13 max nonzero of ob_2..5 at samples: 0 dim W = span(ob_6(u)-ob_6(u0)): 7
+ob_6(u0) lies in W; ob_6 affine on A (one test): False
+candidate from affine model: ob_2..ob_6 nonzero: [0, 0, 0, 0, 0]
+DIRECT verification of the constructed jet T_1..T_6: nonzero c_n among 45, n=1..6: [0, 0, 0, 0, 0, 0]
+total 24s

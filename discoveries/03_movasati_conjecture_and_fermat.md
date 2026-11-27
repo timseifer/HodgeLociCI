@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (24)
+## Entries on this page (25)
 
 | id | status | title |
 |---|---|---|
@@ -36,6 +36,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-MOVASATI-ORDER6](#d-tenfold-movasati-order6) | `MOD_P` | Tenfold Movasati point, a direction of the 13-dimensional piece: order 6 passes for lambda = -1 (by a change of T_3) and is obstructed for lambda = 2 modulo the first-order corrections tested |
 | [D-SIXFOLD-ARC-ORDER19](#d-sixfold-arc-order19) | `EXACT` | The sixfold arc of T2 into the divisor D, exactly to order 19: T_8..T_19 are determined uniquely; the certificate's T_8, T_9 are not on the continuing arc |
 | [D-MOVASATI-POINT-ARC-ORDER8](#d-movasati-point-arc-order8) | `MOD_P` | Movasati's own point, a direction that is not a cone over a sixfold: [P1] - [P2] stays Hodge to order 9 along an arc (eightfold; the tenfold by the cone map); with the same first-order term lambda = 2 is obstructed at order 6 |
+| [D-MOVASATI-POINT-EXACT-SEPARATION](#d-movasati-point-exact-separation) | `EXACT` | Movasati's own point in characteristic 0: on one direction in general position lambda = -1 passes order 7 and lambda = 2 is obstructed at order 6 in the slice, exactly; on coordinate-aligned directions lambda = 2 is not obstructed at order 6 (MOD p) |
 
 ## Related entries on other pages
 
@@ -1829,6 +1830,9 @@ leads/movasati_arc/blind_check13/REPORT.md.
 
 **Not established.**
 
+UPDATE 27 Nov 2026: in characteristic 0 on a direction in general position, D-MOVASATI-POINT-EXACT-SEPARATION.
+There it was also found that on directions aligned with the coordinates lambda = 2 is NOT obstructed at order 6,
+so item (3) here holds for directions in general position (the random nets used), not for all. Earlier text:
 That a second component exists at Movasati's point (finite order). Anything exact: characteristic 0 is the
 next step. Orders beyond those stated. A direction with C non-zero beyond order 6. That the arc lies in the
 closure of the two-determinant family (the paper chain D-X1-COMPONENT-IS-TD-CLOSURE + D-GLOBAL-ARGUMENT predicts
@@ -1870,3 +1874,90 @@ the class (1, 9, 26, 26, 9, 1 would be the two-determinant numbers of D-RANK-CON
 ```
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), thirteenth part (owner: 'move forward with the next most exciting lead').
+
+---
+
+## D-MOVASATI-POINT-EXACT-SEPARATION
+
+**Movasati's own point in characteristic 0: on one direction in general position lambda = -1 passes order 7 and lambda = 2 is obstructed at order 6 in the slice, exactly; on coordinate-aligned directions lambda = 2 is not obstructed at order 6 (MOD p)**
+
+kind: `result` | area: `movasati_conjecture` | status: **`EXACT`**
+
+**Statement.**
+
+```text
+Setting and method: D-MOVASATI-POINT-ARC-ORDER8 (eightfold Movasati point; T_1 = y_0 + net; arc in a transversal
+slice of 19 monomials and 7 net directions), now with every choice deterministic (leads/movasati_arc/ma4_exact.m2).
+(1) (EXACT over QQ(zeta_6).) Net g in general position: A = G F1 H, B = G F2 H with G = [[1,1,0],[0,1,1],[1,0,2]],
+H = [[2,0,1],[1,1,0],[0,1,1]], F1, F2 with top-left blocks [[1,2],[0,1]], [[1,0],[1,1]] (rank 2, polar form 0).
+lambda = -1: orders 5, 6, 7 are repaired by the free parts of T_2, T_3, T_4; the 7-term arc passes fermatVerifyArc
+exactly (45 forms); for [P1] + [P2] it fails at order 1. lambda = 2 (its own y_0): order 5 repaired, order 6
+obstructed in the slice.
+(2) (EXACT.) Symmetric net s (A = E01 + E10, B = E01 - E10): lambda = -1 passes to order 9; exact 9-term arc.
+(3) (MOD 32029; not predicted.) On nets with common kernel and cokernel along coordinate vectors (s, with the fixed
+y_0 and with a random one; and the unmoved net F1, F2) lambda = 2 is NOT obstructed at order 6 in the slice; the
+same blocks moved into general position (g), and the random nets of D-MOVASATI-POINT-ARC-ORDER8, are obstructed.
+(4) Reading. On this direction the separation of -1 from 2 at order 6 holds in characteristic 0 in the slice (to
+order 7 for -1); the full-space version for 2 is MOD p (blind check 14). On the aligned directions lambda = 2 also
+goes on to order 6 at least. Whether the dividing line is 'kernel along coordinates' or the position of the net
+relative to y_0 (which was not moved with the net) is OPEN. Finite order: evidence, not a proof that a component
+exists.
+```
+
+**Conditions.**
+
+```text
+(1), (2) are exact finite-order statements for one direction each and the stated slice; the lambda = 2 verdict in
+(1) is a slice statement (its reading as "no component of dimension dim V - 6 through this direction" is the ARG of
+D-MOVASATI-POINT-ARC-ORDER8). (3) is MOD p at one prime, in the slice. Why aligned directions behave differently is
+not analysed.
+```
+
+**Evidence.**
+
+leads/movasati_arc/ma4_exact.m2, ma5_verify_exact.m2; logs/ma4_exact_lam-1_g.log (stopped by hand during order 8),
+ma4_exact_lam2_g.log, ma4_exact_lam-1_s.log, ma5_exact_g_lam-1_order7.log, ma4_32029_lam-1_s.log,
+ma4_32029_lam2_s.log, ma4_32029_lam2_f.log, ma4_32029_lam2_g.log, ma2_32029_seed1_lam2_s.log; arcs/exact_*.txt;
+PREREG_arc.md (step M3 and the note on s, written before the exact lambda = 2 results); leads/TENFOLD_TWODET_LEAD.md,
+section 9.6.
+
+**Independent check.**
+
+Blind check 14 (a separate agent; the package as a black box over QQ(z), and its own python-flint code MOD p; it read
+neither ma4_exact.m2 nor the logs): EXACT with the package: the s arc to order 8 and the g arc to order 6 (higher
+orders timed out), [P1] + [P2] failing at order 1; the lambda = 2 jet to order 5. MOD p at two primes with own code:
+the s arc to order 9, the g arc to order 7; for lambda = 2 on g no T_2..T_6 in the full space of squarefree cubics
+passes order 6; on s and on the unmoved net F1, F2, explicit jets through order 6 for lambda = 2, checked directly.
+Its corrections, worked in: the full-space obstruction is MOD p, not exact; the aligned/general-position reading
+rests on one net g, and a dependence on the position relative to y_0 fits the data equally. Orders 7 (g) and 9 (s)
+exactly rest on my own verification run (ma5, logs/ma5_exact_g_lam-1_order7.log; ma4 log for s) only.
+leads/movasati_arc/blind_check14/REPORT.md.
+
+**Not established.**
+
+Orders beyond 7 (g) and 9 (s) exactly; other directions exactly; the full-space version of the lambda = 2
+obstruction in characteristic 0 (see independent_check); a component; the meaning of the aligned sub-locus where
+lambda = 2 passes order 6, and how far it goes.
+
+**Known before.**
+
+D-MOVASATI-POINT-ARC-ORDER8 (MOD p, random directions) and its blind check 13 (which noted that the tested directions
+are special); D-TENFOLD-MOVASATI-ORDER6; D-SIXFOLD-GERM-AT-MOVASATI-POINT (cone-type components for every lambda).
+New: characteristic 0; deterministic directions; the aligned directions where lambda = 2 is not obstructed.
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22):
+    M2 --script leads/movasati_arc/ma5_verify_exact.m2 -1 leads/movasati_arc/arcs/exact_g_lam-1_order7.txt   (10 minutes)
+    M2 --script leads/movasati_arc/ma4_exact.m2 0 0 2 6 g 0 /tmp/b.txt      (25 minutes; ends OBSTRUCTED at order 6)
+    M2 --script leads/movasati_arc/ma4_exact.m2 32029 0 2 6 s 0             (3 minutes; passes order 6)
+```
+
+**Next step.**
+
+Understand the aligned directions: run lambda = 2 on s and f past order 6 (MOD p), and look for a product or cone
+structure that explains them (they may be the trace at this point of a family that exists for every lambda). For
+the headline: lambda = -1 on g to order 8 or 9 exactly (2 to 6 hours).
+
+**Session references (files not public).** Session of 26-27 Nov 2026 (Claude Fable 5.2 and Claude Opus 5.5, chat), fourteenth part (owner: 'yes go ahead').

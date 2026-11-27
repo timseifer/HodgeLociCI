@@ -1,0 +1,4 @@
+file exact_g_lam2_order5.txt p=0 terms=5 ring (QQ[z]/(z^2-z+1))[]
+  lambda=2 order 6: nonzero entries per column {0, 0, 0, 0, 0, 43} of 45  cpu 173.093
+  lambda=-2 order 1: nonzero entries 4
+EXIT 124

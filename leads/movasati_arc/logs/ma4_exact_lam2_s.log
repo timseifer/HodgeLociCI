@@ -1,0 +1,5 @@
+p = 0, seed 0, lambda = 2, case s ; rank L = 19 ; T_1 in ker L: true ; not in ker L_P1: true
+slice seed 0 : 19 monomials with independent columns of L ; 18 net directions in ker L: true
+  order 2 solvable ; cpu .259438
+  order 3 solvable ; cpu 1.17231
+  order 4 solvable ; cpu 4.73431
