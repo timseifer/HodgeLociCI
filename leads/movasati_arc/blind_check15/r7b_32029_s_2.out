@@ -1,0 +1,15 @@
+p 32029 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 39s
+rank J3 7 #annihilators 19 60s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 83s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (14439, 15643)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+total 120s

@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (33)
+## Entries on this page (34)
 
 | id | status | title |
 |---|---|---|
@@ -45,6 +45,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-BIELLIPTIC-NOT-SINGULAR-LOCUS](#n-bielliptic-not-singular-locus) | `RULED_OUT` | A bielliptic surface of degree 18 in P^8 (K of order 2, type (3,3)) is not the singular locus of any cubic |
 | [N-M2-TOFIELD-IDEAL-QUOTIENT](#n-m2-tofield-ideal-quotient) | `RULED_OUT` | Macaulay2 1.22 returned a wrong ideal quotient over toField(QQ[w]/(w^2+w+1)) (reproducible): do not use colon ideals or their Hilbert functions over such a field as exact evidence |
 | [N-MATRIX-RECOVERY-FIRST-ATTEMPTS](#n-matrix-recovery-first-attempts) | `RULED_OUT` | Recovering the matrices along the sixfold arc: what did not work (random-start least squares, order-9 series, eps >= 1/25, eigenforms in the original coordinates for the nearly degenerate summand) |
+| [N-SLICE-FALSE-OBSTRUCTION-ORDER7](#n-slice-false-obstruction-order7) | `RULED_OUT` | The transversal-slice arc solver can report false obstructions from order 7 on |
 
 ---
 
@@ -1588,3 +1589,38 @@ with order-19 series. Reading a count of symmetries at the noise level as exact.
 symmetry in unbalanced coordinates without printing the condition number.
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), twelfth part (owner: 'queue this work up'; 'Go ahead').
+
+---
+
+## N-SLICE-FALSE-OBSTRUCTION-ORDER7
+
+**The transversal-slice arc solver can report false obstructions from order 7 on**
+
+kind: `dead_end` | area: `methods` | status: **`RULED_OUT`**
+
+**Statement.**
+
+ma2_slice_arc.m2 / ma4_exact.m2 fix the free parts of T_2, T_3, ... one at a time by the linear response D of order n
+to T_(n-3). From order 7 on the order-n condition also depends non-trivially on the free part of T_2 through a
+second response map (rank 11, blind check 13) and non-linear terms, so a jet can exist in the full space while the
+slice reports "obstructed". Found by blind check 15: lambda = 2 on net s, order 7, two primes.
+
+**Conditions.** Applies to obstruction verdicts at order >= 7. Passing verdicts (an explicit arc verified by fermatVerifyArc) are unaffected; order-6 obstructions checked in the full space (nets g, d) stand.
+
+**Evidence.** leads/movasati_arc/blind_check15/REPORT.md; logs/ma4_32029_lam2_s_order8.log, ma4_31981_lam2_s_order8.log.
+
+**Independent check.** Blind check 15 (explicit full-space jets checked directly).
+
+**Not established.** Which orders and directions are affected beyond this case.
+
+**Known before.** Blind check 13 warned that the description 'affine in T_(n-3) with one matrix' was incomplete.
+
+**Reproduce.**
+
+```
+M2 --script leads/movasati_arc/ma4_exact.m2 32029 0 2 8 s 0      (reports OBSTRUCTED at order 7; compare blind_check15)
+```
+
+**Do not repeat.** Do not read an obstruction at order >= 7 from the slice solver; confirm in the full space (blind_check15/fs7.py).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), fifteenth part (owner: 'Go ahead').

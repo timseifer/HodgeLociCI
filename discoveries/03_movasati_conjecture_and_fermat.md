@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (25)
+## Entries on this page (26)
 
 | id | status | title |
 |---|---|---|
@@ -37,6 +37,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-SIXFOLD-ARC-ORDER19](#d-sixfold-arc-order19) | `EXACT` | The sixfold arc of T2 into the divisor D, exactly to order 19: T_8..T_19 are determined uniquely; the certificate's T_8, T_9 are not on the continuing arc |
 | [D-MOVASATI-POINT-ARC-ORDER8](#d-movasati-point-arc-order8) | `MOD_P` | Movasati's own point, a direction that is not a cone over a sixfold: [P1] - [P2] stays Hodge to order 9 along an arc (eightfold; the tenfold by the cone map); with the same first-order term lambda = 2 is obstructed at order 6 |
 | [D-MOVASATI-POINT-EXACT-SEPARATION](#d-movasati-point-exact-separation) | `EXACT` | Movasati's own point in characteristic 0: on one direction in general position lambda = -1 passes order 7 and lambda = 2 is obstructed at order 6 in the slice, exactly; on coordinate-aligned directions lambda = 2 is not obstructed at order 6 (MOD p) |
+| [D-ALIGNED-POCKET-LAMBDA2](#d-aligned-pocket-lambda2) | `MOD_P` | Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7 |
 
 ## Related entries on other pages
 
@@ -1961,3 +1962,47 @@ structure that explains them (they may be the trace at this point of a family th
 the headline: lambda = -1 on g to order 8 or 9 exactly (2 to 6 hours).
 
 **Session references (files not public).** Session of 26-27 Nov 2026 (Claude Fable 5.2 and Claude Opus 5.5, chat), fourteenth part (owner: 'yes go ahead').
+
+---
+
+## D-ALIGNED-POCKET-LAMBDA2
+
+**Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Setting: D-MOVASATI-POINT-EXACT-SEPARATION (eightfold Movasati point; T_1 = y_0 + net; y_0 the excess direction for
+lambda = 2). Nets with common kernel and cokernel along coordinate vectors: s (A = E01 + E10, B = E01 - E10) and f
+(blocks [[1,2],[0,1]], [[1,0],[1,1]]).
+(1) (MOD 32029 and 31981; blind check 15, explicit jets checked directly.) Net s, lambda = 2: there are T_2, ..., T_7
+in the full space of squarefree cubics with orders 1..7 satisfied.
+(2) (MOD 32029 and 31981; MOD p + ARG, blind check 15.) Net f, lambda = 2: no T_2, ..., T_7 satisfies orders 2..7.
+(3) In my transversal slice both s and f were reported obstructed at order 7 at both primes; for s that is false
+(see N-SLICE-FALSE-OBSTRUCTION-ORDER7).
+(4) Reading: on the symmetric aligned direction lambda = 2 survives to order 7 so far (lambda = -1: to order 9
+exactly). OPEN whether it goes on, and whether it is the trace of a family that exists for every lambda.
+```
+
+**Conditions.** Two primes; one T_1 per net; integer powers of eps; finite order. (2) rests on structure facts tested at sample points.
+
+**Evidence.** leads/movasati_arc/blind_check15/ (fs7.py, run7*.py, r7*.out, REPORT.md); logs/ma4_*_lam2_*_order8.log; PREREG_arc.md, step 3 and its correction.
+
+**Independent check.** The jets of (1) and the verdict of (2) are the checker's own (blind check 15), contradicting my slice result for s; my own runs agree with (2).
+
+**Not established.** Order 8 and beyond; characteristic 0; other aligned nets; the meaning of the pocket; any component.
+
+**Known before.** D-MOVASATI-POINT-EXACT-SEPARATION (aligned nets pass order 6 for lambda = 2); cone-type families for every lambda (D-SIXFOLD-GERM-AT-MOVASATI-POINT).
+
+**Reproduce.**
+
+```text
+From the repository root (Python 3 with python-flint, numpy):
+    python3 leads/movasati_arc/blind_check15/run7b.py      (see the REPORT for arguments; about 8 minutes per case)
+```
+
+**Next step.** Order 8 in the full space for net s (extend fs7.py by one order), then the pre-registered splitting test (PREREG_arc.md, step 3).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), fifteenth part (owner: 'Go ahead').

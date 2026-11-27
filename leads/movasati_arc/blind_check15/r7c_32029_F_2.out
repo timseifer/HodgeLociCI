@@ -1,0 +1,6 @@
+p 32029 case F lambda 2 #T1 32 rank L 19 dimK 101 L T1 nonzero: 0 setup 52s
+rank J3 7 #annihilators 19 73s
+Lambda (19 x 94): rank 2 ; q(base) nonzero comps 4 219s
+affine check: q(a1)=qb+Lam a1: True ; second difference zero: True
+OBSTRUCTED (on V6 as parametrised): q(base) not in im Lambda; annihilators of im Lambda: 17 ; nonzero values on q(base): 2
+total 224s

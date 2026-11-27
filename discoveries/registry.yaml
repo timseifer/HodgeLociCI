@@ -8005,6 +8005,67 @@
   session_refs: |-
     Session of 26-27 Nov 2026 (Claude Fable 5.2 and Claude Opus 5.5, chat), fourteenth part (owner: 'yes go ahead').
 
+- id: D-ALIGNED-POCKET-LAMBDA2
+  kind: result
+  area: movasati_conjecture
+  title: "Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7"
+  statement: |-
+    Setting: D-MOVASATI-POINT-EXACT-SEPARATION (eightfold Movasati point; T_1 = y_0 + net; y_0 the excess direction for
+    lambda = 2). Nets with common kernel and cokernel along coordinate vectors: s (A = E01 + E10, B = E01 - E10) and f
+    (blocks [[1,2],[0,1]], [[1,0],[1,1]]).
+    (1) (MOD 32029 and 31981; blind check 15, explicit jets checked directly.) Net s, lambda = 2: there are T_2, ..., T_7
+    in the full space of squarefree cubics with orders 1..7 satisfied.
+    (2) (MOD 32029 and 31981; MOD p + ARG, blind check 15.) Net f, lambda = 2: no T_2, ..., T_7 satisfies orders 2..7.
+    (3) In my transversal slice both s and f were reported obstructed at order 7 at both primes; for s that is false
+    (see N-SLICE-FALSE-OBSTRUCTION-ORDER7).
+    (4) Reading: on the symmetric aligned direction lambda = 2 survives to order 7 so far (lambda = -1: to order 9
+    exactly). OPEN whether it goes on, and whether it is the trace of a family that exists for every lambda.
+  status: MOD_P
+  conditions: |-
+    Two primes; one T_1 per net; integer powers of eps; finite order. (2) rests on structure facts tested at sample points.
+  evidence: |-
+    leads/movasati_arc/blind_check15/ (fs7.py, run7*.py, r7*.out, REPORT.md); logs/ma4_*_lam2_*_order8.log; PREREG_arc.md, step 3 and its correction.
+  independent_check: |-
+    The jets of (1) and the verdict of (2) are the checker's own (blind check 15), contradicting my slice result for s; my own runs agree with (2).
+  not_established: |-
+    Order 8 and beyond; characteristic 0; other aligned nets; the meaning of the pocket; any component.
+  known_before: |-
+    D-MOVASATI-POINT-EXACT-SEPARATION (aligned nets pass order 6 for lambda = 2); cone-type families for every lambda (D-SIXFOLD-GERM-AT-MOVASATI-POINT).
+  reproduce: |-
+    From the repository root (Python 3 with python-flint, numpy):
+        python3 leads/movasati_arc/blind_check15/run7b.py      (see the REPORT for arguments; about 8 minutes per case)
+  next_step: |-
+    Order 8 in the full space for net s (extend fs7.py by one order), then the pre-registered splitting test (PREREG_arc.md, step 3).
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), fifteenth part (owner: 'Go ahead').
+
+- id: N-SLICE-FALSE-OBSTRUCTION-ORDER7
+  kind: dead_end
+  area: methods
+  title: "The transversal-slice arc solver can report false obstructions from order 7 on"
+  statement: |-
+    ma2_slice_arc.m2 / ma4_exact.m2 fix the free parts of T_2, T_3, ... one at a time by the linear response D of order n
+    to T_(n-3). From order 7 on the order-n condition also depends non-trivially on the free part of T_2 through a
+    second response map (rank 11, blind check 13) and non-linear terms, so a jet can exist in the full space while the
+    slice reports "obstructed". Found by blind check 15: lambda = 2 on net s, order 7, two primes.
+  status: RULED_OUT
+  conditions: |-
+    Applies to obstruction verdicts at order >= 7. Passing verdicts (an explicit arc verified by fermatVerifyArc) are unaffected; order-6 obstructions checked in the full space (nets g, d) stand.
+  evidence: |-
+    leads/movasati_arc/blind_check15/REPORT.md; logs/ma4_32029_lam2_s_order8.log, ma4_31981_lam2_s_order8.log.
+  independent_check: |-
+    Blind check 15 (explicit full-space jets checked directly).
+  not_established: |-
+    Which orders and directions are affected beyond this case.
+  known_before: |-
+    Blind check 13 warned that the description 'affine in T_(n-3) with one matrix' was incomplete.
+  reproduce: |-
+        M2 --script leads/movasati_arc/ma4_exact.m2 32029 0 2 8 s 0      (reports OBSTRUCTED at order 7; compare blind_check15)
+  do_not_repeat: |-
+    Do not read an obstruction at order >= 7 from the slice solver; confirm in the full space (blind_check15/fs7.py).
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), fifteenth part (owner: 'Go ahead').
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture

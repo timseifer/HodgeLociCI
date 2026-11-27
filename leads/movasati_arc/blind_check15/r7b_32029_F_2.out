@@ -1,0 +1,12 @@
+p 32029 case F lambda 2 #T1 32 rank L 19 dimK 101 L T1 nonzero: 0 setup 52s
+rank J3 7 #annihilators 19 73s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 97s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 4
+interpolant predicts off-grid point: True
+#independent component polys: 3 ; total degrees: [0, 1, 1]
+resultant in s: degree 0
+number of F_p roots of resultant: 0
+F_p point with all component polys zero: None
+total 99s

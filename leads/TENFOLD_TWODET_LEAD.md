@@ -577,3 +577,17 @@ Report, scripts, outputs: `leads/movasati_arc/blind_check13/`.
   at two primes; explicit lambda = 2 jets through order 6 on s and F1, F2. Corrections accepted: the full-space
   obstruction is MOD p (exact only in the slice); the dividing line may be the position of the net relative to y_0
   rather than "aligned with coordinates" (one non-aligned net tested).
+
+### 9.7 The aligned pocket for lambda = 2 (27 Nov, MOD p) -- first text WITHDRAWN for net s, see the correction below
+
+On the coordinate-aligned nets s and f, where lambda = 2 had passed order 6, it is obstructed at order 7 in the
+slice, at two primes (`leads/movasati_arc/logs/ma4_*_lam2_*_order8.log`). So on every direction tested at
+Movasati's point, lambda = 2 stops at order 6 or 7, while lambda = -1 goes to order 7 (exact, general direction),
+9 (exact, symmetric direction) and 9 (MOD p, random direction). No new locus for lambda = 2 there; the pocket was
+a delay of one order. Pre-registered first outcome (PREREG_arc.md, step 3).
+
+**Correction (blind check 15, full space):** lambda = 2 on net s passes order 7 at both primes (explicit jets,
+checked directly); only net f is obstructed at order 7. The slice method can give false obstructions from order 7 on.
+So the pocket is open: on the symmetric aligned direction lambda = 2 has survived to order 7 so far, against -1 to
+order 9. Next: order 8 in the full space (the checker's code `leads/movasati_arc/blind_check15/fs7.py` extended by
+one order), then the pre-registered test whether the arc is the trace of a family known for every lambda.

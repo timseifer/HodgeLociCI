@@ -1,0 +1,16 @@
+p 32029 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 40s
+identity Kl c_n(direct) == ob_n at random dense point, n=2..7: [True, True, True, True, True, True] 50s
+one evaluation through order 7: 1.41s
+ob_2..4 nonzero at 3 random points: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+ob_5 linear-part ranks by block k2..k6: [7, 0, 0, 0, 0]
+ob_5 affine (second difference): True
+dim A2 (k2 with ob_5 = 0): 94
+J3 = d ob_6/d k3: rank 7 equal at two random points: True
+ob_6 affine in k3 (second difference): True
+ob_6 independent of k4,k5,k6 (one test): True
+J4 = d ob_7/d k4: rank 7 image equal to im J3: True
+samples on V6: 16 (unsolvable k3-steps: 0 ) max nonzero ob_2..ob_6 at samples: 0 24s
+dim W7 = span(ob_7(u)-ob_7(u0)): 9 ; contains im J4: True ; ob_7(u0) nonzero: 9
+  k4-solve round 0 : not solvable; OPEN
+DIRECT verification of constructed jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 9]
+total 270s

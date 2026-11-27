@@ -214,3 +214,37 @@ for lambda = 2 (the full-space statement is MOD p, blind check 13; the exact ful
 package, MOD p to 9 / 7 with own code); lambda = 2 on g obstructed in the full space MOD p; aligned nets pass order 6
 for lambda = 2 (explicit jets). Corrections accepted: "separation in characteristic 0" holds in the slice only; the
 aligned/general reading rests on one net and may instead be about the net's position relative to y_0.
+
+## Step 3: the aligned pocket for lambda = 2 (owner: "Go ahead"; pre-registered 27 Nov, 02:50 UTC, before the runs)
+
+Question: on the aligned nets s and f, where lambda = 2 passes order 6, how far does it go, and is the arc the
+trace of a family that exists for every lambda?
+Runs (MOD 32029, ma4_exact.m2, deterministic): lambda = 2 on s and on f to order 8; then the same at a second
+prime (31981) for whichever survives.
+Outcomes and meaning:
+- obstructed at order 7 or 8 on both: the pocket is a finite-order effect; the separation of -1 from 2 just sets in
+  later on aligned directions. Record the order. Nothing new about classes.
+- passes order 8 on both, at two primes: a lambda = 2 direction at Movasati's point that survives as far as -1 does.
+  Next test (pre-registered here): whether the arc is the trace of a family known for every lambda. Candidate:
+  a cone-type (Thom-Sebastiani) family; test by checking whether the arc can be chosen inside a sub-family that
+  splits off a block of variables (re-run the slice restricted to monomials that do not couple that block). If
+  yes: explained (algebraic by the cone construction). If no such splitting is found: a candidate locus for a
+  Hodge class not known to be algebraic -- to be reported as a candidate only, with every caveat, never as more.
+
+### Outcome of step 3 (03:06 UTC; logs/ma4_32029_lam2_{s,f}_order8.log, ma4_31981_lam2_{s,f}_order8.log)
+
+First outcome: lambda = 2 on the aligned nets s and f passes order 6 and is OBSTRUCTED at order 7 in the slice, at
+p = 32029 and p = 31981 (four runs). The pocket is a finite-order effect: on aligned directions the separation of
+-1 (which passes order 9 exactly on s) from 2 sets in one order later. The pre-registered cone/splitting test is
+therefore not needed. Full-space version at order 7: blind check 15.
+
+### CORRECTION by blind check 15 (27 Nov; `blind_check15/REPORT.md`): the pocket does NOT close for net s
+
+In the FULL space of cubics (not my slice), lambda = 2 on net s passes order 7 at both primes: the checker built
+explicit jets T_1..T_7 and checked them directly. On net f (F1, F2) the order-7 obstruction holds in the full space
+(MOD p + ARG). So my "outcome of step 3" above is withdrawn for s. Lesson (recorded as a dead end): from order 7 on
+the slice method can report an obstruction that a full-space search removes, because the order-n condition then
+depends on the free part of T_2 beyond the linear response D (the "level 4" map of blind check 13). The slice
+verdicts at order 6 that were checked in the full space (net g, the random nets d) stand.
+Status of the pocket: OPEN; net s, lambda = 2 survives to order 7 (MOD p, two primes). The pre-registered next test
+(order 8 in the full space, then the splitting test) is the next step.
