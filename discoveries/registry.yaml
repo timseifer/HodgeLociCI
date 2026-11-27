@@ -8274,7 +8274,7 @@
         python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
   next_step: |-
     WEAKENED: at order 9 the conditions have rank 4 on V8 and are not removable to first order at the tested jet
-    (N-POCKET-ORDER9-OBSTRUCTION-SIGNAL, MOD p, one jet). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
+    (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL, MOD p, one jet). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
     N-POCKET-LATTICE-FILTER-SMOOTH are ruled out by the lattice filter (rank-2 assumption).
     (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
   session_refs: |-
@@ -8421,8 +8421,8 @@
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead and push forward'.
 
-- id: N-POCKET-ORDER9-OBSTRUCTION-SIGNAL
-  kind: negative
+- id: D-POCKET-ORDER9-OBSTRUCTION-SIGNAL
+  kind: result
   area: movasati_conjecture
   title: "The lambda = 2 pocket: at the order-8 jet, no first-order move inside V8 removes the order-9 conditions (MOD p, one jet) -- an obstruction signal that weakens O-ALIGNED-POCKET-LAMBDA2-ORDER9"
   statement: |-

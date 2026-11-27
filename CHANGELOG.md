@@ -5,7 +5,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 ## [Unreleased]
 
 ### Discoveries registry (142 -> 183 entries)
-- N-POCKET-ORDER9-OBSTRUCTION-SIGNAL (MOD p, one jet; blind check pending): at order 9 the lambda = 2 pocket's conditions
+- D-POCKET-ORDER9-OBSTRUCTION-SIGNAL (MOD p, one jet; blind check pending): at order 9 the lambda = 2 pocket's conditions
   have rank 4 and are not removable to first order; the pocket is weakened. `leads/movasati_arc/pocket/`.
 - N-POCKET-LATTICE-FILTER-SMOOTH (ruled out, EXACT + ARG, blind-checked): no smooth 4-fold of the tested types has the
   square discriminant needed to carry [P1] + 2[P2]; the pocket stays open. `leads/movasati_arc/pocket/`.

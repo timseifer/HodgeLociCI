@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (28)
+## Entries on this page (29)
 
 | id | status | title |
 |---|---|---|
@@ -40,6 +40,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-ALIGNED-POCKET-LAMBDA2](#d-aligned-pocket-lambda2) | `MOD_P` | Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7 |
 | [D-ALIGNED-POCKET-ORDER8](#d-aligned-pocket-order8) | `MOD_P` | Movasati's point, lambda = 2 on the symmetric aligned direction: jets through order 8 exist (two primes), at the price of 2 conditions per order from order 7 on; for lambda = -1 the corresponding condition vanishes |
 | [D-MOVASATI-POINT-COEFFICIENT-SCAN](#d-movasati-point-coefficient-scan) | `MOD_P` | Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface |
+| [D-POCKET-ORDER9-OBSTRUCTION-SIGNAL](#d-pocket-order9-obstruction-signal) | `MOD_P` | The lambda = 2 pocket: at the order-8 jet, no first-order move inside V8 removes the order-9 conditions (MOD p, one jet) -- an obstruction signal that weakens O-ALIGNED-POCKET-LAMBDA2-ORDER9 |
 
 ## Related entries on other pages
 
@@ -2108,3 +2109,47 @@ From the repository root:
 **Next step.** Derive the order-6 obstruction coefficient as a function of lambda (with lambda a parameter of the ring) and compare its zero set with the lattice condition.
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.
+
+---
+
+## D-POCKET-ORDER9-OBSTRUCTION-SIGNAL
+
+**The lambda = 2 pocket: at the order-8 jet, no first-order move inside V8 removes the order-9 conditions (MOD p, one jet) -- an obstruction signal that weakens O-ALIGNED-POCKET-LAMBDA2-ORDER9**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Pre-registered in leads/movasati_arc/pocket/PREREG_order10.md (and its addendum, written before the follow-up run).
+MOD p (31981), the V8 jet of run9b (T_1..T_8 verified directly):
+(1) q_9 (12 of 19 non-zero) is not in the span of its changes under k_4 in ker J4 (rank 2), so the order-10 route
+failed at order 9.
+(2) Over first-order moves keeping V8 (k_2 in A2', k_3 in ker J3, k_4 in ker J4, k_5 in ker W5; 17 sampled
+directions, symmetric differences for k_2, k_3, k_5), the q_9 changes have rank 4 and q_9 is not in their span.
+Reading (pre-registered): an obstruction signal at order 9 for this jet. It contradicts the reading that the pocket
+loses 2 conditions per order like a smooth component of codimension 28: at order 9 the conditions have rank 4 on V8.
+```
+
+**Conditions.** One jet; one prime; first order only; 17 sampled directions; symmetric differences exact only up to quadratic dependence.
+
+**Evidence.** leads/movasati_arc/pocket/run10.py, run10_31981.log, run10b.py, run10b_31981.log, REPORT.md (last section).
+
+**Independent check.** PENDING (blind check 20: complete linearised test in T-space from arcs/jet8_31981_s_lam2.txt).
+
+**Not established.** That order 9 is obstructed (a finite move along the non-linear V8 could reach q_9 = 0); the second prime; other jets; other first-order directions T_1. Nothing about the Hodge conjecture.
+
+**Known before.** O-ALIGNED-POCKET-LAMBDA2-ORDER9 (run9b: q_9 changes with k_4 with rank 2, linearly); N-SLICE-FALSE-OBSTRUCTION-ORDER7 (a slice gave false obstructions; this test uses the full space).
+
+**Reproduce.**
+
+```text
+From a folder holding the checkers' libraries (blind_check14/own, blind_check15), one job at a time:
+    python3 run10b.py 31981 s 2 30 5      (about 110 minutes)
+```
+
+**Do not repeat.** Do not rerun run10.py's k_4-only route; order 10 needs the order-9 question settled first.
+
+**Next step.** The blind check; then the same test at p = 32029, and a second-order (non-linear) search along V8 for q_9 = 0.
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead' (order 10, cap about 3 h; overrun of about 1 h reported).
