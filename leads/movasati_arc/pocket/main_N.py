@@ -37,14 +37,23 @@ def phi(f, D, tag):
 def per(f, tag):
     r = phi(f, 2, tag); return np.array([r[i2[q]] for q in S.Q], dtype=np.int64)
 def rk(X): return nmod_mat(X.shape[0], X.shape[1], [int(v) for v in (X % p).flatten()], p).rank()
-E = S.expseries(Ts + [S.ctx.from_dict({})], N + 1)
+E = S.expseries(Ts, N)
 log("sizes", [len(e) for e in E])
-c = {n: per(E[n], "c%d" % n) for n in range(1, N + 2)}
-log("nonzero c_n, n = 1..%d:" % N, [int(np.count_nonzero(c[n])) for n in range(1, N + 1)], "; c_%d (T_%d = 0) nonzero:" % (N+1, N+1), int(np.count_nonzero(c[N+1])))
+c = {n: per(E[n], "c%d" % n) for n in range(1, N + 1)}
+log("nonzero c_n, n = 1..%d:" % N, [int(np.count_nonzero(c[n])) for n in range(1, N + 1)])
 A = {}
-for k in range(0, N):
+for k in range(0, N + 1):
     r = phi(E[k], 5, "A%d" % k)
     A[k] = np.array([[r[i5[tuple(a+b for a, b in zip(q, m))]] for m in cub] for q in S.Q], dtype=np.int64)
+def tvec(T): return np.array([int(T[m]) if True else 0 for m in cub], dtype=np.int64)
+TV = [tvec(T) for T in Ts]
+def cform(n):   # c_n via the linear formula c_n = (1/n) sum_j j A_{n-j} T_j  (T_n included if j <= N)
+    acc = np.zeros(45, dtype=np.int64)
+    for j in range(1, min(n, N) + 1): acc = (acc + j * (A[n-j] @ TV[j-1])) % p
+    return acc * pow(n, p-2, p) % p
+log("control: the linear formula reproduces c_%d:" % N, bool(((cform(N) - c[N]) % p == 0).all()))
+c[N+1] = cform(N+1)
+log("c_%d (T_%d = 0) nonzero:" % (N+1, N+1), int(np.count_nonzero(c[N+1])))
 nb = N  # orders 2..N+1, unknowns dT_2..dT_N, T_{N+1}
 J = np.zeros((45*nb, 220*nb), dtype=np.int64)
 for n in range(2, N + 2):

@@ -864,8 +864,8 @@ Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/
 **Next step.**
 
 ```text
-UNDECIDED at order 9: the order-9 conditions have rank 4 on V8 at the tested jet and are not removable to first
-order, which does not decide whether they vanish somewhere on V8 (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL, corrected). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
+PASSES ORDER 9 (MOD p, one prime): a 9-jet exists, found by a non-linear search (D-POCKET-ORDER9-PASSED); the old
+jet's failure (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL) belonged to that jet. Order 10 undecided. Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
 N-POCKET-LATTICE-FILTER-SMOOTH are ruled out by the lattice filter (rank-2 assumption).
 (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
 ```

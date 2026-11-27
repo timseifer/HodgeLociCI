@@ -173,3 +173,25 @@ the classes in H that stay Hodge along the saved jet to order n form spaces of d
 Reading (pre-registered): no companion class along this jet; consistent with a generic Hodge lattice of rank 2, the
 assumption of the lattice filter. Caveat (pre-registered): the jet is a generic point of the 8-jet space of NL(c)
 with this T_1, so a companion class of a smaller component would show only if the jet lies on that component.
+
+## The non-linear order-9 test: order 9 is passed (27 Nov, late; PREREG_order9_nonlinear.md, PREREG_order10_newjet.md)
+
+MOD p (31981), one prime. Owner: "run what you believe would give the best explanation".
+1. Control (blind check 20 tooling): the lambda = -1 arc at the same point has extra first-order conditions 0,0,0,7,7,7,7,7
+   (orders 2..9) and order 9 solvable (control_lam-1_increments.log). The jump at order 9 is specific to the pocket.
+2. run11.py (run11_31981.log, run11_polys.m2, run11_groebner.log): a generic 2-plane of k_2 moves (keeping q_7), q_8
+   solved exactly by two k_3 directions at each point, q_9 projected modulo the k_4 image (17 components; the k_4
+   image does not move along the line). Along a line the projection is QUADRATIC, its values span 3 dimensions; the
+   interpolant on the plane predicts an off-grid point. The 17 polynomials (8 of them linear, 6 zero, 3 quadratic)
+   have exactly ONE common zero, (s, t) = (-8145, 7245), with coordinates in F_p (Groebner basis, Macaulay2). Eight
+   linear polynomials in two variables meeting in one point is far from what chance would give.
+3. run12b.py (run12b_31981.log): at that point q_9 has only 2 non-zero components, killed by the k_4 step; the rest of
+   ob_9 by k_6; then T_1..T_9 verified DIRECTLY: all 45 conditions vanish at every order 1..9. The 9-jet is saved as
+   arcs/jet9_31981_s_lam2.txt. (run12 had reached the same point and died of memory before saving.)
+4. main_N.py on the new 9-jet (order10_31981.log): c_1..c_9 = 0 again (second, independent evaluation); extra
+   first-order conditions 0,0,0,7,7,9,9,11,13 (orders 2..10); order 10 NOT solvable to first order
+   (rank 227 -> 228). By the pre-registration: the rank-4 behaviour at order 9 is not an artefact of the old jet; and
+   order 10 needs the same non-linear test as order 9 did.
+Reading: the earlier failure at order 9 was the jet, not the direction; the pocket passes order 9 (MOD p, one prime).
+The conditions per order on the jet space grow (2, 2, 4, 6 at orders 7..10, first order), which does not fit the
+"smooth component of codimension 28" picture; what geometry it fits is not known. Blind check 22 (blind_check22/): the 9-jet verified with independent code, controls passed; CONFIRMED.

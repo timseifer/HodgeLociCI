@@ -4,7 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 184 entries)
+### Discoveries registry (142 -> 185 entries)
+- D-POCKET-ORDER9-PASSED (MOD p, one prime): the lambda = 2 pocket passes order 9 (a 9-jet found by a non-linear
+  search and verified directly); order 10 needs the same search. `leads/movasati_arc/pocket/`.
 - N-POCKET-NO-COMPANION-CLASS (MOD p, two primes, blind-checked): along the lambda = 2 pocket jet no other Hodge class
   stays Hodge past order 5. `leads/movasati_arc/pocket/`.
 - D-POCKET-ORDER9-OBSTRUCTION-SIGNAL (MOD p, two primes, one jet; blind-checked): at order 9 the lambda = 2 pocket's

@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (29)
+## Entries on this page (30)
 
 | id | status | title |
 |---|---|---|
@@ -41,6 +41,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-ALIGNED-POCKET-ORDER8](#d-aligned-pocket-order8) | `MOD_P` | Movasati's point, lambda = 2 on the symmetric aligned direction: jets through order 8 exist (two primes), at the price of 2 conditions per order from order 7 on; for lambda = -1 the corresponding condition vanishes |
 | [D-MOVASATI-POINT-COEFFICIENT-SCAN](#d-movasati-point-coefficient-scan) | `MOD_P` | Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface |
 | [D-POCKET-ORDER9-OBSTRUCTION-SIGNAL](#d-pocket-order9-obstruction-signal) | `MOD_P` | The lambda = 2 pocket at order 9: at the tested order-8 jet no first-order move inside V8 removes the order-9 conditions (MOD p, two primes, one jet); this does NOT by itself signal an obstruction (corrected reading) |
+| [D-POCKET-ORDER9-PASSED](#d-pocket-order9-passed) | `MOD_P` | The lambda = 2 pocket passes order 9: a 9-jet with the pocket's tangent exists (MOD p, one prime), found by a non-linear search; order 10 again needs one |
 
 ## Related entries on other pages
 
@@ -2163,3 +2164,50 @@ From a folder holding the checkers' libraries (blind_check14/own, blind_check15)
 **Next step.** The blind check; then the same test at p = 32029, and a second-order (non-linear) search along V8 for q_9 = 0.
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead' (order 10, cap about 3 h; overrun of about 1 h reported).
+
+---
+
+## D-POCKET-ORDER9-PASSED
+
+**The lambda = 2 pocket passes order 9: a 9-jet with the pocket's tangent exists (MOD p, one prime), found by a non-linear search; order 10 again needs one**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+Pre-registered in leads/movasati_arc/pocket/PREREG_order9_nonlinear.md and PREREG_order10_newjet.md.
+MOD p (31981). On V8 (8-jets of NL([P1] + 2[P2]) with the pocket's T_1), a generic 2-plane of k_2 moves with q_8 solved
+exactly by k_3: modulo the k_4 image the order-9 conditions are 17 polynomials in (s, t), quadratic along a line
+(off-grid check passed); they have exactly one common zero, in F_p (Groebner basis). There the remaining order-9
+conditions are removed by k_4 and k_6, and T_1..T_9 satisfy all 45 period conditions at every order 1..9, checked
+directly twice (run12b.py; main_N.py). The jet is saved as leads/movasati_arc/arcs/jet9_31981_s_lam2.txt.
+At the new 9-jet: extra first-order conditions 0,0,0,7,7,9,9,11,13 at orders 2..10, and order 10 is not solvable to
+first order. Control: the lambda = -1 arc at the same point has 0,0,0,7,7,7,7,7 and passes order 9 to first order.
+Reading: the failure recorded in D-POCKET-ORDER9-OBSTRUCTION-SIGNAL belonged to that jet, not to the direction. The
+growing number of conditions per order (2, 2, 4, 6 at orders 7..10) does not fit a smooth component of codimension 28;
+what it fits is not known.
+
+**Conditions.** One prime; one first-order direction; integer powers of eps; one plane of k_2 moves.
+
+**Evidence.** leads/movasati_arc/pocket/run11.py, run11_31981.log, run11_polys.m2, run11_groebner.log, run12b.py, run12b_31981.log, main_N.py, order10_31981.log, control_lam-1_increments.log; leads/movasati_arc/arcs/jet9_31981_s_lam2.txt.
+
+**Independent check.**
+
+Blind check 22 (separate agent, own code): T_1 equals the pocket's T_1, and c_n = 0 for all 45 Q, n = 1..9; with
+lambda = -1 the same jet fails at order 1; perturbing T_5 breaks orders 5 and 6. CONFIRMED.
+leads/movasati_arc/pocket/blind_check22/. (The non-linear search itself was not repeated independently.)
+
+**Not established.** Order 10 and beyond; the second prime; characteristic 0; that a component exists; any explanation (geometry) of the pocket; anything about the Hodge conjecture.
+
+**Known before.** O-ALIGNED-POCKET-LAMBDA2-ORDER9; D-POCKET-ORDER9-OBSTRUCTION-SIGNAL (the old jet, corrected reading); N-POCKET-NOT-LINEAR-CYCLES, N-POCKET-LATTICE-FILTER-SMOOTH, N-POCKET-NO-COMPANION-CLASS.
+
+**Reproduce.**
+
+```text
+Direct check of the saved 9-jet (about 1.5 minutes; needs a C compiler for the checker's phi.c):
+    python3 leads/movasati_arc/pocket/main_N.py 31981 12637 2 leads/movasati_arc/arcs/jet9_31981_s_lam2.txt 9
+```
+
+**Next step.** The same non-linear test at order 10 (a 2-plane, or larger if the order-10 image has dimension > 2); the second prime for order 9.
+
+**Session references (files not public).** Session of 27-28 Nov 2026 (Claude Opus 5.5, chat); owner: 'run what you believe would give the best explanation'.

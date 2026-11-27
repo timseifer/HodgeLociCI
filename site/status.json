@@ -169,6 +169,10 @@
   ],
   "recent": [
     {
+      "when": "2026-11-28",
+      "what": "Coefficient-2 direction passes order 9 (mod p, one prime): a non-linear search found a 9-jet, verified directly; the earlier order-9 failure belonged to the jet tried first. Order 10 is open. A direction worth examining, not a finding. No statement about the Hodge conjecture."
+    },
+    {
       "when": "2026-11-27",
       "what": "Coefficient-2 direction: no other Hodge class rides along with it (only the class itself stays Hodge past order 5; mod p, two primes, independent check). Still undecided. No statement about the Hodge conjecture."
     },

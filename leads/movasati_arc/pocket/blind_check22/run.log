@@ -1,0 +1,26 @@
+T1 == jet8 line1: True
+degrees [3, 3, 3, 3, 3, 3, 3, 3, 3] terms [26, 120, 120, 120, 120, 120, 19, 19, 19]
+jet n=1 terms=26 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 4
+jet n=2 terms=375 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 4
+jet n=3 terms=2983 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 20
+jet n=4 terms=17188 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 28
+jet n=5 terms=75319 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 32
+jet n=6 terms=275723 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 44
+jet n=7 terms=863757 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 45
+jet n=8 terms=2418258 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 45
+jet n=9 terms=6127119 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 45
+perturb T_5 coeff of (1, 1, 1, 0, 0, 0, 0, 0, 0, 0) from 12397 to 12398
+pert n=1 terms=26 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 4
+pert n=2 terms=375 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 4
+pert n=3 terms=2983 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 20
+pert n=4 terms=17188 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 28
+pert n=5 terms=75319 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 32
+pert n=6 terms=275723 nonzero c_n[Q] (of 45): lam=2 -> 0, lam=-1 -> 44
+T_5 monomials: 120 with nonzero period image: 80
+perturb T_5 coeff of (1, 0, 1, 0, 1, 0, 0, 0, 0, 0) from 21098 to 21099
+pert n=1 nonzero c_n[Q] (lam=2): 0
+pert n=2 nonzero c_n[Q] (lam=2): 0
+pert n=3 nonzero c_n[Q] (lam=2): 0
+pert n=4 nonzero c_n[Q] (lam=2): 0
+pert n=5 nonzero c_n[Q] (lam=2): 4
+pert n=6 nonzero c_n[Q] (lam=2): 40

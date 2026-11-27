@@ -1,0 +1,14 @@
+[     7s] sizes [1, 26, 375, 2983, 17188, 75319, 275723, 863757, 2418258, 6127119]
+[    24s] nonzero c_n, n = 1..9: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[    76s] control: the linear formula reproduces c_9: True
+[    76s] c_10 (T_10 = 0) nonzero: 43
+[    76s] order 2 : extra conditions beyond the 19 fixed by T_n: 0
+[    76s] order 3 : extra conditions beyond the 19 fixed by T_n: 0
+[    76s] order 4 : extra conditions beyond the 19 fixed by T_n: 0
+[    76s] order 5 : extra conditions beyond the 19 fixed by T_n: 7
+[    76s] order 6 : extra conditions beyond the 19 fixed by T_n: 7
+[    76s] order 7 : extra conditions beyond the 19 fixed by T_n: 9
+[    76s] order 8 : extra conditions beyond the 19 fixed by T_n: 9
+[    76s] order 9 : extra conditions beyond the 19 fixed by T_n: 11
+[    76s] order 10 : extra conditions beyond the 19 fixed by T_n: 13
+[    77s] RESULT rank J (orders 2..10) = 227 ; with the order-10 right-hand side: 228 -> NOT solvable to first order
