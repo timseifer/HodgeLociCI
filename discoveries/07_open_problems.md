@@ -861,7 +861,12 @@ Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/
     python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
 ```
 
-**Next step.** (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
+**Next step.**
+
+```text
+Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES).
+(1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
+```
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); published after the owner had seen it ('Go ahead').
 

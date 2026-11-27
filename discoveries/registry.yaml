@@ -8273,6 +8273,7 @@
     Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/blind_check14/own and blind_check15):
         python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
   next_step: |-
+    Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES).
     (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); published after the owner had seen it ('Go ahead').
@@ -8345,6 +8346,42 @@
     Tangent-space comparison of the lambda = 2 pocket with V_Z n CS, V_Z n QS (O-ALIGNED-POCKET-LAMBDA2-ORDER9).
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item A2 (last part) and C11.
+
+- id: N-POCKET-NOT-LINEAR-CYCLES
+  kind: negative
+  area: movasati_conjecture
+  title: "The lambda = 2 pocket at the eightfold Movasati point is not explained by linear cycles persisting individually: none of the 229635 linear P^4's of the Fermat eightfold is tangent to its direction"
+  statement: |-
+    Setting: O-ALIGNED-POCKET-LAMBDA2-ORDER9 (net s, lambda = 2, T_1 = y_0 + net). Pre-registered in
+    leads/movasati_arc/pocket/PREREG_linear_cycles.md (commit cb5e5cf, before computing).
+    MOD p, p = 31981 and 32029: for every one of the 229635 linear P^4's L of the Fermat cubic eightfold (945 matchings
+    x 3^5 roots), T_1 is not in I_L + J, so no L persists to first order along the pocket direction. Controls: P1 and P2
+    do not persist; both persist along f_0 h_1 x_7.
+    Consequence (ARG): [P1] + 2[P2] cannot become algebraic along the pocket through a combination of linear cycles each
+    of which persists individually. The test also showed that comparing with loci inside V_Z, as proposed earlier, could
+    not have explained the pocket: T_1 is not tangent to V_Z.
+  status: RULED_OUT
+  conditions: |-
+    One first-order direction (T_1 of the pocket); MOD p at two primes; only linear cycles that persist individually.
+  evidence: |-
+    leads/movasati_arc/pocket/lc1_linear_cycles.py, lc1_31981.log, lc1_32029.log, REPORT.md (last section); blind check leads/movasati_arc/pocket/blind_check18/.
+  independent_check: |-
+    Blind check 18: a separate agent with its own code (substitution for all L, and rank of (I_L + J)_3 for P1, P2 and 150 random L) found 0 of 229635 at both primes, with controls; CONFIRMED.
+  not_established: |-
+    Anything about irreducible cycles that degenerate at the Fermat point to sums of linear spaces (the mechanism of Kloosterman's G(2,5) cones and Movasati's cubic scrolls), about non-linear cycles of the Fermat eightfold, or about other directions. The pocket stays OPEN and is not strengthened.
+  known_before: |-
+    O-ALIGNED-POCKET-LAMBDA2-ORDER9; Movasati, Leaf schemes, Table 1 (families through the Fermat eightfold; D-CITATION-CHECK-MO3-KL1).
+  reproduce: |-
+    From leads/movasati_arc/arcs (about 1 minute per prime):
+        python3 ../pocket/lc1_linear_cycles.py 31981 12637 jet8_31981_s_lam2.txt
+        python3 ../pocket/lc1_linear_cycles.py 32029 -473 jet8_32029_s_lam2.txt
+  do_not_repeat: |-
+    Do not rerun the exhaustive first-order linear-cycle test on this T_1 (lc1_linear_cycles.py); do not compare the pocket
+    with loci inside V_Z (T_1 is not tangent to V_Z).
+  next_step: |-
+    Degenerations: test whether T_1 is tangent to loci of cubics containing an irreducible cycle whose limit is a sum of linear spaces with class P1 + 2 P2 + b h^4 (a lattice check of 3 Z.Z - deg^2 = 144 t^2 against the known families first).
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'Yes go ahead'.
 
 - id: O-TENFOLD-CONE-LEAD
   kind: open

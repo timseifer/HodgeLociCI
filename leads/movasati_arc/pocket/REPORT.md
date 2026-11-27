@@ -89,3 +89,19 @@ first thing an expert would ask); (3) characteristic 0.
 None has codimension 28 or is listed for [P1] + 2[P2]; but an intersection of V_Z (codimension 20) with one of these loci
 could still carry the pocket, and that comparison of tangent spaces has NOT been done. arXiv:2606.10884 gives no input
 (it concerns hyperkaehler fourfolds). Details: leads/LIT_READ_27NOV.md, section 3. The pocket stays OPEN, unchanged.
+
+## Linear-cycle test, 27 Nov ~16:40-17:10 UTC (owner: "Yes go ahead"; pre-registered in PREREG_linear_cycles.md, commit cb5e5cf)
+
+Correction first: comparing with loci inside V_Z (as I had proposed) cannot explain the pocket, because T_1 is not
+tangent to V_Z. The pre-registration replaces it by the question whether [P1] + 2[P2] becomes algebraic along the
+pocket through LINEAR cycles of the Fermat eightfold.
+
+T-A (MOD p, p = 31981 and 32029; lc1_linear_cycles.py, lc1_31981.log, lc1_32029.log): of the 229635 linear P^4's of the
+Fermat eightfold, NONE is tangent to T_1 (T_1 restricted to L has a non-zero square-free part for every L). Controls:
+P1 and P2 are not tangent to T_1; both are tangent to f_0 h_1 x_7. T-B and T-C were therefore not needed (S is empty).
+
+Reading (by the pre-registered table): explanations in which every linear component of the limit cycle persists
+individually along the pocket are ruled out, for this direction. NOT ruled out: an irreducible cycle that degenerates
+at the Fermat point to a sum of linear spaces (the mechanism of Kloosterman's G(2,5) cones and of Movasati's cubic
+scrolls), cycles of the Fermat eightfold that are not linear, other directions. The pocket stays OPEN; this removes
+the cheapest explanation, it does not make the pocket stronger evidence of anything.

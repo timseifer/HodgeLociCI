@@ -169,6 +169,10 @@
   "recent": [
     {
       "when": "2026-11-27",
+      "what": "The coefficient-2 direction at the eightfold Movasati point: none of the 229635 linear P^4's of the Fermat eightfold is tangent to it (mod p, two primes, blind-checked), so the cheapest explanation is ruled out for this direction. It stays open, not strengthened. No statement about the Hodge conjecture."
+    },
+    {
+      "when": "2026-11-27",
       "what": "Quartic fourfolds, coefficient -1: Kloosterman's del Pezzo cycle carries 16 nodes with one relation on cubics, as a prediction frozen beforehand said (mod p, blind-checked); the guessed Kummer configuration does not occur. Citations of Movasati and Kloosterman checked against the sources (machine-read): consistent."
     },
     {

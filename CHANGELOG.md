@@ -4,7 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 180 entries)
+### Discoveries registry (142 -> 181 entries)
+- N-POCKET-NOT-LINEAR-CYCLES (ruled out, MOD p, blind-checked): no linear P^4 of the Fermat eightfold is tangent to the
+  lambda = 2 pocket direction; the pocket stays open. `leads/movasati_arc/pocket/`.
 - D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES (MOD p, blind-checked): for quartic fourfolds at lambda = -1, Kloosterman's
   del Pezzo cycle gives 16 nodes with one relation on cubics (frozen prediction P2, k = 2); the Kummer guess fails.
   `leads/quartic_frozen/`.

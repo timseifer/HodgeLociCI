@@ -1,0 +1,34 @@
+===== p = 31981 =====
+p mod 3 = 1 ; w = 12637 w^6 = 1 w^3 = 31980 (-1 = 31980 ) w^2 = 12636
+cube roots of -1: [12637, 19345, 31980] ; w in roots: True
+T: number of monomials = 26 ; total degree check ok
+number of L = 229635 distinct = 229635
+Method A: #L with T in I_L+J = 0
+P1: method A persists=False, method B persists=False (rank of (I_L+J)_3 = 210, codim 10)
+P2: method A persists=False, method B persists=False (rank of (I_L+J)_3 = 210, codim 10)
+Method B on 150 random L: #persisting = 0
+control product l1*l2*l3 on P1: A=True, B=True
+control product l1*l2*l3 on P2: A=True, B=True
+control product: #L persisting (A) = 32805
+control product: A vs B mismatches on 40 L (20 hits + 20 random): 0
+sanity: L0 = ((0, 2, 31980), (1, 6, 31980), (3, 9, 19345), (4, 5, 12637), (7, 8, 31980))
+sanity: random T in I_L0, #L persisting (A) = 1 ; L0 among them: True
+sanity: A vs B mismatches on 21 L: 0
+
+===== p = 32029 =====
+p mod 3 = 1 ; w = 31556 w^6 = 1 w^3 = 32028 (-1 = 32028 ) w^2 = 31555
+cube roots of -1: [474, 31556, 32028] ; w in roots: True
+T: number of monomials = 26 ; total degree check ok
+number of L = 229635 distinct = 229635
+Method A: #L with T in I_L+J = 0
+P1: method A persists=False, method B persists=False (rank of (I_L+J)_3 = 210, codim 10)
+P2: method A persists=False, method B persists=False (rank of (I_L+J)_3 = 210, codim 10)
+Method B on 150 random L: #persisting = 0
+control product l1*l2*l3 on P1: A=True, B=True
+control product l1*l2*l3 on P2: A=True, B=True
+control product: #L persisting (A) = 32805
+control product: A vs B mismatches on 40 L (20 hits + 20 random): 0
+sanity: L0 = ((0, 4, 474), (1, 9, 31556), (2, 8, 32028), (3, 5, 474), (6, 7, 474))
+sanity: random T in I_L0, #L persisting (A) = 1 ; L0 among them: True
+sanity: A vs B mismatches on 21 L: 0
+
