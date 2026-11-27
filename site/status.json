@@ -169,6 +169,10 @@
   "recent": [
     {
       "when": "2026-11-27",
+      "what": "Coefficient-2 direction, second filter: no smooth cycle of the tested types (linear, complete intersections, Segre, degree-5 del Pezzo, scrolls) has the discriminant needed to carry the class (exact, blind-checked; assumes the generic Hodge lattice has rank 2). Still open, not strengthened. No statement about the Hodge conjecture."
+    },
+    {
+      "when": "2026-11-27",
       "what": "The coefficient-2 direction at the eightfold Movasati point: none of the 229635 linear P^4's of the Fermat eightfold is tangent to it (mod p, two primes, blind-checked), so the cheapest explanation is ruled out for this direction. It stays open, not strengthened. No statement about the Hodge conjecture."
     },
     {

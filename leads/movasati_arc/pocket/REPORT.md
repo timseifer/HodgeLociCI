@@ -105,3 +105,27 @@ individually along the pocket are ruled out, for this direction. NOT ruled out: 
 at the Fermat point to a sum of linear spaces (the mechanism of Kloosterman's G(2,5) cones and of Movasati's cubic
 scrolls), cycles of the Fermat eightfold that are not linear, other directions. The pocket stays OPEN; this removes
 the cheapest explanation, it does not make the pocket stronger evidence of anything.
+
+## Lattice filter, 27 Nov ~17:30-18:00 UTC (owner: "go ahead and push forward"; pre-registered, commit c58161c)
+
+If, on the would-be component W, the degree-8 Hodge classes are generically only Q h^4 + Q c (c = [P1] + 2[P2]), any
+algebraic cycle Z carrying c has disc(Z) = 3 Z.Z - deg^2 = 144 a^2, a NON-ZERO PERFECT SQUARE (ARG; disc(c) = 144,
+EXACT). lt1_disc.py, lt1.log (EXACT intersection theory; the formula for Z.Z needs Z smooth):
+
+| Z | deg | Z.Z | disc |
+|---|---|---|---|
+| P^4 | 1 | 11 | 32 |
+| quadric 4-fold, CI (2,2), CI (2,2,2), CI (2,2,2,2) | 2, 4, 8, 16 | 12, 16, 32, 96 | 32 each |
+| P^1 x P^3 = S(1,1,1,1) | 4 | 24 | 56 |
+| del Pezzo 4-fold G(2,5) n P^7 (calibration: Kloosterman's lambda = 1 class P1 + P2 + h^4) | 5 | 27 | 56 |
+| P^2 x P^2 (agrees with D-SEGRE-FOURFOLD) | 6 | 36 | 72 |
+| P^1 x Q^3 | 8 | 50 | 86 |
+| scrolls S(1,1,1,2); S(1,1,2,2), S(1,1,1,3); S(1,2,2,2), S(1,1,2,3), S(1,1,1,4) | 5; 6; 7 | 31; 38; 45 | 68; 78; 86 |
+
+No value is a non-zero square. So, under the rank-2 assumption, NONE of these cycle types can make [P1] + 2[P2]
+algebraic on W, along any direction (this is a statement about the lattice, not about T_1). Consistency checks: the
+calibration gives 56 = disc(P1 + P2 + h^4); P^2 x P^2 gives 72 = disc(P1 - P2), the lambda = -1 class, in line with the
+registry's Segre-fourfold entries; complete intersections with a linear factor all give 32 = disc(P^4).
+Not covered: singular cycles (cones, e.g. Movasati's generalised cubic and quartic scrolls if they are cones; the
+generalised Veronese of his Table 1 was not identified); cycles of other types or higher degree; the case where W has
+a larger generic Hodge lattice (then c could be algebraic through a combination of cycles). The pocket stays OPEN.

@@ -4,7 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 181 entries)
+### Discoveries registry (142 -> 182 entries)
+- N-POCKET-LATTICE-FILTER-SMOOTH (ruled out, EXACT + ARG, blind-checked): no smooth 4-fold of the tested types has the
+  square discriminant needed to carry [P1] + 2[P2]; the pocket stays open. `leads/movasati_arc/pocket/`.
 - N-POCKET-NOT-LINEAR-CYCLES (ruled out, MOD p, blind-checked): no linear P^4 of the Fermat eightfold is tangent to the
   lambda = 2 pocket direction; the pocket stays open. `leads/movasati_arc/pocket/`.
 - D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES (MOD p, blind-checked): for quartic fourfolds at lambda = -1, Kloosterman's

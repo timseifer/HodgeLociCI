@@ -8273,7 +8273,8 @@
     Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/blind_check14/own and blind_check15):
         python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
   next_step: |-
-    Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES).
+    Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
+    N-POCKET-LATTICE-FILTER-SMOOTH are ruled out by the lattice filter (rank-2 assumption).
     (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); published after the owner had seen it ('Go ahead').
@@ -8382,6 +8383,42 @@
     Degenerations: test whether T_1 is tangent to loci of cubics containing an irreducible cycle whose limit is a sum of linear spaces with class P1 + 2 P2 + b h^4 (a lattice check of 3 Z.Z - deg^2 = 144 t^2 against the known families first).
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'Yes go ahead'.
+
+- id: N-POCKET-LATTICE-FILTER-SMOOTH
+  kind: negative
+  area: movasati_conjecture
+  title: "Lattice filter for the lambda = 2 pocket: no smooth 4-fold of the tested types (linear, complete intersections, Segre, del Pezzo of degree 5, scrolls) has the square discriminant needed to carry [P1] + 2[P2]"
+  statement: |-
+    ARG: if the would-be component W of O-ALIGNED-POCKET-LAMBDA2-ORDER9 has generic degree-8 Hodge classes Q h^4 + Q c,
+    c = [P1] + 2[P2], then an algebraic cycle Z with [Z] in that span has disc(Z) = 3 Z.Z - deg(Z)^2 = 144 a^2, a non-zero
+    perfect square (disc(c) = 144, EXACT). Pre-registered in leads/movasati_arc/pocket/PREREG_linear_cycles.md, step 2
+    (commit c58161c).
+    EXACT intersection theory (Z.Z = int c_4(N_{Z/X})): disc = 32 for P^4 and for complete intersections of types
+    (1^4,2), (1^3,2,2), (1^2,2,2,2), (1,2,2,2,2); 56 for P^1 x P^3 and for the del Pezzo 4-fold G(2,5) n P^7; 72 for
+    P^2 x P^2; 86 for P^1 x Q^3; 68, 78, 78, 86, 86, 86 for the scrolls S(1,1,1,2), S(1,1,2,2), S(1,1,1,3), S(1,2,2,2),
+    S(1,1,2,3), S(1,1,1,4). None is a non-zero square, so under the rank-2 assumption none of these cycle types can make c
+    algebraic on W, whatever the direction. Calibration: the del Pezzo gives 56 = disc(P1 + P2 + h^4) (Kloosterman's
+    lambda = 1 class); P^2 x P^2 gives Z.Z = 36, as in D-SEGRE-FOURFOLD.
+  status: RULED_OUT
+  conditions: |-
+    Smooth cycles of the listed types only; the generic Hodge lattice of W assumed to be of rank 2.
+  evidence: |-
+    leads/movasati_arc/pocket/lt1_disc.py, lt1.log, REPORT.md (section 'Lattice filter'); blind check leads/movasati_arc/pocket/blind_check19/.
+  independent_check: |-
+    Blind check 19: a separate agent with Schubert2 (a different method) recomputed all eleven items it was given plus the two lattice values; all CONFIRMED.
+  not_established: |-
+    Singular cycles (cones; Movasati's generalised cubic and quartic scrolls if they are cones; his generalised Veronese was not identified); other cycle types or higher degree; a component with a larger generic Hodge lattice. Whether W exists at all. The pocket stays OPEN.
+  known_before: |-
+    D-SEGRE-FOURFOLD (P^2 x P^2, Z.Z = 36); Kloosterman arXiv:2312.12363 Prop. 6.4 (the del Pezzo class); N-POCKET-NOT-LINEAR-CYCLES.
+  reproduce: |-
+    From the repository root (seconds; needs sympy):
+        python3 leads/movasati_arc/pocket/lt1_disc.py
+  do_not_repeat: |-
+    Do not recompute these discriminants; extend the table with singular or higher-degree cycles instead.
+  next_step: |-
+    Identify Movasati's generalised quartic scroll and Veronese for eightfolds and compute their discriminants (singular cycles need a different formula); or test whether W's tangent space forces a larger Hodge lattice.
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead and push forward'.
 
 - id: O-TENFOLD-CONE-LEAD
   kind: open

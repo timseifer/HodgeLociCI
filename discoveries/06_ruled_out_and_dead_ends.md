@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (36)
+## Entries on this page (37)
 
 | id | status | title |
 |---|---|---|
@@ -48,6 +48,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-SLICE-FALSE-OBSTRUCTION-ORDER7](#n-slice-false-obstruction-order7) | `RULED_OUT` | The transversal-slice arc solver can report false obstructions from order 7 on |
 | [N-SECOND-MATRIX-THIRD-ROUTE](#n-second-matrix-third-route) | `RULED_OUT` | Second matrix along the sixfold arc as a small correction of the first: fails, because F_eps is far from the tangent space of the determinantal cubics at G_A |
 | [N-POCKET-NOT-LINEAR-CYCLES](#n-pocket-not-linear-cycles) | `RULED_OUT` | The lambda = 2 pocket at the eightfold Movasati point is not explained by linear cycles persisting individually: none of the 229635 linear P^4's of the Fermat eightfold is tangent to its direction |
+| [N-POCKET-LATTICE-FILTER-SMOOTH](#n-pocket-lattice-filter-smooth) | `RULED_OUT` | Lattice filter for the lambda = 2 pocket: no smooth 4-fold of the tested types (linear, complete intersections, Segre, del Pezzo of degree 5, scrolls) has the square discriminant needed to carry [P1] + 2[P2] |
 
 ---
 
@@ -1714,3 +1715,47 @@ with loci inside V_Z (T_1 is not tangent to V_Z).
 **Next step.** Degenerations: test whether T_1 is tangent to loci of cubics containing an irreducible cycle whose limit is a sum of linear spaces with class P1 + 2 P2 + b h^4 (a lattice check of 3 Z.Z - deg^2 = 144 t^2 against the known families first).
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'Yes go ahead'.
+
+---
+
+## N-POCKET-LATTICE-FILTER-SMOOTH
+
+**Lattice filter for the lambda = 2 pocket: no smooth 4-fold of the tested types (linear, complete intersections, Segre, del Pezzo of degree 5, scrolls) has the square discriminant needed to carry [P1] + 2[P2]**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+ARG: if the would-be component W of O-ALIGNED-POCKET-LAMBDA2-ORDER9 has generic degree-8 Hodge classes Q h^4 + Q c,
+c = [P1] + 2[P2], then an algebraic cycle Z with [Z] in that span has disc(Z) = 3 Z.Z - deg(Z)^2 = 144 a^2, a non-zero
+perfect square (disc(c) = 144, EXACT). Pre-registered in leads/movasati_arc/pocket/PREREG_linear_cycles.md, step 2
+(commit c58161c).
+EXACT intersection theory (Z.Z = int c_4(N_{Z/X})): disc = 32 for P^4 and for complete intersections of types
+(1^4,2), (1^3,2,2), (1^2,2,2,2), (1,2,2,2,2); 56 for P^1 x P^3 and for the del Pezzo 4-fold G(2,5) n P^7; 72 for
+P^2 x P^2; 86 for P^1 x Q^3; 68, 78, 78, 86, 86, 86 for the scrolls S(1,1,1,2), S(1,1,2,2), S(1,1,1,3), S(1,2,2,2),
+S(1,1,2,3), S(1,1,1,4). None is a non-zero square, so under the rank-2 assumption none of these cycle types can make c
+algebraic on W, whatever the direction. Calibration: the del Pezzo gives 56 = disc(P1 + P2 + h^4) (Kloosterman's
+lambda = 1 class); P^2 x P^2 gives Z.Z = 36, as in D-SEGRE-FOURFOLD.
+
+**Conditions.** Smooth cycles of the listed types only; the generic Hodge lattice of W assumed to be of rank 2.
+
+**Evidence.** leads/movasati_arc/pocket/lt1_disc.py, lt1.log, REPORT.md (section 'Lattice filter'); blind check leads/movasati_arc/pocket/blind_check19/.
+
+**Independent check.** Blind check 19: a separate agent with Schubert2 (a different method) recomputed all eleven items it was given plus the two lattice values; all CONFIRMED.
+
+**Not established.** Singular cycles (cones; Movasati's generalised cubic and quartic scrolls if they are cones; his generalised Veronese was not identified); other cycle types or higher degree; a component with a larger generic Hodge lattice. Whether W exists at all. The pocket stays OPEN.
+
+**Known before.** D-SEGRE-FOURFOLD (P^2 x P^2, Z.Z = 36); Kloosterman arXiv:2312.12363 Prop. 6.4 (the del Pezzo class); N-POCKET-NOT-LINEAR-CYCLES.
+
+**Reproduce.**
+
+```text
+From the repository root (seconds; needs sympy):
+    python3 leads/movasati_arc/pocket/lt1_disc.py
+```
+
+**Do not repeat.** Do not recompute these discriminants; extend the table with singular or higher-degree cycles instead.
+
+**Next step.** Identify Movasati's generalised quartic scroll and Veronese for eightfolds and compute their discriminants (singular cycles need a different formula); or test whether W's tangent space forces a larger Hodge lattice.
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead and push forward'.
