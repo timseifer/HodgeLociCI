@@ -1,0 +1,10 @@
+T_1 rebuilt from y_0 + nets equals the file's T_1 (mod p)
+p 32029 case g lambda -1 #T1 50 rank L 19 dimK 101 L T1 nonzero: 0 setup 128s
+rank J3 7 #annihilators 19 150s
+q along a k2-line: degree 0 ; rank of span of q-differences: 0
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 1 points 172s
+rank of nonconstant coefficient block: 0 ; constant part nonzero comps: 0
+interpolant predicts off-grid point: True
+#independent component polys: 0 ; total degrees: []
+total 174s

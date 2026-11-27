@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (26)
+## Entries on this page (27)
 
 | id | status | title |
 |---|---|---|
@@ -38,6 +38,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-MOVASATI-POINT-ARC-ORDER8](#d-movasati-point-arc-order8) | `MOD_P` | Movasati's own point, a direction that is not a cone over a sixfold: [P1] - [P2] stays Hodge to order 9 along an arc (eightfold; the tenfold by the cone map); with the same first-order term lambda = 2 is obstructed at order 6 |
 | [D-MOVASATI-POINT-EXACT-SEPARATION](#d-movasati-point-exact-separation) | `EXACT` | Movasati's own point in characteristic 0: on one direction in general position lambda = -1 passes order 7 and lambda = 2 is obstructed at order 6 in the slice, exactly; on coordinate-aligned directions lambda = 2 is not obstructed at order 6 (MOD p) |
 | [D-ALIGNED-POCKET-LAMBDA2](#d-aligned-pocket-lambda2) | `MOD_P` | Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7 |
+| [D-ALIGNED-POCKET-ORDER8](#d-aligned-pocket-order8) | `MOD_P` | Movasati's point, lambda = 2 on the symmetric aligned direction: jets through order 8 exist (two primes), at the price of 2 conditions per order from order 7 on; for lambda = -1 the corresponding condition vanishes |
 
 ## Related entries on other pages
 
@@ -2006,3 +2007,48 @@ From the repository root (Python 3 with python-flint, numpy):
 **Next step.** Order 8 in the full space for net s (extend fs7.py by one order), then the pre-registered splitting test (PREREG_arc.md, step 3).
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), fifteenth part (owner: 'Go ahead').
+
+---
+
+## D-ALIGNED-POCKET-ORDER8
+
+**Movasati's point, lambda = 2 on the symmetric aligned direction: jets through order 8 exist (two primes), at the price of 2 conditions per order from order 7 on; for lambda = -1 the corresponding condition vanishes**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+Setting: D-ALIGNED-POCKET-LAMBDA2 (net s, lambda = 2, T_1 = y_0 + net). In the full space of squarefree cubics:
+(1) (MOD 32029 and 31981.) There are T_2, ..., T_8 with orders 1..8 satisfied: explicit jets, found with the
+blind-check-15 reduction extended by one order and verified with the package's fermatVerifyArc; for [P1] - [P2]
+the same jets fail at order 1.
+(2) (MOD p, structure tested at sample points.) On the set V7 of jets through order 7, the part q8 of ob_8 that
+k_5 cannot remove (19 components) spans 2 dimensions, is quadratic in k_2 and independent of k_3 in ker J3 and
+k_4 in ker J4. At order 7 the same quantity q7 had rank 2 and was affine (blind check 15). For lambda = -1
+(control, net g) q7 vanishes identically.
+(3) Reading (ARG): lambda = 2 on this direction loses about 2 dimensions of jets per order from order 7 on; lambda
+= -1 loses none. Survival to a given order is weak evidence by itself (two equations on a large space are
+generally solvable over an algebraically closed field); the rank of q per order is the informative number.
+```
+
+**Conditions.** Two primes, one direction, integer powers of eps, finite order. q8 was probed on one 2-plane per prime; at 31981 a first plane had no F_p point (a field effect). The structure statements of (2) are tested at sample points.
+
+**Evidence.** leads/movasati_arc/run8_full_space_order8.py; logs/run8_32029_s_lam2_seed3.log, run8_31981_s_lam2_seed5.log (and run8_32029_s_lam2_signbug.log, run8_31981_s_lam2.log: a fixed sign error and a plane without F_p point); ma6_verify_jet.m2, logs/ma6_*_s_lam2.log; arcs/jet8_*_s_lam2.txt; PREREG_arc.md, step 3b.
+
+**Independent check.** The 8-term jets were verified with the package (Macaulay2), an implementation independent of the Python code that found them. The search itself uses the reduction written by blind check 15. No separate agent re-ran the order-8 search.
+
+**Not established.** Orders 9 and beyond; whether the rank of q stays 2; any component; characteristic 0.
+
+**Known before.** D-ALIGNED-POCKET-LAMBDA2, N-SLICE-FALSE-OBSTRUCTION-ORDER7, blind checks 13-15.
+
+**Reproduce.**
+
+```text
+From /home/claude/blind_check15-style setup (the checkers' libraries in leads/movasati_arc/blind_check14/own and blind_check15):
+    M2 --script leads/movasati_arc/ma6_verify_jet.m2 32029 2 leads/movasati_arc/arcs/jet8_32029_s_lam2.txt     (5 minutes)
+```
+
+**Next step.** The rank of q at orders 9 and 10 (extend the reduction by one order each; about an hour per order MOD p).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), sixteenth part (owner: 'Go ahead').

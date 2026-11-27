@@ -591,3 +591,11 @@ checked directly); only net f is obstructed at order 7. The slice method can giv
 So the pocket is open: on the symmetric aligned direction lambda = 2 has survived to order 7 so far, against -1 to
 order 9. Next: order 8 in the full space (the checker's code `leads/movasati_arc/blind_check15/fs7.py` extended by
 one order), then the pre-registered test whether the arc is the trace of a family known for every lambda.
+
+**Order 8 (27 Nov, full space, MOD p, two primes):** lambda = 2 on net s passes order 8; the 8-term jets were found
+with the checker's full-space code extended by one order (`leads/movasati_arc/run8_full_space_order8.py`) and
+verified with the package. But it pays for it: at orders 7 and 8 the condition left after the linear corrections
+has rank 2 each time, whereas for lambda = -1 it is identically zero. So lambda = 2 is cutting its jet space down
+by about 2 dimensions per order and lambda = -1 is not. The next informative number is that rank at orders 9 and
+10: still 2 means no component of the expected size through this direction (perhaps a smaller one); 0 means the
+jets stabilise, which is what a new component would look like.

@@ -1,0 +1,2 @@
+RESULT p = 31981, lambda = 2, 8 terms: pass true ; first failing order null ; z = 12637
+RESULT control: the same jet for [P1] - [P2]: pass false ; first failing order 1

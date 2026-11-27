@@ -248,3 +248,29 @@ depends on the free part of T_2 beyond the linear response D (the "level 4" map 
 verdicts at order 6 that were checked in the full space (net g, the random nets d) stand.
 Status of the pocket: OPEN; net s, lambda = 2 survives to order 7 (MOD p, two primes). The pre-registered next test
 (order 8 in the full space, then the splitting test) is the next step.
+
+### Step 3b: order 8 in the full space (27 Nov, 03:46 UTC, before the runs)
+Script: `blind_check15/run8.py` (the checker's order-7 search, then order 8). On the set V7 where orders 2..7 hold,
+the 7 components of ob_8 in im J3 are removed by k_5; the other 19 (q8) must vanish. q8 is varied along k_2 inside
+{order 5, q7 = 0}, k_3 in ker J3, k_4 in ker J4. Reading: q8 at the base jet in the span of its variations ->
+order 8 very likely solvable (to be confirmed by an explicit jet); not in the span -> obstructed at order 8,
+provided q8 is affine in those parameters (to be checked as at order 7). Control: lambda = -1 on net g must be
+"in the span". Predictions: none for lambda = 2 on s (this is the open question).
+
+### Outcome of step 3b (27 Nov, about 04:30 UTC; logs/run8_*.log, ma6_*.log; arcs/jet8_*_s_lam2.txt)
+
+lambda = 2, net s, full space: order 8 is reached at both primes (32029 with plane seed 3, 31981 with plane seed 5).
+On V7 the 19 components of ob_8 outside im J3 (q8) span 2 dimensions; q8 is quadratic along k_2 inside
+{order 5, q7 = 0} and does not depend on k_3 in ker J3 or k_4 in ker J4; on a 2-plane its two components are two
+conics with an F_p common point; k_5 then removes the rest; T_8 = -X c'_8. Each 8-term jet passes
+fermatVerifyArc in the package (an implementation independent of the Python code), and fails for [P1] - [P2] at
+order 1. At 31981 the first plane (seed 3) had no F_p point (the cubic resultant has no root in F_p); that is a
+matter of the field, not an obstruction. A sign error in the last linear step of my first version was found and
+fixed (log kept: run8_32029_s_lam2_signbug.log).
+Reading (ARG): from order 7 on, lambda = 2 on s pays 2 conditions per order on the jet space (q7: rank 2, affine;
+q8: rank 2, quadratic), while for lambda = -1 the same quantity is identically zero (control g at order 7: q7 = 0
+on the whole plane). Two conditions on a space of dimension about 90 can always be met over an algebraically
+closed field unless they are inconsistent, so "survives order 8" is weak evidence by itself. The informative
+number is the rank of q per order: if it keeps being 2 the jets of lambda = 2 through this direction lose 2
+dimensions per order and cannot come from a component of dimension dim V - 6 (they could come from a smaller one);
+if it drops to 0 the jet space stabilises, which is what a component through this direction looks like.
