@@ -129,3 +129,21 @@ registry's Segre-fourfold entries; complete intersections with a linear factor a
 Not covered: singular cycles (cones, e.g. Movasati's generalised cubic and quartic scrolls if they are cones; the
 generalised Veronese of his Table 1 was not identified); cycles of other types or higher degree; the case where W has
 a larger generic Hodge lattice (then c could be algebraic through a combination of cycles). The pocket stays OPEN.
+
+## Order 10 attempt and an obstruction signal at order 9, 27 Nov ~18:30-22:30 UTC (owner: "go ahead"; PREREG_order10.md)
+
+MOD p (31981), one jet, first order. About 4 hours (the cap was 3; the owner was told at the overrun).
+1. run10.py (run10_31981.log): the V8 jet of run9b was reached and verified (T_1..T_8, all 45 conditions). q_9 at
+   the base (12 of 19 non-zero) is NOT in the span of its changes under k_4 in ker J4 (rank 2). Pre-registered
+   reading: route failure for order 10.
+2. run10b.py (run10b_31981.log, pre-registered in the addendum): first-order changes of (ob_8, q_9) under k_2 in A2'
+   (5 directions, symmetric differences), k_3 in ker J3 (4), k_4 in ker J4 (4), k_5 in ker W5 (4). The changes of
+   ob_8 have rank 2, those of q_9 rank 4; the 15 combinations keeping V8 to first order give q_9 changes of rank 4,
+   and q_9 at the base is NOT in their span (rank 5 with it). Control: a k_4 change is in the span.
+Pre-registered reading: no first-order correction inside V8 removes q_9 at this jet -- an OBSTRUCTION SIGNAL at order 9.
+It contradicts the (H3) reading of the earlier orders: the conditions at order 9 have rank 4 on V8, not 2, and q_9
+is not reachable. So the pocket is WEAKER than after run9b.
+Caveats: one jet; one prime; first order only (V8 is non-linear: a finite move along V8 could still reach q_9 = 0;
+the k_2 changes are symmetric differences, exact only if q_9 is at most quadratic in k_2); the sampled directions
+may not span all first-order moves (17 samples). The earlier step "q8 does not depend on k_3" was already withdrawn.
+Blind check 20 (pending at the time of writing): a complete linearised test in T-space from the saved jet.

@@ -169,6 +169,10 @@
   "recent": [
     {
       "when": "2026-11-27",
+      "what": "Coefficient-2 direction weakened: at order 9 its conditions can no longer be removed to first order at the tested jet (mod p, one jet; independent check pending). Likely a later-order obstruction rather than a new component. No statement about the Hodge conjecture."
+    },
+    {
+      "when": "2026-11-27",
       "what": "Coefficient-2 direction, second filter: no smooth cycle of the tested types (linear, complete intersections, Segre, degree-5 del Pezzo, scrolls) has the discriminant needed to carry the class (exact, blind-checked; assumes the generic Hodge lattice has rank 2). Still open, not strengthened. No statement about the Hodge conjecture."
     },
     {

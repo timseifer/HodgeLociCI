@@ -1,0 +1,60 @@
+p 31981 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 40s
+rank J3 7 #annihilators 19 60s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 82s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (19847, 13847)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+ORDER 8 begins 118s
+base jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 9 of 26 ; 146s
+response of ob_8 to k5 (10 random): rank 7 ; same image as J3: True ; 397s
+q8 = ell . ob_8 at the base jet: nonzero 2 of 19
+q7 linear part on 24 sampled A2 directions: rank 2 ; directions kept: 22 ; 434s
+k2 variations: all stay on V7: True ; 702s
+k3 in ker J3 : variations added; on V7: True ; 781s
+k4 in ker J4 : variations added; on V7: True ; 858s
+RESULT order 8: span of q8 variations (k2 in A2', k3 in ker J3, k4 in ker J4): rank 2 ; q8 at the base in that span: True
+k2 directions with a non-zero q8 change: 10 of 10 ; k3/k4 changes non-zero: [False, False, False, False, False, False]
+q8 along a k2-line: degree 2 ; 1016s
+interpolant predicts an off-grid point: True ; 1121s
+independent component polys: 2 ; degrees [2, 2]
+resultant degree 3
+F_p point with q8 = 0 on the plane: (4792, 10838)
+at the point: q8 nonzero 0 ; ob_8 nonzero 7
+after the k5 step: ob_8 nonzero 0
+RESULT DIRECT verification of jet T_1..T_8: nonzero c_n among 45, n = 1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+ORDER 9 begins 1554s
+base V8 jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 0 ; ob_9 nonzero 19 ; 1704s
+q9 at the base: nonzero 12 of 19
+FOLLOW-UP begins 1704s
+ob_8 at k8 nonzero: 0
+    k2 in A2' 0 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 12 ; 2149s
+    k2 in A2' 1 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 12 ; 2448s
+    k2 in A2' 2 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 12 ; 2758s
+    k2 in A2' 3 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 12 ; 3075s
+    k2 in A2' 4 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 12 ; 3372s
+    k3 in ker J3 0 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 2 ; 3678s
+    k3 in ker J3 1 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 2 ; 4000s
+    k3 in ker J3 2 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 2 ; 4325s
+    k3 in ker J3 3 : orders <= 7 kept True ; d ob_8 nonzero 2 ; d q9 nonzero 2 ; 4656s
+    k4 in ker J4 0 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 2 ; 4826s
+    k4 in ker J4 1 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 2 ; 4996s
+    k4 in ker J4 2 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 2 ; 5163s
+    k4 in ker J4 3 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 2 ; 5335s
+    k5 in ker W5 0 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 0 ; 5695s
+    k5 in ker W5 1 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 0 ; 6014s
+    k5 in ker W5 2 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 0 ; 6315s
+    k5 in ker W5 3 : orders <= 7 kept True ; d ob_8 nonzero 0 ; d q9 nonzero 0 ; 6620s
+rank of d ob_8 over all moves: 2 ; rank of d q9: 4
+combinations keeping V8 to first order: 15 ; rank of the q9 changes they give: 4
+RESULT q9 at the base in the span of first-order changes inside V8: False ; rank with q9b added: 5 ; 6620s
+control (a k4 change is in the span): True
+RESULT (interpretation is tentative: the variations are first differences, not a linear model)
+total 6620s

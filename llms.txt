@@ -18,7 +18,7 @@ Smoke test, from the repository root: `M2 --script examples/quickstart.m2` print
 ## What has already been found (read before starting new work)
 
 - [discoveries/README.md](discoveries/README.md): the registry of results, negative results, dead ends, corrections and open problems; status vocabulary; rules for adding entries
-- [discoveries/registry.yaml](discoveries/registry.yaml): the machine-readable registry (182 entries); `python3 discoveries/check_registry.py --list` prints one line per entry
+- [discoveries/registry.yaml](discoveries/registry.yaml): the machine-readable registry (183 entries); `python3 discoveries/check_registry.py --list` prints one line per entry
 - [discoveries/06_ruled_out_and_dead_ends.md](discoveries/06_ruled_out_and_dead_ends.md): what failed and why
 - [discoveries/07_open_problems.md](discoveries/07_open_problems.md): open questions, each with one next step
 - [discoveries/NOTATION.md](discoveries/NOTATION.md): the setting and every symbol

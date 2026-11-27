@@ -8273,7 +8273,8 @@
     Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/blind_check14/own and blind_check15):
         python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
   next_step: |-
-    Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
+    WEAKENED: at order 9 the conditions have rank 4 on V8 and are not removable to first order at the tested jet
+    (N-POCKET-ORDER9-OBSTRUCTION-SIGNAL, MOD p, one jet). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
     N-POCKET-LATTICE-FILTER-SMOOTH are ruled out by the lattice filter (rank-2 assumption).
     (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
   session_refs: |-
@@ -8419,6 +8420,40 @@
     Identify Movasati's generalised quartic scroll and Veronese for eightfolds and compute their discriminants (singular cycles need a different formula); or test whether W's tangent space forces a larger Hodge lattice.
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead and push forward'.
+
+- id: N-POCKET-ORDER9-OBSTRUCTION-SIGNAL
+  kind: negative
+  area: movasati_conjecture
+  title: "The lambda = 2 pocket: at the order-8 jet, no first-order move inside V8 removes the order-9 conditions (MOD p, one jet) -- an obstruction signal that weakens O-ALIGNED-POCKET-LAMBDA2-ORDER9"
+  statement: |-
+    Pre-registered in leads/movasati_arc/pocket/PREREG_order10.md (and its addendum, written before the follow-up run).
+    MOD p (31981), the V8 jet of run9b (T_1..T_8 verified directly):
+    (1) q_9 (12 of 19 non-zero) is not in the span of its changes under k_4 in ker J4 (rank 2), so the order-10 route
+    failed at order 9.
+    (2) Over first-order moves keeping V8 (k_2 in A2', k_3 in ker J3, k_4 in ker J4, k_5 in ker W5; 17 sampled
+    directions, symmetric differences for k_2, k_3, k_5), the q_9 changes have rank 4 and q_9 is not in their span.
+    Reading (pre-registered): an obstruction signal at order 9 for this jet. It contradicts the reading that the pocket
+    loses 2 conditions per order like a smooth component of codimension 28: at order 9 the conditions have rank 4 on V8.
+  status: MOD_P
+  conditions: |-
+    One jet; one prime; first order only; 17 sampled directions; symmetric differences exact only up to quadratic dependence.
+  evidence: |-
+    leads/movasati_arc/pocket/run10.py, run10_31981.log, run10b.py, run10b_31981.log, REPORT.md (last section).
+  independent_check: |-
+    PENDING (blind check 20: complete linearised test in T-space from arcs/jet8_31981_s_lam2.txt).
+  not_established: |-
+    That order 9 is obstructed (a finite move along the non-linear V8 could reach q_9 = 0); the second prime; other jets; other first-order directions T_1. Nothing about the Hodge conjecture.
+  known_before: |-
+    O-ALIGNED-POCKET-LAMBDA2-ORDER9 (run9b: q_9 changes with k_4 with rank 2, linearly); N-SLICE-FALSE-OBSTRUCTION-ORDER7 (a slice gave false obstructions; this test uses the full space).
+  reproduce: |-
+    From a folder holding the checkers' libraries (blind_check14/own, blind_check15), one job at a time:
+        python3 run10b.py 31981 s 2 30 5      (about 110 minutes)
+  do_not_repeat: |-
+    Do not rerun run10.py's k_4-only route; order 10 needs the order-9 question settled first.
+  next_step: |-
+    The blind check; then the same test at p = 32029, and a second-order (non-linear) search along V8 for q_9 = 0.
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead' (order 10, cap about 3 h; overrun of about 1 h reported).
 
 - id: O-TENFOLD-CONE-LEAD
   kind: open
