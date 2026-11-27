@@ -22,3 +22,20 @@ What each outcome would mean (the pattern of the earlier orders, PREREG_step3c.m
   conclusion about order 10; recorded as a failed route.
 Blind check: an independent agent recomputes the order-9 verification and q_10's rank from the saved jet.
 Nothing here is a statement about the Hodge conjecture.
+
+## Outcome of step 2 and addendum (written ~19:35 UTC, before the follow-up run)
+
+run10.py at p = 31981 (log run10_31981.log, 2502 s): the same V8 jet as run9b was reached and verified. q_9 at the base
+(12 of 19 non-zero) is NOT in the span of its changes under k_4 in ker J4 (rank 2). Pre-registered reading: route
+failure for order 10. It also bears on order 9: for a smooth component of codimension 28 the order-9 conditions must be
+removable by the remaining freedom.
+
+Follow-up (run10b.py, p = 31981): collect first-order changes of q_9 under ALL moves that keep V8 to first order:
+k_4 in ker J4; k_5 in ker W5 (the order-8 response); k_3 in ker J3 combined so that the change of q_8 vanishes; k_2 in
+A2' (the directions keeping q_7) combined so that the change of q_8 vanishes. Then ask whether q_9 at the base lies
+in their span.
+- In the span: order 9 is solvable to first order with more freedom; the route failure was a too-narrow route; the
+  pocket is not weakened (and order 10 would need the larger route).
+- Not in the span: no first-order correction inside V8 removes q_9 at this jet. That is an obstruction signal at
+  order 9 for this jet (not a proof: V8 is non-linear and only one jet is tested). It would weaken the pocket and
+  would contradict the (H3) reading; recorded as such.
