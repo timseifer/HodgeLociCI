@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (32)
+## Entries on this page (33)
 
 | id | status | title |
 |---|---|---|
@@ -44,6 +44,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-COBLE-PLANE-COUNT-EXACT](#d-tenfold-coble-plane-count-exact) | `EXACT` | Tenfold lead: the intersection count of D-TENFOLD-COBLE-PLANE-COUNT exactly over QQ at a named member (Lambda . Z_a = 8, deg Z_a = 12), so the class of the 4-plane cycle is not a multiple of h^5 there |
 | [D-ARC-SPLITTING-NUMERICAL](#d-arc-splitting-numerical) | `COMPUTED_ONLY` | Along the sixfold arc in characteristic 0 (floating point, eps = 1/40 .. 1/800): the transported class [P1] - [P2] splits F_eps into two cubics -+(2187/64) l^3 eps^-6 + ..., each with 8 linear vector fields; a matrix with det = the first one to 8e-20; the second matrix not found |
 | [D-TENFOLD-COBLE-VS-TWO-DET](#d-tenfold-coble-vs-two-det) | `PAPER_ARGUMENT_AI` | Tenfolds: if the Coble family lies in the closure of the two-determinant family, the two-determinant class does not specialise to the Coble class there (tangent codimension 54 > 52) |
+| [D-RUNG-NODE-COUNTS-EXACT](#d-rung-node-counts-exact) | `EXACT` | The K3 / abelian node counts on the sixfold and eightfold rungs, exactly over QQ: 14 / 18 nodes with one relation on quadrics, 28 / 36 with one relation on cubics |
 
 ## Related entries on other pages
 
@@ -2805,3 +2806,44 @@ leads/movasati_arc/blind_check16/REPORT.md.
 **Next step.** Count the Hodge classes at a Coble member (dimension of the space of class functionals with the same Hilbert-function data), or test directly whether a Coble cubic in P^8 lies in the closure of det A + det B in 9 variables.
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.
+
+---
+
+## D-RUNG-NODE-COUNTS-EXACT
+
+**The K3 / abelian node counts on the sixfold and eightfold rungs, exactly over QQ: 14 / 18 nodes with one relation on quadrics, 28 / 36 with one relation on cubics**
+
+kind: `result` | area: `explicit_cycles` | status: **`EXACT`**
+
+**Statement.**
+
+```text
+One rational instance each (tooling/node_section, nodalDefect over QQ):
+(1) Pfaffian cubic (6 x 6 skew matrix of linear forms in 9 variables, small integer coefficients) restricted to a
+rational P^6: 14 singular points, all ordinary double points, imposing 13 conditions on quadrics (defect 1). The Coble
+member lam = -2, x = (8, 18, 1), a0 = 29 restricted to a rational P^6: 18 ordinary double points, 17 conditions on
+quadrics (defect 1).
+(2) G|P^7 + t Psi with Psi a rational quadric in 9 variables: Pfaffian 28 ordinary double points, 27 conditions on
+cubics; Coble 36 ordinary double points, 35 conditions on cubics (defect 1 each).
+These are the MOD p numbers of headline card 2 (14 / 28 for +1, 18 / 36 for -1), now in characteristic 0 at one
+instance each.
+```
+
+**Conditions.** One instance each; exact over QQ; the meaning of the defect as an extra Hodge class rests on the AI-written argument of TENFOLD_COBLE_LEAD.md 10.3 and Dimca's formula (LIT, see tooling/node_section/README.md).
+
+**Evidence.** leads/rungs_exact/PREREG.md, re1_exact_counts.m2, re1.log.
+
+**Independent check.** none by a separate agent; the MOD p counts of D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD and the Pfaffian entry (different instances) agree.
+
+**Not established.** The tenfold rung (56 / 72) over QQ; general instances (one each).
+
+**Known before.** D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD, D-TENFOLD-PFAFFIAN-K3, D-TENFOLD-K3-ABELIAN-PAIRING (MOD p).
+
+**Reproduce.**
+
+```text
+From the repository root (Macaulay2 1.22):
+    M2 --script leads/rungs_exact/re1_exact_counts.m2      (about 45 minutes; the eightfold rungs dominate)
+```
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item B7.

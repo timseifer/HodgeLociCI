@@ -8209,6 +8209,37 @@
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.
 
+- id: D-RUNG-NODE-COUNTS-EXACT
+  kind: result
+  area: explicit_cycles
+  title: "The K3 / abelian node counts on the sixfold and eightfold rungs, exactly over QQ: 14 / 18 nodes with one relation on quadrics, 28 / 36 with one relation on cubics"
+  statement: |-
+    One rational instance each (tooling/node_section, nodalDefect over QQ):
+    (1) Pfaffian cubic (6 x 6 skew matrix of linear forms in 9 variables, small integer coefficients) restricted to a
+    rational P^6: 14 singular points, all ordinary double points, imposing 13 conditions on quadrics (defect 1). The Coble
+    member lam = -2, x = (8, 18, 1), a0 = 29 restricted to a rational P^6: 18 ordinary double points, 17 conditions on
+    quadrics (defect 1).
+    (2) G|P^7 + t Psi with Psi a rational quadric in 9 variables: Pfaffian 28 ordinary double points, 27 conditions on
+    cubics; Coble 36 ordinary double points, 35 conditions on cubics (defect 1 each).
+    These are the MOD p numbers of headline card 2 (14 / 28 for +1, 18 / 36 for -1), now in characteristic 0 at one
+    instance each.
+  status: EXACT
+  conditions: |-
+    One instance each; exact over QQ; the meaning of the defect as an extra Hodge class rests on the AI-written argument of TENFOLD_COBLE_LEAD.md 10.3 and Dimca's formula (LIT, see tooling/node_section/README.md).
+  evidence: |-
+    leads/rungs_exact/PREREG.md, re1_exact_counts.m2, re1.log.
+  independent_check: |-
+    none by a separate agent; the MOD p counts of D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD and the Pfaffian entry (different instances) agree.
+  not_established: |-
+    The tenfold rung (56 / 72) over QQ; general instances (one each).
+  known_before: |-
+    D-COBLE-RUNGS-SIXFOLD-EIGHTFOLD, D-TENFOLD-PFAFFIAN-K3, D-TENFOLD-K3-ABELIAN-PAIRING (MOD p).
+  reproduce: |-
+    From the repository root (Macaulay2 1.22):
+        M2 --script leads/rungs_exact/re1_exact_counts.m2      (about 45 minutes; the eightfold rungs dominate)
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item B7.
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture

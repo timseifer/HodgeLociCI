@@ -1,0 +1,5 @@
+a0 = 29
+RESULT sixfold rung, K3 (Pfaffian): singular points 14 ; all ODP true ; conditions on forms of degree 2: 13 ; defect 1 ; EXACT (over QQ)
+RESULT sixfold rung, abelian (Coble): singular points 18 ; all ODP true ; conditions on forms of degree 2: 17 ; defect 1 ; EXACT (over QQ)
+RESULT eightfold rung, K3 (Pfaffian): singular points 28 ; all ODP true ; conditions on forms of degree 3: 27 ; defect 1 ; EXACT (over QQ)
+RESULT eightfold rung, abelian (Coble): singular points 36 ; all ODP true ; conditions on forms of degree 3: 35 ; defect 1 ; EXACT (over QQ)
