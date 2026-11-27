@@ -8273,8 +8273,8 @@
     Run from a folder holding the checkers' libraries (copies of leads/movasati_arc/blind_check14/own and blind_check15):
         python3 run9_full_space_order9.py 31981 s 2 30 5 /tmp/jet.txt      (about 55 minutes; one job at a time: 3 GB)
   next_step: |-
-    WEAKENED: at order 9 the conditions have rank 4 on V8 and are not removable to first order at the tested jet
-    (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL, MOD p, one jet). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
+    UNDECIDED at order 9: the order-9 conditions have rank 4 on V8 at the tested jet and are not removable to first
+    order, which does not decide whether they vanish somewhere on V8 (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL, corrected). Linear cycles persisting individually are ruled out (N-POCKET-NOT-LINEAR-CYCLES); smooth cycles of the types in
     N-POCKET-LATTICE-FILTER-SMOOTH are ruled out by the lattice filter (rank-2 assumption).
     (1) List the families through the eightfold Movasati point (literature; arXiv:2606.10884) and compare their tangent spaces with the 92-dimensional space of admissible T_2. (2) Ask whether the class is the class of another cycle on such a component. (3) An independent blind check of order 9. (4) Exact arithmetic.
   session_refs: |-
@@ -8424,7 +8424,7 @@
 - id: D-POCKET-ORDER9-OBSTRUCTION-SIGNAL
   kind: result
   area: movasati_conjecture
-  title: "The lambda = 2 pocket: at the order-8 jet, no first-order move inside V8 removes the order-9 conditions (MOD p, one jet) -- an obstruction signal that weakens O-ALIGNED-POCKET-LAMBDA2-ORDER9"
+  title: "The lambda = 2 pocket at order 9: at the tested order-8 jet no first-order move inside V8 removes the order-9 conditions (MOD p, two primes, one jet); this does NOT by itself signal an obstruction (corrected reading)"
   statement: |-
     Pre-registered in leads/movasati_arc/pocket/PREREG_order10.md (and its addendum, written before the follow-up run).
     MOD p (31981), the V8 jet of run9b (T_1..T_8 verified directly):
@@ -8432,11 +8432,14 @@
     failed at order 9.
     (2) Over first-order moves keeping V8 (k_2 in A2', k_3 in ker J3, k_4 in ker J4, k_5 in ker W5; 17 sampled
     directions, symmetric differences for k_2, k_3, k_5), the q_9 changes have rank 4 and q_9 is not in their span.
-    Reading (pre-registered): an obstruction signal at order 9 for this jet. It contradicts the reading that the pocket
-    loses 2 conditions per order like a smooth component of codimension 28: at order 9 the conditions have rank 4 on V8.
+    CORRECTED READING (27 Nov, late): the pre-registered reading "obstruction signal" was wrong. The order-9 conditions
+    are a map G on V8 with a curved image; G(x0) outside the image of dG at one point does not show that G has no zero
+    on V8. What stands: the differential of the order-9 conditions along V8 has rank 4 (in the 19 q-coordinates), not
+    the 2 of the "smooth component of codimension 28" reading, at this jet. The pocket is undecided at order 9.
+    Same ranks at p = 32029 (165 / 195 / 196), file blind_check20/p32029/run32029.log.
   status: MOD_P
   conditions: |-
-    One jet; one prime; first order only (the blind check removes the sampling caveat: all first-order moves).
+    One jet; two primes; first order only (the blind check removes the sampling caveat: all first-order moves).
   evidence: |-
     leads/movasati_arc/pocket/run10.py, run10_31981.log, run10b.py, run10b_31981.log, REPORT.md (last section).
   independent_check: |-

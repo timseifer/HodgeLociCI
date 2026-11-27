@@ -148,3 +148,17 @@ the k_2 changes are symmetric differences, exact only if q_9 is at most quadrati
 may not span all first-order moves (17 samples). The earlier step "q8 does not depend on k_3" was already withdrawn.
 Blind check 20 (blind_check20/): the complete linearised test in T-space, exact derivative over all 220 cubic
 monomials: rank 195 on orders 2..9, 196 with the order-9 right-hand side. CONFIRMED; the sampling caveat is removed.
+
+## Correction to the reading above, and the second prime (27 Nov, late)
+
+CORRECTION (my error, not the checker's). The first-order test cannot by itself signal an obstruction. On V8 the
+order-9 conditions are a map G: V8 -> F^19 whose image is NOT linear (k_2 enters non-linearly). G(x0) lying outside
+the image of dG at one point x0 shows only that the image is curved; a curved image can still pass through 0
+(picture: the parabola y = s^2 - 1 meets y = 0, although at s = 0 the value -1 is not in the tangent line). The
+pre-registered sentence "Not in the span: ... an obstruction signal at order 9" was wrong, and so was my reading of
+the confirmed rank jump as weakening the pocket. What the computation does show (MOD p, now at both primes, blind
+check 20 and p32029/run32029.log: ranks 165 / 195 / 196 at p = 31981 AND p = 32029): at this jet the differential of
+the order-9 conditions along V8 has rank 4 in the 19 q-coordinates, not 2, and G(x0) is outside its image. The rank
+4 alone already sits badly with the "2 conditions per order" reading (H3), but this too is measured at one jet.
+Status: the pocket is UNDECIDED at order 9; it is neither strengthened nor shown obstructed. The decisive test is
+non-linear: does G vanish somewhere on V8?

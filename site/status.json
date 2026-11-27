@@ -169,7 +169,7 @@
   "recent": [
     {
       "when": "2026-11-27",
-      "what": "Coefficient-2 direction weakened: at order 9 its conditions can no longer be removed to first order at the tested jet (mod p, one jet; confirmed by an independent check). Likely a later-order obstruction rather than a new component. No statement about the Hodge conjecture."
+      "what": "Coefficient-2 direction at order 9: its conditions cannot be removed by first-order moves at the tested jet (mod p, two primes, independent check), but that does not decide the question; an earlier reading of this as an obstruction signal was wrong and is withdrawn. Undecided. No statement about the Hodge conjecture."
     },
     {
       "when": "2026-11-27",
