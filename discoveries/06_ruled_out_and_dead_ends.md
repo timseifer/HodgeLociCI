@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (37)
+## Entries on this page (38)
 
 | id | status | title |
 |---|---|---|
@@ -49,6 +49,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [N-SECOND-MATRIX-THIRD-ROUTE](#n-second-matrix-third-route) | `RULED_OUT` | Second matrix along the sixfold arc as a small correction of the first: fails, because F_eps is far from the tangent space of the determinantal cubics at G_A |
 | [N-POCKET-NOT-LINEAR-CYCLES](#n-pocket-not-linear-cycles) | `RULED_OUT` | The lambda = 2 pocket at the eightfold Movasati point is not explained by linear cycles persisting individually: none of the 229635 linear P^4's of the Fermat eightfold is tangent to its direction |
 | [N-POCKET-LATTICE-FILTER-SMOOTH](#n-pocket-lattice-filter-smooth) | `RULED_OUT` | Lattice filter for the lambda = 2 pocket: no smooth 4-fold of the tested types (linear, complete intersections, Segre, del Pezzo of degree 5, scrolls) has the square discriminant needed to carry [P1] + 2[P2] |
+| [N-POCKET-NO-COMPANION-CLASS](#n-pocket-no-companion-class) | `RULED_OUT` | No companion Hodge class along the lambda = 2 pocket jet: from order 6 on, only [P1] + 2[P2] stays Hodge (MOD p, two primes) |
 
 ---
 
@@ -1759,3 +1760,45 @@ From the repository root (seconds; needs sympy):
 **Next step.** Identify Movasati's generalised quartic scroll and Veronese for eightfolds and compute their discriminants (singular cycles need a different formula); or test whether W's tangent space forces a larger Hodge lattice.
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'go ahead and push forward'.
+
+---
+
+## N-POCKET-NO-COMPANION-CLASS
+
+**No companion Hodge class along the lambda = 2 pocket jet: from order 6 on, only [P1] + 2[P2] stays Hodge (MOD p, two primes)**
+
+kind: `negative` | area: `movasati_conjecture` | status: **`RULED_OUT`**
+
+**Statement.**
+
+Pre-registered in leads/movasati_arc/pocket/PREREG_companion_classes.md. Motivation: the tenfold arc of
+O-TENFOLD-CONE-LEAD, kept to order 12, was carried by a different class (the three-plane class of the Coble family).
+Linear algebra (the conditions c_n[Q] = Psi_P(Q E_n) are linear in the period polynomial P): the linear-cycle period
+polynomials span all 252 square-free degree-5 monomials, and the classes staying Hodge along the saved jet
+arcs/jet8_*_s_lam2.txt to order n form spaces of dimension 207, 162, 117, 72, 27, 1, 1, 1 for n = 1..8, at
+p = 31981 and 32029. From order 6 on only c = [P1] + 2[P2] is left.
+Reading: no companion class along this jet; consistent with a generic Hodge lattice of rank 2 (h^4, c), the
+assumption of N-POCKET-LATTICE-FILTER-SMOOTH.
+
+**Conditions.** Along this one jet (a generic point of the 8-jet space of NL(c) with this T_1); classes in the span of linear cycles (all of the 252-dimensional space here).
+
+**Evidence.** leads/movasati_arc/pocket/cc1_companion.py, cc1_31981.log, cc1_32029.log; blind check leads/movasati_arc/pocket/blind_check21/.
+
+**Independent check.** Blind check 21 (separate agent, own code): the same dimensions at both primes, with a positive control (c vanishes on all 360 functionals) and a negative one (a random P on none); CONFIRMED.
+
+**Not established.** Companion classes of a smaller component on which this jet does not lie; the order-9 question (D-POCKET-ORDER9-OBSTRUCTION-SIGNAL, undecided). The pocket stays OPEN.
+
+**Known before.** O-TENFOLD-CONE-LEAD and the Coble three-plane class (the precedent); N-POCKET-LATTICE-FILTER-SMOOTH.
+
+**Reproduce.**
+
+```text
+From the repository root (about 30 s per prime):
+    python3 leads/movasati_arc/pocket/cc1_companion.py 31981 12637 leads/movasati_arc/arcs/jet8_31981_s_lam2.txt 8
+```
+
+**Do not repeat.** Do not repeat on this jet; a companion search needs a jet on a different component or a different T_1.
+
+**Next step.** The non-linear order-9 test (does the order-9 condition map vanish somewhere on V8?).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat); owner: 'can we maybe find an explanation for it'.

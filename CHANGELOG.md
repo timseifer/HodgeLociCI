@@ -4,7 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 183 entries)
+### Discoveries registry (142 -> 184 entries)
+- N-POCKET-NO-COMPANION-CLASS (MOD p, two primes, blind-checked): along the lambda = 2 pocket jet no other Hodge class
+  stays Hodge past order 5. `leads/movasati_arc/pocket/`.
 - D-POCKET-ORDER9-OBSTRUCTION-SIGNAL (MOD p, two primes, one jet; blind-checked): at order 9 the lambda = 2 pocket's
   conditions have rank 4 and are not removable to first order; corrected reading: this does not decide order 9. `leads/movasati_arc/pocket/`.
 - N-POCKET-LATTICE-FILTER-SMOOTH (ruled out, EXACT + ARG, blind-checked): no smooth 4-fold of the tested types has the

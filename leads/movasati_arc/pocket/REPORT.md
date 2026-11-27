@@ -162,3 +162,14 @@ the order-9 conditions along V8 has rank 4 in the 19 q-coordinates, not 2, and G
 4 alone already sits badly with the "2 conditions per order" reading (H3), but this too is measured at one jet.
 Status: the pocket is UNDECIDED at order 9; it is neither strengthened nor shown obstructed. The decisive test is
 non-linear: does G vanish somewhere on V8?
+
+## Companion classes, 27 Nov, late (owner: "can we maybe find an explanation for it"; PREREG_companion_classes.md)
+
+The tenfold arc kept to order 12 (O-TENFOLD-CONE-LEAD) was explained by a different class (the three-plane class of
+the Coble family). Same question here, by linear algebra (cc1_companion.py, cc1_31981.log, cc1_32029.log; MOD p, both
+primes, identical): the span H of the linear-cycle period polynomials is all 252 square-free degree-5 monomials, and
+the classes in H that stay Hodge along the saved jet to order n form spaces of dimension
+207, 162, 117, 72, 27, 1, 1, 1 (n = 1..8). Each order cuts 45 conditions until only c = [P1] + 2[P2] is left at order 6.
+Reading (pre-registered): no companion class along this jet; consistent with a generic Hodge lattice of rank 2, the
+assumption of the lattice filter. Caveat (pre-registered): the jet is a generic point of the 8-jet space of NL(c)
+with this T_1, so a companion class of a smaller component would show only if the jet lies on that component.

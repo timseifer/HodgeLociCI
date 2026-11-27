@@ -67,6 +67,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [O-ALIGNED-POCKET-LAMBDA2-ORDER9](07_open_problems.md#o-aligned-pocket-lambda2-order9) | open | `OPEN` | 07 | Open: lambda = 2 on the symmetric aligned direction at the eightfold Movasati point reaches order 9 with 2 linear conditions per order -- a direction worth examining, not a finding |
 | [N-POCKET-NOT-LINEAR-CYCLES](06_ruled_out_and_dead_ends.md#n-pocket-not-linear-cycles) | negative | `RULED_OUT` | 06 | The lambda = 2 pocket at the eightfold Movasati point is not explained by linear cycles persisting individually: none of the 229635 linear P^4's of the Fermat eightfold is tangent to its direction |
 | [N-POCKET-LATTICE-FILTER-SMOOTH](06_ruled_out_and_dead_ends.md#n-pocket-lattice-filter-smooth) | negative | `RULED_OUT` | 06 | Lattice filter for the lambda = 2 pocket: no smooth 4-fold of the tested types (linear, complete intersections, Segre, del Pezzo of degree 5, scrolls) has the square discriminant needed to carry [P1] + 2[P2] |
+| [N-POCKET-NO-COMPANION-CLASS](06_ruled_out_and_dead_ends.md#n-pocket-no-companion-class) | negative | `RULED_OUT` | 06 | No companion Hodge class along the lambda = 2 pocket jet: from order 6 on, only [P1] + 2[P2] stays Hodge (MOD p, two primes) |
 | [O-TENFOLD-CONE-LEAD](07_open_problems.md#o-tenfold-cone-lead) | open | `OPEN` | 07 | Cubic tenfold with two 5-planes meeting in a P^2: is the component W through Z_0 strictly larger than the cone locus Cone_d? |
 
 ---
