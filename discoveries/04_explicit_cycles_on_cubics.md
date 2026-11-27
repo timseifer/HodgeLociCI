@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (31)
+## Entries on this page (32)
 
 | id | status | title |
 |---|---|---|
@@ -43,6 +43,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-TENFOLD-TWO-DET-HODGE-LOCUS](#d-tenfold-two-det-hodge-locus) | `PAPER_ARGUMENT_AI` | Tenfold two-determinant family: a reduced component of codimension 52 of the Hodge locus of its class, and that class is in the monodromy orbit of [P1] - [P2] (arguments) |
 | [D-TENFOLD-COBLE-PLANE-COUNT-EXACT](#d-tenfold-coble-plane-count-exact) | `EXACT` | Tenfold lead: the intersection count of D-TENFOLD-COBLE-PLANE-COUNT exactly over QQ at a named member (Lambda . Z_a = 8, deg Z_a = 12), so the class of the 4-plane cycle is not a multiple of h^5 there |
 | [D-ARC-SPLITTING-NUMERICAL](#d-arc-splitting-numerical) | `COMPUTED_ONLY` | Along the sixfold arc in characteristic 0 (floating point, eps = 1/40 .. 1/800): the transported class [P1] - [P2] splits F_eps into two cubics -+(2187/64) l^3 eps^-6 + ..., each with 8 linear vector fields; a matrix with det = the first one to 8e-20; the second matrix not found |
+| [D-TENFOLD-COBLE-VS-TWO-DET](#d-tenfold-coble-vs-two-det) | `PAPER_ARGUMENT_AI` | Tenfolds: if the Coble family lies in the closure of the two-determinant family, the two-determinant class does not specialise to the Coble class there (tangent codimension 54 > 52) |
 
 ## Related entries on other pages
 
@@ -2762,3 +2763,45 @@ to 1e-45) from any rough B, in a rescaled gauge with plain multiprecision LU. Th
 control with the series cut at order 13.
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), twelfth part (owner: 'queue this work up'; 'Go ahead').
+
+---
+
+## D-TENFOLD-COBLE-VS-TWO-DET
+
+**Tenfolds: if the Coble family lies in the closure of the two-determinant family, the two-determinant class does not specialise to the Coble class there (tangent codimension 54 > 52)**
+
+kind: `result` | area: `explicit_cycles` | status: **`PAPER_ARGUMENT_AI`**
+
+**Statement.**
+
+(ARG.) Both families carry a primitive class of norm -48 (v_0 = [V] - 2 h^5, D-TENFOLD-COBLE-CYCLE-CLASS; delta_2 =
+[T5] - 3 h^5, D-TENFOLD-TWO-DET-CLASS). If the Coble family W# (codimension 54) lies in the closure Sigma of the
+two-determinant family (codimension 52) and delta_2 specialises at a general point X of W# to a class whose Hodge
+locus at X has the tangent space computed in D-TENFOLD-COBLE-FAMILY (N3) (codimension 54), then Sigma, which lies in
+that Hodge locus near X, would force that tangent space to have codimension at most 52 (it contains the tangent cone
+of Sigma at X). Contradiction. So either W# is not in Sigma, or delta_2 specialises at Coble points to a class other
+than +-v_0, and then a general Coble tenfold carries two independent primitive Hodge classes of norm -48. On eightfolds
+the numbers are 25 against 26 (compatible) and the containment holds (D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE). The
+eightfold mechanism (a Coble section = det(tau + A) - det(tau + B) with equal trace and s_2) gives a cone in tau and
+does not lift to the full Coble cubic in P^8.
+
+**Conditions.** Per local branch of the closure through X; closure pure-dimensional there; both codimensions in the same ambient space. Uses (N3) at a general member (MOD p at three members, EXACT at one) and the scheme-theoretic fact that the Zariski tangent space of a germ contains the tangent cone of a closed subgerm.
+
+**Evidence.** leads/TENFOLD_COBLE_LEAD.md, section 18.
+
+**Independent check.**
+
+Blind check 16: sound, with conditions: per local branch of the closure through X; closure pure-dimensional at X;
+both codimensions in the same ambient space; sign and monodromy harmless; in the second alternative the two classes
+span a negative-definite lattice. It took the value 54 of D-TENFOLD-COBLE-FAMILY on trust.
+leads/movasati_arc/blind_check16/REPORT.md.
+
+**Not established.** Which alternative holds. Whether a Coble member carries a second Hodge class of norm -48.
+
+**Known before.** D-TENFOLD-COBLE-FAMILY, D-TENFOLD-COBLE-CYCLE-CLASS, D-TENFOLD-TWO-DET-CLASS, D-TENFOLD-TWO-DET-HODGE-LOCUS, D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE.
+
+**Reproduce.** not reproducible from this repository: an argument; the entries it uses say what can be re-verified.
+
+**Next step.** Count the Hodge classes at a Coble member (dimension of the space of class functionals with the same Hilbert-function data), or test directly whether a Coble cubic in P^8 lies in the closure of det A + det B in 9 variables.
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.

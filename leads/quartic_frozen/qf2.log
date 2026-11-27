@@ -1,0 +1,6 @@
+RESULT (4,2,2) lambda = 1 : first-order excess 1 ; second order: ALL DIE
+RESULT (4,2,2) lambda = -1 : first-order excess 1 ; second order: ALL SURVIVE
+RESULT (4,2,2) lambda = 2 : first-order excess 1 ; second order: ALL DIE
+RESULT (4,3,2) lambda = 1 : first-order excess 0 ; second order: no excess
+RESULT (4,3,2) lambda = -1 : first-order excess 1 ; second order: ALL SURVIVE
+RESULT (4,3,2) lambda = 2 : first-order excess 0 ; second order: no excess

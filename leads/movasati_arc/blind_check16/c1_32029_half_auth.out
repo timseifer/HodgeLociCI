@@ -1,0 +1,11 @@
+y0: coefficient of x0x2x4 = 27295 (others from base auth )
+p 32029 lambda 1/2 = 16015 rank L 19 dim ker L 101 L T1 nonzero: 0
+identity Kl c_n(direct) == ob_n at a random dense point, n=2..6: [True, True, True, True, True]
+ob_2,ob_3,ob_4 nonzero counts at 4 random points: [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+ob_5 affine (2 second-difference tests): True
+Lin5 rank total 7 by block k2,k3,k4,k5: [7, 0, 0, 0] ob5(0) nonzero: 9 4s
+dim A = 397
+at u0: ob_2..ob_5 nonzero: [0, 0, 0, 0] ob_6 nonzero: 9
+samples on A: 13 max nonzero of ob_2..5 at samples: 0 dim W = span(ob_6(u)-ob_6(u0)): 7
+OBSTRUCTED: ob_6(u0) not in W; functional l with l(W)=0: l.ob_6(u0) = 10423 ; l.ob_6 at 10 fresh points of A: [10423, 10423, 10423, 10423, 10423, 10423, 10423, 10423, 10423, 10423]
+total 44s

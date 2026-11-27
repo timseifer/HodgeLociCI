@@ -284,3 +284,11 @@ Prediction: obstructed at order 6 for every lambda tested except -1; lambda = 1 
 among these values is {-1} (and possibly 1), the separation is a statement about the coefficient, not about 2;
 an argument tying it to the discriminant / lattice rule (the K3 / abelian headline) is the second half of A4 and is
 NOT attempted by this run. Any other lambda passing: report, and look for the lattice explanation of that value.
+
+### Outcome of the coefficient scan (A4, computational half; logs/ma4_32029_lam*_g_scan.log)
+Net g, MOD 32029, slice (order-6 verdicts confirmed in the full space for this net by blind check 14 at lambda = 2):
+lambda = 3, -2, 1/2, 5/3, -1/2, 4, -1/3 (and 2, earlier): order 5 repaired, order 6 OBSTRUCTED. lambda = -1: passes
+(earlier, to order 7 exactly). lambda = 1 (= lambda_0): every order up to 6 is solvable without any correction
+(the locus at lambda_0 is smooth of dimension dim V + 1, D-FIRST-ORDER-RULE (4)). As predicted for the eight values,
+no prediction for 1. (The log of lambda = 3 was lost by a mistake of mine -- a git stash while the job was writing --
+and the run was repeated; same result.)

@@ -1483,3 +1483,26 @@ QQ(t)): `leads/tenfold_coble/blind_check11/REPORT.txt`.
   (mine do); a robust form of the conclusion needs only "Z5 is not empty".
 - A structural by-product: {B_11 = B_12 = B_22 = 0} is a P^5 through the tangent plane of Sing(Y) at a, and it meets
   Y in P_B and a rank-3 quadric cone that lies in every fibre.
+
+## 18. Is the Coble family in the closure of the two-determinant family on tenfolds? (plan item A5; 27 Nov; ARG)
+
+Reconciliation with the first-order count. Both families carry a primitive class of norm -48: v_0 = [V] - 2 h^5 on the
+Coble family (D-TENFOLD-COBLE-CYCLE-CLASS) and delta_2 = [T5] - 3 h^5 on the two-determinant family
+(D-TENFOLD-TWO-DET-CLASS), and the lattice rule cannot tell them apart. But: suppose the Coble family W# (codim 54)
+lies in the closure Sigma of the two-determinant family (codim 52) and the class delta_2, transported to a general
+point X of W#, is +-v_0 (or any class whose Hodge locus at X is the one computed in D-TENFOLD-COBLE-FAMILY (N3)).
+Sigma lies in the Hodge locus of that class near X, so the Zariski tangent space of that Hodge locus at X contains
+the tangent cone of Sigma at X, which has the dimension of Sigma: its codimension would be at most 52. (N3) computed
+it as 54 (MOD p, two primes, three members; EXACT at one member). Hence (ARG): at a general Coble point either W# is
+not in the closure of the two-determinant family, or it is and the two-determinant class specialises there to a
+class different from +-v_0 (then a general Coble tenfold carries two independent primitive Hodge classes of norm
+-48). On eightfolds the analogous numbers are 25 (rung) against 26 (two determinants), which is compatible, and there
+the containment holds (D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE). The eightfold mechanism (a Coble SECTION is
+det(tau + A) - det(tau + B) with equal trace and second coefficient) does not lift directly: the full Coble cubic in
+P^8 is not a cone, while det(tau + A) - det(tau + B) with equal trace and s_2 is a cone in tau. Which alternative
+holds is open; the second would be testable by computing the rank of the space of Hodge classes at a Coble member
+(two classes would show up as a second independent functional with the same tangent space data).
+Blind check 16: the argument is sound with conditions: it holds per local branch of the closure through X (if
+there are several branches, each must specialise to a class other than +-v_0), needs the closure pure-dimensional at
+X and both codimensions measured in the same ambient space; sign and monodromy are harmless. In the second
+alternative the two classes span a negative-definite lattice (Hodge-Riemann), a usable consistency test.

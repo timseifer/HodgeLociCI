@@ -1,0 +1,14 @@
+                              1
+p = 32029, seed 0, lambda = - -, case g ; rank L = 19 ; T_1 in ker L: true ; not in ker L_P1: true
+                              2
+slice seed 0 : 19 monomials with independent columns of L ; 18 net directions in ker L: true
+  order 2 solvable ; cpu .219504
+  order 3 solvable ; cpu .878623
+  order 4 solvable ; cpu 3.84501
+  order 5 : D on the 18 net directions: rank 7 (7 = 18 - 11 expected) ; D(y_0) = 0: true ; cpu 209.806
+  free directions of the slice: the net directions {(0,0,0), (0,1,0), (0,2,0), (1,0,0), (1,1,0), (2,0,0), (0,0,1)}
+  order 5 : D on the slice: 26 x 7, rank 7 ; linear on a random combination: true
+  order 5 : obstruction in Im D, removed by the free part of T_2 ; cpu 304.414
+                                              1
+RESULT p = 32029, seed 0, slice 0, lambda = - -, case g : arc of 5 terms ; status: OBSTRUCTED: the obstruction is not in Im D at order 6 ; cpu 331.821
+                                              2

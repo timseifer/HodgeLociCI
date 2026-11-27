@@ -8135,6 +8135,80 @@
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item A3.
 
+- id: D-MOVASATI-POINT-COEFFICIENT-SCAN
+  kind: result
+  area: movasati_conjecture
+  title: "Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface"
+  statement: |-
+    (1) (MOD 32029, slice; order-6 verdicts for this net confirmed in the full space at lambda = 2 by blind check 14.)
+    Eightfold Movasati point, net g of D-MOVASATI-POINT-EXACT-SEPARATION: lambda = 2, 3, -2, 1/2, 5/3, -1/2, 4, -1/3 are
+    obstructed at order 6 (order 5 repaired); lambda = -1 passes (to order 7 exactly); lambda = 1 = lambda_0 passes to
+    order 6, its order-5 and order-6 constraints vanishing identically. Confirmed in the full space by blind check 16.
+    (2) (ARG + elementary arithmetic.) With f(m) = (1 - (-2)^(m+1))/3, the lattice <h^4, r P1 + s P2> on the eightfold has
+    determinant 2 (16 r^2 - 4 r s + 16 s^2); half of it is 28 for (1, 1), 36 for (1, -1), and at least 70 for every other
+    coprime pair with s != 0. The node mechanism of headline card 2 (D-NODES-DISCRIMINANT-IDENTITY) gives 28 for K3 and
+    36 for abelian surfaces on eightfolds. So the coefficients that survive order 6 are exactly those for which the rule
+    offers a K-trivial surface (a match at 2 of 10 sampled values, not a mechanism).
+  status: MOD_P
+  conditions: |-
+    One prime, one direction, the slice solver (reliable at order 6 here; see N-SLICE-FALSE-OBSTRUCTION-ORDER7 for order 7 on). (2) explains the zero set, not the order 6.
+  evidence: |-
+    leads/movasati_arc/logs/ma4_32029_lam*_g_scan.log; PREREG_arc.md (A4 pre-registration and outcome); leads/TENFOLD_TWODET_LEAD.md, section 9.8.
+  independent_check: |-
+    Blind check 16 (separate agent; its own driver on the python-flint full-space reduction of blind check 14; it read the
+    logs and notes only after its own results): every coefficient obstructed or passing as in (1), in the FULL space of
+    cubics at p = 32029, and for lambda = 3, 1/2, 1 also at 31981 and with a second choice of y_0; explicit jets checked
+    directly for 1 and -1. f(m) derived independently by the excess intersection formula; the determinant and the
+    values 28, 36, >= 70 confirmed. Its corrections (worked in): the match with K-trivial surfaces is a correlation at 2
+    of 10 values; "+1 passes without correction" was wrong as worded. leads/movasati_arc/blind_check16/REPORT.md.
+  not_established: |-
+    Why order 6; other directions and primes; characteristic 0 (except -1 and 2, D-MOVASATI-POINT-EXACT-SEPARATION); a derivation of the obstruction from the lattice data.
+  known_before: |-
+    D-NODES-DISCRIMINANT-IDENTITY, D-TENFOLD-K3-ABELIAN-PAIRING (the rule); D-MOVASATI-POINT-EXACT-SEPARATION (-1, 2); D-FIRST-ORDER-RULE (lambda_0).
+  reproduce: |-
+    From the repository root:
+        M2 --script leads/movasati_arc/ma4_exact.m2 32029 0 3 6 g 0      (6 minutes; OBSTRUCTED at order 6; any coefficient in place of 3)
+  next_step: |-
+    Derive the order-6 obstruction coefficient as a function of lambda (with lambda a parameter of the ring) and compare its zero set with the lattice condition.
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.
+
+- id: D-TENFOLD-COBLE-VS-TWO-DET
+  kind: result
+  area: explicit_cycles
+  title: "Tenfolds: if the Coble family lies in the closure of the two-determinant family, the two-determinant class does not specialise to the Coble class there (tangent codimension 54 > 52)"
+  statement: |-
+    (ARG.) Both families carry a primitive class of norm -48 (v_0 = [V] - 2 h^5, D-TENFOLD-COBLE-CYCLE-CLASS; delta_2 =
+    [T5] - 3 h^5, D-TENFOLD-TWO-DET-CLASS). If the Coble family W# (codimension 54) lies in the closure Sigma of the
+    two-determinant family (codimension 52) and delta_2 specialises at a general point X of W# to a class whose Hodge
+    locus at X has the tangent space computed in D-TENFOLD-COBLE-FAMILY (N3) (codimension 54), then Sigma, which lies in
+    that Hodge locus near X, would force that tangent space to have codimension at most 52 (it contains the tangent cone
+    of Sigma at X). Contradiction. So either W# is not in Sigma, or delta_2 specialises at Coble points to a class other
+    than +-v_0, and then a general Coble tenfold carries two independent primitive Hodge classes of norm -48. On eightfolds
+    the numbers are 25 against 26 (compatible) and the containment holds (D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE). The
+    eightfold mechanism (a Coble section = det(tau + A) - det(tau + B) with equal trace and s_2) gives a cone in tau and
+    does not lift to the full Coble cubic in P^8.
+  status: PAPER_ARGUMENT_AI
+  conditions: |-
+    Per local branch of the closure through X; closure pure-dimensional there; both codimensions in the same ambient space. Uses (N3) at a general member (MOD p at three members, EXACT at one) and the scheme-theoretic fact that the Zariski tangent space of a germ contains the tangent cone of a closed subgerm.
+  evidence: |-
+    leads/TENFOLD_COBLE_LEAD.md, section 18.
+  independent_check: |-
+    Blind check 16: sound, with conditions: per local branch of the closure through X; closure pure-dimensional at X;
+    both codimensions in the same ambient space; sign and monodromy harmless; in the second alternative the two classes
+    span a negative-definite lattice. It took the value 54 of D-TENFOLD-COBLE-FAMILY on trust.
+    leads/movasati_arc/blind_check16/REPORT.md.
+  not_established: |-
+    Which alternative holds. Whether a Coble member carries a second Hodge class of norm -48.
+  known_before: |-
+    D-TENFOLD-COBLE-FAMILY, D-TENFOLD-COBLE-CYCLE-CLASS, D-TENFOLD-TWO-DET-CLASS, D-TENFOLD-TWO-DET-HODGE-LOCUS, D-EIGHTFOLD-COBLE-RUNG-IN-TWO-DET-CLOSURE.
+  reproduce: |-
+    not reproducible from this repository: an argument; the entries it uses say what can be re-verified.
+  next_step: |-
+    Count the Hodge classes at a Coble member (dimension of the space of class functionals with the same Hilbert-function data), or test directly whether a Coble cubic in P^8 lies in the closure of det A + det B in 9 variables.
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture

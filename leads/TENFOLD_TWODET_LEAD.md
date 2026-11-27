@@ -599,3 +599,24 @@ has rank 2 each time, whereas for lambda = -1 it is identically zero. So lambda 
 by about 2 dimensions per order and lambda = -1 is not. The next informative number is that rank at orders 9 and
 10: still 2 means no component of the expected size through this direction (perhaps a smaller one); 0 means the
 jets stabilise, which is what a new component would look like.
+
+### 9.8 Which coefficients survive order 6 at Movasati's point, and the lattice rule (plan item A4; 27 Nov)
+On the direction in general position (net g), MOD 32029, among lambda in {-1, 1, 2, 3, -2, 1/2, 5/3, -1/2, 4, -1/3}
+only -1 and +1 pass order 6; for +1 the order-5 and order-6 constraints vanish identically (lambda_0, the smooth
+locus of the first-order rule; the forced parts of T_n suffice), -1 needs corrections at every order from 5 on (the
+second component), all others are obstructed at order 6.
+Tie to the K3 / abelian rule (ARG). On the eightfold, with f(m) = (1 - (-2)^(m+1))/3 (P.P = 11, P1.P2 = -1 for 4-planes
+meeting in a line, h^4.P = 1, h^8 = 3), the lattice <h^4, r P1 + s P2> has determinant 2 (16 r^2 - 4 r s + 16 s^2).
+Half of it is 28 for (r, s) = (1, 1) and 36 for (1, -1), and 72, 148, 88, 72, 484, 88, 256, 172 for the other
+eight values. The node mechanism (headline card 2; D-NODES-DISCRIMINANT-IDENTITY) produces extra classes from
+hyperplane sections whose nodes lie on a surface with trivial canonical class, with half-discriminant twice the
+number of nodes: 28 for K3 surfaces and 36 for abelian surfaces on eightfolds. 16 r^2 - 4 r s + 16 s^2 takes the
+values 28 and 36 only at (1, 1) and (1, -1) up to sign (for coprime r, s it is at least 14 (r^2 + s^2), hence at
+least 70 once r^2 + s^2 >= 5; r^2 + s^2 = 2 gives 28 or 36, and s = 0 is the single plane). So: the two
+coefficients that survive order 6 are exactly the two for which the rule offers a K-trivial surface (a match at
+2 of 10 sampled values, not a mechanism). What this does
+NOT give: why the obstruction appears at order 6 (rather than at another order), or that every other coefficient
+is obstructed at every point. A derivation of the order-6 obstruction from the lattice data is still open.
+- Blind check 16 (`leads/movasati_arc/blind_check16/`): the scan confirmed in the FULL space at 32029 for all ten
+  coefficients, and for 3, 1/2, 1 also at 31981 and with a second y_0; the lattice numbers confirmed with an
+  independent derivation of f(m). Wording corrected as above.

@@ -4,7 +4,7 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 174 entries)
+### Discoveries registry (142 -> 176 entries)
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three
@@ -90,6 +90,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
   space, but pays 2 conditions per order from order 7 on, where lambda = -1 pays none.
 - N-SECOND-MATRIX-THIRD-ROUTE: the second matrix as a small correction of the first fails (F_eps is 65 per cent outside the
   tangent space of the determinantal cubics at G_A); where everything stalls: leads/tenfold_twodet/matrices/STALL_NOTE.md.
+- D-MOVASATI-POINT-COEFFICIENT-SCAN (MOD p, blind-checked in the full space): at Movasati's point only -1 and +1 pass
+  order 6 among ten coefficients; they are the two the K3/abelian lattice rule singles out (a match, not a mechanism).
+- D-TENFOLD-COBLE-VS-TWO-DET (argument): the two tenfold families cannot share their class at Coble points.
 - M-NODE-SECTION-TOOL: see "Tooling" below.
 
 ### Tooling

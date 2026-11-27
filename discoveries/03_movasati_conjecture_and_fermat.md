@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (27)
+## Entries on this page (28)
 
 | id | status | title |
 |---|---|---|
@@ -39,6 +39,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-MOVASATI-POINT-EXACT-SEPARATION](#d-movasati-point-exact-separation) | `EXACT` | Movasati's own point in characteristic 0: on one direction in general position lambda = -1 passes order 7 and lambda = 2 is obstructed at order 6 in the slice, exactly; on coordinate-aligned directions lambda = 2 is not obstructed at order 6 (MOD p) |
 | [D-ALIGNED-POCKET-LAMBDA2](#d-aligned-pocket-lambda2) | `MOD_P` | Movasati's point, lambda = 2 on coordinate-aligned directions: net s passes order 7 in the full space (two primes), net f is obstructed at order 7 |
 | [D-ALIGNED-POCKET-ORDER8](#d-aligned-pocket-order8) | `MOD_P` | Movasati's point, lambda = 2 on the symmetric aligned direction: jets through order 8 exist (two primes), at the price of 2 conditions per order from order 7 on; for lambda = -1 the corresponding condition vanishes |
+| [D-MOVASATI-POINT-COEFFICIENT-SCAN](#d-movasati-point-coefficient-scan) | `MOD_P` | Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface |
 
 ## Related entries on other pages
 
@@ -2052,3 +2053,53 @@ From /home/claude/blind_check15-style setup (the checkers' libraries in leads/mo
 **Next step.** The rank of q at orders 9 and 10 (extend the reduction by one order each; about an hour per order MOD p).
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), sixteenth part (owner: 'Go ahead').
+
+---
+
+## D-MOVASATI-POINT-COEFFICIENT-SCAN
+
+**Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+(1) (MOD 32029, slice; order-6 verdicts for this net confirmed in the full space at lambda = 2 by blind check 14.)
+Eightfold Movasati point, net g of D-MOVASATI-POINT-EXACT-SEPARATION: lambda = 2, 3, -2, 1/2, 5/3, -1/2, 4, -1/3 are
+obstructed at order 6 (order 5 repaired); lambda = -1 passes (to order 7 exactly); lambda = 1 = lambda_0 passes to
+order 6, its order-5 and order-6 constraints vanishing identically. Confirmed in the full space by blind check 16.
+(2) (ARG + elementary arithmetic.) With f(m) = (1 - (-2)^(m+1))/3, the lattice <h^4, r P1 + s P2> on the eightfold has
+determinant 2 (16 r^2 - 4 r s + 16 s^2); half of it is 28 for (1, 1), 36 for (1, -1), and at least 70 for every other
+coprime pair with s != 0. The node mechanism of headline card 2 (D-NODES-DISCRIMINANT-IDENTITY) gives 28 for K3 and
+36 for abelian surfaces on eightfolds. So the coefficients that survive order 6 are exactly those for which the rule
+offers a K-trivial surface (a match at 2 of 10 sampled values, not a mechanism).
+```
+
+**Conditions.** One prime, one direction, the slice solver (reliable at order 6 here; see N-SLICE-FALSE-OBSTRUCTION-ORDER7 for order 7 on). (2) explains the zero set, not the order 6.
+
+**Evidence.** leads/movasati_arc/logs/ma4_32029_lam*_g_scan.log; PREREG_arc.md (A4 pre-registration and outcome); leads/TENFOLD_TWODET_LEAD.md, section 9.8.
+
+**Independent check.**
+
+Blind check 16 (separate agent; its own driver on the python-flint full-space reduction of blind check 14; it read the
+logs and notes only after its own results): every coefficient obstructed or passing as in (1), in the FULL space of
+cubics at p = 32029, and for lambda = 3, 1/2, 1 also at 31981 and with a second choice of y_0; explicit jets checked
+directly for 1 and -1. f(m) derived independently by the excess intersection formula; the determinant and the
+values 28, 36, >= 70 confirmed. Its corrections (worked in): the match with K-trivial surfaces is a correlation at 2
+of 10 values; "+1 passes without correction" was wrong as worded. leads/movasati_arc/blind_check16/REPORT.md.
+
+**Not established.** Why order 6; other directions and primes; characteristic 0 (except -1 and 2, D-MOVASATI-POINT-EXACT-SEPARATION); a derivation of the obstruction from the lattice data.
+
+**Known before.** D-NODES-DISCRIMINANT-IDENTITY, D-TENFOLD-K3-ABELIAN-PAIRING (the rule); D-MOVASATI-POINT-EXACT-SEPARATION (-1, 2); D-FIRST-ORDER-RULE (lambda_0).
+
+**Reproduce.**
+
+```text
+From the repository root:
+    M2 --script leads/movasati_arc/ma4_exact.m2 32029 0 3 6 g 0      (6 minutes; OBSTRUCTED at order 6; any coefficient in place of 3)
+```
+
+**Next step.** Derive the order-6 obstruction coefficient as a function of lambda (with lambda a parameter of the ring) and compare its zero set with the lattice condition.
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan items A4, A5.

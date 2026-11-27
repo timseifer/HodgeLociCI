@@ -1,0 +1,4 @@
+RESULT seed 1 plane: X smooth true ; nodes of V on P: degree 9 (dim 1) ; all singular points of V: degree 9
+RESULT seed 1 quadric surface: X smooth true ; nodes of V on Sigma: degree 12 (dim 1) ; all singular points of V: degree 12
+RESULT seed 2 plane: X smooth true ; nodes of V on P: degree 9 (dim 1) ; all singular points of V: degree 9
+RESULT seed 2 quadric surface: X smooth true ; nodes of V on Sigma: degree 12 (dim 1) ; all singular points of V: degree 12
