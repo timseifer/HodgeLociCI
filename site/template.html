@@ -155,6 +155,8 @@ h2{font:600 1.4rem/1.2 var(--serif);margin:0}
 .orders th{color:var(--muted);font-weight:500;text-align:left;padding:2px 4px}
 .orders td.c{width:30px;height:26px;text-align:center;border-radius:6px;font-weight:600}
 .orders td.ok{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)}
+.orders td.ex{background:var(--ok);color:var(--panel)}
+.orders td.noex{background:var(--no);color:var(--panel)}
 .orders td.ok1{border:1.5px solid var(--ok);color:var(--ok);background:transparent}
 .orders td.c.six{box-shadow:0 0 0 2px var(--accent)}
 .orders td.c{min-width:22px}
@@ -521,21 +523,23 @@ const FIGURES = {
     const at=sv("text",{x:(X(52)+X(39))/2,y:AY+52,"text-anchor":"middle","font-size":10,fill:"var(--accent)"}); at.textContent="meets V_Z if the sixfold chain holds"; svg.append(at);
     if(!RM&&arc.animate) arc.animate([{strokeDashoffset:18},{strokeDashoffset:0}],{duration:1400,iterations:Infinity});
     // ---- order meter ----
+    const oE="ex", oM="ok", oX="noex", oXM="no", oN="na";
     const rows=[
-      ["Generic",["ok","ok","ok","no","na","na","na","na","na"]],
-      ["−1 · eightfold-cone directions",["ok","ok","ok","ok","ok","ok","ok","ok1","ok1"]],
-      ["−1 · all three pairs",["ok","ok","ok","ok","ok","ok1","q","q","q"]],
-      ["2 · same direction",["ok","ok","ok","ok","ok","no","na","na","na"]]];
-    const sym={ok:"✓",ok1:"✓",no:"✗",na:"·",q:"?"};
-    const tip={ok:"passes (MOD p, two primes)",ok1:"passes (MOD p, one prime)",no:"obstructed",na:"",q:"not run yet"};
+      ["Outside the cone",[oM,oM,oM,oXM,oN,oN,oN,oN,oN]],
+      ["−1 · general direction",[oE,oE,oE,oE,oE,oE,oE,oN,oN]],
+      ["2 · general direction",[oE,oE,oE,oE,oE,oX,oN,oN,oN]],
+      ["−1 · symmetric direction",[oE,oE,oE,oE,oE,oE,oE,oE,oE]],
+      ["2 · aligned directions",[oM,oM,oM,oM,oM,oM,oN,oN,oN]]];
+    const sym={ex:"✓",ok:"✓",noex:"✗",no:"✗",na:"·"};
+    const tip={ex:"passes, exact (characteristic 0)",ok:"passes, MOD p",noex:"obstructed, exact (inside the slice where the arc is unique)",no:"obstructed, MOD p",na:"not run"};
     const tb=el("table",{class:"orders"},el("tr",{},el("th",{},"Order"),...[1,2,3,4,5,6,7,8,9].map(n=>el("th",{style:"text-align:center"+(n===6?";color:var(--accent);font-weight:700":"")},String(n)))),
       ...rows.map(([lab,cs])=>el("tr",{},el("th",{},lab),...cs.map((c,j)=>el("td",{class:"c "+c+(j===5?" six":""),title:tip[c]},sym[c])))));
-    const legend=el("p",{class:"cap"},"✓ solid: two primes · ✓ outlined: one prime · ✗ obstructed (for 2 at order 6: whatever the higher terms, by an independent check) · ? not run.");
+    const legend=el("p",{class:"cap"},"Dark: exact (characteristic 0) · light: MOD p · ✗ obstructed · · not run. \"General\" and \"aligned\" refer to directions inside the 13-dimensional cone.");
     box.append(
       el("div",{},el("div",{class:"tdlabel"},"The family"),mat,el("div",{class:"ctrls",style:"margin-top:22px"},cycBtn),cycTxt),
       el("div",{},el("div",{class:"tdlabel"},"One construction, three dimensions"),lad,lnote),
       el("div",{},el("div",{class:"tdlabel"},"Three families on cubic tenfolds for the same orbit of classes"),svg),
-      el("div",{},el("div",{class:"tdlabel"},"At Movasati's point: order 6 separates −1 from 2"),tb,legend,el("p",{class:"cap"},"Up to order 5 the coefficients −1 and 2 behave alike; at order 6 the coefficient 2 is obstructed and −1 is not, and −1 continues to order 9. MOD p and finite order: evidence, not a proof that a component exists. Nothing at this point is exact yet, the primes carry different directions, and everything is conditional on an unreviewed AI paper chain.")));
+      el("div",{},el("div",{class:"tdlabel"},"At Movasati's point: on general directions, order 6 separates −1 from 2"),tb,legend,el("p",{class:"cap"},"On a direction in general position, 2 is obstructed at order 6 and −1 passes to order 7, exactly (over QQ(ζ₆)); the exact obstruction for 2 is known inside the slice where the arc is unique, and \"whatever the higher terms\" only MOD p. Directions aligned with the coordinates, the symmetric one included, do not separate: 2 passes order 6 there (MOD p); why is open. Finite order is evidence, not a proof that a component exists; conditional on an unreviewed AI paper chain.")));
     pickR(2);
     if(!RM){ let i=0; pickR(0); tmr=setInterval(()=>{ i++; if(i>2){ stopPlay(); return; } pickR(i); },1600); }
     return box;
