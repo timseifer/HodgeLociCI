@@ -1,0 +1,2 @@
+RESULT (d,k,c) = (3,3,3) lambda_0 = (-1)^(c-1) = 1 ; excess at lambda = 1, -1, 2 (random instance mod 32003): {1, 1, 1}
+RESULT (d,k,c) = (4,3,2) lambda_0 = (-1)^(c-1) = -1 ; excess at lambda = 1, -1, 2 (random instance mod 32003): {0, 1, 0}
