@@ -4,7 +4,12 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 178 entries)
+### Discoveries registry (142 -> 180 entries)
+- D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES (MOD p, blind-checked): for quartic fourfolds at lambda = -1, Kloosterman's
+  del Pezzo cycle gives 16 nodes with one relation on cubics (frozen prediction P2, k = 2); the Kummer guess fails.
+  `leads/quartic_frozen/`.
+- D-CITATION-CHECK-MO3-KL1 (machine-read): cited numbers of Movasati's Leaf schemes and Kloosterman consistent;
+  `leads/LIT_READ_27NOV.md`.
 - D-TENFOLD-COBLE-EXACT-MEMBER (certificate, AI, unreviewed; blind-checked): a named smooth cubic tenfold with
   rational coefficients in the Coble family. Over QQ its hyperplane section has exactly 72 ordinary double points
   with exactly one relation on quartics, and the first-order Hodge locus of the class has codimension 54. Three

@@ -16,3 +16,14 @@
   answered tonight) or a construction of the 16-node configuration at a point of the -1 locus. Open.
 Blind comparison by a separate checker: pending (it should read FROZEN_PREDICTION.md, this file, and Kloosterman
 Section 6 once web access is approved).
+
+## After reading Kloosterman Section 6 (27 Nov, ~16:00 UTC; web access approved by the owner)
+
+Details in leads/LIT_READ_27NOV.md, section 2. [Kl1, Prop. 6.1] (machine-read): the lambda = -1 cycle for (4, 2) is a
+complete intersection of type (1^(k-1), 2, 2), degree 4 (for k = 2 a quartic del Pezzo surface in a hyperplane), with
+class P1 - P2 + h^k. Its N-identity count is 16 (k = 2) / 48 (k = 3) (EXACT arithmetic). Instances (qf3_delpezzo_nodes.m2,
+qf3.log, MOD 32003, three seeds): 16 reduced singular points of the hyperplane section, all on the surface, imposing
+15 conditions on cubics (one relation in degree 3). So P2 HOLDS for k = 2 (node count and relation degree); the
+"Kummer type" guess in P2 FAILS (the cycle is a del Pezzo surface). k = 3 not run. Blind check 17 (blind_check17/REPORT.md): CONFIRMED;
+the 16 points are Q1 = Q2 = A = B = 0, a complete intersection of four quadrics, so the count and the relation are
+automatic for this construction.

@@ -169,6 +169,10 @@
   "recent": [
     {
       "when": "2026-11-27",
+      "what": "Quartic fourfolds, coefficient -1: Kloosterman's del Pezzo cycle carries 16 nodes with one relation on cubics, as a prediction frozen beforehand said (mod p, blind-checked); the guessed Kummer configuration does not occur. Citations of Movasati and Kloosterman checked against the sources (machine-read): consistent."
+    },
+    {
+      "when": "2026-11-27",
       "what": "Open: at the eightfold Movasati point, the coefficient 2 on one coordinate-aligned direction reaches order 9 (mod p, two primes), losing two conditions per order in the pattern of a smaller component; it is not the known cone-type family. A direction worth examining, not a finding. No statement about the Hodge conjecture."
     },
     {

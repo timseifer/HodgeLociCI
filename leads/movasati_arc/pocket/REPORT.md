@@ -81,3 +81,11 @@ next before it could be called more than a reason to look: (1) the comparison of
 such families beyond CT_2 and could not get one tonight (web access was not approved, so arXiv:2606.10884 and the
 literature are unread); (2) whether [P1] + 2[P2] on such a component is the class of some other algebraic cycle (the
 first thing an expert would ask); (3) characteristic 0.
+
+## Literature input, 27 Nov ~16:00 UTC (web access approved)
+
+[Mo3, Table 1] lists the known families through the Fermat cubic eightfold with codimensions 10 (linear cycles), 16
+(generalised cubic scroll), 19 (the locus of Conj. 5.1), 23 (generalised quartic scroll), 25 (generalised Veronese).
+None has codimension 28 or is listed for [P1] + 2[P2]; but an intersection of V_Z (codimension 20) with one of these loci
+could still carry the pocket, and that comparison of tangent spaces has NOT been done. arXiv:2606.10884 gives no input
+(it concerns hyperkaehler fourfolds). Details: leads/LIT_READ_27NOV.md, section 3. The pocket stays OPEN, unchanged.

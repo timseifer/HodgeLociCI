@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (33)
+## Entries on this page (34)
 
 | id | status | title |
 |---|---|---|
@@ -45,6 +45,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-ARC-SPLITTING-NUMERICAL](#d-arc-splitting-numerical) | `COMPUTED_ONLY` | Along the sixfold arc in characteristic 0 (floating point, eps = 1/40 .. 1/800): the transported class [P1] - [P2] splits F_eps into two cubics -+(2187/64) l^3 eps^-6 + ..., each with 8 linear vector fields; a matrix with det = the first one to 8e-20; the second matrix not found |
 | [D-TENFOLD-COBLE-VS-TWO-DET](#d-tenfold-coble-vs-two-det) | `PAPER_ARGUMENT_AI` | Tenfolds: if the Coble family lies in the closure of the two-determinant family, the two-determinant class does not specialise to the Coble class there (tangent codimension 54 > 52) |
 | [D-RUNG-NODE-COUNTS-EXACT](#d-rung-node-counts-exact) | `EXACT` | The K3 / abelian node counts on the sixfold and eightfold rungs, exactly over QQ: 14 / 18 nodes with one relation on quadrics, 28 / 36 with one relation on cubics |
+| [D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES](#d-quartic-lambda-minus1-delpezzo-nodes) | `MOD_P` | Quartic fourfolds, lambda = -1: Kloosterman's del Pezzo cycle gives 16 nodes with one relation on cubics, as the frozen prediction P2 said; the Kummer guess does not hold |
 
 ## Related entries on other pages
 
@@ -2847,3 +2848,52 @@ From the repository root (Macaulay2 1.22):
 ```
 
 **Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item B7.
+
+---
+
+## D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES
+
+**Quartic fourfolds, lambda = -1: Kloosterman's del Pezzo cycle gives 16 nodes with one relation on cubics, as the frozen prediction P2 said; the Kummer guess does not hold**
+
+kind: `result` | area: `explicit_cycles` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+[Kl1, Prop. 6.1] (LIT, machine-read 27 Nov 2026): for (d, c) = (4, 2) the class [P1] - [P2] is carried by a complete
+intersection Y_t of type (1^(k-1), 2, 2), of class P1 - P2 + h^k. For k = 2 it is a quartic del Pezzo surface S in a
+hyperplane section V = X n H of the quartic fourfold X.
+(1) EXACT arithmetic: S.S = 7 + 7 - 2 + 4 = 16, and 4 S.S - 4^2 = 48 = 3 N gives N = 16. For k = 3, S.S = -32 and N = 48.
+This agrees with leads/quartic_frozen/FROZEN_PREDICTION.md, P2 (frozen before the read). It follows from the
+N-identity, so it is a consistency check.
+(2) MOD p (32003, three random instances): V has exactly 16 singular points, reduced, all on S. They impose 11, 15, 16
+conditions on forms of degree 2, 3, 4: one relation on cubics, the predicted degree k(d - 2) - 1 = 3. Blind check 17:
+the 16 points are exactly Q1 = Q2 = A = B = 0 in H (F = Q1 A + Q2 B + x5 C), a complete intersection of four
+quadrics, so the count and the relation (Cayley-Bacharach) are automatic for this construction (ARG). None of the
+16 points lies on a line of S.
+(3) P2's guess that the configuration is of Kummer type does not hold: the cycle is a del Pezzo surface.
+```
+
+**Conditions.** k = 2 only for the instances; random instances mod one prime; Kloosterman's construction machine-read, not read in the PDF.
+
+**Evidence.** leads/quartic_frozen/qf3_delpezzo_nodes.m2, qf3.log, OUTCOME.md; leads/LIT_READ_27NOV.md section 2; blind check leads/quartic_frozen/blind_check17/REPORT.md.
+
+**Independent check.**
+
+Blind check 17 (separate agent, own code, 6 instances at two primes): (a)-(c) CONFIRMED, (d) confirmed as arithmetic;
+leads/quartic_frozen/blind_check17/REPORT.md.
+
+**Not established.** k = 3 (48 nodes) at instances; characteristic 0; that every lambda = -1 point arises this way (only Kloosterman's construction was tested).
+
+**Known before.** Kloosterman arXiv:2312.12363 Prop. 6.1 / Cor. 6.2 (the cycle and lambda = -1); D-NODES-DISCRIMINANT-IDENTITY and the generalised identity of FROZEN_PREDICTION.md (P1, checked in OUTCOME.md).
+
+**Reproduce.**
+
+```text
+From the repository root (seconds):
+    M2 --script leads/quartic_frozen/qf3_delpezzo_nodes.m2
+```
+
+**Next step.** k = 3 at an instance (48 nodes, relation in degree 5).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item C10 P2, after the owner approved web access.

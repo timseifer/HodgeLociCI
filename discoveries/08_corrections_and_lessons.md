@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (28)
+## Entries on this page (29)
 
 | id | status | title |
 |---|---|---|
@@ -39,6 +39,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [M-NODE-SECTION-TOOL](#m-node-section-tool) | `COMPUTED_ONLY` | Tool tooling/node_section: nodes of a hyperplane section and the relations among them (a count; seven regression cases) |
 | [C-TENFOLD-FERMAT-POINT-CLASS](#c-tenfold-fermat-point-class) | `EXACT` | Tenfold lead: at the Fermat tenfold the explicit arc of the Coble family carries the three-plane class, not Movasati's class; the planned check and one earlier remark are withdrawn |
 | [C-TENFOLD-ORDER4-RANK2](#c-tenfold-order4-rank2) | `MOD_P` | Tenfold lead: 'rank 2 and 3 obstructed at order 4, so dim W <= dim Cone_T + 11' holds for generic nets only; special nets of rank 2 and 3 pass order 4 |
+| [D-CITATION-CHECK-MO3-KL1](#d-citation-check-mo3-kl1) | `COMPUTED_ONLY` | Citation check: the cited numbers of Movasati's Leaf schemes (Prop. 5.6, Conj. 5.1, sections 5.2, 5.7, 5.9) and Kloosterman (Thms 1.2, 1.3, Prop. 6.4, Cor. 6.2, 6.5) are consistent with the sources (machine-read) |
 | [M-FERMAT-SERIES-KERNEL](#m-fermat-series-kernel) | `COMPUTED_ONLY` | Compiled kernel for the Fermat cubic tenfold period expansion (tooling/fermat_series), identical to the reference engines |
 
 ---
@@ -1211,6 +1212,48 @@ Do not sample directions at this point by the rank of the net alone: the survivi
 measure zero among nets of their rank. Sample the pieces of the model cone.
 
 **Session references (files not public).** Session of 26 Nov 2026 (Claude Fable 5.2, chat), tenth part (owner: 'Yes begin' on whether the tenfold two-determinant family meets V_Z with the class [P1] - [P2]).
+
+---
+
+## D-CITATION-CHECK-MO3-KL1
+
+**Citation check: the cited numbers of Movasati's Leaf schemes (Prop. 5.6, Conj. 5.1, sections 5.2, 5.7, 5.9) and Kloosterman (Thms 1.2, 1.3, Prop. 6.4, Cor. 6.2, 6.5) are consistent with the sources (machine-read)**
+
+kind: `result` | area: `methods` | status: **`COMPUTED_ONLY`**
+
+**Statement.**
+
+```text
+LIT. Read 27 Nov 2026 through a fetch tool (a small model's answer about the HTML page, not the text):
+Movasati arXiv:2502.19988v2 and Kloosterman arXiv:2312.12363v1. Results:
+- Prop. 5.6 of [Mo3] is in section 5.10 (Villaflor's tangent-space result) and says dim T V_[Z] = dim T V_Z + 1.
+- Conj. 5.1 is stated for n = 6, 8 (m = n/2 - 3); section 5.2 says it is false for n >= 10, see section 5.9.
+- The ranges and exceptional sets of [Kl1] Thms 1.2 and 1.3, and the content of Prop. 6.4, Cor. 6.2 and Cor. 6.5, match
+  paper 1 and the registry. [Kl1] Prop. 6.4 prints h^2 where the proof gives h^k.
+- [Mo3, Table 1]: codimensions of the families through the Fermat eightfold are 10, 16, 19, 23, 25 (L, CS, M, QS, V).
+No correction is needed in the papers, the registry or the sign dictionary.
+```
+
+**Conditions.** Machine-read; v2 of [Kl1] (PDF only) not read; not checked line by line by a person.
+
+**Evidence.** leads/LIT_READ_27NOV.md; leads/SIGN_DICTIONARY.md section 5.
+
+**Independent check.** none (a person should re-read the PDFs before any citation in a paper).
+
+**Not established.** Exact wording; anything in v2 of Kloosterman's paper that differs from v1.
+
+**Known before.** tests/SOURCES.md (earlier machine-read summaries); paper 1 lines 130-186.
+
+**Reproduce.**
+
+```text
+Needs web access; compare the table with the two arXiv HTML pages:
+    less leads/LIT_READ_27NOV.md
+```
+
+**Next step.** Tangent-space comparison of the lambda = 2 pocket with V_Z n CS, V_Z n QS (O-ALIGNED-POCKET-LAMBDA2-ORDER9).
+
+**Session references (files not public).** Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item A2 (last part) and C11.
 
 ---
 

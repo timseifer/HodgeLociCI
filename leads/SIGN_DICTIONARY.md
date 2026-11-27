@@ -62,9 +62,9 @@ where the two-determinant / cone-type families pass. This is the distinction of 
   SOURCES.md. Inverting would not matter for lambda = +-1 anyway, but would for lambda = 2 vs 1/2 (both are
   treated as "other" coefficients in every entry, so no conclusion depends on it).
 
-## 5. Not done (needs your approval or the PDF)
+## 5. Citation check (done 27 Nov ~16:00 UTC, after the owner approved web access)
 
-- The section numbers cited from Movasati, "Leaf schemes and Hodge loci" (arXiv:2502.19988; paper 1 cites
-  Prop. 5.6 of it) against the PDF (§5.2, §5.7, §5.9): fetching arXiv needs an approval that nobody answered at
-  06:20 UTC; not checked. The statements of section 2 are as machine-read in earlier sessions (SOURCES.md), not
-  re-read today.
+The citations of [Mo3] (Prop. 5.6 in §5.10, attributed to Villaflor; Conj. 5.1 for n = 6, 8; §5.2, §5.7, §5.9) and of
+[Kl1] (Thms 1.2, 1.3, Prop. 6.4, Cor. 6.2, Cor. 6.5) were checked against the HTML versions: all CONSISTENT, nothing to
+correct (machine-read through a fetch tool; table in leads/LIT_READ_27NOV.md, section 1). The statements of section 2
+above were not re-read line by line.

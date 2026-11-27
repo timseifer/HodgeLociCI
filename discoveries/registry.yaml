@@ -8277,6 +8277,75 @@
   session_refs: |-
     Session of 27 Nov 2026 (Claude Opus 5.5, chat); published after the owner had seen it ('Go ahead').
 
+- id: D-QUARTIC-LAMBDA-MINUS1-DELPEZZO-NODES
+  kind: result
+  area: explicit_cycles
+  title: "Quartic fourfolds, lambda = -1: Kloosterman's del Pezzo cycle gives 16 nodes with one relation on cubics, as the frozen prediction P2 said; the Kummer guess does not hold"
+  statement: |-
+    [Kl1, Prop. 6.1] (LIT, machine-read 27 Nov 2026): for (d, c) = (4, 2) the class [P1] - [P2] is carried by a complete
+    intersection Y_t of type (1^(k-1), 2, 2), of class P1 - P2 + h^k. For k = 2 it is a quartic del Pezzo surface S in a
+    hyperplane section V = X n H of the quartic fourfold X.
+    (1) EXACT arithmetic: S.S = 7 + 7 - 2 + 4 = 16, and 4 S.S - 4^2 = 48 = 3 N gives N = 16. For k = 3, S.S = -32 and N = 48.
+    This agrees with leads/quartic_frozen/FROZEN_PREDICTION.md, P2 (frozen before the read). It follows from the
+    N-identity, so it is a consistency check.
+    (2) MOD p (32003, three random instances): V has exactly 16 singular points, reduced, all on S. They impose 11, 15, 16
+    conditions on forms of degree 2, 3, 4: one relation on cubics, the predicted degree k(d - 2) - 1 = 3. Blind check 17:
+    the 16 points are exactly Q1 = Q2 = A = B = 0 in H (F = Q1 A + Q2 B + x5 C), a complete intersection of four
+    quadrics, so the count and the relation (Cayley-Bacharach) are automatic for this construction (ARG). None of the
+    16 points lies on a line of S.
+    (3) P2's guess that the configuration is of Kummer type does not hold: the cycle is a del Pezzo surface.
+  status: MOD_P
+  conditions: |-
+    k = 2 only for the instances; random instances mod one prime; Kloosterman's construction machine-read, not read in the PDF.
+  evidence: |-
+    leads/quartic_frozen/qf3_delpezzo_nodes.m2, qf3.log, OUTCOME.md; leads/LIT_READ_27NOV.md section 2; blind check leads/quartic_frozen/blind_check17/REPORT.md.
+  independent_check: |-
+    Blind check 17 (separate agent, own code, 6 instances at two primes): (a)-(c) CONFIRMED, (d) confirmed as arithmetic;
+    leads/quartic_frozen/blind_check17/REPORT.md.
+  not_established: |-
+    k = 3 (48 nodes) at instances; characteristic 0; that every lambda = -1 point arises this way (only Kloosterman's construction was tested).
+  known_before: |-
+    Kloosterman arXiv:2312.12363 Prop. 6.1 / Cor. 6.2 (the cycle and lambda = -1); D-NODES-DISCRIMINANT-IDENTITY and the generalised identity of FROZEN_PREDICTION.md (P1, checked in OUTCOME.md).
+  reproduce: |-
+    From the repository root (seconds):
+        M2 --script leads/quartic_frozen/qf3_delpezzo_nodes.m2
+  next_step: |-
+    k = 3 at an instance (48 nodes, relation in degree 5).
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item C10 P2, after the owner approved web access.
+
+- id: D-CITATION-CHECK-MO3-KL1
+  kind: result
+  area: methods
+  title: "Citation check: the cited numbers of Movasati's Leaf schemes (Prop. 5.6, Conj. 5.1, sections 5.2, 5.7, 5.9) and Kloosterman (Thms 1.2, 1.3, Prop. 6.4, Cor. 6.2, 6.5) are consistent with the sources (machine-read)"
+  statement: |-
+    LIT. Read 27 Nov 2026 through a fetch tool (a small model's answer about the HTML page, not the text):
+    Movasati arXiv:2502.19988v2 and Kloosterman arXiv:2312.12363v1. Results:
+    - Prop. 5.6 of [Mo3] is in section 5.10 (Villaflor's tangent-space result) and says dim T V_[Z] = dim T V_Z + 1.
+    - Conj. 5.1 is stated for n = 6, 8 (m = n/2 - 3); section 5.2 says it is false for n >= 10, see section 5.9.
+    - The ranges and exceptional sets of [Kl1] Thms 1.2 and 1.3, and the content of Prop. 6.4, Cor. 6.2 and Cor. 6.5, match
+      paper 1 and the registry. [Kl1] Prop. 6.4 prints h^2 where the proof gives h^k.
+    - [Mo3, Table 1]: codimensions of the families through the Fermat eightfold are 10, 16, 19, 23, 25 (L, CS, M, QS, V).
+    No correction is needed in the papers, the registry or the sign dictionary.
+  status: COMPUTED_ONLY
+  conditions: |-
+    Machine-read; v2 of [Kl1] (PDF only) not read; not checked line by line by a person.
+  evidence: |-
+    leads/LIT_READ_27NOV.md; leads/SIGN_DICTIONARY.md section 5.
+  independent_check: |-
+    none (a person should re-read the PDFs before any citation in a paper).
+  not_established: |-
+    Exact wording; anything in v2 of Kloosterman's paper that differs from v1.
+  known_before: |-
+    tests/SOURCES.md (earlier machine-read summaries); paper 1 lines 130-186.
+  reproduce: |-
+    Needs web access; compare the table with the two arXiv HTML pages:
+        less leads/LIT_READ_27NOV.md
+  next_step: |-
+    Tangent-space comparison of the lambda = 2 pocket with V_Z n CS, V_Z n QS (O-ALIGNED-POCKET-LAMBDA2-ORDER9).
+  session_refs: |-
+    Session of 27 Nov 2026 (Claude Opus 5.5, chat), plan item A2 (last part) and C11.
+
 - id: O-TENFOLD-CONE-LEAD
   kind: open
   area: movasati_conjecture

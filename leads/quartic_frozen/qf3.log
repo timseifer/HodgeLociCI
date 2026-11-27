@@ -1,0 +1,6 @@
+  seed 1 points impose on forms of degree 2,3,4 (ambient P4) / on Sigma: {11, 15, 16} / {13, 25, 41}
+RESULT seed 1 X smooth true ; Sigma smooth true ; nodes of V on Sigma: degree 16 (dim 1, reduced true) ; all singular points of V: degree 16
+  seed 2 points impose on forms of degree 2,3,4 (ambient P4) / on Sigma: {11, 15, 16} / {13, 25, 41}
+RESULT seed 2 X smooth true ; Sigma smooth true ; nodes of V on Sigma: degree 16 (dim 1, reduced true) ; all singular points of V: degree 16
+  seed 3 points impose on forms of degree 2,3,4 (ambient P4) / on Sigma: {11, 15, 16} / {13, 25, 41}
+RESULT seed 3 X smooth true ; Sigma smooth true ; nodes of V on Sigma: degree 16 (dim 1, reduced true) ; all singular points of V: degree 16
