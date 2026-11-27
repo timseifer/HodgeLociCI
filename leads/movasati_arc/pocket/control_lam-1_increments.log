@@ -1,0 +1,8 @@
+order 2 : rank J_{<=2} = 19 ; increment 19 ; beyond the 19 fixed by T_n: 0
+order 3 : rank J_{<=3} = 38 ; increment 19 ; beyond the 19 fixed by T_n: 0
+order 4 : rank J_{<=4} = 57 ; increment 19 ; beyond the 19 fixed by T_n: 0
+order 5 : rank J_{<=5} = 83 ; increment 26 ; beyond the 19 fixed by T_n: 7
+order 6 : rank J_{<=6} = 109 ; increment 26 ; beyond the 19 fixed by T_n: 7
+order 7 : rank J_{<=7} = 135 ; increment 26 ; beyond the 19 fixed by T_n: 7
+order 8 : rank J_{<=8} = 161 ; increment 26 ; beyond the 19 fixed by T_n: 7
+order 9 : rank J_{<=9} = 187 ; increment 26 ; beyond the 19 fixed by T_n: 7

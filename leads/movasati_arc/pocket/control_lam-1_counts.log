@@ -1,0 +1,56 @@
+[     7s] sizes E_0..E_9 [1, 50, 694, 5232, 27777, 115744, 402920, 1220280, 3307019, 8184970]
+terms 50 monomials 55
+[     7s] c_1 nonzero components (C code): 0
+terms 694 monomials 55
+[     7s] c_2 nonzero components (C code): 0
+terms 5232 monomials 55
+[     7s] c_3 nonzero components (C code): 0
+terms 27777 monomials 55
+[     7s] c_4 nonzero components (C code): 0
+terms 115744 monomials 55
+[     7s] c_5 nonzero components (C code): 0
+terms 402920 monomials 55
+[     8s] c_6 nonzero components (C code): 0
+terms 1220280 monomials 55
+[    10s] c_7 nonzero components (C code): 0
+terms 3307019 monomials 55
+[    16s] c_8 nonzero components (C code): 0
+terms 8184970 monomials 55
+[    29s] c_9 nonzero components (C code): 40
+[    29s] own.py periods c_1 nonzero 0, agrees with C: True
+[    29s] own.py periods c_2 nonzero 0, agrees with C: True
+[    29s] own.py periods c_3 nonzero 0, agrees with C: True
+[    30s] own.py periods c_4 nonzero 0, agrees with C: True
+[    30s] own.py periods c_5 nonzero 0, agrees with C: True
+[    33s] own.py periods c_6 nonzero 0, agrees with C: True
+[    41s] own.py periods c_7 nonzero 0, agrees with C: True
+[    64s] own.py periods c_8 nonzero 0, agrees with C: True
+[    64s] c_9 = [np.int64(0), np.int64(14476), np.int64(20650), np.int64(9218), np.int64(25942), np.int64(18273), np.int64(13572), np.int64(15392), np.int64(25225), np.int64(20650), np.int64(6023), np.int64(25942), np.int64(16847), np.int64(5419), np.int64(6286), np.int64(26467), np.int64(22019), np.int64(0), np.int64(12103), np.int64(23153), np.int64(7711), np.int64(3708), np.int64(10437), np.int64(14672), np.int64(23153), np.int64(1082), np.int64(15979), np.int64(15202), np.int64(6409), np.int64(27140), np.int64(0), np.int64(27317), np.int64(8542), np.int64(18582), np.int64(31922), np.int64(9427), np.int64(16367), np.int64(31492), np.int64(1694), np.int64(0), np.int64(25109), np.int64(18907), np.int64(18907), np.int64(25827), np.int64(0)]
+terms 1 monomials 2002
+[    65s] A_0 rank 19
+terms 50 monomials 2002
+[    67s] A_1 rank 28
+terms 694 monomials 2002
+[    68s] A_2 rank 38
+terms 5232 monomials 2002
+[    69s] A_3 rank 44
+terms 27777 monomials 2002
+[    71s] A_4 rank 45
+terms 115744 monomials 2002
+[    72s] A_5 rank 45
+terms 402920 monomials 2002
+[    75s] A_6 rank 45
+terms 1220280 monomials 2002
+[    81s] A_7 rank 45
+[    82s] rank Dc orders 2..8 (cols dT_2..dT_8; T_9 cols zero there): 161 | orders 2..9: 187
+[    82s] rank [J | (0,..,0,-c_9)] = 187 -> SOLVABLE
+[    82s] squarefree-only: rank 187 augmented 187
+[    82s] rank of A_0 (T_9 alone): 19
+[   105s] linearized dE sizes [0, 0, 220, 3860, 31630, 168559, 680430, 2259425, 6487575, 16642965]
+terms 220 monomials 55
+terms 3860 monomials 55
+terms 31630 monomials 55
+terms 168559 monomials 55
+terms 680430 monomials 55
+terms 2259425 monomials 55
+terms 6487575 monomials 55
