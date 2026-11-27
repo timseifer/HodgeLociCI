@@ -1938,6 +1938,8 @@ leads/movasati_arc/blind_check14/REPORT.md.
 
 **Not established.**
 
+UPDATE 27 Nov 2026 (11:48 UTC): lambda = -1 on net g now EXACT to order 8 (arcs/exact_g_lam-1_order8.txt,
+re-verified from scratch). Earlier text:
 Orders beyond 7 (g) and 9 (s) exactly; other directions exactly; the full-space version of the lambda = 2
 obstruction in characteristic 0 (see independent_check); a component; the meaning of the aligned sub-locus where
 lambda = 2 passes order 6, and how far it goes.

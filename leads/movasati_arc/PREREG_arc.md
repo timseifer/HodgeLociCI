@@ -292,3 +292,10 @@ lambda = 3, -2, 1/2, 5/3, -1/2, 4, -1/3 (and 2, earlier): order 5 repaired, orde
 (the locus at lambda_0 is smooth of dimension dim V + 1, D-FIRST-ORDER-RULE (4)). As predicted for the eight values,
 no prediction for 1. (The log of lambda = 3 was lost by a mistake of mine -- a git stash while the job was writing --
 and the run was repeated; same result.)
+
+### Plan item B6, first part (27 Nov, 11:48 UTC): lambda = -1 on the general direction g exactly to order 8
+Continued from the exact 7-term state: the order-8 obstruction lies in Im D and is removed by the free part of T_5
+(EXACT over QQ(zeta_6)); the 8-term arc re-verified from scratch by ma5 (pass; [P1] + [P2] fails at order 1).
+arcs/exact_g_lam-1_order8.txt; logs/ma4_exact_lam-1_g_order8.log, ma5_exact_g_lam-1_order8.log. A first run was
+interrupted and restarted from the state file. Not done: a second general direction exactly; the lambda = 2
+obstruction in the full space exactly.

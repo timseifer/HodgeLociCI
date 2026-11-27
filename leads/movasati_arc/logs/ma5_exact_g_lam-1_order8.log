@@ -1,0 +1,2 @@
+RESULT exact, lambda = -1, 8 terms: pass true ; first failing order null ; cpu 1837.24
+RESULT control [P1] + [P2], 3 terms: pass false ; first failing order 1

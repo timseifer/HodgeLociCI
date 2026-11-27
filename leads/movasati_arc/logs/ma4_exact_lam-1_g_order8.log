@@ -1,0 +1,5 @@
+p = 0, seed 0, lambda = -1, case g ; rank L = 19 ; T_1 in ker L: true ; not in ker L_P1: true
+slice seed 0 : 19 monomials with independent columns of L ; 18 net directions in ker L: true
+  continued from /home/claude/work/marc/ex_g_lam-1_cont.txt : 7 terms, D read
+  order 8 : obstruction in Im D, removed by the free part of T_5 ; cpu 4284.31
+RESULT p = 0, seed 0, slice 0, lambda = -1, case g : arc of 8 terms ; status: reached ; cpu 4284.31
