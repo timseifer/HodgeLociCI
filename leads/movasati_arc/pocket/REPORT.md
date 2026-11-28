@@ -206,3 +206,13 @@ for the middle degree is as stated in #5 and has not been checked against one so
 holds, [P1] + 2[P2] is algebraic wherever it is Hodge on a cubic eightfold, so the pocket can at most be an
 unexplained special locus whose class is algebraic; it cannot be a Hodge class not known to be algebraic, which for
 this configuration requires cubic tenfolds or higher.
+
+## Order 10, stage 1 (28 Nov, early; owner: "continue down the most interesting logical path through the night")
+
+Faster engine: fast/fastper.py replaces the Python period sum by blind check 20's C code (identical values on test
+expansions, fast/test_fast.py; about 4x faster), and computes c_10 by the linear formula c_10 = (1/10) sum_j j A_{10-j} T_j
+(no order-10 expansion is built; the formula reproduces c_9 and c_8 exactly).
+fast/run13.py (fast/run13_31981.log): the 9-jet was rebuilt at the order-9 zero and verified again (c_1..c_9 = 0); the
+order-10 conditions q_10 (17 of 19 non-zero) change LINEARLY with k_5 (rank 2; 2v against v), and q_10 is not in that
+span -- the same picture as order 9 at the first jet, so order 10 needs a non-linear search on V9. The 9-jet and the
+correction data are saved (k9_31981.npz, not in the repository; rebuilt by run13 in about 25 minutes).
