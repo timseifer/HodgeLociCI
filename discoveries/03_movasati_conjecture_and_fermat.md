@@ -2181,6 +2181,9 @@ exactly by k_3: modulo the k_4 image the order-9 conditions are 17 polynomials i
 (off-grid check passed); they have exactly one common zero, in F_p (Groebner basis). There the remaining order-9
 conditions are removed by k_4 and k_6, and T_1..T_9 satisfy all 45 period conditions at every order 1..9, checked
 directly twice (run12b.py; main_N.py). The jet is saved as leads/movasati_arc/arcs/jet9_31981_s_lam2.txt.
+Second prime (p = 32029, run11p.py, run11_32029.log, run11_groebner_32029.log): the same picture -- quadratic along a
+line, values spanning 3 dimensions, off-grid check passed, exactly one common zero (s, t) = (-15886, 2154) in F_p.
+(The 9-jet at p = 32029 was not built and verified.)
 At the new 9-jet: extra first-order conditions 0,0,0,7,7,9,9,11,13 at orders 2..10, and order 10 is not solvable to
 first order. Control: the lambda = -1 arc at the same point has 0,0,0,7,7,7,7,7 and passes order 9 to first order.
 Reading: the failure recorded in D-POCKET-ORDER9-OBSTRUCTION-SIGNAL belonged to that jet, not to the direction. The
@@ -2189,7 +2192,7 @@ what it fits is not known.
 
 **Conditions.**
 
-One prime; one first-order direction; integer powers of eps; one plane of k_2 moves.
+9-jet built and verified at one prime (31981); the common zero found at both primes; one first-order direction; integer powers of eps; one plane of k_2 moves.
 SCOPE (added 28 Nov 2026): this is on cubic EIGHTFOLDS. There the Hodge conjecture in the middle degree is expected
 to hold for every smooth cubic: Otwinowska's bound CH_2(X)_Q = Q for cubic hypersurfaces of dimension >= 8 (C. R.
 Acad. Sci. Paris 329 (1999) 51-56; quoted in C. Vial, arXiv:1203.2650, section 7.2.2), combined with a Bloch-
