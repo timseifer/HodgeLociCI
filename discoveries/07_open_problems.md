@@ -844,7 +844,17 @@ codimension 28 (dimension dim V - 8) through T_1 would produce; dim V - 8 is wit
 D-GLOBAL-ARGUMENT. It is equally consistent with an obstruction at a later order.
 ```
 
-**Conditions.** Finite order (9); MOD p at two primes; one first-order direction; integer powers of eps; only CT_2 compared; the structure facts (linearity, ranks) tested at sample points.
+**Conditions.**
+
+Finite order (9); MOD p at two primes; one first-order direction; integer powers of eps; only CT_2 compared; the structure facts (linearity, ranks) tested at sample points.
+SCOPE (added 28 Nov 2026): this is on cubic EIGHTFOLDS. There the Hodge conjecture in the middle degree is expected
+to hold for every smooth cubic: Otwinowska's bound CH_2(X)_Q = Q for cubic hypersurfaces of dimension >= 8 (C. R.
+Acad. Sci. Paris 329 (1999) 51-56; quoted in C. Vial, arXiv:1203.2650, section 7.2.2), combined with a Bloch-
+Srinivas-type decomposition of the diagonal, as stated in rStation paper #5. The ingredients are LIT; the deduction
+for the middle degree is as stated in #5 and has not been checked against one source stating it as a theorem. If it
+holds, [P1] + 2[P2] is algebraic wherever it is Hodge on a cubic eightfold, so the pocket can at most be an
+unexplained special locus whose class is algebraic; it cannot be a Hodge class not known to be algebraic, which for
+this configuration requires cubic tenfolds or higher.
 
 **Evidence.** leads/movasati_arc/pocket/ (REPORT.md, PREREG_step3c.md, PREREG_pocket_followup.md, run9_full_space_order9.py, run9b_31981.log, run9b_32029.log, and two earlier runs that died of memory); D-ALIGNED-POCKET-ORDER8.
 

@@ -195,3 +195,14 @@ MOD p (31981), one prime. Owner: "run what you believe would give the best expla
 Reading: the earlier failure at order 9 was the jet, not the direction; the pocket passes order 9 (MOD p, one prime).
 The conditions per order on the jet space grow (2, 2, 4, 6 at orders 7..10, first order), which does not fit the
 "smooth component of codimension 28" picture; what geometry it fits is not known. Blind check 22 (blind_check22/): the 9-jet verified with independent code, controls passed; CONFIRMED.
+
+## Scope: the Hodge conjecture on cubic eightfolds (added 28 Nov 2026)
+
+SCOPE (added 28 Nov 2026): this is on cubic EIGHTFOLDS. There the Hodge conjecture in the middle degree is expected
+to hold for every smooth cubic: Otwinowska's bound CH_2(X)_Q = Q for cubic hypersurfaces of dimension >= 8 (C. R.
+Acad. Sci. Paris 329 (1999) 51-56; quoted in C. Vial, arXiv:1203.2650, section 7.2.2), combined with a Bloch-
+Srinivas-type decomposition of the diagonal, as stated in rStation paper #5. The ingredients are LIT; the deduction
+for the middle degree is as stated in #5 and has not been checked against one source stating it as a theorem. If it
+holds, [P1] + 2[P2] is algebraic wherever it is Hodge on a cubic eightfold, so the pocket can at most be an
+unexplained special locus whose class is algebraic; it cannot be a Hodge class not known to be algebraic, which for
+this configuration requires cubic tenfolds or higher.

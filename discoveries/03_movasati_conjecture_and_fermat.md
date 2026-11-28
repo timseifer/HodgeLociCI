@@ -2187,7 +2187,17 @@ Reading: the failure recorded in D-POCKET-ORDER9-OBSTRUCTION-SIGNAL belonged to 
 growing number of conditions per order (2, 2, 4, 6 at orders 7..10) does not fit a smooth component of codimension 28;
 what it fits is not known.
 
-**Conditions.** One prime; one first-order direction; integer powers of eps; one plane of k_2 moves.
+**Conditions.**
+
+One prime; one first-order direction; integer powers of eps; one plane of k_2 moves.
+SCOPE (added 28 Nov 2026): this is on cubic EIGHTFOLDS. There the Hodge conjecture in the middle degree is expected
+to hold for every smooth cubic: Otwinowska's bound CH_2(X)_Q = Q for cubic hypersurfaces of dimension >= 8 (C. R.
+Acad. Sci. Paris 329 (1999) 51-56; quoted in C. Vial, arXiv:1203.2650, section 7.2.2), combined with a Bloch-
+Srinivas-type decomposition of the diagonal, as stated in rStation paper #5. The ingredients are LIT; the deduction
+for the middle degree is as stated in #5 and has not been checked against one source stating it as a theorem. If it
+holds, [P1] + 2[P2] is algebraic wherever it is Hodge on a cubic eightfold, so the pocket can at most be an
+unexplained special locus whose class is algebraic; it cannot be a Hodge class not known to be algebraic, which for
+this configuration requires cubic tenfolds or higher.
 
 **Evidence.** leads/movasati_arc/pocket/run11.py, run11_31981.log, run11_polys.m2, run11_groebner.log, run12b.py, run12b_31981.log, main_N.py, order10_31981.log, control_lam-1_increments.log; leads/movasati_arc/arcs/jet9_31981_s_lam2.txt.
 
