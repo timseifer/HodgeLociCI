@@ -1,0 +1,4 @@
+RESULT dim 4 ; degree 1
+linear generators: 8 ; codim of their span 2
+I equals the ideal of its linear part: true
+minimal primes: {ideal(s1+10865*s2+6074*s3-282*s4+12451*s5,s0+7318*s2+2630*s3+6752*s4-7892*s5)}

@@ -221,3 +221,9 @@ Stage 1b (fast/run14.py, fast/run14b.py; the environment restarted during run14,
 q_8 stay on V9 and change q_10 modulo the k_5 image with rank 2 (linearity not tested); q_10 at the base is not in
 their span (rank 3 with it). So, as at order 9, the remaining order-10 conditions must be met through k_2 moves inside
 V9 -- the non-linear part.
+Stage 2a (fast/run15.py, run15_31981.log, run15_q9_31981.m2, run15_groebner.log; MOD p): on a 6-dimensional family of
+k_2 moves through the 9-jet (q_8 solved exactly by k_3 at each point), the order-9 conditions modulo the k_4 image
+were interpolated as quadratics (28 points; off-grid check passed). Their ideal EQUALS the ideal of its 8 linear
+members: the 9-jets in the family form an affine-linear 4-dimensional space (codimension 2, degree 1). This is what
+the jets of a smooth branch look like (2 conditions at order 9, cut out linearly), and it is the first direct sign
+of a smooth branch rather than a single isolated jet.

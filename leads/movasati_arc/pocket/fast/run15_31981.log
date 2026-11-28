@@ -1,0 +1,69 @@
+p 31981 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 37s
+rank J3 7 #annihilators 19 46s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 53s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (19847, 13847)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+ORDER 8 begins 65s
+base jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 9 of 26 ; 72s
+response of ob_8 to k5 (10 random): rank 7 ; same image as J3: True ; 138s
+q8 = ell . ob_8 at the base jet: nonzero 2 of 19
+q7 linear part on 24 sampled A2 directions: rank 2 ; directions kept: 22 ; 152s
+k2 variations: all stay on V7: True ; 223s
+k3 in ker J3 : variations added; on V7: True ; 244s
+k4 in ker J4 : variations added; on V7: True ; 264s
+RESULT order 8: span of q8 variations (k2 in A2', k3 in ker J3, k4 in ker J4): rank 2 ; q8 at the base in that span: True
+k2 directions with a non-zero q8 change: 10 of 10 ; k3/k4 changes non-zero: [False, False, False, False, False, False]
+q8 along a k2-line: degree 2 ; 306s
+interpolant predicts an off-grid point: True ; 334s
+independent component polys: 2 ; degrees [2, 2]
+resultant degree 3
+F_p point with q8 = 0 on the plane: (4792, 10838)
+at the point: q8 nonzero 0 ; ob_8 nonzero 7
+after the k5 step: ob_8 nonzero 0
+RESULT DIRECT verification of jet T_1..T_8: nonzero c_n among 45, n = 1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+ORDER 9 begins 448s
+base V8 jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 0 ; ob_9 nonzero 19 ; 486s
+q9 at the base: nonzero 12 of 19
+RUN15 begins 486s
+   point (0, 0, 0, 0, 0, 0) : Pi4 q9 nonzero 0 ; 544s
+   point (1, 0, 0, 0, 0, 0) : Pi4 q9 nonzero 10 ; 604s
+   point (0, 1, 0, 0, 0, 0) : Pi4 q9 nonzero 10 ; 663s
+   point (0, 0, 1, 0, 0, 0) : Pi4 q9 nonzero 10 ; 723s
+   point (0, 0, 0, 1, 0, 0) : Pi4 q9 nonzero 10 ; 782s
+   point (0, 0, 0, 0, 1, 0) : Pi4 q9 nonzero 10 ; 843s
+   point (0, 0, 0, 0, 0, 1) : Pi4 q9 nonzero 10 ; 906s
+   point (2, 0, 0, 0, 0, 0) : Pi4 q9 nonzero 10 ; 966s
+   point (0, 2, 0, 0, 0, 0) : Pi4 q9 nonzero 10 ; 1027s
+   point (0, 0, 2, 0, 0, 0) : Pi4 q9 nonzero 10 ; 1092s
+   point (0, 0, 0, 2, 0, 0) : Pi4 q9 nonzero 10 ; 1154s
+   point (0, 0, 0, 0, 2, 0) : Pi4 q9 nonzero 10 ; 1215s
+   point (0, 0, 0, 0, 0, 2) : Pi4 q9 nonzero 10 ; 1276s
+   point (1, 1, 0, 0, 0, 0) : Pi4 q9 nonzero 10 ; 1336s
+   point (1, 0, 1, 0, 0, 0) : Pi4 q9 nonzero 10 ; 1397s
+   point (1, 0, 0, 1, 0, 0) : Pi4 q9 nonzero 10 ; 1459s
+   point (1, 0, 0, 0, 1, 0) : Pi4 q9 nonzero 10 ; 1519s
+   point (1, 0, 0, 0, 0, 1) : Pi4 q9 nonzero 10 ; 1578s
+   point (0, 1, 1, 0, 0, 0) : Pi4 q9 nonzero 10 ; 1636s
+   point (0, 1, 0, 1, 0, 0) : Pi4 q9 nonzero 10 ; 1694s
+   point (0, 1, 0, 0, 1, 0) : Pi4 q9 nonzero 10 ; 1752s
+   point (0, 1, 0, 0, 0, 1) : Pi4 q9 nonzero 10 ; 1811s
+   point (0, 0, 1, 1, 0, 0) : Pi4 q9 nonzero 10 ; 1870s
+   point (0, 0, 1, 0, 1, 0) : Pi4 q9 nonzero 10 ; 1931s
+   point (0, 0, 1, 0, 0, 1) : Pi4 q9 nonzero 10 ; 1993s
+   point (0, 0, 0, 1, 1, 0) : Pi4 q9 nonzero 10 ; 2054s
+   point (0, 0, 0, 1, 0, 1) : Pi4 q9 nonzero 10 ; 2115s
+   point (0, 0, 0, 0, 1, 1) : Pi4 q9 nonzero 10 ; 2174s
+   point (1, 2, 0, 1, 0, 3) : Pi4 q9 nonzero 10 ; 2235s
+RESULT off-grid check of the quadratic interpolant: True
+RESULT run15 done ; 2235s
+RESULT (interpretation is tentative: the variations are first differences, not a linear model)
+total 2235s
