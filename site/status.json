@@ -170,6 +170,10 @@
   "recent": [
     {
       "when": "2026-11-28",
+      "what": "Coefficient-2 direction, order 10: on a larger 8-variable family through the order-9 jet there is no solution, and one combination of the conditions is a non-zero constant across the whole family -- an obstruction signal at order 10, not decisive (other directions remain untested). Mod p. No statement about the Hodge conjecture."
+    },
+    {
+      "when": "2026-11-28",
       "what": "Coefficient-2 direction, order 10: near the order-9 jet the 9-jets form a linear space (how a smooth branch behaves); a first order-10 search on a family of half the available size found no solution, which is inconclusive. Mod p. No statement about the Hodge conjecture."
     },
     {

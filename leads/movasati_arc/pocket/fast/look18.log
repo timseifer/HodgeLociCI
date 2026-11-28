@@ -1,0 +1,4 @@
+RESULT unit ideal: true
+nonzero polynomials: 15 ; degrees: {1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2}
+linear ones: 8 ; rank of linear parts 2 ; with constants 2
+RESULT unit ideal: true

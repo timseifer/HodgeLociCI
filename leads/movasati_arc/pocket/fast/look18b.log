@@ -1,0 +1,13 @@
+RESULT unit ideal: true
+on the 6-dim affine space: 7 quadratics
+rank of non-constant parts 2 (of 27 monomials) ; rank with constants 3
+rank of the quadratic parts alone: 2
+rank of the linear parts alone: 2
+unit ideal on the affine space: true
+  without quadratic 0: unit true
+  without quadratic 1: unit true
+  without quadratic 2: unit true
+  without quadratic 3: unit true
+  without quadratic 4: unit true
+  without quadratic 5: unit true
+  without quadratic 6: unit true

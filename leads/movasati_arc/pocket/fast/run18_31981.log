@@ -1,0 +1,75 @@
+p 31981 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 32s
+rank J3 7 #annihilators 19 41s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 48s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (19847, 13847)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+ORDER 8 begins 59s
+base jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 9 of 26 ; 65s
+response of ob_8 to k5 (10 random): rank 7 ; same image as J3: True ; 122s
+q8 = ell . ob_8 at the base jet: nonzero 2 of 19
+q7 linear part on 24 sampled A2 directions: rank 2 ; directions kept: 22 ; 134s
+k2 variations: all stay on V7: True ; 197s
+k3 in ker J3 : variations added; on V7: True ; 215s
+k4 in ker J4 : variations added; on V7: True ; 233s
+RESULT order 8: span of q8 variations (k2 in A2', k3 in ker J3, k4 in ker J4): rank 2 ; q8 at the base in that span: True
+k2 directions with a non-zero q8 change: 10 of 10 ; k3/k4 changes non-zero: [False, False, False, False, False, False]
+q8 along a k2-line: degree 2 ; 271s
+interpolant predicts an off-grid point: True ; 296s
+independent component polys: 2 ; degrees [2, 2]
+resultant degree 3
+F_p point with q8 = 0 on the plane: (4792, 10838)
+at the point: q8 nonzero 0 ; ob_8 nonzero 7
+after the k5 step: ob_8 nonzero 0
+RESULT DIRECT verification of jet T_1..T_8: nonzero c_n among 45, n = 1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+ORDER 9 begins 396s
+base V8 jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 0 ; ob_9 nonzero 19 ; 429s
+q9 at the base: nonzero 12 of 19
+RUN18 begins 429s
+9-jet piece: linear part of the order-9 conditions has rank 2 ; piece of dimension 4
+base: c_1..c_9 nonzero [0, 0, 0, 0, 0, 0, 0, 0, 0] ; q10 nonzero 17
+reused 22 points of run17
+degree 2 (from run17; checked by the off-grid point)
+   grid (0, 0, 0, 0, 0, 0, 0, 1) : on V9 True ; 731s
+   grid (0, 0, 0, 0, 0, 0, 0, 2) : on V9 True ; 898s
+   grid (0, 0, 0, 0, 0, 0, 1, 0) : on V9 True ; 1077s
+   grid (0, 0, 0, 0, 0, 0, 1, 1) : on V9 True ; 1253s
+   grid (0, 0, 0, 0, 0, 0, 2, 0) : on V9 True ; 1435s
+   grid (0, 0, 0, 0, 0, 1, 0, 1) : on V9 True ; 1614s
+   grid (0, 0, 0, 0, 0, 1, 1, 0) : on V9 True ; 1789s
+   grid (0, 0, 0, 0, 1, 0, 0, 1) : on V9 True ; 1958s
+   grid (0, 0, 0, 0, 1, 0, 1, 0) : on V9 True ; 2124s
+   grid (0, 0, 0, 1, 0, 0, 0, 0) : on V9 True ; 2295s
+   grid (0, 0, 0, 1, 0, 0, 0, 1) : on V9 True ; 2459s
+   grid (0, 0, 0, 1, 0, 0, 1, 0) : on V9 True ; 2624s
+   grid (0, 0, 0, 1, 0, 1, 0, 0) : on V9 True ; 2787s
+   grid (0, 0, 0, 1, 1, 0, 0, 0) : on V9 True ; 2951s
+   grid (0, 0, 0, 2, 0, 0, 0, 0) : on V9 True ; 3115s
+   grid (0, 0, 1, 0, 0, 0, 0, 0) : on V9 True ; 3280s
+   grid (0, 0, 1, 0, 0, 0, 0, 1) : on V9 True ; 3443s
+   grid (0, 0, 1, 0, 0, 0, 1, 0) : on V9 True ; 3601s
+   grid (0, 0, 1, 0, 0, 1, 0, 0) : on V9 True ; 3765s
+   grid (0, 0, 1, 0, 1, 0, 0, 0) : on V9 True ; 3928s
+   grid (0, 0, 1, 1, 0, 0, 0, 0) : on V9 True ; 4089s
+   grid (0, 0, 2, 0, 0, 0, 0, 0) : on V9 True ; 4251s
+   grid (0, 1, 0, 0, 0, 0, 0, 1) : on V9 True ; 4413s
+   grid (0, 1, 0, 0, 0, 0, 1, 0) : on V9 True ; 4575s
+   grid (0, 1, 0, 1, 0, 0, 0, 0) : on V9 True ; 4739s
+   grid (0, 1, 1, 0, 0, 0, 0, 0) : on V9 True ; 4901s
+   grid (1, 0, 0, 0, 0, 0, 0, 1) : on V9 True ; 5061s
+   grid (1, 0, 0, 0, 0, 0, 1, 0) : on V9 True ; 5220s
+   grid (1, 0, 0, 1, 0, 0, 0, 0) : on V9 True ; 5379s
+   grid (1, 0, 1, 0, 0, 0, 0, 0) : on V9 True ; 5538s
+   grid (1, 2, 1, 1, 1, 2, 1, 1) : on V9 True ; 5700s
+RESULT off-grid check: True
+wrote run17_q10 ; 5700s
+RESULT (interpretation is tentative: the variations are first differences, not a linear model)
+total 5700s

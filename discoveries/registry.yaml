@@ -8555,7 +8555,7 @@
 - id: D-POCKET-ORDER10-PARTIAL
   kind: result
   area: movasati_conjecture
-  title: "Order 10 of the lambda = 2 pocket: structure at the 9-jet, and no order-10 zero in a 4-dimensional family (MOD p) -- inconclusive, the family is too small"
+  title: "Order 10 of the lambda = 2 pocket: no order-10 zero on an 8-variable family through the 9-jet, and a combination of the conditions is a non-zero CONSTANT on it (MOD p) -- an obstruction signal, not decisive"
   statement: |-
     MOD p (31981), at the verified 9-jet of D-POCKET-ORDER9-PASSED (rebuilt and verified again by fast/run13.py).
     (1) q_10 (17 of 19 non-zero) changes LINEARLY with k_5 (rank 2); k_4 moves that keep q_9 do not change it modulo the
@@ -8567,8 +8567,13 @@
     (3) On a plane of that space times two k_3 directions (4 variables), the order-10 conditions modulo the k_5 image are
     quadratic (off-grid check passed): 8 linear ones (rank 2, consistent) and 7 quadratic ones, generating the unit
     ideal: no order-10 zero in this family.
-    Reading: (2) supports a smooth branch through the 9-jet; (3) is inconclusive (pre-registered caveat: the family is
-    half of the available freedom).
+    (4) On the full family (fast/run18.py; PREREG_order10_full.md): u0..u3 on the whole 9-jet piece, a0..a3 along four
+    k_3 directions; 8 linear conditions (rank 2) leave a 6-dimensional space, on which the 7 quadratic ones have
+    non-constant parts of rank 2 and rank 3 with constants: a combination mu of the order-10 conditions is a non-zero
+    constant on the whole family; unit ideal.
+    Reading: (2) supports a smooth branch through the 9-jet; (3) was inconclusive; (4) is an order-10 obstruction
+    signal that no move in this family can remove. Not decisive: other k_2 directions (outside the 6 used), other k_3
+    directions, other 9-jets.
   status: MOD_P
   conditions: |-
     One prime; one 9-jet; families as stated (6-dim k_2 family for order 9; 4 variables for order 10); first-difference structure tests.
@@ -8577,14 +8582,15 @@
   independent_check: |-
     Not repeated by a separate agent (the fast period code was checked against the Python one on test expansions, fast/test_fast.py; the 9-jet itself is blind-checked in D-POCKET-ORDER9-PASSED).
   not_established: |-
-    Whether order 10 is solvable (needs the full 8-variable family); the second prime for order 10; that a component exists; any explanation.
+    Whether mu depends on the remaining moves that keep V9 (other k_2, k_3 directions; other 9-jets); the second prime for order 10; that a component exists; any explanation.
   known_before: |-
     D-POCKET-ORDER9-PASSED; WHAT_CYCLE.md (what a cycle on a component would have to be).
   reproduce: |-
     Long (hours, one job at a time, from a folder holding the checkers' libraries): run13.py, then run15.py, then run17r.py; quick: the Groebner step
         M2 --script leads/movasati_arc/pocket/fast/look17.m2      (run from leads/movasati_arc/pocket/fast)
   next_step: |-
-    The full family: u0..u3 on the 9-jet piece and a0..a3 on all four k_3 directions (degree 2, 45 points); then the second prime.
+    First-order dependence of mu on all remaining moves that keep V9 (fresh k_2 directions with q_9 restored along the
+    known 9-jet directions; fresh k_3 directions); then the second prime.
   session_refs: |-
     Session of 28 Nov 2026 (Claude Opus 5.5, chat); owner: 'continue down the most interesting logical path through the night'.
 

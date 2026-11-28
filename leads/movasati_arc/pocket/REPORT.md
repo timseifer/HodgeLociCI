@@ -242,3 +242,18 @@ common zero on it: the whole ideal is the unit ideal (no zero over the algebraic
 Reading, by the pre-registered caveat: NOT an obstruction. The family uses half of the 9-jet piece (2 of its 4
 dimensions) and 2 of the 4 k_3 directions; at order 9 a too-small family would also have shown no zero. Next: the
 full family (u0..u3, a0..a3: 8 variables, 45 points for degree 2, about 2.5 hours).
+
+## Order 10 on the full family: a constant obstruction (28 Nov; PREREG_order10_full.md; owner: "Go ahead")
+
+fast/run18.py (run18_31981.log, run18_q10_31981.m2, look18*.log). MOD p (31981). Variables u0..u3 on the whole
+4-dimensional 9-jet piece of the 6-dim k_2 family, a0..a3 along four k_3 directions that keep q_8 (all four kernel
+directions of the six sampled ones -- not all of ker J3), every point checked to stay on V9; q_10 modulo the k_5 image,
+quadratic interpolation in 8 variables (45 points, 22 reused from run17; off-grid check at (1,2,1,1,1,2,1,1) passed).
+Result: 15 non-zero polynomials, 8 linear (rank 2, consistent: they leave a 6-dimensional affine space) and 7 quadratic;
+unit ideal. On the 6-dimensional space the 7 quadratics have NON-CONSTANT parts of rank 2 but rank 3 with the
+constants: a combination mu of the order-10 conditions is a NON-ZERO CONSTANT on the whole family. So the obstruction
+is structural, not a count of conditions against freedom: no move inside this family changes mu.
+Reading: an order-10 obstruction signal that is constant along the 9-jet piece and along the sampled k_3 directions.
+Not established: whether mu can be changed by the k_2 directions outside the 6 used (A2' has more), by other k_3
+directions, or by moving to other 9-jets; one prime; one 9-jet piece. The decisive next test is the first-order
+dependence of mu on ALL remaining moves that keep V9 (the analogue of what freed order 9).
