@@ -227,3 +227,8 @@ were interpolated as quadratics (28 points; off-grid check passed). Their ideal 
 members: the 9-jets in the family form an affine-linear 4-dimensional space (codimension 2, degree 1). This is what
 the jets of a smooth branch look like (2 conditions at order 9, cut out linearly), and it is the first direct sign
 of a smooth branch rather than a single isolated jet.
+Stage 2b, first attempt (fast/run16.py, run16_31981_partial.log): the k_3 moves turned out NOT to act linearly at order
+10 (2v against v fails), so projecting their image away is not exact; run16 was stopped after its line probe, which
+showed the order-10 conditions (modulo the k_5 and k_3 first-difference images) QUADRATIC along a line of the 9-jet
+piece, values spanning 3 dimensions -- the same shape as order 9. Replaced by fast/run17.py: variables (u0, u1) on a
+plane of the 9-jet piece and (a0, a1) along two k_3 directions, only the k_5 image (exactly linear) projected away.
