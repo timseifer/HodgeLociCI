@@ -216,3 +216,8 @@ fast/run13.py (fast/run13_31981.log): the 9-jet was rebuilt at the order-9 zero 
 order-10 conditions q_10 (17 of 19 non-zero) change LINEARLY with k_5 (rank 2; 2v against v), and q_10 is not in that
 span -- the same picture as order 9 at the first jet, so order 10 needs a non-linear search on V9. The 9-jet and the
 correction data are saved (k9_31981.npz, not in the repository; rebuilt by run13 in about 25 minutes).
+Stage 1b (fast/run14.py, fast/run14b.py; the environment restarted during run14, so part (b) was rerun): at the 9-jet,
+(a) k_4 moves that keep q_9 do not change q_10 modulo the k_5 image at all (rank 0, linear); (b) k_3 moves that keep
+q_8 stay on V9 and change q_10 modulo the k_5 image with rank 2 (linearity not tested); q_10 at the base is not in
+their span (rank 3 with it). So, as at order 9, the remaining order-10 conditions must be met through k_2 moves inside
+V9 -- the non-linear part.

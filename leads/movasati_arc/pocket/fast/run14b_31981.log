@@ -1,0 +1,48 @@
+p 31981 case s lambda 2 #T1 26 rank L 19 dimK 101 L T1 nonzero: 0 setup 36s
+rank J3 7 #annihilators 19 46s
+q along a k2-line: degree 1 ; rank of span of q-differences: 1
+q changes with k5,k6: False ; with k3 in ker J3: False
+grid evaluated: 3 points 54s
+rank of nonconstant coefficient block: 2 ; constant part nonzero comps: 2
+interpolant predicts off-grid point: True
+#independent component polys: 2 ; total degrees: [1, 1]
+resultant in s: degree 1
+number of F_p roots of resultant: 1
+F_p point with all component polys zero: (19847, 13847)
+check at point: ob_2..ob_6 nonzero [0, 0, 0, 0, 0] ; q nonzero: 0
+after k4-solve (rank 7 ): ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0]
+DIRECT verification of jet T_1..T_7: nonzero c_n among 45, n=1..7: [0, 0, 0, 0, 0, 0, 0]
+ORDER 8 begins 66s
+base jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 9 of 26 ; 75s
+response of ob_8 to k5 (10 random): rank 7 ; same image as J3: True ; 164s
+q8 = ell . ob_8 at the base jet: nonzero 2 of 19
+q7 linear part on 24 sampled A2 directions: rank 2 ; directions kept: 22 ; 179s
+k2 variations: all stay on V7: True ; 275s
+k3 in ker J3 : variations added; on V7: True ; 304s
+k4 in ker J4 : variations added; on V7: True ; 331s
+RESULT order 8: span of q8 variations (k2 in A2', k3 in ker J3, k4 in ker J4): rank 2 ; q8 at the base in that span: True
+k2 directions with a non-zero q8 change: 10 of 10 ; k3/k4 changes non-zero: [False, False, False, False, False, False]
+q8 along a k2-line: degree 2 ; 386s
+interpolant predicts an off-grid point: True ; 421s
+independent component polys: 2 ; degrees [2, 2]
+resultant degree 3
+F_p point with q8 = 0 on the plane: (4792, 10838)
+at the point: q8 nonzero 0 ; ob_8 nonzero 7
+after the k5 step: ob_8 nonzero 0
+RESULT DIRECT verification of jet T_1..T_8: nonzero c_n among 45, n = 1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+ORDER 9 begins 567s
+base V8 jet: ob_2..ob_7 nonzero [0, 0, 0, 0, 0, 0] ; ob_8 nonzero 0 ; ob_9 nonzero 19 ; 614s
+q9 at the base: nonzero 12 of 19
+RUN14 begins 614s
+9-jet reloaded: nonzero c_n, n = 1..9: [0, 0, 0, 0, 0, 0, 0, 0, 0] ; q10 nonzero 17 ; 732s
+(a) skipped in run14b: done in run14 (rank 0)
+(b) q8 response to 6 k3 directions: rank 2 ; kernel combinations: 4
+   (b) combo 0 : on V9 True ; change of q10 mod k5-image nonzero 8 ; 994s
+   (b) combo 1 : on V9 True ; change of q10 mod k5-image nonzero 8 ; 1193s
+   (b) combo 2 : on V9 True ; change of q10 mod k5-image nonzero 8 ; 1390s
+   (b) combo 3 : on V9 True ; change of q10 mod k5-image nonzero 8 ; 1581s
+RESULT (b) rank of q10 changes from k3 moves keeping V9: 2 ; together with (a): 2
+RESULT q10 mod k5-image at base in the span of these linear moves: False ; rank with base: 3
+RESULT run14 done ; 1581s
+RESULT (interpretation is tentative: the variations are first differences, not a linear model)
+total 1581s
