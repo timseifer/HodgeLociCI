@@ -8,7 +8,7 @@
 
 Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --write-pages`. Do not edit this page by hand: edit the registry. Notation: [`NOTATION.md`](NOTATION.md). Status vocabulary: [`README.md`](README.md).
 
-## Entries on this page (30)
+## Entries on this page (31)
 
 | id | status | title |
 |---|---|---|
@@ -42,6 +42,7 @@ Generated from `discoveries/registry.yaml` by `discoveries/check_registry.py --w
 | [D-MOVASATI-POINT-COEFFICIENT-SCAN](#d-movasati-point-coefficient-scan) | `MOD_P` | Movasati's point, a direction in general position: among ten coefficients only -1 and +1 pass order 6; they are exactly the two whose lattice half-discriminant (28, 36 on eightfolds) is that of a K3 or an abelian surface |
 | [D-POCKET-ORDER9-OBSTRUCTION-SIGNAL](#d-pocket-order9-obstruction-signal) | `MOD_P` | The lambda = 2 pocket at order 9: at the tested order-8 jet no first-order move inside V8 removes the order-9 conditions (MOD p, two primes, one jet); this does NOT by itself signal an obstruction (corrected reading) |
 | [D-POCKET-ORDER9-PASSED](#d-pocket-order9-passed) | `MOD_P` | The lambda = 2 pocket passes order 9: a 9-jet with the pocket's tangent exists (MOD p, one prime), found by a non-linear search; order 10 again needs one |
+| [D-POCKET-ORDER10-PARTIAL](#d-pocket-order10-partial) | `MOD_P` | Order 10 of the lambda = 2 pocket: structure at the 9-jet, and no order-10 zero in a 4-dimensional family (MOD p) -- inconclusive, the family is too small |
 
 ## Related entries on other pages
 
@@ -2224,3 +2225,49 @@ Direct check of the saved 9-jet (about 1.5 minutes; needs a C compiler for the c
 **Next step.** The same non-linear test at order 10 (a 2-plane, or larger if the order-10 image has dimension > 2); the second prime for order 9.
 
 **Session references (files not public).** Session of 27-28 Nov 2026 (Claude Opus 5.5, chat); owner: 'run what you believe would give the best explanation'.
+
+---
+
+## D-POCKET-ORDER10-PARTIAL
+
+**Order 10 of the lambda = 2 pocket: structure at the 9-jet, and no order-10 zero in a 4-dimensional family (MOD p) -- inconclusive, the family is too small**
+
+kind: `result` | area: `movasati_conjecture` | status: **`MOD_P`**
+
+**Statement.**
+
+```text
+MOD p (31981), at the verified 9-jet of D-POCKET-ORDER9-PASSED (rebuilt and verified again by fast/run13.py).
+(1) q_10 (17 of 19 non-zero) changes LINEARLY with k_5 (rank 2); k_4 moves that keep q_9 do not change it modulo the
+k_5 image; k_3 moves that keep q_8 stay on V9 and change it with rank 2, NOT linearly; q_10 is outside these first-order
+spans.
+(2) On a 6-dimensional family of k_2 moves (q_8 solved by k_3), the order-9 conditions modulo the k_4 image are
+quadratic, and their ideal equals the ideal of its 8 linear members: the 9-jets in the family form an affine-LINEAR
+4-dimensional space (codimension 2) -- the behaviour of jets of a smooth branch.
+(3) On a plane of that space times two k_3 directions (4 variables), the order-10 conditions modulo the k_5 image are
+quadratic (off-grid check passed): 8 linear ones (rank 2, consistent) and 7 quadratic ones, generating the unit
+ideal: no order-10 zero in this family.
+Reading: (2) supports a smooth branch through the 9-jet; (3) is inconclusive (pre-registered caveat: the family is
+half of the available freedom).
+```
+
+**Conditions.** One prime; one 9-jet; families as stated (6-dim k_2 family for order 9; 4 variables for order 10); first-difference structure tests.
+
+**Evidence.** leads/movasati_arc/pocket/fast/ (fastper.py, run13.py .. run17r.py, logs, run15_q9_31981.m2, run15_groebner.log, run17_q10_31981.m2, look17*.log); REPORT.md, sections 'Order 10'.
+
+**Independent check.** Not repeated by a separate agent (the fast period code was checked against the Python one on test expansions, fast/test_fast.py; the 9-jet itself is blind-checked in D-POCKET-ORDER9-PASSED).
+
+**Not established.** Whether order 10 is solvable (needs the full 8-variable family); the second prime for order 10; that a component exists; any explanation.
+
+**Known before.** D-POCKET-ORDER9-PASSED; WHAT_CYCLE.md (what a cycle on a component would have to be).
+
+**Reproduce.**
+
+```text
+Long (hours, one job at a time, from a folder holding the checkers' libraries): run13.py, then run15.py, then run17r.py; quick: the Groebner step
+    M2 --script leads/movasati_arc/pocket/fast/look17.m2      (run from leads/movasati_arc/pocket/fast)
+```
+
+**Next step.** The full family: u0..u3 on the 9-jet piece and a0..a3 on all four k_3 directions (degree 2, 45 points); then the second prime.
+
+**Session references (files not public).** Session of 28 Nov 2026 (Claude Opus 5.5, chat); owner: 'continue down the most interesting logical path through the night'.

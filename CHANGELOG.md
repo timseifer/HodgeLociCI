@@ -4,7 +4,9 @@ All notable changes to this package are recorded here. Format: Keep a Changelog;
 
 ## [Unreleased]
 
-### Discoveries registry (142 -> 185 entries)
+### Discoveries registry (142 -> 186 entries)
+- D-POCKET-ORDER10-PARTIAL (MOD p): the 9-jets near the pocket's 9-jet form a linear space (smooth-branch
+  behaviour); order 10 found no zero in a 4-dimensional family, inconclusive (family too small). `leads/movasati_arc/pocket/fast/`.
 - D-POCKET-ORDER9-PASSED (MOD p, one prime): the lambda = 2 pocket passes order 9 (a 9-jet found by a non-linear
   search and verified directly); order 10 needs the same search. `leads/movasati_arc/pocket/`.
 - N-POCKET-NO-COMPANION-CLASS (MOD p, two primes, blind-checked): along the lambda = 2 pocket jet no other Hodge class

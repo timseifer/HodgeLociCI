@@ -232,3 +232,13 @@ Stage 2b, first attempt (fast/run16.py, run16_31981_partial.log): the k_3 moves 
 showed the order-10 conditions (modulo the k_5 and k_3 first-difference images) QUADRATIC along a line of the 9-jet
 piece, values spanning 3 dimensions -- the same shape as order 9. Replaced by fast/run17.py: variables (u0, u1) on a
 plane of the 9-jet piece and (a0, a1) along two k_3 directions, only the k_5 image (exactly linear) projected away.
+Stage 2b (fast/run17.py, resumed as fast/run17r.py after an interruption; logs run17_31981_part1.log,
+run17r_31981.log; polynomials run17_q10_31981.m2; structure look17*.log). MOD p (31981). Variables: (u0, u1) on a plane of
+the 4-dimensional 9-jet piece, (a0, a1) along two k_3 directions that keep q_8 (every point checked to stay on V9);
+the k_5 image (exactly linear) projected away. The order-10 conditions are QUADRATIC in these four variables (degree
+2 along a generic line; 15-point interpolation; off-grid check passed): 15 non-zero polynomials, 8 linear and 7
+quadratic. The 8 linear ones are consistent with rank 2 and leave a 2-dimensional plane; the 7 quadratic ones have no
+common zero on it: the whole ideal is the unit ideal (no zero over the algebraic closure, in this family).
+Reading, by the pre-registered caveat: NOT an obstruction. The family uses half of the 9-jet piece (2 of its 4
+dimensions) and 2 of the 4 k_3 directions; at order 9 a too-small family would also have shown no zero. Next: the
+full family (u0..u3, a0..a3: 8 variables, 45 points for degree 2, about 2.5 hours).

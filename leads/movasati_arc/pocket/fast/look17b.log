@@ -1,0 +1,3 @@
+RESULT unit ideal: true
+8 linear polynomials: rank of linear parts 2 ; rank with constants 2
+linear ones alone generate the unit ideal: false

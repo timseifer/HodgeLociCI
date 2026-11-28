@@ -158,7 +158,7 @@ All pre-registered; "ruled out" means only the listed types, at tested members, 
   large cases, the fast GB engine only below p = 32768). Smoke test `M2 --script examples/quickstart.m2`; suite
   `tests/run_all.sh`; package tests via installPackage + check (AGENTS.md). CI: .github/workflows/ci.yml. Docker:
   Dockerfile (Ubuntu 24.04, ~405 MB); MCP server in mcp/.
-- Registry: discoveries/registry.yaml (185 entries) is the source of truth; pages discoveries/0*.md are generated:
+- Registry: discoveries/registry.yaml (186 entries) is the source of truth; pages discoveries/0*.md are generated:
   run `python3 discoveries/check_registry.py --write-pages` then `python3 discoveries/check_registry.py` (must say
   OK). Statuses: PROVED_AI_UNREVIEWED, EXACT, MOD_P, RULED_OUT, OPEN, etc. Every entry needs statement, status,
   conditions, evidence, independent_check, not_established, known_before, reproduce, session_refs. Update the
